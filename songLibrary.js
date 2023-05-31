@@ -1,0 +1,1515 @@
+var songLibrary =
+{
+  "oSongs": {
+    "Doxology": {
+      "oPages": {
+        "Verse 1": [
+          "Praise God from whom all blessings flow",
+          "Praise Him all peoples here below",
+          "Praise God above the heavenly host",
+          "Praise Father, Son, and Holy Ghost",
+          "Amen"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1"
+      ],
+      "RepeatCount": 1,
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Bind us together": {
+      "oPages": {
+        "Chorus A": [
+          "Bind us together, Lord,",
+          "Bind us together with chords",
+          "that cannot be broken,"
+        ],
+        "Chorus B": [
+          "Bind us together, Lord,",
+          "Bind us together,",
+          "Bind us together in love."
+        ],
+        "Verse 1": [
+          "There is only one God,",
+          "There is only one King;",
+          "There is only one body,",
+          "That is why I sing."
+        ]
+      },
+      "Notes": "#73 Maranatha Praise Chorus Book 1990, John 17:20-21a",
+      "Author": "Bob Gilman",
+      "aPageOrder": [
+        "Chorus A",
+        "Chorus B",
+        "Verse 1",
+        "Chorus A",
+        "Chorus B"
+      ],
+      "RepeatCount": 2,
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 1": {
+          "spaceAbove": 2
+        },
+        "Chorus A": {
+          "spaceAbove": 1.75
+        },
+        "Chorus B": {
+          "spaceAbove": 2.5
+        }
+      },
+      "fontSize": 0.061,
+      "fontBoldness": 5,
+      "lineHeight": 0.159
+    },
+    "Onward Christian Soldiers": {
+      "oPages": {
+        "Verse 1a": [
+          "Onward, Christian osldiers,",
+          "Marching as to war,",
+          "With the cross of Jesus",
+          "Going on before!"
+        ],
+        "Verse 1b": [
+          "Christ, the royal Master,",
+          "Leads against the foe;",
+          "Forward into battle,",
+          "See his banner go!"
+        ],
+        "Chorus": [
+          "Onward, Christian soldiers,",
+          "Marching as to war,",
+          "With the cross of Jesus",
+          "Going on before!"
+        ],
+        "Verse 2a": [
+          "At the sign of triumph",
+          "Satan's host doth flee;",
+          "On, then, Christian soldiers,",
+          "On to victory!"
+        ],
+        "Verse 2b": [
+          "Hell';s foundations quiver",
+          "At the shoult of priase;",
+          "Brothers, lift your voices,",
+          "Loud your anthems raise!"
+        ],
+        "Verse 3a": [
+          "Like a mighty army",
+          "Moves the church of God;",
+          "Brothers, we are treading",
+          "Where the saints have trod;"
+        ],
+        "Verse 3b": [
+          "We aer not divided;",
+          "All one body we,",
+          "One in hope and doctrine,",
+          "One in charity."
+        ],
+        "Verse 4a": [
+          "Onward then, ye people,",
+          "Join our happy throng,",
+          "Blend with ours your voices",
+          "In the triumph song;"
+        ],
+        "Verse 4b": [
+          "GLory, laud, and honor,",
+          "Unto Christ the King;",
+          "This thro' countless ages",
+          "Men and angels sing"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#393 Baptist Hymnal, 1864",
+      "Author": "Words: Sabine Baring-Gould, Tune: Arthur S. Sullivan",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        },
+        "Verse 4a": {
+          "spaceAbove": 0
+        },
+        "Verse 4b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "I worship You, Almighty God": {
+      "oPages": {
+        "Verse 1": [
+          "I worship You, Almighty God,",
+          "There is none like You.",
+          "I worship You, O Prince of Peace,",
+          "that is what I want to do."
+        ],
+        "Verse 2": [
+          "I give You praise",
+          "For You are my righteousness.",
+          "I worship You, Almighty God,",
+          "There is none like You."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#176 Maranatha Song Book",
+      "Author": "",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "At Calvary": {
+      "oPages": {
+        "Verse 1": [
+          "Years I spent in vanity and pride,",
+          "Caring not my Lord was curcified,",
+          "Knowing now it was for me he died",
+          "On Calvary"
+        ],
+        "Chorus": [
+          "Mercy there was great, and grace was free",
+          "Parton ther was multiplied to me;",
+          "There my burdened soul found liberty",
+          "At Calvary"
+        ],
+        "Verse 2": [
+          "By God's word at last my sin I learned;",
+          "then I trembled at the law I'd spurned,",
+          "Till my guilty soul imploring turned",
+          "To Calvary"
+        ],
+        "Verse 3": [
+          "Now I've given to Jesus everything,",
+          "Now I gladly own him as my King,",
+          "Now my raptured sould can only sing",
+          "Of Calvary"
+        ],
+        "Verse 4": [
+          "Oh, hte love that drew salvation's plan!",
+          "Oh, the grace that bro't it down to man!",
+          "Oh, the mighty gulf that God did span",
+          "At Calvary"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#166 Baptist Hymnal, 1895",
+      "Author": "Words: William R. Newel, Tune: Daniel B. Towner",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "There's something about that name": {
+      "oPages": {
+        "Verse 1": [
+          "Jesus, Jesus, Jesus",
+          "Ther just something about that name",
+          "Master, Savior, Jesue",
+          "Like a fragrance after the rain."
+        ],
+        "Verse 2": [
+          "Jesus, Jesus, Jesus",
+          "Let all heaven and earth procliam,",
+          "Kings and kingdomes will all pass away,",
+          "But there's something about that name."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#133 Maranatha Mudiv Praise Chorus Book 1990",
+      "Author": "William J. & Gloria Gather",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Turn Your Eyes Upon Jesus": {
+      "oPages": {
+        "Verse 1": [
+          "O, soul, are you weary and troubled.",
+          "No light in the darkness you see.",
+          "There's light for a look at the Savior.",
+          "And life more abundant and free."
+        ],
+        "Chorus": [
+          "Turn your eyes upon Jesus.",
+          "Look full in His wonderful face.",
+          "And the things of earth,",
+          "Will grow strangely dim.",
+          "In the light of His glory and grace."
+        ],
+        "Verse 2": [
+          "Through death into life everlasting.",
+          "He passed and we follow Him there.",
+          "Over us sin no more hath dominion.",
+          "For more than conquerors we are."
+        ],
+        "Verse 3": [
+          "His Word shall not fail you He promised.",
+          "Believe Him and all will be well.",
+          "Then go to a world that is dying.",
+          "His perfect salvaion to tell."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "Author": "Helen H. Lemmel",
+      "RepeatCount": 1,
+      "Notes": "#97 Maranatha Mudiv Praise Chorus Book 1990, #198 Baptist Hymnal",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 2
+        },
+        "Verse 2": {
+          "spaceAbove": 1.75
+        },
+        "Verse 3": {
+          "spaceAbove": 1.75
+        }
+      },
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.137
+    },
+    "Blessed Assurance": {
+      "oPages": {
+        "Verse 1": [
+          "Blessed Assurance, Jesus is mine.",
+          "O what a foretaste of glory divine.",
+          "Heir of salvation, purchase of God",
+          "Born of His Spirit, washed in His blood."
+        ],
+        "Chorus": [
+          "This is my story, this is my song",
+          "Praising my Savior all the day long.",
+          "This is my story, this is my song",
+          "Praising my Savior all the day long."
+        ],
+        "Verse 2": [
+          "Perfect submission, perfect delight.",
+          "Visions of rapture, now burst on my sight.",
+          "Angels descending, bring from above.",
+          "Echoes of mercy, whispers of love."
+        ],
+        "Verse 3": [
+          "Perfect submission, all is at rest.",
+          "I in my Savior, am happy and blest.",
+          "Watching and waiting, looking above.",
+          "Filled with His goodness, lost in His love."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "Author": "Fanny Jane Crosby/Phoebe Palmer Knapp",
+      "RepeatCount": 1,
+      "Notes": "#334 Baptist Hymnal",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 1.5
+        },
+        "Chorus": {
+          "spaceAbove": 2.75
+        },
+        "Verse 2": {
+          "spaceAbove": 1.75
+        },
+        "Verse 3": {
+          "spaceAbove": 1.75
+        }
+      },
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.141
+    },
+    "Come let us worship and bow down": {
+      "oPages": {
+        "Chorus": [
+          "Come let us worship and bow down,",
+          "Let us kneel before the Lord,",
+          "our God, our Maker;"
+        ],
+        "Verse 1": [
+          "For He is our God,",
+          "And we are the people of His pasture,",
+          "And the sheep of His hand,",
+          "Just the sheep of His hand."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse 1"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#211 Maranatha Mudiv Praise Chorus Book 1990, Psalm 95:6,7",
+      "Author": "Dave Doherty",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 1": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Amazing Grace": {
+      "oPages": {
+        "Verse 1": [
+          "Amazing Grace how sweet the sound",
+          "That saved a wretch like me.",
+          "I once was lost but now am found",
+          "Was bling but now I see."
+        ],
+        "Verse 2": [
+          "T'was grace that taught my heart to fear",
+          "And grace my fears relieved.",
+          "How precious did that grace appear",
+          "The hour I first believed."
+        ],
+        "Verse 3": [
+          "Through many dangers, toils and snares",
+          "I have already come.",
+          "'Tis grace hath brought me safe thus far",
+          "And grace will lead me home."
+        ],
+        "Verse 4": [
+          "The Lord has promised good to me",
+          "His Word my hope secure.",
+          "He will my shield and portion be",
+          "As long as life endures."
+        ],
+        "Verse 5": [
+          "When we've been there ten thousand years",
+          "Bright shining as the sun",
+          "We've no less days to sing God's praise",
+          "Than when we first begun."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4",
+        "Verse 5"
+      ],
+      "Author": "John Newton",
+      "RepeatCount": 1,
+      "Notes": "#165 Baptist Hymnal",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 1
+        },
+        "Verse 2": {
+          "spaceAbove": 1
+        },
+        "Verse 3": {
+          "spaceAbove": 1
+        },
+        "Verse 4": {
+          "spaceAbove": 1.5
+        },
+        "Verse 5": {
+          "spaceAbove": 1
+        }
+      },
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Our God Reigns": {
+      "oPages": {
+        "Verse 1": [
+          "How lovely on the mountains are the feet of Him",
+          "Who brings good new, good news.",
+          "Announcing peace, proclaiming news of happiness."
+        ],
+        "Chorus 1": [
+          "Our God reigns, our God reigns.",
+          "Our God reigns, our God reigns.",
+          "Our God reigns, our God reigns!"
+        ],
+        "Verse 2": [
+          "He had no stately form, He had no majesty.",
+          "That we should be drawn to Him.",
+          "He was despised and we took no account of Him."
+        ],
+        "Chorus 2": [
+          "Yet now He reigns with the Most High.",
+          "Now He reigns with the Most High;",
+          "Now He reigns with the Most High."
+        ],
+        "Verse 3": [
+          "It was our sin and guilt that bruised and wounded Him.",
+          "It was our sin that brought Him down;",
+          "When we, like sheep, had gone astray, our Shepard came."
+        ],
+        "Chorus 3": [
+          "And on His shoulders bore our shame.",
+          "On His shoulders, on His shoulders;",
+          "On His shoulders He bore our shame."
+        ],
+        "Verse 4": [
+          "Meek as a lamb that's led out to the slaughterhouse,",
+          "Dumb as a sheep before its shearer,",
+          "His life ran down upon the ground like pouring rain."
+        ],
+        "Chorus 4": [
+          "That we might be born again.",
+          "That we might be, that we might be.",
+          "That we might be born again."
+        ],
+        "Verse 5": [
+          "Out from the tomb He came with grace and majesty,",
+          "He is alive, He is alive.",
+          "God loves us so, see here His hands, His feet, His side."
+        ],
+        "Chorus 5": [
+          "Yes, we know, He is alive.",
+          "He is alive, He is alive;",
+          "He is alive, He is alive."
+        ],
+        "Verse 6": [
+          "How lovely on the mountains are the feet of Him",
+          "Who brings good news, good news.",
+          "Announcing peace, proclaiming news of happiness."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus 1",
+        "Verse 2",
+        "Chorus 2",
+        "Verse 3",
+        "Chorus 3",
+        "Verse 4",
+        "Chorus 4",
+        "Verse 5",
+        "Chorus 5",
+        "Verse 6",
+        "Chorus 1"
+      ],
+      "Author": "Leonard E. Smith, Jr.",
+      "RepeatCount": 1,
+      "Notes": "#111 Maranatha Praise Chorus Book 1990",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 0
+        },
+        "Verse 5": {
+          "spaceAbove": 1.5
+        },
+        "Verse 6": {
+          "spaceAbove": 0
+        },
+        "Chorus 1": {
+          "spaceAbove": 0
+        },
+        "Chorus 2": {
+          "spaceAbove": 0
+        },
+        "Chorus 3": {
+          "spaceAbove": 0
+        },
+        "Chorus 4": {
+          "spaceAbove": 2.25
+        },
+        "Chorus 5": {
+          "spaceAbove": 3
+        }
+      },
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.141
+    },
+    "Bless His Holy Name": {
+      "oPages": {
+        "Chorus": [
+          "Bless the Lord, O my soul,",
+          "And all that is within me,",
+          "Bless His holy name."
+        ],
+        "Verse 1": [
+          "He has done great things,",
+          "He has done great things,",
+          "He has done great things,",
+          "Bless His holy name."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Chorus"
+      ],
+      "Author": "Andre Crouch",
+      "Notes": "Psalm 103:1, #114 Maranatha Mudiv Praise Chorus Book 1990",
+      "RepeatCount": 1,
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 1
+        },
+        "Verse": {
+          "spaceAbove": 0
+        },
+        "Verse 1": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.067,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Thou Art Worthy": {
+      "oPages": {
+        "Chorus": [
+          "Thou art worthy, Thou art worthy,",
+          "Thou art worthy, O Lord.",
+          "To receive glory, glory and honor,",
+          "Glory and honor and pow'r."
+        ],
+        "Verse 1": [
+          "For Thou hast created, hast all things created,",
+          "Thou has created all things;",
+          "And for Thy pleasure, they are created,",
+          "Thou art worthy, O Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus"
+      ],
+      "Notes": "Rev. 5:9, #109 Maranatha Mudiv Praise Chorus Book 1990",
+      "Author": "Pauline Michael Mills",
+      "RepeatCount": 2,
+      "TagPage": "Chorus",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 1
+        },
+        "Verse": {
+          "spaceAbove": 0
+        },
+        "Verse 1": {
+          "spaceAbove": 1
+        }
+      },
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Alive Alive": {
+      "oPages": {
+        "Chorus": [
+          "Alive alive, alive forever more.",
+          "My Jesus is alive,",
+          "Alive forever more",
+          "Alive alive, alive forever more.",
+          "My Jesus is alive."
+        ],
+        "Verse 1a": [
+          "Sing hallelujah!",
+          "Sing hallelujah!",
+          "My Jesus is alive,",
+          "Alive forever more."
+        ],
+        "Verse 1b": [
+          "Sing hallelujah!",
+          "Sing hallelujah!",
+          "My Jesus is alive."
+        ],
+        "Tag": [
+          "My Jesus is alive."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse 1a",
+        "Verse 1b"
+      ],
+      "TagPage": "Tag",
+      "RepeatCount": 2,
+      "License": 7004770,
+      "Author": "Bob Singleton",
+      "Publisher": "Singleton Productions Inc.",
+      "Notes": "",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse": {
+          "spaceAbove": 0
+        },
+        "Tag": {
+          "spaceAbove": 3
+        },
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.074,
+      "fontBoldness": 5,
+      "lineHeight": 0.129
+    },
+    "I love to tell the story": {
+      "oPages": {
+        "Verse 1a": [
+          "I love to tell the story",
+          "of unseen things above,",
+          "Of Jesus, and his glory,",
+          "Of Jesus, and his love"
+        ],
+        "Verse 1b": [
+          "I love to tell the story",
+          "because I know tis true;",
+          "It satisfies my llongings",
+          "As nothing else can do."
+        ],
+        "Chorus": [
+          "I love to tell the story,",
+          "`Twill be my theme in glory",
+          "To tell the old, old story",
+          "Of Jesus and his love."
+        ],
+        "Verse 2a": [
+          "I love to tell the story,",
+          "`Tis pleasant to repeat",
+          "What seems each time I tell it,",
+          "More wonderfully sweet:"
+        ],
+        "Verse 2b": [
+          "I love to tell the story",
+          "for some have never heard",
+          "The message of salvation",
+          "From God's own holy Word."
+        ],
+        "Verse 3a": [
+          "I love to tell the story,",
+          "For those who know it best",
+          "Seem hungering and thirsting",
+          "To hear it like the rest:"
+        ],
+        "Verse 3b": [
+          "And wyhen, in scenes of glory,",
+          "I sing the new, new song.",
+          "`Twill be the old, old story",
+          "That I have loved so long."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#461 Baptist Hymnal, 1866",
+      "Author": "Words: Katherine Hankey, Tune: William G. Fisher",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Swing Low Sweet Chariot": {
+      "oPages": {
+        "Chorus": [
+          "Swing low, sweet chariot",
+          "(comming for to carry me home)",
+          "Swing low, sweet chariot",
+          "(comming for to carry me home)"
+        ],
+        "Verse 1": [
+          "I looked over Jordan and what did I see?",
+          "(comming for to carry me home)",
+          "A band of angels coming after me",
+          "(comming for to carry me home)"
+        ],
+        "Verse 2": [
+          "If you get there before I do",
+          "(comming for to carry me home)",
+          "Tell all my frineds I'm coming too!",
+          "(comming for to carry me home)"
+        ],
+        "Verse 3": [
+          "I'm sometimes up and sometimes down",
+          "(comming for to carry me home)",
+          "But still my osul feels heavenly bound",
+          "(comming for to carry me home)"
+        ],
+        "Verse 4": [
+          "The brightest day that I can say",
+          "(comming for to carry me home)",
+          "When Jesus washed my sins away",
+          "(comming for to carry me home)"
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus",
+        "Chorus"
+      ],
+      "TagPage": "",
+      "RepeatCount": 1,
+      "License": "Public Domain",
+      "Notes": "Not in hymnal or songbook.",
+      "Author": "",
+      "Publisher": "",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 2.5
+        },
+        "Verse 1": {
+          "spaceAbove": 1.5
+        },
+        "Verse 2": {
+          "spaceAbove": 2.5
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 2.25
+        }
+      },
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.144
+    },
+    "Come Now is the time to Worship": {
+      "oPages": {
+        "Chorus": [
+          "Come now is the time to worship",
+          "Come now is the time to give your heart",
+          "Come just as you are to worship",
+          "Come just as you are before your God",
+          "Come"
+        ],
+        "Verse 1": [
+          "One day every tongue",
+          "Will confess You are God",
+          "One day every knee will bow",
+          "Still the greatest treasure remains",
+          "For those who gladly choose You now"
+        ],
+        "Verse 2": [
+          "Willingly we choose to surrender our lives",
+          "Willingly our knees will bow",
+          "With all our heart soul mind and strength",
+          "We gladly choose You now"
+        ],
+        "Ending": [
+          "Come come just as you are come",
+          "come"
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Verse 2"
+      ],
+      "TagPage": "Ending",
+      "RepeatCount": 1,
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 3
+        },
+        "Verse 1": {
+          "spaceAbove": 2.75
+        },
+        "Verse 2": {
+          "spaceAbove": 2.5
+        },
+        "Ending": {
+          "spaceAbove": 5.5
+        }
+      },
+      "fontSize": 0.039,
+      "fontBoldness": 5,
+      "lineHeight": 0.111,
+      "Notes": "",
+      "Author": "",
+      "Publisher": ""
+    },
+    "His name is wonderful": {
+      "oPages": {
+        "Chorus 1": [
+          "His name is Wonderful,",
+          "His name is Wonderful,",
+          "His name is Wonderful,",
+          "Jesus my Lord."
+        ],
+        "Chorus 2": [
+          "He is the Mighty King,",
+          "Master of everything,",
+          "His name is Wonderful,",
+          "Jesus, my Lord."
+        ],
+        "Verse 1": [
+          "He's the great shepherd,",
+          "The rock of all ages,",
+          "Almighty God is He."
+        ],
+        "Verse 2": [
+          "Bow down before Him,",
+          "Love and adore Him,",
+          "His name is Wonderful,",
+          "Jesus, my Lord."
+        ],
+        "Tag": [
+          "Jesus, my Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 1",
+        "Verse 2"
+      ],
+      "Notes": "#52 Maranatha Praise Chorus Book 1990",
+      "RepeatCount": 1,
+      "Author": "Audrey Mieir",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus 1": {
+          "spaceAbove": 0
+        },
+        "Chorus 2": {
+          "spaceAbove": 0
+        },
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Tag": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Count your blessings": {
+      "oPages": {
+        "Verse 1a": [
+          "When upon life's billows",
+          "you are tempest tossed,",
+          "when yoiu are discouraged,",
+          "thinking all is lost,"
+        ],
+        "Verse 1b": [
+          "Count your many blessings,",
+          "name them one by one,",
+          "and it will surprise you",
+          "what the ,Lord hath done."
+        ],
+        "Chorus a": [
+          "Count your blessings,",
+          "name them one by one;",
+          "Count your blessings",
+          "see what God hath done."
+        ],
+        "Chorus b": [
+          "Count your blessings,",
+          "name them one by one;",
+          "Count your many blessings",
+          "see what God hath done."
+        ],
+        "Verse 2a": [
+          "Are you ever burdened with",
+          "a load of care?",
+          "Does the Cross seem heavy",
+          "you are called to bear?"
+        ],
+        "Verse 2b": [
+          "Count your many blessings,",
+          "every doubt will fly,",
+          "and you will be singing",
+          "as the days go by."
+        ],
+        "Verse 3a": [
+          "When you look at others",
+          "with their land and gold,",
+          "Think that Christ has promised you",
+          "his wealth untold;"
+        ],
+        "Verse 3b": [
+          "Count your many blessings,",
+          "money can not buy,",
+          "your reward in heaven,",
+          "nor your home on high."
+        ],
+        "Verse 4a": [
+          "So, amid the conflict,",
+          "whether great or small,",
+          "Do not be discouraged,",
+          "God is over all;"
+        ],
+        "Verse 4b": [
+          "Count your many blessings,",
+          "angels will attend",
+          "Help and comfort give you",
+          "to your journey's end."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus a",
+        "Chorus b"
+      ],
+      "RepeatCount": 1,
+      "Author": "Words: Johnson Oatman, Jr. 1897, Tune: Edwin O. Excell, 1897",
+      "Notes": "#231 Baptist Hymnal",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Chorus a": {
+          "spaceAbove": 0
+        },
+        "Chorus b": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        },
+        "Verse 4a": {
+          "spaceAbove": 0
+        },
+        "Verse 4b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Great is thy faithfulness": {
+      "oPages": {
+        "Verse 1a": [
+          "Great is thy faithfulness,",
+          "Oh God my Father,",
+          "There is no shadow",
+          "of turning with thee;"
+        ],
+        "Verse 1b": [
+          "Thou changest not,",
+          "thy compassions, they fail not;",
+          "As thou hast been",
+          "thou forever wilt be."
+        ],
+        "Chorus": [
+          "Great is thy faithfulness!",
+          "Great is thy faithfulness!",
+          "Morning by morning new mercies I see;",
+          "All I have needed thy hand had provided;",
+          "Great is thy faithfulness, Lord, unto me!"
+        ],
+        "Verse 2a": [
+          "Summer and winter,",
+          "and springtime and harvest,",
+          "sun, moon, and stars",
+          "in their courses above"
+        ],
+        "Verse 2b": [
+          "Join with all nature",
+          "in manifold witness",
+          "to thy great faithfulness,",
+          "mercy, and love."
+        ],
+        "Verse 3a": [
+          "Pardon for sin and",
+          "a peace that endureth,",
+          "Thine own dear presence",
+          "to cheer and to guide;"
+        ],
+        "Verse 3b": [
+          "Strength for today and",
+          "bright hope for tomorrow,",
+          "Blessings all mine,",
+          "with ten thousand beside!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus"
+      ],
+      "Notes": "#216 Baptist Hymnal",
+      "Author": "Words: Thomas O. Chisholm, 1923, Tune: William M. Runyan, 1923",
+      "RepeatCount": 1,
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "The Star-Spangled Banner": {
+      "oPages": {
+        "Verse 1a": [
+          "O say, can you see,",
+          "by the dawn's early light,",
+          "What so proudly we hailed",
+          "at the twilight's last gleaming,"
+        ],
+        "Verse 1b": [
+          "Whos broad stripes and bright stars,",
+          "thro' the perilous fight,",
+          "O'er the ramparts we watched,",
+          "were so gallantly streaming?"
+        ],
+        "Verse 2a": [
+          "O thus be it ever when ",
+          "free men shall stand",
+          "Between their loved homes ",
+          "and the war's desolation;"
+        ],
+        "Verse 2b": [
+          "Blest with vict'ry and peace,",
+          "may the heav'n rescued land",
+          "Priase the Pow'r that had made",
+          "and preserved us a nation!"
+        ],
+        "Chorus 2b": [
+          "And the Star-spangled Banner",
+          "in triumph shall wave",
+          "O'er the land of the free",
+          "and the home of the brave?"
+        ],
+        "Chorus 2a": [
+          "Then conquer we must,",
+          "when our cause it is just;",
+          "And this be our motto;",
+          "\"In God is our trust!\""
+        ],
+        "Chorus 1a": [
+          "And the rockets' red glare,",
+          "the bombs burting in air",
+          "Gave proof thro' the night",
+          "that our flag was still there."
+        ],
+        "Chorus 1b": [
+          "O say, does that Star-spangled",
+          "Banner yet wave",
+          "O'r the land of the frre",
+          "and the home of the brave."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1a",
+        "Chorus 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 2a",
+        "Chorus 2b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#512 Baptist Hymnal",
+      "Author": "Words: Francis Scott Key, Tune: National Anthem, origin unknown 18th centyry",
+      "Publisher": "",
+      "License": "Public Domain",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Chorus 2b": {
+          "spaceAbove": 0
+        },
+        "Chorus 2a": {
+          "spaceAbove": 0
+        },
+        "Chorus 1a": {
+          "spaceAbove": 0
+        },
+        "Chorus 1b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Mine Eyes Have Seen the Glory": {
+      "oPages": {
+        "Verse 1": [
+          "Mine eyes have seen the glory ",
+          "of the coming of the Lord;",
+          "He is trampling out the vintage ",
+          "where the grapes of wrath are stored;",
+          "He hath loosed the fateful lightning ",
+          "of his terrible swift sword;",
+          "His truth is marghing on."
+        ],
+        "Chorus": [
+          "Glory! Glory, hallelujah!",
+          "Glory! Glory, hallelujah! ",
+          "Glory! Glory, hallelujah!",
+          "God is marching on."
+        ],
+        "Verse 2": [
+          "I have seen him in the watch-fires ",
+          "of a hundred circling camps;",
+          "they have builded him an alter",
+          "in the evening dews and damps;",
+          "I can read his righteous sentence ",
+          "by the dim and flaring lamps;",
+          "His day is marching on."
+        ],
+        "Verse 3": [
+          "He has sounded forth the trumpet ",
+          "that shall never sound retreat;",
+          "He is sifting out the hearts of men",
+          "before his judgment seat;",
+          "O be swift, my soul, to answer him;",
+          "be jubilant, my feet!",
+          "Our God is marching on."
+        ],
+        "Verse 4": [
+          "In the beauty of the lilies,",
+          "Christ was born across the sea,",
+          "With a glory in his bosom,",
+          "that transfigures you and me;",
+          "As he died to make men holy,",
+          "let us live to make men free,",
+          "While God is marching on."
+        ],
+        "Verse 5": [
+          "He is coming like the glory",
+          "of the morning on the wave;",
+          "He is wisdom to the mighty,",
+          "He is honor to the brave;",
+          "So the world shall be his footstool, ",
+          "and the sould of wrong his slave.",
+          "Our God is marching on."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus",
+        "Verse 5",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#510 Baptist Hymnal, 1861",
+      "Author": "Words: Julia Ward Howe",
+      "Publisher": "",
+      "License": "Public Domain",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 0
+        },
+        "Verse 5": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    }
+  },
+  "oSongSets": {
+    "songs for 5/21/23": [
+      "Come Now is the time to Worship",
+      "Bind us together",
+      "His name is wonderful",
+      "I worship You, Almighty God",
+      "Count your blessings",
+      "Great is thy faithfulness",
+      "Amazing Grace"
+    ],
+    "songs for 5/28/23": [
+      "The Star-Spangled Banner",
+      "Mine Eyes Have Seen the Glory",
+      "Bind us together",
+      "His name is wonderful",
+      "I worship You, Almighty God",
+      "Count your blessings",
+      "Great is thy faithfulness",
+      "Amazing Grace"
+    ]
+  },
+  "defaults": {
+    "allCaps": 1,
+    "fontSize": 0.076,
+    "lineHeight": 0.13,
+    "fontBoldness": 5,
+    "License": "CCLI 20847323"
+  }
+}

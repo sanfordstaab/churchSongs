@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">  
+  <title>Church Songs (Control Panel)</title>
+  <head>
+    <script src="common.js"></script>
+    <script src="songLibrary.js"></script>
+    <script src="churchSongs.js"></script>
+  </head>
+
+  <!-- 
+    useful glyph spans
+    up <span class="larger">&#8593;</span>
+    down <span class="larger">&#8595;</span>
+    left <span class="larger">&#8592;</span>
+    right <span class="larger">&#8594;</span>
+    show/doc <span class="larger">&#8801;</span>
+    add/create <span class="larger">+</span>
+    delete &#8855;
+    print <span class="larger">&#9998;</span>
+    rename/exchange <span class="larger">&#8660;</span>
+   -->
+
+  <body onload="onPageLoad()">
+    <!-- This is the invisible template for printing -->
+    <div id="divPrintArea" style="display:none;">
+      <table id="tblPrint" class="pgBrk">
+        <tr class="topRow">
+          <td colspan="100%" class="ac">
+            <h4 class="m0">%songName%</h4>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="verseCell">
+            <h6>%pageName-1%</h6>
+            <div class="divIndent">%pageLines-1%</div>
+          </td>
+          <td class="verseCell">
+            <h6>%pageName-5%</h6>
+            <div class="divIndent">%pageLines-5%</div>
+          </td>          
+        </tr>
+
+        <tr>
+          <td class="verseCell">
+            <h6>%pageName-2%</h6>
+            <div class="divIndent">%pageLines-2%</div>
+          </td>
+          <td class="verseCell">
+            <h6>%pageName-6%</h6>
+            <div class="divIndent">%pageLines-6%</div>
+          </td>          
+        </tr>
+
+        <tr>
+          <td class="verseCell">
+            <h6>%pageName-3%</h6>
+            <div class="divIndent">%pageLines-3%</div>
+          </td>
+          <td class="verseCell">
+            <h6>%pageName-7%</h6>
+            <div class="divIndent">%pageLines-7%</div>
+          </td>          
+        </tr>
+
+        <tr>
+          <td class="verseCell">
+            <h6>%pageName-4%</h6>
+            <div class="divIndent">%pageLines-4%</div>
+          </td>
+          <td class="verseCell">
+            <h6>%pageName-8%</h6>
+            <div class="divIndent">%pageLines-8%</div>
+          </td>          
+        </tr>
+        <tr>
+          <td colspan="2" width="100%">
+            <table width="100%">
+              <br>
+              <tr class="trBottomInfo">
+                <td class="al" width="25%">%Author%<br>%Publisher%</td>
+                <td class="ac" width="50%">%Notes%</td>
+                <td class="ar" width="25%">%License%<br>Page %pageNumber% of %numPages%</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>  
+    </div>
+    <!-- End of Print Template -->
+
+    <h1 class="ac">
+      Church Songs Control Panel
+    </h1>
+    <br>
+    <table class="bdr formTable">
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsProjector">
+            <legend>
+              <img src="img/hide.png" 
+              width="20" 
+              title="click to hide or show this section."
+              onclick="toggleFieldsetVisibility(event);"
+              />
+              Projector Window Creation
+            </legend>
+            <button 
+              onclick="openProjector();"
+              title="This will create a projector tab in your browser.  
+Drag the tab to make it into a separate window 
+and drag it to the monitor you want it displayed on.   
+Then press F11 to make it full screen."
+              >
+              Create a Projector Tab
+            </button>
+          </fieldset>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsSongOrSetSelection">
+            <legend>
+              <img
+                src="img/hide.png" 
+                width="20" 
+                title="click to hide or show this section." 
+                onclick="toggleFieldsetVisibility(event);"
+                />
+              Song and Song Set Selection for Printing or Projecting
+            </legend>
+            <div>
+              <table class="horzTable">
+                <tr>
+                  <th>
+                    <label for="chkNavSongSetChosen">
+                      Pick a song set:
+                    </label>
+                  </th>
+                  <td>
+                    <input id="chkNavSongSetChosen" 
+                      type="radio" 
+                      name="playChoice" 
+                      onchange="onShowSongset();"
+                      />
+                  </td>
+                  <td>
+                    <span id="spnNoSongSets" class="redText smaller">
+                      <!-- filled in by code -->
+                    </span>
+                    <select id="selNavSongSets"
+                      onchange="onShowSongset();"
+                      >
+                      <!-- filled in by code -->
+                    </select>
+                  </td>
+                  <th>
+                    Song Set Filter:
+                  </th>
+                  <td>
+                    <input id="txtNavSongSetFilter"
+                      type="text" 
+                      onkeyup="onNavSongSetFilterChanged();"
+                      onchange="onNavSongSetFilterChanged();"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="chkNavSongChosen">
+                      Pick a single song:
+                    </label>
+                  </th>
+                  <td>
+                    <input id="chkNavSongChosen" 
+                      type="radio" 
+                      name="playChoice" 
+                      onchange="onShowSong();"
+                      />
+                  </td>
+                  <td>
+                    <span id="spnNoSongsDefined" class="redText smaller">
+                      <!-- filled in by code -->
+                    </span>
+                    <select id="selNavSongs"
+                      onchange="onShowSong();"
+                      >
+                      <!-- filled in by code -->
+                    </select>
+                  </td>
+                  <th>
+                    Song Filter:
+                  </th>
+                  <td>
+                    <input id="txtNavSongFilter"
+                    type="text" 
+                    onkeyup="onNavSongFilterChanged();"
+                    onchange="onNavSongFilterChanged();"
+                    />
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <button onclick="onPrintSongs();">
+                Print the selected song or song-set <span>&#9998;</span>
+              </button>           
+              <div id="divPrintSongError" class="redText">
+                <!-- filled in by code -->
+              </div>
+            </div>
+          </fieldset>
+        </td>
+      </tr>      
+     
+      <tr>
+        <td class="ac">
+          <fieldset id="fsNav">
+            <legend>
+              <img
+                src="img/hide.png" 
+                width="20" 
+                title="click to hide or show this section." 
+                onclick="toggleFieldsetVisibility(event);"
+                />
+              Song Projector Navigation
+            </legend>
+            <table class="innerTable">
+              <tr>
+                <td>
+                  <!-- filled in by renderNavState() -->
+                  <span id="spnSongSetSection">
+                    Song Set: "<i><span id="spnNavSongSetName"></span></i>"
+                    <br>
+                  </span> 
+                    Song: "<u><span id="spnNavSongName"></span></u>" 
+                  <span id="spnSongsInSetSection">
+                    (<span id="spnNavISongSet"></span> 
+                    of 
+                    <span id="spnNavCSongs"></span>
+                    songs)
+                  </span>
+                  <br>
+                  Page: 
+                    (<span id="spnNavIPage"></span> 
+                    ["<span id="spnNavPageName"></span>"
+                    (<i><span id="spnNavIsShowing"></span></i>)]                    
+                    of 
+                    <span id="spnNavCPages"></span> pages)
+                  <br>
+      
+                  <button id="btnNavPrevPage" 
+                    title="Left Arrow"
+                    onclick="prevPage();">
+                    <span class="larger">&#8592;</span> Show Previous Page
+                  </button>
+      
+                  <button onclick="blankScreen(event);"
+                    title="Spacebar toggles blank screen / show current page."
+                    >
+                    Blank the screen &#8855;
+                  </button>
+      
+                  <button id="btnNextPage" 
+                    title="Right Arrow"
+                    onclick="nextPage();">
+                    Show Next Page <span class="larger">&#8594;</span>
+                  </button>
+                  <br>
+                  <button id="btnPrevSong" 
+                    title="Left Arrow"
+                    onclick="prevSong();">
+                    <span class="larger">&#8593;</span> Show Previous Song
+                  </button>
+      
+                  <button onclick="renderNavPage();"
+                    title="Spacebar toggles blank screen / show current page."
+                    >
+                    Show the current page <span class="larger">&#8801;</span>
+                  </button>
+      
+                  <button id="btnNextSong" 
+                    title="Down Arrow"
+                    onclick="nextSong();">
+                    Show Next Song <span class="larger">&#8595;</span>
+                  </button>
+                  <br>
+                    <p class="smallest">
+                      Use the keyboard to control page navigation 
+                      <br>
+                      when the preview pane to the right has a 
+                      <br>
+                      yellow border around it.  
+                      <br>
+                      Click on the preview pane to get the yellow border.
+                    </p>
+                  </br>
+                </td>
+                <td id="tdPagePreview"
+                  tabindex="13"
+                  onkeydown="onPreviewKey(event);"
+                  onfocusin="onPagePreviewHasFocus(event);"
+                  onfocusout="onPagePreviewLostFosus(event);">
+                  <!-- filled in by renderNavPagePreview() -->
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsGeneralFormatting">
+            <legend>
+              <img
+              src="img/hide.png" 
+              width="20" 
+              title="click to hide or show this section." 
+              onclick="toggleFieldsetVisibility(event);"
+              />
+              General Formatting:
+            </legend>
+            <div>
+              <label for="chkAllCaps">All Caps</label>
+              <input id="chkAllCaps" type="checkbox" 
+                onchange="onAllCapsChanged(event);" />
+              <fieldset>
+                <legend>
+                  Song Formatting:
+                </legend>
+                <button onclick="biggerFont();">
+                  Bigger Song Font <span class="larger">&#8593;</span>
+                </button>
+                <button onclick="smallerFont();">
+                  Smaller Song Font <span class="larger">&#8595;</span>
+                </button>
+                <br>
+                <button onclick="biggerLineHeight();">
+                  Bigger Line Spacing <span class="larger">&#8593;</span>
+                </button>
+                <button onclick="smallerLineHeight();">
+                  Smaller Line Spacing <span class="larger">&#8595;</span>
+                </button>
+                <br>
+                <button onclick="bolderFont();">
+                  Bolder Font <span class="larger">&#8593;</span>
+                </button>
+                <button onclick="lessBoldFont();">
+                  Less Bold Font <span class="larger">&#8595;</span>
+                </button>
+                <fieldset>
+                  <legend>
+                    Song Page Formatting:
+                  </legend>
+                  <button onclick="moveTextUp();">
+                    Move Text Up <span class="larger">&#8593;</span>
+                  </button>
+                  <button onclick="moveTextDown();">
+                    Move Text Down <span class="larger">&#8595;</span>
+                  </button>
+                </fieldset>
+              </fieldset>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsCreateOrEditSongSet">
+            <legend>
+              <img src="img/hide.png" 
+                width="20" 
+                title="click to hide or show this section."
+                onclick="toggleFieldsetVisibility(event);"
+                />
+              Create or Edit a Song Set
+            </legend>
+            <div>
+              <div id="divSongSetError" class="redText">
+              </div>
+              Pick a song set to edit:
+              <br>
+              <span id="spnNoSongSetsToEdit" class="redText smaller">
+                <!-- filled in by code -->
+              </span>
+              <select id="selAllSongSetsToEdit">
+                <!-- filled in by code -->
+              </select>
+              <span class="smaller">
+                &nbsp;&nbsp;&nbsp;Song Set Filter:
+              </span>
+              <input id="txtSongSetEditFilter"
+                onkeyup="onSongSetEditFilterChanged();"
+                onchange="onSongSetEditFilterChanged();"
+                type="text"
+                />
+              <br>
+              <button id="btnEditSongSet" onclick="editSelectedSongSet();">
+                Edit this song set <span class="larger">&#8801;</span>
+              </button>
+              <button id="btnDeleteSongSet" onclick="deleteSongSet();">
+                Delete this song set &#8855;
+              </button>
+              <br>
+              -- or --
+              <br>
+              Pick a name for your new song set:
+              <br>
+              <input id="txtNewSongSetName" 
+                onkeyup="onNewSongSetEditNameChanged();" 
+                onchange="onNewSongSetEditNameChanged();" 
+                type="text" 
+                size="30" />
+              <button id="btnCreateNewSongSet" 
+                onclick="createNewSongSet();">
+                Create a new song set <span class="larger">+</span>
+              </button>
+              <button id="btnRenameSongSet"
+                onclick="renameSongSet();">
+                Rename this song set <span class="larger">&#8660;</span>
+              </button>
+              <br>
+              Select a song to add to the set:
+              <br>
+              <span id="spnNoSongsToAddToSongSet" class="redText smaller">
+                <!-- filled in by code -->
+              </span>
+              <select id="selFilteredSongsToAdd" >
+                <!-- filled in by code -->
+              </select>
+              &nbsp;&nbsp;&nbsp;Song Filter:
+              <input id="txtSongSetAddSongFilter" 
+                type="text" 
+                onkeyup="onEditSongInSetFilterChanged();" 
+                onchange="onEditSongInSetFilterChanged();" 
+                />
+              <br>
+              Add that song to the list:
+              <br>
+              <button id="btnAddSongToNewSongSet" onclick="addSongToNewSongSet();">
+                Add the Selected Song <span class="larger">+</span>
+              </button>
+              <fieldset>
+                <legend>
+                  Your Current Song set:
+                </legend>
+                <table class="innerTable">
+                  <tr>
+                    <th class="ar">
+                      <span id="spnNoSongsInEditSongSet" class="redText smaller">
+                        <!-- filled in by code -->
+                      </span>
+                      <select id="selCurrentSongSet" size="6" onchange="onSelCurrentSongSetChanged();">
+                        <!-- filled in by code -->
+                      </select>
+                    </th>
+                    <th class="al m0">
+                      <button id="btnMoveSongUpInSongSet" onclick="moveSongUpInSongSet();">
+                        Move selected song up in the list <span class="larger">&#8593;</span>
+                      </button>
+                      <br>
+                      <button id="btnMoveSongDownInSongSet" onclick="moveSongDownInSongSet();">
+                        Move selected song down in the list <span class="larger">&#8595;</span>
+                      </button>
+                      <br>
+                      <button id="btnDeleteSongFromSongSet" onclick="deleteSongFromSongSet();">
+                        Delete selected song from the list <span class="larger">&#9938;</span>
+                      </button>
+                    </th>
+                  </tr>
+                </table>
+              </fieldset>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsCreateOrEditSong">
+            <legend>
+              <img src="img/hide.png" 
+                width="20" 
+                title="click to hide or show this section."
+                onclick="toggleFieldsetVisibility(event);"
+                />
+              Create or Edit a Song:
+            </legend>
+            <div>
+            <div id="divNewEditSongNameError" class="redText">
+            </div>
+            <table class="horzTable" width="100%">
+              <tr>
+                <th>
+                  <label for="chkEditExistingSong">
+                    Pick a Song to edit:
+                  </label>
+                </th>
+                <td>
+                  <input id="chkEditExistingSong" 
+                    type="radio" 
+                    name="editChoice" 
+                    onchange="fillSongToEdit();"
+                    />
+                </td>
+                <td>
+                  <span id="spnNoSongsToEdit" 
+                    class="redText smaller">
+                    <!-- filled in by code -->
+                  </span>
+                  <select id="selAllSongsToEdit" 
+                    onchange="fillSongToEdit();">
+                    <!-- filled in by code -->
+                  </select>
+                </td>
+                <th>
+                  Song Name Filter:
+                </th>
+                <td>
+                  <input id="txtEditSongFilter"
+                    type="text" 
+                    onkeyup="onNewSongFilterChanged();"
+                    onchange="onNewSongFilterChanged();"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <th>
+                  <label for="chkEditNewSong">
+                    Pick a name for your new song:
+                  </label> 
+                </th>
+                <td>
+                  <div id="divNewEditSongNameError" class="redText">
+                  </div>  
+                  <input id="chkEditNewSong" 
+                    type="radio" 
+                    name="editChoice" 
+                    onchange="onNewSongNameChanged();"
+                    />
+                </td>
+                <th>
+                  <input id="txtNewSongName" 
+                    type="text" 
+                    placeholder="New Song Name" 
+                    onkeyup="onNewSongNameChanged();" 
+                    onchange="onNewSongNameChanged();" 
+                    size="29"
+                    />
+                </th> 
+                <td colspan="2">                    
+                </td>
+              </tr>
+            </table>
+
+              <button id="btnCreateNewSong" onclick="createEmptySong();">
+                Create a New Empty Song <span class="larger">+</span>
+              </button>
+              <button id="btnRenameSong" 
+                onclick="renameSong();">
+                Rename the selected song <span class="larger">&#8660;</span>
+              </button>
+              <button id="btnDeleteSong" 
+                onclick="deleteSong();">
+                Delete the selected song &#8855;
+              </button>          
+              <fieldset id="fsEditSongVerses">
+                <legend>
+                  Edit Song Verses:
+                </legend>
+                <table class="innerTable">
+                  <tr>
+                    <th>
+                      Song Verses:
+                      <select id="selSongVersesToEdit" 
+                        onchange="onSelectedVerseToEditChanged();"
+                        title="Each line is the name of a verse or page.\nWhen a song is projected, each screen is one verse.\nIf a verse is repeated use the verse order below to reuse a verse."
+                        size="9">
+                        <!-- filled in by code -->
+                      </select>
+                    </th>
+                    <td class="smaller">
+                      <div id="divVerseNameEditError" class="redText">Error</div>
+                      New Verse Name:
+                      <input id="txtNewVerseName" type="text" placeholder="New/Updated Verse Name"
+                        onkeyup="onNewVerseNameChanged();" 
+                        onchange="onNewVerseNameChanged();" 
+                        />
+                      <label for="chkIsTagVerse">
+                        This is the Tag Verse
+                      </label>
+                      <input id="chkIsTagVerse" 
+                        onchange="onIsTagVerseChanged();" 
+                        type="checkbox" />
+                      <br>
+                      <button id="btnAddNewVerse"
+                        onclick="addANewVerse();">
+                        Add a new verse <span class="larger">+</span>
+                      </button>
+                      <button id="btnRenameSelectedVerse"
+                        onclick="renameSelectedVerse();">
+                        Rename the selected verse <span class="larger">&#8660;</span>
+                      </button>
+                      <button id="btnDeleteSelectedVerse"
+                        onclick="deleteSelectedVerse();">
+                        Delete the selected verse &#9938;
+                      </button>
+          
+                      <br>
+                      <textarea id="txtaVerseLines" cols="70" rows="5" 
+                        title="Enter the lines for this verse.  Note that each verse will be rendered onto a page
+so don't have too many lines and don't let the lines get too long."
+                        onkeyup="onVerseLinesChanged();"
+                        onchange="onVerseLinesChanged();"
+                        >
+                      </textarea>
+                      <br>
+                      Repeat Count:
+                      <select id="selRepeatCount"
+                        onchange="onRepeatCountChanged();"
+                        title="Set the number of times you want the verses in order to be sung.
+Any tag verse always comes last and only once."
+                        >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </td>
+                  </tr>
+          
+                </table>
+                <fieldset id="fsEditSongVerseOrder">
+                  <legend>
+                    Edit Song Verse Order:
+                  </legend>
+                  <table class="innerTable">
+                    <tr>
+                      <th>
+                        Verse Order:
+                        <select id="selSongVerseOrder" 
+                          onchange="onVerseOrderChanged();" 
+                          size="6"
+                          title="These verses will be displayed in the given order and repeated based on the Repeat Count value.  
+If a verse is marked as a tag verse, it will appear last as well.
+Tag verses can be included in this order as well."
+                          >
+                          <!-- filled in by code -->
+                        </select>
+                      </th>
+                      <td>
+                        <button id="btnMoveSelectedVerseUp" 
+                          onclick="moveSelectedVerseUpInOrder();">
+                          Move selected verse up <span class="larger">&#8593;</span>
+                        </button>
+                        <button id="btnMoveSelectedVerseDown" 
+                          onclick="moveSelectedVerseDownInOrder();">
+                          Move selected verse down <span class="larger">&#8595;</span>
+                        </button>
+                        <br>
+                        <button id="btnAddSelectedVerseToVerseOrder" 
+                          onclick="addVerseToVerseOrder();">
+                          Add selected song verse to verse order <span class="larger">+</span>
+                        </button>
+                        <br>
+                        <button id="btnDeleteSelectedVerseFromVerseOrder" 
+                          onclick="deleteVerseOrderVerse();">
+                          Delete selected verse from verse order <span class="larger">&#9938;</span>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        Overall Verse Order:
+                      </th>
+                      <td id="tdOverallVerseOrder"
+                        colspan="100%" 
+                        class="smaller"
+                        >
+                        <!-- filled in by code -->
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+              </fieldset>
+              <fieldset id="fsOtherSongSettings">
+                <legend>
+                  Other Song Settings
+                </legend>
+                <table class="innerTable">
+                  <tr>
+                    <th>
+                      Notes:
+                    </th>
+                    <td>
+                      <input id="txtNotes" 
+                        type="text"
+                        size="80"
+                        title="Notes are printed with the lyrics and usually 
+contian information like where to find the song in a hymnal, 
+when the song was created or other info you would want the 
+perfomers to have."
+                        onkeyup="onNotesChanged();"
+                        onchange="onNotesChanged();"
+                        />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      Author:
+                    </th>
+                    <td>
+                      <input id="txtAuthor"
+                        type="text",
+                        size="40",
+                        title="Enter Author data here as desired."
+                        onkeyup="onAuthorChanged();"
+                        onchange="onAuthorChanged();"
+                        />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      Publisher:
+                    </th>
+                    <td>
+                      <input id="txtPublisher"
+                        type="text",
+                        size="40",
+                        title="Enter Publisher data here as desired."
+                        onkeyup="onPublisherChanged();"
+                        onchange="onPublisherChanged();"
+                        />
+                    </td>                      
+                  </tr>
+
+                  <tr>
+                    <th>
+                      License:
+                    </th>
+                    <td>
+                      <input id="txtLicense"
+                        type="text",
+                        size="40",
+                        title="Some song services require a visible license code such as CCLI.
+If your license code is per organization, you can leave this 
+blank and set the default License value which will apply to all 
+songs that don't have this value set to something."
+                        onkeyup="onLicenseChanged();"
+                        onchange="onLicenseChanged();"
+                        />
+                    </td>                      
+                  </tr>
+
+                  <tr>
+                    <th>
+                      Default License:
+                    </th>
+                    <td>
+                      <span class="smaller">
+                        This applies to all songs:
+                      </span>
+                      <input id="txtDefaultLicense"
+                        type="text",
+                        size="40",
+                        title="Set this if you have an organization wide 
+license code to show on each verse/page.
+This will apply to all songs that don't
+have an alternative license code specified."
+                        onkeyup="onDefaultLicenseChanged();"
+                        onchange="onDefaultLicenseChanged();"
+                        />
+                    </td>                      
+                  </tr>
+
+                </table>
+              </fieldset>
+            </div>
+          </fieldset>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsSearch">
+            <legend>
+              <img src="img/hide.png" 
+              width="20" 
+              title="click to hide or show this section."
+              onclick="toggleFieldsetVisibility(event);"
+              />
+              Song Data Search
+            </legend>
+            <center>
+              <table class="innerTable">
+                <tr>
+                  <td>
+                    Search in:
+                    <br>
+
+                    <button id="btnSearchAll"
+                      onclick="onSearchAll();"
+                      >
+                      Check All
+                    </button>
+                    <br>
+
+                    <button id="btnSearchNone"
+                      type="checkbox"
+                      onclick="onSearchNone();"
+                      >    
+                      Check None
+                    </button>
+                    <br>
+
+                    <input id="chkSearchInSongSetNames"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchInSongSetNames">
+                      Song Set Names
+                    </label>
+                    <br>
+
+                    <input id="chkSearchInSongNames"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchInSongNames">
+                      Song Names
+                    </label>   
+                    <br>
+                    
+                    <input id="chkSearchLyrics"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchLyrics">
+                      Song Lyrics
+                    </label>      
+                    <br>
+                    
+                    <input id="chkSearchNotes"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchNotes">
+                      Song Notes
+                    </label>         
+                    <br>
+
+                    <input id="chkSearchAuthor"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchAuthor">
+                      Song Authors
+                    </label>    
+                    <br>
+                                        
+                    <input id="chkSearchPublisher"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchPublisher">
+                      Song Publishers
+                    </label>    
+                    <br>
+                    
+                    <input id="chkSearchLicense"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchLicense">
+                      Song Licenses
+                    </label>  
+                  </td>
+                  <td>
+                    Search for:
+                    <input id="txtSearchFor"
+                      size="47"
+                      placeholder="Enter your search terms here or * to find all items."
+                      onkeyup="onSearchInChanged();"
+                      onchange="onSearchInChanged();"
+                      >
+                    <br>
+                    <br>
+                    <textarea id="txtaSearchResults"
+                      cols="60",
+                      rows="13"
+                    ></textarea>
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </fieldset>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="ac">
+          <fieldset id="fsExportImport">
+            <legend>
+              <img src="img/hide.png" 
+                width="20" 
+                title="click to hide or show this section."
+                onclick="toggleFieldsetVisibility(event);"
+                />
+              Export / Import
+            </legend>
+            <center>
+              <table class="innerTable">
+                <tr>
+                  <th>
+                    <button onclick="exportLibrary();">
+                      Export Song Library <span class="larger">&#8594;</span>
+                    </button>
+                    <br>
+                    <button onclick="importLibrary();">
+                      Import Song Library <span class="larger">&#8592;</span>
+                    </button>
+                  </th>
+                  <td>
+                    <textarea id="txtaImportExport" 
+                      cols="40" 
+                      rows="6" 
+                      placeholder="Paste JSON to import here\nor\nCopy Exported JSON from here to save to a file."></textarea>
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </fieldset>
+        </td>
+      </tr>
+
+    </table>
+  </body>
+
+</html> 

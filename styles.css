@@ -1,0 +1,214 @@
+/* Universal resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: none;
+}
+
+/* tag styles */
+body {
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 14pt;
+  position: relative;
+  margin: 20px;
+  background-color: cadetblue;
+  color: black;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button {
+  margin: 3px;
+  height: 2em;
+}
+
+h6 {
+  margin: 2px 2px;
+}
+
+fieldset {
+  background-color: rgb(255, 202, 137);
+}
+
+.redText {
+  color: red;
+}
+
+.greenText {
+  color: green;
+}
+
+.bdr {
+  border: solid black 2px;
+}
+
+.al {
+  text-align: left !important;
+}
+
+.ac {
+  text-align:center;
+  margin: auto;
+}
+
+.ar {
+  text-align:right;   
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.vat {
+  vertical-align: top;
+}
+
+.m0 {
+  margin: 0px;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.smallest {
+  font-size: small;
+}
+
+.larger {
+  font-size: large;
+}
+
+.formTable {
+  margin: auto;
+  background-color: bisque;
+  border: solid black 2px;
+}
+
+.formTable th {
+  padding: 1em 2em;
+  text-align: right;
+  font-weight: bold;
+}
+
+.formTable td {
+  padding: 1em 2em;
+  border: solid black 1px;
+}
+
+.innerTable {
+  margin: auto;
+  background-color: rgb(255, 202, 137);
+  /* border: solid black 1px; */
+}
+
+.innerTable th {
+  padding: .2em .4em;
+  text-align: right;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.innerTable td {
+  padding: .2em .4em;
+  border: solid black 1px;
+}
+
+.horzTable {
+  margin: auto;
+  background-color: rgb(255, 202, 137);
+  border: solid black 1px;
+}
+
+.horzTable th {
+  padding: .2em .4em;
+  text-align: right;
+  font-weight: bold;
+  font-size: smaller;
+  border-top: solid black 1px;
+  border-right: none;
+  border-left: none;
+}
+
+.horzTable td {
+  padding: .2em .4em;
+  border-top: solid black 1px;
+  border-right: none;
+  border-left: none;  
+}
+
+@media print {
+  .pgBrk {
+    page-break-after: always !important;
+  }
+}
+
+#divPrintArea {
+  background-color: white;
+  position: relative;
+}
+
+#tblPrint {
+  width: 8in;
+  height: 10in;
+  margin: auto;
+  margin-top: 0in;
+}
+
+#tblPrint td {
+  vertical-align: top;
+  /* border: solid blue 1px; */
+}
+
+.trBottomInfo {
+  font-size: 9pt;
+  margin-top: .2in;
+  /* border: solid black 1px; */
+}
+
+#tdPagePreview {
+  background-color: black;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  width: 3in;
+  height: 3in;
+}
+
+.greenBdr {
+  border: solid green 2px;
+}
+
+.topRow {
+  height: .5in;
+}
+
+.verseCell {
+  width: 50%;
+  padding: .1in;
+  height: 2.25in;
+  font-size: 14pt;
+  /* border: solid black 1px; */
+  text-align: top;
+}
+
+.divIndent {
+  padding-left: 1em;
+}
+
+.bottomRow {
+  height: 2in;
+  font-size: 11pt;
+}
+
+.tblBottomInfo {
+  width: 100%;
+}
