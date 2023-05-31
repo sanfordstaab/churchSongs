@@ -1316,6 +1316,9 @@ function onSearchInChanged(event) {
 }
 
 function areAllTokensInText(aLCTokens, text) {
+  if (!text) {
+    return false;
+  }
   text = text.toString();
   if (!aLCTokens || aLCTokens.length == 0) {
     return false;
