@@ -175,12 +175,10 @@ fieldset {
 }
 
 #tdPagePreview {
-  background-color: black;
   color: white;
   text-align: center;
   vertical-align: middle;
-  width: 3in;
-  height: 3in;
+  height: 300px;
 }
 
 .greenBdr {

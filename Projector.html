@@ -60,44 +60,51 @@ footer {
     <script src="common.js"></script>
     <script type="text/javascript">
 
-
-
 function onPageLoad(event) {
   onstorage = (event) => {
     if (event.key == 'projector-message' && event.newValue != null) {
       const oMsg = JSON.parse(event.newValue);
       const html = processMessage(oMsg);
+      sendARBack();
     }
   }
+  
   onkeyup = (event) => {
     localStorage.setItem('projectorKeyup', event.code);
     localStorage.clear();
+  }
+    
+  onResize = (event) => {
+    processMessage(g.prevMsg);
+    sendARBack();
   }
 }
 
 g.prevMsg = {};
 
-function onResize(event) {
-  processMessage(g.prevMsg);
+
+function sendARBack() {
+  localStorage.setItem('AR-message', g.aspectRatio);
+  localStorage.clear('AR-message');
 }
 
 function processMessage(oMsg) {
   g.prevMsg = oMsg;
   console.log('processMessage: ' + JSON.stringify(oMsg, null, 2));
-  const height = window.innerHeight;
-  const width = window.innerWidth;
-  const aspectRatio = fixit(height / width, 4);
-  console.log(`height:${height}, width:${width}, AR:${aspectRatio}`);
+  g.height = window.innerHeight;
+  g.width = window.innerWidth;
+  g.aspectRatio = fixit(g.height / g.width, 4);
+  console.log(`g.height:${g.height}, g.width:${g.width}, AR:${g.aspectRatio}`);
   if (Array.isArray(oMsg.content)) {
     let style = '';
     if (oMsg.fontSize) {
-      style += `font-size: ${oMsg.fontSize * width}px; `;
+      style += `font-size: ${oMsg.fontSize * g.width}px; `;
     }
     if (oMsg.fontBoldness) {
       style += `font-weight: ${Number(oMsg.fontBoldness) * 100}; `;
     }
     if (oMsg.lineHeight) {
-      style += `line-height: ${oMsg.lineHeight * height}px; `;
+      style += `line-height: ${oMsg.lineHeight * g.height}px; `;
     }
     if (oMsg.allCaps) {
       style += `text-transform: uppercase; `;
@@ -143,25 +150,27 @@ function processMessage(oMsg) {
   </head>
 
   <body onload="onPageLoad();" onresize="onResize();">
-    <div id="divTopSpacer">
-    </div>
-    <content id="content">
-      <h1>
-        Projector
-      </h1>
-    </content>
-    <footer class="smallest vat">
-      <table width="100%">
-        <tr>
-          <td class="al">
-            <span id="spnPageNumber"></span>
-            <spn id="spnSongNumber"></spn>
-          </td>
-          <td class="ar">
-            <span id="spnLicense"></span>
-          </td>
-        </tr>
-      </table>
-    </footer>
+    <container>
+      <div id="divTopSpacer">
+      </div>
+      <content id="content">
+        <h1>
+          Projector
+        </h1>
+      </content>
+      <footer class="smallest vat">
+        <table width="100%">
+          <tr>
+            <td class="al">
+              <span id="spnPageNumber"></span>
+              <spn id="spnSongNumber"></spn>
+            </td>
+            <td class="ar">
+              <span id="spnLicense"></span>
+            </td>
+          </tr>
+        </table>
+      </footer>
+    </container>
   </body>
 </html>     

@@ -5,6 +5,9 @@ async function onPageLoad(event) {
     if (event.key == 'projectorKeyup' && event.newValue != null) {
       processKeyCode(event.newValue);
     }
+    if (event.key == 'AR-message' && event.newValue != null) {
+      processARChanged(event.newValue);
+    }
   }
   // make sure we have defined at least a minimum set of data
   if (!songLibrary) {
@@ -200,6 +203,13 @@ function processKeyCode(code) {
   return !fAllowDefault;
 }
 
+function processARChanged(newAspectRatio) {
+  if (g.aspectRatio != newAspectRatio) {
+    g.aspectRatio = newAspectRatio;
+    renderNavPagePreview();
+  }
+}
+
 function setNavSongSet(songSetName) {
   g.songSetName = songSetName;
   if (!g.songSetName) {
@@ -323,7 +333,7 @@ function blankScreen(event) {
   localStorage.setItem('projector-message', JSON.stringify({
     content: ''
   }));
-  localStorage.clear();
+  localStorage.clear('projector-message');
   g.isScreenBlank = true;
   renderNavState();
   renderNavPagePreview();
@@ -366,7 +376,7 @@ function renderNavPage(event) {
   };
 
   localStorage.setItem('projector-message', JSON.stringify(oMessage));
-  localStorage.clear();
+  localStorage.clear('projector-message');
   g.isScreenBlank = false;
   renderNavState();
   renderNavPagePreview();
@@ -387,7 +397,9 @@ function renderNavPagePreview() {
   console.assert(undefined != g.iPage);
   console.assert(g.cPages);
   console.assert(g.songName);
-  let html = '';
+  let html = `<table style="border: white solid 1px; background-color: black;" height="300"; width="${
+      fixit(300 / g.aspectRatio, 0)
+    }"><tr><td>`;
   //`<span class="smaller">Page ${
   //     g.iPage + 1
   //   } of ${
@@ -396,7 +408,7 @@ function renderNavPagePreview() {
   //     g.songName 
   //   }"</span><br><br>`;
   if (g.isScreenBlank) {
-     html = `Projector is Blank<br><br><span class="smaller">
+     html += `Projector is Blank<br><br><span class="smaller">
      Ready to show page&nbsp;${
       g.iPage + 1
     }&nbsp;of&nbsp;${
@@ -405,7 +417,7 @@ function renderNavPagePreview() {
   } else {
     html += g.aPageLines.join('<br>');
   }
-  ge('tdPagePreview').innerHTML = html;
+  ge('tdPagePreview').innerHTML = html + '</td></tr></table>';
 }
 
 function onPagePreviewHasFocus(event) {
