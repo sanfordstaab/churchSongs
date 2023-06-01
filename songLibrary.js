@@ -64,13 +64,13 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Verse 1": {
-          "spaceAbove": 2
+          "spaceAbove": 2.25
         },
         "Chorus A": {
-          "spaceAbove": 1.75
+          "spaceAbove": 2.25
         },
         "Chorus B": {
-          "spaceAbove": 2.5
+          "spaceAbove": 3.25
         }
       },
       "fontSize": 0.061,
@@ -212,13 +212,13 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1": {
-          "spaceAbove": 0
+          "spaceAbove": 3.25
         },
         "Verse 2": {
-          "spaceAbove": 0
+          "spaceAbove": 3.5
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.13
     },
@@ -527,19 +527,19 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1": {
-          "spaceAbove": 1
-        },
-        "Verse 2": {
-          "spaceAbove": 1
-        },
-        "Verse 3": {
-          "spaceAbove": 1
-        },
-        "Verse 4": {
           "spaceAbove": 1.5
         },
+        "Verse 2": {
+          "spaceAbove": 1.5
+        },
+        "Verse 3": {
+          "spaceAbove": 1.75
+        },
+        "Verse 4": {
+          "spaceAbove": 2.5
+        },
         "Verse 5": {
-          "spaceAbove": 1
+          "spaceAbove": 1.5
         }
       },
       "fontSize": 0.05,
@@ -1001,13 +1001,13 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Chorus": {
-          "spaceAbove": 3
+          "spaceAbove": 4.5
         },
         "Verse 1": {
-          "spaceAbove": 2.75
+          "spaceAbove": 4.25
         },
         "Verse 2": {
-          "spaceAbove": 2.5
+          "spaceAbove": 4.25
         },
         "Ending": {
           "spaceAbove": 5.5
@@ -1062,22 +1062,22 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Chorus 1": {
-          "spaceAbove": 0
+          "spaceAbove": 3.25
         },
         "Chorus 2": {
-          "spaceAbove": 0
+          "spaceAbove": 3
         },
         "Verse 1": {
-          "spaceAbove": 0
+          "spaceAbove": 3.5
         },
         "Verse 2": {
-          "spaceAbove": 0
+          "spaceAbove": 3
         },
         "Tag": {
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.13
     },
@@ -1169,38 +1169,38 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1a": {
-          "spaceAbove": 0
+          "spaceAbove": 2.25
         },
         "Verse 1b": {
-          "spaceAbove": 0
+          "spaceAbove": 2
         },
         "Chorus a": {
-          "spaceAbove": 0
+          "spaceAbove": 2.75
         },
         "Chorus b": {
-          "spaceAbove": 0
+          "spaceAbove": 2.75
         },
         "Verse 2a": {
-          "spaceAbove": 0
+          "spaceAbove": 3.5
         },
         "Verse 2b": {
-          "spaceAbove": 0
+          "spaceAbove": 3
         },
         "Verse 3a": {
-          "spaceAbove": 0
+          "spaceAbove": 2.25
         },
         "Verse 3b": {
-          "spaceAbove": 0
+          "spaceAbove": 3.25
         },
         "Verse 4a": {
-          "spaceAbove": 0
+          "spaceAbove": 2.75
         },
         "Verse 4b": {
-          "spaceAbove": 0
+          "spaceAbove": 3.25
         }
       },
-      "fontSize": 0.076,
-      "fontBoldness": 5,
+      "fontSize": 0.055,
+      "fontBoldness": 1,
       "lineHeight": 0.13
     },
     "Great is thy faithfulness": {
@@ -1267,30 +1267,30 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1a": {
-          "spaceAbove": 0
+          "spaceAbove": 3.25
         },
         "Verse 1b": {
-          "spaceAbove": 0
+          "spaceAbove": 3
         },
         "Chorus": {
-          "spaceAbove": 0
+          "spaceAbove": 1.75
         },
         "Verse 2a": {
-          "spaceAbove": 0
+          "spaceAbove": 2.75
         },
         "Verse 2b": {
-          "spaceAbove": 0
+          "spaceAbove": 2.75
         },
         "Verse 3a": {
-          "spaceAbove": 0
+          "spaceAbove": 3
         },
         "Verse 3b": {
-          "spaceAbove": 0
+          "spaceAbove": 3.5
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.159
     },
     "The Star-Spangled Banner": {
       "oPages": {

@@ -68,7 +68,7 @@ function onPageLoad(event) {
       sendARBack();
     }
   }
-  
+
   onkeyup = (event) => {
     localStorage.setItem('projectorKeyup', event.code);
     localStorage.clear();
@@ -90,59 +90,11 @@ function sendARBack() {
 
 function processMessage(oMsg) {
   g.prevMsg = oMsg;
-  console.log('processMessage: ' + JSON.stringify(oMsg, null, 2));
-  g.height = window.innerHeight;
-  g.width = window.innerWidth;
-  g.aspectRatio = fixit(g.height / g.width, 4);
-  console.log(`g.height:${g.height}, g.width:${g.width}, AR:${g.aspectRatio}`);
-  if (Array.isArray(oMsg.content)) {
-    let style = '';
-    if (oMsg.fontSize) {
-      style += `font-size: ${oMsg.fontSize * g.width}px; `;
-    }
-    if (oMsg.fontBoldness) {
-      style += `font-weight: ${Number(oMsg.fontBoldness) * 100}; `;
-    }
-    if (oMsg.lineHeight) {
-      style += `line-height: ${oMsg.lineHeight * g.height}px; `;
-    }
-    if (oMsg.allCaps) {
-      style += `text-transform: uppercase; `;
-    }
-    ge('divTopSpacer').style.marginTop = oMsg.spaceAbove + 'em';
-    console.assert(undefined != oMsg.pageNumber);
-    console.assert(undefined != oMsg.songNumber);
-    console.assert(undefined != oMsg.license);
-    console.log(`style: ${style}`);
-    document.body.style = style;
-    ge('content').innerHTML = `
-<table width="100%" height="100%">
-  <tr>
-    <td colspan="100% width="100%">
-      ${oMsg.content.join('<br>')}
-    </td>
-  </tr>
-</table>
-`;
-    ge('spnPageNumber').innerText = oMsg.pageNumber;
-    ge('spnSongNumber').innerText = '/' + oMsg.songNumber;
-    ge('spnLicense').innerText = oMsg.license;
-    if (oMsg.lastPage) {
-      ge('spnPageNumber').classList.add('redText');
-    } else {
-      ge('spnPageNumber').classList.remove('redText');
-    }
-    if (oMsg.lastSong) {
-      ge('spnSongNumber').classList.add('redText');
-    } else {
-      ge('spnSongNumber').classList.remove('redText');      
-    }
-  } else { // blank page
-    ge('content').innerHTML = '';
-    ge('spnPageNumber').innerText = '';
-    ge('spnSongNumber').innerText = '';
-    ge('spnLicense').innerText = '';
-  }
+  const height = window.innerHeight;
+  const width = window.innerWidth;
+  g.aspectRatio = fixit(height / width, 4);
+  renderPage(document.body, oMsg, width, height, g.aspectRatio);
+
 } // processMessage
 
     </script>
@@ -150,27 +102,7 @@ function processMessage(oMsg) {
   </head>
 
   <body onload="onPageLoad();" onresize="onResize();">
-    <container>
-      <div id="divTopSpacer">
-      </div>
-      <content id="content">
-        <h1>
-          Projector
-        </h1>
-      </content>
-      <footer class="smallest vat">
-        <table width="100%">
-          <tr>
-            <td class="al">
-              <span id="spnPageNumber"></span>
-              <spn id="spnSongNumber"></spn>
-            </td>
-            <td class="ar">
-              <span id="spnLicense"></span>
-            </td>
-          </tr>
-        </table>
-      </footer>
-    </container>
+    <h1>Projector Window</h1>
+    <!-- filled in by code -->
   </body>
 </html>     
