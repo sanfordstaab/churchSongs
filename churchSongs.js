@@ -1096,8 +1096,9 @@ function addANewVerse(event) {
       `There already is a verse named "${ses.newVerseName}".`;
     return;    
   }
-  ses.songData.oPages[ses.newVerseName] = 
-    ge('txtaVerseLines').value.trim().split('\n');
+
+  // clear the text for the new verse
+  ses.songData.oPages[ses.newVerseName] = '';
 
   // BUG: Not sure why but sometimes we have an extra null verse
   delete ses.songData.oPages[''];
@@ -1216,7 +1217,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchInSongSetNames').checked) {
       resultPart = 'In Song Set Names:\n';
       fResultFound = false;
-      Object.keys(songLibrary.oSongSets).forEach(
+      getAllSongSetNames().forEach(
         function(songSetName) {
           if (areAllTokensInText(aSearchTokens, songSetName)) {
             resultPart += `  ${songSetName}\n`;
@@ -1231,7 +1232,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchInSongNames').checked) {
       resultPart = 'In Song Names:\n';
       fResultFound = false;
-      Object.keys(songLibrary.oSongs).forEach(
+      getAllSongNames().forEach(
         function(songName) {
           if (areAllTokensInText(aSearchTokens, songName)) {
             resultPart += `  ${songName}\n`;
@@ -1246,9 +1247,9 @@ function onSearchInChanged(event) {
     if (ge('chkSearchLyrics').checked) {
       resultPart = 'In Song Lyrics:\n';
       fResultFound = false;
-      Object.entries(songLibrary.oSongs).forEach(
+      getAllSongNames().forEach(
         function(oSongKV) {
-          Object.entries(oSongKV[1].oPages).forEach(
+          Object.entries(oSongKV[1].oPages).sort().forEach(
             function(aPageKV) {
               aPageKV[1].forEach(
                 function(lyricLine) {
@@ -1269,7 +1270,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchNotes').checked) {
       resultPart = 'In Song Notes:\n';
       fResultFound = false;
-      Object.entries(songLibrary.oSongs).forEach(
+      getAllSongNames().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Notes)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Notes}\n`;
@@ -1284,7 +1285,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchAuthor').checked) {
       resultPart = 'In Song Authors:\n';
       fResultFound = false;
-      Object.entries(songLibrary.oSongs).forEach(
+      getAllSongNames().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Author)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Author}\n`;
@@ -1299,7 +1300,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchPublisher').checked) {
       resultPart = 'In Song Publshers:\n';
       fResultFound = false;
-      Object.entries(songLibrary.oSongs).forEach(
+      getAllSongNames().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Publisher)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Publisher}\n`;
@@ -1314,7 +1315,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchLicense').checked) {
       resultPart = 'In Song Licenses:\n';
       fResultFound = false;
-      Object.entries(songLibrary.oSongs).forEach(
+      getAllSongNames().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].License)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].License}\n`;
@@ -1546,7 +1547,7 @@ function renderAllSongSets(
   noSongsId) 
 {
   const elSel = ge(idSel);
-  let aSongSetNames = getAllSongSetNames().sort();
+  let aSongSetNames = getAllSongSetNames();
   const cUnfilteredSongNames = aSongSetNames.length;
   if (filterId) {
     aSongSetNames = 

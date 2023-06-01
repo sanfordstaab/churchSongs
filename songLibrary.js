@@ -1482,6 +1482,61 @@ var songLibrary =
       "fontSize": 0.076,
       "fontBoldness": 5,
       "lineHeight": 0.13
+    },
+    "This is the Day": {
+      "oPages": {
+        "Verse 1": [
+          "This is the day!",
+          "This is the day,",
+          "that the Lord hath made,",
+          "that the Lord hath made;"
+        ],
+        "Verse 2": [
+          "We will rejoice,",
+          "We will rejoice,",
+          "and be glad in it,",
+          "and be glad in it."
+        ],
+        "Verse 3": [
+          "This is the day ",
+          "that the Lord hath made,",
+          "We will rejoice ",
+          "and be glad in it"
+        ],
+        "Verse 4": [
+          "This is the day!",
+          "This is the day,",
+          "that the Lord hath made."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": "2",
+      "Notes": "#85 Maranatha Praise Chorus Book 1990, Psalm 118:24",
+      "Author": "Les Garrett",
+      "Publisher": "Scripture In Song (C) 1980",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
     }
   },
   "oSongSets": {
@@ -1503,6 +1558,10 @@ var songLibrary =
       "Count your blessings",
       "Great is thy faithfulness",
       "Amazing Grace"
+    ],
+    "songs for 6/4/23": [
+      "This is the Day",
+      "Bless His Holy Name"
     ]
   },
   "defaults": {
