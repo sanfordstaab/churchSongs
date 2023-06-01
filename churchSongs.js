@@ -653,6 +653,10 @@ async function onEditSongInSetFilterChanged(event) {
   fillSongToEdit();
 }
 
+function onNewSongSetEditNameChanged(event) {
+  enableSongSetEditButtons();
+}
+
 function addSongToNewSongSet(event) {
   const sses = getSongSetEditState();
   console.assert(sses.songNameToAdd, 'UI should not let this happen.');
