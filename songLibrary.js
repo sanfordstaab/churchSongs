@@ -1537,6 +1537,394 @@ var songLibrary =
       "fontSize": 0.076,
       "fontBoldness": 5,
       "lineHeight": 0.13
+    },
+    "Majesty": {
+      "oPages": {
+        "Verse 1": [
+          "Majesty,",
+          "worship His majesty!",
+          "Unto Jesus",
+          "be all glory, power and praise"
+        ],
+        "Verse 2": [
+          "Majesty,",
+          "kingdom authority.",
+          "Flows from His throne",
+          "unto His own",
+          "his anthem raise."
+        ],
+        "Verse 3": [
+          "So exalt,",
+          "lift up on high",
+          "the name of Jesus"
+        ],
+        "Verse 4": [
+          "Magnify,",
+          "come glorify ",
+          "Christ Jesus, the King"
+        ],
+        "Verse 5": [
+          "Majesty,",
+          "worship His majesty,",
+          "Jesus, who died, ",
+          "now glorified,",
+          "King of all kings."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4",
+        "Verse 5"
+      ],
+      "RepeatCount": "2",
+      "Notes": "#98 Maranatha Praise Chorus Book 1990, Isaiah 24:14",
+      "Author": "Jack Hayford",
+      "Publisher": "Rocksmith Music (C) 1981",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 0
+        },
+        "Verse 5": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "I exalt the": {
+      "oPages": {
+        "Verse 1": [
+          "For Thou, Lord,",
+          "art high above all the earth;",
+          "Thou are exalted far above all gods."
+        ],
+        "Verse 2": [
+          "I exalt Thee,",
+          "I exalt Thee,",
+          "I exalt Thee,",
+          "O Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 1",
+        "Verse 2",
+        "Verse 2"
+      ],
+      "RepeatCount": "2",
+      "Notes": "#69 Maranatha Praise Chorus Book 1990",
+      "Author": "Pete Sanchez. Jr.",
+      "Publisher": "Pete Sanchez, Jr.",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "How great thou art": {
+      "oPages": {
+        "Chorus": [
+          "Then sings my soul,",
+          "my Savior God to thee;",
+          "How great thou art,",
+          "how great thou art!"
+        ],
+        "Verse 1a": [
+          "O, Lord my God!",
+          "I in awesome wonder",
+          "consider all the worlds ",
+          "they hands have made,"
+        ],
+        "Verse 1b": [
+          "I see the stars,",
+          "I hear the rolling thunder,",
+          "Thy power thru-out ",
+          "the universe displayed."
+        ],
+        "Verse 2a": [
+          "When thro' the woods",
+          "and forest glades I wonder,",
+          "And hear the birds",
+          "sing sweetly in the trees;"
+        ],
+        "Verse 2b": [
+          "When I look down ",
+          "from lofty mountain grandeur,",
+          "And hear the brook",
+          "and feel the gentle breeze;"
+        ],
+        "Verse 3a": [
+          "Ane when I think that God,",
+          "His Son not sparing, ",
+          "Sent him to die, ",
+          "I scarce can take it in;"
+        ],
+        "Verse 3b": [
+          "That on the cross,",
+          "my burden galdly bearing,",
+          "He bled and died",
+          "to take away my sin;"
+        ],
+        "Verse 4a": [
+          "When Christ shall come",
+          "with shout of acclamation,",
+          "And take me home,",
+          "what joy shall fill my heart!"
+        ],
+        "Verse 4b": [
+          "Then I shall bow",
+          "in humble adoration,",
+          "And there proclaim, ",
+          "my God, How great thou art!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#35 Baptist Hymnal",
+      "Author": "Words: Carl Boberg, 1886, Tune: Stuart K. Hine",
+      "Publisher": "Menna Music, Inc. (C) 1955",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Chorus": {
+          "spaceAbove": 0
+        },
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        },
+        "Verse 4a": {
+          "spaceAbove": 0
+        },
+        "Verse 4b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Crown Him with many crowns": {
+      "oPages": {
+        "Verse 1b": [
+          "Awake, my soul, and sing",
+          "Of Him who died for thee,",
+          "And hail him as thy matchless King",
+          "Thro' all eternity"
+        ],
+        "Verse 1a": [
+          "Crown Him with many crowns,",
+          "The Lamb upon His throne;",
+          "Hark! how the heavenly anthem drowns",
+          "All music but its own;"
+        ],
+        "Verse 2a": [
+          "Crown him the Lord of life,",
+          "Who triumphed o'er the grave,",
+          "And rose victorious in the strife",
+          "for those he came to save;"
+        ],
+        "Verse 2b": [
+          "His glories now we sing",
+          "Who died, and rose on high,",
+          "Who died eternal life to bring,",
+          "and lives that death may die."
+        ],
+        "Verse 3a": [
+          "Crown him the Lord of peace,",
+          "Whose power a scepter sways",
+          "from pole to pole, that wars may cease,",
+          "And all be preyer and praise."
+        ],
+        "Verse 3b": [
+          "His reign shall know no end,",
+          "And round his pierced feet,",
+          "fair flowers of paradise extend",
+          "Their fragrance ever sweet."
+        ],
+        "Verse 4a": [
+          "Crown him the Lord of love;",
+          "Behold his hands and side,",
+          "Those wounds, yet visible above,",
+          "In beauty glorified;"
+        ],
+        "Verse 4b": [
+          "All hail, Redeemer, hail!",
+          "For thou has died for me;",
+          "Thy praise and glory shall not fail",
+          "throu-out eternity."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#52 baptist hymnal",
+      "Author": "Words: Matthew Bridges, 1851, Tune: George J. Elvey, 1968",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        },
+        "Verse 4a": {
+          "spaceAbove": 0
+        },
+        "Verse 4b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "What a friend we have in Jesus": {
+      "oPages": {
+        "Verse 1a": [
+          "What a friend we have in Jesus,",
+          "All our sins and griefs to bear!",
+          "What a privilage to carry",
+          "Everything to God in prayer!"
+        ],
+        "Verse 1b": [
+          "Oh, what peace we often forfeit, ",
+          "Oh, what needless pain we bear,",
+          "All because we do not carry",
+          "Everything to God in prayer!"
+        ],
+        "Verse 2a": [
+          "Have we trials and temptations?",
+          "Is there trouble anywhere?",
+          "We should never be discouraged, ",
+          "Take it to the Lord in prayer;"
+        ],
+        "Verse 2b": [
+          "Can we find a friend so failthful",
+          "Who will all our sorrows share?",
+          "Jesus knows our every weakness, ",
+          "Take it to the Lord in prayer."
+        ],
+        "Verse 3a": [
+          "Are we weak and heavy laden,",
+          "Cumbered with a load of care?",
+          "Precious Savior, still our refuge;",
+          "Take it to the Lord in prayer;"
+        ],
+        "Verse 3b": [
+          "Do thy friends despise, forsake thee?",
+          "Take it to the Lord in prayer;",
+          "In his arms he'll take and shield thee;",
+          "Thou wilt find a solace there."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#403 baptist hymnal",
+      "Author": "Words: Joseph Scriven, 1855, Tune Charles C. Converse, 1868",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
     }
   },
   "oSongSets": {
@@ -1561,7 +1949,13 @@ var songLibrary =
     ],
     "songs for 6/4/23": [
       "This is the Day",
-      "Bless His Holy Name"
+      "Majesty",
+      "Bless His Holy Name",
+      "I exalt the",
+      "How great thou art",
+      "Crown Him with many crowns",
+      "What a friend we have in Jesus",
+      "Amazing Grace"
     ]
   },
   "defaults": {

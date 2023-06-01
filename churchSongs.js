@@ -578,6 +578,10 @@ function onNewSongSetEditNameChanged(event) {
   getSongSetEditState();
 }
 
+function onSelCurrentSongSetChanged() {
+  enableSongSetEditButtons();
+}
+
 async function deleteSongSet(event) {
   const songSetToDelete = ge('selAllSongSetsToEdit').value;
   if (getAllSongSetNames().includes(songSetToDelete)) {
@@ -672,7 +676,7 @@ function addSongToNewSongSet(event) {
     renderSelectControl(
       'selCurrentSongSet',
       sses.aSongList, 
-      sses.aSongList[0]);
+      sses.songNameToAdd);
   }
 }
 
@@ -730,7 +734,7 @@ function fillSongToEdit(event) {
   renderSelectControl(
     'selSongVersesToEdit',
     ses.aPageNames, 
-    ses.aPageNames[0]);
+    ge('selSongVersesToEdit').value);
   onSelectedVerseToEditChanged(null, ses);
   onVerseOrderChanged();
 
@@ -884,13 +888,15 @@ async function createEmptySong(event) {
     aPageOrder: [],
     RepeatCount: 1
   };
+  reRenderAllSongSelectControls();
   ge('chkEditExistingSong').checked = true;
   ge('txtEditSongFilter').value = '';
   ge('txtNewSongName').value = '';
-  await onNewSongFilterChanged();
+  onNewSongFilterChanged();
   ge('selAllSongsToEdit').value = ses.newSongEditName;
   await delay(1);
   fillSongToEdit();
+  ge('txtaVerseLines').value = '';
 }
 
 function clearSongUI(event) {
@@ -916,31 +922,25 @@ async function renameSong(event) {
     songLibrary.oSongs[newSongName] = songLibrary.oSongs[oldSongName];
     delete songLibrary.oSongs[oldSongName];
     ge('chkEditExistingSong').checked = true;
-    renderAllSongs(
-      'selAllSongsToEdit', 
-      'txtEditSongFilter', 
-      newSongName,
-      'spnNoSongsToEdit');
-
+    
     // fix any song sets that reference the renamed song
     Object.entries(songLibrary.oSongSets).forEach(
-      function(aKVSongSet) {
+      function (aKVSongSet) {
         aKVSongSet[1].forEach(
-          function(songName, iSongInSet) {
+          function (songName, iSongInSet) {
             if (songName == oldSongName) {
-              aKVSongSet[1][iSongInSet] = newSongName;
             }
+            aKVSongSet[1][iSongInSet] = newSongName;
           }
         )
       }
     )
-
-    await reRenderAllSongSelectControls(oldSongName, newSongName);
+    reRenderAllSongSelectControls(oldSongName, newSongName);
     fillSongToEdit();
   }
 }
 
-async function reRenderAllSongSelectControls(oldSongName, newSongName) {
+function reRenderAllSongSelectControls(oldSongName, newSongName) {
   let selectedNavSong = ge('selNavSongs').value;
   if (selectedNavSong == oldSongName) {
     selectedNavSong = newSongName;
@@ -989,8 +989,8 @@ async function deleteSong(event) {
     }
   )
 
-  await reRenderAllSongSelectControls();
-  await initSongEditUI();
+  reRenderAllSongSelectControls();
+  initSongEditUI();
 }
  
 // edit song verses
@@ -1086,7 +1086,6 @@ function onVerseOrderChanged(event) {
 function addANewVerse(event) {
   const ses = getSongEditState();
   if (!ses.newVerseName) {
-    // TODO: disable this button in this case
     ge('divVerseNameEditError').innerText = 
       'You must first enter a verse name to add one.';
     return;
@@ -1099,14 +1098,16 @@ function addANewVerse(event) {
 
   // clear the text for the new verse
   ses.songData.oPages[ses.newVerseName] = '';
-
+  
   // BUG: Not sure why but sometimes we have an extra null verse
   delete ses.songData.oPages[''];
-
+  
   fillSongToEdit();
   ge('selSongVersesToEdit').value = ses.newVerseName;
   onSelectedVerseToEditChanged(null, ses);
   enableSongEditVerseButtons();
+  ge('txtaVerseLines').value = '';
+  ge('txtaVerseLines').focus();
 }
 
 async function renameSelectedVerse(event) {
@@ -1247,7 +1248,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchLyrics').checked) {
       resultPart = 'In Song Lyrics:\n';
       fResultFound = false;
-      getAllSongNames().forEach(
+      getAllSongEntries().forEach(
         function(oSongKV) {
           Object.entries(oSongKV[1].oPages).sort().forEach(
             function(aPageKV) {
@@ -1270,7 +1271,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchNotes').checked) {
       resultPart = 'In Song Notes:\n';
       fResultFound = false;
-      getAllSongNames().forEach(
+      getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Notes)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Notes}\n`;
@@ -1285,7 +1286,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchAuthor').checked) {
       resultPart = 'In Song Authors:\n';
       fResultFound = false;
-      getAllSongNames().forEach(
+      getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Author)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Author}\n`;
@@ -1300,7 +1301,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchPublisher').checked) {
       resultPart = 'In Song Publshers:\n';
       fResultFound = false;
-      getAllSongNames().forEach(
+      getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Publisher)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Publisher}\n`;
@@ -1315,7 +1316,7 @@ function onSearchInChanged(event) {
     if (ge('chkSearchLicense').checked) {
       resultPart = 'In Song Licenses:\n';
       fResultFound = false;
-      getAllSongNames().forEach(
+      getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].License)) {
             resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].License}\n`;
@@ -1386,7 +1387,7 @@ function onPrintSongs(event) {
 
   let songSetName = '';
   let songName = '';
-  if (ge('chkNavSongChosen').checked) {
+  if (ge('chkNavSongSetChosen').checked) {
     songSetName = ge('selNavSongSets').value;
   } else {
     songName = ge('selNavSongs').value;
@@ -1609,6 +1610,18 @@ function getAllSongSetNames() {
 
 function getAllSongNames() {
   return Object.keys(songLibrary.oSongs).sort();
+}
+
+function getAllSongEntries() {
+  return Object.entries(songLibrary.oSongs).sort(
+    (a, b) => {
+      a = a[0];
+      b = b[0];
+      if (a < b) return -1;
+      if (a > b) return 1;
+      return 0;
+    }
+  )
 }
 
 function getCountOfSongsInSongSet(songSetName) {
