@@ -58,7 +58,7 @@ function fixit(value, cDigits) {
   return Number(Number(value).toFixed(cDigits));
 }
 
-function renderPage(elHost, oMsg, width, height) {
+function renderPageToHost(elHost, oMsg, width, height) {
   console.log(`height:${height}, width:${width}, AR:${g.aspectRatio}`);
   console.log('processMessage: ' + JSON.stringify(oMsg, null, 2));
 
@@ -69,7 +69,7 @@ function renderPage(elHost, oMsg, width, height) {
   <content id="content">
     %content%
   </content>
-  <footer class="smallest vat">
+  <div class="smallest vat footer">
     <table width="100%">
       <tr>
         <td class="al">
@@ -80,10 +80,10 @@ function renderPage(elHost, oMsg, width, height) {
         </td>
       </tr>
     </table>
-  </footer>
+  </div>
 </container>
 `;
-
+  let html = '';
   if (Array.isArray(oMsg.content)) {
     let style = '';
     if (oMsg.fontSize) {
@@ -98,13 +98,12 @@ function renderPage(elHost, oMsg, width, height) {
     if (oMsg.allCaps) {
       style += `text-transform: uppercase; `;
     }
-    let html = '';
     html = tmpl.replace('%spaceAbove%', oMsg.spaceAbove + 'em');
     console.assert(undefined != oMsg.pageNumber);
     console.assert(undefined != oMsg.songNumber);
     console.assert(undefined != oMsg.license);
     console.log(`style: ${style}`);
-    el.style = style;
+    elHost.style = style;
     html = html.replace('%content%', `
   <table width="100%" height="100%">
   <tr>
@@ -118,7 +117,7 @@ function renderPage(elHost, oMsg, width, height) {
     replace('%songNumber%', oMsg.songNumber).
     replace('%license%', oMsg.license).
     replace('%pageNumbClass%', oMsg.lastPage ? 'redText' : '').
-    replace('%songNumbClass%', oMsg.lastSong ? 'redText' : '');
+    replace('%songNumbClass%', oMsg.fLastSongInSet ? 'redText' : '');
   } else { // blank page
     html = tmpl.
       replace('%content%', '').

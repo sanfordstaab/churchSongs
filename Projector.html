@@ -2,61 +2,7 @@
 <html>
   <head>
     <title>Church Songs (Projector)</title>
-    <style type="text/css">
-
-/* Universal resets */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* tag styles */
-body {
-  font-family: Arial;
-  font-weight: normal;
-  margin: 20px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  overflow: hidden;
-}
-
-footer {
-  position: absolute;
-  bottom: 4em;
-  left: 0;
-  width: 100%;
-  padding-right: 1em;
-  padding-left: 1em;
-  height: 3em;
-  background-color: rgba(0, 0, 0, 0);
-  /* border: solid white 1px; */
-}
-
-.al {
-  text-align: left;
-}
-
-.ar {
-  text-align: right;
-}
-
-.vat {
-  vertical-align: top;
-}
-
-.redText {
-  color: red;
-}
-
-.smallest {
-  font-size: small;
-}
-
-    </style>
-
+    <link rel="stylesheet" href="styles.css">  
     <script src="common.js"></script>
     <script type="text/javascript">
 
@@ -93,7 +39,11 @@ function processMessage(oMsg) {
   const height = window.innerHeight;
   const width = window.innerWidth;
   g.aspectRatio = fixit(height / width, 4);
-  renderPage(document.body, oMsg, width, height, g.aspectRatio);
+  renderPageToHost(
+    document.body, 
+    oMsg, 
+    width, 
+    height);
 
 } // processMessage
 
@@ -101,7 +51,7 @@ function processMessage(oMsg) {
 
   </head>
 
-  <body onload="onPageLoad();" onresize="onResize();">
+  <body onload="onPageLoad();" onresize="onResize();" class="host">
     <h1>Projector Window</h1>
     <!-- filled in by code -->
   </body>

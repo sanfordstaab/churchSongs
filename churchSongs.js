@@ -152,7 +152,8 @@ function renderNavState() {
     :
     g.pageName;
   ge('spnNavPageName').innerText = pageName;
-  ge('spnNavIsShowing').innerText = g.isScreenBlank ? 'hidden' : 'showing';
+  ge('spnNavIsShowing').innerText = 
+    g.isScreenBlank ? 'hidden' : 'showing';
   ge('spnNavCPages').innerText = g.cPages;
 }
 
@@ -319,7 +320,6 @@ function enableNavButtons() {
 
 // show navigation event handlers
 
-
 function prevPage(event) {
   if (g.iPage > 0) {
     setNavSongPage(g.iPage - 1);
@@ -359,21 +359,28 @@ function prevSong(event) {
   }
 }
 
+function getMessageFromGlobals() {
+  {
+    return {
+      fontSize: g.songData.fontSize,
+      fontBoldness: g.songData.fontBoldness,
+      lineHeight: g.songData.lineHeight,
+      content: g.aPageLines,
+      allCaps: songLibrary.defaults.allCaps,
+      spaceAbove: g.songData.oPageData[g.pageName].spaceAbove, // em
+      license: g.songData.License,
+      pageNumber: g.iPage + 1,
+      lastPage: g.iPage == g.cPages - 1 ? true : false,
+      songNumber: g.iSongInSet + 1,
+      fLastSongInSet: 
+        getCountOfSongsInSongSet(g.songSetName) - 1 == g.iSongInSet
+    }
+  };
+}
+
 function renderNavPage(event) {
   console.assert(g.songData);
-  const oMessage = {
-    fontSize: g.songData.fontSize,
-    fontBoldness: g.songData.fontBoldness,
-    lineHeight: g.songData.lineHeight,
-    content: g.aPageLines,
-    allCaps: songLibrary.defaults.allCaps,
-    spaceAbove: g.songData.oPageData[g.pageName].spaceAbove, // em
-    license: g.songData.License,
-    pageNumber: g.iPage + 1,
-    lastPage: g.iPage == g.cPages - 1 ? true : false,
-    songNumber: g.iSongInSet + 1,
-    lastSong: getCountOfSongsInSongSet(g.songSetName) - 1 == g.iSongInSet
-  };
+  const oMessage = getMessageFromGlobals();
 
   localStorage.setItem('projector-message', JSON.stringify(oMessage));
   localStorage.clear('projector-message');
@@ -392,32 +399,20 @@ function nextSong(event) {
 }
 
 function renderNavPagePreview() {
-  console.assert(g.songData);
-  console.assert(g.aPageLines);
-  console.assert(undefined != g.iPage);
-  console.assert(g.cPages);
-  console.assert(g.songName);
-  let html = `<table style="border: white solid 1px; background-color: black;" height="300"; width="${
-      fixit(300 / g.aspectRatio, 0)
-    }"><tr><td>`;
-  //`<span class="smaller">Page ${
-  //     g.iPage + 1
-  //   } of ${
-  //     g.cPages
-  //   } of "${
-  //     g.songName 
-  //   }"</span><br><br>`;
-  if (g.isScreenBlank) {
-     html += `Projector is Blank<br><br><span class="smaller">
-     Ready to show page&nbsp;${
-      g.iPage + 1
-    }&nbsp;of&nbsp;${
-      g.cPages
-    }</span>`;
-  } else {
-    html += g.aPageLines.join('<br>');
-  }
-  ge('tdPagePreview').innerHTML = html + '</td></tr></table>';
+  const elHost = ge('tdPagePreview');
+  
+  let width = 
+    g.aspectRatio 
+    ? 
+    300 / g.aspectRatio 
+    : 
+    300;
+    
+  renderPageToHost(
+    ge('tdPagePreview'), 
+    getMessageFromGlobals(), 
+    width, 
+    300);
 }
 
 function onPagePreviewHasFocus(event) {
