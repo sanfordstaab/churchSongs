@@ -58,30 +58,43 @@ function fixit(value, cDigits) {
   return Number(Number(value).toFixed(cDigits));
 }
 
+/**
+ * Common funciton to render either the projector or the preview
+ * @param {object} elHost 
+ * @param {object} oMsg 
+ * @param {number} width 
+ * @param {number} height 
+ */
 function renderPageToHost(elHost, oMsg, width, height) {
-  console.log(`height:${height}, width:${width}, AR:${g.aspectRatio}`);
-  console.log('processMessage: ' + JSON.stringify(oMsg, null, 2));
-
   const tmpl = `
 <container>
   <div id="divTopSpacer" style="margin-top:%spaceAbove%">
   </div>
-  <content id="content">
-    %content%
-  </content>
-  <div class="smallest vat footer">
-    <table width="100%">
+  <content id="content" class="content" style="line-height: %lineHeight%px;">
+    <table width="${width}" height="${height}">
       <tr>
-        <td class="al">
-          <span class="%pageNumbClass%">%pageNumber%</span>/<span class=%songNumbClass%">%songNumber%</span>
-        </td>
-        <td class="ar">
-          %license%
+        <td colspan="100% width="100%">
+          %content%
         </td>
       </tr>
     </table>
-  </div>
+  </content>
+  <div class="bottomSpacer">
+    <div class="smallest vat footer">
+      <table width="100%">
+        <tr>
+          <td class="al">
+            <span class="%pageNumbClass%">%pageNumber%</span><span class="%songNumbClass%">%songNumber%</span>
+          </td>
+          <td class="ar">
+            %license%
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>  
 </container>
+
 `;
   let html = '';
   if (Array.isArray(oMsg.content)) {
@@ -92,9 +105,6 @@ function renderPageToHost(elHost, oMsg, width, height) {
     if (oMsg.fontBoldness) {
       style += `font-weight: ${Number(oMsg.fontBoldness) * 100}; `;
     }
-    if (oMsg.lineHeight) {
-      style += `line-height: ${oMsg.lineHeight * height}px; `;
-    }
     if (oMsg.allCaps) {
       style += `text-transform: uppercase; `;
     }
@@ -102,26 +112,21 @@ function renderPageToHost(elHost, oMsg, width, height) {
     console.assert(undefined != oMsg.pageNumber);
     console.assert(undefined != oMsg.songNumber);
     console.assert(undefined != oMsg.license);
-    console.log(`style: ${style}`);
     elHost.style = style;
-    html = html.replace('%content%', `
-  <table width="100%" height="100%">
-  <tr>
-    <td colspan="100% width="100%">
-      ${oMsg.content.join('<br>')}
-    </td>
-  </tr>
-  </table>
-  `).
+
+    html = html.replace('%content%', oMsg.content.join('<br>')).
+    replace('%lineHeight%', oMsg.lineHeight * height).
     replace('%pageNumber%', oMsg.pageNumber).
-    replace('%songNumber%', oMsg.songNumber).
+    replace('%songNumber%', ' / ' + oMsg.songNumber).
     replace('%license%', oMsg.license).
     replace('%pageNumbClass%', oMsg.lastPage ? 'redText' : '').
     replace('%songNumbClass%', oMsg.fLastSongInSet ? 'redText' : '');
+
   } else { // blank page
+
     html = tmpl.
       replace('%content%', '').
-      replace('$pageNumber%', '').
+      replace('%pageNumber%', '').
       replace('%songNumber%', '').
       replace('%license%', '').
       replace('%pageNumbClass%', '').

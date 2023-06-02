@@ -408,9 +408,13 @@ function renderNavPagePreview() {
     : 
     300;
     
+  const oMsg = getMessageFromGlobals();
+  if (g.isScreenBlank) {
+    oMsg.content = '';
+  }
   renderPageToHost(
     ge('tdPagePreview'), 
-    getMessageFromGlobals(), 
+    oMsg,
     width, 
     300);
 }
