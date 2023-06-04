@@ -14,7 +14,6 @@ body {
   font-family: Arial;
   font-weight: normal;
   font-size: 14pt;
-  position: relative;
   margin: 20px;
   background-color: cadetblue;
   color: black;
@@ -24,17 +23,32 @@ body {
 .host {
   font-family: Arial;
   font-weight: normal;
-  margin: 20px;
+  margin: .5em;
   background-color: black;
   color: white;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
+  height: 100%;
+  /* border: solid red 1px; */
 }
 
+.bottomSpacer {
+  margin-top: 2em;
+  position: relative;
+  /* border: solid green 1px; */
+}
+
+.content {
+  display: block;
+  height: 100%;
+}
+
+/* footer for preview/projector */
 .footer {
   position: absolute;
-  bottom: 4em;
+  z-index: 1;
+  bottom: 0px;
   left: 0;
   width: 100%;
   padding-right: 1em;
