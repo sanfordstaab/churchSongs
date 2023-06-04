@@ -1468,7 +1468,7 @@ function prepPrint(
       replace(/%songName%/, songName);
   } else {
     htmlPageTemplate = htmlPageTemplate.
-      replace(/%songName%/, `${songName} (${iSongInSet + 1} of ${cSongsInSet})`);
+      replace(/%songName%/, `${songName} (Song ${iSongInSet + 1} of ${cSongsInSet})`);
   }
 
   // calculate all song pages in order that will print
@@ -1488,10 +1488,10 @@ function prepPrint(
 
     // fill in each song page's data
     htmlPage = htmlPage.
-      replace(rxPageNameKey, `${iSongPageUnwound + 1}) ${pageName}:`).
+      replace(rxPageNameKey, `Page ${iSongPageUnwound + 1}) ${pageName}:`).
       replace(rxPageLinesKey, pageLines.join('\n<br>\n'));
 
-    console.log(`Printing page "${pageName}" on print page ${printPageNumber}: nSongThisPage=${nSongThisPage}`)
+    // console.log(`Printing page "${pageName}" on print page ${printPageNumber}: nSongThisPage=${nSongThisPage}`)
 
     if (nSongThisPage == 8 || iSongPageUnwound == aPageNamesUnwound.length - 1) {
       // We have completed all 8 (or the last) page of the song pages on this print page.

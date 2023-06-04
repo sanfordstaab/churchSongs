@@ -680,12 +680,11 @@ var songLibrary =
         "Chorus",
         "Chorus",
         "Verse 1",
-        "Chorus",
         "Chorus"
       ],
       "Author": "Andre Crouch",
       "Notes": "Psalm 103:1, #114 Maranatha Mudiv Praise Chorus Book 1990",
-      "RepeatCount": 1,
+      "RepeatCount": "2",
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
@@ -1607,7 +1606,7 @@ var songLibrary =
     "I exalt the": {
       "oPages": {
         "Verse 1": [
-          "For Thou, Lord,",
+          "For Thou, O Lord,",
           "art high above all the earth;",
           "Thou are exalted far above all gods."
         ],

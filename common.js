@@ -59,8 +59,8 @@ function fixit(value, cDigits) {
 }
 
 function renderPageToHost(elHost, oMsg, width, height) {
-  console.log(`height:${height}, width:${width}, AR:${g.aspectRatio}`);
-  console.log('processMessage: ' + JSON.stringify(oMsg, null, 2));
+  // console.log(`height:${height}, width:${width}, AR:${g.aspectRatio}`);
+  // console.log('processMessage: ' + JSON.stringify(oMsg, null, 2));
 
   const tmpl = `
 <container>
@@ -102,7 +102,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
     console.assert(undefined != oMsg.pageNumber);
     console.assert(undefined != oMsg.songNumber);
     console.assert(undefined != oMsg.license);
-    console.log(`style: ${style}`);
+    // console.log(`style: ${style}`);
     elHost.style = style;
     html = html.replace('%content%', `
   <table width="100%" height="100%">
