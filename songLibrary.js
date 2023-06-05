@@ -64,13 +64,13 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Verse 1": {
-          "spaceAbove": 2.25
+          "spaceAbove": 0
         },
         "Chorus A": {
-          "spaceAbove": 2.25
+          "spaceAbove": 0
         },
         "Chorus B": {
-          "spaceAbove": 3.25
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.061,
@@ -212,10 +212,10 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1": {
-          "spaceAbove": 3.25
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 3.5
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.05,
@@ -373,13 +373,13 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Chorus": {
-          "spaceAbove": 2
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 1.75
+          "spaceAbove": 0
         },
         "Verse 3": {
-          "spaceAbove": 1.75
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.045,
@@ -428,16 +428,16 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1": {
-          "spaceAbove": 1.5
+          "spaceAbove": 0
         },
         "Chorus": {
-          "spaceAbove": 2.75
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 1.75
+          "spaceAbove": 0
         },
         "Verse 3": {
-          "spaceAbove": 1.75
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.041,
@@ -527,19 +527,19 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1": {
-          "spaceAbove": 1.5
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 1.5
+          "spaceAbove": 0
         },
         "Verse 3": {
-          "spaceAbove": 1.75
+          "spaceAbove": 0
         },
         "Verse 4": {
-          "spaceAbove": 2.5
+          "spaceAbove": 0
         },
         "Verse 5": {
-          "spaceAbove": 1.5
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.05,
@@ -637,7 +637,7 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Verse 5": {
-          "spaceAbove": 1.5
+          "spaceAbove": 0
         },
         "Verse 6": {
           "spaceAbove": 0
@@ -652,10 +652,10 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Chorus 4": {
-          "spaceAbove": 2.25
+          "spaceAbove": 0
         },
         "Chorus 5": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.05,
@@ -689,7 +689,7 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Chorus": {
-          "spaceAbove": 1
+          "spaceAbove": 0
         },
         "Verse": {
           "spaceAbove": 0
@@ -730,13 +730,13 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Chorus": {
-          "spaceAbove": 1
+          "spaceAbove": 0
         },
         "Verse": {
           "spaceAbove": 0
         },
         "Verse 1": {
-          "spaceAbove": 1
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.055,
@@ -787,7 +787,7 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Tag": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         },
         "Verse 1": {
           "spaceAbove": 0
@@ -944,19 +944,19 @@ var songLibrary =
       "Publisher": "",
       "oPageData": {
         "Chorus": {
-          "spaceAbove": 2.5
+          "spaceAbove": 0
         },
         "Verse 1": {
-          "spaceAbove": 1.5
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 2.5
+          "spaceAbove": 0
         },
         "Verse 3": {
           "spaceAbove": 0
         },
         "Verse 4": {
-          "spaceAbove": 2.25
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.045,
@@ -1000,16 +1000,16 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Chorus": {
-          "spaceAbove": 4.5
+          "spaceAbove": 0
         },
         "Verse 1": {
-          "spaceAbove": 4.25
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 4.25
+          "spaceAbove": 0
         },
         "Ending": {
-          "spaceAbove": 5.5
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.039,
@@ -1061,16 +1061,16 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Chorus 1": {
-          "spaceAbove": 3.25
+          "spaceAbove": 0
         },
         "Chorus 2": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         },
         "Verse 1": {
-          "spaceAbove": 3.5
+          "spaceAbove": 0
         },
         "Verse 2": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         },
         "Tag": {
           "spaceAbove": 0
@@ -1168,34 +1168,34 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1a": {
-          "spaceAbove": 2.25
+          "spaceAbove": 0
         },
         "Verse 1b": {
-          "spaceAbove": 2
+          "spaceAbove": 0
         },
         "Chorus a": {
-          "spaceAbove": 2.75
+          "spaceAbove": 0
         },
         "Chorus b": {
-          "spaceAbove": 2.75
+          "spaceAbove": 0
         },
         "Verse 2a": {
-          "spaceAbove": 3.5
+          "spaceAbove": 0
         },
         "Verse 2b": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         },
         "Verse 3a": {
-          "spaceAbove": 2.25
+          "spaceAbove": 0
         },
         "Verse 3b": {
-          "spaceAbove": 3.25
+          "spaceAbove": 0
         },
         "Verse 4a": {
-          "spaceAbove": 2.75
+          "spaceAbove": 0
         },
         "Verse 4b": {
-          "spaceAbove": 3.25
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.055,
@@ -1266,25 +1266,25 @@ var songLibrary =
       "License": "CCLI 20847323",
       "oPageData": {
         "Verse 1a": {
-          "spaceAbove": 3.25
+          "spaceAbove": 0
         },
         "Verse 1b": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         },
         "Chorus": {
-          "spaceAbove": 1.75
+          "spaceAbove": 0
         },
         "Verse 2a": {
-          "spaceAbove": 2.75
+          "spaceAbove": 0
         },
         "Verse 2b": {
-          "spaceAbove": 2.75
+          "spaceAbove": 0
         },
         "Verse 3a": {
-          "spaceAbove": 3
+          "spaceAbove": 0
         },
         "Verse 3b": {
-          "spaceAbove": 3.5
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.041,

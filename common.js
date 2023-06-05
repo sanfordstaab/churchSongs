@@ -66,35 +66,31 @@ function fixit(value, cDigits) {
  * @param {number} height 
  */
 function renderPageToHost(elHost, oMsg, width, height) {
+  const heightLeft = height - oMsg.spaceAbove;
   const tmpl = `
-<container>
-  <div id="divTopSpacer" style="margin-top:%spaceAbove%">
-  </div>
-  <content id="content" class="content" style="line-height: %lineHeight%px;">
-    <table width="${width}" height="${height}">
-      <tr>
-        <td colspan="100% width="100%">
-          %content%
-        </td>
-      </tr>
-    </table>
-  </content>
-  <div class="bottomSpacer">
-    <div class="smallest vat footer">
-      <table width="100%">
-        <tr>
-          <td class="al">
-            <span class="%pageNumbClass%">%pageNumber%</span><span class="%songNumbClass%">%songNumber%</span>
-          </td>
-          <td class="ar">
-            %license%
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>  
-</container>
-
+<div id="divTopSpacer" style="margin-top:%spaceAbove%">
+</div>
+<content id="content" class="proj-content" style="line-height: %lineHeight%px;">
+  <table width="${width}" height="${heightLeft}">
+    <tr>
+      <td colspan="100% width="100%">
+        %content%
+      </td>
+    </tr>
+  </table>
+</content>
+<div class="smallest vat proj-footer">
+  <table width="100%" class="at">
+    <tr>
+      <td class="al">
+        <span class="%pageNumbClass%">%pageNumber%</span><span class="%songNumbClass%">%songNumber%</span>
+      </td>
+      <td class="ar">
+        %license%
+      </td>
+    </tr>
+  </table>
+</div>
 `;
   let html = '';
   if (Array.isArray(oMsg.content)) {
@@ -113,6 +109,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
     console.assert(undefined != oMsg.songNumber);
     console.assert(undefined != oMsg.license);
     elHost.style = style;
+    elHost.classList.add('proj-host');
 
     html = html.replace('%content%', oMsg.content.join('<br>')).
     replace('%lineHeight%', oMsg.lineHeight * height).

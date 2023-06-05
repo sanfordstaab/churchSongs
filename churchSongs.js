@@ -478,8 +478,12 @@ function moveTextDown(event) {
 }
 
 function moveTextUp(event) {
-  g.songData.oPageData[g.pageName].spaceAbove = 
+  let newSpace = 
     Number(g.songData.oPageData[g.pageName].spaceAbove) - .25; // em
+  if (newSpace < 0) {
+    newSpace = 0;
+  }
+  g.songData.oPageData[g.pageName].spaceAbove = newSpace;
   renderNavPage();
 }
 
