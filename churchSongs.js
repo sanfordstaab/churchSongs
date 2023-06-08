@@ -1210,11 +1210,11 @@ function onSearchNone(event) {
 function onSearchInChanged(event) {
   const searchTerms = 
     ge('txtSearchFor').value.trim().toLocaleLowerCase();
-  let results = '';
-  if (searchTerms.length < 3 && searchTerms != '*') {
+  let results = `Results of searching for "${searchTerms}":\n`;
+  if (searchTerms.length == 0) {
     // don't respond to empty or tiny search terms cuz almost
     // everything will hit.
-    results = "You must enter at least 3 characters to search for or * to find all items."
+    results = "You must enter a search filter string or a '*' to find all items."
   } else {
     const aSearchTokens = searchTerms.split(/\s+/);
     let resultPart = '';
