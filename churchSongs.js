@@ -84,6 +84,8 @@ async function onPageLoad(event) {
 
   getSongSetEditState();
 
+  renderSavedAspectRatio();
+
   // hide sections we 
   toggleFieldsetVisibility({ target: ge('fsGeneralFormatting').firstElementChild.firstElementChild });
   toggleFieldsetVisibility({ target: ge('fsCreateOrEditSongSet').firstElementChild.firstElementChild });
@@ -205,8 +207,8 @@ function processKeyCode(code) {
 }
 
 function processARChanged(newAspectRatio) {
-  if (g.aspectRatio != newAspectRatio) {
-    g.aspectRatio = newAspectRatio;
+  if (songLibrary.defaults.aspectRatio != newAspectRatio) {
+    songLibrary.defaults.aspectRatio = newAspectRatio;
     renderNavPagePreview();
   }
 }
@@ -320,6 +322,26 @@ function enableNavButtons() {
 
 // show navigation event handlers
 
+function saveProjectorAspectRatio() {
+  songLibrary.defaults.savedAspectRatio = 
+    songLibrary.defaults.aspectRatio;
+  renderSavedAspectRatio();
+}
+
+function renderSavedAspectRatio() {
+  ge('spnSavedAspectRatio').innerText = 
+  songLibrary.defaults.savedAspectRatio 
+    ?
+    songLibrary.defaults.savedAspectRatio
+    :
+    '';
+}
+
+function restoreProjectorAspectRatio() {
+  localStorage.setItem('set-aspectRatio', Number(songLibrary.defaults.savedAspectRatio));
+  localStorage.clear();
+}
+
 function prevPage(event) {
   if (g.iPage > 0) {
     setNavSongPage(g.iPage - 1);
@@ -333,7 +355,7 @@ function blankScreen(event) {
   localStorage.setItem('projector-message', JSON.stringify({
     content: ''
   }));
-  localStorage.clear('projector-message');
+  localStorage.clear();
   g.isScreenBlank = true;
   renderNavState();
   renderNavPagePreview();
@@ -383,7 +405,7 @@ function renderNavPage(event) {
   const oMessage = getMessageFromGlobals();
 
   localStorage.setItem('projector-message', JSON.stringify(oMessage));
-  localStorage.clear('projector-message');
+  localStorage.clear();
   g.isScreenBlank = false;
   renderNavState();
   renderNavPagePreview();
@@ -402,9 +424,9 @@ function renderNavPagePreview() {
   const elHost = ge('tdPagePreview');
   
   let width = 
-    g.aspectRatio 
+    songLibrary.defaults.aspectRatio 
     ? 
-    300 / g.aspectRatio 
+    300 / songLibrary.defaults.aspectRatio 
     : 
     300;
     

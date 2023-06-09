@@ -290,7 +290,14 @@ Then press F11 to make it full screen."
                     Show Next Song <span class="larger">&#8595;</span>
                   </button>
                   <br>
-                    <p class="smallest">
+                  <fieldset class="bgWhite">
+                    <p class="smallest m0"
+                      title="Left Arrow=Previous Page
+Right Arrow=Next Page
+Up Arrow=Previous Song (starts out with a blank screen)
+Down Arrow=Next Song (starts out with a blank screen)
+Spacebar=Toggle Blank Screen state"
+                    >
                       Use the keyboard to control page navigation 
                       <br>
                       when the preview pane to the right has a 
@@ -299,7 +306,22 @@ Then press F11 to make it full screen."
                       <br>
                       Click on the preview pane to get the yellow border.
                     </p>
-                  </br>
+                  </fieldset>
+                  <button onclick="saveProjectorAspectRatio();"
+                    title="Remember the aspectRatio of the current projector window for later restoration."
+                  >
+                    Save Projector Aspect Ratio
+                  </button>   
+                  <br>               
+                  Saved Aspect Ratio:
+                  [<span id="spnSavedAspectRatio">
+                  </span>]
+                  <br>
+                  <button onclick="restoreProjectorAspectRatio();"
+                    title="Force the projector window to match the saved aspect ratio."
+                    >
+                    Restore Saved Aspect Ratio to Projector Window
+                  </button>
                 </td>
                 <td id="tdPagePreview"
                   tabindex="13"

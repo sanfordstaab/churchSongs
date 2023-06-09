@@ -106,6 +106,10 @@ fieldset {
   margin: 0px;
 }
 
+.bgWhite {
+  background-color: white;
+}
+
 .smaller {
   font-size: smaller;
 }

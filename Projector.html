@@ -8,10 +8,18 @@
 
 function onPageLoad(event) {
   onstorage = (event) => {
-    if (event.key == 'projector-message' && event.newValue != null) {
-      const oMsg = JSON.parse(event.newValue);
-      const html = processMessage(oMsg);
-      sendARBack();
+    if (event.newValue != null) {
+      if (event.key == 'projector-message') {
+        const oMsg = JSON.parse(event.newValue);
+        processMessage(oMsg);
+        sendARBack();
+      } else if (event.key == 'set-aspectRatio') {
+        g.aspectRatio = Number(event.newValue);
+        const oMsg = structuredClone(g.prevMsg);
+        oMsg.fForceAspectRatio = true;
+        processMessage(oMsg);
+        sendARBack();
+      }
     }
   }
 
@@ -31,21 +39,25 @@ g.prevMsg = {};
 
 function sendARBack() {
   localStorage.setItem('AR-message', g.aspectRatio);
-  localStorage.clear('AR-message');
+  localStorage.clear();
 }
 
 function processMessage(oMsg) {
+  let height = window.innerHeight;
+  let width = window.innerWidth;
+  if (oMsg.fForceAspectRatio) {
+    width = Math.round(height / g.aspectRatio);
+    window.resizeBy(width, height);
+    oMsg.fForceAspectRatio = false;
+  }
   g.prevMsg = oMsg;
-  const height = window.innerHeight;
-  const width = window.innerWidth;
   g.aspectRatio = fixit(height / width, 4);
   renderPageToHost(
     document.body, 
     oMsg, 
     width, 
     height);
-
-} // processMessage
+}
 
     </script>
 
