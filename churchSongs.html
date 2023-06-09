@@ -253,45 +253,74 @@ Then press F11 to make it full screen."
                     of 
                     <span id="spnNavCPages"></span> pages)
                   <br>
-      
-                  <button id="btnNavPrevPage" 
-                    title="Left Arrow"
-                    onclick="prevPage();">
-                    <span class="larger">&#8592;</span> Show Previous Page
-                  </button>
-      
-                  <button onclick="blankScreen(event);"
-                    title="Spacebar toggles blank screen / show current page."
-                    >
-                    Blank the screen &#8855;
-                  </button>
-      
-                  <button id="btnNextPage" 
-                    title="Right Arrow"
-                    onclick="nextPage();">
-                    Show Next Page <span class="larger">&#8594;</span>
-                  </button>
-                  <br>
-                  <button id="btnPrevSong" 
-                    title="Left Arrow"
-                    onclick="prevSong();">
-                    <span class="larger">&#8593;</span> Show Previous Song
-                  </button>
-      
-                  <button onclick="renderNavPage();"
-                    title="Spacebar toggles blank screen / show current page."
-                    >
-                    Show the current page <span class="larger">&#8801;</span>
-                  </button>
-      
-                  <button id="btnNextSong" 
-                    title="Down Arrow"
-                    onclick="nextSong();">
-                    Show Next Song <span class="larger">&#8595;</span>
-                  </button>
-                  <br>
+
+                  <center>
+                    <table id="navKeyTable">
+                      <tr>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td>
+                          <button id="btnPrevSong" 
+                            title="Use the up arrow to move to the previous song.  The screen will start in a blank state."
+                            onclick="prevSong();"
+                          >
+                            <span class="larger">&#8593;</span>
+                          </button>
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>                      
+                      </tr>
+                      <tr>
+                        <td>
+                          <button id="btnNavPrevPage" 
+                            title="Left Arrow"
+                            title="Use the left arrow key to move to the previous page."
+                            onclick="prevPage();"
+                          >
+                            <span class="larger">&#8592;</span>
+                          </button>
+                        </td>
+                        <td>
+                          <button 
+                            onclick="toggleBlankScreen(event);"
+                            title="Use the spacebar to toggle between showing and hiding the current page."
+                          >
+                            <span class="larger">&#8855;</span>
+                          </button>
+                        </td>
+                        <td>
+                          <button id="btnNextPage" 
+                            title="Use the right arrow key to move to the next page."
+                            onclick="nextPage();"
+                          >
+                            <span class="larger">&#8594;</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          &nbsp;
+                        </td>          
+                        <td>
+                          <button id="btnNextSong" 
+                            title="Use the down arrow key to move to the next song."
+                            onclick="nextSong();"
+                          >
+                            <span class="larger">&#8595;</span>
+                          </button>
+                        </td>              
+                        <td>
+                          &nbsp;
+                        </td>                        
+                      </tr>
+                    </table>
+                  </center>
+
                   <fieldset class="bgWhite">
                     <p class="smallest m0"
+                      onclick="ge('tdPagePreview').focus();"
                       title="Left Arrow=Previous Page
 Right Arrow=Next Page
 Up Arrow=Previous Song (starts out with a blank screen)
@@ -327,7 +356,7 @@ Spacebar=Toggle Blank Screen state"
                   tabindex="13"
                   onkeydown="onPreviewKey(event);"
                   onfocusin="onPagePreviewHasFocus(event);"
-                  onfocusout="onPagePreviewLostFosus(event);">
+                  onfocusout="onPagePreviewLostFocus(event);">
                   <!-- filled in by renderNavPagePreview() -->
                 </td>
               </tr>

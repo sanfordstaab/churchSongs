@@ -361,6 +361,25 @@ function blankScreen(event) {
   renderNavPagePreview();
 }
 
+function renderNavPage(event) {
+  console.assert(g.songData);
+  const oMessage = getMessageFromGlobals();
+
+  localStorage.setItem('projector-message', JSON.stringify(oMessage));
+  localStorage.clear();
+  g.isScreenBlank = false;
+  renderNavState();
+  renderNavPagePreview();
+}
+
+function toggleBlankScreen(event) {
+  if (g.isScreenBlank) {
+    renderNavPage();
+  } else {
+    blankScreen();
+  }
+}
+
 function nextPage(event) {
   if (g.iPage < g.cPages - 1) {
     if (!g.isScreenBlank) {
@@ -400,17 +419,6 @@ function getMessageFromGlobals() {
   };
 }
 
-function renderNavPage(event) {
-  console.assert(g.songData);
-  const oMessage = getMessageFromGlobals();
-
-  localStorage.setItem('projector-message', JSON.stringify(oMessage));
-  localStorage.clear();
-  g.isScreenBlank = false;
-  renderNavState();
-  renderNavPagePreview();
-}
-
 function nextSong(event) {
   if (g.iSongInSet < getCountOfSongsInSongSet(g.songSetName) - 1) {
     setNavSongInSet(g.iSongInSet + 1);
@@ -445,7 +453,7 @@ function onPagePreviewHasFocus(event) {
   event.target.style = "border: solid yellow 5px;";
 }
 
-function onPagePreviewLostFosus(event) {
+function onPagePreviewLostFocus(event) {
   event.target.style = "";
 }
 

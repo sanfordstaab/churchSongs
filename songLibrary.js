@@ -1963,6 +1963,7 @@ var songLibrary =
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4715"
+    "aspectRatio": "0.4715",
+    "savedAspectRatio": "0.4715"
   }
 }

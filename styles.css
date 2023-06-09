@@ -81,6 +81,10 @@ fieldset {
   border: solid black 2px;
 }
 
+#navKeyTable td {
+  border: none;
+}
+
 .al {
   text-align: left !important;
 }
