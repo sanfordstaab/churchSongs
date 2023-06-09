@@ -73,8 +73,8 @@ async function onPageLoad(event) {
     '',
     'spnNoSongsToAddToSongSet');
 
-  renderNavState();
-  enableNavButtons();
+  renderNavPage();
+  blankScreen();
 
   initSongSetEditUI();
   initSongEditUI();
@@ -98,7 +98,7 @@ async function onPageLoad(event) {
 
 g.iNextProjector = 1;
 function openProjector(event) {
-  window.open(`./projector.html?id=${g.iNextProjector++}`, '_blank'); 
+  window.open(`./projector.html?id=${g.iNextProjector++}`, '_blank');
 }
 
 // Song and Song Set Selection for Printing or Projecting
@@ -138,7 +138,7 @@ function onShowSongOrSongset() {
   }
 }
 
-function renderNavState() {
+function renderNavStateText() {
   show('spnSongSetSection', ge('chkNavSongSetChosen').checked);
   show('spnSongsInSetSection', ge('chkNavSongSetChosen').checked);
   
@@ -191,11 +191,7 @@ function processKeyCode(code) {
       // if (document.querySelector(':focus').tagName == 'button') {
       //   break;  // do nothing if a button has the focus.
       // }
-      if (g.isScreenBlank) {
-        renderNavPage();
-      } else {
-        blankScreen();
-      }
+      toggleBlankScreen();
       break;
     
     default:
@@ -234,7 +230,7 @@ function setNavSongSet(songSetName) {
       'txtSongSetAddSongFilter',
       '',
       'spnNoSongSets');
-    renderNavState();
+    renderNavStateText();
     enableNavButtons();
     return;
   }
@@ -345,7 +341,7 @@ function restoreProjectorAspectRatio() {
 function prevPage(event) {
   if (g.iPage > 0) {
     setNavSongPage(g.iPage - 1);
-    renderNavState();
+    renderNavStateText();
     enableNavButtons();
     renderNavPage();    
   }
@@ -357,7 +353,7 @@ function blankScreen(event) {
   }));
   localStorage.clear();
   g.isScreenBlank = true;
-  renderNavState();
+  renderNavStateText();
   renderNavPagePreview();
 }
 
@@ -368,7 +364,7 @@ function renderNavPage(event) {
   localStorage.setItem('projector-message', JSON.stringify(oMessage));
   localStorage.clear();
   g.isScreenBlank = false;
-  renderNavState();
+  renderNavStateText();
   renderNavPagePreview();
 }
 
@@ -385,7 +381,7 @@ function nextPage(event) {
     if (!g.isScreenBlank) {
       setNavSongPage(g.iPage + 1);
     }
-    renderNavState();
+    renderNavStateText();
     enableNavButtons();
     renderNavPage();
   }
@@ -394,7 +390,7 @@ function nextPage(event) {
 function prevSong(event) {
   if (g.iSongInSet > 0) {
     setNavSongInSet(g.iSongInSet - 1);
-    renderNavState();
+    renderNavStateText();
     enableNavButtons();
     blankScreen();  
   }
@@ -423,7 +419,7 @@ function nextSong(event) {
   if (g.iSongInSet < getCountOfSongsInSongSet(g.songSetName) - 1) {
     setNavSongInSet(g.iSongInSet + 1);
   }
-  renderNavState();
+  renderNavStateText();
   enableNavButtons();
   blankScreen();  
 }
