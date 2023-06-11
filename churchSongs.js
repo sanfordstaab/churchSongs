@@ -573,6 +573,8 @@ function enableSongSetEditButtons() {
   enableElement('btnEditSongSet', !!sses.songSetNameToEdit);
   enableElement('btnDeleteSongSet', !!sses.songSetNameToEdit);
   enableElement('btnCreateNewSongSet', !!sses.newSongSetName);
+  enableElement('btnCopySongSet', 
+    !!sses.newSongSetName && !!sses.songSetNameToEdit)
   enableElement('btnRenameSongSet', 
     !!sses.newSongSetName && !!sses.songSetNameToEdit);
   show('spnNoSongsInEditSongSet', !sses.aSongList.length);
@@ -624,7 +626,7 @@ async function deleteSongSet(event) {
   }
 }
 
-async function createNewSongSet(event) {
+function createNewSongSet(event) {
   const sses = getSongSetEditState();
   songLibrary.oSongSets[sses.newSongSetName] = [];
   renderAllSongSets(
@@ -640,13 +642,49 @@ async function createNewSongSet(event) {
   editSelectedSongSet();
 }
 
-async function renameSongSet(event) {
+function copySongSet(event) {
+  const sses = getSongSetEditState();
+  console.assert(sses.newSongSetName, 'UI should not allow this');
+  if (sses.newSongSetName == sses.songSetNameToEdit) {
+    setSongSetError('You cannot copy a song set to itself.  Choose a different name for the new song set.');
+    return;
+  }
+  if (getAllSongSetNames().includes(sses.newSongSetName)) {
+    setSongSetError('You cannot copy a song set to an already existing song set.  Delete the existing song set first if you want to do this.');
+    return;    
+  }
+  songLibrary.oSongSets[sses.newSongSetName] = songLibrary.oSongSets[sses.songSetNameToEdit];
+  renderAllSongSets(
+    'selAllSongSetsToEdit', 
+    'txtSongSetEditFilter', 
+    sses.newSongSetName,
+    'spnNoSongSetsToEdit');
+  ge('txtNewSongSetName').value = '';
+
+  let selectedNavSongSetName = ge('selNavSongSets').value;
+  if (selectedNavSongSetName == sses.songSetNameToEdit) {
+    selectedNavSongSetName = sses.newSongSetName;
+  }
+  renderAllSongSets(
+    'selNavSongSets', 
+    'txtNavSongSetFilter', 
+    selectedNavSongSetName,
+    'spnNoSongSets');
+
+  editSelectedSongSet();  
+}
+
+function renameSongSet(event) {
   const sses = getSongSetEditState();
   console.assert(sses.newSongSetName, 'UI should not allow this');
   if (sses.newSongSetName == sses.songSetNameToEdit) {
     setSongSetError('No action taken. New song name matches selected one.');
     return;
   }
+  if (getAllSongSetNames().includes(sses.newSongSetName)) {
+    setSongSetError('You cannot rename a song set to the same name as an existing song set.');
+    return;    
+  }  
   songLibrary.oSongSets[sses.newSongSetName] = songLibrary.oSongSets[sses.songSetNameToEdit];
   delete songLibrary.oSongSets[sses.songSetNameToEdit];
   renderAllSongSets(

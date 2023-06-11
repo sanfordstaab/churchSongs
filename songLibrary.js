@@ -1924,6 +1924,82 @@ var songLibrary =
       "fontSize": 0.076,
       "fontBoldness": 5,
       "lineHeight": 0.13
+    },
+    "Come thou Fount of many blessings": {
+      "oPages": {
+        "Verse 1a": [
+          "Come, thou Fount of every blessing,",
+          "Tune my heart to sing thy grace;",
+          "Streams of mercy, never ceasing,",
+          "Call for songs of loudest praise;"
+        ],
+        "Verse 1b": [
+          "Teach me some melodious sonnet,",
+          "Sung by flaming tongues above;",
+          "Praise the mount! I'm fixed upon it,",
+          "Mount of thy redeeming love."
+        ],
+        "Verse 2a": [
+          "Here I raise mine ebenezer,",
+          "Hither by thy help I'm come;",
+          "And I hope, by thy good pleasure, ",
+          "Safely to arrive at home;"
+        ],
+        "Verse 2b": [
+          "Jesus sought me when a stranger,",
+          "Wandering from the fold of God;",
+          "He, to rescue me from danger,",
+          "Interposed his precious blood."
+        ],
+        "Verse 3a": [
+          "O to grace how great a debtor",
+          "Daily I'm constrained to be!",
+          "Let thy grace, Lord, like a fetter,",
+          "Bind my wandring heart to thee;"
+        ],
+        "Verse 3b": [
+          "Prone to wander, Lord, I feel it,",
+          "Prone to leave the God I love;",
+          "Here's my heart, Lord, take and seal it,",
+          "Seal it for thy courts above."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "Author": "Words: Author Robinson, 1758; Tune: Warenton, 1844",
+      "Publisher": "Boardman Press 1957",
+      "Notes": "#12 Baptist Hymnal",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
     }
   },
   "oSongSets": {
@@ -1954,6 +2030,16 @@ var songLibrary =
       "How great thou art",
       "Crown Him with many crowns",
       "What a friend we have in Jesus",
+      "Amazing Grace"
+    ],
+    "spmgs fpr 6/11/23": [
+      "This is the Day",
+      "Majesty",
+      "Bless His Holy Name",
+      "I exalt the",
+      "How great thou art",
+      "Crown Him with many crowns",
+      "Come thou Fount of many blessings",
       "Amazing Grace"
     ]
   },
