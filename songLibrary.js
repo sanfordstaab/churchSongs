@@ -486,7 +486,7 @@ var songLibrary =
           "Amazing Grace how sweet the sound",
           "That saved a wretch like me.",
           "I once was lost but now am found",
-          "Was bling but now I see."
+          "Was blind but now I see."
         ],
         "Verse 2": [
           "T'was grace that taught my heart to fear",
@@ -1768,7 +1768,7 @@ var songLibrary =
           "All music but its own;"
         ],
         "Verse 2a": [
-          "Crown him the Lord of life,",
+          "Crown Him the Lord of life,",
           "Who triumphed o'er the grave,",
           "And rose victorious in the strife",
           "for those he came to save;"
@@ -1780,7 +1780,7 @@ var songLibrary =
           "and lives that death may die."
         ],
         "Verse 3a": [
-          "Crown him the Lord of peace,",
+          "Crown Him the Lord of peace,",
           "Whose power a scepter sways",
           "from pole to pole, that wars may cease,",
           "And all be preyer and praise."
@@ -1792,7 +1792,7 @@ var songLibrary =
           "Their fragrance ever sweet."
         ],
         "Verse 4a": [
-          "Crown him the Lord of love;",
+          "Crown Him the Lord of love;",
           "Behold his hands and side,",
           "Those wounds, yet visible above,",
           "In beauty glorified;"

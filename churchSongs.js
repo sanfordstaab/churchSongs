@@ -1315,18 +1315,34 @@ function onSearchInChanged(event) {
     if (ge('chkSearchLyrics').checked) {
       resultPart = 'In Song Lyrics:\n';
       fResultFound = false;
+      let prevSongName = '';
       getAllSongEntries().forEach(
         function(oSongKV) {
           Object.entries(oSongKV[1].oPages).sort().forEach(
             function(aPageKV) {
+              let fLineFits = false;
               aPageKV[1].forEach(
                 function(lyricLine) {
                   if (areAllTokensInText(aSearchTokens, lyricLine)) {
-                    resultPart += `  Song:"${oSongKV[0]}"\n    Verse: "${aPageKV[0]}"\n      Lyric Line: ${lyricLine}\n`;
-                    fResultFound = true;
+                    fLineFits = true;
                   }
                 }
-              )
+              )              
+              if (fLineFits) {
+                if (prevSongName != oSongKV[0]) {
+                  prevSongName = oSongKV[0];
+                  resultPart += `  Song:"${oSongKV[0]}"\n`;
+                }
+                resultPart += `    Verse: "${aPageKV[0]}"\n`;
+                aPageKV[1].forEach(
+                  function(lyricLine) {
+                    if (areAllTokensInText(aSearchTokens, lyricLine)) {
+                      resultPart += `      ${lyricLine}\n`;
+                      fResultFound = true;
+                    }
+                  }
+                )
+              }
             }
           )
         }
