@@ -1206,6 +1206,8 @@ async function renameSelectedVerse(event) {
     ses.songData.aPageOrder[idx] = ses.newVerseName;
   }  
   fillSongToEdit();
+  ge('selSongVersesToEdit').value = ses.newVerseName;
+  onSelectedVerseToEditChanged();
 }
 
 async function deleteSelectedVerse(event) {
@@ -1224,7 +1226,7 @@ async function deleteSelectedVerse(event) {
   fillSongToEdit();
 }
 
-async function moveSelectedVerseUpInOrder(event) {
+function moveSelectedVerseUpInOrder(event) {
   const ses = getSongEditState();
   console.assert(ses.selectedOrderVerseIdx > 0);
   const T = ses.songData.aPageOrder[ses.selectedOrderVerseIdx];
@@ -1235,7 +1237,7 @@ async function moveSelectedVerseUpInOrder(event) {
   fillSongToEdit();
 }
 
-async function moveSelectedVerseDownInOrder(event) {
+function moveSelectedVerseDownInOrder(event) {
   const ses = getSongEditState();
   console.assert(ses.selectedOrderVerseIdx < ses.songData.aPageOrder.length - 1);
   const T = ses.songData.aPageOrder[ses.selectedOrderVerseIdx];
@@ -1246,13 +1248,18 @@ async function moveSelectedVerseDownInOrder(event) {
   fillSongToEdit();
 }
 
-async function addVerseToVerseOrder(event) {
+function addVerseToVerseOrder(event) {
   const ses = getSongEditState();
-  ses.songData.aPageOrder.push(ses.pageName);
+  ge('selSongVerseOrder').value;
+  if (undefined == ses.selectedOrderVerseIdx) {
+    ses.songData.aPageOrder.push(ses.pageName);
+  } else {
+    ses.songData.aPageOrder.splice(ses.selectedOrderVerseIdx + 1, 0, ses.pageName);
+  }
   fillSongToEdit();  
 }
 
-async function deleteVerseOrderVerse(event) {
+function deleteVerseOrderVerse(event) {
   const ses = getSongEditState();
   ses.songData.aPageOrder.splice(ses.selectedOrderVerseIdx, 1);
   fillSongToEdit();    
