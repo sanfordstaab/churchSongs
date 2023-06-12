@@ -670,14 +670,24 @@ Spacebar=Toggle Blank Screen state"
                         Delete the selected verse &#9938;
                       </button>
           
-                      <br>
-                      <textarea id="txtaVerseLines" cols="70" rows="5" 
-                        title="Enter the lines for this verse.  Note that each verse will be rendered onto a page
-so don't have too many lines and don't let the lines get too long."
-                        onkeyup="onVerseLinesChanged();"
-                        onchange="onVerseLinesChanged();"
-                        >
-                      </textarea>
+                      <div style="display: inline; position: relative;">
+                        <textarea id="txtaVerseLines" 
+                          cols="70" 
+                          rows="5" 
+                          style="position: relative;"
+                          title="Enter the lines for this verse.  Note that each verse will be rendered onto a page
+  so don't have too many lines and don't let the lines get too long."
+                          onkeyup="onVerseLinesChanged();"
+                          onchange="onVerseLinesChanged();"
+                          >
+                        </textarea>
+
+                        <span id="spnVerseUpdatedNotice"
+                          class="updated" 
+                        >  
+                          Updated
+                        </span>                         
+                      </div>
                       <br>
                       Repeat Count:
                       <select id="selRepeatCount"

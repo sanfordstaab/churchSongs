@@ -19,7 +19,7 @@ function ge(id) {
  * @param {boolean} fShow 
 */
 g.shownDisplayClass = {};
-function show(elOrId, fShow) {
+function show(elOrId, fShow=true) {
   let el = elOrId;
   if (typeof(el) == 'string') {
     el = ge(elOrId);

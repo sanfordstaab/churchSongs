@@ -184,6 +184,15 @@ fieldset {
   border-left: none;  
 }
 
+.updated {
+  z-index: 3;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  color: red;
+}
+
 @media print {
   .pgBrk {
     page-break-after: always !important;

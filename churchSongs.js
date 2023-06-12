@@ -1,6 +1,6 @@
 // churchSongs.js
 
-async function onPageLoad(event) {
+function onPageLoad(event) {
   onstorage = (event) => {
     if (event.key == 'projectorKeyup' && event.newValue != null) {
       processKeyCode(event.newValue);
@@ -85,6 +85,8 @@ async function onPageLoad(event) {
   getSongSetEditState();
 
   renderSavedAspectRatio();
+
+  hide('spnVerseUpdatedNotice');
 
   // hide sections we 
   toggleFieldsetVisibility({ target: ge('fsGeneralFormatting').firstElementChild.firstElementChild });
@@ -1079,6 +1081,15 @@ function enableSongEditVerseButtons(ses) {
   enableElement('btnDeleteSelectedVerse',
     ses.pageName);
 
+  // enable lyric control only if a verse is selected
+  ge('txtaVerseLines').value = 
+    ses.songData.oPages[ses.pageName] 
+      ?
+      ses.songData.oPages[ses.pageName].join('\n') 
+      :
+      '';
+  enableElement('txtaVerseLines', !!ge('selSongVersesToEdit').value);
+
   // verse order buttons
   if (undefined != ses.selectedOrderVerseIdx) {
     enableElement('btnMoveSelectedVerseUp',
@@ -1107,10 +1118,6 @@ function onSelectedVerseToEditChanged(event=null, ses) {
       '', 
     Object.keys(ses.songData.aPageOrder)
     );
-  ge('txtaVerseLines').value = 
-  ses.songData.oPages[ses.pageName] ?
-    ses.songData.oPages[ses.pageName].join('\n') :
-    '';
   ge('chkIsTagVerse').checked = 
     ses.songData.TagPage == ses.pageName ? 'checked' : '';
   setSongVerseError('');
@@ -1133,6 +1140,10 @@ function onVerseLinesChanged(event) {
   const ses = getSongEditState();
   ses.songData.oPages[ses.pageName] =
     ge('txtaVerseLines').value.split('\n');
+  show('spnVerseUpdatedNotice');
+  setTimeout(() => {
+    hide('spnVerseUpdatedNotice');
+  }, 1000);
 }
 
 function onNewVerseNameChanged (event) {
