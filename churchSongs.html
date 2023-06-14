@@ -12,15 +12,17 @@
 
   <!-- 
     useful glyph spans
-    up <span class="larger">&#8593;</span>
-    down <span class="larger">&#8595;</span>
-    left <span class="larger">&#8592;</span>
-    right <span class="larger">&#8594;</span>
-    show/doc <span class="larger">&#8801;</span>
-    add/create <span class="larger">+</span>
+    up &#8593;
+    down &#8595;
+    left &#8592;
+    double left arrow &#8656;
+    right &#8594;
+    double right &#8658;
+    show/doc &#8801;
+    add/create +
     delete &#8855;
-    print <span class="larger">&#9998;</span>
-    rename/exchange <span class="larger">&#8660;</span>
+    print &#9998;
+    rename/exchange &#8660;
    -->
 
   <body onload="onPageLoad()">
@@ -260,7 +262,7 @@ Then press F11 to make it full screen."
                         <td>
                           &nbsp;
                         </td>
-                        <td>
+                        <td class="ac">
                           <button id="btnPrevSong" 
                             title="Use the up arrow to move to the previous song.  The screen will start in a blank state."
                             onclick="prevSong();"
@@ -273,7 +275,17 @@ Then press F11 to make it full screen."
                         </td>                      
                       </tr>
                       <tr>
-                        <td>
+                        <td class="ac">
+
+                          <button id="btnPrevReviewPage"
+                            title="Click here to view the previous unique song page.
+Use this to efficiently check the look of all unique pages/verses in the song library."
+                            onclick="prevReviewPage();"
+                          >
+                            <span class="larger">&#8656;</span>
+                          </button>   
+                          &nbsp;
+
                           <button id="btnNavPrevPage" 
                             title="Left Arrow"
                             title="Use the left arrow key to move to the previous page."
@@ -282,7 +294,7 @@ Then press F11 to make it full screen."
                             <span class="larger">&#8592;</span>
                           </button>
                         </td>
-                        <td>
+                        <td class="ac">
                           <button 
                             onclick="toggleBlankScreen(event);"
                             title="Use the spacebar to toggle between showing and hiding the current page."
@@ -290,20 +302,30 @@ Then press F11 to make it full screen."
                             <span class="larger">&#8855;</span>
                           </button>
                         </td>
-                        <td>
+                        <td class="ac">
                           <button id="btnNextPage" 
                             title="Use the right arrow key to move to the next page."
-                            onclick="nextPage();"
+                            onclick="nextPage(event);"
                           >
                             <span class="larger">&#8594;</span>
                           </button>
+
+                          &nbsp;
+                          <button id="btnNextReviewPage"
+                            title="Click here to view the next unique song page.
+Use this to efficiently check the look of all unique pages/verses in the song library."
+                            onclick="nextReviewPage();"
+                          >
+                            <span class="larger">&#8658;</span>
+                          </button>
+                       
                         </td>
                       </tr>
                       <tr>
                         <td>
                           &nbsp;
                         </td>          
-                        <td>
+                        <td class="ac">
                           <button id="btnNextSong" 
                             title="Use the down arrow key to move to the next song."
                             onclick="nextSong();"
@@ -341,7 +363,7 @@ Spacebar=Toggle Blank Screen state"
                   >
                     Save Projector Aspect Ratio
                   </button>   
-                  <p class="smaller m0">
+                  <p class="smallest m0">
                     Aspect Ratio: Current:
                     [<span id="spnCurrentAspectRatio">
                     </span>]
@@ -349,11 +371,13 @@ Spacebar=Toggle Blank Screen state"
                     [<span id="spnSavedAspectRatio">
                     </span>]
                   </p>     
-                  <button onclick="restoreProjectorAspectRatio();"
+                  <!-- Later - no known way to get the projector window to resize itself
+                  <button 
+                    onclick="restoreProjectorAspectRatio();"
                     title="Force the projector window to match the saved aspect ratio."
                     >
                     Restore Saved Aspect Ratio to Projector Window
-                  </button>
+                  </button> -->
                 </td>
                 <td id="tdPagePreview"
                   tabindex="13"

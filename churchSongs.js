@@ -283,14 +283,18 @@ function setNavSongPage(iPage) {
   if (iPage < 0 || iPage >= g.cPages) {
     return true;  // off the end
   }
+  g.iPage = iPage;
   g.pageName = 
     g.songData.aPageOrder[iPage % g.songData.aPageOrder.length];
-  if (g.songData.TagPage && iPage == g.cPages - 1) {
+  if (g.songData.TagPage) {
     g.pageName = g.songData.TagPage;
-  }
+  }    
+  setNavSongPageByName(g.pageName);
+}
+
+function setNavSongPageByName(pageName) {
+  g.pageName = pageName;
   g.aPageLines = g.songData.oPages[g.pageName];
-  g.iPage = iPage;
-  return iPage == g.cPages - 1;  // returns fIsLastPageInSong
 }
 
 function renderSelectControl(
@@ -397,6 +401,48 @@ function nextPage(event) {
     enableNavButtons();
     renderNavPage();
   }
+}
+
+g.iPageReview = 0;
+function getSongPagePairs() {
+  const aSongPagePairs = [];
+  Object.entries(songLibrary.oSongs).sort().forEach(
+    function(aKVSong) {
+      Object.entries(aKVSong[1].oPages).sort().forEach(
+        function(aKVPage) {
+          aSongPagePairs.push([ aKVSong[0], aKVPage[0]]);
+        }
+      )
+    }
+  )
+  return aSongPagePairs;
+}
+
+function nextReviewPage() {
+  // calculate a new song page pair array every time
+  // in case editing took place.
+  const aSongPagePairs = getSongPagePairs();
+  if (!aSongPagePairs.length) {
+    return; // no pages defined
+  }
+  
+  if (g.iPageReview >= aSongPagePairs.length) {
+    g.iPageReview = 0; // loop back to start
+  }
+  const pagePair = aSongPagePairs[g.iPageReview];
+  setNavSong(pagePair[0]);
+  setNavSongPageByName(pagePair[1]);
+  g.isScreenBlank = false;
+  renderNavPage();
+  g.iPageReview++;
+}
+
+function prevReviewPage() {
+  g.iPageReview -= 2;
+  if (g.iPageReview < 0) {
+    g.iPageReview = 0;
+  }
+  nextReviewPage();
 }
 
 function prevSong(event) {
