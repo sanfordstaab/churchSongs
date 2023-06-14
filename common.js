@@ -68,7 +68,7 @@ function fixit(value, cDigits) {
 function renderPageToHost(elHost, oMsg, width, height) {
   const heightLeft = height - oMsg.spaceAbove;
   const tmpl = `
-<div id="divTopSpacer" style="margin-top:%spaceAbove%">
+<div id="divTopSpacer" style="margin-top:%spaceAbove%;">
 </div>
 <content id="content" class="proj-content" style="line-height: %lineHeight%px;">
   <table width="${width}" height="${heightLeft}">

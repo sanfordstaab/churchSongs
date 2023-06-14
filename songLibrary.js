@@ -232,7 +232,7 @@ var songLibrary =
         ],
         "Chorus": [
           "Mercy there was great, and grace was free",
-          "Parton ther was multiplied to me;",
+          "Pardon there was multiplied to me;",
           "There my burdened soul found liberty",
           "At Calvary"
         ],
@@ -287,7 +287,7 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.13
     },
@@ -803,6 +803,12 @@ var songLibrary =
           "spaceAbove": 0
         },
         "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Chorus b": {
+          "spaceAbove": 0
+        },
+        "Chorus a": {
           "spaceAbove": 0
         }
       },
