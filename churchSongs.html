@@ -318,7 +318,7 @@ Then press F11 to make it full screen."
                     </table>
                   </center>
 
-                  <fieldset class="bgWhite">
+                  <fieldset class="bgWhite m0">
                     <p class="smallest m0"
                       onclick="ge('tdPagePreview').focus();"
                       title="Left Arrow=Previous Page
@@ -358,8 +358,7 @@ Spacebar=Toggle Blank Screen state"
                 <td id="tdPagePreview"
                   tabindex="13"
                   onkeydown="onPreviewKey(event);"
-                  onfocusin="onPagePreviewHasFocus(event);"
-                  onfocusout="onPagePreviewLostFocus(event);">
+                >
                   <!-- filled in by renderNavPagePreview() -->
                 </td>
               </tr>

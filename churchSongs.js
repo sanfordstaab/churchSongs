@@ -1,6 +1,6 @@
 // churchSongs.js
 
-function onPageLoad(event) {
+async function onPageLoad(event) {
   onstorage = (event) => {
     if (event.key == 'projectorKeyup' && event.newValue != null) {
       processKeyCode(event.newValue);
@@ -94,6 +94,9 @@ function onPageLoad(event) {
   toggleFieldsetVisibility({ target: ge('fsCreateOrEditSong').firstElementChild.firstElementChild });
   toggleFieldsetVisibility({ target: ge('fsExportImport').firstElementChild.firstElementChild });
   toggleFieldsetVisibility({ target: ge('fsSearch').firstElementChild.firstElementChild });
+
+  await delay(1);
+  onShowSong();
 }
 
 // projector
@@ -452,14 +455,6 @@ function renderNavPagePreview() {
     oMsg,
     width, 
     300);
-}
-
-function onPagePreviewHasFocus(event) {
-  event.target.style = "border: solid yellow 5px;";
-}
-
-function onPagePreviewLostFocus(event) {
-  event.target.style = "";
 }
 
 // Projector formatting

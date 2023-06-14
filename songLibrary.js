@@ -745,13 +745,6 @@ var songLibrary =
     },
     "Alive Alive": {
       "oPages": {
-        "Chorus": [
-          "Alive alive, alive forever more.",
-          "My Jesus is alive,",
-          "Alive forever more",
-          "Alive alive, alive forever more.",
-          "My Jesus is alive."
-        ],
         "Verse 1a": [
           "Sing hallelujah!",
           "Sing hallelujah!",
@@ -765,11 +758,25 @@ var songLibrary =
         ],
         "Tag": [
           "My Jesus is alive."
+        ],
+        "Chorus b": [
+          "Alive alive, ",
+          "alive forever more.",
+          "My Jesus is alive."
+        ],
+        "Chorus a": [
+          "Alive alive, ",
+          "alive forever more.",
+          "My Jesus is alive,",
+          "Alive forever more",
+          ""
         ]
       },
       "aPageOrder": [
-        "Chorus",
-        "Chorus",
+        "Chorus a",
+        "Chorus b",
+        "Chorus a",
+        "Chorus b",
         "Verse 1a",
         "Verse 1b"
       ],
@@ -778,7 +785,7 @@ var songLibrary =
       "License": 7004770,
       "Author": "Bob Singleton",
       "Publisher": "Singleton Productions Inc.",
-      "Notes": "",
+      "Notes": "Not in hymnal or song book",
       "oPageData": {
         "Chorus": {
           "spaceAbove": 0
@@ -2049,7 +2056,7 @@ var songLibrary =
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4715",
+    "aspectRatio": "0.4716",
     "savedAspectRatio": "0.4715"
   }
 }

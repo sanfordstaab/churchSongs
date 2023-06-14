@@ -744,12 +744,6 @@
     },
     "Alive Alive": {
       "oPages": {
-        "Chorus": [
-          "Alive alive, ",
-          "alive forever more.",
-          "My Jesus is alive,",
-          "Alive forever more"
-        ],
         "Verse 1a": [
           "Sing hallelujah!",
           "Sing hallelujah!",
@@ -764,17 +758,24 @@
         "Tag": [
           "My Jesus is alive."
         ],
-        "Chorus 2": [
+        "Chorus b": [
           "Alive alive, ",
           "alive forever more.",
           "My Jesus is alive."
+        ],
+        "Chorus a": [
+          "Alive alive, ",
+          "alive forever more.",
+          "My Jesus is alive,",
+          "Alive forever more",
+          ""
         ]
       },
       "aPageOrder": [
-        "Chorus",
-        "Chorus 2",
-        "Chorus",
-        "Chorus 2",
+        "Chorus a",
+        "Chorus b",
+        "Chorus a",
+        "Chorus b",
         "Verse 1a",
         "Verse 1b"
       ],
@@ -783,7 +784,7 @@
       "License": 7004770,
       "Author": "Bob Singleton",
       "Publisher": "Singleton Productions Inc.",
-      "Notes": "",
+      "Notes": "Not in hymnal or song book",
       "oPageData": {
         "Chorus": {
           "spaceAbove": 0
@@ -804,9 +805,9 @@
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.075,
+      "fontSize": 0.074,
       "fontBoldness": 5,
-      "lineHeight": 0.215
+      "lineHeight": 0.129
     },
     "I love to tell the story": {
       "oPages": {
@@ -2054,7 +2055,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "1.0516",
+    "aspectRatio": "0.4716",
     "savedAspectRatio": "0.4715"
   }
 }

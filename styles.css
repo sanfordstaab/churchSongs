@@ -229,6 +229,10 @@ fieldset {
   height: 300px;
 }
 
+#tdPagePreview:focus {
+  border: solid 5px yellow;
+}
+
 .greenBdr {
   border: solid green 2px;
 }
