@@ -143,25 +143,32 @@ function onShowSongOrSongset() {
   }
 }
 
-function renderNavStateText() {
-  show('spnSongSetSection', ge('chkNavSongSetChosen').checked);
-  show('spnSongsInSetSection', ge('chkNavSongSetChosen').checked);
-  
-  ge('spnNavSongSetName').innerText = g.songSetName;
-  ge('spnNavSongName').innerText = g.songName;
-  ge('spnNavISongSet').innerText = g.iSongInSet + 1;
-  ge('spnNavCSongs').innerText = getCountOfSongsInSongSet(g.songSetName) ? getCountOfSongsInSongSet(g.songSetName) : 0;
-  ge('spnNavIPage').innerText = g.iPage + 1;
+function renderNavStateText(fInReview=false) {
+  fIsSongSet = !!ge('chkNavSongSetChosen').checked;
+  let html = '';
+  if (fIsSongSet) {
+    html += `Song Set: <i>${g.songSetName}</i><br>`;
+  }
+
+  html += `Song: <u>${g.songName}</u>`;
+  if (!fInReview) {
+    html += ` (${g.iSongInSet + 1} of ${getCountOfSongsInSongSet(g.songSetName)})`;
+  } 
+  html += '<br>';
+
   const pageName = 
     (g.songData.TagPage && (g.iPage == g.cPages - 1)) 
     ?
     g.songData.TagPage + ' {Tag}'
     :
     g.pageName;
-  ge('spnNavPageName').innerText = pageName;
-  ge('spnNavIsShowing').innerText = 
-    g.isScreenBlank ? 'hidden' : 'showing';
-  ge('spnNavCPages').innerText = g.cPages;
+  html += `Page: "${pageName}"`;
+  if (!fInReview) {
+    html += ` (${g.isScreenBlank ? 'hidden' : 'showing'}) [${g.iPage + 1} of ${g.cPages}]`;
+  }
+  html == '<br>'
+
+  ge('divNavStateText').innerHTML = html;
 }
 
 function onPreviewKey(event) {
@@ -434,6 +441,7 @@ function nextReviewPage() {
   setNavSongPageByName(pagePair[1]);
   g.isScreenBlank = false;
   renderNavPage();
+  renderNavStateText(true);
   g.iPageReview++;
 }
 

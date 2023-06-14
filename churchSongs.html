@@ -235,27 +235,10 @@ Then press F11 to make it full screen."
             <table class="innerTable">
               <tr>
                 <td id="tdSongNavArea">
-                  <!-- filled in by renderNavStateText() -->
-                  <span id="spnSongSetSection">
-                    Song Set: "<i><span id="spnNavSongSetName"></span></i>"
-                    <br>
-                  </span> 
-                    Song: "<u><span id="spnNavSongName"></span></u>" 
-                  <span id="spnSongsInSetSection">
-                    (<span id="spnNavISongSet"></span> 
-                    of 
-                    <span id="spnNavCSongs"></span>
-                    songs)
-                  </span>
-                  <br>
-                  Page: 
-                    (<span id="spnNavIPage"></span> 
-                    ["<span id="spnNavPageName"></span>"
-                    (<i><span id="spnNavIsShowing"></span></i>)]                    
-                    of 
-                    <span id="spnNavCPages"></span> pages)
-                  <br>
-
+                  <div id="divNavStateText"
+                    class="smaller">
+                    <!-- filled in by renderNavStateText() -->
+                  </div>
                   <center>
                     <table id="navKeyTable">
                       <tr>
@@ -340,8 +323,9 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                     </table>
                   </center>
 
-                  <fieldset class="bgWhite m0">
-                    <p class="smallest m0"
+                  <fieldset  id="fsKeyNavInstructions" class="bgWhite m0">
+                    <p 
+                      class="smallest m0"
                       onclick="ge('tdPagePreview').focus();"
                       title="Left Arrow=Previous Page
 Right Arrow=Next Page
@@ -382,6 +366,7 @@ Spacebar=Toggle Blank Screen state"
                 <td id="tdPagePreview"
                   tabindex="13"
                   onkeydown="onPreviewKey(event);"
+                  onfocus="hide('fsKeyNavInstructions');"
                 >
                   <!-- filled in by renderNavPagePreview() -->
                 </td>
