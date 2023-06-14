@@ -18,13 +18,13 @@ body {
   color: black;
   vertical-align: middle;
   text-align: center;
+  margin: 0px;
 }
 
 .proj-host {
   position: relative;
   font-family: Arial;
   font-weight: normal;
-  margin: .5em;
   background-color: black;
   color: white;
   text-align: center;

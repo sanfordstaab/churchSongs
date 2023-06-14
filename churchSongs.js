@@ -84,7 +84,7 @@ function onPageLoad(event) {
 
   getSongSetEditState();
 
-  renderSavedAspectRatio();
+  renderAspectRatioText();
 
   hide('spnVerseUpdatedNotice');
 
@@ -207,6 +207,7 @@ function processKeyCode(code) {
 function processARChanged(newAspectRatio) {
   if (songLibrary.defaults.aspectRatio != newAspectRatio) {
     songLibrary.defaults.aspectRatio = newAspectRatio;
+    renderAspectRatioText();
     renderNavPagePreview();
   }
 }
@@ -323,16 +324,22 @@ function enableNavButtons() {
 function saveProjectorAspectRatio() {
   songLibrary.defaults.savedAspectRatio = 
     songLibrary.defaults.aspectRatio;
-  renderSavedAspectRatio();
+  renderAspectRatioText();
 }
 
-function renderSavedAspectRatio() {
+function renderAspectRatioText() {
+  ge('spnCurrentAspectRatio').innerText = 
+    songLibrary.defaults.savedAspectRatio 
+      ?
+      songLibrary.defaults.aspectRatio
+      :
+      '';    
   ge('spnSavedAspectRatio').innerText = 
-  songLibrary.defaults.savedAspectRatio 
-    ?
-    songLibrary.defaults.savedAspectRatio
-    :
-    '';
+    songLibrary.defaults.savedAspectRatio 
+      ?
+      songLibrary.defaults.savedAspectRatio
+      :
+      '';
 }
 
 function restoreProjectorAspectRatio() {
