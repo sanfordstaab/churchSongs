@@ -143,6 +143,7 @@ function onShowSongOrSongset() {
   }
 }
 
+g.fInReview = false;
 function renderNavStateText(fInReview=false) {
   fIsSongSet = !!ge('chkNavSongSetChosen').checked;
   let html = '';

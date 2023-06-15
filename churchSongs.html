@@ -234,7 +234,29 @@ Then press F11 to make it full screen."
             </legend>
             <table class="innerTable">
               <tr>
-                <td id="tdSongNavArea">
+                <td id="tdSongNavArea" claSS="smaller">
+                  Mode:
+                  <label for="rdoNavMode">
+                    Show:
+                  </label>
+                  <input type="radio"
+                    id="rdoNavMode"
+                    name="reviewMode"
+                    onchange="setNavMode('show');"
+                    checked
+                  />
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <label for="rdoReviewMode">
+                    Review:
+                  </label>
+                  <input type="radio"
+                    id="rdoReviewMode"
+                    name="reviewMode"
+                    onchange="setNavMode('review');"
+                  />                  
+
                   <div id="divNavStateText"
                     class="smallest">
                     <!-- filled in by renderNavStateText() -->
