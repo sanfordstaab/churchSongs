@@ -24,9 +24,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.167
     },
     "Bind us together": {
       "oPages": {
@@ -73,14 +73,14 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.061,
+      "fontSize": 0.055,
       "fontBoldness": 5,
-      "lineHeight": 0.159
+      "lineHeight": 0.203
     },
     "Onward Christian Soldiers": {
       "oPages": {
         "Verse 1a": [
-          "Onward, Christian osldiers,",
+          "Onward, Christian soldiers,",
           "Marching as to war,",
           "With the cross of Jesus",
           "Going on before!"
@@ -104,8 +104,8 @@ var songLibrary =
           "On to victory!"
         ],
         "Verse 2b": [
-          "Hell';s foundations quiver",
-          "At the shoult of priase;",
+          "Hell's foundations quiver",
+          "At the shout of priase;",
           "Brothers, lift your voices,",
           "Loud your anthems raise!"
         ],
@@ -182,9 +182,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.203
     },
     "I worship You, Almighty God": {
       "oPages": {
@@ -220,7 +220,7 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.193
     },
     "At Calvary": {
       "oPages": {
@@ -287,9 +287,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.061,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.167
     },
     "There's something about that name": {
       "oPages": {
@@ -442,7 +442,7 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.141
+      "lineHeight": 0.189
     },
     "Come let us worship and bow down": {
       "oPages": {
@@ -476,9 +476,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.055,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.202
     },
     "Amazing Grace": {
       "oPages": {
@@ -658,9 +658,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.05,
+      "fontSize": 0.03,
       "fontBoldness": 5,
-      "lineHeight": 0.141
+      "lineHeight": 0.196
     },
     "Bless His Holy Name": {
       "oPages": {
@@ -698,9 +698,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.067,
+      "fontSize": 0.06,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.224
     },
     "Thou Art Worthy": {
       "oPages": {
@@ -900,9 +900,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.193
     },
     "Swing Low Sweet Chariot": {
       "oPages": {
@@ -972,9 +972,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.045,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.144
+      "lineHeight": 0.167
     },
     "Come Now is the time to Worship": {
       "oPages": {
@@ -1027,7 +1027,7 @@ var songLibrary =
       },
       "fontSize": 0.039,
       "fontBoldness": 5,
-      "lineHeight": 0.111,
+      "lineHeight": 0.164,
       "Notes": "",
       "Author": "",
       "Publisher": ""
@@ -1091,7 +1091,7 @@ var songLibrary =
       },
       "fontSize": 0.061,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.203
     },
     "Count your blessings": {
       "oPages": {
@@ -1213,7 +1213,7 @@ var songLibrary =
       },
       "fontSize": 0.055,
       "fontBoldness": 1,
-      "lineHeight": 0.13
+      "lineHeight": 0.203
     },
     "Great is thy faithfulness": {
       "oPages": {
@@ -1396,9 +1396,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.167
     },
     "Mine Eyes Have Seen the Glory": {
       "oPages": {
@@ -1491,9 +1491,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.142
     },
     "This is the Day": {
       "oPages": {
@@ -1612,9 +1612,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.183
     },
     "I exalt the": {
       "oPages": {
@@ -1649,9 +1649,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.18
     },
     "How great thou art": {
       "oPages": {
@@ -1762,9 +1762,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.213
     },
     "Crown Him with many crowns": {
       "oPages": {
@@ -1858,9 +1858,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
-      "fontBoldness": 5,
-      "lineHeight": 0.13
+      "fontSize": 0.05,
+      "fontBoldness": 4,
+      "lineHeight": 0.167
     },
     "What a friend we have in Jesus": {
       "oPages": {
@@ -2010,9 +2010,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.202
     }
   },
   "oSongSets": {
