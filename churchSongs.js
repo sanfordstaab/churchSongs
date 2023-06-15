@@ -166,7 +166,17 @@ function renderNavStateText(fInReview=false) {
   if (!fInReview) {
     html += ` (${g.isScreenBlank ? 'hidden' : 'showing'}) [${g.iPage + 1} of ${g.cPages}]`;
   } else {
-    html += ` (${g.iPageReview + 1} of ${getSongPagePairs().length})`;
+    const aSongPagePairs = getSongPagePairs();
+    html += ` (${g.iPageReview + 1} of ${aSongPagePairs.length} total) `;
+    const oPages = songLibrary.oSongs[aSongPagePairs[g.iPageReview][0]].oPages;
+    const aPageNames = Object.keys(oPages).sort();
+    const cUniquePagesInSong = aPageNames.length;
+    const iUniquePageInSong = aPageNames.findIndex(
+      function(songPageName) {
+        return songPageName == pageName;
+      }
+    ) + 1;
+    html += `(${iUniquePageInSong} of ${cUniquePagesInSong} in this song)`;
   }
   html == '<br>'
 

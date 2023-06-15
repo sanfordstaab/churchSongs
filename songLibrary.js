@@ -542,9 +542,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.05,
+      "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.213
     },
     "Our God Reigns": {
       "oPages": {
@@ -814,7 +814,7 @@ var songLibrary =
       },
       "fontSize": 0.074,
       "fontBoldness": 5,
-      "lineHeight": 0.129
+      "lineHeight": 0.232
     },
     "I love to tell the story": {
       "oPages": {
@@ -2062,7 +2062,7 @@ var songLibrary =
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4716",
+    "aspectRatio": "0.4714",
     "savedAspectRatio": "0.4715"
   }
 }
