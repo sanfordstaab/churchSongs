@@ -2054,6 +2054,15 @@ var songLibrary =
       "Crown Him with many crowns",
       "Come thou Fount of many blessings",
       "Amazing Grace"
+    ],
+    "songs for 6/18/23": [
+      "Alive Alive",
+      "Majesty",
+      "I worship You, Almighty God",
+      "I exalt the",
+      "Crown Him with many crowns",
+      "What a friend we have in Jesus",
+      "Amazing Grace"
     ]
   },
   "defaults": {

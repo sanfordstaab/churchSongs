@@ -13,7 +13,9 @@
   <!-- 
     useful glyph spans
     up &#8593;
+    double up &#8657;
     down &#8595;
+    double down &#8659;
     left &#8592;
     double left arrow &#8656;
     right &#8594;
@@ -274,6 +276,13 @@ Then press F11 to make it full screen."
                           >
                             <span class="larger">&#8593;</span>
                           </button>
+
+                          <button id="btnPrevReviewSong" 
+                            title="Move to the first page of the previous song to review."
+                            onclick="prevReviewSong();"
+                          >
+                            <span class="larger">&#8657;</span>
+                          </button>
                         </td>
                         <td>
                           &nbsp;
@@ -289,7 +298,6 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           >
                             <span class="larger">&#8656;</span>
                           </button>   
-                          &nbsp;
 
                           <button id="btnNavPrevPage" 
                             title="Left Arrow"
@@ -301,6 +309,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                         </td>
                         <td class="ac">
                           <button 
+                            id="btnToggleShow"
                             onclick="toggleBlankScreen(event);"
                             title="Use the spacebar to toggle between showing and hiding the current page."
                           >
@@ -315,7 +324,6 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                             <span class="larger">&#8594;</span>
                           </button>
 
-                          &nbsp;
                           <button id="btnNextReviewPage"
                             title="Click here to view the next unique song page.
 Use this to efficiently check the look of all unique pages/verses in the song library."
@@ -337,6 +345,13 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           >
                             <span class="larger">&#8595;</span>
                           </button>
+                          
+                          <button id="btnNextReviewSong" 
+                            title="Move to the first page of the previous song to review."
+                            onclick="nextReviewSong();"
+                          >
+                            <span class="larger">&#8659;</span>
+                          </button>                          
                         </td>              
                         <td>
                           &nbsp;
