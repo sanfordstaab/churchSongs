@@ -396,16 +396,17 @@ function restoreProjectorAspectRatio() {
 }
 
 function blankScreen(event) {
+  g.isScreenBlank = true;
   localStorage.setItem('projector-message', JSON.stringify({
     content: ''
   }));
+
   localStorage.clear();
-  g.isScreenBlank = true;
   renderNavStateText();
   renderNavPagePreview();
 }
 
-function renderNavPage(event) {
+function renderNavPage() {
   const oMsg = getMessageFromGlobals();
   localStorage.setItem('projector-message', JSON.stringify(oMsg));
   localStorage.clear();
@@ -413,6 +414,27 @@ function renderNavPage(event) {
   renderNavStateText();
   enableNavButtons();
   renderNavPagePreview();
+}
+
+function renderNavPagePreview() {
+  const elHost = ge('tdPagePreview');
+  
+  let width = 
+    songLibrary.defaults.aspectRatio 
+    ? 
+    300 / songLibrary.defaults.aspectRatio 
+    : 
+    300;
+    
+  const oMsg = getMessageFromGlobals();
+  if (g.isScreenBlank) {
+    oMsg.content = '';
+  }
+  renderPageToHost(
+    ge('tdPagePreview'), 
+    oMsg,
+    width, 
+    300);
 }
 
 function toggleBlankScreen(event) {
@@ -436,7 +458,12 @@ function prevPage(event) {
 function nextPage(event) {
   console.assert(!g.fInReview);
   if (g.iPage < g.cPages - 1) {
-    g.iPage++;
+    // show the first page if hidden, else move to the next page
+    if (g.iPage == 0 && g.isScreenBlank) {
+      g.isScreenBlank = true;
+    } else {
+      g.iPage++;
+    }
     setNavSongPage(g.iPage);
     renderNavPage();
   }
@@ -581,27 +608,6 @@ function nextReviewSong(event) {
     g.iPageReview++;
   }
   renderNavPage();
-}
-
-function renderNavPagePreview() {
-  const elHost = ge('tdPagePreview');
-  
-  let width = 
-    songLibrary.defaults.aspectRatio 
-    ? 
-    300 / songLibrary.defaults.aspectRatio 
-    : 
-    300;
-    
-  const oMsg = getMessageFromGlobals();
-  if (g.isScreenBlank) {
-    oMsg.content = '';
-  }
-  renderPageToHost(
-    ge('tdPagePreview'), 
-    oMsg,
-    width, 
-    300);
 }
 
 // Projector formatting
