@@ -165,36 +165,45 @@ function renderNavStateText() {
   fIsSongSet = !!ge('chkNavSongSetChosen').checked;
   let html = '';
   if (fIsSongSet) {
-    html += `Song Set: <i>${g.songSetName}</i><br>`;
+    html += `Song Set: "<i>${g.songSetName}</i>"<br>`;
   }
 
-  html += `${g.fInReview ? 'Reviewing ' : ''}Song: <u>${g.songName}</u>`;
-  if (!g.fInReview) {
-    html += ` (${g.iSongInSet + 1} of ${getCountOfSongsInSongSet(g.songSetName)})`;
-  } 
+  if (g.fInReview) {
+    html += `Reviewing: Song: <u>${getSongPagePairs()[g.iPageReview][0]}</u>`;
+  } else {
+    html += `Projecting Song: <u>${g.songName}</u>`;
+    if (ge('chkNavSongSetChosen').checked) {
+      html += ` (${g.iSongInSet + 1} of ${getCountOfSongsInSongSet(g.songSetName)} songs)`;
+    }
+  }
+
   html += '<br>';
 
-  const pageName = 
+  let pageName = 
     (g.songData.TagPage && (g.iPage == g.cPages - 1)) 
     ?
     g.songData.TagPage + ' {Tag}'
     :
     g.pageName;
-  html += `Page: "${pageName}"`;
-  if (!g.fInReview) {
-    html += ` (${g.isScreenBlank ? 'hidden' : 'showing'}) [${g.iPage + 1} of ${g.cPages}]`;
-  } else {
+
+  if (g.fInReview) {
     const aSongPagePairs = getSongPagePairs();
-    html += ` (${g.iPageReview + 1} of ${aSongPagePairs.length} total) `;
-    const oPages = songLibrary.oSongs[aSongPagePairs[g.iPageReview][0]].oPages;
-    const aPageNames = Object.keys(oPages).sort();
+    pageName = aSongPagePairs[g.iPageReview][1];
+    html += `Unique Page: "${pageName}"`;
+    html += `<br>(${g.iPageReview + 1} of ${aSongPagePairs.length} total) `;
+    
+    const songData = songLibrary.oSongs[aSongPagePairs[g.iPageReview][0]];
+    const aPageNames = Object.keys(songData.oPages).sort();
     const cUniquePagesInSong = aPageNames.length;
     const iUniquePageInSong = aPageNames.findIndex(
       function(songPageName) {
         return songPageName == pageName;
       }
     ) + 1;
-    html += `(${iUniquePageInSong} of ${cUniquePagesInSong} in this song)`;
+    html += `[${iUniquePageInSong} of ${cUniquePagesInSong}] in this song`;
+  } else {
+    html += `Page: "${pageName}"`;
+    html += ` (${g.isScreenBlank ? 'hidden' : 'showing'}) [${g.iPage + 1} of ${g.cPages}]`;
   }
   html == '<br>'
 
@@ -214,19 +223,35 @@ function processKeyCode(code) {
   let fAllowDefault = false;
   switch (code) {
     case 'ArrowLeft':
-      prevPage();
+      if (g.fInReview) {
+        prevReviewPage();
+      } else {
+        prevPage();
+      }
       break;
 
     case 'ArrowRight':
-      nextPage();
+      if (g.fInReview) {
+        nextReviewPage();
+      } else {
+        nextPage();
+      }
       break;
 
     case 'ArrowUp':
-      prevSong();
+      if (g.fInReview) {
+        prevReviewSong();
+      } else {
+        prevSong();
+      }
       break;
 
     case 'ArrowDown':
-      nextSong();
+      if (g.fInReview) {
+        nextReviewSong();
+      } else {
+        nextSong();
+      }
       break;
 
     case 'Space':
@@ -328,7 +353,6 @@ function setNavSongPage(iPage) {
 
 function setNavSongPageByName(pageName) {
   g.pageName = pageName;
-  g.aPageLines = g.songData.oPages[g.pageName];
 }
 
 function renderSelectControl(
@@ -396,6 +420,7 @@ function restoreProjectorAspectRatio() {
 }
 
 function blankScreen(event) {
+  console.assert(!g.fInReview);
   g.isScreenBlank = true;
   localStorage.setItem('projector-message', JSON.stringify({
     content: ''
@@ -407,10 +432,10 @@ function blankScreen(event) {
 }
 
 function renderNavPage() {
+  g.isScreenBlank = false;
   const oMsg = getMessageFromGlobals();
   localStorage.setItem('projector-message', JSON.stringify(oMsg));
   localStorage.clear();
-  g.isScreenBlank = false;
   renderNavStateText();
   enableNavButtons();
   renderNavPagePreview();
@@ -460,11 +485,10 @@ function nextPage(event) {
   if (g.iPage < g.cPages - 1) {
     // show the first page if hidden, else move to the next page
     if (g.iPage == 0 && g.isScreenBlank) {
-      g.isScreenBlank = true;
+      g.isScreenBlank = false;
     } else {
-      g.iPage++;
+      setNavSongPage(g.iPage + 1);
     }
-    setNavSongPage(g.iPage);
     renderNavPage();
   }
 }
@@ -482,12 +506,6 @@ function getSongPagePairs() {
     }
   )
   return aSongPagePairs;
-}
-
-function getReviewSongIndex() {
-  const aSongPagePairs = getSongPagePairs();
-  const reviewSongName = aSongPagePairs[g.iPageReview][0];
-  return getAllSongNames().indexOf(reviewSongName);  
 }
 
 function nextReviewPage() {
@@ -517,10 +535,8 @@ function isReviewingLastSong() {
 
 function prevReviewPage() {
   console.assert(g.fInReview);
+  console.assert(g.iPageReview > 0);
   g.iPageReview -= 2;
-  if (g.iPageReview < 0) {
-    g.iPageReview = 0;
-  }
   nextReviewPage();
 }
 
@@ -540,11 +556,20 @@ function prevReviewSong(event) {
   console.assert(g.fInReview);
   console.assert(!isReviewingFirstSong());
   const aSongPagePairs = getSongPagePairs();
-  const firstSongName = aSongPagePairs[0][0];
+  const startingSongName = aSongPagePairs[g.iPageReview][0];
+  while (g.iPageReview > 0 && 
+         startingSongName == aSongPagePairs[g.iPageReview][0]) {
+    g.iPageReview--;
+  }
+  // now go to the first page of the current song
   const currentSongName = aSongPagePairs[g.iPageReview][0];
   while (g.iPageReview > 0 && 
-         firstSongName == currentSongName) {
+         currentSongName == aSongPagePairs[g.iPageReview][0]) {
     g.iPageReview--;
+  }
+  if (currentSongName != aSongPagePairs[g.iPageReview][0]) { 
+    // only bump to the next song if we are not at 0
+    g.iPageReview++;
   }
   renderNavPage();
 }
@@ -560,13 +585,13 @@ function getMessageFromGlobals() {
       fontSize: songData.fontSize,
       fontBoldness: songData.fontBoldness,
       lineHeight: songData.lineHeight,
-      content: songData.aPageLines,
+      content: songData.oPages[pageName],
       allCaps: songLibrary.defaults.allCaps,
       spaceAbove: songData.oPages[pageName].spaceAbove, // em
       license: songData.License,
       pageNumber: g.iPageReview + 1,
-      lastPage: g.iPageReview == aSongPagePairs.lenght - 1,
-      songNumber: getReviewSongIndex() + 1,
+      lastPage: g.iPageReview == aSongPagePairs.length - 1,
+      songNumber: getAllSongNames().length,
       fLastSongInSet: isReviewingLastSong()
     }
   } else {
@@ -574,7 +599,7 @@ function getMessageFromGlobals() {
       fontSize: g.songData.fontSize,
       fontBoldness: g.songData.fontBoldness,
       lineHeight: g.songData.lineHeight,
-      content: g.aPageLines,
+      content: g.songData.oPages[g.pageName],
       allCaps: songLibrary.defaults.allCaps,
       spaceAbove: g.songData.oPageData[g.pageName].spaceAbove, // em
       license: g.songData.License,
