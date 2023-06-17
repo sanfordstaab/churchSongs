@@ -2080,8 +2080,8 @@ var songLibrary =
       ],
       "RepeatCount": 1,
       "TagPage": "",
-      "Notes": "",
-      "Author": "",
+      "Notes": "#1 Baptist Hymnal, Rev. 4:8-11",
+      "Author": "Words: Reginald Heber, 1836, Tune: John B. Dykes, 1861",
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
