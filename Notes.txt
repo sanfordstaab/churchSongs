@@ -1,0 +1,8 @@
+Notes:
+
+create getNavState to remove globals
+change g.fInReview to nav.mode
+renderNavPage gets an optional nav object
+combine onShowSongSet, onShowSong, into updateNavUI
+rename g.songSetName to nav.songSetName
+call getNavState where needed 
