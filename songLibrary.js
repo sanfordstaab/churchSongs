@@ -205,7 +205,7 @@ var songLibrary =
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": "4",
       "Notes": "#176 Maranatha Song Book",
       "Author": "",
       "Publisher": "",
@@ -323,9 +323,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.144
     },
     "Turn Your Eyes Upon Jesus": {
       "oPages": {
@@ -382,9 +382,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.045,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.137
+      "lineHeight": 0.159
     },
     "Blessed Assurance": {
       "oPages": {
@@ -739,9 +739,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.055,
+      "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.175
     },
     "Alive Alive": {
       "oPages": {
@@ -749,7 +749,7 @@ var songLibrary =
           "Sing hallelujah!",
           "Sing hallelujah!",
           "My Jesus is alive,",
-          "Alive forever more."
+          "forever more."
         ],
         "Verse 1b": [
           "Sing hallelujah!",
@@ -780,7 +780,7 @@ var songLibrary =
         "Verse 1a",
         "Verse 1b"
       ],
-      "TagPage": "Tag",
+      "TagPage": "",
       "RepeatCount": 2,
       "License": 7004770,
       "Author": "Bob Singleton",
@@ -1546,17 +1546,17 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.061,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.203
     },
     "Majesty": {
       "oPages": {
         "Verse 1": [
           "Majesty,",
           "worship His majesty!",
-          "Unto Jesus",
-          "be all glory, power and praise"
+          "Unto Jesus be all ",
+          "glory, power and praise!"
         ],
         "Verse 2": [
           "Majesty,",
@@ -1565,29 +1565,29 @@ var songLibrary =
           "unto His own",
           "his anthem raise."
         ],
-        "Verse 3": [
-          "So exalt,",
-          "lift up on high",
-          "the name of Jesus"
-        ],
-        "Verse 4": [
-          "Magnify,",
-          "come glorify ",
-          "Christ Jesus, the King"
-        ],
         "Verse 5": [
           "Majesty,",
           "worship His majesty,",
           "Jesus, who died, ",
           "now glorified,",
           "King of all kings."
+        ],
+        "Chorus A": [
+          "So exalt,",
+          "lift up on high",
+          "the name of Jesus"
+        ],
+        "Chorus B": [
+          "Magnify,",
+          "come glorify ",
+          "Christ Jesus, the King"
         ]
       },
       "aPageOrder": [
         "Verse 1",
         "Verse 2",
-        "Verse 3",
-        "Verse 4",
+        "Chorus A",
+        "Chorus B",
         "Verse 5"
       ],
       "RepeatCount": "2",
@@ -1796,7 +1796,7 @@ var songLibrary =
           "Crown Him the Lord of peace,",
           "Whose power a scepter sways",
           "from pole to pole, that wars may cease,",
-          "And all be preyer and praise."
+          "And all be prayer and praise."
         ],
         "Verse 3b": [
           "His reign shall know no end,",
@@ -1814,7 +1814,7 @@ var songLibrary =
           "All hail, Redeemer, hail!",
           "For thou has died for me;",
           "Thy praise and glory shall not fail",
-          "throu-out eternity."
+          "through out eternity."
         ]
       },
       "aPageOrder": [
@@ -1883,7 +1883,7 @@ var songLibrary =
           "Take it to the Lord in prayer;"
         ],
         "Verse 2b": [
-          "Can we find a friend so failthful",
+          "Can we find a friend so faithful",
           "Who will all our sorrows share?",
           "Jesus knows our every weakness, ",
           "Take it to the Lord in prayer."
@@ -1934,9 +1934,9 @@ var songLibrary =
           "spaceAbove": 0
         }
       },
-      "fontSize": 0.076,
+      "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.172
     },
     "Come thou Fount of many blessings": {
       "oPages": {
@@ -2013,6 +2013,109 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.202
+    },
+    "Holy, Holy, Holy": {
+      "oPages": {
+        "Verse 1a": [
+          "Holy, holy, holy!",
+          "Lord God Almighty!",
+          "Early in the morning",
+          "our song shall rise to thee;"
+        ],
+        "Verse 1b": [
+          "Holy, holy, holy,",
+          "merciful and mighty!",
+          "God in three Persons,",
+          "blessed Trinity!"
+        ],
+        "Verse 2a": [
+          "Holy, holy, holy!",
+          "All the saints adore thee,",
+          "casting down their golden crowns",
+          "around the glassy sea;"
+        ],
+        "Verse 2b": [
+          "Cherubim and Seraphim",
+          "falling down before thee,",
+          "who wert, and art, ",
+          "and evermore shalt be. "
+        ],
+        "Verse 3a": [
+          "Holy, holy, holy!",
+          "Tho the darkness hide thee,",
+          "Tho the eye of sinful man",
+          "thy glory may not see;"
+        ],
+        "Verse 3b": [
+          "Only thou art holy;",
+          "there is none beside thee,",
+          "Perfect in power,",
+          "in love, and purity. "
+        ],
+        "Verse 4a": [
+          "Holy, holy, holy!",
+          "Lord God Almighty!",
+          "All thy works shall praise thy name,",
+          "in earth, and sky, and sea;"
+        ],
+        "Verse 4b": [
+          "Holy, holy, holy;",
+          "merciful and mighty!",
+          "God in three Persons",
+          "blessed Trinity!"
+        ],
+        "tag": [
+          "Amen"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 4b",
+        "Verse 4a",
+        "Verse 3b",
+        "Verse 3a",
+        "Verse 2b",
+        "Verse 2a",
+        "Verse 1b"
+      ],
+      "RepeatCount": 1,
+      "TagPage": "",
+      "Notes": "#1 Baptist Hymnal, Rev. 4:8-11",
+      "Author": "Words: Reginald Heber, 1836, Tune: John B. Dykes, 1861",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        },
+        "Verse 4a": {
+          "spaceAbove": 0
+        },
+        "Verse 4b": {
+          "spaceAbove": 0
+        },
+        "tag": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.061,
+      "fontBoldness": 5,
+      "lineHeight": 0.175
     }
   },
   "oSongSets": {
@@ -2061,6 +2164,7 @@ var songLibrary =
       "I worship You, Almighty God",
       "I exalt the",
       "Crown Him with many crowns",
+      "Holy, Holy, Holy",
       "What a friend we have in Jesus",
       "Amazing Grace"
     ]
@@ -2071,7 +2175,7 @@ var songLibrary =
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4714",
+    "aspectRatio": "0.4716",
     "savedAspectRatio": "0.4715"
   }
 }
