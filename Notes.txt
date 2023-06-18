@@ -1,0 +1,12 @@
+Notes:
+
+x create getNavState to remove globals
+x change g.fInReview to nav.mode
+x rename g.songSetName to nav.songSetName
+x call getNavState where needed 
+x rename g.songData to nav.songData
+x rename g.iPage to nav.iPageInSong
+x reaname g.cPages to nav.cPagesInSong
+x rename g.isScreenBlank to g.nav.fBlankScreen
+x rename g.iPageInReview to nav.iPageInReview
+rename g.pageName to nav.pageName

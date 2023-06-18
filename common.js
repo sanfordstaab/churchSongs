@@ -20,6 +20,14 @@ function ge(id) {
 */
 g.shownDisplayClass = {};
 function show(elOrId, fShow=true) {
+  if (Array.isArray(elOrId)) {
+    elOrId.forEach(
+      (item) => {
+        show(item, fShow);
+      }
+    )
+    return;
+  }
   let el = elOrId;
   if (typeof(el) == 'string') {
     el = ge(elOrId);
