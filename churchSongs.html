@@ -619,17 +619,8 @@ Spacebar=Toggle Blank Screen state"
             <table class="horzTable" width="100%">
               <tr>
                 <th>
-                  <label for="chkEditExistingSong">
-                    Pick a Song to edit:
-                  </label>
+                  Pick a Song to edit:
                 </th>
-                <td>
-                  <input id="chkEditExistingSong" 
-                    type="radio" 
-                    name="editChoice" 
-                    onchange="fillSongToEdit();"
-                    />
-                </td>
                 <td>
                   <span id="spnNoSongsToEdit" 
                     class="redText smaller">
@@ -654,18 +645,11 @@ Spacebar=Toggle Blank Screen state"
 
               <tr>
                 <th>
-                  <label for="chkEditNewSong">
-                    Pick a name for your new song:
-                  </label> 
+                  Pick a name for your new song:
                 </th>
                 <td>
                   <div id="divNewEditSongNameError" class="redText">
                   </div>  
-                  <input id="chkEditNewSong" 
-                    type="radio" 
-                    name="editChoice" 
-                    onchange="onNewSongNameChanged();"
-                    />
                 </td>
                 <th>
                   <input id="txtNewSongName" 
@@ -961,6 +945,15 @@ have an alternative license code specified."
                       Song Set Names
                     </label>
                     <br>
+
+                    <input id="chkSearchInSongSetSongNames"
+                      type="checkbox"
+                      onchange="onSearchInChanged();"
+                      >
+                    <label for="chkSearchInSongSetSongNames">
+                      Song Set Song Names
+                    </label>
+                    <br>                    
 
                     <input id="chkSearchInSongNames"
                       type="checkbox"

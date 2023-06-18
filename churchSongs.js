@@ -1028,7 +1028,6 @@ async function deleteSongFromSongSet(event) {
 
 function initSongEditUI() {
   setNewSongEditError('');
-  ge('chkEditExistingSong').checked = true;
   fillSongToEdit();
 }
 
@@ -1098,7 +1097,6 @@ function setNewSongEditError(text) {
 }
 
 function onNewSongNameChanged(event) {
-  ge('chkEditNewSong').checked = true;
   clearSongUI();
   enableSongEditButtons();
 }
@@ -1113,7 +1111,7 @@ async function onNewSongFilterChanged(event) {
 
 function getSongEditState() {
   const ses = {};
-  ses.fExistingSong = ge('chkEditExistingSong').checked ? 1 : 0;
+  ses.fExistingSong = ge('selAllSongsToEdit').value ? 1 : 0;
   ses.selectedSongToEdit = ge('selAllSongsToEdit').value;
   ses.newSongEditName = ge('txtNewSongName').value.trim();
   if (ses.selectedSongToEdit) {
@@ -1151,9 +1149,9 @@ function enableSongEditButtons() {
   enableElement('fsOtherSongSettings', ses.fExistingSong);
 
   // New song edit buttons
-  const fSongNameAlreadyExists = 
+  const fNewSongNameAlreadyExists = 
     doesProposedEditSongNameExist(ses.newSongEditName);
-  if (fSongNameAlreadyExists) {
+  if (fNewSongNameAlreadyExists) {
     // tell user this song name already exists
     // which means we can't rename it or create a new song.
     show('spnNoSongsToEdit');
@@ -1164,14 +1162,14 @@ function enableSongEditButtons() {
   enableElement('btnCreateNewSong', 
     !ses.fExistingSong && 
     ses.newSongEditName &&
-    !fSongNameAlreadyExists &&
+    !fNewSongNameAlreadyExists &&
     ses.newSongEditName != ses.selectedSongToEdit
   );
 
   enableElement('btnRenameSong',
-    !ses.fExistingSong && 
+    ses.fExistingSong && 
     ses.newSongEditName &&
-    fSongNameAlreadyExists &&
+    !fNewSongNameAlreadyExists &&
     ses.newSongEditName != ses.selectedSongToEdit);
 
   enableElement('btnDeleteSong', 
@@ -1196,7 +1194,6 @@ async function createEmptySong(event) {
     RepeatCount: 1
   };
   reRenderAllSongSelectControls();
-  ge('chkEditExistingSong').checked = true;
   ge('txtEditSongFilter').value = '';
   ge('txtNewSongName').value = '';
   onNewSongFilterChanged();
@@ -1228,7 +1225,6 @@ async function renameSong(event) {
   if (newSongName != oldSongName) {
     songLibrary.oSongs[newSongName] = songLibrary.oSongs[oldSongName];
     delete songLibrary.oSongs[oldSongName];
-    ge('chkEditExistingSong').checked = true;
     
     // fix any song sets that reference the renamed song
     Object.entries(songLibrary.oSongSets).forEach(
@@ -1507,6 +1503,7 @@ function deleteVerseOrderVerse(event) {
 
 function onSearchAll(event) {
   ge('chkSearchInSongSetNames').checked = 'checked';
+  ge('chkSearchInSongSetSongNames').checked = 'checked';
   ge('chkSearchInSongNames').checked = 'checked';
   ge('chkSearchLyrics').checked = 'checked';
   ge('chkSearchNotes').checked = 'checked';
@@ -1518,6 +1515,7 @@ function onSearchAll(event) {
 
 function onSearchNone(event) {
   ge('chkSearchInSongSetNames').checked = '';
+  ge('chkSearchInSongSetSongNames').checked = '';
   ge('chkSearchInSongNames').checked = '';
   ge('chkSearchLyrics').checked = '';
   ge('chkSearchNotes').checked = '';
@@ -1553,6 +1551,31 @@ function onSearchInChanged(event) {
         results += resultPart;
       }
     }
+
+    if (ge('chkSearchInSongSetSongNames').checked) {
+      resultPart = 'In Song Set Song Names:\n';
+      fResultFound = false;
+      getAllSongSetNames().forEach(
+        function(songSetName) {
+          let thisResultPart = '';
+          songLibrary.oSongSets[songSetName].forEach(
+            function(songName) {
+              if (areAllTokensInText(aSearchTokens, songName)) {
+                thisResultPart += `    ${songName}\n`;
+                fResultFound = true;
+              }
+            }
+          );
+          if (thisResultPart) {
+            resultPart += `  ${songSetName}\n` + thisResultPart;
+          }
+        }
+      );
+      if (fResultFound) {
+        results += resultPart;
+      } 
+    }
+
     if (ge('chkSearchInSongNames').checked) {
       resultPart = 'In Song Names:\n';
       fResultFound = false;
@@ -1568,6 +1591,7 @@ function onSearchInChanged(event) {
         results += resultPart;
       }
     }
+
     if (ge('chkSearchLyrics').checked) {
       resultPart = 'In Song Lyrics:\n';
       fResultFound = false;
