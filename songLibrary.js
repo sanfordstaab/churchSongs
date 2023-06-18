@@ -205,7 +205,7 @@ var songLibrary =
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": "4",
       "Notes": "#176 Maranatha Song Book",
       "Author": "",
       "Publisher": "",
@@ -749,7 +749,7 @@ var songLibrary =
           "Sing hallelujah!",
           "Sing hallelujah!",
           "My Jesus is alive,",
-          "Alive forever more."
+          "forever more."
         ],
         "Verse 1b": [
           "Sing hallelujah!",
@@ -780,7 +780,7 @@ var songLibrary =
         "Verse 1a",
         "Verse 1b"
       ],
-      "TagPage": "Tag",
+      "TagPage": "",
       "RepeatCount": 2,
       "License": 7004770,
       "Author": "Bob Singleton",
@@ -1555,8 +1555,8 @@ var songLibrary =
         "Verse 1": [
           "Majesty,",
           "worship His majesty!",
-          "Unto Jesus",
-          "be all glory, power and praise"
+          "Unto Jesus be all ",
+          "glory, power and praise!"
         ],
         "Verse 2": [
           "Majesty,",
@@ -1565,29 +1565,29 @@ var songLibrary =
           "unto His own",
           "his anthem raise."
         ],
-        "Verse 3": [
-          "So exalt,",
-          "lift up on high",
-          "the name of Jesus"
-        ],
-        "Verse 4": [
-          "Magnify,",
-          "come glorify ",
-          "Christ Jesus, the King"
-        ],
         "Verse 5": [
           "Majesty,",
           "worship His majesty,",
           "Jesus, who died, ",
           "now glorified,",
           "King of all kings."
+        ],
+        "Chorus A": [
+          "So exalt,",
+          "lift up on high",
+          "the name of Jesus"
+        ],
+        "Chorus B": [
+          "Magnify,",
+          "come glorify ",
+          "Christ Jesus, the King"
         ]
       },
       "aPageOrder": [
         "Verse 1",
         "Verse 2",
-        "Verse 3",
-        "Verse 4",
+        "Chorus A",
+        "Chorus B",
         "Verse 5"
       ],
       "RepeatCount": "2",
@@ -1796,7 +1796,7 @@ var songLibrary =
           "Crown Him the Lord of peace,",
           "Whose power a scepter sways",
           "from pole to pole, that wars may cease,",
-          "And all be preyer and praise."
+          "And all be prayer and praise."
         ],
         "Verse 3b": [
           "His reign shall know no end,",
@@ -1814,7 +1814,7 @@ var songLibrary =
           "All hail, Redeemer, hail!",
           "For thou has died for me;",
           "Thy praise and glory shall not fail",
-          "throu-out eternity."
+          "through out eternity."
         ]
       },
       "aPageOrder": [
@@ -1883,7 +1883,7 @@ var songLibrary =
           "Take it to the Lord in prayer;"
         ],
         "Verse 2b": [
-          "Can we find a friend so failthful",
+          "Can we find a friend so faithful",
           "Who will all our sorrows share?",
           "Jesus knows our every weakness, ",
           "Take it to the Lord in prayer."
@@ -2018,7 +2018,7 @@ var songLibrary =
       "oPages": {
         "Verse 1a": [
           "Holy, holy, holy!",
-          "Lord God Almightly!",
+          "Lord God Almighty!",
           "Early in the morning",
           "our song shall rise to thee;"
         ],
