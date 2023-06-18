@@ -143,15 +143,16 @@ Then press F11 to make it full screen."
               <table class="horzTable">
                 <tr>
                   <th>
-                    <label for="chkNavSongSetChosen">
+                    <label for="chkNavSongSetMode">
                       Pick a song set:
                     </label>
                   </th>
                   <td>
-                    <input id="chkNavSongSetChosen" 
+                    <input id="chkNavSongSetMode" 
                       type="radio" 
-                      name="playChoice" 
-                      onchange="onShowSongset();"
+                      name="rdoNavMode" 
+                      onchange="onModeChanged();"
+                      title="Click to project or print the selected song set."
                       />
                   </td>
                   <td>
@@ -175,17 +176,19 @@ Then press F11 to make it full screen."
                     />
                   </td>
                 </tr>
+
                 <tr>
                   <th>
-                    <label for="chkNavSongChosen">
+                    <label for="chkNavSongMode">
                       Pick a single song:
                     </label>
                   </th>
                   <td>
-                    <input id="chkNavSongChosen" 
+                    <input id="chkNavSongMode" 
                       type="radio" 
-                      name="playChoice" 
-                      onchange="onShowSong();"
+                      name="rdoNavMode" 
+                      onchange="onModeChanged(event);"
+                      title="Click to project or print the selected song."
                       />
                   </td>
                   <td>
@@ -209,10 +212,45 @@ Then press F11 to make it full screen."
                     />
                   </td>
                 </tr>
+
+                <tr>
+                  <th>
+                    <label for="rdoNavMode">
+                      Review:
+                    </label>
+                  </th>
+                  <td>
+                    <input type="radio"
+                      id="rdoReviewMode"
+                      name="rdoNavMode"
+                      onchange="onModeChanged(event);"
+                      title="Review the looks and correctness of each unique page/verse 
+in the song library or to print all unique pages/verses for review."
+                    />
+                  </td>
+                  <td colspan="3">
+                    <button id="btnResetReview"
+                      title="Click to restart page review from the begining."
+                    >
+                      Reset/Start Review
+                    </button>
+                    <button id="btnSaveReviewPlace"
+                      title="Click to remember where you are in the review for later.
+This will be exported with the song library."
+                    >
+                      Save Review Place                      
+                    </button>
+                    <button id="btnRecallReviewPlace"
+                      title="Click to recall the saved review place."
+                    >
+                      Recall Review Place
+                    </button>
+                  </td>
+                </tr>
               </table>
               <br>
               <button onclick="onPrintSongs();">
-                Print the selected song or song-set <span>&#9998;</span>
+                Print the selected song or song-set or all unique pages <span>&#9998;</span>
               </button>           
               <div id="divPrintSongError" class="redText">
                 <!-- filled in by code -->
@@ -235,30 +273,8 @@ Then press F11 to make it full screen."
               Song Projector Navigation
             </legend>
             <table class="innerTable">
-              <tr>
+              <tr>              
                 <td id="tdSongNavArea" claSS="smaller">
-                  Mode:
-                  <label for="rdoNavMode">
-                    Show:
-                  </label>
-                  <input type="radio"
-                    id="rdoNavMode"
-                    name="reviewMode"
-                    onchange="setNavMode('show');"
-                    checked
-                  />
-                  &nbsp;
-                  &nbsp;
-                  &nbsp;
-                  <label for="rdoReviewMode">
-                    Review:
-                  </label>
-                  <input type="radio"
-                    id="rdoReviewMode"
-                    name="reviewMode"
-                    onchange="setNavMode('review');"
-                  />                  
-
                   <div id="divNavStateText"
                     class="smallest">
                     <!-- filled in by renderNavStateText() -->
