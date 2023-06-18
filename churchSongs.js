@@ -106,6 +106,7 @@ function getNavState() {
 
   } else if (ge('chkNavSongMode').checked) {
     nav.mode = 'song';
+    nav.songSetName = '';
     nav.songName = ge('selNavSongs').value;
     if (!nav.songName) {
       // no song selected, switch to review mode
@@ -117,7 +118,7 @@ function getNavState() {
   } else if (ge('rdoReviewMode').checked) {
     nav.mode = 'review';
     nav.iPageInReview = g.nav.iPageInReview;
-    aSongPagePairs = getSongPagePairs();
+    let aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = aSongPagePairs.length;
     nav.aSongPagePairs = aSongPagePairs;
     nav.songName = aSongPagePairs[g.nav.iPageInReview][0];
@@ -148,7 +149,7 @@ function addNavSongState(nav) {
   }
   nav.cPagesInSong = aPagesInSong.length;
   nav.pageName = aPagesInSong[nav.iPageInSong];
-  // nav.aPagesInSong = aPagesInSong;
+  nav.aPagesInSong = aPagesInSong;
   console.assert(nav.iPageInSong < nav.cPagesInSong);
   nav.fInReview = false;
   nav.fBlankScreen = g.nav.fBlankScreen;
@@ -653,7 +654,7 @@ function getMessageFromGlobals() {
       pageNumber: nav.iPageInSong + 1,
       lastPage: nav.iPageInSong == nav.cPagesInSong - 1 ? true : false,
       songNumber: nav.iSongInSet + 1,
-      fLastSongInSet: 
+      fLastSongInSet: nav.mode == 'song' ? 0 : 
         getCountOfSongsInSongSet(nav.songSetName) - 1 == nav.iSongInSet
     }
   }
@@ -1716,42 +1717,24 @@ async function importLibrary(event) {
 // printing
 
 /**
- * The event triggered when the user wants to print a song or
- * a song-set.
- * @param {object} event 
- */
-function onPrintSongs(event) {
-  setSongSetError('');
-
-  let songSetName = '';
-  let songName = '';
-  if (ge('chkNavSongSetMode').checked) {
-    songSetName = ge('selNavSongSets').value;
-  } else {
-    songName = ge('selNavSongs').value;
-  }
-
-  printSongs(songSetName, songName);
-}
-
-/**
  * This expects either songSetName OR songName to be a string
  * while the other is ''. 
  * It prints either an entire song-set or just one song.
  * @param {string} songSetName 
  * @param {string} songName 
  */
-function printSongs(songSetName, songName) {
+function onPrintSongs(event) {
+  const nav = getNavState();
+  setSongSetError('');
+
   // save the body html to restore later
-  console.assert(!!songSetName == !songName);
   const htmlBodySaved = document.body.innerHTML;
 
   let htmlPrint = '';
   let iPrintPage = 0;
 
-  if (songSetName) {
-    const aSongsInSet = songLibrary.oSongSets[songSetName]
-    aSongsInSet.forEach(
+  if (nav.mode == 'songSet') {
+    nav.aSongsInSet.forEach(
       function(songName, iSongInSet) {
         const oHtmlPrint = { htmlPrint: htmlPrint };
         iPrintPage = prepPrint(
@@ -1759,7 +1742,7 @@ function printSongs(songSetName, songName) {
           iSongInSet, 
           iPrintPage, 
           oHtmlPrint, // so we pass by reference
-          aSongsInSet.length);
+          nav.cSongsInSet);
         htmlPrint = oHtmlPrint.htmlPrint;
       }
     );
@@ -1767,7 +1750,7 @@ function printSongs(songSetName, songName) {
     ge('divPrintSongError').innerText = '';
     const oHtmlPrint = { htmlPrint: htmlPrint };
     iPrintPage = prepPrint(
-      songName, 
+      nav.songName, 
       -1, 
       iPrintPage,
       oHtmlPrint, 
@@ -1793,11 +1776,12 @@ function prepPrint(
   cSongsInSet) {
 
   setNavSongUI(songName);
+  const nav = getNavState();
   // pull our invisible print template out of the body.
   const htmlTemplate = ge('divPrintArea').innerHTML;
 
   // reference songData with a nice short name
-  const sd = songLibrary.oSongs[songName];
+  const sd = nav.songData;
 
   // build htmlPageTemplate which has all the values common to all print pages
   let htmlPageTemplate = htmlTemplate.
@@ -1806,37 +1790,34 @@ function prepPrint(
     replace(/%Notes%/, sd.Notes).
     replace(/%License%/, sd.License);
 
-  if (iSongInSet == -1) {
+  if (nav.mode == 'song') {
     htmlPageTemplate = htmlPageTemplate.
       replace(/%songName%/, songName);
-  } else {
+  } else if (nav.mode == 'songSet') {
     htmlPageTemplate = htmlPageTemplate.
       replace(/%songName%/, `${songName} (Song ${iSongInSet + 1} of ${cSongsInSet})`);
+  } else {
+    // review mode TODO
   }
-
-  // calculate all song pages in order that will print
-  const aPageNamesUnwound = getUnwoundPages(sd);
 
   // start with the first print page
   let printPageNumber = 1;
 
   let htmlPage = htmlPageTemplate;
 
-  for (let iSongPageUnwound = 0; iSongPageUnwound < aPageNamesUnwound.length; iSongPageUnwound++) {
-    const nSongThisPage = (iSongPageUnwound % 8) + 1; // 1 based index
-    const pageName = aPageNamesUnwound[iSongPageUnwound];
+  for (let iPageInSong = 0; iPageInSong < nav.cPagesInSong; iPageInSong++) {
+    const nSongThisPage = (iPageInSong % 8) + 1; // 1 based index
+    const pageName = nav.aPagesInSong[iPageInSong];
     const pageLines = sd.oPages[pageName];
     const rxPageNameKey = new RegExp(`%pageName-${nSongThisPage}%`, 'g');
     const rxPageLinesKey = new RegExp(`%pageLines-${nSongThisPage}%`, 'g');
 
     // fill in each song page's data
     htmlPage = htmlPage.
-      replace(rxPageNameKey, `Page ${iSongPageUnwound + 1}) ${pageName}:`).
+      replace(rxPageNameKey, `Page ${iPageInSong + 1}) ${pageName}:`).
       replace(rxPageLinesKey, pageLines.join('\n<br>\n'));
 
-    // console.log(`Printing page "${pageName}" on print page ${printPageNumber}: nSongThisPage=${nSongThisPage}`)
-
-    if (nSongThisPage == 8 || iSongPageUnwound == aPageNamesUnwound.length - 1) {
+    if (nSongThisPage == 8 || iPageInSong == nav.cPagesInSong - 1) {
       // We have completed all 8 (or the last) page of the song pages on this print page.
       // Go on to the next print page.
       oHtmlPrint.htmlPrint += htmlPage.
