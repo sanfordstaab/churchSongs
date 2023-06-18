@@ -205,7 +205,7 @@ var songLibrary =
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": "4",
+      "RepeatCount": 4,
       "Notes": "#176 Maranatha Song Book",
       "Author": "",
       "Publisher": "",
@@ -684,7 +684,7 @@ var songLibrary =
       ],
       "Author": "Andre Crouch",
       "Notes": "Psalm 103:1, #114 Maranatha Mudiv Praise Chorus Book 1990",
-      "RepeatCount": "2",
+      "RepeatCount": 2,
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
@@ -1527,7 +1527,7 @@ var songLibrary =
         "Verse 3",
         "Verse 4"
       ],
-      "RepeatCount": "2",
+      "RepeatCount": 2,
       "Notes": "#85 Maranatha Praise Chorus Book 1990, Psalm 118:24",
       "Author": "Les Garrett",
       "Publisher": "Scripture In Song (C) 1980",
@@ -1590,7 +1590,7 @@ var songLibrary =
         "Chorus B",
         "Verse 5"
       ],
-      "RepeatCount": "2",
+      "RepeatCount": 2,
       "Notes": "#98 Maranatha Praise Chorus Book 1990, Isaiah 24:14",
       "Author": "Jack Hayford",
       "Publisher": "Rocksmith Music (C) 1981",
@@ -1636,7 +1636,7 @@ var songLibrary =
         "Verse 2",
         "Verse 2"
       ],
-      "RepeatCount": "2",
+      "RepeatCount": 2,
       "Notes": "#69 Maranatha Praise Chorus Book 1990",
       "Author": "Pete Sanchez. Jr.",
       "Publisher": "Pete Sanchez, Jr.",
