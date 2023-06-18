@@ -502,7 +502,7 @@ var songLibrary =
         ],
         "Verse 4": [
           "The Lord has promised good to me",
-          "His Word my hope secure.",
+          "His Word my hope secures.",
           "He will my shield and portion be",
           "As long as life endures."
         ],
@@ -684,7 +684,7 @@ var songLibrary =
       ],
       "Author": "Andre Crouch",
       "Notes": "Psalm 103:1, #114 Maranatha Mudiv Praise Chorus Book 1990",
-      "RepeatCount": 2,
+      "RepeatCount": 1,
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
@@ -1610,6 +1610,12 @@ var songLibrary =
         },
         "Verse 5": {
           "spaceAbove": 0
+        },
+        "Chorus A": {
+          "spaceAbove": 0
+        },
+        "Chorus B": {
+          "spaceAbove": 0
         }
       },
       "fontSize": 0.05,
@@ -1621,7 +1627,7 @@ var songLibrary =
         "Verse 1": [
           "For Thou, O Lord,",
           "art high above all the earth;",
-          "Thou are exalted far above all gods."
+          "Thou art exalted far above all gods."
         ],
         "Verse 2": [
           "I exalt Thee,",
@@ -2070,13 +2076,13 @@ var songLibrary =
       },
       "aPageOrder": [
         "Verse 1a",
-        "Verse 4b",
-        "Verse 4a",
-        "Verse 3b",
-        "Verse 3a",
-        "Verse 2b",
+        "Verse 1b",
         "Verse 2a",
-        "Verse 1b"
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
       ],
       "RepeatCount": 1,
       "TagPage": "",
