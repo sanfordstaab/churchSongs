@@ -106,6 +106,7 @@ function getNavState() {
 
   } else if (ge('chkNavSongMode').checked) {
     nav.mode = 'song';
+    nav.songSetName = '';
     nav.songName = ge('selNavSongs').value;
     if (!nav.songName) {
       // no song selected, switch to review mode
@@ -117,7 +118,7 @@ function getNavState() {
   } else if (ge('rdoReviewMode').checked) {
     nav.mode = 'review';
     nav.iPageInReview = g.nav.iPageInReview;
-    aSongPagePairs = getSongPagePairs();
+    let aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = aSongPagePairs.length;
     nav.aSongPagePairs = aSongPagePairs;
     nav.songName = aSongPagePairs[g.nav.iPageInReview][0];
@@ -148,9 +149,10 @@ function addNavSongState(nav) {
   }
   nav.cPagesInSong = aPagesInSong.length;
   nav.pageName = aPagesInSong[nav.iPageInSong];
-  // nav.aPagesInSong = aPagesInSong;
+  nav.aPagesInSong = aPagesInSong;
   console.assert(nav.iPageInSong < nav.cPagesInSong);
   nav.fInReview = false;
+  nav.fBlankScreen = g.nav.fBlankScreen;
 
   return nav;
 }
@@ -191,7 +193,7 @@ function onShowSongOrSongset() {
   } else {
     setNavSongSet(ge('selNavSongSets').value);
   }
-  renderNavPage();
+  renderNavSection();
 }
 
 function onModeChanged(event) {
@@ -209,7 +211,7 @@ function onModeChanged(event) {
     'btnNextReviewPage',
     'btnNextReviewSong'
     ], nav.fInReview);
-  renderNavPage();
+  renderNavSection();
 }
 
 function renderNavStateText() {
@@ -255,7 +257,7 @@ function renderNavStateText() {
     html += `[${iUniquePageInSong} of ${cUniquePagesInSong}] in this song`;
   } else {
     html += `Page: "${pageName}"`;
-    html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'}) [${nav.iPageInSong + 1} of ${nav.cPagesInSongInSong}]`;
+    html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'}) [${nav.iPageInSong + 1} of ${nav.cPagesInSong}]`;
   }
   html == '<br>'
 
@@ -360,12 +362,17 @@ function setNavSongSet(songSetName) {
 
 function setNavSongInSet(iSongInSet) {
   g.nav.iSongInSet = iSongInSet;
+  g.nav.iPageInSong = 0;
+  // always start with a blank screen
+  blankScreen();  
+  setNavSongPage(0);
 }
 
 function setNavSongUI(songName) {
   ge('selNavSongs').value = songName; 
-  setNavSongPage(0);
+  // always start with a blank screen
   blankScreen();
+  setNavSongPage(0);
 }
 
 function calcSongPageCount(songData) {
@@ -378,7 +385,7 @@ function calcSongPageCount(songData) {
 
 function setNavSongPage(iPageInSong) {
   const nav = getNavState();
-  if (iPageInSong < 0 || iPageInSong >= nav.cPagesInSongInSong) {
+  if (iPageInSong < 0 || iPageInSong >= nav.cPagesInSong) {
     return true;  // off the end
   }
   g.nav.iPageInSong = iPageInSong;
@@ -414,10 +421,10 @@ function enableNavButtons() {
     enableElement('btnNextReviewPage', nav.iPageInReview < nav.cPagesInReview - 1);
     enableElement('btnNextReviewSong', !isReviewingLastSong())
   } else {
-    enableElement('btnPrevSong', g.iSongInSet > 0);
-    enableElement('btnNextSong', g.iSongInSet < nav.cSongsInSet - 1);
+    enableElement('btnPrevSong', nav.iSongInSet > 0);
+    enableElement('btnNextSong', nav.iSongInSet < nav.cSongsInSet - 1);
     enableElement('btnNavPrevPage', nav.iPageInSong > 0);
-    enableElement('btnNextPage', nav.iPageInSong < nav.cPagesInSongInSong - 1);
+    enableElement('btnNextPage', nav.iPageInSong < nav.cPagesInSong - 1);
   }
   show('btnPrevReviewSong', nav.fInReview);
   show('btnPrevSong', !nav.fInReview);
@@ -470,8 +477,7 @@ function blankScreen(event) {
   renderNavPagePreview();
 }
 
-function renderNavPage() {
-  g.nav.fBlankScreen = false;
+function renderNavSection() {
   const oMsg = getMessageFromGlobals();
   localStorage.setItem('projector-message', JSON.stringify(oMsg));
   localStorage.clear();
@@ -502,13 +508,8 @@ function renderNavPagePreview() {
 }
 
 function toggleBlankScreen(event) {
-  const nav = getNavState();
-  console.assert(!nav.fInReview);
-  if (g.nav.fBlankScreen) {
-    renderNavPage();
-  } else {
-    blankScreen();
-  }
+  g.nav.fBlankScreen = !g.nav.fBlankScreen;
+  renderNavSection();
 }
 
 function prevPage(event) {
@@ -517,21 +518,21 @@ function prevPage(event) {
   if (g.nav.iPageInSong > 0) {
     g.nav.iPageInSong--;
     setNavSongPage(g.nav.iPageInSong);
-    renderNavPage();    
+    renderNavSection();    
   }
 }
 
 function nextPage(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  if (nav.iPageInSong < nav.cPagesInSongInSong - 1) {
+  if (nav.iPageInSong < nav.cPagesInSong - 1) {
     // show the first page if hidden, else move to the next page
     if (nav.iPageInSong == 0 && g.nav.fBlankScreen) {
       g.nav.fBlankScreen = false;
     } else {
       setNavSongPage(nav.iPageInSong + 1);
     }
-    renderNavPage();
+    renderNavSection();
   }
 }
 
@@ -558,7 +559,7 @@ function nextReviewPage() {
   }
   console.assert(nav.iPageInReview < aSongPagePairs.length - 1);
   g.nav.iPageInReview++;
-  renderNavPage();
+  renderNavSection();
 }
 
 function isReviewingFirstSong() {
@@ -586,9 +587,9 @@ function prevReviewPage() {
 function prevSong(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  if (g.iSongInSet > 0) {
-    g.iSongInSet--;
-    setNavSongInSet(g.iSongInSet);
+  if (nav.iSongInSet > 0) {
+    nav.iSongInSet--;
+    setNavSongInSet(nav.iSongInSet);
     setNavSongPage(0);
     renderNavStateText();
     enableNavButtons();
@@ -617,7 +618,7 @@ function prevReviewSong(event) {
     nav.iPageInReview++;
   }
   g.nav.iPageInReview = nav.iPageInReview;
-  renderNavPage();
+  renderNavSection();
 }
 
 function getMessageFromGlobals() {
@@ -646,15 +647,15 @@ function getMessageFromGlobals() {
       fontSize: nav.songData.fontSize,
       fontBoldness: nav.songData.fontBoldness,
       lineHeight: nav.songData.lineHeight,
-      content: nav.songData.oPages[nav.pageName],
+      content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName],
       allCaps: songLibrary.defaults.allCaps,
       spaceAbove: nav.songData.oPageData[nav.pageName].spaceAbove, // em
       license: nav.songData.License,
       pageNumber: nav.iPageInSong + 1,
-      lastPage: nav.iPageInSong == nav.cPagesInSongInSong - 1 ? true : false,
-      songNumber: g.iSongInSet + 1,
-      fLastSongInSet: 
-        getCountOfSongsInSongSet(nav.songSetName) - 1 == g.iSongInSet
+      lastPage: nav.iPageInSong == nav.cPagesInSong - 1 ? true : false,
+      songNumber: nav.iSongInSet + 1,
+      fLastSongInSet: nav.mode == 'song' ? 0 : 
+        getCountOfSongsInSongSet(nav.songSetName) - 1 == nav.iSongInSet
     }
   }
   return oMsg;
@@ -663,9 +664,9 @@ function getMessageFromGlobals() {
 function nextSong(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  if (g.iSongInSet < getCountOfSongsInSongSet(nav.songSetName) - 1) {
-    g.iSongInSet++;
-    setNavSongInSet(g.iSongInSet);
+  if (nav.iSongInSet < getCountOfSongsInSongSet(nav.songSetName) - 1) {
+    nav.iSongInSet++;
+    setNavSongInSet(nav.iSongInSet);
     renderNavStateText();
     enableNavButtons();
     blankScreen();  
@@ -681,7 +682,7 @@ function nextReviewSong(event) {
          aSongPagePairs[nav.iPageInReview][0] == currentSongName) {
     nav.iPageInReview++;
   }
-  renderNavPage();
+  renderNavSection();
 }
 
 // Projector formatting
@@ -689,39 +690,39 @@ function nextReviewSong(event) {
 // General formatting
 function onAllCapsChanged(event) {
   songLibrary.defaults.allCaps = event.srcElement.checked ? 1 : 0;
-  renderNavPage();
+  renderNavSection();
 }
 
 // Song formatting
 function biggerFont(event) {
   const nav = getNavState();
   nav.songData.fontSize = fixit(nav.songData.fontSize * 1.1, 3)
-  renderNavPage();
+  renderNavSection();
 }
 
 function smallerFont(event) {
   const nav = getNavState();
   nav.songData.fontSize = fixit(nav.songData.fontSize * .9, 3);
-  renderNavPage();
+  renderNavSection();
 }
 
 function biggerLineHeight(event) {
   const nav = getNavState();
   nav.songData.lineHeight = fixit(nav.songData.lineHeight * 1.05, 3)
-  renderNavPage();
+  renderNavSection();
 }
 
 function smallerLineHeight(event) {
   const nav = getNavState();
   nav.songData.lineHeight = fixit(nav.songData.lineHeight * .95, 3)
-  renderNavPage();
+  renderNavSection();
 }
 
 function bolderFont(event) {
   const nav = getNavState();
   if (nav.songData.fontBoldness < 9) {
     nav.songData.fontBoldness++;
-    renderNavPage();
+    renderNavSection();
   }
 }
 
@@ -729,7 +730,7 @@ function lessBoldFont(event) {
   const nav = getNavState();
   if (nav.songData.fontBoldness > 1) {
     nav.songData.fontBoldness--;
-    renderNavPage();
+    renderNavSection();
   }
 }
 
@@ -738,7 +739,7 @@ function moveTextDown(event) {
   const nav = getNavState();
   nav.songData.oPageData[nav.pageName].spaceAbove =
     Number(nav.songData.oPageData[nav.pageName].spaceAbove) + .25; // em
-  renderNavPage();
+  renderNavSection();
 }
 
 function moveTextUp(event) {
@@ -749,7 +750,7 @@ function moveTextUp(event) {
     newSpace = 0;
   }
   nav.songData.oPageData[nav.pageName].spaceAbove = newSpace;
-  renderNavPage();
+  renderNavSection();
 }
 
 // song set editing
@@ -1027,7 +1028,6 @@ async function deleteSongFromSongSet(event) {
 
 function initSongEditUI() {
   setNewSongEditError('');
-  ge('chkEditExistingSong').checked = true;
   fillSongToEdit();
 }
 
@@ -1063,7 +1063,7 @@ function fillSongToEdit(event) {
 
 function onRepeatCountChanged(event) {
   const ses = getSongEditState();
-  ses.songData.RepeatCount = ge('selRepeatCount').value;
+  ses.songData.RepeatCount = Number(ge('selRepeatCount').value);
   renderOverallOrderText();
 }
 
@@ -1097,7 +1097,6 @@ function setNewSongEditError(text) {
 }
 
 function onNewSongNameChanged(event) {
-  ge('chkEditNewSong').checked = true;
   clearSongUI();
   enableSongEditButtons();
 }
@@ -1112,7 +1111,7 @@ async function onNewSongFilterChanged(event) {
 
 function getSongEditState() {
   const ses = {};
-  ses.fExistingSong = ge('chkEditExistingSong').checked ? 1 : 0;
+  ses.fExistingSong = ge('selAllSongsToEdit').value ? 1 : 0;
   ses.selectedSongToEdit = ge('selAllSongsToEdit').value;
   ses.newSongEditName = ge('txtNewSongName').value.trim();
   if (ses.selectedSongToEdit) {
@@ -1150,9 +1149,9 @@ function enableSongEditButtons() {
   enableElement('fsOtherSongSettings', ses.fExistingSong);
 
   // New song edit buttons
-  const fSongNameAlreadyExists = 
+  const fNewSongNameAlreadyExists = 
     doesProposedEditSongNameExist(ses.newSongEditName);
-  if (fSongNameAlreadyExists) {
+  if (fNewSongNameAlreadyExists) {
     // tell user this song name already exists
     // which means we can't rename it or create a new song.
     show('spnNoSongsToEdit');
@@ -1163,14 +1162,14 @@ function enableSongEditButtons() {
   enableElement('btnCreateNewSong', 
     !ses.fExistingSong && 
     ses.newSongEditName &&
-    !fSongNameAlreadyExists &&
+    !fNewSongNameAlreadyExists &&
     ses.newSongEditName != ses.selectedSongToEdit
   );
 
   enableElement('btnRenameSong',
-    !ses.fExistingSong && 
+    ses.fExistingSong && 
     ses.newSongEditName &&
-    fSongNameAlreadyExists &&
+    !fNewSongNameAlreadyExists &&
     ses.newSongEditName != ses.selectedSongToEdit);
 
   enableElement('btnDeleteSong', 
@@ -1195,7 +1194,6 @@ async function createEmptySong(event) {
     RepeatCount: 1
   };
   reRenderAllSongSelectControls();
-  ge('chkEditExistingSong').checked = true;
   ge('txtEditSongFilter').value = '';
   ge('txtNewSongName').value = '';
   onNewSongFilterChanged();
@@ -1227,20 +1225,20 @@ async function renameSong(event) {
   if (newSongName != oldSongName) {
     songLibrary.oSongs[newSongName] = songLibrary.oSongs[oldSongName];
     delete songLibrary.oSongs[oldSongName];
-    ge('chkEditExistingSong').checked = true;
-    
+
     // fix any song sets that reference the renamed song
     Object.entries(songLibrary.oSongSets).forEach(
       function (aKVSongSet) {
         aKVSongSet[1].forEach(
           function (songName, iSongInSet) {
             if (songName == oldSongName) {
+              aKVSongSet[1][iSongInSet] = newSongName;
             }
-            aKVSongSet[1][iSongInSet] = newSongName;
           }
         )
       }
     )
+
     reRenderAllSongSelectControls(oldSongName, newSongName);
     fillSongToEdit();
   }
@@ -1506,6 +1504,7 @@ function deleteVerseOrderVerse(event) {
 
 function onSearchAll(event) {
   ge('chkSearchInSongSetNames').checked = 'checked';
+  ge('chkSearchInSongSetSongNames').checked = 'checked';
   ge('chkSearchInSongNames').checked = 'checked';
   ge('chkSearchLyrics').checked = 'checked';
   ge('chkSearchNotes').checked = 'checked';
@@ -1517,6 +1516,7 @@ function onSearchAll(event) {
 
 function onSearchNone(event) {
   ge('chkSearchInSongSetNames').checked = '';
+  ge('chkSearchInSongSetSongNames').checked = '';
   ge('chkSearchInSongNames').checked = '';
   ge('chkSearchLyrics').checked = '';
   ge('chkSearchNotes').checked = '';
@@ -1552,6 +1552,31 @@ function onSearchInChanged(event) {
         results += resultPart;
       }
     }
+
+    if (ge('chkSearchInSongSetSongNames').checked) {
+      resultPart = 'In Song Set Song Names:\n';
+      fResultFound = false;
+      getAllSongSetNames().forEach(
+        function(songSetName) {
+          let thisResultPart = '';
+          songLibrary.oSongSets[songSetName].forEach(
+            function(songName) {
+              if (areAllTokensInText(aSearchTokens, songName)) {
+                thisResultPart += `    ${songName}\n`;
+                fResultFound = true;
+              }
+            }
+          );
+          if (thisResultPart) {
+            resultPart += `  ${songSetName}\n` + thisResultPart;
+          }
+        }
+      );
+      if (fResultFound) {
+        results += resultPart;
+      } 
+    }
+
     if (ge('chkSearchInSongNames').checked) {
       resultPart = 'In Song Names:\n';
       fResultFound = false;
@@ -1567,6 +1592,7 @@ function onSearchInChanged(event) {
         results += resultPart;
       }
     }
+
     if (ge('chkSearchLyrics').checked) {
       resultPart = 'In Song Lyrics:\n';
       fResultFound = false;
@@ -1716,42 +1742,24 @@ async function importLibrary(event) {
 // printing
 
 /**
- * The event triggered when the user wants to print a song or
- * a song-set.
- * @param {object} event 
- */
-function onPrintSongs(event) {
-  setSongSetError('');
-
-  let songSetName = '';
-  let songName = '';
-  if (ge('chkNavSongSetMode').checked) {
-    songSetName = ge('selNavSongSets').value;
-  } else {
-    songName = ge('selNavSongs').value;
-  }
-
-  printSongs(songSetName, songName);
-}
-
-/**
  * This expects either songSetName OR songName to be a string
  * while the other is ''. 
  * It prints either an entire song-set or just one song.
  * @param {string} songSetName 
  * @param {string} songName 
  */
-function printSongs(songSetName, songName) {
+function onPrintSongs(event) {
+  const nav = getNavState();
+  setSongSetError('');
+
   // save the body html to restore later
-  console.assert(!!songSetName == !songName);
   const htmlBodySaved = document.body.innerHTML;
 
   let htmlPrint = '';
   let iPrintPage = 0;
 
-  if (songSetName) {
-    const aSongsInSet = songLibrary.oSongSets[songSetName]
-    aSongsInSet.forEach(
+  if (nav.mode == 'songSet') {
+    nav.aSongsInSet.forEach(
       function(songName, iSongInSet) {
         const oHtmlPrint = { htmlPrint: htmlPrint };
         iPrintPage = prepPrint(
@@ -1759,7 +1767,7 @@ function printSongs(songSetName, songName) {
           iSongInSet, 
           iPrintPage, 
           oHtmlPrint, // so we pass by reference
-          aSongsInSet.length);
+          nav.cSongsInSet);
         htmlPrint = oHtmlPrint.htmlPrint;
       }
     );
@@ -1767,7 +1775,7 @@ function printSongs(songSetName, songName) {
     ge('divPrintSongError').innerText = '';
     const oHtmlPrint = { htmlPrint: htmlPrint };
     iPrintPage = prepPrint(
-      songName, 
+      nav.songName, 
       -1, 
       iPrintPage,
       oHtmlPrint, 
@@ -1793,11 +1801,12 @@ function prepPrint(
   cSongsInSet) {
 
   setNavSongUI(songName);
+  const nav = getNavState();
   // pull our invisible print template out of the body.
   const htmlTemplate = ge('divPrintArea').innerHTML;
 
   // reference songData with a nice short name
-  const sd = songLibrary.oSongs[songName];
+  const sd = nav.songData;
 
   // build htmlPageTemplate which has all the values common to all print pages
   let htmlPageTemplate = htmlTemplate.
@@ -1806,37 +1815,34 @@ function prepPrint(
     replace(/%Notes%/, sd.Notes).
     replace(/%License%/, sd.License);
 
-  if (iSongInSet == -1) {
+  if (nav.mode == 'song') {
     htmlPageTemplate = htmlPageTemplate.
       replace(/%songName%/, songName);
-  } else {
+  } else if (nav.mode == 'songSet') {
     htmlPageTemplate = htmlPageTemplate.
       replace(/%songName%/, `${songName} (Song ${iSongInSet + 1} of ${cSongsInSet})`);
+  } else {
+    // review mode TODO
   }
-
-  // calculate all song pages in order that will print
-  const aPageNamesUnwound = getUnwoundPages(sd);
 
   // start with the first print page
   let printPageNumber = 1;
 
   let htmlPage = htmlPageTemplate;
 
-  for (let iSongPageUnwound = 0; iSongPageUnwound < aPageNamesUnwound.length; iSongPageUnwound++) {
-    const nSongThisPage = (iSongPageUnwound % 8) + 1; // 1 based index
-    const pageName = aPageNamesUnwound[iSongPageUnwound];
+  for (let iPageInSong = 0; iPageInSong < nav.cPagesInSong; iPageInSong++) {
+    const nSongThisPage = (iPageInSong % 8) + 1; // 1 based index
+    const pageName = nav.aPagesInSong[iPageInSong];
     const pageLines = sd.oPages[pageName];
     const rxPageNameKey = new RegExp(`%pageName-${nSongThisPage}%`, 'g');
     const rxPageLinesKey = new RegExp(`%pageLines-${nSongThisPage}%`, 'g');
 
     // fill in each song page's data
     htmlPage = htmlPage.
-      replace(rxPageNameKey, `Page ${iSongPageUnwound + 1}) ${pageName}:`).
+      replace(rxPageNameKey, `Page ${iPageInSong + 1}) ${pageName}:`).
       replace(rxPageLinesKey, pageLines.join('\n<br>\n'));
 
-    // console.log(`Printing page "${pageName}" on print page ${printPageNumber}: nSongThisPage=${nSongThisPage}`)
-
-    if (nSongThisPage == 8 || iSongPageUnwound == aPageNamesUnwound.length - 1) {
+    if (nSongThisPage == 8 || iPageInSong == nav.cPagesInSong - 1) {
       // We have completed all 8 (or the last) page of the song pages on this print page.
       // Go on to the next print page.
       oHtmlPrint.htmlPrint += htmlPage.
@@ -1942,12 +1948,20 @@ function renderSongDropDown(
 
 // general utilities
 
+function lcSort(a, b) {
+  a = a.toLocaleLowerCase();
+  b = b.toLocaleLowerCase();
+  if (a > b) return 1;
+  if (a < b) return -1;
+  return 0;
+}
+
 function getAllSongSetNames() {
-  return Object.keys(songLibrary.oSongSets).sort();
+  return Object.keys(songLibrary.oSongSets).sort(lcSort);
 }
 
 function getAllSongNames() {
-  return Object.keys(songLibrary.oSongs).sort();
+  return Object.keys(songLibrary.oSongs).sort(lcSort);
 }
 
 function getAllSongEntries() {
