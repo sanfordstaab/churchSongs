@@ -114,18 +114,20 @@ function renderPageToHost(elHost, oMsg, width, height) {
     }
     html = tmpl.replace('%spaceAbove%', oMsg.spaceAbove + 'em');
     console.assert(undefined != oMsg.pageNumber);
-    console.assert(undefined != oMsg.songNumber);
+    if (!oMsg.songNumber) {
+      oMsg.songNumber = '';
+    }
     console.assert(undefined != oMsg.license);
     elHost.style = style;
     elHost.classList.add('proj-host');
 
     html = html.replace('%content%', oMsg.content.join('<br>')).
     replace('%lineHeight%', oMsg.lineHeight * height).
-    replace('%pageNumber%', oMsg.pageNumber).
-    replace('%songNumber%', ' / ' + oMsg.songNumber).
+    replace('%pageNumber%', ' p' + oMsg.pageNumber).
+    replace('%songNumber%', ' s' + oMsg.songNumber).
     replace('%license%', oMsg.license).
-    replace('%pageNumbClass%', oMsg.lastPage ? 'redText' : '').
-    replace('%songNumbClass%', oMsg.fLastSongInSet ? 'redText' : '');
+    replace('%pageNumbClass%', 'grayText smaller italic lc' + (oMsg.lastPage ? ' redText' : '')).
+    replace('%songNumbClass%', 'grayText smaller italic lc' + (oMsg.fLastSongInSet ? ' redText' : ''));
 
   } else { // blank page
 

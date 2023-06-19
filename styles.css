@@ -73,6 +73,10 @@ fieldset {
   color: red;
 }
 
+.grayText {
+  color: gray;
+}
+
 .greenText {
   color: green;
 }
@@ -133,6 +137,14 @@ fieldset {
 
 .larger {
   font-size: large;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.lc {
+  text-transform: lowercase;
 }
 
 .formTable {
