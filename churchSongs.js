@@ -227,7 +227,7 @@ function renderNavStateText() {
   } else {
     html += `Projecting Song: <u>${nav.songName}</u>`;
     if (ge('chkNavSongSetMode').checked) {
-      html += ` (${nav.iSongInSet + 1} of ${getCountOfSongsInSongSet(nav.songSetName)} songs)`;
+      html += `<br>(song: ${progressBar(nav.iSongInSet + 1, getCountOfSongsInSongSet(nav.songSetName))})`;
     }
   }
 
@@ -254,10 +254,11 @@ function renderNavStateText() {
         return songPageName == pageName;
       }
     ) + 1;
-    html += `[${iUniquePageInSong} of ${cUniquePagesInSong}] in this song`;
+    html += `[${progressBar(iUniquePageInSong, cUniquePagesInSong)}] in this song`;
   } else {
     html += `Page: "${pageName}"`;
-    html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'}) [${nav.iPageInSong + 1} of ${nav.cPagesInSong}]`;
+    html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
+    html += `<br>(page ${progressBar(nav.iPageInSong + 1, nav.cPagesInSong)})`;
   }
   html == '<br>'
 
@@ -2114,4 +2115,13 @@ async function delay(timeInMilliseconds) {
           }
       }
   );
+}
+
+function progressBar(nHere, nTotal) {
+  console.assert(nHere <= nTotal);
+  let str = '';
+  for (let i = 1; i <= nTotal; i++) {
+    str += i == nHere ? nHere : '-';
+  }
+  return str;
 }
