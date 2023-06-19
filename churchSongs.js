@@ -1225,19 +1225,20 @@ async function renameSong(event) {
   if (newSongName != oldSongName) {
     songLibrary.oSongs[newSongName] = songLibrary.oSongs[oldSongName];
     delete songLibrary.oSongs[oldSongName];
-    
+
     // fix any song sets that reference the renamed song
     Object.entries(songLibrary.oSongSets).forEach(
       function (aKVSongSet) {
         aKVSongSet[1].forEach(
           function (songName, iSongInSet) {
             if (songName == oldSongName) {
+              aKVSongSet[1][iSongInSet] = newSongName;
             }
-            aKVSongSet[1][iSongInSet] = newSongName;
           }
         )
       }
     )
+
     reRenderAllSongSelectControls(oldSongName, newSongName);
     fillSongToEdit();
   }
@@ -1947,12 +1948,20 @@ function renderSongDropDown(
 
 // general utilities
 
+function lcSort(a, b) {
+  a = a.toLocaleLowerCase();
+  b = b.toLocaleLowerCase();
+  if (a > b) return 1;
+  if (a < b) return -1;
+  return 0;
+}
+
 function getAllSongSetNames() {
-  return Object.keys(songLibrary.oSongSets).sort();
+  return Object.keys(songLibrary.oSongSets).sort(lcSort);
 }
 
 function getAllSongNames() {
-  return Object.keys(songLibrary.oSongs).sort();
+  return Object.keys(songLibrary.oSongs).sort(lcSort);
 }
 
 function getAllSongEntries() {
