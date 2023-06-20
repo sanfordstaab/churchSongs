@@ -376,7 +376,9 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                     </table>
                   </center>
 
-                  <fieldset  id="fsKeyNavInstructions" class="bgWhite m0 keyNavInstructions">
+                  <fieldset  id="fsKeyNavInstructions" 
+                    class="bgWhite m0 keyNavInstructions"
+                    onclick="ge('fsKeyNavInstructions').outerHTML = ''">
                     <p 
                       class="smallest m0"
                       onclick="ge('tdPagePreview').focus();"
@@ -417,7 +419,6 @@ Spacebar=Toggle Blank Screen state"
                 <td id="tdPagePreview"
                   tabindex="13"
                   onkeydown="onPreviewKey(event);"
-                  onfocus="hide('fsKeyNavInstructions');"
                 >
                   <!-- filled in by renderNavPagePreview() -->
                 </td>
