@@ -349,11 +349,27 @@ function calcSongPageCount(songData) {
 
 function setNavPage(iPage) {
   const nav = getNavState();
-  if (iPageInSong < 0 || iPageInSong >= nav.cPagesInSong) {
-    g.nav.iPageInSong = 0;
-    return true;  // off the end
+  if (nav.fInReview) {
+    if (iPage < 0 || iPage >= nav.cPagesInReview) {
+      iPage = 0;
+      g.nav.iPageInSong = iPage;
+      return;
+    }
+  } else {
+    if (iPage < 0 || iPage >= nav.cPagesInSong) {
+      iPage = 0;
+      g.nav.iPageInSong = 0;
+      if (iPage >= nav.cPagesInSong) {
+        if (nav.mode == 'songSet') {
+          setNavSongSetSongIndex(nav.iSongInSet + 1);
+        }
+      }
+    } else {
+      g.nav.fBlankScreen = false;
+      g.nav.iPageInSong = iPage;
+    }
+    renderNavSection();
   }
-  g.nav.iPageInSong = iPageInSong;
 }
 
 function renderSelectControl(
@@ -472,16 +488,43 @@ function toggleBlankScreen(event) {
 }
 
 function prevPage(event) {
-  const nav = getNavState();
-  console.assert(!nav.fInReview);
-  if (g.nav.iPageInSong > 0) {
-    g.nav.iPageInSong--;
-    setNavSongPage(g.nav.iPageInSong);
-    renderNavSection();    
+  if (getNavState().fInReview) {
+    prevReviewPage();
+  } else {
+    prevSongPage();
   }
+  renderNavSection();
 }
 
-function nextPage(event) {
+function prevSongPage() {
+  console.assert(!g.nav.fInReview);
+  if (g.nav.iPageInSong > 0) {
+    g.nav.iPageInSong--;
+  } else {
+    console.assert(g.nav.iSongInSet > 0);
+    g.nav.iSongInSet--;
+  }
+  renderNavSection();
+}
+
+function prevReviewPage() {
+  const nav = getNavState();
+  console.assert(nav.fInReview);
+  console.assert(nav.iPageInReview > 0);
+  nav.iPageInReview -= 2;
+  nextReviewPage();
+}
+
+function nextPage() {
+  if (getNavState().fInReview) {
+    nextReviewPage();
+  } else {
+    nextSongPage();
+  }
+  renderNavSection();
+}
+
+function nextSongPage(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
   if (nav.iPageInSong < nav.cPagesInSong - 1) {
