@@ -121,9 +121,11 @@ function getNavState() {
     nav.aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = nav.aSongPagePairs.length;
     nav.songName = nav.aSongPagePairs[g.nav.iPageInReview][0];
-    nav.cUniquePagesInSong = Object.keys(songLibrary.oSongs[nav.songName].oPages).length;
     nav.iUniquePageInSong = getIndexOfPageInCurrentSongInReview(
-        nav.songName, nav.aSongPagePairs, nav.iPageInReview);
+      nav.songName, nav.aSongPagePairs, nav.iPageInReview);
+    nav.cUniquePagesInSong = Object.keys(songLibrary.oSongs[nav.songName].oPages).length;
+    nav.iSongInReview = getAllSongNames().indexOf(nav.songName);
+    nav.cSongsInReview = getAllSongNames().length;
     nav = addNavSongState(nav);
     nav.fInReview = true;
 
@@ -225,38 +227,42 @@ function renderNavStateText() {
   }
 
   let songPos = '';
+  let cSongs = 0;
   let pagePos = '';
   let cPages = 0;
+  let sTotalPages = '';
   if (nav.fInReview) {
     html += `Reviewing: Song: <u>${getSongPagePairs()[nav.iPageInReview][0]}</u>`;
+    cSongs = nav.cSongsInReview;
+    songPos = `${progressBar(nav.iSongInReview + 1, nav.cSongsInReview)}`
   } else {
     html += `Projecting Song: <u>${nav.songName}</u>`;
     if (fIsSongSetMode) {
+      cSongs = nav.cSongsInSet;
       songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet)} of ${nav.cSongsInSet}`;
     }
   }
 
   html += '<br>';
-
-  let pageName = 
+  if (nav.fInReview) {
+    pageName = nav.aSongPagePairs[nav.iPageInReview][1];
+    html += `Page: "${pageName}"`;
+    cPages = nav.cUniquePagesInSong;
+    pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
+    sTotalPages = ` of ${nav.cPagesInReview} review pages.`
+  } else {
+    let pageName = 
     (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 
     ?
     nav.songData.TagPage + ' {Tag}'
     :
     nav.pageName;
-
-  if (nav.fInReview) {
-    pageName = nav.aSongPagePairs[nav.iPageInReview][1];
-    html += `Page: "${pageName}"`;
-    cPages = nav.cPagesInReview;
-    pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
-  } else {
     html += `Page: "${pageName}"`;
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
     pagePos = `${progressBar(nav.iPageInSong + 1, nav.cPagesInSong)}`;
   }
-  html += `<br>page ${pagePos} of ${cPages}, song ${songPos}`;
+  html += `<br>page ${pagePos} of ${cPages}${sTotalPages}, song ${songPos} of ${cSongs}`;
 
   ge('divNavStateText').innerHTML = html;
 }
@@ -540,7 +546,7 @@ function nextReviewPage() {
   const nav = getNavState();
   console.assert(nav.fInReview);
   console.assert(nav.aSongPagePairs.length);
-  console.assert(nav.iPageInReview < aSongPagePairs.length - 1);
+  console.assert(nav.iPageInReview < nav.aSongPagePairs.length - 1);
   g.nav.iPageInReview++;
   renderNavSection();
 }
@@ -651,20 +657,19 @@ function getMessageFromGlobals() {
   if (nav.fInReview) {
     const aSongPagePairs = getSongPagePairs();
     const songName = aSongPagePairs[nav.iPageInReview][0];
-    const pageName = aSongPagePairs[nav.iPageInReview][1];
     const songData = songLibrary.oSongs[songName];
     oMsg = {
       fontSize: songData.fontSize,
       fontBoldness: songData.fontBoldness,
       lineHeight: songData.lineHeight,
-      content: songData.oPages[pageName],
+      content: songData.oPages[nav.pageName],
       allCaps: songLibrary.defaults.allCaps,
-      spaceAbove: songData.oPages[pageName].spaceAbove, // em
+      spaceAbove: songData.oPages[nav.pageName].spaceAbove, // em
       license: songData.License,
       pageNumber: nav.iPageInReview + 1,
-      lastPage: nav.iPageInReview == aSongPagePairs.length - 1,
-      songNumber: getAllSongNames().length,
-      fLastSongInSet: isReviewingLastSong()
+      cPagesInSong: nav.cPagesInReview,
+      songNumber: nav.iSongInReview + 1,
+      cSongsInSet: nav.cSongsInReview
     }
   } else {
     oMsg = {
@@ -1981,8 +1986,12 @@ function getCountOfSongsInSongSet(songSetName) {
 }
 
 function getIndexOfPageInCurrentSongInReview(songName, aSongPagePairs, iPageReview) {
-  iPage = 0;
+  let iPage = 0;
+  let pageName = aSongPagePairs[iPageReview][1];
   while (aSongPagePairs[iPageReview][0] == songName) {
+    if (aSongPagePairs[iPageReview][1] == pageName) {
+      break;
+    }
     iPage++;
     iPageReview++;
   }
