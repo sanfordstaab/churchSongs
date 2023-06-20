@@ -98,6 +98,13 @@ fieldset {
   /* border: solid black 1px; */
 }
 
+.keyNavInstructions {
+  position:absolute;
+  bottom: 35%;
+  left: 45%;
+  z-index: 2;
+}
+
 .al {
   text-align: left !important;
 }

@@ -279,14 +279,14 @@ This will be exported with the song library."
                     class="smallest">
                     <!-- filled in by renderNavStateText() -->
                   </div>
-                  <center>
+                  <center style="position: relative;">
                     <table id="navKeyTable">
                       <tr>
                         <td>
                           &nbsp;
                         </td>
                         <td class="ac">
-                          <button id="btnPrevSong" 
+                          <button id="btnNavPrevSong" 
                             title="Use the up arrow to move to the previous song.  The screen will start in a blank state."
                             onclick="prevSong();"
                           >
@@ -318,7 +318,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           <button id="btnNavPrevPage" 
                             title="Left Arrow"
                             title="Use the left arrow key to move to the previous page."
-                            onclick="prevPage();"
+                            onclick="prevSongPage();"
                           >
                             <span class="larger">&#8592;</span>
                           </button>
@@ -333,9 +333,9 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           </button>
                         </td>
                         <td class="ac">
-                          <button id="btnNextPage" 
+                          <button id="btnNavNextSongPage" 
                             title="Use the right arrow key to move to the next page or show the first page."
-                            onclick="nextPage(event);"
+                            onclick="nextSongPage(event);"
                           >
                             <span class="larger">&#8594;</span>
                           </button>
@@ -376,7 +376,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                     </table>
                   </center>
 
-                  <fieldset  id="fsKeyNavInstructions" class="bgWhite m0">
+                  <fieldset  id="fsKeyNavInstructions" class="bgWhite m0 keyNavInstructions">
                     <p 
                       class="smallest m0"
                       onclick="ge('tdPagePreview').focus();"
@@ -388,11 +388,9 @@ Spacebar=Toggle Blank Screen state"
                     >
                       Use the keyboard to control page navigation 
                       <br>
-                      when the preview pane to the right has a 
+                      when this preview pane has a yellow border around it.  
                       <br>
-                      yellow border around it.  
-                      <br>
-                      Click on the preview pane to get the yellow border.
+                      Click here to get the yellow border.
                     </p>
                   </fieldset>
                   <button onclick="saveProjectorAspectRatio();"
