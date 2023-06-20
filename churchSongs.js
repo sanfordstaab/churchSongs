@@ -121,8 +121,9 @@ function getNavState() {
     nav.aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = nav.aSongPagePairs.length;
     nav.songName = nav.aSongPagePairs[g.nav.iPageInReview][0];
-    nav.cPagesInSong = getCountOfPagesInCurrentSongInReview(songName, nav.aSongPagePairs);
-    nav.iPageInSong = getIndexOfPageInCurrentSongInReview(songName, nav.aSongPagePairs, nav.iPageInReview);
+    nav.cUniquePagesInSong = Object.keys(songLibrary.oSongs[nav.songName].oPages).length;
+    nav.iUniquePageInSong = getIndexOfPageInCurrentSongInReview(
+        nav.songName, nav.aSongPagePairs, nav.iPageInReview);
     nav = addNavSongState(nav);
     nav.fInReview = true;
 
@@ -192,7 +193,7 @@ function onShowSongOrSongset() {
   if (ge('chkNavSongMode').checked) {
     setNavSongUI(ge('selNavSongs').value);
   } else {
-    setNavSongSet(ge('selNavSongSets').value);
+    setNavSongSetByName(ge('selNavSongSets').value);
   }
   renderNavSection();
 }
@@ -200,10 +201,10 @@ function onShowSongOrSongset() {
 function onModeChanged(event) {
   const nav = getNavState();
   show([
-    'btnPrevSong',
+    'btnNavPrevSong',
     'btnNavPrevPage',
     'btnToggleShow',
-    'btnNextPage',
+    'btnNavNextSongPage',
     'btnNextSong'
     ], !nav.fInReview);
   show([
@@ -217,9 +218,9 @@ function onModeChanged(event) {
 
 function renderNavStateText() {
   const nav = getNavState();
-  fIsSongSet = !!ge('chkNavSongSetMode').checked;
+  const fIsSongSetMode = (nav.mode == 'songSet');
   let html = '';
-  if (fIsSongSet) {
+  if (fIsSongSetMode) {
     html += `Song Set: "<i>${nav.songSetName}</i>"<br>`;
   }
 
@@ -230,7 +231,7 @@ function renderNavStateText() {
     html += `Reviewing: Song: <u>${getSongPagePairs()[nav.iPageInReview][0]}</u>`;
   } else {
     html += `Projecting Song: <u>${nav.songName}</u>`;
-    if (ge('chkNavSongSetMode').checked) {
+    if (fIsSongSetMode) {
       songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet)} of ${nav.cSongsInSet}`;
     }
   }
@@ -238,7 +239,7 @@ function renderNavStateText() {
   html += '<br>';
 
   let pageName = 
-    (nav.songData.TagPage && (nav.iPageInSong == nav.cPagesInSong - 1)) 
+    (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 
     ?
     nav.songData.TagPage + ' {Tag}'
     :
@@ -248,12 +249,12 @@ function renderNavStateText() {
     pageName = nav.aSongPagePairs[nav.iPageInReview][1];
     html += `Page: "${pageName}"`;
     cPages = nav.cPagesInReview;
-    pagePos = `${progressBar(nav.iPageInSong + 1, nav.cPagesInSong)} of ${cPages}`;
+    pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
   } else {
     html += `Page: "${pageName}"`;
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
-    pagePos = `${progressBar(nav.iPageInSong + 1, cPages)}`;
+    pagePos = `${progressBar(nav.iPageInSong + 1, nav.cPagesInSong)}`;
   }
   html += `<br>page ${pagePos} of ${cPages}, song ${songPos}`;
 
@@ -274,35 +275,19 @@ function processKeyCode(code) {
   let fAllowDefault = false;
   switch (code) {
     case 'ArrowLeft':
-      if (nav.fInReview) {
-        prevReviewPage();
-      } else {
-        prevPage();
-      }
+      prevPage();
       break;
 
     case 'ArrowRight':
-      if (nav.fInReview) {
-        nextReviewPage();
-      } else {
-        nextPage();
-      }
+      nextPage();
       break;
 
     case 'ArrowUp':
-      if (nav.fInReview) {
-        prevReviewSong();
-      } else {
-        prevSong();
-      }
+      prevSong();
       break;
 
     case 'ArrowDown':
-      if (nav.fInReview) {
-        nextReviewSong();
-      } else {
-        nextSong();
-      }
+      nextSong();
       break;
 
     case 'Space':
@@ -328,46 +313,23 @@ function processARChanged(newAspectRatio) {
   }
 }
 
-function setNavSongSet(songSetName) {
-  ge('selNavSongSets').value = songSetName;;
+function setNavSongSetByName(songSetName) {
   const nav = getNavState();
-  if (!nav.songSetName) {
-
-    if (getAllSongNames().length == 0) {
-      // no songs defined, do nothing
-      return;
-    }
-
-    // add/modify the one off song set in the library to contain
-    // just the selected song.
-    songLibrary.oSongSets['One Off Song Set'] = [ nav.songName ];
-
-    // set everything up straight
-    renderAllSongSets(
-      'selNavSongSets', 
-      'txtSongSetAddSongFilter',
-      nav.songSetName,
-      'spnNoSongSets');
-    renderNavStateText();
-    enableNavButtons();
-    return;
-  }
-  // start at first song in the set
-  setNavSongInSet(0)
+  console.assert(nav.mode == 'songSet');
+  console.assert(Object.keys(songLibrary.oSongSets).includes(songSetName));
+  ge('selNavSongSets').value = songSetName;
+  setNavSongSetSongIndex(0);
 }
 
-function setNavSongInSet(iSongInSet) {
+function setNavSongSetSongIndex(iSongInSet) {
+  setNavPage(0);
   g.nav.iSongInSet = iSongInSet;
-  g.nav.iPageInSong = 0;
-  // always start with a blank screen
-  blankScreen();  
-  setNavSongPage(0);
+  blankScreen();
 }
 
 function setNavSongUI(songName) {
   ge('selNavSongs').value = songName; 
-  setNavSongPage(0);
-  // always start with a blank screen
+  setNavPage(0);
   blankScreen();
 }
 
@@ -379,13 +341,29 @@ function calcSongPageCount(songData) {
   return cPagesInSong;
 }
 
-function setNavSongPage(iPageInSong) {
+function setNavPage(iPage) {
   const nav = getNavState();
-  if (iPageInSong < 0 || iPageInSong >= nav.cPagesInSong) {
-    g.nav.iPageInSong = 0;
-    return true;  // off the end
+  if (nav.fInReview) {
+    if (iPage < 0 || iPage >= nav.cPagesInReview) {
+      iPage = 0;
+      g.nav.iPageInSong = iPage;
+      return;
+    }
+  } else {
+    if (iPage < 0 || iPage >= nav.cPagesInSong) {
+      iPage = 0;
+      g.nav.iPageInSong = 0;
+      if (iPage >= nav.cPagesInSong) {
+        if (nav.mode == 'songSet') {
+          setNavSongSetSongIndex(nav.iSongInSet + 1);
+        }
+      }
+    } else {
+      g.nav.fBlankScreen = false;
+      g.nav.iPageInSong = iPage;
+    }
+    renderNavSection();
   }
-  g.nav.iPageInSong = iPageInSong;
 }
 
 function renderSelectControl(
@@ -414,23 +392,23 @@ function enableNavButtons() {
   const nav = getNavState();
   if (nav.fInReview) {
     enableElement('btnPrevReviewSong', !isReviewingFirstSong());
+    enableElement('btnNextReviewSong', !isReviewingLastSong())
     enableElement('btnPrevReviewPage', nav.iPageInReview > 0);
     enableElement('btnNextReviewPage', nav.iPageInReview < nav.cPagesInReview - 1);
-    enableElement('btnNextReviewSong', !isReviewingLastSong())
   } else {
-    enableElement('btnPrevSong', nav.iSongInSet > 0);
+    enableElement('btnNavPrevSong', nav.iSongInSet > 0);
     enableElement('btnNextSong', nav.iSongInSet < nav.cSongsInSet - 1);
-    enableElement('btnNavPrevPage', nav.iPageInSong > 0);
-    enableElement('btnNextPage', nav.iPageInSong < nav.cPagesInSong - 1);
+    enableElement('btnNavPrevPage', nav.iPageInSong > 0 || nav.iSongInSet > 0);
+    enableElement('btnNavNextSongPage', nav.iPageInSong < nav.cPagesInSong - 1 || nav.iSongInSet < nav.cSongsInSet - 1);
   }
   show('btnPrevReviewSong', nav.fInReview);
-  show('btnPrevSong', !nav.fInReview);
+  show('btnNavPrevSong', !nav.fInReview);
   show('btnPrevReviewPage', nav.fInReview);
   show('btnNextSong', !nav.fInReview);
   show('btnNextReviewPage', nav.fInReview);
   show('btnNavPrevPage', !nav.fInReview);
   show('btnNextReviewSong', nav.fInReview);
-  show('btnNextPage', !nav.fInReview);
+  show('btnNavNextSongPage', !nav.fInReview);
 }
 
 // show navigation event handlers
@@ -464,14 +442,8 @@ function restoreProjectorAspectRatio() {
 function blankScreen(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  g.nav.fBlankScreen = true;
-  localStorage.setItem('projector-message', JSON.stringify({
-    content: ''
-  }));
-
-  localStorage.clear();
-  renderNavStateText();
-  renderNavPagePreview();
+  g.nav.fBlankScreen = !nav.fInReview;
+  renderNavSection();
 }
 
 function renderNavSection() {
@@ -510,67 +482,23 @@ function toggleBlankScreen(event) {
 }
 
 function prevPage(event) {
-  const nav = getNavState();
-  console.assert(!nav.fInReview);
-  if (g.nav.iPageInSong > 0) {
-    g.nav.iPageInSong--;
-    setNavSongPage(g.nav.iPageInSong);
-    renderNavSection();    
+  if (getNavState().fInReview) {
+    prevReviewPage();
+  } else {
+    prevSongPage();
   }
-}
-
-function nextPage(event) {
-  const nav = getNavState();
-  console.assert(!nav.fInReview);
-  if (nav.iPageInSong < nav.cPagesInSong - 1) {
-    // show the first page if hidden, else move to the next page
-    if (nav.iPageInSong == 0 && g.nav.fBlankScreen) {
-      g.nav.fBlankScreen = false;
-    } else {
-      setNavSongPage(nav.iPageInSong + 1);
-    }
-    renderNavSection();
-  }
-}
-
-function getSongPagePairs() {
-  const aSongPagePairs = [];
-  Object.entries(songLibrary.oSongs).sort().forEach(
-    function(aKVSong) {
-      Object.entries(aKVSong[1].oPages).sort().forEach(
-        function(aKVPage) {
-          aSongPagePairs.push([ aKVSong[0], aKVPage[0]]);
-        }
-      )
-    }
-  )
-  return aSongPagePairs;
-}
-
-function nextReviewPage() {
-  const nav = getNavState();
-  console.assert(nav.fInReview);
-  const aSongPagePairs = getSongPagePairs();
-  if (!aSongPagePairs.length) {
-    return; // no pages defined
-  }
-  console.assert(nav.iPageInReview < aSongPagePairs.length - 1);
-  g.nav.iPageInReview++;
   renderNavSection();
 }
 
-function isReviewingFirstSong() {
-  const nav = getNavState();
-  console.assert(nav.fInReview);
-  return nav.aSongPagePairs[nav.iPageInReview][0] == 
-    nav.aSongPagePairs[0][0];
-}
-
-function isReviewingLastSong() {
-  const nav = getNavState();
-  console.assert(nav.fInReview);
-  return nav.aSongPagePairs[nav.iPageInReview][0] == 
-    nav.aSongPagePairs[nav.aSongPagePairs.length - 1][0];
+function prevSongPage() {
+  console.assert(!g.nav.fInReview);
+  if (g.nav.iPageInSong > 0) {
+    g.nav.iPageInSong--;
+  } else {
+    console.assert(g.nav.iSongInSet > 0);
+    g.nav.iSongInSet--;
+  }
+  renderNavSection();
 }
 
 function prevReviewPage() {
@@ -581,16 +509,56 @@ function prevReviewPage() {
   nextReviewPage();
 }
 
-function prevSong(event) {
+function nextPage() {
+  if (getNavState().fInReview) {
+    nextReviewPage();
+  } else {
+    nextSongPage();
+  }
+  renderNavSection();
+}
+
+function nextSongPage(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
+  if (nav.iPageInSong < nav.cPagesInSong - 1) {
+    if (nav.iPageInSong == 0 && nav.fBlankScreen) {
+      g.nav.fBlankScreen = false;
+    } else {
+      g.nav.iPageInSong++;
+    }
+  } else {
+    console.assert(nav.iSongInSet < nav.cSongsInSet - 1);
+    g.nav.fBlankScreen = false;
+    g.nav.iPageInSong = 0;
+    g.nav.iSongInSet++;
+  }
+  renderNavSection();
+}
+
+function nextReviewPage() {
+  const nav = getNavState();
+  console.assert(nav.fInReview);
+  console.assert(nav.aSongPagePairs.length);
+  console.assert(nav.iPageInReview < aSongPagePairs.length - 1);
+  g.nav.iPageInReview++;
+  renderNavSection();
+}
+
+function prevSong(event) {
+  const nav = getNavState();
+  if (nav.fInReview) {
+    prevReviewSong();
+  } else {
+    prevSongInSet();
+  }
+}
+
+function prevSongInSet() {
+  const nav = getNavState();
   if (nav.iSongInSet > 0) {
     nav.iSongInSet--;
-    setNavSongInSet(nav.iSongInSet);
-    setNavSongPage(0);
-    renderNavStateText();
-    enableNavButtons();
-    blankScreen();  
+    setNavSongSetSongIndex(nav.iSongInSet);
   }
 }
 
@@ -616,6 +584,65 @@ function prevReviewSong(event) {
   }
   g.nav.iPageInReview = nav.iPageInReview;
   renderNavSection();
+}
+
+function nextSong() {
+  if (getNavState().fInReview) {
+    nextReviewSong();
+  } else {
+    nextSongInSet();
+  }
+}
+
+function nextSongInSet(event) {
+  const nav = getNavState();
+  console.assert(!nav.fInReview);
+  if (nav.iSongInSet < getCountOfSongsInSongSet(nav.songSetName) - 1) {
+    setNavSongSetSongIndex(nav.iSongInSet + 1);
+    renderNavStateText();
+    enableNavButtons();
+    blankScreen();  
+  }
+}
+
+function nextReviewSong(event) {
+  const nav = getNavState();
+  console.assert(nav.fInReview);
+  const aSongPagePairs = getSongPagePairs();
+  const currentSongName = aSongPagePairs[nav.iPageInReview][0];
+  while (nav.iPageInReview < aSongPagePairs.length - 1 && 
+         aSongPagePairs[nav.iPageInReview][0] == currentSongName) {
+    nav.iPageInReview++;
+  }
+  renderNavSection();
+}
+
+function getSongPagePairs() {
+  const aSongPagePairs = [];
+  Object.entries(songLibrary.oSongs).sort().forEach(
+    function(aKVSong) {
+      Object.entries(aKVSong[1].oPages).sort().forEach(
+        function(aKVPage) {
+          aSongPagePairs.push([ aKVSong[0], aKVPage[0]]);
+        }
+      )
+    }
+  )
+  return aSongPagePairs;
+}
+
+function isReviewingFirstSong() {
+  const nav = getNavState();
+  console.assert(nav.fInReview);
+  return nav.aSongPagePairs[nav.iPageInReview][0] == 
+    nav.aSongPagePairs[0][0];
+}
+
+function isReviewingLastSong() {
+  const nav = getNavState();
+  console.assert(nav.fInReview);
+  return nav.aSongPagePairs[nav.iPageInReview][0] == 
+    nav.aSongPagePairs[nav.aSongPagePairs.length - 1][0];
 }
 
 function getMessageFromGlobals() {
@@ -649,36 +676,12 @@ function getMessageFromGlobals() {
       spaceAbove: nav.songData.oPageData[nav.pageName].spaceAbove, // em
       license: nav.songData.License,
       pageNumber: nav.iPageInSong + 1,
-      lastPage: nav.iPageInSong == nav.cPagesInSong - 1 ? true : false,
+      cPagesInSong: nav.cPagesInSong,
       songNumber: nav.iSongInSet + 1,
-      fLastSongInSet: nav.mode == 'song' ? 0 : 
-        getCountOfSongsInSongSet(nav.songSetName) - 1 == nav.iSongInSet
+      cSongsInSet: nav.mode == 'song' ? 0 : nav.cSongsInSet
     }
   }
   return oMsg;
-}
-
-function nextSong(event) {
-  const nav = getNavState();
-  console.assert(!nav.fInReview);
-  if (nav.iSongInSet < getCountOfSongsInSongSet(nav.songSetName) - 1) {
-    setNavSongInSet(nav.iSongInSet + 1);
-    renderNavStateText();
-    enableNavButtons();
-    blankScreen();  
-  }
-}
-
-function nextReviewSong(event) {
-  const nav = getNavState();
-  console.assert(nav.fInReview);
-  const aSongPagePairs = getSongPagePairs();
-  const currentSongName = aSongPagePairs[nav.iPageInReview][0];
-  while (nav.iPageInReview < aSongPagePairs.length - 1 && 
-         aSongPagePairs[nav.iPageInReview][0] == currentSongName) {
-    nav.iPageInReview++;
-  }
-  renderNavSection();
 }
 
 // Projector formatting
@@ -1826,7 +1829,7 @@ function prepPrint(
 
   let htmlPage = htmlPageTemplate;
 
-  for (let iPageInSong = 0; iPageInSong < nav.cPagesInSong; iPageInSong++) {
+  for (let iPageInSong = 0; iPageInSong < nav.cUniquePagesInSong; iPageInSong++) {
     const nSongThisPage = (iPageInSong % 8) + 1; // 1 based index
     const pageName = nav.aPagesInSong[iPageInSong];
     const pageLines = sd.oPages[pageName];
@@ -1838,7 +1841,7 @@ function prepPrint(
       replace(rxPageNameKey, `Page ${iPageInSong + 1}) ${pageName}:`).
       replace(rxPageLinesKey, pageLines.join('\n<br>\n'));
 
-    if (nSongThisPage == 8 || iPageInSong == nav.cPagesInSong - 1) {
+    if (nSongThisPage == 8 || iPageInSong == nav.cUniquePagesInSong - 1) {
       // We have completed all 8 (or the last) page of the song pages on this print page.
       // Go on to the next print page.
       oHtmlPrint.htmlPrint += htmlPage.
@@ -1977,20 +1980,11 @@ function getCountOfSongsInSongSet(songSetName) {
   return songLibrary.oSongSets[songSetName].length;
 }
 
-function getCountOfPagesInCurrentSongInReview(songName, aSongPagePairs) {
-  let cSongs = 0;
-  aSongPagePairs.forEach(
-    function(aSP) {
-      if (aSP[0] == songName) cSongs++;
-    }
-  )
-  return cSongs;
-}
-
 function getIndexOfPageInCurrentSongInReview(songName, aSongPagePairs, iPageReview) {
   iPage = 0;
   while (aSongPagePairs[iPageReview][0] == songName) {
     iPage++;
+    iPageReview++;
   }
   return iPage;
 }
@@ -2134,7 +2128,7 @@ function progressBar(nHere, nTotal) {
   console.assert(nHere <= nTotal);
   let str = '';
   for (let i = 1; i <= nTotal; i++) {
-    str += i == nHere ? nHere : '-';
+    str += (i == nHere) ? `<b>${nHere}</b>` : '-';
   }
   return str;
 }
