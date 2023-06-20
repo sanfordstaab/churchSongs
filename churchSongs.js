@@ -121,9 +121,12 @@ function getNavState() {
     nav.aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = nav.aSongPagePairs.length;
     nav.songName = nav.aSongPagePairs[g.nav.iPageInReview][0];
-    nav.iUniquePageInSong = getIndexOfPageInCurrentSongInReview(
-      nav.songName, nav.aSongPagePairs, nav.iPageInReview);
-    nav.cUniquePagesInSong = Object.keys(songLibrary.oSongs[nav.songName].oPages).length;
+    nav = addNavSongState(nav);
+    nav.iUniquePageInSong = 
+      getIndexOfPageInCurrentSongInReview(
+        nav.songData, 
+        nav.aSongPagePairs[g.nav.iPageInReview][1]);
+    nav.cUniquePagesInSong = Object.keys(nav.songData.oPages).length;
     nav.iSongInReview = getAllSongNames().indexOf(nav.songName);
     nav.cSongsInReview = getAllSongNames().length;
     nav = addNavSongState(nav);
@@ -215,6 +218,7 @@ function onModeChanged(event) {
     'btnNextReviewPage',
     'btnNextReviewSong'
     ], nav.fInReview);
+  g.nav.fBlankScreen = false;
   renderNavSection();
 }
 
@@ -365,7 +369,7 @@ function setNavPage(iPage) {
         }
       }
     } else {
-      g.nav.fBlankScreen = false;
+      g.nav.fBlankScreen = !nav.fInReview;
       g.nav.iPageInSong = iPage;
     }
     renderNavSection();
@@ -483,6 +487,7 @@ function renderNavPagePreview() {
 }
 
 function toggleBlankScreen(event) {
+  console.assert(!g.nav.fInReview);
   g.nav.fBlankScreen = !g.nav.fBlankScreen;
   renderNavSection();
 }
@@ -603,22 +608,19 @@ function nextSong() {
 function nextSongInSet(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  if (nav.iSongInSet < getCountOfSongsInSongSet(nav.songSetName) - 1) {
-    setNavSongSetSongIndex(nav.iSongInSet + 1);
-    renderNavStateText();
-    enableNavButtons();
-    blankScreen();  
-  }
+  console.assert(nav.iSongInSet < nav.cPagesInSong - 1);
+  setNavSongSetSongIndex(nav.iSongInSet + 1);
+  blankScreen();  
 }
 
 function nextReviewSong(event) {
   const nav = getNavState();
   console.assert(nav.fInReview);
-  const aSongPagePairs = getSongPagePairs();
-  const currentSongName = aSongPagePairs[nav.iPageInReview][0];
-  while (nav.iPageInReview < aSongPagePairs.length - 1 && 
-         aSongPagePairs[nav.iPageInReview][0] == currentSongName) {
-    nav.iPageInReview++;
+  console.assert(nav.iSongInReview < nav.cSongsInReview - 1);
+  const currentSongName = nav.aSongPagePairs[nav.iPageInReview][0];
+  while (g.nav.iPageInReview < nav.cPagesInReview - 1 && 
+         nav.aSongPagePairs[g.nav.iPageInReview][0] == currentSongName) {
+    g.nav.iPageInReview++;
   }
   renderNavSection();
 }
@@ -655,8 +657,7 @@ function getMessageFromGlobals() {
   const nav = getNavState();
   let oMsg = {};
   if (nav.fInReview) {
-    const aSongPagePairs = getSongPagePairs();
-    const songName = aSongPagePairs[nav.iPageInReview][0];
+    const songName = nav.aSongPagePairs[nav.iPageInReview][0];
     const songData = songLibrary.oSongs[songName];
     oMsg = {
       fontSize: songData.fontSize,
@@ -666,8 +667,8 @@ function getMessageFromGlobals() {
       allCaps: songLibrary.defaults.allCaps,
       spaceAbove: songData.oPages[nav.pageName].spaceAbove, // em
       license: songData.License,
-      pageNumber: nav.iPageInReview + 1,
-      cPagesInSong: nav.cPagesInReview,
+      pageNumber: nav.iUniquePageInSong + 1,
+      cPagesInSong: nav.cUniquePagesInSong,
       songNumber: nav.iSongInReview + 1,
       cSongsInSet: nav.cSongsInReview
     }
@@ -1985,15 +1986,12 @@ function getCountOfSongsInSongSet(songSetName) {
   return songLibrary.oSongSets[songSetName].length;
 }
 
-function getIndexOfPageInCurrentSongInReview(songName, aSongPagePairs, iPageReview) {
+function getIndexOfPageInCurrentSongInReview(songData, pageName) {
   let iPage = 0;
-  let pageName = aSongPagePairs[iPageReview][1];
-  while (aSongPagePairs[iPageReview][0] == songName) {
-    if (aSongPagePairs[iPageReview][1] == pageName) {
-      break;
-    }
+  const aPages = Object.keys(songData.oPages).sort();
+  while (iPage < aPages.length && 
+         aPages[iPage] != pageName) {
     iPage++;
-    iPageReview++;
   }
   return iPage;
 }
