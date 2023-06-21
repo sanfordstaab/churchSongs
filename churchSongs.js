@@ -121,8 +121,8 @@ function getNavState() {
     nav.aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = nav.aSongPagePairs.length;
     nav.songName = nav.aSongPagePairs[g.nav.iPageInReview][0];
-    nav.pageName = nav.aSongPagePairs[g.nav.iPageInReview][1];
     nav = addNavSongState(nav);
+    nav.pageName = nav.aSongPagePairs[g.nav.iPageInReview][1];
     nav.iUniquePageInSong = 
       getIndexOfPageInCurrentSongInReview(
         nav.songData, 
@@ -130,7 +130,6 @@ function getNavState() {
     nav.cUniquePagesInSong = Object.keys(nav.songData.oPages).length;
     nav.iSongInReview = getAllSongNames().indexOf(nav.songName);
     nav.cSongsInReview = getAllSongNames().length;
-    nav = addNavSongState(nav);
     nav.fInReview = true;
 
   }
@@ -237,9 +236,9 @@ function renderNavStateText() {
   let cPages = 0;
   let sTotalPages = '';
   if (nav.fInReview) {
-    html += `Reviewing: Song: <u>${getSongPagePairs()[nav.iPageInReview][0]}</u>`;
+    html += `Reviewing: Song:<br><u>${getSongPagePairs()[nav.iPageInReview][0]}</u>`;
     cSongs = nav.cSongsInReview;
-    songPos = `${progressBar(nav.iSongInReview + 1, nav.cSongsInReview)}`
+    songPos = `<b>${nav.iSongInReview + 1}</b> of ${nav.cSongsInReview}`;
   } else {
     html += `Projecting Song: <u>${nav.songName}</u>`;
     if (fIsSongSetMode) {
@@ -252,9 +251,10 @@ function renderNavStateText() {
   if (nav.fInReview) {
     pageName = nav.aSongPagePairs[nav.iPageInReview][1];
     html += `Page: "${pageName}"`;
+
     cPages = nav.cUniquePagesInSong;
     pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
-    sTotalPages = ` of ${nav.cPagesInReview} review pages.`
+    sTotalPages = ` unique pages in the song.<br>page ${nav.iPageInReview} of ${nav.cPagesInReview} review pages.`
   } else {
     let pageName = 
     (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 
@@ -263,11 +263,16 @@ function renderNavStateText() {
     :
     nav.pageName;
     html += `Page: "${pageName}"`;
+
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
     pagePos = `${progressBar(nav.iPageInSong + 1, nav.cPagesInSong)}`;
   }
-  html += `<br>page ${pagePos} of ${cPages}${sTotalPages}, song ${songPos} of ${cSongs}`;
+
+  html += `<br>page ${pagePos} of ${cPages}${sTotalPages}`;
+  if (nav.mode != 'song') {
+    html += `<br>song ${songPos}`;
+  }
 
   ge('divNavStateText').innerHTML = html;
 }
