@@ -121,6 +121,7 @@ function getNavState() {
     nav.aSongPagePairs = getSongPagePairs();
     nav.cPagesInReview = nav.aSongPagePairs.length;
     nav.songName = nav.aSongPagePairs[g.nav.iPageInReview][0];
+    nav.pageName = nav.aSongPagePairs[g.nav.iPageInReview][1];
     nav = addNavSongState(nav);
     nav.iUniquePageInSong = 
       getIndexOfPageInCurrentSongInReview(
@@ -460,9 +461,9 @@ function renderNavSection() {
   const oMsg = getMessageFromGlobals();
   localStorage.setItem('projector-message', JSON.stringify(oMsg));
   localStorage.clear();
+  renderNavPagePreview();
   renderNavStateText();
   enableNavButtons();
-  renderNavPagePreview();
 }
 
 function renderNavPagePreview() {
@@ -516,8 +517,8 @@ function prevReviewPage() {
   const nav = getNavState();
   console.assert(nav.fInReview);
   console.assert(nav.iPageInReview > 0);
-  nav.iPageInReview -= 2;
-  nextReviewPage();
+  g.nav.iPageInReview--;
+  renderNavSection();
 }
 
 function nextPage() {
