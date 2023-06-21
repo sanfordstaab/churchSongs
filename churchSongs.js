@@ -164,9 +164,6 @@ function addNavSongState(nav) {
   return nav;
 }
 
-function onModeChanged(event) {
-}
-
 async function onNavSongSetFilterChanged(event) {
   renderSongSetDropdown(
     'selNavSongSets',
@@ -254,7 +251,7 @@ function renderNavStateText() {
 
     cPages = nav.cUniquePagesInSong;
     pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
-    sTotalPages = ` unique pages in the song.<br>page ${nav.iPageInReview} of ${nav.cPagesInReview} review pages.`
+    sTotalPages = ` unique pages in the song.<br>page ${nav.iPageInReview + 1} of ${nav.cPagesInReview} review pages.`
   } else {
     let pageName = 
     (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 
@@ -521,9 +518,12 @@ function prevSongPage() {
 function prevReviewPage() {
   const nav = getNavState();
   console.assert(nav.fInReview);
-  console.assert(nav.iPageInReview > 0);
-  g.nav.iPageInReview--;
-  renderNavSection();
+  if (nav.iPageInReview > 0) {
+    // note that the keyboard method of navigation can get here
+    // despite the button being disabled
+    g.nav.iPageInReview--;
+    renderNavSection();
+  }
 }
 
 function nextPage() {
@@ -557,9 +557,12 @@ function nextReviewPage() {
   const nav = getNavState();
   console.assert(nav.fInReview);
   console.assert(nav.aSongPagePairs.length);
-  console.assert(nav.iPageInReview < nav.aSongPagePairs.length - 1);
-  g.nav.iPageInReview++;
-  renderNavSection();
+  if (nav.iPageInReview < nav.aSongPagePairs.length - 1) {
+    // note that the keyboard method can get here despite
+    // the fact that the button is disabled
+    g.nav.iPageInReview++;
+    renderNavSection();
+  }
 }
 
 function prevSong(event) {
@@ -574,6 +577,7 @@ function prevSong(event) {
 function prevSongInSet() {
   const nav = getNavState();
   if (nav.iSongInSet > 0) {
+    // the keyboard
     nav.iSongInSet--;
     setNavSongSetSongIndex(nav.iSongInSet);
   }
@@ -582,25 +586,28 @@ function prevSongInSet() {
 function prevReviewSong(event) {
   const nav = getNavState();
   console.assert(nav.fInReview);
-  console.assert(!isReviewingFirstSong());
-  const aSongPagePairs = getSongPagePairs();
-  const startingSongName = aSongPagePairs[nav.iPageInReview][0];
-  while (nav.iPageInReview > 0 && 
-         startingSongName == aSongPagePairs[nav.iPageInReview][0]) {
-    nav.iPageInReview--;
+  if (!isReviewingFirstSong()) {
+    // note that the keyboard method can get here
+    // despite the button being disabled.
+    const aSongPagePairs = getSongPagePairs();
+    const startingSongName = aSongPagePairs[nav.iPageInReview][0];
+    while (nav.iPageInReview > 0 && 
+           startingSongName == aSongPagePairs[nav.iPageInReview][0]) {
+      nav.iPageInReview--;
+    }
+    // now go to the first page of the current song
+    const currentSongName = aSongPagePairs[nav.iPageInReview][0];
+    while (nav.iPageInReview > 0 && 
+           currentSongName == aSongPagePairs[nav.iPageInReview][0]) {
+      nav.iPageInReview--;
+    }
+    if (currentSongName != aSongPagePairs[nav.iPageInReview][0]) { 
+      // only bump to the next song if we are not at 0
+      nav.iPageInReview++;
+    }
+    g.nav.iPageInReview = nav.iPageInReview;
+    renderNavSection();
   }
-  // now go to the first page of the current song
-  const currentSongName = aSongPagePairs[nav.iPageInReview][0];
-  while (nav.iPageInReview > 0 && 
-         currentSongName == aSongPagePairs[nav.iPageInReview][0]) {
-    nav.iPageInReview--;
-  }
-  if (currentSongName != aSongPagePairs[nav.iPageInReview][0]) { 
-    // only bump to the next song if we are not at 0
-    nav.iPageInReview++;
-  }
-  g.nav.iPageInReview = nav.iPageInReview;
-  renderNavSection();
 }
 
 function nextSong() {
@@ -614,21 +621,60 @@ function nextSong() {
 function nextSongInSet(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  console.assert(nav.iSongInSet < nav.cPagesInSong - 1);
-  setNavSongSetSongIndex(nav.iSongInSet + 1);
-  blankScreen();  
+  if (nav.iSongInSet < nav.cPagesInSong - 1) {
+    // the keyboard method can get us here despite
+    // the button being disabled.
+    setNavSongSetSongIndex(nav.iSongInSet + 1);
+    blankScreen();  
+  }
 }
 
 function nextReviewSong(event) {
   const nav = getNavState();
   console.assert(nav.fInReview);
-  console.assert(nav.iSongInReview < nav.cSongsInReview - 1);
-  const currentSongName = nav.aSongPagePairs[nav.iPageInReview][0];
-  while (g.nav.iPageInReview < nav.cPagesInReview - 1 && 
-         nav.aSongPagePairs[g.nav.iPageInReview][0] == currentSongName) {
-    g.nav.iPageInReview++;
+  if (nav.iSongInReview < nav.cSongsInReview - 1) {
+    // the keyboard method can get here despite
+    // the button being disabled
+    const currentSongName = nav.aSongPagePairs[nav.iPageInReview][0];
+    while (g.nav.iPageInReview < nav.cPagesInReview - 1 && 
+           nav.aSongPagePairs[g.nav.iPageInReview][0] == currentSongName) {
+      g.nav.iPageInReview++;
+    }
+    renderNavSection();
   }
-  renderNavSection();
+}
+
+function resetReview(event) {
+  ge('rdoReviewMode').checked = 'checked';
+  g.nav.iPageInReview = 0;
+  g.nav.iSongInReview = 0;
+  onModeChanged();
+  ge('divReviewStatus').innerText = 'The Review has been restarted.';
+  setTimeout(() => {
+    ge('divReviewStatus').innerText = '';
+  }, 2000);
+}
+
+function saveReviewPlace(event) {
+  songLibrary.defaults.lastReviewPage = g.nav.iPageInReview;
+  ge('divReviewStatus').innerText = 'Review spot successfully saved.';
+  setTimeout(() => {
+    ge('divReviewStatus').innerText = '';
+  }, 2000);
+}
+
+function restoreSavedReviewPlace(event) {
+  if (songLibrary.defaults.lastReviewPage) {
+    g.nav.iPageInReview = songLibrary.defaults.lastReviewPage;
+    ge('divReviewStatus').innerText = 'Review spot successfully recalled.';
+    ge('rdoReviewMode').checked = 'checked';
+    onModeChanged();
+  } else {
+    ge('divReviewStatus').innerText = 'No Review spot was saved to recall.';
+  }
+  setTimeout(() => {
+    ge('divReviewStatus').innerText = '';
+  }, 2000);
 }
 
 function getSongPagePairs() {

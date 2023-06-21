@@ -230,21 +230,27 @@ in the song library or to print all unique pages/verses for review."
                   </td>
                   <td colspan="3">
                     <button id="btnResetReview"
+                      onclick="resetReview();"
                       title="Click to restart page review from the begining."
                     >
                       Reset/Start Review
                     </button>
                     <button id="btnSaveReviewPlace"
+                      onclick="saveReviewPlace();"
                       title="Click to remember where you are in the review for later.
 This will be exported with the song library."
                     >
                       Save Review Place                      
                     </button>
                     <button id="btnRecallReviewPlace"
+                      onclick="restoreSavedReviewPlace();"
                       title="Click to recall the saved review place."
                     >
                       Recall Review Place
                     </button>
+                    <div id="divReviewStatus" class="ac greenText smaller">
+                      <!-- filled in by code -->
+                    </div>
                   </td>
                 </tr>
               </table>
