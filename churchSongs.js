@@ -476,12 +476,13 @@ function renderNavSection() {
 function renderNavPagePreview() {
   const elHost = ge('tdPagePreview');
   
+  const height = ge('tdPagePreview').clientHeight;
   let width = 
     songLibrary.defaults.aspectRatio 
     ? 
-    fixit(300 / songLibrary.defaults.aspectRatio, 0)
+    fixit(height / songLibrary.defaults.aspectRatio, 0)
     : 
-    300;
+    height;
     
   const oMsg = getMessageFromGlobals();
   if (g.nav.fBlankScreen) {
@@ -491,7 +492,7 @@ function renderNavPagePreview() {
     ge('tdPagePreview'), 
     oMsg,
     width, 
-    300);
+    height);
 }
 
 function toggleBlankScreen(event) {
@@ -1126,6 +1127,8 @@ function fillSongToEdit(event) {
   // other settings
   ge('txtNotes').value = 
     ses.songData.Notes ? ses.songData.Notes : '';
+  ge('txtTitleNote').value = 
+    ses.songData.TitleNote ? ses.songData.TitleNote : '';
   ge('txtAuthor').value = 
     ses.songData.Author ? ses.songData.Author : '';
   ge('txtPublisher').value = 
@@ -1152,8 +1155,8 @@ function onNotesChanged(event) {
 }
 
 function onTitleNoteChanged(event) {
-  const nav = getNavState();
-  nav.songData.TitleNote = ge('txtTitleNote').value;
+  const ses = getSongEditState();
+  ses.songData.TitleNote = ge('txtTitleNote').value.trim();
 }
 
 function onAuthorChanged(event) {
@@ -1195,18 +1198,18 @@ async function onNewSongFilterChanged(event) {
 
 function getSongEditState() {
   const ses = {};
-  ses.fExistingSong = ge('selAllSongsToEdit').value ? 1 : 0;
   ses.selectedSongToEdit = ge('selAllSongsToEdit').value;
-  ses.newSongEditName = ge('txtNewSongName').value.trim();
+  ses.fExistingSong = ses.selectedSongToEdit ? 1 : 0;
   if (ses.selectedSongToEdit) {
-    console.assert(songLibrary.oSongs[ses.selectedSongToEdit]);
     ses.songData = songLibrary.oSongs[ses.selectedSongToEdit];
+    console.assert(ses.songData);
     ses.aPageOrder = ses.songData.aPageOrder;
     ses.oPages = ses.songData.oPages;
-    ses.aPageNames = Object.keys(ses.oPages);
+    ses.aPageNames = Object.keys(ses.oPages).sort();
     ses.selectedOrderVerseIdx = Number(ge('selSongVerseOrder').value);
     ses.selectedOrderVerseName = ses.aPageOrder[ses.selectedOrderVerseIdx];
   }
+  ses.newSongEditName = ge('txtNewSongName').value.trim();
   ses.pageName = ge('selSongVersesToEdit').value;
   ses.fIsTagVerse = ge('chkIsTagVerse').checked ? 1 : 0;
   ses.newVerseName = ge('txtNewVerseName').value.trim();
@@ -1294,6 +1297,7 @@ function clearSongUI(event) {
   ge('selSongVerseOrder').innerHTML = '';
     // other settings
   ge('txtNotes').value = '';
+  ge('txtTitleNote').value = '';
   ge('txtAuthor').value = '';
   ge('txtPublisher').value = '';
   ge('txtLicense').value = '';

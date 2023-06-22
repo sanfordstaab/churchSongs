@@ -15,8 +15,8 @@ var songLibrary =
         "Verse 1"
       ],
       "RepeatCount": 1,
-      "Notes": "",
-      "Author": "",
+      "Notes": "#6 Baptist Hymnal",
+      "Author": "Words: Thomas Ken, 1695, Tune: Genevan Psalm, 1551",
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
@@ -27,7 +27,7 @@ var songLibrary =
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.167,
-      "TitleNote": ""
+      "TitleNote": "#6 in the Baptist Hymnal"
     },
     "Bind us together": {
       "oPages": {
@@ -48,7 +48,7 @@ var songLibrary =
           "That is why I sing."
         ]
       },
-      "Notes": "#73 Maranatha Praise Chorus Book 1990, John 17:20-21a",
+      "Notes": "#73 Maranatha Praise Book 1990, John 17:20-21a",
       "Author": "Bob Gilman",
       "aPageOrder": [
         "Chorus A",
@@ -77,7 +77,7 @@ var songLibrary =
       "fontSize": 0.055,
       "fontBoldness": 5,
       "lineHeight": 0.203,
-      "TitleNote": ""
+      "TitleNote": "#73 in the Maranatha Praise Book"
     },
     "Onward Christian Soldiers": {
       "oPages": {
@@ -187,7 +187,7 @@ var songLibrary =
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.203,
-      "TitleNote": ""
+      "TitleNote": "#393 in the Baptist Hymnal"
     },
     "I worship You, Almighty God": {
       "oPages": {
@@ -224,7 +224,7 @@ var songLibrary =
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.193,
-      "TitleNote": ""
+      "TitleNote": "#176 in the Maranatha Song Book"
     },
     "At Calvary": {
       "oPages": {
@@ -294,7 +294,7 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.167,
-      "TitleNote": ""
+      "TitleNote": "#166 in the Baptist Hymnal"
     },
     "There's something about that name": {
       "oPages": {
@@ -316,7 +316,7 @@ var songLibrary =
         "Verse 2"
       ],
       "RepeatCount": 2,
-      "Notes": "#133 Maranatha Mudiv Praise Chorus Book 1990",
+      "Notes": "#133 Maranatha Praise Book 1990",
       "Author": "William J. & Gloria Gather",
       "Publisher": "",
       "License": "CCLI 20847323",
@@ -331,7 +331,7 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.144,
-      "TitleNote": ""
+      "TitleNote": "#133 in the Maranatha Praise Book"
     },
     "Turn Your Eyes Upon Jesus": {
       "oPages": {
@@ -371,7 +371,7 @@ var songLibrary =
       ],
       "Author": "Helen H. Lemmel",
       "RepeatCount": 1,
-      "Notes": "#97 Maranatha Mudiv Praise Chorus Book 1990, #198 Baptist Hymnal",
+      "Notes": "#97 Maranatha Praise Book 1990, #198 Baptist Hymnal",
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
@@ -391,7 +391,7 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.159,
-      "TitleNote": ""
+      "TitleNote": "#97 in the Maranatha Praise Book"
     },
     "Blessed Assurance": {
       "oPages": {
@@ -450,7 +450,7 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.189,
-      "TitleNote": ""
+      "TitleNote": "#334 in the Baptist Hymnal"
     },
     "Come let us worship and bow down": {
       "oPages": {
@@ -472,7 +472,7 @@ var songLibrary =
         "Verse 1"
       ],
       "RepeatCount": 2,
-      "Notes": "#211 Maranatha Mudiv Praise Chorus Book 1990, Psalm 95:6,7",
+      "Notes": "#211 Maranatha Praise Book 1990, Psalm 95:6,7",
       "Author": "Dave Doherty",
       "Publisher": "",
       "License": "CCLI 20847323",
@@ -487,7 +487,7 @@ var songLibrary =
       "fontSize": 0.055,
       "fontBoldness": 5,
       "lineHeight": 0.202,
-      "TitleNote": ""
+      "TitleNote": "#211 in the Maranatha Praise Book"
     },
     "Amazing Grace": {
       "oPages": {
@@ -554,7 +554,7 @@ var songLibrary =
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.213,
-      "TitleNote": ""
+      "TitleNote": "#165 in the Baptist Hymnal"
     },
     "Our God Reigns": {
       "oPages": {
@@ -630,7 +630,7 @@ var songLibrary =
       ],
       "Author": "Leonard E. Smith, Jr.",
       "RepeatCount": 1,
-      "Notes": "#111 Maranatha Praise Chorus Book 1990",
+      "Notes": "#111 Maranatha Praise Book 1990",
       "Publisher": "",
       "License": "CCLI 20847323",
       "oPageData": {
@@ -671,7 +671,7 @@ var songLibrary =
       "fontSize": 0.03,
       "fontBoldness": 5,
       "lineHeight": 0.196,
-      "TitleNote": ""
+      "TitleNote": "#111 in the Maranatha Praise Book"
     },
     "Bless His Holy Name": {
       "oPages": {
@@ -694,7 +694,7 @@ var songLibrary =
         "Chorus"
       ],
       "Author": "Andre Crouch",
-      "Notes": "Psalm 103:1, #114 Maranatha Mudiv Praise Chorus Book 1990",
+      "Notes": "#114 Maranatha Praise Book 1990, Psalm 103:1",
       "RepeatCount": 1,
       "Publisher": "",
       "License": "CCLI 20847323",
@@ -712,7 +712,7 @@ var songLibrary =
       "fontSize": 0.06,
       "fontBoldness": 5,
       "lineHeight": 0.224,
-      "TitleNote": ""
+      "TitleNote": "#114 in the Maranatha Praise Book"
     },
     "Thou Art Worthy": {
       "oPages": {
@@ -734,7 +734,7 @@ var songLibrary =
         "Verse 1",
         "Chorus"
       ],
-      "Notes": "Rev. 5:9, #109 Maranatha Mudiv Praise Chorus Book 1990",
+      "Notes": "#109 Maranatha Praise Book 1990, Rev. 5:9",
       "Author": "Pauline Michael Mills",
       "RepeatCount": 2,
       "TagPage": "Chorus",
@@ -754,7 +754,7 @@ var songLibrary =
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.175,
-      "TitleNote": ""
+      "TitleNote": "#109 in the Maranatha Praise Book"
     },
     "Alive Alive": {
       "oPages": {
@@ -828,7 +828,7 @@ var songLibrary =
       "fontSize": 0.074,
       "fontBoldness": 5,
       "lineHeight": 0.232,
-      "TitleNote": "Song TItle"
+      "TitleNote": ""
     },
     "I love to tell the story": {
       "oPages": {
@@ -917,7 +917,7 @@ var songLibrary =
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.193,
-      "TitleNote": ""
+      "TitleNote": "#461 in the Baptist Hymnal"
     },
     "Swing Low Sweet Chariot": {
       "oPages": {
@@ -1084,7 +1084,7 @@ var songLibrary =
         "Verse 1",
         "Verse 2"
       ],
-      "Notes": "#52 Maranatha Praise Chorus Book 1990",
+      "Notes": "#52 Maranatha Praise Book 1990",
       "RepeatCount": 1,
       "Author": "Audrey Mieir",
       "Publisher": "",
@@ -1109,7 +1109,7 @@ var songLibrary =
       "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.203,
-      "TitleNote": ""
+      "TitleNote": "#52 in the Maranatha Praise Book"
     },
     "Count your blessings": {
       "oPages": {
@@ -1232,7 +1232,7 @@ var songLibrary =
       "fontSize": 0.055,
       "fontBoldness": 1,
       "lineHeight": 0.203,
-      "TitleNote": ""
+      "TitleNote": "#231 in the Baptist Hymnal"
     },
     "Great is thy faithfulness": {
       "oPages": {
@@ -1322,7 +1322,7 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.159,
-      "TitleNote": ""
+      "TitleNote": "#216 in the Baptist Hymnal"
     },
     "The Star-Spangled Banner": {
       "oPages": {
@@ -1419,7 +1419,7 @@ var songLibrary =
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.167,
-      "TitleNote": ""
+      "TitleNote": "#512 in the Baptist Hymnal"
     },
     "Mine Eyes Have Seen the Glory": {
       "oPages": {
@@ -1515,7 +1515,7 @@ var songLibrary =
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.142,
-      "TitleNote": ""
+      "TitleNote": "#510 in the Baptist Hymnal"
     },
     "This is the Day": {
       "oPages": {
@@ -1550,7 +1550,7 @@ var songLibrary =
         "Verse 4"
       ],
       "RepeatCount": 2,
-      "Notes": "#85 Maranatha Praise Chorus Book 1990, Psalm 118:24",
+      "Notes": "#85 Maranatha Praise Book 1990, Psalm 118:24",
       "Author": "Les Garrett",
       "Publisher": "Scripture In Song (C) 1980",
       "License": "CCLI 20847323",
@@ -1571,7 +1571,7 @@ var songLibrary =
       "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.203,
-      "TitleNote": ""
+      "TitleNote": "#85 in the Maranatha Praise Book"
     },
     "Majesty": {
       "oPages": {
@@ -1614,7 +1614,7 @@ var songLibrary =
         "Verse 5"
       ],
       "RepeatCount": 2,
-      "Notes": "#98 Maranatha Praise Chorus Book 1990, Isaiah 24:14",
+      "Notes": "#98 Maranatha Praise Book 1990, Isaiah 24:14",
       "Author": "Jack Hayford",
       "Publisher": "Rocksmith Music (C) 1981",
       "License": "CCLI 20847323",
@@ -1644,7 +1644,7 @@ var songLibrary =
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.183,
-      "TitleNote": ""
+      "TitleNote": "#98 in the Maranatha Praise Book"
     },
     "I exalt the": {
       "oPages": {
@@ -1667,7 +1667,7 @@ var songLibrary =
         "Verse 2"
       ],
       "RepeatCount": 2,
-      "Notes": "#69 Maranatha Praise Chorus Book 1990",
+      "Notes": "#69 Maranatha Praise Book 1990",
       "Author": "Pete Sanchez. Jr.",
       "Publisher": "Pete Sanchez, Jr.",
       "License": "CCLI 20847323",
@@ -1682,7 +1682,7 @@ var songLibrary =
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.18,
-      "TitleNote": ""
+      "TitleNote": "#69 in the Maranatha Praise Book"
     },
     "How great thou art": {
       "oPages": {
@@ -1796,7 +1796,7 @@ var songLibrary =
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.213,
-      "TitleNote": ""
+      "TitleNote": "#35 in the Baptist Hymnal"
     },
     "Crown Him with many crowns": {
       "oPages": {
@@ -1860,7 +1860,7 @@ var songLibrary =
         "Verse 4b"
       ],
       "RepeatCount": 1,
-      "Notes": "#52 baptist hymnal",
+      "Notes": "#52 Baptist Hymnal",
       "Author": "Words: Matthew Bridges, 1851, Tune: George J. Elvey, 1968",
       "Publisher": "",
       "License": "CCLI 20847323",
@@ -1893,7 +1893,7 @@ var songLibrary =
       "fontSize": 0.05,
       "fontBoldness": 4,
       "lineHeight": 0.167,
-      "TitleNote": ""
+      "TitleNote": "#52 in the Baptist Hymnal"
     },
     "What a friend we have in Jesus": {
       "oPages": {
@@ -1943,7 +1943,7 @@ var songLibrary =
         "Verse 3b"
       ],
       "RepeatCount": 1,
-      "Notes": "#403 baptist hymnal",
+      "Notes": "#403 Baptist Hymnal",
       "Author": "Words: Joseph Scriven, 1855, Tune Charles C. Converse, 1868",
       "Publisher": "",
       "License": "CCLI 20847323",
@@ -1970,7 +1970,7 @@ var songLibrary =
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.172,
-      "TitleNote": ""
+      "TitleNote": "#403 in the Baptist Hymnal"
     },
     "Come thou Fount of many blessings": {
       "oPages": {
@@ -2047,7 +2047,7 @@ var songLibrary =
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.202,
-      "TitleNote": ""
+      "TitleNote": "#12 in the Baptist Hymnal"
     },
     "Holy, Holy, Holy": {
       "oPages": {
@@ -2151,7 +2151,7 @@ var songLibrary =
       "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.175,
-      "TitleNote": ""
+      "TitleNote": "#1 in the Baptist Hymnal"
     }
   },
   "oSongSets": {
