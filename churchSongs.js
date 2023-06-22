@@ -459,7 +459,7 @@ function blankScreen(event) {
   g.nav.fBlankScreen = !nav.fInReview;
   renderNavSection();
   if (songLibrary.defaults.generateTitle) {
-    g.nav.titleNext = true;
+    g.nav.showTitlePage = true;
   }
 }
 
@@ -470,6 +470,7 @@ function renderNavSection() {
   renderNavPagePreview();
   renderNavStateText();
   enableNavButtons();
+  g.nav.showTitlePage = false;
 }
 
 function renderNavPagePreview() {
@@ -547,10 +548,10 @@ function nextSongPage(event) {
       if (nav.fBlankScreen) {
         g.nav.fBlankScreen = false;
         if (songLibrary.defaults.generateTitle) {
-          g.nav.titleNext = true;
+          g.nav.showTitlePage = true;
         }
-      } else if (g.nav.titleNext) {
-        g.nav.titleNext = false;
+      } else if (g.nav.showTitlePage) {
+        g.nav.showTitlePage = false;
       } else {
         g.nav.iPageInSong++;
       }
@@ -737,14 +738,13 @@ function getMessageFromGlobals() {
       pageNumber: nav.iUniquePageInSong + 1,
       cPagesInSong: nav.cUniquePagesInSong,
       songNumber: nav.iSongInReview + 1,
-      cSongsInSet: nav.cSongsInReview
+      cSongsInSet: nav.cSongsInReview,
     }
   } else {
     oMsg = {
       fontSize: nav.songData.fontSize,
       fontBoldness: nav.songData.fontBoldness,
       lineHeight: nav.songData.lineHeight,
-      content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName],
       allCaps: songLibrary.defaults.allCaps,
       spaceAbove: nav.songData.oPageData[nav.pageName].spaceAbove, // em
       license: nav.songData.License,
@@ -752,9 +752,10 @@ function getMessageFromGlobals() {
       cPagesInSong: nav.cPagesInSong,
       songNumber: nav.iSongInSet + 1,
       cSongsInSet: nav.mode == 'song' ? 0 : nav.cSongsInSet,
+      content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName]
     }
-    if (nav.iPageInSong == 0 && songLibrary.defaults.generateTitle && g.nav.titleNext) {
-      oMsg.content = `${nav.songName}<br><br><div class="smaller italic>${nav.songData.TitleNote}</div>`;
+    if (g.nav.showTitlePage) {
+      oMsg.content = `${nav.songName}<br><span class="smaller italic">${nav.songData.TitleNote}</span>`;
     }
       
   }

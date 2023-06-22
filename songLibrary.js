@@ -828,7 +828,7 @@ var songLibrary =
       "fontSize": 0.074,
       "fontBoldness": 5,
       "lineHeight": 0.232,
-      "TitleNote": ""
+      "TitleNote": "Song TItle"
     },
     "I love to tell the story": {
       "oPages": {
