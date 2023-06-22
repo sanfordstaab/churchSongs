@@ -476,13 +476,13 @@ function renderNavSection() {
 function renderNavPagePreview() {
   const elHost = ge('tdPagePreview');
   
-  const height = ge('tdPagePreview').clientHeight;
+  const height = 300; //ge('tdPagePreview').clientHeight;
   let width = 
     songLibrary.defaults.aspectRatio 
     ? 
     fixit(height / songLibrary.defaults.aspectRatio, 0)
     : 
-    height;
+    300;
     
   const oMsg = getMessageFromGlobals();
   if (g.nav.fBlankScreen) {

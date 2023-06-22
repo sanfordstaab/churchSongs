@@ -256,7 +256,7 @@ fieldset {
   color: white;
   text-align: center;
   vertical-align: middle;
-  min-height: 300px;
+  height: 300px;
 }
 
 #tdPagePreview:focus {
