@@ -446,10 +446,20 @@ Spacebar=Toggle Blank Screen state"
               />
               General Formatting:
             </legend>
-            <div>
+            <div class="smaller">
               <label for="chkAllCaps">All Caps</label>
               <input id="chkAllCaps" type="checkbox" 
                 onchange="onAllCapsChanged(event);" />
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              <label for="chkGenerateTitlePages">Generate Title Pages</label>
+              <input id="chkGenerateTitles" type="checkbox" 
+                onchange="onGenerateTitlePagesChanged(event);" 
+                title="When selected, a title page will be generated for each 
+song and will be shown after the blank page of the song."
+                />                
               <fieldset>
                 <legend>
                   Song Formatting:
@@ -829,6 +839,20 @@ when the song was created or other info you would want the
 perfomers to have."
                         onkeyup="onNotesChanged();"
                         onchange="onNotesChanged();"
+                        />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Title Note:
+                    </th>
+                    <td>
+                      <input id="txtTitleNote" 
+                        type="text"
+                        size="80"
+                        title="Enter what to show for this song when title pages are being generated."
+                        onkeyup="onTitleNoteChanged();"
+                        onchange="onTitleNoteChanged();"
                         />
                     </td>
                   </tr>

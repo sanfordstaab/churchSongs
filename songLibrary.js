@@ -26,7 +26,8 @@ var songLibrary =
       },
       "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.167
+      "lineHeight": 0.167,
+      "TitleNote": ""
     },
     "Bind us together": {
       "oPages": {
@@ -75,7 +76,8 @@ var songLibrary =
       },
       "fontSize": 0.055,
       "fontBoldness": 5,
-      "lineHeight": 0.203
+      "lineHeight": 0.203,
+      "TitleNote": ""
     },
     "Onward Christian Soldiers": {
       "oPages": {
@@ -184,7 +186,8 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.203
+      "lineHeight": 0.203,
+      "TitleNote": ""
     },
     "I worship You, Almighty God": {
       "oPages": {
@@ -220,7 +223,8 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.193
+      "lineHeight": 0.193,
+      "TitleNote": ""
     },
     "At Calvary": {
       "oPages": {
@@ -289,7 +293,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.167
+      "lineHeight": 0.167,
+      "TitleNote": ""
     },
     "There's something about that name": {
       "oPages": {
@@ -325,7 +330,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.144
+      "lineHeight": 0.144,
+      "TitleNote": ""
     },
     "Turn Your Eyes Upon Jesus": {
       "oPages": {
@@ -384,7 +390,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.159
+      "lineHeight": 0.159,
+      "TitleNote": ""
     },
     "Blessed Assurance": {
       "oPages": {
@@ -442,7 +449,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.189
+      "lineHeight": 0.189,
+      "TitleNote": ""
     },
     "Come let us worship and bow down": {
       "oPages": {
@@ -478,7 +486,8 @@ var songLibrary =
       },
       "fontSize": 0.055,
       "fontBoldness": 5,
-      "lineHeight": 0.202
+      "lineHeight": 0.202,
+      "TitleNote": ""
     },
     "Amazing Grace": {
       "oPages": {
@@ -544,7 +553,8 @@ var songLibrary =
       },
       "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.213
+      "lineHeight": 0.213,
+      "TitleNote": ""
     },
     "Our God Reigns": {
       "oPages": {
@@ -660,7 +670,8 @@ var songLibrary =
       },
       "fontSize": 0.03,
       "fontBoldness": 5,
-      "lineHeight": 0.196
+      "lineHeight": 0.196,
+      "TitleNote": ""
     },
     "Bless His Holy Name": {
       "oPages": {
@@ -700,7 +711,8 @@ var songLibrary =
       },
       "fontSize": 0.06,
       "fontBoldness": 5,
-      "lineHeight": 0.224
+      "lineHeight": 0.224,
+      "TitleNote": ""
     },
     "Thou Art Worthy": {
       "oPages": {
@@ -741,7 +753,8 @@ var songLibrary =
       },
       "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.175
+      "lineHeight": 0.175,
+      "TitleNote": ""
     },
     "Alive Alive": {
       "oPages": {
@@ -814,7 +827,8 @@ var songLibrary =
       },
       "fontSize": 0.074,
       "fontBoldness": 5,
-      "lineHeight": 0.232
+      "lineHeight": 0.232,
+      "TitleNote": ""
     },
     "I love to tell the story": {
       "oPages": {
@@ -902,7 +916,8 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.193
+      "lineHeight": 0.193,
+      "TitleNote": ""
     },
     "Swing Low Sweet Chariot": {
       "oPages": {
@@ -974,7 +989,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.167
+      "lineHeight": 0.167,
+      "TitleNote": ""
     },
     "Come Now is the time to Worship": {
       "oPages": {
@@ -1030,7 +1046,8 @@ var songLibrary =
       "lineHeight": 0.164,
       "Notes": "",
       "Author": "",
-      "Publisher": ""
+      "Publisher": "",
+      "TitleNote": ""
     },
     "His name is wonderful": {
       "oPages": {
@@ -1091,7 +1108,8 @@ var songLibrary =
       },
       "fontSize": 0.061,
       "fontBoldness": 5,
-      "lineHeight": 0.203
+      "lineHeight": 0.203,
+      "TitleNote": ""
     },
     "Count your blessings": {
       "oPages": {
@@ -1213,7 +1231,8 @@ var songLibrary =
       },
       "fontSize": 0.055,
       "fontBoldness": 1,
-      "lineHeight": 0.203
+      "lineHeight": 0.203,
+      "TitleNote": ""
     },
     "Great is thy faithfulness": {
       "oPages": {
@@ -1302,7 +1321,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.159
+      "lineHeight": 0.159,
+      "TitleNote": ""
     },
     "The Star-Spangled Banner": {
       "oPages": {
@@ -1398,7 +1418,8 @@ var songLibrary =
       },
       "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.167
+      "lineHeight": 0.167,
+      "TitleNote": ""
     },
     "Mine Eyes Have Seen the Glory": {
       "oPages": {
@@ -1493,7 +1514,8 @@ var songLibrary =
       },
       "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.142
+      "lineHeight": 0.142,
+      "TitleNote": ""
     },
     "This is the Day": {
       "oPages": {
@@ -1548,7 +1570,8 @@ var songLibrary =
       },
       "fontSize": 0.061,
       "fontBoldness": 5,
-      "lineHeight": 0.203
+      "lineHeight": 0.203,
+      "TitleNote": ""
     },
     "Majesty": {
       "oPages": {
@@ -1620,7 +1643,8 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.183
+      "lineHeight": 0.183,
+      "TitleNote": ""
     },
     "I exalt the": {
       "oPages": {
@@ -1657,7 +1681,8 @@ var songLibrary =
       },
       "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.18
+      "lineHeight": 0.18,
+      "TitleNote": ""
     },
     "How great thou art": {
       "oPages": {
@@ -1770,7 +1795,8 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.213
+      "lineHeight": 0.213,
+      "TitleNote": ""
     },
     "Crown Him with many crowns": {
       "oPages": {
@@ -1866,7 +1892,8 @@ var songLibrary =
       },
       "fontSize": 0.05,
       "fontBoldness": 4,
-      "lineHeight": 0.167
+      "lineHeight": 0.167,
+      "TitleNote": ""
     },
     "What a friend we have in Jesus": {
       "oPages": {
@@ -1942,7 +1969,8 @@ var songLibrary =
       },
       "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.172
+      "lineHeight": 0.172,
+      "TitleNote": ""
     },
     "Come thou Fount of many blessings": {
       "oPages": {
@@ -2018,7 +2046,8 @@ var songLibrary =
       },
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.202
+      "lineHeight": 0.202,
+      "TitleNote": ""
     },
     "Holy, Holy, Holy": {
       "oPages": {
@@ -2121,7 +2150,8 @@ var songLibrary =
       },
       "fontSize": 0.061,
       "fontBoldness": 5,
-      "lineHeight": 0.175
+      "lineHeight": 0.175,
+      "TitleNote": ""
     }
   },
   "oSongSets": {
@@ -2182,6 +2212,7 @@ var songLibrary =
     "fontBoldness": 5,
     "License": "CCLI 20847323",
     "aspectRatio": "0.4716",
-    "savedAspectRatio": "0.4715"
+    "savedAspectRatio": "0.4715",
+    "generateTitle": true
   }
 }

@@ -55,6 +55,7 @@ async function onPageLoad(event) {
 
   // AR UI init
   renderAspectRatioText();
+  ge('chkGenerateTitles').checked = !!songLibrary.defaults.generateTitle;
 
   // hide sections we dont want to see initially
   toggleFieldsetVisibility({ target: ge('fsGeneralFormatting').firstElementChild.firstElementChild });
@@ -424,7 +425,7 @@ function enableNavButtons() {
   show('btnNavNextSongPage', !nav.fInReview);
 }
 
-// show navigation event handlers
+// navigation event handlers
 
 function saveProjectorAspectRatio() {
   songLibrary.defaults.savedAspectRatio = 
@@ -457,6 +458,9 @@ function blankScreen(event) {
   console.assert(!nav.fInReview);
   g.nav.fBlankScreen = !nav.fInReview;
   renderNavSection();
+  if (songLibrary.defaults.generateTitle) {
+    g.nav.titleNext = true;
+  }
 }
 
 function renderNavSection() {
@@ -539,8 +543,17 @@ function nextSongPage(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
   if (nav.iPageInSong < nav.cPagesInSong - 1) {
-    if (nav.iPageInSong == 0 && nav.fBlankScreen) {
-      g.nav.fBlankScreen = false;
+    if (nav.iPageInSong == 0) {
+      if (nav.fBlankScreen) {
+        g.nav.fBlankScreen = false;
+        if (songLibrary.defaults.generateTitle) {
+          g.nav.titleNext = true;
+        }
+      } else if (g.nav.titleNext) {
+        g.nav.titleNext = false;
+      } else {
+        g.nav.iPageInSong++;
+      }
     } else {
       g.nav.iPageInSong++;
     }
@@ -677,6 +690,8 @@ function restoreSavedReviewPlace(event) {
   }, 2000);
 }
 
+// navigation utilities
+
 function getSongPagePairs() {
   const aSongPagePairs = [];
   Object.entries(songLibrary.oSongs).sort().forEach(
@@ -736,18 +751,24 @@ function getMessageFromGlobals() {
       pageNumber: nav.iPageInSong + 1,
       cPagesInSong: nav.cPagesInSong,
       songNumber: nav.iSongInSet + 1,
-      cSongsInSet: nav.mode == 'song' ? 0 : nav.cSongsInSet
+      cSongsInSet: nav.mode == 'song' ? 0 : nav.cSongsInSet,
     }
+    if (nav.iPageInSong == 0 && songLibrary.defaults.generateTitle && g.nav.titleNext) {
+      oMsg.content = `${nav.songName}<br><br><div class="smaller italic>${nav.songData.TitleNote}</div>`;
+    }
+      
   }
   return oMsg;
 }
-
-// Projector formatting
 
 // General formatting
 function onAllCapsChanged(event) {
   songLibrary.defaults.allCaps = event.srcElement.checked ? 1 : 0;
   renderNavSection();
+}
+
+function onGenerateTitlePagesChanged(event) {
+  songLibrary.defaults.generateTitle = !!ge('chkGenerateTitles').checked;
 }
 
 // Song formatting
@@ -1127,6 +1148,11 @@ function onRepeatCountChanged(event) {
 function onNotesChanged(event) {
   const ses = getSongEditState();
   ses.songData.Notes = ge('txtNotes').value.trim();
+}
+
+function onTitleNoteChanged(event) {
+  const nav = getNavState();
+  nav.songData.TitleNote = ge('txtTitleNote').value;
 }
 
 function onAuthorChanged(event) {
@@ -2136,6 +2162,7 @@ function healSongLibrary() {
 
       // fix up oPageData values
       if (!oSD.RepeatCount) oSD.RepeatCount = 1;
+      if (!oSD.TitleNote) oSD.TitleNote = '';
       if (!oSD.Notes) oSD.Notes = '';
       if (!oSD.Author) oSD.Author = '';
       if (!oSD.Publisher) oSD.Publisher = '';

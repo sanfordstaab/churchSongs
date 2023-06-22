@@ -101,7 +101,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
 </div>
 `;
   let html = '';
-  if (Array.isArray(oMsg.content)) {
+  if (oMsg.content) {
     let style = '';
     if (oMsg.fontSize) {
       style += `font-size: ${oMsg.fontSize * width}px; `;
@@ -121,7 +121,11 @@ function renderPageToHost(elHost, oMsg, width, height) {
     elHost.style = style;
     elHost.classList.add('proj-host');
 
-    html = html.replace('%content%', oMsg.content.join('<br>')).
+    html = html.replace('%content%', Array.isArray(oMsg.content)
+      ?
+        oMsg.content.join('<br>')
+      :
+        oMsg.content).
     replace('%lineHeight%', oMsg.lineHeight * height).
     replace('%pageNumber%', ' p' + oMsg.pageNumber).
     replace('%songNumber%', ' s' + oMsg.songNumber).
