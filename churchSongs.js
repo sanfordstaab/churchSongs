@@ -44,8 +44,12 @@ async function onPageLoad(event) {
 
   reRenderAllSongSelectControls('', '');
 
+  // Nav init
+  ge('chkNavSongSetMode').checked = true;
+
   // Nav formatting init
   ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
+  ge('chkGenerateTitles').checked = !!songLibrary.defaults.generateTitle;
 
   // song editing init
   hide('spnVerseUpdatedNotice');
@@ -55,7 +59,6 @@ async function onPageLoad(event) {
 
   // AR UI init
   renderAspectRatioText();
-  ge('chkGenerateTitles').checked = !!songLibrary.defaults.generateTitle;
 
   // hide sections we dont want to see initially
   toggleFieldsetVisibility({ target: ge('fsGeneralFormatting').firstElementChild.firstElementChild });
@@ -132,7 +135,10 @@ function getNavState() {
     nav.iSongInReview = getAllSongNames().indexOf(nav.songName);
     nav.cSongsInReview = getAllSongNames().length;
     nav.fInReview = true;
-
+  } else {
+    // no mode selected, choose a default
+    ge('chkNavSongSetMode').checked = 'checked';
+    nav = getNavState();  // recurse
   }
   console.assert(nav.mode);
 
@@ -1924,10 +1930,11 @@ function prepPrint(
 
   // start with the first print page
   let printPageNumber = 1;
+  const cPagesInSong = nav.fInReview ? nav.cUniquePagesInSong : nav.cPagesInSong;
 
   let htmlPage = htmlPageTemplate;
 
-  for (let iPageInSong = 0; iPageInSong < nav.cUniquePagesInSong; iPageInSong++) {
+  for (let iPageInSong = 0; iPageInSong < cPagesInSong; iPageInSong++) {
     const nSongThisPage = (iPageInSong % 8) + 1; // 1 based index
     const pageName = nav.aPagesInSong[iPageInSong];
     const pageLines = sd.oPages[pageName];
@@ -1939,7 +1946,7 @@ function prepPrint(
       replace(rxPageNameKey, `Page ${iPageInSong + 1}) ${pageName}:`).
       replace(rxPageLinesKey, pageLines.join('\n<br>\n'));
 
-    if (nSongThisPage == 8 || iPageInSong == nav.cUniquePagesInSong - 1) {
+    if (nSongThisPage == 8 || iPageInSong == cPagesInSong - 1) {
       // We have completed all 8 (or the last) page of the song pages on this print page.
       // Go on to the next print page.
       oHtmlPrint.htmlPrint += htmlPage.
