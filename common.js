@@ -81,7 +81,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
 <content id="content" class="proj-content" style="line-height: %lineHeight%px;">
   <table width="${width}" height="${heightLeft}">
     <tr>
-      <td colspan="100% width="100%">
+      <td colspan="100% width="100%" class="vam">
         %content%
       </td>
     </tr>

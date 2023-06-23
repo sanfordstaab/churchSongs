@@ -520,7 +520,8 @@ song and will be shown after the blank page of the song."
               <span id="spnNoSongSetsToEdit" class="redText smaller">
                 <!-- filled in by code -->
               </span>
-              <select id="selAllSongSetsToEdit">
+              <select id="selAllSongSetsToEdit"
+                onchange="editSelectedSongSet()">
                 <!-- filled in by code -->
               </select>
               <span class="smaller">
@@ -531,10 +532,6 @@ song and will be shown after the blank page of the song."
                 onchange="onSongSetEditFilterChanged();"
                 type="text"
                 />
-              <br>
-              <button id="btnEditSongSet" onclick="editSelectedSongSet();">
-                Edit this song set <span class="larger">&#8801;</span>
-              </button>
               <button id="btnDeleteSongSet" onclick="deleteSongSet();">
                 Delete this song set &#8855;
               </button>
@@ -567,7 +564,7 @@ song and will be shown after the blank page of the song."
               <span id="spnNoSongsToAddToSongSet" class="redText smaller">
                 <!-- filled in by code -->
               </span>
-              <select id="selFilteredSongsToAdd" >
+              <select id="selSongsToAddToSet" >
                 <!-- filled in by code -->
               </select>
               &nbsp;&nbsp;&nbsp;Song Filter:
@@ -662,10 +659,6 @@ song and will be shown after the blank page of the song."
                 <th>
                   Pick a name for your new song:
                 </th>
-                <td>
-                  <div id="divNewEditSongNameError" class="redText">
-                  </div>  
-                </td>
                 <th>
                   <input id="txtNewSongName" 
                     type="text" 
@@ -673,9 +666,11 @@ song and will be shown after the blank page of the song."
                     onkeyup="onNewSongNameChanged();" 
                     onchange="onNewSongNameChanged();" 
                     size="29"
-                    />
+                    />                     
                 </th> 
                 <td colspan="2">                    
+                  <div id="divNewEditSongNameError" class="redText">
+                  </div>                   
                 </td>
               </tr>
             </table>
@@ -690,7 +685,116 @@ song and will be shown after the blank page of the song."
               <button id="btnDeleteSong" 
                 onclick="deleteSong();">
                 Delete the selected song &#8855;
-              </button>          
+              </button>  
+              <fieldset id="fsOtherSongSettings">
+                <legend>
+                  Song Settings
+                </legend>
+                <table class="innerTable">
+                  <tr>
+                    <th>
+                      Notes:
+                    </th>
+                    <td>
+                      <input id="txtNotes" 
+                        type="text"
+                        size="80"
+                        title="Notes are printed with the lyrics and usually 
+contian information like where to find the song in a hymnal, 
+when the song was created or other info you would want the 
+perfomers to have."
+                        onkeyup="onNotesChanged();"
+                        onchange="onNotesChanged();"
+                        />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Title Note:
+                    </th>
+                    <td>
+                      <input id="txtTitleNote" 
+                        type="text"
+                        size="80"
+                        title="Enter what to show for this song when title pages are being generated."
+                        onkeyup="onTitleNoteChanged();"
+                        onchange="onTitleNoteChanged();"
+                        />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      Author:
+                    </th>
+                    <td>
+                      <input id="txtAuthor"
+                        type="text",
+                        size="80",
+                        title="Enter Author data here as desired."
+                        onkeyup="onAuthorChanged();"
+                        onchange="onAuthorChanged();"
+                        />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>
+                      Publisher:
+                    </th>
+                    <td>
+                      <input id="txtPublisher"
+                        type="text",
+                        size="80",
+                        title="Enter Publisher data here as desired."
+                        onkeyup="onPublisherChanged();"
+                        onchange="onPublisherChanged();"
+                        />
+                    </td>                      
+                  </tr>
+
+                  <tr>
+                    <th>
+                      License:
+                    </th>
+                    <td>
+                      <input id="txtLicense"
+                        type="text",
+                        size="80",
+                        title="Some song services require a visible license code such as CCLI.
+If your license code is per organization, you can leave this 
+blank and set the default License value which will apply to all 
+songs that don't have this value set to something.
+Use this field for per-song license information"
+                        onkeyup="onLicenseChanged();"
+                        onchange="onLicenseChanged();"
+                        />
+                    </td>                      
+                  </tr>
+
+                  <tr>
+                    <th>
+                      Default License:
+                    </th>
+                    <td>
+                      <span class="smaller">
+                        This applies to all songs:
+                      </span>
+                      <input id="txtDefaultLicense"
+                        type="text",
+                        size="40",
+                        title="Set this if you have an organization wide 
+license code to show on each verse/page.
+This will apply to all songs that don't
+have an alternative license code specified."
+                        onkeyup="onDefaultLicenseChanged();"
+                        onchange="onDefaultLicenseChanged();"
+                        />
+                    </td>                      
+                  </tr>
+
+                </table>
+              </fieldset>        
               <fieldset id="fsEditSongVerses">
                 <legend>
                   Edit Song Verses:
@@ -819,114 +923,6 @@ Tag verses can be included in this order as well."
                     </tr>
                   </table>
                 </fieldset>
-              </fieldset>
-              <fieldset id="fsOtherSongSettings">
-                <legend>
-                  Other Song Settings
-                </legend>
-                <table class="innerTable">
-                  <tr>
-                    <th>
-                      Notes:
-                    </th>
-                    <td>
-                      <input id="txtNotes" 
-                        type="text"
-                        size="80"
-                        title="Notes are printed with the lyrics and usually 
-contian information like where to find the song in a hymnal, 
-when the song was created or other info you would want the 
-perfomers to have."
-                        onkeyup="onNotesChanged();"
-                        onchange="onNotesChanged();"
-                        />
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      Title Note:
-                    </th>
-                    <td>
-                      <input id="txtTitleNote" 
-                        type="text"
-                        size="80"
-                        title="Enter what to show for this song when title pages are being generated."
-                        onkeyup="onTitleNoteChanged();"
-                        onchange="onTitleNoteChanged();"
-                        />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <th>
-                      Author:
-                    </th>
-                    <td>
-                      <input id="txtAuthor"
-                        type="text",
-                        size="80",
-                        title="Enter Author data here as desired."
-                        onkeyup="onAuthorChanged();"
-                        onchange="onAuthorChanged();"
-                        />
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <th>
-                      Publisher:
-                    </th>
-                    <td>
-                      <input id="txtPublisher"
-                        type="text",
-                        size="80",
-                        title="Enter Publisher data here as desired."
-                        onkeyup="onPublisherChanged();"
-                        onchange="onPublisherChanged();"
-                        />
-                    </td>                      
-                  </tr>
-
-                  <tr>
-                    <th>
-                      License:
-                    </th>
-                    <td>
-                      <input id="txtLicense"
-                        type="text",
-                        size="80",
-                        title="Some song services require a visible license code such as CCLI.
-If your license code is per organization, you can leave this 
-blank and set the default License value which will apply to all 
-songs that don't have this value set to something."
-                        onkeyup="onLicenseChanged();"
-                        onchange="onLicenseChanged();"
-                        />
-                    </td>                      
-                  </tr>
-
-                  <tr>
-                    <th>
-                      Default License:
-                    </th>
-                    <td>
-                      <span class="smaller">
-                        This applies to all songs:
-                      </span>
-                      <input id="txtDefaultLicense"
-                        type="text",
-                        size="40",
-                        title="Set this if you have an organization wide 
-license code to show on each verse/page.
-This will apply to all songs that don't
-have an alternative license code specified."
-                        onkeyup="onDefaultLicenseChanged();"
-                        onchange="onDefaultLicenseChanged();"
-                        />
-                    </td>                      
-                  </tr>
-
-                </table>
               </fieldset>
             </div>
           </fieldset>

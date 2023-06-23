@@ -2152,10 +2152,213 @@ var songLibrary =
       "fontBoldness": 5,
       "lineHeight": 0.175,
       "TitleNote": "#1 in the Baptist Hymnal"
+    },
+    "Emanuel": {
+      "oPages": {
+        "Verse 1": [
+          "Emmanuel, Emmanuel;",
+          "His name is called Emmanuel,",
+          "God is with us, revealed in us;",
+          "His name is called Emmanuel."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#302 Baptist Hymnal",
+      "TitleNote": "#302 in the Baptist Hymnal",
+      "Author": "Gene Bartlett, 1965",
+      "Publisher": "Albert E. Brumley and Sons.",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Set My Soul Afire": {
+      "oPages": {
+        "Verse 1a": [
+          "Set my soul afire, Lord,",
+          "for thy holy Word,",
+          "burn it deep within me,",
+          "let thy voice be heard;"
+        ],
+        "Verse 1b": [
+          "Millions grope in darkness",
+          "in this day and hour,",
+          "I will be a witness, ",
+          "fill me with thy power."
+        ],
+        "Chorus b": [
+          "Millions grope in darkness, ",
+          "waiting for thy Word,",
+          "Set my soul afire, Lord,",
+          "Set my soul afire."
+        ],
+        "Chorus a": [
+          "Set my soul afire, Lord,",
+          "set my soul afire,",
+          "Make my life a witness",
+          "of thy saving power."
+        ],
+        "Verse 2a": [
+          "Set my soul afire, Lord,",
+          "for the lost in sin,",
+          "Give to me a passion",
+          "as I seek to win;"
+        ],
+        "Verse 2b": [
+          "Help me not to falter,",
+          "never let me fail,",
+          "Fill me with thy Spirit, ",
+          "let thy will prevail."
+        ],
+        "Verse 3a": [
+          "Set my soul afire, Lord,",
+          "in my daily life,",
+          "Far too long I've wandered",
+          "in this day of strife;"
+        ],
+        "Verse 3b": [
+          "Nothing else will matter",
+          "but to live for thee,",
+          "I will be a witness,",
+          "for Christ lives in me."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Chorus b",
+        "Chorus a",
+        "Verse 3b",
+        "Verse 3a",
+        "Chorus b",
+        "Chorus a",
+        "Verse 2b",
+        "Verse 2a",
+        "Chorus b",
+        "Chorus a",
+        "Verse 1b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#320 Baptist Hymnal, 1965",
+      "TitleNote": "#320 in the Baptist Hymnal",
+      "Author": "Gene Bartlett",
+      "Publisher": "Albert E. Brumley and Songs",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1a": {
+          "spaceAbove": 0
+        },
+        "Verse 1b": {
+          "spaceAbove": 0
+        },
+        "Chorus b": {
+          "spaceAbove": 0
+        },
+        "Chorus a": {
+          "spaceAbove": 0
+        },
+        "Verse 2a": {
+          "spaceAbove": 0
+        },
+        "Verse 2b": {
+          "spaceAbove": 0
+        },
+        "Verse 3a": {
+          "spaceAbove": 0
+        },
+        "Verse 3b": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13
+    },
+    "Leaning on the Everlasting Arms": {
+      "oPages": {
+        "Verse 1": [
+          "What a fellowship, ",
+          "what a joy devine,",
+          "Leaning on the everlasting arms; ",
+          "What a blessedness, ",
+          "what a peace is mine,",
+          "Leaning on the everlasting arms."
+        ],
+        "Verse 2": [
+          "Oh, how sweet to walk, ",
+          "in this pilgrim way, ",
+          "Leaning on the everlasting arms; ",
+          "Oh, how bright the path ",
+          "grows from day to day, ",
+          "Leaning on the everlasting arms."
+        ],
+        "Verse 3": [
+          "What have I to dread, ",
+          "What have I to fear, ",
+          "Leaning on the everlasting arms? ",
+          "I have blessed peace ",
+          "with my Lord so near, ",
+          "Leaning on the everlasting arms."
+        ],
+        "Chorus": [
+          "Leaning, leaning, ",
+          "Safe and secure from all alarms;",
+          "Leaning, leaning,",
+          "Leaning on the everlasting arms."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "# 254 Baptist Hymnal",
+      "TitleNote": "# 254 in Baptist Hymnal",
+      "Author": "Elisha A. Hoffman, Anthony J. Showalter 1887",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Chorus": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.156
     }
   },
   "oSongSets": {
-    "songs for 5/21/23": [
+    "2023-06-25 songs": [
+      "This is the Day",
+      "Bless His Holy Name",
+      "I worship You, Almighty God",
+      "Emanuel",
+      "Set My Soul Afire",
+      "Leaning on the Everlasting Arms",
+      "Turn Your Eyes Upon Jesus",
+      "Amazing Grace"
+    ],
+    "2023-05-21 songs": [
       "Come Now is the time to Worship",
       "Bind us together",
       "His name is wonderful",
@@ -2164,7 +2367,7 @@ var songLibrary =
       "Great is thy faithfulness",
       "Amazing Grace"
     ],
-    "songs for 5/28/23": [
+    "2023-05-28 songs": [
       "The Star-Spangled Banner",
       "Mine Eyes Have Seen the Glory",
       "Bind us together",
@@ -2174,27 +2377,7 @@ var songLibrary =
       "Great is thy faithfulness",
       "Amazing Grace"
     ],
-    "songs for 6/4/23": [
-      "This is the Day",
-      "Majesty",
-      "Bless His Holy Name",
-      "I exalt the",
-      "How great thou art",
-      "Crown Him with many crowns",
-      "What a friend we have in Jesus",
-      "Amazing Grace"
-    ],
-    "spmgs fpr 6/11/23": [
-      "This is the Day",
-      "Majesty",
-      "Bless His Holy Name",
-      "I exalt the",
-      "How great thou art",
-      "Crown Him with many crowns",
-      "Come thou Fount of many blessings",
-      "Amazing Grace"
-    ],
-    "songs for 6/18/23": [
+    "2023-06-18 songs": [
       "Alive Alive",
       "Majesty",
       "I worship You, Almighty God",
@@ -2202,6 +2385,26 @@ var songLibrary =
       "Crown Him with many crowns",
       "Holy, Holy, Holy",
       "What a friend we have in Jesus",
+      "Amazing Grace"
+    ],
+    "2023-06-04 songs": [
+      "This is the Day",
+      "Majesty",
+      "Bless His Holy Name",
+      "I exalt the",
+      "How great thou art",
+      "Crown Him with many crowns",
+      "What a friend we have in Jesus",
+      "Amazing Grace"
+    ],
+    "2023-06-11 songs": [
+      "This is the Day",
+      "Majesty",
+      "Bless His Holy Name",
+      "I exalt the",
+      "How great thou art",
+      "Crown Him with many crowns",
+      "Come thou Fount of many blessings",
       "Amazing Grace"
     ]
   },

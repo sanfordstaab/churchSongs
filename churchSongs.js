@@ -747,7 +747,7 @@ function getMessageFromGlobals() {
       fontBoldness: nav.songData.fontBoldness,
       lineHeight: nav.songData.lineHeight,
       allCaps: songLibrary.defaults.allCaps,
-      spaceAbove: nav.songData.oPageData[nav.pageName].spaceAbove, // em
+      spaceAbove: nav.songData.oPages[nav.pageName].spaceAbove, // em
       license: nav.songData.License,
       pageNumber: nav.iPageInSong + 1,
       cPagesInSong: nav.cPagesInSong,
@@ -862,7 +862,7 @@ function getSongSetEditState() {
   const sses = {};
   sses.songSetNameToEdit = ge('selAllSongSetsToEdit').value;
   sses.newSongSetName = ge('txtNewSongSetName').value.trim();
-  sses.songNameToAdd = ge('selFilteredSongsToAdd').value;
+  sses.songNameToAdd = ge('selSongsToAddToSet').value;
   sses.aSongList = songLibrary.oSongSets[sses.songSetNameToEdit];
   if (!sses.aSongList) {
     sses.aSongList = [];
@@ -890,7 +890,6 @@ function enableSongSetEditButtons() {
   const sses = getSongSetEditState();
   show('selAllSongSetsToEdit', !!sses.songSetNameToEdit);
   show('spnNoSongSetsToEdit', !sses.cSongSets);
-  enableElement('btnEditSongSet', !!sses.songSetNameToEdit);
   enableElement('btnDeleteSongSet', !!sses.songSetNameToEdit);
   enableElement('btnCreateNewSongSet', !!sses.newSongSetName);
   enableElement('btnCopySongSet', 
@@ -1037,7 +1036,7 @@ async function onSongSetEditFilterChanged(event) {
 
 async function onEditSongInSetFilterChanged(event) {
   renderSongDropDown(
-    'selFilteredSongsToAdd', 
+    'selSongsToAddToSet', 
     'txtSongSetAddSongFilter',
     '',
     'spnNoSongsToAddToSongSet');
@@ -1135,8 +1134,7 @@ function fillSongToEdit(event) {
     ses.songData.Publisher ? ses.songData.Publisher : '';
   ge('txtLicense').value = 
     ses.songData.License ? ses.songData.License : '';
-  ge('txtDefaultLicense').value = 
-    songLibrary.defaults.License ? songLibrary.defaults.License : '';
+  ge('txtDefaultLicense').value = songLibrary.defaults.License;
   ge('selRepeatCount').value = 
     ses.songData.RepeatCount ? ses.songData.RepeatCount : 1;
 
@@ -1188,12 +1186,15 @@ function onNewSongNameChanged(event) {
   enableSongEditButtons();
 }
 
-async function onNewSongFilterChanged(event) {
-  renderSongDropDown(
+function onNewSongFilterChanged(event) {
+  const cSongs = renderSongDropDown(
     'selAllSongsToEdit', 
     'txtEditSongFilter', 
     '', 
     'spnNoSongsToEdit');
+  if (cSongs == 1) {
+    fillSongToEdit();
+  }
 }
 
 function getSongEditState() {
@@ -1229,6 +1230,7 @@ function doesProposedEditSongNameExist(newSongEditName) {
 
 function enableSongEditButtons() {
   const ses = getSongEditState();
+  hide('spnNoSongsToEdit'); // clear any previous errors
 
   // disable editing fieldsets if the song edit mode is active
   enableElement('fsEditSongVerses', ses.fExistingSong);
@@ -1247,7 +1249,6 @@ function enableSongEditButtons() {
   }
 
   enableElement('btnCreateNewSong', 
-    !ses.fExistingSong && 
     ses.newSongEditName &&
     !fNewSongNameAlreadyExists &&
     ses.newSongEditName != ses.selectedSongToEdit
@@ -1333,9 +1334,13 @@ async function renameSong(event) {
 }
 
 function reRenderAllSongSelectControls(oldSongName, newSongName) {
-  let selectedNavSong = ge('selNavSongs').value;
-  if (selectedNavSong == oldSongName) {
-    selectedNavSong = newSongName;
+  const fRename = 
+    oldSongName && newSongName && oldSongName != newSongName;
+  const fDelete = !oldSongName && !newSongName;
+
+  const selectedNavSong = '';
+  if (fRename) {
+    selectedNavSong = fDelete ? '' : ge('selNavSongs').value;
   }
   renderSongDropDown(
     'selNavSongs', 
@@ -1343,18 +1348,20 @@ function reRenderAllSongSelectControls(oldSongName, newSongName) {
     selectedNavSong,
     'spnNoSongsDefined');
 
-  let selectedAllCurrentSongs = ge('selFilteredSongsToAdd').value;
-  if (selectedAllCurrentSongs == oldSongName) {
-    selectedAllCurrentSongs = newSongName;
+
+  let selectedEditSong = fDelete ? '' : ge('selSongsToAddToSet').value;
+  if (fRename) {
+    selectedEditSong = newSongName;
   }
   renderSongDropDown(
-    'selFilteredSongsToAdd', 
+    'selSongsToAddToSet', 
     'txtSongSetAddSongFilter', 
-    selectedAllCurrentSongs,
+    selectedEditSong,
     'spnNoSongsToAddToSongSet');
 
-  let selectedAllSongsToEdit = ge('selAllSongsToEdit').value;
-  if (selectedAllSongsToEdit == oldSongName) {
+
+  let selectedAllSongsToEdit = fDelete ? '' : ge('selAllSongsToEdit').value;
+  if (fRename) {
     selectedAllSongsToEdit = newSongName;
   }
   renderSongDropDown(
@@ -1381,6 +1388,8 @@ async function deleteSong(event) {
     }
   )
 
+  // call this with no params to indicate a song was deleted 
+  // this makes the song dropdowns select the first song.
   reRenderAllSongSelectControls();
   initSongEditUI();
 }
@@ -1406,7 +1415,7 @@ function enableSongEditVerseButtons(ses) {
 
   // enable lyric control only if a verse is selected
   ge('txtaVerseLines').value = 
-    ses.songData.oPages[ses.pageName] 
+    ses.songData && ses.songData.oPages[ses.pageName] 
       ?
       ses.songData.oPages[ses.pageName].join('\n') 
       :
@@ -2032,6 +2041,8 @@ function renderSongDropDown(
       }
     }
   }
+  // returns length of filtered songs
+  return Array.from(ge(idSel).options)  .length;
 }
 
 // general utilities
