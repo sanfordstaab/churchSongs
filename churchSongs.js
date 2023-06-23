@@ -418,7 +418,8 @@ function enableNavButtons() {
   } else {
     enableElement('btnNavPrevSong', nav.iSongInSet > 0);
     enableElement('btnNextSong', nav.iSongInSet < nav.cSongsInSet - 1);
-    enableElement('btnNavPrevPage', nav.iPageInSong > 0 || nav.iSongInSet > 0);
+    enableElement('btnNavPrevPage', nav.iPageInSong > 0 || nav.iSongInSet > 0 || 
+      songLibrary.defaults.generateTitle && g.nav.showTitlePage);
     enableElement('btnNavNextSongPage', nav.iPageInSong < nav.cPagesInSong - 1 || nav.iSongInSet < nav.cSongsInSet - 1);
   }
   show('btnPrevReviewSong', nav.fInReview);
@@ -518,6 +519,16 @@ function prevPage(event) {
 
 function prevSongPage() {
   console.assert(!g.nav.fInReview);
+  if (g.nav.iPageInSong == 0 && songLibrary.defaults.generateTitle) {
+    if (!g.nav.showTitlePage) {
+      g.nav.showTitlePage = true;
+      renderNavSection();
+      return; // stay at page 0
+    } else {
+      g.nav.showTitlePage = false;
+      blankScreen();
+    }
+  }
   if (g.nav.iPageInSong > 0) {
     g.nav.iPageInSong--;
   } else {
