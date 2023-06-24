@@ -1901,7 +1901,7 @@ function onPrintSongs(event) {
 
   // substitute in the total number of pages which we saved for last
   htmlPrint = htmlPrint.
-    replace(/%numPages%/g, iPrintPage);
+    replace(/%totalPrintPages%/g, iPrintPage - 1);
 
 
   document.body.innerHTML = htmlPrint;
