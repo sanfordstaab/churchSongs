@@ -1881,11 +1881,12 @@ function onPrintSongs(event) {
           iSongInSet, 
           iPrintPage, 
           oHtmlPrint, // so we pass by reference
-          nav.cSongsInSet);
+          nav.cSongsInSet,
+          nav);
         htmlPrint = oHtmlPrint.htmlPrint;
       }
     );
-  } else {
+  } else { // song mode
     ge('divPrintSongError').innerText = '';
     const oHtmlPrint = { htmlPrint: htmlPrint };
     iPrintPage = prepPrint(
@@ -1893,7 +1894,8 @@ function onPrintSongs(event) {
       -1, 
       iPrintPage,
       oHtmlPrint, 
-      0);
+      0,
+      nav);
     htmlPrint = oHtmlPrint.htmlPrint;
   }
 
@@ -1912,15 +1914,14 @@ function prepPrint(
   iSongInSet, 
   iPrintPage, 
   oHtmlPrint, 
-  cSongsInSet) {
+  cSongsInSet,
+  nav) {
 
-  setNavSongUI(songName);
-  const nav = getNavState();
   // pull our invisible print template out of the body.
   const htmlTemplate = ge('divPrintArea').innerHTML;
 
   // reference songData with a nice short name
-  const sd = nav.songData;
+  const sd = songLibrary.oSongs[songName];
 
   // build htmlPageTemplate which has all the values common to all print pages
   let htmlPageTemplate = htmlTemplate.
@@ -1941,13 +1942,13 @@ function prepPrint(
 
   // start with the first print page
   let printPageNumber = 1;
-  const cPagesInSong = nav.fInReview ? nav.cUniquePagesInSong : nav.cPagesInSong;
-
+  
   let htmlPage = htmlPageTemplate;
-
+  const aUnwoundPages = getUnwoundPages(sd);
+  const cPagesInSong = nav.fInReview ? nav.cUniquePagesInSong : aUnwoundPages.length;
   for (let iPageInSong = 0; iPageInSong < cPagesInSong; iPageInSong++) {
     const nSongThisPage = (iPageInSong % 8) + 1; // 1 based index
-    const pageName = nav.aPagesInSong[iPageInSong];
+    const pageName = aUnwoundPages[iPageInSong];
     const pageLines = sd.oPages[pageName];
     const rxPageNameKey = new RegExp(`%pageName-${nSongThisPage}%`, 'g');
     const rxPageLinesKey = new RegExp(`%pageLines-${nSongThisPage}%`, 'g');
