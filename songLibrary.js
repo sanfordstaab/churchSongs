@@ -208,7 +208,7 @@ var songLibrary =
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 4,
+      "RepeatCount": 3,
       "Notes": "#176 Maranatha Song Book",
       "Author": "",
       "Publisher": "",
@@ -2165,7 +2165,7 @@ var songLibrary =
       "aPageOrder": [
         "Verse 1"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": 3,
       "Notes": "#302 Baptist Hymnal",
       "TitleNote": "#302 in the Baptist Hymnal",
       "Author": "Gene Bartlett, 1965",
