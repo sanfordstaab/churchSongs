@@ -2285,7 +2285,7 @@ var songLibrary =
       "oPages": {
         "Verse 1": [
           "What a fellowship, ",
-          "what a joy devine,",
+          "what a joy divine,",
           "Leaning on the everlasting arms; ",
           "What a blessedness, ",
           "what a peace is mine,",
