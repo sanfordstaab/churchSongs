@@ -41,6 +41,7 @@ async function onPageLoad(event) {
     'txtSongSetEditFilter',
     '',
     'spnNoSongSetsToEdit');     
+  editSelectedSongSet();
 
   reRenderAllSongSelectControls('', '');
 
