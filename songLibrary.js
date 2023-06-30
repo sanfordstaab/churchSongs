@@ -1015,8 +1015,9 @@ var songLibrary =
           "We gladly choose You now"
         ],
         "Ending": [
-          "Come come just as you are come",
-          "come"
+          "Come come just as you are",
+          "Come",
+          "Come"
         ]
       },
       "aPageOrder": [
