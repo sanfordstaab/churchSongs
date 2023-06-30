@@ -773,7 +773,7 @@ function getMessageFromGlobals() {
       content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName]
     }
     if (g.nav.showTitlePage) {
-      oMsg.content = `${nav.songName}<br><span class="smaller italic">${nav.songData.TitleNote}</span>`;
+      oMsg.content = `<span style="color: lightblue;">${nav.songName}</span><br><span class="pageTitle">${nav.songData.TitleNote}</span>`;
     }
       
   }

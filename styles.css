@@ -222,6 +222,12 @@ fieldset {
   color: red;
 }
 
+.pageTitle {
+  font-style: italic;
+  font-size: 14pt;
+  color:aqua;
+}
+
 @media print {
   .pgBrk {
     page-break-after: always !important;
