@@ -254,7 +254,11 @@ function renderNavStateText() {
   html += '<br>';
   if (nav.fInReview) {
     pageName = nav.aSongPagePairs[nav.iPageInReview][1];
-    html += `Page: "${pageName}"`;
+    if (g.nav.showTitlePage) {
+      html += `Title Page:`;
+    } else {
+      html += `Page: "${pageName}"`;
+    }
 
     cPages = nav.cUniquePagesInSong;
     pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
@@ -266,7 +270,11 @@ function renderNavStateText() {
     nav.songData.TagPage + ' {Tag}'
     :
     nav.pageName;
-    html += `Page: "${pageName}"`;
+    if (g.nav.showTitlePage) {
+      html += `Title Page:`;
+    } else {
+      html += `Page: "${pageName}"`;
+    }
 
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
