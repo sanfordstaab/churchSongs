@@ -1003,7 +1003,7 @@ function copySongSet(event) {
     setSongSetError('You cannot copy a song set to an already existing song set.  Delete the existing song set first if you want to do this.');
     return;    
   }
-  songLibrary.oSongSets[sses.newSongSetName] = songLibrary.oSongSets[sses.songSetNameToEdit];
+  songLibrary.oSongSets[sses.newSongSetName] = songLibrary.oSongSets[sses.songSetNameToEdit].map((e) => e);;
   renderSongSetDropdown(
     'selAllSongSetsToEdit', 
     'txtSongSetEditFilter', 
