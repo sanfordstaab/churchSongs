@@ -418,9 +418,9 @@ function enableNavButtons() {
   } else {
     enableElement('btnNavPrevSong', nav.iSongInSet > 0);
     enableElement('btnNextSong', nav.iSongInSet < nav.cSongsInSet - 1);
-    enableElement('btnNavPrevPage', nav.iPageInSong > 0 || nav.iSongInSet > 0 || 
-      songLibrary.defaults.generateTitle && g.nav.showTitlePage);
-    enableElement('btnNavNextSongPage', nav.iPageInSong < nav.cPagesInSong - 1 || nav.iSongInSet < nav.cSongsInSet - 1);
+    enableElement('btnNavPrevPage', !g.nav.fBlankScreen);
+    enableElement('btnNavNextSongPage', 
+      nav.iPageInSong < nav.cPagesInSong - 1 || nav.iSongInSet < nav.cSongsInSet - 1);
   }
   show('btnPrevReviewSong', nav.fInReview);
   show('btnNavPrevSong', !nav.fInReview);
@@ -477,7 +477,6 @@ function renderNavSection() {
   renderNavPagePreview();
   renderNavStateText();
   enableNavButtons();
-  g.nav.showTitlePage = false;
 }
 
 function renderNavPagePreview() {
@@ -532,8 +531,9 @@ function prevSongPage() {
   if (g.nav.iPageInSong > 0) {
     g.nav.iPageInSong--;
   } else {
-    console.assert(g.nav.iSongInSet > 0);
-    g.nav.iSongInSet--;
+    if (g.nav.iSongInSet > 0) {
+      g.nav.iSongInSet--;
+    }
   }
   renderNavSection();
 }
@@ -578,9 +578,9 @@ function nextSongPage(event) {
     }
   } else {
     console.assert(nav.iSongInSet < nav.cSongsInSet - 1);
-    g.nav.fBlankScreen = false;
-    g.nav.iPageInSong = 0;
     g.nav.iSongInSet++;
+    g.nav.iPageInSong = 0;
+    g.nav.fBlankScreen = true;
   }
   renderNavSection();
 }
