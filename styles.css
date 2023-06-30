@@ -224,7 +224,7 @@ fieldset {
 
 .pageTitle {
   font-style: italic;
-  font-size: 14pt;
+  font-size: smaller;
   color:aqua;
 }
 
