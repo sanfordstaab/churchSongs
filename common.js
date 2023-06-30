@@ -74,7 +74,7 @@ function fixit(value, cDigits) {
  * @param {number} height 
  */
 function renderPageToHost(elHost, oMsg, width, height) {
-  const heightLeft = height - oMsg.spaceAbove;
+  const heightLeft = height - (oMsg.spaceAbove ? oMsg.spaceAbove : 0);
   const tmpl = `
 <div id="divTopSpacer" style="margin-top:%spaceAbove%;">
 </div>
