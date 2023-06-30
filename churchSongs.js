@@ -49,7 +49,7 @@ async function onPageLoad(event) {
 
   // Nav formatting init
   ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
-  ge('chkGenerateTitles').checked = !!songLibrary.defaults.generateTitle;
+  ge('chkGenerateTitles').checked = songLibrary.defaults.generateTitle ? 'checked' : '';
 
   // song editing init
   hide('spnVerseUpdatedNotice');
@@ -465,9 +465,6 @@ function blankScreen(event) {
   console.assert(!nav.fInReview);
   g.nav.fBlankScreen = !nav.fInReview;
   renderNavSection();
-  if (songLibrary.defaults.generateTitle) {
-    g.nav.showTitlePage = true;
-  }
 }
 
 function renderNavSection() {
@@ -518,10 +515,14 @@ function prevPage(event) {
 
 function prevSongPage() {
   console.assert(!g.nav.fInReview);
-  if (g.nav.iPageInSong == 0 && songLibrary.defaults.generateTitle) {
+  if (g.nav.iPageInSong == 0) {
     if (!g.nav.showTitlePage) {
-      g.nav.showTitlePage = true;
-      renderNavSection();
+      g.nav.showTitlePage = songLibrary.defaults.generateTitle;
+      if (g.nav.showTitlePage) {
+        renderNavSection();
+      } else {
+        blankScreen();
+      }
       return; // stay at page 0
     } else {
       g.nav.showTitlePage = false;
@@ -565,19 +566,19 @@ function nextSongPage(event) {
     if (nav.iPageInSong == 0) {
       if (nav.fBlankScreen) {
         g.nav.fBlankScreen = false;
-        if (songLibrary.defaults.generateTitle) {
-          g.nav.showTitlePage = true;
-        }
+        g.nav.showTitlePage = songLibrary.defaults.generateTitle;
+        // don't advance - show first page or title
       } else if (g.nav.showTitlePage) {
         g.nav.showTitlePage = false;
+        // don't advance - show first page
       } else {
         g.nav.iPageInSong++;
       }
     } else {
       g.nav.iPageInSong++;
     }
-  } else {
-    console.assert(nav.iSongInSet < nav.cSongsInSet - 1);
+  } else if (nav.iSongInSet < nav.cSongsInSet - 1) {
+    // advance to the next song, first page, blank screen.
     g.nav.iSongInSet++;
     g.nav.iPageInSong = 0;
     g.nav.fBlankScreen = true;
@@ -788,6 +789,10 @@ function onAllCapsChanged(event) {
 
 function onGenerateTitlePagesChanged(event) {
   songLibrary.defaults.generateTitle = !!ge('chkGenerateTitles').checked;
+  if (g.nav.showTitlePage) {
+    g.nav.showTitlePage = songLibrary.defaults.generateTitle;
+    renderNavSection();
+  }
 }
 
 // Song formatting
