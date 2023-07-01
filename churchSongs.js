@@ -761,7 +761,6 @@ function getMessageFromGlobals() {
       lineHeight: songData.lineHeight,
       content: songData.oPages[nav.pageName],
       allCaps: songLibrary.defaults.allCaps,
-      spaceAbove: songData.oPages[nav.pageName].spaceAbove, // em
       license: songData.License,
       pageNumber: nav.iUniquePageInSong + 1,
       cPagesInSong: nav.cUniquePagesInSong,
@@ -774,7 +773,6 @@ function getMessageFromGlobals() {
       fontBoldness: nav.songData.fontBoldness,
       lineHeight: nav.songData.lineHeight,
       allCaps: songLibrary.defaults.allCaps,
-      spaceAbove: nav.songData.oPages[nav.pageName].spaceAbove, // em
       license: nav.songData.License,
       pageNumber: nav.iPageInSong + 1,
       cPagesInSong: nav.cPagesInSong,
@@ -843,25 +841,6 @@ function lessBoldFont(event) {
     nav.songData.fontBoldness--;
     renderNavSection();
   }
-}
-
-// Song Page formatting
-function moveTextDown(event) {
-  const nav = getNavState();
-  nav.songData.oPageData[nav.pageName].spaceAbove =
-    Number(nav.songData.oPageData[nav.pageName].spaceAbove) + .25; // em
-  renderNavSection();
-}
-
-function moveTextUp(event) {
-  const nav = getNavState();
-  let newSpace = 
-    Number(nav.songData.oPageData[nav.pageName].spaceAbove) - .25; // em
-  if (newSpace < 0) {
-    newSpace = 0;
-  }
-  nav.songData.oPageData[nav.pageName].spaceAbove = newSpace;
-  renderNavSection();
 }
 
 // song set editing
@@ -1369,7 +1348,7 @@ function reRenderAllSongSelectControls(oldSongName, newSongName) {
     oldSongName && newSongName && oldSongName != newSongName;
   const fDelete = !oldSongName && !newSongName;
 
-  const selectedNavSong = '';
+  let selectedNavSong = '';
   if (fRename) {
     selectedNavSong = fDelete ? '' : ge('selNavSongs').value;
   }
@@ -1583,9 +1562,6 @@ async function deleteSelectedVerse(event) {
     ses.songData.TagPage = '';
   }
   delete ses.songData.oPages[ses.pageName];
-  if (ses.songData.oPageData && ses.songData.oPageData[ses.pageName]) {
-    delete ses.songData.oPageData[ses.pageName];
-  }
   fillSongToEdit();
 }
 
@@ -2209,27 +2185,20 @@ function healSongLibrary() {
       const oSD = o.oSongs[songName];
       const aPageNames = Object.keys(oSD.oPages);
 
-      // fix up oPageData values
+      // fix up song data values
       if (!oSD.RepeatCount) oSD.RepeatCount = 1;
       if (!oSD.TitleNote) oSD.TitleNote = '';
       if (!oSD.Notes) oSD.Notes = '';
       if (!oSD.Author) oSD.Author = '';
       if (!oSD.Publisher) oSD.Publisher = '';
       if (!oSD.License) oSD.License = songLibrary.defaults.License;
-      if (!oSD.oPageData) oSD.oPageData = {};
       if (!oSD.fontSize) oSD.fontSize = o.defaults.fontSize;
       if (!oSD.fontBoldness) oSD.fontBoldness = o.defaults.fontBoldness;
       if (!oSD.lineHeight) oSD.lineHeight = o.defaults.lineHeight;
-      aPageNames.forEach(
-        function (pageName) {
-          // fix up per-page data
-          let oPD = oSD.oPageData[pageName];
-          if (!oPD) oPD = oSD.oPageData[pageName] = {};
-          if (!oPD.spaceAbove) {
-            oPD.spaceAbove = 0;
-          }
-        }
-      )
+      // oPageData was removed
+      if (oSD.oPageData) {
+        delete oSD.oPageData;
+      }
     }
   ); // oSongs 
 }

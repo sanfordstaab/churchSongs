@@ -74,12 +74,9 @@ function fixit(value, cDigits) {
  * @param {number} height 
  */
 function renderPageToHost(elHost, oMsg, width, height) {
-  const heightLeft = height - (oMsg.spaceAbove ? oMsg.spaceAbove : 0);
-  const tmpl = `
-<div id="divTopSpacer" style="margin-top:%spaceAbove%;">
-</div>
+  let html = `
 <content id="content" class="proj-content" style="line-height: %lineHeight%px;">
-  <table width="${width}" height="${heightLeft}">
+  <table width="${width}" height="${height}">
     <tr>
       <td colspan="100% width="100%" class="vam">
         %content%
@@ -100,7 +97,6 @@ function renderPageToHost(elHost, oMsg, width, height) {
   </table>
 </div>
 `;
-  let html = '';
   if (oMsg.content) {
     let style = '';
     if (oMsg.fontSize) {
@@ -112,7 +108,6 @@ function renderPageToHost(elHost, oMsg, width, height) {
     if (oMsg.allCaps) {
       style += `text-transform: uppercase; `;
     }
-    html = tmpl.replace('%spaceAbove%', oMsg.spaceAbove + 'em');
     console.assert(undefined != oMsg.pageNumber);
     if (!oMsg.songNumber) {
       oMsg.songNumber = '';
@@ -135,7 +130,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
 
   } else { // blank page
 
-    html = tmpl.
+    html = html.
       replace('%content%', '').
       replace('%pageNumber%', '').
       replace('%songNumber%', '').

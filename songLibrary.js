@@ -19,11 +19,6 @@ var songLibrary =
       "Author": "Words: Thomas Ken, 1695, Tune: Genevan Psalm, 1551",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.167,
@@ -60,21 +55,7 @@ var songLibrary =
       "RepeatCount": 2,
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Chorus A": {
-          "spaceAbove": 0
-        },
-        "Chorus B": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.055,
+      "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.203,
       "TitleNote": "#73 in the Maranatha Praise Book"
@@ -155,35 +136,6 @@ var songLibrary =
       "Author": "Words: Sabine Baring-Gould, Tune: Arthur S. Sullivan",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        },
-        "Verse 4a": {
-          "spaceAbove": 0
-        },
-        "Verse 4b": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.203,
@@ -213,14 +165,6 @@ var songLibrary =
       "Author": "",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.193,
@@ -274,23 +218,6 @@ var songLibrary =
       "Author": "Words: William R. Newel, Tune: Daniel B. Towner",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.167,
@@ -300,14 +227,14 @@ var songLibrary =
       "oPages": {
         "Verse 1": [
           "Jesus, Jesus, Jesus",
-          "Ther just something about that name",
-          "Master, Savior, Jesue",
+          "There's just something about that name",
+          "Master, Savior, Jesus",
           "Like a fragrance after the rain."
         ],
         "Verse 2": [
           "Jesus, Jesus, Jesus",
-          "Let all heaven and earth procliam,",
-          "Kings and kingdomes will all pass away,",
+          "Let all heaven and earth proclaim,",
+          "Kings and kingdoms will all pass away,",
           "But there's something about that name."
         ]
       },
@@ -320,14 +247,6 @@ var songLibrary =
       "Author": "William J. & Gloria Gather",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.144,
@@ -374,20 +293,6 @@ var songLibrary =
       "Notes": "#97 Maranatha Praise Book 1990, #198 Baptist Hymnal",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.159,
@@ -433,21 +338,7 @@ var songLibrary =
       "Notes": "#334 Baptist Hymnal",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.041,
+      "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.189,
       "TitleNote": "#334 in the Baptist Hymnal"
@@ -476,48 +367,40 @@ var songLibrary =
       "Author": "Dave Doherty",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.055,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.202,
+      "lineHeight": 0.192,
       "TitleNote": "#211 in the Maranatha Praise Book"
     },
     "Amazing Grace": {
       "oPages": {
         "Verse 1": [
-          "Amazing Grace how sweet the sound",
+          "Amazing Grace how sweet the sound,",
           "That saved a wretch like me.",
-          "I once was lost but now am found",
+          "I once was lost but now am found,",
           "Was blind but now I see."
         ],
         "Verse 2": [
           "T'was grace that taught my heart to fear",
-          "And grace my fears relieved.",
+          "And grace my fears relieved;",
           "How precious did that grace appear",
           "The hour I first believed."
         ],
         "Verse 3": [
-          "Through many dangers, toils and snares",
+          "Through many dangers, toils and snares,",
           "I have already come.",
-          "'Tis grace hath brought me safe thus far",
+          "'Tis grace hath brought me safe thus far,",
           "And grace will lead me home."
         ],
         "Verse 4": [
-          "The Lord has promised good to me",
-          "His Word my hope secures.",
+          "The Lord has promised good to me,",
+          "His Word my hope secures;",
           "He will my shield and portion be",
           "As long as life endures."
         ],
         "Verse 5": [
-          "When we've been there ten thousand years",
-          "Bright shining as the sun",
+          "When we've been there ten thousand years,",
+          "Bright shining as the sun,",
           "We've no less days to sing God's praise",
           "Than when we first begun."
         ]
@@ -534,23 +417,6 @@ var songLibrary =
       "Notes": "#165 Baptist Hymnal",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        },
-        "Verse 5": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.213,
@@ -559,59 +425,94 @@ var songLibrary =
     "Our God Reigns": {
       "oPages": {
         "Verse 1": [
-          "How lovely on the mountains are the feet of Him",
-          "Who brings good new, good news.",
-          "Announcing peace, proclaiming news of happiness."
+          "How lovely on the mountains ",
+          "are the feet of Him",
+          "Who brings good new, ",
+          "good news.",
+          "Announcing peace, ",
+          "proclaiming news of happiness."
         ],
         "Chorus 1": [
-          "Our God reigns, our God reigns.",
-          "Our God reigns, our God reigns.",
-          "Our God reigns, our God reigns!"
+          "Our God reigns, ",
+          "our God reigns.",
+          "Our God reigns, ",
+          "our God reigns.",
+          "Our God reigns, ",
+          "our God reigns!"
         ],
         "Verse 2": [
-          "He had no stately form, He had no majesty.",
-          "That we should be drawn to Him.",
-          "He was despised and we took no account of Him."
+          "He had no stately form, ",
+          "He had no majesty.",
+          "That we should be drawn ",
+          "to Him.",
+          "He was despised ",
+          "and we took no account of Him."
         ],
         "Chorus 2": [
-          "Yet now He reigns with the Most High.",
-          "Now He reigns with the Most High;",
-          "Now He reigns with the Most High."
+          "Yet now He reigns ",
+          "with the Most High.",
+          "Now He reigns ",
+          "with the Most High;",
+          "Now He reigns ",
+          "with the Most High."
         ],
         "Verse 3": [
-          "It was our sin and guilt that bruised and wounded Him.",
-          "It was our sin that brought Him down;",
-          "When we, like sheep, had gone astray, our Shepard came."
+          "It was our sin and guilt ",
+          "that bruised and wounded Him.",
+          "It was our sin ",
+          "that brought Him down;",
+          "When we, like sheep, ",
+          "had gone astray, ",
+          "our Shepard came."
         ],
         "Chorus 3": [
-          "And on His shoulders bore our shame.",
-          "On His shoulders, on His shoulders;",
-          "On His shoulders He bore our shame."
+          "And on His shoulders ",
+          "bore our shame.",
+          "On His shoulders, ",
+          "on His shoulders;",
+          "On His shoulders ",
+          "He bore our shame."
         ],
         "Verse 4": [
-          "Meek as a lamb that's led out to the slaughterhouse,",
-          "Dumb as a sheep before its shearer,",
-          "His life ran down upon the ground like pouring rain."
+          "Meek as a lamb that's ",
+          "led out to the slaughterhouse,",
+          "Dumb as a sheep ",
+          "before its shearer,",
+          "His life ran down upon ",
+          "the ground like pouring rain."
         ],
         "Chorus 4": [
-          "That we might be born again.",
-          "That we might be, that we might be.",
-          "That we might be born again."
+          "That we might be ",
+          "born again.",
+          "That we might be, ",
+          "that we might be.",
+          "That we might be ",
+          "born again."
         ],
         "Verse 5": [
-          "Out from the tomb He came with grace and majesty,",
-          "He is alive, He is alive.",
-          "God loves us so, see here His hands, His feet, His side."
+          "Out from the tomb ",
+          "He came with grace and majesty,",
+          "He is alive, ",
+          "He is alive.",
+          "God loves us so, ",
+          "see here His hands, ",
+          "His feet, His side."
         ],
         "Chorus 5": [
-          "Yes, we know, He is alive.",
-          "He is alive, He is alive;",
-          "He is alive, He is alive."
+          "Yes, we know, ",
+          "He is alive.",
+          "He is alive, ",
+          "He is alive;",
+          "He is alive, ",
+          "He is alive."
         ],
         "Verse 6": [
-          "How lovely on the mountains are the feet of Him",
-          "Who brings good news, good news.",
-          "Announcing peace, proclaiming news of happiness."
+          "How lovely on ",
+          "the mountains are the feet of Him",
+          "Who brings good news, ",
+          "good news.",
+          "Announcing peace, ",
+          "proclaiming news of happiness."
         ]
       },
       "aPageOrder": [
@@ -633,44 +534,9 @@ var songLibrary =
       "Notes": "#111 Maranatha Praise Book 1990",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        },
-        "Verse 5": {
-          "spaceAbove": 0
-        },
-        "Verse 6": {
-          "spaceAbove": 0
-        },
-        "Chorus 1": {
-          "spaceAbove": 0
-        },
-        "Chorus 2": {
-          "spaceAbove": 0
-        },
-        "Chorus 3": {
-          "spaceAbove": 0
-        },
-        "Chorus 4": {
-          "spaceAbove": 0
-        },
-        "Chorus 5": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.03,
       "fontBoldness": 5,
-      "lineHeight": 0.196,
+      "lineHeight": 0.123,
       "TitleNote": "#111 in the Maranatha Praise Book"
     },
     "Bless His Holy Name": {
@@ -698,18 +564,7 @@ var songLibrary =
       "RepeatCount": 2,
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.06,
+      "fontSize": 0.058,
       "fontBoldness": 5,
       "lineHeight": 0.224,
       "TitleNote": "#114 in the Maranatha Praise Book"
@@ -740,20 +595,9 @@ var songLibrary =
       "TagPage": "Chorus",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.175,
+      "lineHeight": 0.15,
       "TitleNote": "#109 in the Maranatha Praise Book"
     },
     "Alive Alive": {
@@ -799,32 +643,6 @@ var songLibrary =
       "Author": "Bob Singleton",
       "Publisher": "Singleton Productions Inc.",
       "Notes": "Not in hymnal or song book",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse": {
-          "spaceAbove": 0
-        },
-        "Tag": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Chorus b": {
-          "spaceAbove": 0
-        },
-        "Chorus a": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.074,
       "fontBoldness": 5,
       "lineHeight": 0.232,
@@ -891,29 +709,6 @@ var songLibrary =
       "Author": "Words: Katherine Hankey, Tune: William G. Fisher",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.193,
@@ -970,23 +765,6 @@ var songLibrary =
       "Notes": "Not in hymnal or songbook.",
       "Author": "",
       "Publisher": "",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.167,
@@ -1028,23 +806,9 @@ var songLibrary =
       "TagPage": "Ending",
       "RepeatCount": 1,
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Ending": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.039,
+      "fontSize": 0.032,
       "fontBoldness": 5,
-      "lineHeight": 0.164,
+      "lineHeight": 0.156,
       "Notes": "",
       "Author": "",
       "Publisher": "",
@@ -1090,23 +854,6 @@ var songLibrary =
       "Author": "Audrey Mieir",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus 1": {
-          "spaceAbove": 0
-        },
-        "Chorus 2": {
-          "spaceAbove": 0
-        },
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Tag": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.203,
@@ -1198,41 +945,9 @@ var songLibrary =
       "Notes": "#231 Baptist Hymnal",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Chorus a": {
-          "spaceAbove": 0
-        },
-        "Chorus b": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        },
-        "Verse 4a": {
-          "spaceAbove": 0
-        },
-        "Verse 4b": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.055,
       "fontBoldness": 1,
-      "lineHeight": 0.203,
+      "lineHeight": 0.182,
       "TitleNote": "#231 in the Baptist Hymnal"
     },
     "Great is thy faithfulness": {
@@ -1297,29 +1012,6 @@ var songLibrary =
       "RepeatCount": 1,
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.159,
@@ -1334,7 +1026,7 @@ var songLibrary =
           "at the twilight's last gleaming,"
         ],
         "Verse 1b": [
-          "Whos broad stripes and bright stars,",
+          "Whose broad stripes and bright stars,",
           "thro' the perilous fight,",
           "O'er the ramparts we watched,",
           "were so gallantly streaming?"
@@ -1365,14 +1057,14 @@ var songLibrary =
         ],
         "Chorus 1a": [
           "And the rockets' red glare,",
-          "the bombs burting in air",
+          "the bombs bursting in air",
           "Gave proof thro' the night",
           "that our flag was still there."
         ],
         "Chorus 1b": [
           "O say, does that Star-spangled",
           "Banner yet wave",
-          "O'r the land of the frre",
+          "O'er the land of the frre",
           "and the home of the brave."
         ]
       },
@@ -1391,35 +1083,9 @@ var songLibrary =
       "Author": "Words: Francis Scott Key, Tune: National Anthem, origin unknown 18th centyry",
       "Publisher": "",
       "License": "Public Domain",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Chorus 2b": {
-          "spaceAbove": 0
-        },
-        "Chorus 2a": {
-          "spaceAbove": 0
-        },
-        "Chorus 1a": {
-          "spaceAbove": 0
-        },
-        "Chorus 1b": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.045,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.167,
+      "lineHeight": 0.213,
       "TitleNote": "#512 in the Baptist Hymnal"
     },
     "Mine Eyes Have Seen the Glory": {
@@ -1437,7 +1103,7 @@ var songLibrary =
           "Glory! Glory, hallelujah!",
           "Glory! Glory, hallelujah! ",
           "Glory! Glory, hallelujah!",
-          "God is marching on."
+          "Our God is marching on."
         ],
         "Verse 2": [
           "I have seen him in the watch-fires ",
@@ -1472,7 +1138,7 @@ var songLibrary =
           "He is wisdom to the mighty,",
           "He is honor to the brave;",
           "So the world shall be his footstool, ",
-          "and the sould of wrong his slave.",
+          "and the soul of wrong his slave.",
           "Our God is marching on."
         ]
       },
@@ -1493,29 +1159,9 @@ var songLibrary =
       "Author": "Words: Julia Ward Howe",
       "Publisher": "",
       "License": "Public Domain",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        },
-        "Verse 5": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.142,
+      "lineHeight": 0.128,
       "TitleNote": "#510 in the Baptist Hymnal"
     },
     "This is the Day": {
@@ -1555,20 +1201,6 @@ var songLibrary =
       "Author": "Les Garrett",
       "Publisher": "Scripture In Song (C) 1980",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.061,
       "fontBoldness": 5,
       "lineHeight": 0.203,
@@ -1619,71 +1251,10 @@ var songLibrary =
       "Author": "Jack Hayford",
       "Publisher": "Rocksmith Music (C) 1981",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        },
-        "Verse 5": {
-          "spaceAbove": 0
-        },
-        "Chorus A": {
-          "spaceAbove": 0
-        },
-        "Chorus B": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.183,
       "TitleNote": "#98 in the Maranatha Praise Book"
-    },
-    "I exalt the": {
-      "oPages": {
-        "Verse 1": [
-          "For Thou, O Lord,",
-          "art high above all the earth;",
-          "Thou art exalted far above all gods."
-        ],
-        "Verse 2": [
-          "I exalt Thee,",
-          "I exalt Thee,",
-          "I exalt Thee,",
-          "O Lord."
-        ]
-      },
-      "aPageOrder": [
-        "Verse 1",
-        "Verse 1",
-        "Verse 2",
-        "Verse 2"
-      ],
-      "RepeatCount": 2,
-      "Notes": "#69 Maranatha Praise Book 1990",
-      "Author": "Pete Sanchez. Jr.",
-      "Publisher": "Pete Sanchez, Jr.",
-      "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.045,
-      "fontBoldness": 5,
-      "lineHeight": 0.18,
-      "TitleNote": "#69 in the Maranatha Praise Book"
     },
     "How great thou art": {
       "oPages": {
@@ -1765,35 +1336,6 @@ var songLibrary =
       "Author": "Words: Carl Boberg, 1886, Tune: Stuart K. Hine",
       "Publisher": "Menna Music, Inc. (C) 1955",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Chorus": {
-          "spaceAbove": 0
-        },
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        },
-        "Verse 4a": {
-          "spaceAbove": 0
-        },
-        "Verse 4b": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.213,
@@ -1865,35 +1407,9 @@ var songLibrary =
       "Author": "Words: Matthew Bridges, 1851, Tune: George J. Elvey, 1968",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        },
-        "Verse 4a": {
-          "spaceAbove": 0
-        },
-        "Verse 4b": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.05,
+      "fontSize": 0.041,
       "fontBoldness": 4,
-      "lineHeight": 0.167,
+      "lineHeight": 0.184,
       "TitleNote": "#52 in the Baptist Hymnal"
     },
     "What a friend we have in Jesus": {
@@ -1948,29 +1464,9 @@ var songLibrary =
       "Author": "Words: Joseph Scriven, 1855, Tune Charles C. Converse, 1868",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.045,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.172,
+      "lineHeight": 0.21,
       "TitleNote": "#403 in the Baptist Hymnal"
     },
     "Come thou Fount of many blessings": {
@@ -2025,26 +1521,6 @@ var songLibrary =
       "Publisher": "Boardman Press 1957",
       "Notes": "#12 Baptist Hymnal",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.202,
@@ -2120,36 +1596,7 @@ var songLibrary =
       "Author": "Words: Reginald Heber, 1836, Tune: John B. Dykes, 1861",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        },
-        "Verse 4a": {
-          "spaceAbove": 0
-        },
-        "Verse 4b": {
-          "spaceAbove": 0
-        },
-        "tag": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.061,
+      "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.175,
       "TitleNote": "#1 in the Baptist Hymnal"
@@ -2172,14 +1619,9 @@ var songLibrary =
       "Author": "Gene Bartlett, 1965",
       "Publisher": "Albert E. Brumley and Sons.",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.076,
+      "fontSize": 0.055,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.224
     },
     "Set My Soul Afire": {
       "oPages": {
@@ -2252,35 +1694,9 @@ var songLibrary =
       "Author": "Gene Bartlett",
       "Publisher": "Albert E. Brumley and Songs",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1a": {
-          "spaceAbove": 0
-        },
-        "Verse 1b": {
-          "spaceAbove": 0
-        },
-        "Chorus b": {
-          "spaceAbove": 0
-        },
-        "Chorus a": {
-          "spaceAbove": 0
-        },
-        "Verse 2a": {
-          "spaceAbove": 0
-        },
-        "Verse 2b": {
-          "spaceAbove": 0
-        },
-        "Verse 3a": {
-          "spaceAbove": 0
-        },
-        "Verse 3b": {
-          "spaceAbove": 0
-        }
-      },
-      "fontSize": 0.076,
+      "fontSize": 0.054,
       "fontBoldness": 5,
-      "lineHeight": 0.13
+      "lineHeight": 0.203
     },
     "Leaning on the Everlasting Arms": {
       "oPages": {
@@ -2329,20 +1745,6 @@ var songLibrary =
       "Author": "Elisha A. Hoffman, Anthony J. Showalter 1887",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Chorus": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.156
@@ -2403,23 +1805,39 @@ var songLibrary =
       "Author": "Words: William Cowper, 1771",
       "Publisher": "Publc Domain",
       "License": "CCLI 20847323",
-      "oPageData": {
-        "Verse 1": {
-          "spaceAbove": 0
-        },
-        "Verse 2": {
-          "spaceAbove": 0
-        },
-        "Verse 3": {
-          "spaceAbove": 0
-        },
-        "Verse 4": {
-          "spaceAbove": 0
-        }
-      },
       "fontSize": 0.036,
       "fontBoldness": 2,
-      "lineHeight": 0.117
+      "lineHeight": 0.111
+    },
+    "I Exalt Thee": {
+      "oPages": {
+        "Verse 1": [
+          "For Thou, O Lord,",
+          "art high above all the earth;",
+          "Thou art exalted far above all gods."
+        ],
+        "Verse 2": [
+          "I exalt Thee,",
+          "I exalt Thee,",
+          "I exalt Thee,",
+          "O Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 1",
+        "Verse 2",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#69 Maranatha Praise Book 1990",
+      "Author": "Pete Sanchez. Jr.",
+      "Publisher": "Pete Sanchez, Jr.",
+      "License": "CCLI 20847323",
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18,
+      "TitleNote": "#69 in the Maranatha Praise Book"
     }
   },
   "oSongSets": {
@@ -2456,7 +1874,7 @@ var songLibrary =
       "Alive Alive",
       "Majesty",
       "I worship You, Almighty God",
-      "I exalt the",
+      "I Exalt Thee",
       "Crown Him with many crowns",
       "Holy, Holy, Holy",
       "What a friend we have in Jesus",
@@ -2466,7 +1884,7 @@ var songLibrary =
       "This is the Day",
       "Majesty",
       "Bless His Holy Name",
-      "I exalt the",
+      "I Exalt Thee",
       "How great thou art",
       "Crown Him with many crowns",
       "What a friend we have in Jesus",
@@ -2476,7 +1894,7 @@ var songLibrary =
       "This is the Day",
       "Majesty",
       "Bless His Holy Name",
-      "I exalt the",
+      "I Exalt Thee",
       "How great thou art",
       "Crown Him with many crowns",
       "Come thou Fount of many blessings",
@@ -2486,7 +1904,7 @@ var songLibrary =
       "This is the Day",
       "There's something about that name",
       "I worship You, Almighty God",
-      "I exalt the",
+      "I Exalt Thee",
       "The Star-Spangled Banner",
       "Mine Eyes Have Seen the Glory",
       "There is a Fountain",
@@ -2501,6 +1919,7 @@ var songLibrary =
     "License": "CCLI 20847323",
     "aspectRatio": "0.4716",
     "savedAspectRatio": "0.4715",
-    "generateTitle": true
+    "generateTitle": true,
+    "lastReviewPage": 3
   }
 }
