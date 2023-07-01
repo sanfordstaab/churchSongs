@@ -2391,12 +2391,35 @@ var songLibrary =
           "And shall be till I die."
         ]
       },
-      "aPageOrder": [],
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
       "RepeatCount": 1,
       "TitleNote": "#107 in the Baptist Hymnal",
       "Notes": "#107 Baptist Hymnal",
       "Author": "Words: William Cowper, 1771",
-      "Publisher": "Publc Domain"
+      "Publisher": "Publc Domain",
+      "License": "CCLI 20847323",
+      "oPageData": {
+        "Verse 1": {
+          "spaceAbove": 0
+        },
+        "Verse 2": {
+          "spaceAbove": 0
+        },
+        "Verse 3": {
+          "spaceAbove": 0
+        },
+        "Verse 4": {
+          "spaceAbove": 0
+        }
+      },
+      "fontSize": 0.036,
+      "fontBoldness": 2,
+      "lineHeight": 0.117
     }
   },
   "oSongSets": {
@@ -2459,13 +2482,15 @@ var songLibrary =
       "Come thou Fount of many blessings",
       "Amazing Grace"
     ],
-    "2023-06-02": [
+    "2023-07-02 songs": [
       "This is the Day",
       "There's something about that name",
       "I worship You, Almighty God",
       "I exalt the",
       "The Star-Spangled Banner",
-      "Mine Eyes Have Seen the Glory"
+      "Mine Eyes Have Seen the Glory",
+      "There is a Fountain",
+      "Amazing Grace"
     ]
   },
   "defaults": {
