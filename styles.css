@@ -85,6 +85,10 @@ fieldset {
   border: solid black 2px;
 }
 
+.nbdr {
+  border: none;
+}
+
 #navKeyTable td {
   border: none;
 }
@@ -101,9 +105,16 @@ fieldset {
 .keyNavInstructions {
   position:absolute;
   top: 50%;
-  left: 50%;
+  left: 47%;
   transform: translateY(100%);
   z-index: 2;
+  opacity: 0.5;
+  background-color: yellow;
+}
+
+#tdSongNavArea {
+  font-size: smaller;
+  width: 250px;
 }
 
 .al {
@@ -263,6 +274,7 @@ fieldset {
   text-align: center;
   vertical-align: middle;
   height: 300px;
+  border: solid 5px solid black;
 }
 
 #tdPagePreview:focus {

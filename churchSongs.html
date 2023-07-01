@@ -280,7 +280,7 @@ This will be exported with the song library."
             </legend>
             <table class="innerTable">
               <tr>              
-                <td id="tdSongNavArea" claSS="smaller">
+                <td id="tdSongNavArea">
                   <div id="divNavStateText"
                     class="smallest">
                     <!-- filled in by renderNavStateText() -->
@@ -383,7 +383,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                   </center>
 
                   <fieldset  id="fsKeyNavInstructions" 
-                    class="bgWhite m0 keyNavInstructions"
+                    class="m0 keyNavInstructions"
                     onclick="ge('fsKeyNavInstructions').outerHTML = ''">
                     <p 
                       class="smallest m0"
@@ -407,9 +407,12 @@ Spacebar=Toggle Blank Screen state"
                     Save Projector Aspect Ratio
                   </button>   
                   <p class="smallest m0">
-                    Aspect Ratio: Current:
+                    Aspect Ratio:
+                    <br>
+                    Current:
                     [<span id="spnCurrentAspectRatio">
                     </span>]
+                    <br>
                     Saved:
                     [<span id="spnSavedAspectRatio">
                     </span>]
@@ -423,6 +426,7 @@ Spacebar=Toggle Blank Screen state"
                   </button> -->
                 </td>
                 <td id="tdPagePreview"
+                  style="border: none;"
                   tabindex="13"
                   onkeydown="onPreviewKey(event);"
                 >

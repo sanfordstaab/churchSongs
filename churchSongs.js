@@ -241,11 +241,11 @@ function renderNavStateText() {
   let cPages = 0;
   let sTotalPages = '';
   if (nav.fInReview) {
-    html += `Reviewing: Song:<br><u>${getSongPagePairs()[nav.iPageInReview][0]}</u>`;
+    html += `Reviewing: Song:<br><b>${getSongPagePairs()[nav.iPageInReview][0]}</b>`;
     cSongs = nav.cSongsInReview;
     songPos = `<b>${nav.iSongInReview + 1}</b> of ${nav.cSongsInReview}`;
   } else {
-    html += `Projecting Song: <u>${nav.songName}</u>`;
+    html += `Projecting Song:<br><b>${nav.songName}</b>`;
     if (fIsSongSetMode) {
       cSongs = nav.cSongsInSet;
       songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet)} of ${nav.cSongsInSet}`;
@@ -263,7 +263,7 @@ function renderNavStateText() {
 
     cPages = nav.cUniquePagesInSong;
     pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
-    sTotalPages = ` unique pages in the song.<br>page ${nav.iPageInReview + 1} of ${nav.cPagesInReview} review pages.`
+    sTotalPages = `<br>unique pages in the song.<br>page ${nav.iPageInReview + 1} of ${nav.cPagesInReview} review pages.`
   } else {
     let pageName = 
     (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 

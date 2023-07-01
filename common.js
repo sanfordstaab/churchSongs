@@ -76,21 +76,21 @@ function fixit(value, cDigits) {
 function renderPageToHost(elHost, oMsg, width, height) {
   let html = `
 <content id="content" class="proj-content" style="line-height: %lineHeight%px;">
-  <table width="${width}" height="${height}">
+  <table width="${width}" height="${height}" style="border: none;">
     <tr>
-      <td colspan="100% width="100%" class="vam">
+      <td colspan="100% width="100%" class="vam" style="border: none;">
         %content%
       </td>
     </tr>
   </table>
 </content>
 <div class="smallest vat proj-footer">
-  <table width="100%" class="at">
+  <table width="100%" class="at" style="border: none;">
     <tr>
-      <td class="al">
+      <td class="al" style="border: none;">
         <span class="%pageNumbClass%">%pageNumber%</span><span class="%songNumbClass%">%songNumber%</span>
       </td>
-      <td class="ar">
+      <td class="ar" style="border: none;">
         %license%
       </td>
     </tr>
@@ -121,7 +121,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
         oMsg.content.join('<br>')
       :
         oMsg.content).
-    replace('%lineHeight%', oMsg.lineHeight * height).
+    replace('%lineHeight%', fixit(oMsg.lineHeight * height, 3)).
     replace('%pageNumber%', ' p' + oMsg.pageNumber).
     replace('%songNumber%', ' s' + oMsg.songNumber).
     replace('%license%', oMsg.license).
