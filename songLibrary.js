@@ -2346,6 +2346,57 @@ var songLibrary =
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.156
+    },
+    "There is a Fountain": {
+      "oPages": {
+        "Verse 1": [
+          "There is a fountain filled with blood,",
+          "Drawn from Immanuel's veins;",
+          "And sinners, plunged beneath that flood, ",
+          "Lose all their guilty stains:",
+          "Lose all their guilty stains,",
+          "Lose all their guilty stains;",
+          "And sinners, plunged beneath that flood,",
+          "Lose all their guilty stains."
+        ],
+        "Verse 2": [
+          "The dying thief rejoiced to see ",
+          "That fountain in his day;",
+          "And there may I, though vile as he, ",
+          "Wash all my sins away:",
+          "Wash all my sins away, ",
+          "Wash all my sins away; ",
+          "And there may I, though vile as he, ",
+          "Wash all my sins away."
+        ],
+        "Verse 3": [
+          "Dear dying Lamb, thy precious blood",
+          "Shall never lose its pow'r",
+          "Till all the ransomed church of God",
+          "Be saved, to sin no more:",
+          "Be saved, to sin no more,",
+          "Be saved, to sin no more;",
+          "Till all the ransomed church of God",
+          "Be saved, to sin no more.",
+          ""
+        ],
+        "Verse 4": [
+          "E'er since by faith I saw the stream",
+          "Thy flowing wounds supply,",
+          "Redeeming love has been my theme,",
+          "And shall be till I die:",
+          "And shall be till I die, ",
+          "And shall be till I die;",
+          "Redeeming love has been my theme,",
+          "And shall be till I die."
+        ]
+      },
+      "aPageOrder": [],
+      "RepeatCount": 1,
+      "TitleNote": "#107 in the Baptist Hymnal",
+      "Notes": "#107 Baptist Hymnal",
+      "Author": "Words: William Cowper, 1771",
+      "Publisher": "Publc Domain"
     }
   },
   "oSongSets": {
@@ -2407,6 +2458,14 @@ var songLibrary =
       "Crown Him with many crowns",
       "Come thou Fount of many blessings",
       "Amazing Grace"
+    ],
+    "2023-06-02": [
+      "This is the Day",
+      "There's something about that name",
+      "I worship You, Almighty God",
+      "I exalt the",
+      "The Star-Spangled Banner",
+      "Mine Eyes Have Seen the Glory"
     ]
   },
   "defaults": {
