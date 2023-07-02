@@ -1856,9 +1856,6 @@ function onPrintSongs(event) {
   const nav = getNavState();
   setSongSetError('');
 
-  // save the body html to restore later
-  const htmlBodySaved = document.body.innerHTML;
-
   let htmlPrint = '';
   let iPrintPage = 0;
 
@@ -1891,12 +1888,35 @@ function onPrintSongs(event) {
 
   // substitute in the total number of pages which we saved for last
   htmlPrint = htmlPrint.
-    replace(/%totalPrintPages%/g, iPrintPage - 1);
+    replace(/%totalPrintPages%/g, iPrintPage);
 
-
+  const htmlBodySaved = document.body.innerHTML;
   document.body.innerHTML = htmlPrint;
   window.print();
+
+  // restore html
   document.body.innerHTML = htmlBodySaved;
+
+  // reset the nav select controls wot what they were before printing.
+  if (nav.mode == 'songSet') {
+    renderSongSetDropdown(
+      'selNavSongSets', 
+      'txtNavSongSetFilter', 
+      nav.songSetName,
+      'spnNoSongSets');
+    ge('chkNavSongSetMode').checked = 'checked';
+  } else if (nav.mode == 'song') {
+    renderSongDropDown(
+      'selNavSongs', 
+      'txtNavSongFilter', 
+      nav.songName, 
+      'spnNoSongsDefined');
+    ge('chkNavSongMode').checked = 'checked';
+  } else {
+    // review mode
+    ge('rdoNavMode').checked = 'checked';
+  }
+
 }
 
 function prepPrint(
@@ -1908,7 +1928,73 @@ function prepPrint(
   nav) {
 
   // pull our invisible print template out of the body.
-  const htmlTemplate = ge('divPrintArea').innerHTML;
+  const htmlTemplate = `
+<div id="divPrintArea">
+  <table id="tblPrint" class="pgBrk">
+    <tr class="topRow">
+      <td colspan="100%" class="ac">
+        <h4 class="m0">%songName%</h4>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="verseCell">
+        <h6>%pageName-1%</h6>
+        <div class="divIndent">%pageLines-1%</div>
+      </td>
+      <td class="verseCell">
+        <h6>%pageName-5%</h6>
+        <div class="divIndent">%pageLines-5%</div>
+      </td>          
+    </tr>
+
+    <tr>
+      <td class="verseCell">
+        <h6>%pageName-2%</h6>
+        <div class="divIndent">%pageLines-2%</div>
+      </td>
+      <td class="verseCell">
+        <h6>%pageName-6%</h6>
+        <div class="divIndent">%pageLines-6%</div>
+      </td>          
+    </tr>
+
+    <tr>
+      <td class="verseCell">
+        <h6>%pageName-3%</h6>
+        <div class="divIndent">%pageLines-3%</div>
+      </td>
+      <td class="verseCell">
+        <h6>%pageName-7%</h6>
+        <div class="divIndent">%pageLines-7%</div>
+      </td>          
+    </tr>
+
+    <tr>
+      <td class="verseCell">
+        <h6>%pageName-4%</h6>
+        <div class="divIndent">%pageLines-4%</div>
+      </td>
+      <td class="verseCell">
+        <h6>%pageName-8%</h6>
+        <div class="divIndent">%pageLines-8%</div>
+      </td>          
+    </tr>
+    <tr>
+      <td colspan="2" width="100%">
+        <table width="100%">
+          <br>
+          <tr class="trBottomInfo">
+            <td class="al" width="25%">%Author%<br>%Publisher%</td>
+            <td class="ac" width="50%">%Notes%</td>
+            <td class="ar" width="25%">%License%<br>Page %pageNumber% of %totalPrintPages%</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>  
+</div>
+`;
 
   // reference songData with a nice short name
   const sd = songLibrary.oSongs[songName];
@@ -1960,11 +2046,11 @@ function prepPrint(
 
   // set last page's page number
   oHtmlPrint.htmlPrint = oHtmlPrint.htmlPrint.
-    replace(/%pageNumber%/, printPageNumber + iPrintPage).
+    replace(/%pageNumber%/, printPageNumber - 1 + iPrintPage).
     replace(/%pageName-\d+%/g, '').
     replace(/%pageLines-\d+%/g, '');
 
-  return printPageNumber + iPrintPage;
+  return printPageNumber - 1 + iPrintPage;
 } // prepPrint
 
 // UI utilities
