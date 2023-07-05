@@ -817,13 +817,13 @@ function smallerFont(event) {
 
 function biggerLineHeight(event) {
   const nav = getNavState();
-  nav.songData.lineHeight = fixit(nav.songData.lineHeight * 1.05, 3)
+  nav.songData.lineHeight = nav.songData.lineHeight * 1.05;
   renderNavSection();
 }
 
 function smallerLineHeight(event) {
   const nav = getNavState();
-  nav.songData.lineHeight = fixit(nav.songData.lineHeight * .95, 3)
+  nav.songData.lineHeight = nav.songData.lineHeight * .95;
   renderNavSection();
 }
 
