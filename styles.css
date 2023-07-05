@@ -279,6 +279,7 @@ fieldset {
 
 #tdPagePreview:focus {
   border: solid 5px yellow;
+  outline-style: none;
 }
 
 .greenBdr {
