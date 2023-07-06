@@ -27,7 +27,7 @@
     rename/exchange &#8660;
    -->
 
-  <body onload="onPageLoad()">
+  <body onload="onPageLoad()" id="body">
     <h1 class="ac">
       Church Songs Control Panel
     </h1>
@@ -430,7 +430,8 @@ song and will be shown after the blank page of the song."
         <td class="ac">
           <fieldset id="fsCreateOrEditSongSet">
             <legend>
-              <img src="img/hide.png" 
+              <img id="imgCreateOrEditSongSet"
+                src="img/hide.png" 
                 width="20" 
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
@@ -543,7 +544,8 @@ song and will be shown after the blank page of the song."
         <td class="ac">
           <fieldset id="fsCreateOrEditSong">
             <legend>
-              <img src="img/hide.png" 
+              <img id="imgCreateOrEditSong"
+                src="img/hide.png" 
                 width="20" 
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
@@ -969,10 +971,10 @@ Tag verses can be included in this order as well."
                       >
                     <br>
                     <br>
-                    <textarea id="txtaSearchResults"
+                    <div id="divSearchResults"
                       cols="60",
                       rows="13"
-                    ></textarea>
+                    ></div>
                   </td>
                 </tr>
               </table>

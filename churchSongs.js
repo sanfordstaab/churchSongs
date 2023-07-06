@@ -1633,7 +1633,7 @@ function onSearchNone(event) {
 function onSearchInChanged(event) {
   const searchTerms = 
     ge('txtSearchFor').value.trim().toLocaleLowerCase();
-  let results = `Results of searching for "${searchTerms}":\n`;
+  let results = `Results of searching for "${searchTerms}":<br>`;
   if (searchTerms.length == 0) {
     // don't respond to empty or tiny search terms cuz almost
     // everything will hit.
@@ -1642,12 +1642,12 @@ function onSearchInChanged(event) {
     const aSearchTokens = searchTerms.split(/\s+/);
     let resultPart = '';
     if (ge('chkSearchInSongSetNames').checked) {
-      resultPart = 'In Song Set Names:\n';
+      resultPart = 'In Song Set Names:<br>';
       fResultFound = false;
       getAllSongSetNames().forEach(
         function(songSetName) {
           if (areAllTokensInText(aSearchTokens, songSetName)) {
-            resultPart += `  ${songSetName}\n`;
+            resultPart += `&nbsp;&nbsp;${getSongSetEditImage(songSetName)}${songSetName}<br>`;
             fResultFound = true;
           }
         }
@@ -1658,7 +1658,7 @@ function onSearchInChanged(event) {
     }
 
     if (ge('chkSearchInSongSetSongNames').checked) {
-      resultPart = 'In Song Set Song Names:\n';
+      resultPart = 'In Song Set Song Names:<br>';
       fResultFound = false;
       getAllSongSetNames().forEach(
         function(songSetName) {
@@ -1666,13 +1666,13 @@ function onSearchInChanged(event) {
           songLibrary.oSongSets[songSetName].forEach(
             function(songName) {
               if (areAllTokensInText(aSearchTokens, songName)) {
-                thisResultPart += `    ${songName}\n`;
+                thisResultPart += `&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(songSetName)}${songName}<br>`;
                 fResultFound = true;
               }
             }
           );
           if (thisResultPart) {
-            resultPart += `  ${songSetName}\n` + thisResultPart;
+            resultPart += `&nbsp;&nbsp;${getSongSetEditImage(songSetName)}${songSetName}<br>` + thisResultPart;
           }
         }
       );
@@ -1682,12 +1682,12 @@ function onSearchInChanged(event) {
     }
 
     if (ge('chkSearchInSongNames').checked) {
-      resultPart = 'In Song Names:\n';
+      resultPart = 'In Song Names:<br>';
       fResultFound = false;
       getAllSongNames().forEach(
         function(songName) {
           if (areAllTokensInText(aSearchTokens, songName)) {
-            resultPart += `  ${songName}\n`;
+            resultPart += `&nbsp;&nbsp;${getSongEditImage(songName)}${songName}<br>`;
             fResultFound = true;
           }
         }
@@ -1698,7 +1698,7 @@ function onSearchInChanged(event) {
     }
 
     if (ge('chkSearchLyrics').checked) {
-      resultPart = 'In Song Lyrics:\n';
+      resultPart = 'In Song Lyrics:<br>';
       fResultFound = false;
       let prevSongName = '';
       getAllSongEntries().forEach(
@@ -1716,13 +1716,13 @@ function onSearchInChanged(event) {
               if (fLineFits) {
                 if (prevSongName != oSongKV[0]) {
                   prevSongName = oSongKV[0];
-                  resultPart += `  Song:"${oSongKV[0]}"\n`;
+                  resultPart += `  Song:"${getSongEditImage(oSongKV[0])}${oSongKV[0]}"<br>`;
                 }
-                resultPart += `    Verse: "${aPageKV[0]}"\n`;
+                resultPart += `    Verse: "${aPageKV[0]}"<br>`;
                 aPageKV[1].forEach(
                   function(lyricLine) {
                     if (areAllTokensInText(aSearchTokens, lyricLine)) {
-                      resultPart += `      ${lyricLine}\n`;
+                      resultPart += `  &nbsp;&nbsp;&nbsp;&nbsp;${lyricLine}<br>`;
                       fResultFound = true;
                     }
                   }
@@ -1737,12 +1737,12 @@ function onSearchInChanged(event) {
       }
     }
     if (ge('chkSearchNotes').checked) {
-      resultPart = 'In Song Notes:\n';
+      resultPart = 'In Song Notes:<br>';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Notes)) {
-            resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Notes}\n`;
+            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].Notes}<br>`;
             fResultFound = true;
           }
         }
@@ -1752,12 +1752,12 @@ function onSearchInChanged(event) {
       }
     }
     if (ge('chkSearchAuthor').checked) {
-      resultPart = 'In Song Authors:\n';
+      resultPart = 'In Song Authors:<br>';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Author)) {
-            resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Author}\n`;
+            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].Author}<br>`;
             fResultFound = true;
           }
         }
@@ -1767,12 +1767,12 @@ function onSearchInChanged(event) {
       }  
     }
     if (ge('chkSearchPublisher').checked) {
-      resultPart = 'In Song Publshers:\n';
+      resultPart = 'In Song Publshers:<br>';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Publisher)) {
-            resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].Publisher}\n`;
+            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].Publisher}<br>`;
             fResultFound = true;
           }
         }
@@ -1782,12 +1782,12 @@ function onSearchInChanged(event) {
       }   
     }
     if (ge('chkSearchLicense').checked) {
-      resultPart = 'In Song Licenses:\n';
+      resultPart = 'In Song Licenses:<br>';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].License)) {
-            resultPart += `  Song:"${oSongKV[0]}"\n    ${oSongKV[1].License}\n`;
+            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].License}<br>`;
             fResultFound = true;
           }
         }
@@ -1798,7 +1798,33 @@ function onSearchInChanged(event) {
     }
   }
 
-  ge('txtaSearchResults').value = results;
+  ge('divSearchResults').innerHTML = results;
+}
+
+function getSongSetEditImage(songSetName) {
+  return `<a onclick="editSongSet('${songSetName}');"><img src="img/edit.jpg" class="editSongSetBtn" title="Edit this Song Set"></a>&nbsp;`;
+}
+
+function editSongSet(songSetName) {
+  showFieldset('imgCreateOrEditSongSet');
+  window.scrollTo(0, 
+    ge('fsCreateOrEditSongSet').getBoundingClientRect().y - 
+    ge('body').getBoundingClientRect().y);
+  ge('selAllSongSetsToEdit').value = songSetName;
+  editSelectedSongSet();
+}
+
+function getSongEditImage(songName) {
+  return `<a onclick="editSong('${songName}');"><img src="img/edit.jpg" class="editSongBtn" title="Edit this Song"/></a>&nbsp;`;
+}
+
+function editSong(songName) {
+  showFieldset('imgCreateOrEditSong');
+  window.scrollTo(0, 
+    ge('fsCreateOrEditSong').getBoundingClientRect().y - 
+    ge('body').getBoundingClientRect().y);
+  ge('selAllSongsToEdit').value = songName;
+  fillSongToEdit();  
 }
 
 function areAllTokensInText(aLCTokens, text) {
@@ -2066,6 +2092,13 @@ function toggleFieldsetVisibility(event) {
   show(ge(feildsetId).childNodes[1].nextElementSibling, fShow);
   event.target.src = `img/${fShow ? 'hide' : 'show'}.png`;
   g.visibility[feildsetId].fShown = fShow;
+}
+
+function showFieldset(idImg) {
+  const el = ge(idImg);
+  if (!g.visibility[el.parentElement.parentElement.id].fShown) {
+    toggleFieldsetVisibility({ target: el });
+  }
 }
 
 function enableElement(id, fEnable=true) {

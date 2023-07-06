@@ -282,6 +282,29 @@ fieldset {
   outline-style: none;
 }
 
+#divSearchResults {
+  background-color: white;
+  font-size: 12pt;
+  height: 260px;
+  overflow-y: scroll;
+}
+
+.editSongSetBtn {
+  width: 11pt;
+  height: 11pt;
+  align-self: self-start;
+  border: 1px solid black;
+  background-color: lightgreen;
+}
+
+.editSongBtn {
+  width: 11pt;
+  height: 11pt;
+  align-self: self-start;
+  border: 1px solid black;
+  background-color: lightblue;  
+}
+
 .greenBdr {
   border: solid green 2px;
 }
