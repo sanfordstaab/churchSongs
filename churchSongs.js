@@ -1276,7 +1276,7 @@ function enableSongEditButtons() {
   enableSongEditVerseButtons(ses);
 }
 
-async function createEmptySong(event) {
+function createEmptySong(event) {
   const ses = getSongEditState();
   const sExistingSongName = 
     doesProposedEditSongNameExist(ses.newSongEditName);
@@ -1286,17 +1286,21 @@ async function createEmptySong(event) {
       }" which already exists.`);
     return;
   }
+  const d = songLibrary.defaults;
   songLibrary.oSongs[ses.newSongEditName] = {
     oPages: {},
     aPageOrder: [],
-    RepeatCount: 1
+    RepeatCount: 1,
+    fontSize: d.fontSize,
+    fontBoldness: d.fontBoldness,
+    lineHeight: d.lineHeight,
+    license: ''
   };
   reRenderAllSongSelectControls();
   ge('txtEditSongFilter').value = '';
   ge('txtNewSongName').value = '';
   onNewSongFilterChanged();
   ge('selAllSongsToEdit').value = ses.newSongEditName;
-  await delay(1);
   fillSongToEdit();
   ge('txtaVerseLines').value = '';
 }
@@ -2311,8 +2315,11 @@ function healSongLibrary() {
       if (!oSD.Author) oSD.Author = '';
       if (!oSD.Publisher) oSD.Publisher = '';
       if (!oSD.License) oSD.License = songLibrary.defaults.License;
+      console.assert(o.defaults.fontSize);
       if (!oSD.fontSize) oSD.fontSize = o.defaults.fontSize;
+      console.assert(o.defaults.fontBoldness);
       if (!oSD.fontBoldness) oSD.fontBoldness = o.defaults.fontBoldness;
+      console.assert(o.defaults.lineHeight);
       if (!oSD.lineHeight) oSD.lineHeight = o.defaults.lineHeight;
       // oPageData was removed
       if (oSD.oPageData) {

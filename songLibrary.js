@@ -1838,6 +1838,87 @@ var songLibrary =
       "fontBoldness": 5,
       "lineHeight": 0.18,
       "TitleNote": "#69 in the Maranatha Praise Book"
+    },
+    "A Mighty Fortress is our God": {
+      "oPages": {
+        "Verse 1a": [
+          "A mighty fortress is our God,",
+          "A bulwark never failing;",
+          "Our helper He, amid the flood",
+          "Of mortal ills prevailing;"
+        ],
+        "Verse 1b": [
+          "For still our ancient foe",
+          "Doth seek to work us woe;",
+          "His craft and power are great,",
+          "And armed with cruel hate,",
+          "On earth is not his equal."
+        ],
+        "Verse 2a": [
+          "Did we in our own strength confide,",
+          "Our striving would be losing;",
+          "Were not the right Man on our side,",
+          "The Man of God's own choosing;"
+        ],
+        "Verse 2b": [
+          "Dost ask who that may be?",
+          "Christ Jesus, it is he;",
+          "Lord Sabaoth, his name,",
+          "From age to age the same,",
+          "And he must win the battle."
+        ],
+        "Verse 3a": [
+          "And tho this world, with devils filled,",
+          "Should threaten to undo us,",
+          "We will not fear,",
+          "for God hath willed",
+          "His truth to triumph through us:"
+        ],
+        "Verse 3b": [
+          "The prince of darkness grim,",
+          "We tremble not for him;",
+          "His rage we can endure,",
+          "For lo, his doom is sure,",
+          "One little word shal fell him."
+        ],
+        "Verse 4a": [
+          "That word above all earthly powers,",
+          "No thanks to them, abideth;",
+          "The spirit and the gifts are ours",
+          "Through Him who with us sideth:"
+        ],
+        "Verse 4b": [
+          "Let goods and kindred go,",
+          "This mortal life also;",
+          "The body they may kill:",
+          "God's truth abideth still,",
+          "His kingdom is forever."
+        ],
+        "Tag": [
+          "Amen"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 4b",
+        "Verse 4a",
+        "Verse 3b",
+        "Verse 3a",
+        "Verse 2b",
+        "Verse 2a",
+        "Verse 1b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#37 Baptist Hymnal, Psalm 46",
+      "TitleNote": "#37 in the Baptist Hymnal",
+      "Author": "Martin Luther 1529",
+      "Publisher": "Public Domain",
+      "TagPage": "Tag",
+      "lineHeight": 0.15527118915745666,
+      "fontSize": 0.045,
+      "fontBoldness": 4,
+      "license": "",
+      "License": "CCLI 20847323"
     }
   },
   "oSongSets": {
@@ -1908,6 +1989,16 @@ var songLibrary =
       "The Star-Spangled Banner",
       "Mine Eyes Have Seen the Glory",
       "There is a Fountain",
+      "Amazing Grace"
+    ],
+    "2023-07-09 songs": [
+      "Alive Alive",
+      "Majesty",
+      "Bless His Holy Name",
+      "I worship You, Almighty God",
+      "Come let us worship and bow down",
+      "A Mighty Fortress is our God",
+      "Blessed Assurance",
       "Amazing Grace"
     ]
   },
