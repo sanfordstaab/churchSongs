@@ -1879,7 +1879,7 @@ var songLibrary =
           "We tremble not for him;",
           "His rage we can endure,",
           "For lo, his doom is sure,",
-          "One little word shal fell him."
+          "One little word shall fell him."
         ],
         "Verse 4a": [
           "That word above all earthly powers,",
@@ -1900,20 +1900,20 @@ var songLibrary =
       },
       "aPageOrder": [
         "Verse 1a",
-        "Verse 4b",
-        "Verse 4a",
-        "Verse 3b",
-        "Verse 3a",
-        "Verse 2b",
+        "Verse 1b",
         "Verse 2a",
-        "Verse 1b"
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
       ],
       "RepeatCount": 1,
       "Notes": "#37 Baptist Hymnal, Psalm 46",
       "TitleNote": "#37 in the Baptist Hymnal",
       "Author": "Martin Luther 1529",
       "Publisher": "Public Domain",
-      "TagPage": "Tag",
+      "TagPage": "",
       "lineHeight": 0.15527118915745666,
       "fontSize": 0.045,
       "fontBoldness": 4,
