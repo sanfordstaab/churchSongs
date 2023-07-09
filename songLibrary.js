@@ -1040,7 +1040,7 @@ var songLibrary =
         "Verse 2b": [
           "Blest with vict'ry and peace,",
           "may the heav'n rescued land",
-          "Priase the Pow'r that had made",
+          "Praise the Power that had made",
           "and preserved us a nation!"
         ],
         "Chorus 2b": [
@@ -1064,7 +1064,7 @@ var songLibrary =
         "Chorus 1b": [
           "O say, does that Star-spangled",
           "Banner yet wave",
-          "O'er the land of the frre",
+          "O'er the land of the free",
           "and the home of the brave."
         ]
       },
@@ -1108,7 +1108,7 @@ var songLibrary =
         "Verse 2": [
           "I have seen him in the watch-fires ",
           "of a hundred circling camps;",
-          "they have builded him an alter",
+          "they have builded him an altar",
           "in the evening dews and damps;",
           "I can read his righteous sentence ",
           "by the dim and flaring lamps;",
