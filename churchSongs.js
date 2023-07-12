@@ -454,11 +454,6 @@ function saveProjectorAspectRatio() {
 }
 
 async function setPreviewFocus(event) {
-  const el = document.getElementById('fsKeyNavInstructions');
-  if (el) {
-    el.outerHTML = ''; 
-    blankScreen();
-  }
   ge('tdPagePreview').focus();
 }
 
