@@ -453,6 +453,15 @@ function saveProjectorAspectRatio() {
   renderAspectRatioText();
 }
 
+async function setPreviewFocus(event) {
+  const el = document.getElementById('fsKeyNavInstructions');
+  if (el) {
+    el.outerHTML = ''; 
+    blankScreen();
+  }
+  ge('tdPagePreview').focus();
+}
+
 function renderAspectRatioText() {
   ge('spnCurrentAspectRatio').innerText = 
     songLibrary.defaults.savedAspectRatio 
@@ -475,7 +484,6 @@ function restoreProjectorAspectRatio() {
 
 function blankScreen(event) {
   const nav = getNavState();
-  console.assert(!nav.fInReview);
   g.nav.fBlankScreen = !nav.fInReview;
   renderNavSection();
 }
@@ -717,7 +725,7 @@ function restoreSavedReviewPlace(event) {
     ge('rdoReviewMode').checked = 'checked';
     onModeChanged();
   } else {
-    ge('divReviewStatus').innerText = 'No Review spot was saved to recall.';
+    ge('divReviewStatus').innerText = 'No Review spot was successfully recalled.';
   }
   setTimeout(() => {
     ge('divReviewStatus').innerText = '';

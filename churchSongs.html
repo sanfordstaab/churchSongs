@@ -31,7 +31,9 @@
     <h1 class="ac">
       Church Songs Control Panel
     </h1>
-    <br>
+    <p class="smaller">
+      Version 1.0.0
+    </p>
     <table class="bdr formTable">
 
       <tr>
@@ -316,10 +318,11 @@ Use this to efficiently check the look of all unique pages/verses in the song li
 
                   <fieldset  id="fsKeyNavInstructions" 
                     class="m0 keyNavInstructions"
-                    onclick="ge('fsKeyNavInstructions').outerHTML = ''">
+                    onclick="setPreviewFocus();"
+                    >
                     <p 
                       class="smallest m0"
-                      onclick="ge('tdPagePreview').focus();"
+                      onclick="setPreviewFocus();"
                       title="Left Arrow=Previous Page
 Right Arrow=Next Page
 Up Arrow=Previous Song (starts out with a blank screen)
