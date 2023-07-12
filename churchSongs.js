@@ -501,7 +501,8 @@ function renderNavPagePreview() {
     300;
     
   const oMsg = getMessageFromGlobals();
-  if (g.nav.fBlankScreen) {
+  const nav = getNavState();
+  if (g.nav.fBlankScreen && !nav.fInReview) {
     oMsg.content = '';
   }
   renderPageToHost(
