@@ -223,7 +223,11 @@ function onModeChanged(event) {
     'btnNextReviewPage',
     'btnNextReviewSong'
     ], nav.fInReview);
-  g.nav.fBlankScreen = false;
+  // mode switching just sets all pages back to 0 for consistency.
+  g.nav.iPageInSong = 
+  g.nav.iSongInSet = 
+  g.nav.iPageInReview = 0;
+  g.nav.fBlankScreen = true;
   renderNavSection();
 }
 
