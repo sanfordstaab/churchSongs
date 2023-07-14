@@ -32,8 +32,13 @@
       Church Songs Control Panel
     </h1>
     <p class="smaller">
-      Version 1.0.0
+      Version 1.0.1
     </p>
+
+    <div id="divHelp" style="display: none;">
+    </div>
+
+    <div id="divRootForm">
     <table class="bdr formTable">
 
       <tr>
@@ -41,11 +46,16 @@
           <fieldset id="fsProjector">
             <legend>
               <img src="img/hide.png" 
-              width="20" 
-              title="click to hide or show this section."
-              onclick="toggleFieldsetVisibility(event);"
+                width="20" 
+                title="click to hide or show this section."
+                onclick="toggleFieldsetVisibility(event);"
               />
               Projector Window Creation
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('Projector');"
+              />
             </legend>
             <button 
               onclick="openProjector();"
@@ -53,6 +63,7 @@
 Drag the tab to make it into a separate window 
 and drag it to the monitor you want it displayed on.   
 Then press F11 to make it full screen."
+              class="ac"
               >
               Create a Projector Tab
             </button>
@@ -71,7 +82,12 @@ Then press F11 to make it full screen."
                 title="click to hide or show this section." 
                 onclick="toggleFieldsetVisibility(event);"
                 />
-              Song and Song Set Selection for Printing or Projecting
+              Song and Song Set Selection
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('SongOrSetSelection');"
+                />              
             </legend>
             <div>
               <table class="horzTable">
@@ -211,6 +227,11 @@ This will be exported with the song library."
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Song Projector Navigation
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('Nav');"
+                />   
             </legend>
             <table class="innerTable">
               <tr>              
@@ -359,11 +380,16 @@ Use this to efficiently check the look of all unique pages/verses in the song li
             <legend>
               <img
               src="img/hide.png" 
-              width="20" 
-              title="click to hide or show this section." 
-              onclick="toggleFieldsetVisibility(event);"
+                width="20" 
+                title="click to hide or show this section." 
+                onclick="toggleFieldsetVisibility(event);"
               />
-              General Formatting:
+              General Formatting
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('GeneralFormatting');"
+              />   
             </legend>
             <div class="smaller">
               <label for="chkAllCaps">All Caps</label>
@@ -420,6 +446,11 @@ song and will be shown after the blank page of the song."
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Create or Edit a Song Set
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('CreateOrEditSongSet');"
+              />   
             </legend>
             <div>
               <div id="divSongSetError" class="redText">
@@ -533,7 +564,12 @@ song and will be shown after the blank page of the song."
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
                 />
-              Create or Edit a Song:
+              Create or Edit a Song
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('CreateOrEditSong');"
+              />    
             </legend>
             <div>
             <div id="divNewEditSongNameError" class="redText">
@@ -598,7 +634,7 @@ song and will be shown after the blank page of the song."
               </button>  
               <fieldset id="fsOtherSongSettings">
                 <legend>
-                  Song Settings
+                  Song Settings:
                 </legend>
                 <table class="innerTable">
                   <tr>
@@ -849,6 +885,11 @@ Tag verses can be included in this order as well."
               onclick="toggleFieldsetVisibility(event);"
               />
               Song Data Search
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('Search');"
+              />   
             </legend>
             <center>
               <table class="innerTable">
@@ -976,6 +1017,11 @@ Tag verses can be included in this order as well."
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Export / Import
+              <img src="img/help.png" 
+                width="20" 
+                title="click to see a video on this section."
+                onclick="showHelp('ExportImport');"
+              />  
             </legend>
             <center>
               <table class="innerTable">
@@ -1003,6 +1049,7 @@ Tag verses can be included in this order as well."
       </tr>
 
     </table>
+    </div>
   </body>
 
 </html> 

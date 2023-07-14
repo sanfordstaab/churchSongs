@@ -2109,6 +2109,26 @@ function toggleFieldsetVisibility(event) {
   g.visibility[feildsetId].fShown = fShow;
 }
 
+function showHelp(helpFileName) {
+  hide('divRootForm');
+  show('divHelp');
+  elDiv = ge('divHelp');
+  elDiv.innerHTML = `
+<video controls autoplay>
+  <source src="help/${helpFileName}.mp4" type="video/mp4">
+</video>
+<br>
+<button onclick="hideHelp();">
+  Hide Help
+</button>
+  `;
+}
+
+function hideHelp(event) {
+  hide('divHelp');
+  show('divRootForm');
+}
+
 function showFieldset(idImg) {
   const el = ge(idImg);
   if (!g.visibility[el.parentElement.parentElement.id].fShown) {
