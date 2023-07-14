@@ -62,6 +62,9 @@ async function onPageLoad(event) {
   renderAspectRatioText();
 
   // hide sections we dont want to see initially
+  toggleFieldsetVisibility({ target: ge('fsProjector').firstElementChild.firstElementChild });
+  toggleFieldsetVisibility({ target: ge('fsSongOrSetSelection').firstElementChild.firstElementChild });
+  toggleFieldsetVisibility({ target: ge('fsNav').firstElementChild.firstElementChild });
   toggleFieldsetVisibility({ target: ge('fsGeneralFormatting').firstElementChild.firstElementChild });
   toggleFieldsetVisibility({ target: ge('fsCreateOrEditSongSet').firstElementChild.firstElementChild });
   toggleFieldsetVisibility({ target: ge('fsCreateOrEditSong').firstElementChild.firstElementChild });
