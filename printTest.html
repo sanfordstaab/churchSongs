@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">  
+  <title>Review Print Test</title>
+  <head>
+    <script src="songLibrary.js"></script>
+    <script src="common.js"></script>
+    <script src="churchSongs.js"></script>
+    <style>
+.flexContainer {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.flexItem {
+  background-color: rgb(235, 149, 22);
+  border: solid black 1px;
+}
+    </style>
+    <script>
+function onPageLoad() {
+  let html = '<div class="flexContainer">';
+
+  // all printing is a series of divs which 
+  // are laid out via flex for each song, or songSet 
+  Object.keys(songLibrary.oSongSets).sort().forEach(
+    (songSetName) => {
+      html += '<div class="flexItem">';
+      html+= `SongSet: ${songSetName}`;
+      songLibrary.oSongSets[songSetName].forEach(
+        function(songName) {
+          html += `&nbsp;&nbsp;${songName}<br>`;
+        }
+      );
+      html += '</div>';
+    }
+  );
+
+  Object.keys(songLibarary.oSongs).sort().forEach(
+    (songName) => {
+      html += '<div class="flexItem">';
+      html+= `Song: ${songName}<br>&nbsp;&nbsp;Pages:<br>`;
+      songLibrary.oSongs[songName].forEach(
+        function(sd) {
+          html += `&nbsp;&nbsp;${songName}<br>`;
+        }
+      );
+      html += '</div>';
+    }
+  );
+}      
+    </script>
+  </head>
+
+  <body onload="onPageLoad();" id="body">
+
+  </body>
+
+</html> 
