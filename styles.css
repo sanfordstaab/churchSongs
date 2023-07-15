@@ -117,6 +117,10 @@ fieldset {
   width: 250px;
 }
 
+.p1em {
+  padding: 1em;
+}
+
 .al {
   text-align: left !important;
 }
@@ -255,6 +259,24 @@ fieldset {
   height: 10in;
   margin: auto;
   margin-top: 0in;
+}
+.flexContainer {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.m2em {
+  margin-top: 1em;
+  margin-left: 1em; 
+  margin-right: 1em;
+}
+
+.flexItem {
+  background-color: white;
+  border: solid black 1px;
+  text-align: left;
 }
 
 #tblPrint td {

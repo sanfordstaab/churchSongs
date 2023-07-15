@@ -235,15 +235,13 @@ function onModeChanged(event) {
 }
 
 function renderNavStateText() {
-  const nav = getNavStateText();
-  const fIsSongSetMode = (nav.mode == 'songSet');
-  const html = getNavStateText();
+  const html = getNavStateTextHTML(getNavState());
   ge('divNavStateText').innerHTML = html;
 }
 
-function getNavStateText() {
+function getNavStateTextHTML(nav) {
   let html = '';
-  if (fIsSongSetMode) {
+  if (nav.mode == 'songSet') {
     html += `Song Set: "<i>${nav.songSetName}</i>"<br>`;
   }
 
@@ -258,7 +256,7 @@ function getNavStateText() {
     songPos = `<b>${nav.iSongInReview + 1}</b> of ${nav.cSongsInReview}`;
   } else {
     html += `Projecting Song:<br><b>${nav.songName}</b>`;
-    if (fIsSongSetMode) {
+    if (nav.mode == 'review') {
       cSongs = nav.cSongsInSet;
       songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet)} of ${nav.cSongsInSet}`;
     }
@@ -1905,6 +1903,7 @@ async function importLibrary(event) {
  */
 function onPrintSongs(event) {
   const nav = getNavState();
+
   setSongSetError('');
 
   let htmlPrint = '';
@@ -1924,6 +1923,8 @@ function onPrintSongs(event) {
         htmlPrint = oHtmlPrint.htmlPrint;
       }
     );
+  } else if (nav.mode == 'review') {
+    htmlPrint = getPrintReviewHTML();
   } else { // song mode
     ge('divPrintSongError').innerText = '';
     const oHtmlPrint = { htmlPrint: htmlPrint };
@@ -1948,7 +1949,7 @@ function onPrintSongs(event) {
   // restore html
   document.body.innerHTML = htmlBodySaved;
 
-  // reset the nav select controls wot what they were before printing.
+  // reset the nav select controls wrt what they were before printing.
   if (nav.mode == 'songSet') {
     renderSongSetDropdown(
       'selNavSongSets', 
@@ -1965,7 +1966,7 @@ function onPrintSongs(event) {
     ge('chkNavSongMode').checked = 'checked';
   } else {
     // review mode
-    ge('rdoNavMode').checked = 'checked';
+    ge('rdoReviewMode').checked = 'checked';
   }
 
 }
@@ -2103,6 +2104,85 @@ function prepPrint(
 
   return printPageNumber - 1 + iPrintPage;
 } // prepPrint
+
+function getPrintReviewHTML() {
+  let html = '';
+
+  html += '<div class="smaller">';
+
+  // songSets
+
+  html += '<div class="flexContainer m2em">';
+
+  // all printing is a series of divs which 
+  // are laid out via flex for each song, or songSet 
+  Object.keys(songLibrary.oSongSets).sort().forEach(
+    (songSetName) => {
+      html += '<div class="flexItem p1em pgBrkFlex">';
+      html += `SongSet: <b>${songSetName}</b>`;
+      html += '<ol>';
+      songLibrary.oSongSets[songSetName].forEach(
+        function(songName) {
+          html += `<li>${songName}</li>`;
+        }
+      );
+      html += '</ol>';
+      html += '</div>'; // flexItem
+    }
+  );
+
+  html += '</div>'; // flexContainer
+
+  // Songs
+
+  html += '<br>';
+  html += '<div class="flexContainer m2em">';
+
+  Object.keys(songLibrary.oSongs).sort().forEach(
+    (songName) => {
+      html += '<div class="flexItem p1em pgBrkFlex">';
+        html += `Song: <b>${songName}</b><br>`;
+        html += 'Unique Pages:';
+        html += '<ul>'
+      let sd = songLibrary.oSongs[songName];
+      Object.keys(sd.oPages).sort().forEach(
+        function(pageName) {
+          const fTag = sd.TagPage == pageName;
+          let sTag = ' ';
+          if (fTag) {
+            sTag = ' (Tag) ';
+          }
+          html += `<li>"${pageName}"${sTag}Lyrics:<br><ol>`;
+          sd.oPages[pageName].forEach(
+            function(lyricLine) {
+              html += `<li>${lyricLine}</li>`;
+            }
+          );
+          html += '</ol>';
+        }
+      );
+      html += '</ul>';
+
+      html += 'Verse Order:<br>&nbsp;&nbsp;';
+      html += getOverallOrderTextHTML(sd, '<br>&nbsp;&nbsp;');
+
+      html += '<br><br>Other Values:<ul>';
+      html += `<li>Title Note: [${sd.TitleNote}]</li>`;
+      html += `<li>Notes: [${sd.Notes}]</li>`;
+      html += `<li>Author: [${sd.Author}]</li>`;
+      html += `<li>Publisher: [${sd.Publisher}]</li>`;
+      html += `<li>Repeat Count: [${sd.RepeatCount}]</li>`;
+      html += `<li>License: [${sd.License ? sd.License : songLibrary.defaults.License}]</li>`;
+      html += '</ul>';
+
+      html += '</div>'; // flexItem
+    }
+  );
+
+  html += '</div>'; // flexContainer
+
+  return html;
+}
 
 // UI utilities
 
