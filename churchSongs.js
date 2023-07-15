@@ -2200,21 +2200,28 @@ function toggleFieldsetVisibility(event) {
 }
 
 function showHelp(helpFileName) {
+  hideHelp(); 
   hide('divRootForm');
   show('divHelp');
   elDiv = ge('divHelp');
   elDiv.innerHTML = `
-<video controls autoplay>
-  <source src="help/${helpFileName}.mp4" type="video/mp4">
-</video>
-<br>
 <button onclick="hideHelp();">
   Hide Help
 </button>
+<br>
+<video  id="helpVideo" controls autoplay class="vidBdr">
+  <source src="help/${helpFileName}.mp4" type="video/mp4">
+</video>
   `;
 }
 
 function hideHelp(event) {
+  const vid = document.getElementById('helpVideo');
+  if (vid) {
+    // stop any previously runing video
+    vid.pause(0);
+    vid.setAttribute('src', '');
+  }
   hide('divHelp');
   show('divRootForm');
 }
