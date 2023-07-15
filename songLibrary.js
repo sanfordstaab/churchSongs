@@ -2000,6 +2000,15 @@ var songLibrary =
       "A Mighty Fortress is our God",
       "Blessed Assurance",
       "Amazing Grace"
+    ],
+    "2023-07-16 songs": [
+      "This is the Day",
+      "There's something about that name",
+      "I worship You, Almighty God",
+      "How great thou art",
+      "Turn Your Eyes Upon Jesus",
+      "Amazing Grace",
+      "Doxology"
     ]
   },
   "defaults": {
