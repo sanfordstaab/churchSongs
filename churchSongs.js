@@ -235,8 +235,13 @@ function onModeChanged(event) {
 }
 
 function renderNavStateText() {
-  const nav = getNavState();
+  const nav = getNavStateText();
   const fIsSongSetMode = (nav.mode == 'songSet');
+  const html = getNavStateText();
+  ge('divNavStateText').innerHTML = html;
+}
+
+function getNavStateText() {
   let html = '';
   if (fIsSongSetMode) {
     html += `Song Set: "<i>${nav.songSetName}</i>"<br>`;
@@ -294,7 +299,7 @@ function renderNavStateText() {
     html += `<br>song ${songPos}`;
   }
 
-  ge('divNavStateText').innerHTML = html;
+  return html;
 }
 
 function onPreviewKey(event) {
@@ -1484,13 +1489,18 @@ function onSelectedVerseToEditChanged(event=null, ses) {
 
 function renderOverallOrderText() {
   const ses = getSongEditState();
-  const aPageNamesUnwound = getUnwoundPages(ses.songData);
-  ge('tdOverallVerseOrder').innerHTML = 
+  const html = getOverallOrderTextHTML(ses.songData, ' &#8594; ');
+  ge('tdOverallVerseOrder').innerHTML = html;
+}
+
+function getOverallOrderTextHTML(sd, separator) {
+  const aPageNamesUnwound = getUnwoundPages(sd);
+  return(
     aPageNamesUnwound.length 
     ? 
-    aPageNamesUnwound.join(' &#8594; ') 
+    aPageNamesUnwound.join(separator) 
     : 
-    '';
+    '');
 }
 
 function onVerseLinesChanged(event) {

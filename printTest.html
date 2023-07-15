@@ -17,12 +17,18 @@
 }
 
 .flexItem {
-  background-color: rgb(235, 149, 22);
+  background-color: white;
   border: solid black 1px;
+  text-align: left;
 }
     </style>
     <script>
-function onPageLoad() {
+function onTestPageLoad() {
+  const html = getPrintReviewHTML();
+  ge('testBody').innerHTML = html;
+}      
+
+function getPrintReviewHTML() {
   let html = '<div class="flexContainer">';
 
   // all printing is a series of divs which 
@@ -30,33 +36,64 @@ function onPageLoad() {
   Object.keys(songLibrary.oSongSets).sort().forEach(
     (songSetName) => {
       html += '<div class="flexItem">';
-      html+= `SongSet: ${songSetName}`;
+      html += `SongSet: ${songSetName}`;
+      html += '<ol>';
       songLibrary.oSongSets[songSetName].forEach(
         function(songName) {
-          html += `&nbsp;&nbsp;${songName}<br>`;
+          html += `<li>${songName}</li>`;
         }
       );
+      html += '</ol></div>';
+    }
+  );
+
+  Object.keys(songLibrary.oSongs).sort().forEach(
+    (songName) => {
+      html += '<div class="flexItem">';
+        html += `<b>${songName}</b><br>`;
+        html += 'Unique Pages:';
+        html += '<ul>'
+      let sd = songLibrary.oSongs[songName];
+      Object.keys(sd.oPages).sort().forEach(
+        function(pageName) {
+          const fTag = sd.TagPage == pageName;
+          let sTag = ' ';
+          if (fTag) {
+            sTag = ' (Tag) ';
+          }
+          html += `<li>"${pageName}"${sTag}Lyrics:<br><ol>`;
+          sd.oPages[pageName].forEach(
+            function(lyricLine) {
+              html += `<li>${lyricLine}</li>`;
+            }
+          );
+          html += '</ol>';
+        }
+      );
+      html += '</ul>';
+
+      html += 'Verse Order:<br>&nbsp;&nbsp;';
+      html += getOverallOrderTextHTML(sd, '<br>&nbsp;&nbsp;');
+
+      html += '<br><br>Other Values:<ul>';
+      html += `<li>Title Note: [${sd.TitleNote}]</li>`;
+      html += `<li>Notes: [${sd.Notes}]</li>`;
+      html += `<li>Author: [${sd.Author}]</li>`;
+      html += `<li>Publisher: [${sd.Publisher}]</li>`;
+      html += `<li>Repeat Count: [${sd.RepeatCount}]</li>`;
+      html += `<li>License: [${sd.License ? sd.License : songLibrary.defaults.License}]</li>`;
+      html += '</ul>';
+
       html += '</div>';
     }
   );
 
-  Object.keys(songLibarary.oSongs).sort().forEach(
-    (songName) => {
-      html += '<div class="flexItem">';
-      html+= `Song: ${songName}<br>&nbsp;&nbsp;Pages:<br>`;
-      songLibrary.oSongs[songName].forEach(
-        function(sd) {
-          html += `&nbsp;&nbsp;${songName}<br>`;
-        }
-      );
-      html += '</div>';
-    }
-  );
-}      
+  return html;
+}
     </script>
   </head>
 
-  <body onload="onPageLoad();" id="body">
+  <body onload="onTestPageLoad();" id="testBody">
 
   </body>
 
