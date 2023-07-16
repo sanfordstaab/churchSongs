@@ -275,13 +275,13 @@ function getNavStateTextHTML(nav) {
     cPages = nav.cUniquePagesInSong;
     pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
     sTotalPages = `<br>unique pages in the song.<br>page ${nav.iPageInReview + 1} of ${nav.cPagesInReview} review pages.`
-  } else {
+  } else { // !nav.fInReview
     let pageName = 
-    (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 
-    ?
-    nav.songData.TagPage + ' {Tag}'
-    :
-    nav.pageName;
+      (nav.songData.TagPage && (nav.iUniquePageInSong == nav.cUniquePagesInSong - 1)) 
+      ?
+      nav.songData.TagPage + ' {Tag}'
+      :
+      nav.pageName;
     if (g.nav.showTitlePage) {
       html += `Title Page:`;
     } else {
@@ -290,7 +290,10 @@ function getNavStateTextHTML(nav) {
 
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
-    pagePos = `${progressBar(nav.iPageInSong + 1, nav.cPagesInSong)}`;
+    pagePos = `${progressBar(
+      (nav.showTitlePage && nav.iPageInSong == 0) ? 
+        0 : 
+        nav.iPageInSong + 1, nav.cPagesInSong)}`;
   }
 
   html += `<br>page ${pagePos} of ${cPages}${sTotalPages}`;
@@ -789,18 +792,19 @@ function getMessageFromGlobals() {
       songNumber: nav.iSongInReview + 1,
       cSongsInSet: nav.cSongsInReview,
     }
-  } else {
+  } else { // !nav.fInReview
     oMsg = {
       fontSize: nav.songData.fontSize,
       fontBoldness: nav.songData.fontBoldness,
       lineHeight: nav.songData.lineHeight,
       allCaps: songLibrary.defaults.allCaps,
       license: nav.songData.License,
-      pageNumber: nav.iPageInSong + 1,
+      pageNumber: (nav.iPageInSong == 0 && (nav.fBlankScreen || nav.showTitlePage))
+        ? 0 : nav.iPageInSong + 1,
       cPagesInSong: nav.cPagesInSong,
       songNumber: nav.iSongInSet + 1,
       cSongsInSet: nav.mode == 'song' ? 0 : nav.cSongsInSet,
-      content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName]
+      content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName],
     }
     if (g.nav.showTitlePage) {
       oMsg.content = `<span style="color: lightblue;">${nav.songName}</span><br><span class="pageTitle">${nav.songData.TitleNote}</span>`;
@@ -2493,7 +2497,7 @@ async function delay(timeInMilliseconds) {
 function progressBar(nHere, nTotal) {
   console.assert(nHere <= nTotal);
   let str = '';
-  for (let i = 1; i <= nTotal; i++) {
+  for (let i = 0; i <= nTotal; i++) {
     str += (i == nHere) ? `<b>${nHere}</b>` : '-';
   }
   return str;
