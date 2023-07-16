@@ -171,6 +171,7 @@ function addNavSongState(nav) {
   console.assert(nav.iPageInSong < nav.cPagesInSong);
   nav.fInReview = false;
   nav.fBlankScreen = g.nav.fBlankScreen;
+  nav.showTitlePage = g.nav.showTitlePage;
 
   return nav;
 }
@@ -215,7 +216,7 @@ function onModeChanged(event) {
   const nav = getNavState();
   show([
     'btnNavPrevSong',
-    'btnNavPrevPage',
+    'btnNavPrevSongPage',
     'btnToggleShow',
     'btnNavNextSongPage',
     'btnNextSong'
@@ -437,16 +438,22 @@ function enableNavButtons() {
   } else {
     enableElement('btnNavPrevSong', nav.iSongInSet > 0);
     enableElement('btnNextSong', nav.iSongInSet < nav.cSongsInSet - 1);
-    enableElement('btnNavPrevPage', !g.nav.fBlankScreen);
+    enableElement('btnNavPrevSongPage', !nav.fBlankScreen);
     enableElement('btnNavNextSongPage', 
-      nav.iPageInSong < nav.cPagesInSong - 1 || nav.iSongInSet < nav.cSongsInSet - 1);
+      nav.iPageInSong < nav.cPagesInSong - 1 || 
+      nav.iSongInSet < nav.cSongsInSet - 1 ||
+      (nav.iPageInSong == 0 && // special case for one page song
+        nav.cPagesInSong == 1 && 
+        (nav.fBlankScreen || nav.showTitlePage)
+      )
+    );
   }
   show('btnPrevReviewSong', nav.fInReview);
   show('btnNavPrevSong', !nav.fInReview);
   show('btnPrevReviewPage', nav.fInReview);
   show('btnNextSong', !nav.fInReview);
   show('btnNextReviewPage', nav.fInReview);
-  show('btnNavPrevPage', !nav.fInReview);
+  show('btnNavPrevSongPage', !nav.fInReview);
   show('btnNextReviewSong', nav.fInReview);
   show('btnNavNextSongPage', !nav.fInReview);
 }
@@ -585,7 +592,8 @@ function nextPage() {
 function nextSongPage(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  if (nav.iPageInSong < nav.cPagesInSong - 1) {
+  if (nav.iPageInSong < nav.cPagesInSong - 1 ||
+      nav.iPageInSong == 0) {
     if (nav.iPageInSong == 0) {
       if (nav.fBlankScreen) {
         g.nav.fBlankScreen = false;
@@ -594,7 +602,7 @@ function nextSongPage(event) {
       } else if (g.nav.showTitlePage) {
         g.nav.showTitlePage = false;
         // don't advance - show first page
-      } else {
+      } else if (nav.iPageInSong < nav.cPagesInSong - 1) {
         g.nav.iPageInSong++;
       }
     } else {
@@ -677,7 +685,7 @@ function nextSong() {
 function nextSongInSet(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
-  if (nav.iSongInSet < nav.cPagesInSong - 1) {
+  if (nav.iSongInSet < nav.cSongsInSet - 1) {
     // the keyboard method can get us here despite
     // the button being disabled.
     setNavSongSetSongIndex(nav.iSongInSet + 1);
