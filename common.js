@@ -123,7 +123,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
         oMsg.content).
     replace('%lineHeight%', fixit(oMsg.lineHeight * height, 3)).
     replace('%pageNumber%', ' p' + oMsg.pageNumber).
-    replace('%songNumber%', ' s' + oMsg.songNumber).
+    replace('%songNumber%', oMsg.cSongsInSet == 0 ? '' : ' s' + oMsg.songNumber).
     replace('%license%', oMsg.license).
     replace('%pageNumbClass%', 'smaller italic lc' + (oMsg.pageNumber == oMsg.cPagesInSong ? ' redText' : ' grayText')).
     replace('%songNumbClass%', 'smaller italic lc' + (oMsg.songNumber == oMsg.cSongsInSet ? ' redText' : ' grayText'));
