@@ -277,7 +277,7 @@ var songLibrary =
           "His Word shall not fail you He promised.",
           "Believe Him and all will be well.",
           "Then go to a world that is dying.",
-          "His perfect salvaion to tell."
+          "His perfect salvation to tell."
         ]
       },
       "aPageOrder": [
