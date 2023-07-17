@@ -46,13 +46,13 @@
           <fieldset id="fsProjector">
             <legend>
               <img src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
               />
               Projector Window Creation
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('Projector');"
               />
@@ -78,18 +78,18 @@ Then press F11 to make it full screen."
             <legend>
               <img
                 src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section." 
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Song and Song Set Selection
               <img src="img/print.jpg"
-                width="20"
+                class="editImg"
                 title="Click to print the selected navigation mode data."
                 onclick="printNavModeData();"
                 />
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="Click to see a video on this section."
                 onclick="showHelp('SongOrSetSelection');"
                 />              
@@ -119,6 +119,12 @@ Then press F11 to make it full screen."
                       >
                       <!-- filled in by code -->
                     </select>
+                    <img
+                      src="img/edit.jpg"
+                      class="editImg"
+                      title="Edit this song set."
+                      onclick="editSelectedNavSongSet();"
+                      />                    
                   </td>
                   <th>
                     Song Set Filter:
@@ -155,6 +161,12 @@ Then press F11 to make it full screen."
                       >
                       <!-- filled in by code -->
                     </select>
+                    <img
+                      src="img/edit.jpg"
+                      class="editImg"
+                      title="Edit this song."
+                      onclick="editSelectedNavSong();"
+                      />
                   </td>
                   <th>
                     Song Filter:
@@ -222,13 +234,13 @@ This will be exported with the song library."
             <legend>
               <img
                 src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section." 
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Song Projector Navigation
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('Nav');"
                 />   
@@ -246,8 +258,9 @@ This will be exported with the song library."
                         <td>
                           &nbsp;
                         </td>
-                        <td class="ac">
+                        <td class="ac avm">
                           <button id="btnNavPrevSong" 
+                            class="navBtn"                            
                             title="Use the up arrow to move to the previous song.  The screen will start in a blank state."
                             onclick="prevSong();"
                           >
@@ -255,6 +268,7 @@ This will be exported with the song library."
                           </button>
 
                           <button id="btnPrevReviewSong" 
+                            class="navBtn"                            
                             title="Move to the first page of the previous song to review."
                             onclick="prevReviewSong();"
                           >
@@ -266,9 +280,10 @@ This will be exported with the song library."
                         </td>                      
                       </tr>
                       <tr>
-                        <td class="ac">
+                        <td class="ac avm">
 
                           <button id="btnPrevReviewPage"
+                            class="navBtn"                            
                             title="Click here to view the previous unique song page.
 Use this to efficiently check the look of all unique pages/verses in the song library."
                             onclick="prevReviewPage();"
@@ -277,24 +292,25 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           </button>   
 
                           <button id="btnNavPrevSongPage" 
-                            title="Left Arrow"
+                            class="navBtn"                            
                             title="Use the left arrow key to move to the previous page."
                             onclick="prevSongPage();"
                           >
                             <span class="larger">&#8592;</span>
                           </button>
                         </td>
-                        <td class="ac">
-                          <button 
-                            id="btnToggleShow"
+                        <td class="ac avm">
+                          <button id="btnToggleShow"
+                            class="navBtn"                                                    
                             onclick="toggleBlankScreen(event);"
                             title="Use the spacebar to toggle between showing and hiding the current page."
                           >
                             <span class="larger">&#8855;</span>
                           </button>
                         </td>
-                        <td class="ac">
+                        <td class="ac avm">
                           <button id="btnNavNextSongPage" 
+                            class="navBtn"                                  
                             title="Use the right arrow key to move to the next page or show the first page."
                             onclick="nextSongPage(event);"
                           >
@@ -302,6 +318,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           </button>
 
                           <button id="btnNextReviewPage"
+                            class="navBtn"                                  
                             title="Click here to view the next unique song page.
 Use this to efficiently check the look of all unique pages/verses in the song library."
                             onclick="nextReviewPage();"
@@ -315,8 +332,9 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                         <td>
                           &nbsp;
                         </td>          
-                        <td class="ac">
+                        <td class="ac avm">
                           <button id="btnNextSong" 
+                            class="navBtn"                                  
                             title="Use the down arrow key to move to the next song."
                             onclick="nextSongInSet();"
                           >
@@ -324,14 +342,20 @@ Use this to efficiently check the look of all unique pages/verses in the song li
                           </button>
                           
                           <button id="btnNextReviewSong" 
+                            class="navBtn"                                  
                             title="Move to the first page of the previous song to review."
                             onclick="nextReviewSong();"
                           >
                             <span class="larger">&#8659;</span>
                           </button>                          
                         </td>              
-                        <td>
-                          &nbsp;
+                        <td class="ac vam">
+                          <img
+                            src="img/edit.jpg"
+                            class="editImg"                            
+                            title="Edit the currently showing verse/page."
+                            onclick="editSelectedNavSongVerse();"
+                            />                          
                         </td>                        
                       </tr>
                     </table>
@@ -380,13 +404,13 @@ Use this to efficiently check the look of all unique pages/verses in the song li
             <legend>
               <img
               src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section." 
                 onclick="toggleFieldsetVisibility(event);"
               />
               General Formatting
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('GeneralFormatting');"
               />   
@@ -441,13 +465,13 @@ song and will be shown after the blank page of the song."
             <legend>
               <img id="imgCreateOrEditSongSet"
                 src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Create or Edit a Song Set
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('CreateOrEditSongSet');"
               />   
@@ -560,13 +584,13 @@ song and will be shown after the blank page of the song."
             <legend>
               <img id="imgCreateOrEditSong"
                 src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Create or Edit a Song
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('CreateOrEditSong');"
               />    
@@ -770,49 +794,52 @@ have an alternative license code specified."
                         onchange="onIsTagVerseChanged();" 
                         type="checkbox" />
                       <br>
-                      <button id="btnAddNewVerse"
-                        onclick="addANewVerse();">
-                        Add a new verse <span class="larger">+</span>
-                      </button>
-                      <button id="btnRenameSelectedVerse"
-                        onclick="renameSelectedVerse();">
-                        Rename the selected verse <span class="larger">&#8660;</span>
-                      </button>
-                      <button id="btnDeleteSelectedVerse"
-                        onclick="deleteSelectedVerse();">
-                        Delete the selected verse &#9938;
-                      </button>
-          
-                      <div style="display: inline; position: relative;">
-                        <textarea id="txtaVerseLines" 
-                          cols="70" 
-                          rows="5" 
-                          style="position: relative;"
-                          title="Enter the lines for this verse.  Note that each verse will be rendered onto a page
-  so don't have too many lines and don't let the lines get too long."
-                          onkeyup="onVerseLinesChanged();"
-                          onchange="onVerseLinesChanged();"
-                          >
-                        </textarea>
-
-                        <span id="spnVerseUpdatedNotice"
-                          class="updated" 
-                        >  
-                          Updated
-                        </span>                         
-                      </div>
-                      <br>
-                      Repeat Count:
-                      <select id="selRepeatCount"
-                        onchange="onRepeatCountChanged();"
-                        title="Set the number of times you want the verses in order to be sung.
-Any tag verse always comes last and only once."
-                        >
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
+                      <table class="m4">
+                        <tr>
+                          <td>
+                            <button id="btnAddNewVerse"
+                            onclick="addANewVerse();">
+                            Add a new verse <span class="larger">+</span>
+                          </button>
+                          </td>
+                          <td rowspan="3">
+                            <div style="display: inline; position: relative;">
+                              <textarea id="txtaVerseLines" 
+                                cols="70" 
+                                rows="9" 
+                                style="position: relative;"
+                                title="Enter the lines for this verse.  Note that each verse will be rendered onto a page
+so don't have too many lines and don't let the lines get too long."
+                                onkeyup="onVerseLinesChanged();"
+                                onchange="onVerseLinesChanged();"
+                                >
+                              </textarea>
+      
+                              <span id="spnVerseUpdatedNotice"
+                                class="updated" 
+                              >  
+                                Updated
+                              </span>                         
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button id="btnRenameSelectedVerse"
+                              onclick="renameSelectedVerse();">
+                              Rename the selected verse <span class="larger">&#8660;</span>
+                          </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button id="btnDeleteSelectedVerse"
+                              onclick="deleteSelectedVerse();">
+                              Delete the selected verse &#9938;
+                          </button>
+                          </td>
+                        </tr>
+                      </table>
                     </td>
                   </tr>
           
@@ -849,11 +876,22 @@ Tag verses can be included in this order as well."
                           onclick="addVerseToVerseOrder();">
                           Add selected song verse to verse order <span class="larger">+</span>
                         </button>
-                        <br>
                         <button id="btnDeleteSelectedVerseFromVerseOrder" 
                           onclick="deleteVerseOrderVerse();">
                           Delete selected verse from verse order <span class="larger">&#9938;</span>
                         </button>
+                        <br>
+                        <span class="smaller">Repeat Count:</span>
+                        <select id="selRepeatCount"
+                          onchange="onRepeatCountChanged();"
+                          title="Set the number of times you want the verses in order to be sung.
+Any tag verse always comes last and only once."
+                          >
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>                        
                       </td>
                     </tr>
                     <tr>
@@ -880,13 +918,13 @@ Tag verses can be included in this order as well."
           <fieldset id="fsSearch">
             <legend>
               <img src="img/hide.png" 
-              width="20" 
+              class="eyeImg" 
               title="click to hide or show this section."
               onclick="toggleFieldsetVisibility(event);"
               />
               Song Data Search
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('Search');"
               />   
@@ -1012,13 +1050,13 @@ Tag verses can be included in this order as well."
           <fieldset id="fsExportImport">
             <legend>
               <img src="img/hide.png" 
-                width="20" 
+                class="eyeImg" 
                 title="click to hide or show this section."
                 onclick="toggleFieldsetVisibility(event);"
                 />
               Export / Import
               <img src="img/help.jpg" 
-                width="20" 
+                class="editImg" 
                 title="click to see a video on this section."
                 onclick="showHelp('ExportImport');"
               />  
