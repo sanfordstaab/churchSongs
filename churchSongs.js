@@ -1913,7 +1913,7 @@ async function importLibrary(event) {
  * @param {string} songSetName 
  * @param {string} songName 
  */
-function onPrintSongs(event) {
+function printNavModeData(event) {
   const nav = getNavState();
 
   setSongSetError('');
