@@ -1840,6 +1840,13 @@ function getSongSetEditImage(songSetName) {
   return `<a onclick="editSongSet('${songSetName}');"><img src="img/edit.jpg" class="editSongSetBtn" title="Edit this Song Set"></a>&nbsp;`;
 }
 
+function editSelectedNavSongSet(event) {
+  const songSetName = ge('selNavSongSets').value;
+  if (songSetName) {
+    editSongSet(songSetName);
+  }
+}
+
 function editSongSet(songSetName) {
   showFieldset('imgCreateOrEditSongSet');
   window.scrollTo(0, 
@@ -1853,13 +1860,33 @@ function getSongEditImage(songName) {
   return `<a onclick="editSong('${songName}');"><img src="img/edit.jpg" class="editSongBtn" title="Edit this Song"/></a>&nbsp;`;
 }
 
-function editSong(songName) {
+function editSelectedNavSong(event) {
+  const songName = ge('selNavSongs').value;
+  if (songName) {
+    editSong(songName);
+  }
+}
+
+function editSelectedNavSongVerse(event) {
+  const nav = getNavState();
+  if (nav.songName) {
+    editSong(nav.songName, true);
+  }  
+}
+
+function editSong(songName, fEditNavVerse=false) {
   showFieldset('imgCreateOrEditSong');
   window.scrollTo(0, 
     ge('fsCreateOrEditSong').getBoundingClientRect().y - 
     ge('body').getBoundingClientRect().y);
   ge('selAllSongsToEdit').value = songName;
-  fillSongToEdit();  
+  fillSongToEdit();
+  if (fEditNavVerse) {
+    ge('selSongVersesToEdit').value = getNavState().pageName;
+    onSelectedVerseToEditChanged();
+    ge('txtaVerseLines').focus();
+  }
+
 }
 
 function areAllTokensInText(aLCTokens, text) {
