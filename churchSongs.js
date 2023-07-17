@@ -9,57 +9,8 @@ async function onPageLoad(event) {
       processARChanged(event.newValue);
     }
   }
-  // make sure we have defined at least a minimum set of data
-  if (!songLibrary) {
-    songLibrary = {};
-  }
-  if (!songLibrary.oSongSets) {
-    songLibrary.oSongSets = {};
-  }
-  if (!songLibrary.oSongs) {
-    songLibrary.oSongs = {};
-  }
 
-  if (!songLibrary.defaults) {
-    songLibrary.defaults = {};
-  }
-
-  // check for common mistakes when manually editing the data
-  checkSongLibrary();
-
-  // flesh out any missing fields for clarity and simplicity of code
-  healSongLibrary();
-
-  renderSongSetDropdown(
-    'selNavSongSets', 
-    'txtNavSongSetFilter', 
-    '',
-    'spnNoSongSets');
-
-  renderSongSetDropdown(
-    'selAllSongSetsToEdit', 
-    'txtSongSetEditFilter',
-    '',
-    'spnNoSongSetsToEdit');     
-  editSelectedSongSet();
-
-  reRenderAllSongSelectControls('', '');
-
-  // Nav init
-  ge('chkNavSongSetMode').checked = true;
-
-  // Nav formatting init
-  ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
-  ge('chkGenerateTitles').checked = songLibrary.defaults.generateTitle ? 'checked' : '';
-
-  // song editing init
-  hide('spnVerseUpdatedNotice');
-  initSongSetEditUI();
-  initSongEditUI();
-  fillSongToEdit();
-
-  // AR UI init
-  renderAspectRatioText();
+  initSiteUI();
 
   // hide sections we dont want to see initially
   toggleFieldsetVisibility({ target: ge('fsProjector').firstElementChild.firstElementChild });
@@ -73,6 +24,60 @@ async function onPageLoad(event) {
 
   await delay(1);
   onShowSongSet();
+}
+
+function initSiteUI() {
+    // make sure we have defined at least a minimum set of data
+    if (!songLibrary) {
+      songLibrary = {};
+    }
+    if (!songLibrary.oSongSets) {
+      songLibrary.oSongSets = {};
+    }
+    if (!songLibrary.oSongs) {
+      songLibrary.oSongs = {};
+    }
+  
+    if (!songLibrary.defaults) {
+      songLibrary.defaults = {};
+    }
+  
+    // check for common mistakes when manually editing the data
+    checkSongLibrary();
+  
+    // flesh out any missing fields for clarity and simplicity of code
+    healSongLibrary();
+  
+    renderSongSetDropdown(
+      'selNavSongSets', 
+      'txtNavSongSetFilter', 
+      '',
+      'spnNoSongSets');
+  
+    renderSongSetDropdown(
+      'selAllSongSetsToEdit', 
+      'txtSongSetEditFilter',
+      '',
+      'spnNoSongSetsToEdit');     
+    editSelectedSongSet();
+  
+    reRenderAllSongSelectControls('', '');
+  
+    // Nav init
+    ge('chkNavSongSetMode').checked = true;
+  
+    // Nav formatting init
+    ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
+    ge('chkGenerateTitles').checked = songLibrary.defaults.generateTitle ? 'checked' : '';
+  
+    // song editing init
+    hide('spnVerseUpdatedNotice');
+    initSongSetEditUI();
+    initSongEditUI();
+    fillSongToEdit();
+  
+    // AR UI init
+    renderAspectRatioText();
 }
 
 // projector
@@ -1921,14 +1926,31 @@ function exportLibrary(event) {
   ge('txtaImportExport').value = sOut;
 }
 
-async function importLibrary(event) {
+function importLibrary(event) {
   let sIn = ge('txtaImportExport').value;
+  importLibraryFromText(sIn);
+}
+
+function importLibraryFromText(text) {
   try {
-    songLibrary = JSON.parse(sIn);
-    await onPageLoad();
+    songLibrary = JSON.parse(text);
   } catch(error) {
     ge('txtaImportExport').value = error.message;
   }
+  initSiteUI();
+}
+
+function importDrop(event, el) {
+  event.preventDefault();
+  dropFile(event.dataTransfer.files[0], el);
+}
+
+function dropFile(file, el) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    el.value = e.target.result;
+  };
+  reader.readAsText(file, "UTF-8");
 }
 
 // printing

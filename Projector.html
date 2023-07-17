@@ -6,7 +6,7 @@
     <script src="common.js"></script>
     <script type="text/javascript">
 
-function onPageLoad(event) {
+function onProjectorLoad(event) {
   onstorage = (event) => {
     if (event.newValue != null) {
       if (event.key == 'projector-message') {
@@ -62,7 +62,7 @@ function processMessage(oMsg) {
 
   </head>
 
-  <body onload="onPageLoad();" onresize="onResize()"; class="proj-host">
+  <body onload="onProjectorLoad();" onresize="onResize()"; class="proj-host">
     <!-- filled in by code -->
     <h1>Projector Window</h1>
   </body>

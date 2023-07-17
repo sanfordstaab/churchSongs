@@ -1077,7 +1077,9 @@ Any tag verse always comes last and only once."
                     <textarea id="txtaImportExport" 
                       cols="40" 
                       rows="6" 
-                      placeholder="Paste JSON to import here\nor\nCopy Exported JSON from here to save to a file."></textarea>
+                      ondrop="importDrop(event, this);"
+                      placeholder="Paste data to import here\nor\nCopy Exported JSON from here to save to a file.\nYou can also drop a file here.">
+                    </textarea>
                   </td>
                 </tr>
               </table>
