@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   overflow: none;
 }
@@ -203,13 +204,13 @@ fieldset {
 }
 
 .formTable th {
-  padding: 1em 2em;
+  padding: 0.5em 0.5em;
   text-align: right;
   font-weight: bold;
 }
 
 .formTable td {
-  padding: 1em 2em;
+  padding: 0.5em 0.5em;
   border: solid black 1px;
 }
 
@@ -381,4 +382,29 @@ fieldset {
 
 .tblBottomInfo {
   width: 100%;
+}
+
+.ProjectorBG {
+  background-color: #d1ddff;
+}
+.SongOrSetSelectionBG {
+  background-color: #fffaaf;
+}
+.NavBG {
+  background-color: #ff9a9a;
+}
+.GeneralFormattingBG {
+  background-color: #fca4e1;
+}
+.CreateOrEditSongSetBG {
+  background-color: #e2ffb4;
+}
+.CreateOrEditSongBG {
+  background-color: #aaacff;
+}
+.SearchBG {
+  background-color: #b6fff3;
+}
+.ExportImportBG {
+  background-color: #ffffff;
 }
