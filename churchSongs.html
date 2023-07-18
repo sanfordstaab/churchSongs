@@ -42,7 +42,50 @@
     <table class="bdr formTable">
 
       <tr>
-        <td class="ac">
+        <td class="ac ExportImportBG">
+          <fieldset id="fsExportImport">
+            <legend>
+              <img src="img/hide.png" 
+                class="eyeImg" 
+                title="click to hide or show this section."
+                onclick="toggleFieldsetVisibility(event);"
+                />
+              Export / Import
+              <img src="img/help.jpg" 
+                class="editImg" 
+                title="click to see a video on this section."
+                onclick="showHelp('ExportImport');"
+              />  
+            </legend>
+            <center>
+              <table class="innerTable">
+                <tr>
+                  <th>
+                    <button onclick="exportLibrary();">
+                      Export Song Library <span class="larger">&#8594;</span>
+                    </button>
+                    <br>
+                    <button onclick="importLibrary();">
+                      Import Song Library <span class="larger">&#8592;</span>
+                    </button>
+                  </th>
+                  <td>
+                    <textarea id="txtaImportExport" 
+                      cols="40" 
+                      rows="6" 
+                      ondrop="importDrop(event, this);"
+                      placeholder="Paste data to import here\nor\nCopy Exported JSON from here to save to a file.\nYou can also drop a file here.">
+                    </textarea>
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </fieldset>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="ac ProjectorBG">
           <fieldset id="fsProjector">
             <legend>
               <img src="img/hide.png" 
@@ -73,7 +116,7 @@ Then press F11 to make it full screen."
       </tr>
 
       <tr>
-        <td class="ac">
+        <td class="ac SongOrSetSelectionBG">
           <fieldset id="fsSongOrSetSelection">
             <legend>
               <img
@@ -229,7 +272,7 @@ This will be exported with the song library."
       </tr>      
      
       <tr>
-        <td class="ac">
+        <td class="ac NavBG">
           <fieldset id="fsNav">
             <legend>
               <img
@@ -399,7 +442,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
       </tr>
 
       <tr>
-        <td class="ac">
+        <td class="ac GeneralFormattingBG">
           <fieldset id="fsGeneralFormatting">
             <legend>
               <img
@@ -460,7 +503,7 @@ song and will be shown after the blank page of the song."
       </tr>
 
       <tr>
-        <td class="ac">
+        <td class="ac CreateOrEditSongSetBG">
           <fieldset id="fsCreateOrEditSongSet">
             <legend>
               <img id="imgCreateOrEditSongSet"
@@ -579,7 +622,7 @@ song and will be shown after the blank page of the song."
       </tr>
 
       <tr>
-        <td class="ac">
+        <td class="ac CreateOrEditSongBG">
           <fieldset id="fsCreateOrEditSong">
             <legend>
               <img id="imgCreateOrEditSong"
@@ -914,7 +957,7 @@ Any tag verse always comes last and only once."
       </tr>
 
       <tr>
-        <td class="ac">
+        <td class="ac SearchBG">
           <fieldset id="fsSearch">
             <legend>
               <img src="img/hide.png" 
@@ -1037,49 +1080,6 @@ Any tag verse always comes last and only once."
                       cols="60",
                       rows="13"
                     ></div>
-                  </td>
-                </tr>
-              </table>
-            </center>
-          </fieldset>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="ac">
-          <fieldset id="fsExportImport">
-            <legend>
-              <img src="img/hide.png" 
-                class="eyeImg" 
-                title="click to hide or show this section."
-                onclick="toggleFieldsetVisibility(event);"
-                />
-              Export / Import
-              <img src="img/help.jpg" 
-                class="editImg" 
-                title="click to see a video on this section."
-                onclick="showHelp('ExportImport');"
-              />  
-            </legend>
-            <center>
-              <table class="innerTable">
-                <tr>
-                  <th>
-                    <button onclick="exportLibrary();">
-                      Export Song Library <span class="larger">&#8594;</span>
-                    </button>
-                    <br>
-                    <button onclick="importLibrary();">
-                      Import Song Library <span class="larger">&#8592;</span>
-                    </button>
-                  </th>
-                  <td>
-                    <textarea id="txtaImportExport" 
-                      cols="40" 
-                      rows="6" 
-                      ondrop="importDrop(event, this);"
-                      placeholder="Paste data to import here\nor\nCopy Exported JSON from here to save to a file.\nYou can also drop a file here.">
-                    </textarea>
                   </td>
                 </tr>
               </table>
