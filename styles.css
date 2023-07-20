@@ -338,20 +338,11 @@ fieldset {
   overflow-y: scroll;
 }
 
-.editSongSetBtn {
+.editBtn {
   width: 11pt;
   height: 11pt;
   align-self: self-start;
   border: 1px solid black;
-  background-color: lightgreen;
-}
-
-.editSongBtn {
-  width: 11pt;
-  height: 11pt;
-  align-self: self-start;
-  border: 1px solid black;
-  background-color: lightblue;  
 }
 
 .greenBdr {

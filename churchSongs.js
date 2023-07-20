@@ -1756,9 +1756,9 @@ function onSearchInChanged(event) {
               if (fLineFits) {
                 if (prevSongName != oSongKV[0]) {
                   prevSongName = oSongKV[0];
-                  resultPart += `  Song:"${getSongEditImage(oSongKV[0])}${oSongKV[0]}"<br>`;
+                  resultPart += `  Song:${getSongEditVerseImage(oSongKV[0])} "${oSongKV[0]}"<br>`;
                 }
-                resultPart += `    Verse: "${aPageKV[0]}"<br>`;
+                resultPart += `    Verse:${getSongEditVerseImage(oSongKV[0], aPageKV[0])} "${aPageKV[0]}"<br>`;
                 aPageKV[1].forEach(
                   function(lyricLine) {
                     if (areAllTokensInText(aSearchTokens, lyricLine)) {
@@ -1782,7 +1782,7 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Notes)) {
-            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].Notes}<br>`;
+            resultPart += `  Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Notes}<br>`;
             fResultFound = true;
           }
         }
@@ -1797,7 +1797,7 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Author)) {
-            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].Author}<br>`;
+            resultPart += `  Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Author}<br>`;
             fResultFound = true;
           }
         }
@@ -1812,7 +1812,7 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Publisher)) {
-            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].Publisher}<br>`;
+            resultPart += `  Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Publisher}<br>`;
             fResultFound = true;
           }
         }
@@ -1827,7 +1827,7 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].License)) {
-            resultPart += `  Song:"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(oSongKV[0])}${oSongKV[1].License}<br>`;
+            resultPart += `  Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].License}<br>`;
             fResultFound = true;
           }
         }
@@ -1842,7 +1842,12 @@ function onSearchInChanged(event) {
 }
 
 function getSongSetEditImage(songSetName) {
-  return `<a onclick="editSongSet('${songSetName}');"><img src="img/edit.jpg" class="editSongSetBtn" title="Edit this Song Set"></a>&nbsp;`;
+  return `<a onclick="editSongSet('${
+    songSetName
+  }');"><img src="img/edit.jpg" 
+  class="editBtn CreateOrEditSongSetBG" 
+  title="Edit this Song Set">
+  </a>&nbsp;`;
 }
 
 function editSelectedNavSongSet(event) {
@@ -1862,7 +1867,24 @@ function editSongSet(songSetName) {
 }
 
 function getSongEditImage(songName) {
-  return `<a onclick="editSong('${songName}');"><img src="img/edit.jpg" class="editSongBtn" title="Edit this Song"/></a>&nbsp;`;
+  return `<a onclick="editSong('${
+    songName
+    }');"><img src="img/edit.jpg" 
+    class="editBtn CreateOrEditSongBG" 
+    title="Edit this Song"/>
+    </a>&nbsp;`;
+}
+
+function getSongEditVerseImage(songName, verseName) {  
+  return `<a onclick="editSong('${
+    songName
+  }', '${
+    verseName
+  }');"><img src="img/edit.jpg" 
+  class="editBtn CreateOrEditSongBG" 
+  title="Edit this Song and Verse"/>
+  </a>&nbsp;`;
+  
 }
 
 function editSelectedNavSong(event) {
@@ -1875,23 +1897,34 @@ function editSelectedNavSong(event) {
 function editSelectedNavSongVerse(event) {
   const nav = getNavState();
   if (nav.songName) {
-    editSong(nav.songName, true);
+    editSong(nav.songName,  nav.pageName);
   }  
 }
 
-function editSong(songName, fEditNavVerse=false) {
+function editSong(songName, verseName='') {
   showFieldset('imgCreateOrEditSong');
   window.scrollTo(0, 
     ge('fsCreateOrEditSong').getBoundingClientRect().y - 
     ge('body').getBoundingClientRect().y);
   ge('selAllSongsToEdit').value = songName;
   fillSongToEdit();
-  if (fEditNavVerse) {
-    ge('selSongVersesToEdit').value = getNavState().pageName;
+  if (verseName) {
+    ge('selSongVersesToEdit').value = verseName;
     onSelectedVerseToEditChanged();
     ge('txtaVerseLines').focus();
   }
 
+}
+
+function getSongVerseEditImage(songName, verseName) {
+  return `<a onclick="editSong('${
+      songName
+    }', '${
+      verseName
+    }');"><img src="img/edit.jpg" 
+    class="editBtn CreateOrEditSongBG" 
+    title="Edit this Song"/>
+    </a>&nbsp;`;
 }
 
 function areAllTokensInText(aLCTokens, text) {
@@ -2446,7 +2479,6 @@ function checkSongLibrary() {
     function(songSetName) {
       songLibrary.oSongSets[songSetName].forEach(
         function (songSetSongName) {
-          // console.log(`Checking song "${songSetSongName}" referenced by song set "${songSetName}".`)
           if (!aAllSongNames.includes(songSetSongName)) {
             console.error(`Song set "${songSetName}" references the song "${songSetSongName}" that doesn't exist.`)
           }
@@ -2461,7 +2493,6 @@ function checkSongLibrary() {
       const aPageOrderNames = songData.aPageOrder;
       aPageOrderNames.forEach(
         function(pageOrderPageName) {
-          // console.log(`Checking song "${songName}" song order reference ${pageOrderPageName}.`);
           if (!aPageNames.includes(pageOrderPageName)) {
             console.error(`Song "${
               songName
