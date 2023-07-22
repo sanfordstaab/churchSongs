@@ -48,8 +48,6 @@ function initSiteUI() {
     // flesh out any missing fields for clarity and simplicity of code
     healSongLibrary();
 
-    checkForEmptySongsOrSongSets();
-  
     renderSongSetDropdown(
       'selNavSongSets', 
       'txtNavSongSetFilter', 
@@ -71,6 +69,7 @@ function initSiteUI() {
     // Nav formatting init
     ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
     ge('chkGenerateTitles').checked = songLibrary.defaults.generateTitle ? 'checked' : '';
+    renderNavSection();
   
     // song editing init
     hide('spnVerseUpdatedNotice');
@@ -80,16 +79,25 @@ function initSiteUI() {
   
     // AR UI init
     renderAspectRatioText();
+
+    checkForEmptySongsOrSongSets();
 }
 
 function checkForEmptySongsOrSongSets() {
-  const cSongs = Object.keys(songLibrary.oSongs).length;
+  const songSetName = ge('selNavSongSets').value;
+  const fIsSongSetMode = ge('chkNavSongSetMode').checked;
+  const fIsEmptySongSetSelected = 
+    fIsSongSetMode && 
+    songSetName && 
+    (!songLibrary.oSongSets[songSetName] ||
+      songLibrary.oSongSets[songSetName].length == 0);
+  const fHasSongs = Object.keys(songLibrary.oSongs).length > 0 && !fIsEmptySongSetSelected;
   const cSongSets = Object.keys(songLibrary.oSongSets).length;
-  show('tdProjectorSection', cSongs > 0);
-  show('trSongOrSongSetSelection', cSongs > 0);
-  show('trNavSection', cSongs > 0);
-  show('trGeneralFormattingSection', cSongs > 0);
-  show('trSearch', cSongs > 0 || cSongSets > 0);
+  show('tdProjectorSection', fHasSongs);
+  show('trSongOrSongSetSelection', fHasSongs);
+  show('trNavSection', fHasSongs);
+  show('trGeneralFormattingSection', fHasSongs);
+  show('trSearch', fHasSongs || cSongSets > 0);
 }
 
 // projector
@@ -125,7 +133,7 @@ function getNavState() {
     nav.aSongsInSet = aSongsInSet;
     nav.iSongInSet = g.nav.iSongInSet;
     console.assert(nav.iSongInSet >= 0);
-    console.assert(nav.iSongInSet < nav.cSongsInSet);
+    // console.assert(nav.iSongInSet < nav.cSongsInSet);
     nav.songName = songLibrary.oSongSets[nav.songSetName][nav.iSongInSet];
     nav = addNavSongState(nav);
 
@@ -174,18 +182,20 @@ function addNavSongState(nav) {
   nav.iPageInSong = g.nav.iPageInSong;
   console.assert(nav.iPageInSong >= 0);
   let aPagesInSong = [];
-  console.assert(Number.isInteger(nav.songData.RepeatCount));
-  console.assert(nav.songData.RepeatCount > 0);
-  for (let i = 0; i < nav.songData.RepeatCount; i++) {
-    aPagesInSong = aPagesInSong.concat(nav.songData.aPageOrder);
-  }
-  if (nav.songData.TagPage) {
-    aPagesInSong = aPagesInSong.concat([ nav.songData.TagPage ]);
+  if (nav.songData) {
+    console.assert(Number.isInteger(nav.songData.RepeatCount));
+    console.assert(nav.songData.RepeatCount > 0);
+    for (let i = 0; i < nav.songData.RepeatCount; i++) {
+      aPagesInSong = aPagesInSong.concat(nav.songData.aPageOrder);
+    }
+    if (nav.songData.TagPage) {
+      aPagesInSong = aPagesInSong.concat([ nav.songData.TagPage ]);
+    }
   }
   nav.cPagesInSong = aPagesInSong.length;
   nav.pageName = aPagesInSong[nav.iPageInSong];
   nav.aPagesInSong = aPagesInSong;
-  console.assert(nav.iPageInSong < nav.cPagesInSong);
+  // console.assert(nav.iPageInSong < nav.cPagesInSong);
   nav.fInReview = false;
   nav.fBlankScreen = g.nav.fBlankScreen;
   nav.showTitlePage = g.nav.showTitlePage;
@@ -461,15 +471,18 @@ function enableNavButtons() {
     enableElement('btnPrevReviewPage', nav.iPageInReview > 0);
     enableElement('btnNextReviewPage', nav.iPageInReview < nav.cPagesInReview - 1);
   } else {
-    enableElement('btnNavPrevSong', nav.iSongInSet > 0);
-    enableElement('btnNextSong', nav.iSongInSet < nav.cSongsInSet - 1);
-    enableElement('btnNavPrevSongPage', !nav.fBlankScreen);
+    const fSongsInSet = nav.cSongsInSet > 0;
+    enableElement('btnNavPrevSong', fSongsInSet && nav.iSongInSet > 0);
+    enableElement('btnNextSong', fSongsInSet && nav.iSongInSet < nav.cSongsInSet - 1);
+    enableElement('btnNavPrevSongPage', fSongsInSet && !nav.fBlankScreen);
     enableElement('btnNavNextSongPage', 
-      nav.iPageInSong < nav.cPagesInSong - 1 || 
-      nav.iSongInSet < nav.cSongsInSet - 1 ||
-      (nav.iPageInSong == 0 && // special case for one page song
-        nav.cPagesInSong == 1 && 
-        (nav.fBlankScreen || nav.showTitlePage)
+      fSongsInSet && (
+        nav.iPageInSong < nav.cPagesInSong - 1 || 
+        nav.iSongInSet < nav.cSongsInSet - 1 ||
+        (nav.iPageInSong == 0 && // special case for one page song
+          nav.cPagesInSong == 1 && 
+          (nav.fBlankScreen || nav.showTitlePage)
+        )
       )
     );
   }
@@ -522,12 +535,14 @@ function blankScreen(event) {
 }
 
 function renderNavSection() {
-  const oMsg = getMessageFromGlobals();
-  localStorage.setItem('projector-message', JSON.stringify(oMsg));
-  localStorage.clear();
-  renderNavPagePreview();
-  renderNavStateText();
-  enableNavButtons();
+  if (getNavState().songData) {
+    const oMsg = getMessageFromGlobals();
+    localStorage.setItem('projector-message', JSON.stringify(oMsg));
+    localStorage.clear();
+    renderNavPagePreview();
+    renderNavStateText();
+    enableNavButtons();
+  }
 }
 
 function renderNavPagePreview() {
@@ -1118,12 +1133,13 @@ function addSongToNewSongSet(event) {
       sses.aSongList.shift();
     }
     songLibrary.oSongSets[sses.songSetNameToEdit] = sses.aSongList;
-    getSongSetEditState();
     renderSelectControl(
       'selCurrentSongSet',
       sses.aSongList, 
       sses.songNameToAdd);
     fillSongToEdit();
+    enableSongSetEditButtons();
+    checkForEmptySongsOrSongSets();
   }
 }
 
@@ -1141,7 +1157,7 @@ async function moveSongUpInSongSet(event) {
     T);
 }
 
-async function moveSongDownInSongSet(event) {
+function moveSongDownInSongSet(event) {
   const sses = getSongSetEditState();
   console.assert(sses.iSelectedSongInSet < sses.aSongList.length - 1);
   const T = sses.aSongsInSongSet[sses.iSelectedSongInSet];
@@ -1155,13 +1171,14 @@ async function moveSongDownInSongSet(event) {
     T);
 }
 
-async function deleteSongFromSongSet(event) {
+function deleteSongFromSongSet(event) {
   const sses = getSongSetEditState();
   sses.aSongsInSongSet.splice(sses.iSelectedSongInSet, 1);
   renderSelectControl(
     'selCurrentSongSet', 
     sses.aSongsInSongSet);
   editSelectedSongSet();
+  checkForEmptySongsOrSongSets();
 }
 
 // Edit or Create a Song
@@ -1182,7 +1199,6 @@ function fillSongToEdit(event) {
     ses.aPageNames, 
     ge('selSongVersesToEdit').value);
   onSelectedVerseToEditChanged(null, ses);
-  onVerseOrderChanged();
 
   // other settings
   if (ses.songData) {
@@ -1363,6 +1379,7 @@ function createNewSong(event) {
   ge('txtNewSongName').value = '';
   onNewSongFilterChanged();
   ge('selAllSongsToEdit').value = ses.newSongEditName;
+  initSongValues(ses.newSongEditName);
   fillSongToEdit();
   ge('txtaVerseLines').value = '';
   enableSongSetEditButtons();
@@ -1531,8 +1548,7 @@ function onSelectedVerseToEditChanged(event=null, ses) {
         '', 
       Object.keys(ses.songData.aPageOrder)
       );
-    ge('chkIsTagVerse').checked = 
-      ses.songData.TagPage == ses.pageName ? 'checked' : '';
+    ge('chkIsTagVerse').checked = ses.fIsTagVerse ? 'checked' : '';
   }
   setSongVerseError('');
   renderOverallOrderText();
@@ -2594,28 +2610,29 @@ function healSongLibrary() {
   // fix up the song oSongs
   Object.keys(o.oSongs).forEach(
     function (songName) {
-      const oSD = o.oSongs[songName];
-      const aPageNames = Object.keys(oSD.oPages);
-
-      // fix up song data values
-      if (!oSD.RepeatCount) oSD.RepeatCount = 1;
-      if (!oSD.TitleNote) oSD.TitleNote = '';
-      if (!oSD.Notes) oSD.Notes = '';
-      if (!oSD.Author) oSD.Author = '';
-      if (!oSD.Publisher) oSD.Publisher = '';
-      if (!oSD.License) oSD.License = songLibrary.defaults.License;
-      console.assert(o.defaults.fontSize);
-      if (!oSD.fontSize) oSD.fontSize = o.defaults.fontSize;
-      console.assert(o.defaults.fontBoldness);
-      if (!oSD.fontBoldness) oSD.fontBoldness = o.defaults.fontBoldness;
-      console.assert(o.defaults.lineHeight);
-      if (!oSD.lineHeight) oSD.lineHeight = o.defaults.lineHeight;
-      // oPageData was removed
-      if (oSD.oPageData) {
-        delete oSD.oPageData;
-      }
+      initSongValues(songName);
     }
   ); // oSongs 
+}
+
+function initSongValues(songName) {
+  const o = songLibrary;
+  const oSD = o.oSongs[songName];
+  const aPageNames = Object.keys(oSD.oPages);
+
+  // fix up song data values
+  if (!oSD.RepeatCount) oSD.RepeatCount = 1;
+  if (!oSD.TitleNote) oSD.TitleNote = '';
+  if (!oSD.Notes) oSD.Notes = '';
+  if (!oSD.Author) oSD.Author = '';
+  if (!oSD.Publisher) oSD.Publisher = '';
+  if (!oSD.License) oSD.License = songLibrary.defaults.License;
+  console.assert(o.defaults.fontSize);
+  if (!oSD.fontSize) oSD.fontSize = o.defaults.fontSize;
+  console.assert(o.defaults.fontBoldness);
+  if (!oSD.fontBoldness) oSD.fontBoldness = o.defaults.fontBoldness;
+  console.assert(o.defaults.lineHeight);
+  if (!oSD.lineHeight) oSD.lineHeight = o.defaults.lineHeight;
 }
 
 function getUnwoundPages(sd) {
