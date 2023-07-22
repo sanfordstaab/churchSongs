@@ -1,0 +1,17 @@
+{
+  "oSongs": {},
+  "oSongSets": {
+    "New song set": []
+  },
+  "defaults": {
+    "allCaps": 1,
+    "fontSize": 0.076,
+    "lineHeight": 0.13,
+    "fontBoldness": 5,
+    "License": "",
+    "aspectRatio": "0.5245",
+    "savedAspectRatio": "0.4715",
+    "generateTitle": true,
+    "lastReviewPage": 3
+  }
+}
