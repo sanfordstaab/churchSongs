@@ -28,12 +28,15 @@
    -->
 
   <body onload="onPageLoad()" id="body">
-    <h1 class="ac">
+    <h3 class="ac">
       Church Songs Control Panel
-    </h1>
-    <p class="smaller">
-      Version 1.0.1
-    </p>
+    </h3>
+    Version 1.0.2
+    <img src="img/help.jpg" 
+      class="editImg" 
+      title="click to see a video overview."
+      onclick="showHelp('Overview');"
+    />  
 
     <div id="divHelp" style="display: none;">
     </div>
@@ -61,21 +64,34 @@
               <table class="innerTable">
                 <tr>
                   <th>
-                    <button onclick="exportLibrary();">
-                      Export Song Library <span class="larger">&#8594;</span>
-                    </button>
-                    <br>
                     <button onclick="importLibrary();">
                       Import Song Library <span class="larger">&#8592;</span>
                     </button>
+                    <br>
+                    <button onclick="exportLibrary();">
+                      Export Song Library <span class="larger">&#8594;</span>
+                    </button>
                   </th>
                   <td>
+                    <div id="divImportExportError" class="redText smaller"></div>
                     <textarea id="txtaImportExport" 
                       cols="40" 
                       rows="6" 
                       ondrop="importDrop(event, this);"
                       placeholder="Paste data to import here\nor\nCopy Exported JSON from here to save to a file.\nYou can also drop a file here.">
                     </textarea>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>Import from file:</th>
+                  <td>
+                    <input
+                      type="file"   
+                      accept=".json"
+                      title="Select the previously exported .json file to import."
+                      onchange="importFromFile(this);"
+                      />
                   </td>
                 </tr>
               </table>
