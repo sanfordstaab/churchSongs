@@ -81,6 +81,7 @@ function initSiteUI() {
     renderAspectRatioText();
 
     checkForEmptySongsOrSongSets();
+    hide('divHelp');
 }
 
 function checkForEmptySongsOrSongSets() {
