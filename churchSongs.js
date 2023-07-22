@@ -382,6 +382,9 @@ function setNavSongUI(songName) {
 }
 
 function calcSongPageCount(songData) {
+  if (!songData) {
+    return 0;
+  }
   let cPagesInSong = songData.aPageOrder.length * songData.RepeatCount;
   if (songData.TagPage) {
     cPagesInSong++;
@@ -421,17 +424,19 @@ function renderSelectControl(
   aOptionValues=aOptionTexts) {
 
   let htmlOptions = '';
-  aOptionTexts.forEach(
-    (text, idx) => {
-      htmlOptions += `<option value="${
-        aOptionValues[idx]
-      }"${
-        selectedValue == aOptionValues[idx] ? ' selected': ''
-      }>${
-        text
-      }</option>\n`;
-    } 
-  )
+  if (aOptionTexts) {
+    aOptionTexts.forEach(
+      (text, idx) => {
+        htmlOptions += `<option value="${
+          aOptionValues[idx]
+        }"${
+          selectedValue == aOptionValues[idx] ? ' selected': ''
+        }>${
+          text
+        }</option>\n`;
+      } 
+    )
+  }
   ge(idSel).innerHTML = htmlOptions;
   ge(idSel).value = selectedValue;
 }
@@ -1164,20 +1169,30 @@ function fillSongToEdit(event) {
   onSelectedVerseToEditChanged(null, ses);
   onVerseOrderChanged();
 
-  // other settings
-  ge('txtNotes').value = 
-    ses.songData.Notes ? ses.songData.Notes : '';
-  ge('txtTitleNote').value = 
-    ses.songData.TitleNote ? ses.songData.TitleNote : '';
-  ge('txtAuthor').value = 
-    ses.songData.Author ? ses.songData.Author : '';
-  ge('txtPublisher').value = 
-    ses.songData.Publisher ? ses.songData.Publisher : '';
-  ge('txtLicense').value = 
-    ses.songData.License ? ses.songData.License : '';
-  ge('txtDefaultLicense').value = songLibrary.defaults.License;
-  ge('selRepeatCount').value = 
-    ses.songData.RepeatCount ? ses.songData.RepeatCount : 1;
+  if (ses.songData) {
+    // other settings
+    ge('txtNotes').value = 
+      ses.songData.Notes ? ses.songData.Notes : '';
+    ge('txtTitleNote').value = 
+      ses.songData.TitleNote ? ses.songData.TitleNote : '';
+    ge('txtAuthor').value = 
+      ses.songData.Author ? ses.songData.Author : '';
+    ge('txtPublisher').value = 
+      ses.songData.Publisher ? ses.songData.Publisher : '';
+    ge('txtLicense').value = 
+      ses.songData.License ? ses.songData.License : '';
+    ge('txtDefaultLicense').value = songLibrary.defaults.License;
+    ge('selRepeatCount').value = 
+      ses.songData.RepeatCount ? ses.songData.RepeatCount : 1;
+  } else {
+    ge('txtNotes').value = '';
+    ge('txtTitleNote').value = '';
+    ge('txtAuthor').value = '';
+    ge('txtPublisher').value = '';
+    ge('txtLicense').value = '';
+    ge('txtDefaultLicense').value = songLibrary.defaults.License;
+    ge('selRepeatCount').value = 1;
+  }
 
   enableSongEditButtons();
 }
@@ -1485,18 +1500,20 @@ function onSelectedVerseToEditChanged(event=null, ses) {
     ses = getSongEditState();
   }
   ge('txtNewVerseName').value = '';
-  renderSelectControl(
-    'selSongVerseOrder', 
-    ses.songData.aPageOrder, 
-    ses.songData.aPageOrder.length 
-    ? 
-      ses.selectedOrderVerseIdx 
-    : 
-      '', 
-    Object.keys(ses.songData.aPageOrder)
-    );
-  ge('chkIsTagVerse').checked = 
-    ses.songData.TagPage == ses.pageName ? 'checked' : '';
+  if (ses.songData) {
+    renderSelectControl(
+      'selSongVerseOrder', 
+      ses.songData.aPageOrder, 
+      ses.songData.aPageOrder.length 
+      ? 
+        ses.selectedOrderVerseIdx 
+      : 
+        '', 
+      Object.keys(ses.songData.aPageOrder)
+      );
+    ge('chkIsTagVerse').checked = 
+      ses.songData.TagPage == ses.pageName ? 'checked' : '';
+  }
   setSongVerseError('');
   renderOverallOrderText();
   enableSongEditVerseButtons(ses);
@@ -1955,6 +1972,7 @@ function areAllTokensInText(aLCTokens, text) {
 // import export
 
 function exportLibrary(event) {
+  ge('divImportExportError').innerText = '';
   const sOut = JSON.stringify(songLibrary, null, 2);
   ge('txtaImportExport').value = sOut;
 }
@@ -1965,12 +1983,28 @@ function importLibrary(event) {
 }
 
 function importLibraryFromText(text) {
+  const elError = ge('divImportExportError');
+  elError.innerText = '';
+  let o = {};
   try {
-    songLibrary = JSON.parse(text);
+    o = JSON.parse(text);
   } catch(error) {
-    ge('txtaImportExport').value = error.message;
+    elError.classList.remove('greenText');
+    elError.classList.add('redText');
+    elError.innerText = error.message;
+    return;
   }
+  if (!o.oSongs || !o.oSongSets || !o.defaults) {
+    elError.classList.remove('greenText');
+    elError.classList.add('redText');
+    elError.innerText = `The imported data does not appear to be a proper song library.`;
+    return;
+  }
+  songLibrary = o;
   initSiteUI();
+  elError.classList.add('greenText');
+  elError.classList.remove('redText');
+  elError.innerText = 'Successfully imported song library data.';
 }
 
 function importDrop(event, el) {
@@ -1982,9 +2016,24 @@ function dropFile(file, el) {
   var reader = new FileReader();
   reader.onload = function(e) {
     el.value = e.target.result;
+    importLibraryFromText(el.value);
   };
   reader.readAsText(file, "UTF-8");
 }
+
+function importFromFile(el) {
+  const file = el.files[0];
+  const reader = new FileReader();
+  reader.onloadend = function(event) {
+    if (event.target.readyState == FileReader.DONE) { 
+      const sJson = event.target.result;
+      ge('txtaImportExport').value = sJson;
+      importLibraryFromText(sJson);
+    }
+  }
+  reader.readAsText(file, "UTF-8");
+}
+
 
 // printing
 
