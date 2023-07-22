@@ -41,6 +41,8 @@ function show(elOrId, fShow=true) {
         el.style.display = 'inline-block';
       } else if (el.tagName == 'SPAN') {
         el.style.display = 'inline';
+      } else if (el.tagName = 'TR') {
+        el.style.display = 'table-row'
       } else {
         el.style.display = 'block';
       }

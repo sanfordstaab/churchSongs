@@ -47,6 +47,8 @@ function initSiteUI() {
   
     // flesh out any missing fields for clarity and simplicity of code
     healSongLibrary();
+
+    checkForEmptySongsOrSongSets();
   
     renderSongSetDropdown(
       'selNavSongSets', 
@@ -78,6 +80,16 @@ function initSiteUI() {
   
     // AR UI init
     renderAspectRatioText();
+}
+
+function checkForEmptySongsOrSongSets() {
+  const cSongs = Object.keys(songLibrary.oSongs).length;
+  const cSongSets = Object.keys(songLibrary.oSongSets).length;
+  show('tdProjectorSection', cSongs > 0);
+  show('trSongOrSongSetSelection', cSongs > 0);
+  show('trNavSection', cSongs > 0);
+  show('trGeneralFormattingSection', cSongs > 0);
+  show('trSearch', cSongs > 0 || cSongSets > 0);
 }
 
 // projector
@@ -424,7 +436,7 @@ function renderSelectControl(
   aOptionValues=aOptionTexts) {
 
   let htmlOptions = '';
-  if (aOptionTexts) {
+  if (aOptionTexts && aOptionTexts.length) {
     aOptionTexts.forEach(
       (text, idx) => {
         htmlOptions += `<option value="${
@@ -438,7 +450,7 @@ function renderSelectControl(
     )
   }
   ge(idSel).innerHTML = htmlOptions;
-  ge(idSel).value = selectedValue;
+  ge(idSel).value = htmlOptions ? selectedValue : null;
 }
 
 function enableNavButtons() {
@@ -978,7 +990,7 @@ function onSelCurrentSongSetChanged() {
   enableSongSetEditButtons();
 }
 
-async function deleteSongSet(event) {
+function deleteSongSet(event) {
   const songSetToDelete = ge('selAllSongSetsToEdit').value;
   if (getAllSongSetNames().includes(songSetToDelete)) {
     delete songLibrary.oSongSets[songSetToDelete];
@@ -989,6 +1001,7 @@ async function deleteSongSet(event) {
       '',
       'spnNoSongSetsToEdit');
   }
+  checkForEmptySongsOrSongSets();
 }
 
 function createNewSongSet(event) {
@@ -1005,6 +1018,7 @@ function createNewSongSet(event) {
     ge('selNavSongSets').value,
     'spnNoSongSetsToEdit');
   editSelectedSongSet();
+  checkForEmptySongsOrSongSets();
 }
 
 function copySongSet(event) {
@@ -1109,6 +1123,7 @@ function addSongToNewSongSet(event) {
       'selCurrentSongSet',
       sses.aSongList, 
       sses.songNameToAdd);
+    fillSongToEdit();
   }
 }
 
@@ -1169,21 +1184,22 @@ function fillSongToEdit(event) {
   onSelectedVerseToEditChanged(null, ses);
   onVerseOrderChanged();
 
+  // other settings
   if (ses.songData) {
-    // other settings
+    const sd = ses.songData;
     ge('txtNotes').value = 
-      ses.songData.Notes ? ses.songData.Notes : '';
+      sd.Notes ? sd.Notes : '';
     ge('txtTitleNote').value = 
-      ses.songData.TitleNote ? ses.songData.TitleNote : '';
+      sd.TitleNote ? sd.TitleNote : '';
     ge('txtAuthor').value = 
-      ses.songData.Author ? ses.songData.Author : '';
+      sd.Author ? sd.Author : '';
     ge('txtPublisher').value = 
-      ses.songData.Publisher ? ses.songData.Publisher : '';
+      sd.Publisher ? sd.Publisher : '';
     ge('txtLicense').value = 
-      ses.songData.License ? ses.songData.License : '';
+      sd.License ? sd.License : '';
     ge('txtDefaultLicense').value = songLibrary.defaults.License;
     ge('selRepeatCount').value = 
-      ses.songData.RepeatCount ? ses.songData.RepeatCount : 1;
+      sd.RepeatCount ? sd.RepeatCount : 1;
   } else {
     ge('txtNotes').value = '';
     ge('txtTitleNote').value = '';
@@ -1322,7 +1338,7 @@ function enableSongEditButtons() {
   enableSongEditVerseButtons(ses);
 }
 
-function createEmptySong(event) {
+function createNewSong(event) {
   const ses = getSongEditState();
   const sExistingSongName = 
     doesProposedEditSongNameExist(ses.newSongEditName);
@@ -1349,6 +1365,8 @@ function createEmptySong(event) {
   ge('selAllSongsToEdit').value = ses.newSongEditName;
   fillSongToEdit();
   ge('txtaVerseLines').value = '';
+  enableSongSetEditButtons();
+  checkForEmptySongsOrSongSets();
 }
 
 function clearSongUI(event) {
@@ -1431,7 +1449,7 @@ function reRenderAllSongSelectControls(oldSongName, newSongName) {
     'spnNoSongsToEdit');
 }
 
-async function deleteSong(event) {
+function deleteSong(event) {
   const ses = getSongEditState();
   delete songLibrary.oSongs[ses.selectedSongToEdit];
 
@@ -1452,6 +1470,8 @@ async function deleteSong(event) {
   // this makes the song dropdowns select the first song.
   reRenderAllSongSelectControls();
   initSongEditUI();
+  enableSongSetEditButtons();
+  checkForEmptySongsOrSongSets();
 }
  
 // edit song verses
@@ -1542,7 +1562,7 @@ function onVerseLinesChanged(event) {
   show('spnVerseUpdatedNotice');
   setTimeout(() => {
     hide('spnVerseUpdatedNotice');
-  }, 1000);
+  }, 3000);
 }
 
 function onNewVerseNameChanged (event) {

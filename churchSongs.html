@@ -100,7 +100,7 @@
         </td>
       </tr>
       
-      <tr>
+      <tr id="tdProjectorSection">
         <td class="ac ProjectorBG">
           <fieldset id="fsProjector">
             <legend>
@@ -131,7 +131,7 @@ Then press F11 to make it full screen."
         </td>
       </tr>
 
-      <tr>
+      <tr id="trSongOrSongSetSelection">
         <td class="ac SongOrSetSelectionBG">
           <fieldset id="fsSongOrSetSelection">
             <legend>
@@ -287,7 +287,7 @@ This will be exported with the song library."
         </td>
       </tr>      
      
-      <tr>
+      <tr id="trNavSection">
         <td class="ac NavBG">
           <fieldset id="fsNav">
             <legend>
@@ -457,7 +457,7 @@ Use this to efficiently check the look of all unique pages/verses in the song li
         </td>
       </tr>
 
-      <tr>
+      <tr id="trGeneralFormattingSection">
         <td class="ac GeneralFormattingBG">
           <fieldset id="fsGeneralFormatting">
             <legend>
@@ -518,7 +518,7 @@ song and will be shown after the blank page of the song."
         </td>
       </tr>
 
-      <tr>
+      <tr id="trCreateOrEditSongSet">
         <td class="ac CreateOrEditSongSetBG">
           <fieldset id="fsCreateOrEditSongSet">
             <legend>
@@ -555,7 +555,8 @@ song and will be shown after the blank page of the song."
                 onchange="onSongSetEditFilterChanged();"
                 type="text"
                 />
-              <button id="btnDeleteSongSet" onclick="deleteSongSet();">
+              <button id="btnDeleteSongSet" 
+                onclick="deleteSongSet();">
                 Delete this song set &#8855;
               </button>
               <br>
@@ -599,7 +600,8 @@ song and will be shown after the blank page of the song."
               <br>
               Add that song to the list:
               <br>
-              <button id="btnAddSongToNewSongSet" onclick="addSongToNewSongSet();">
+              <button id="btnAddSongToNewSongSet" 
+                onclick="addSongToNewSongSet();">
                 Add the Selected Song <span class="larger">+</span>
               </button>
               <fieldset>
@@ -637,7 +639,7 @@ song and will be shown after the blank page of the song."
         </td>
       </tr>
 
-      <tr>
+      <tr id="trCreateOrEditSong">
         <td class="ac CreateOrEditSongBG">
           <fieldset id="fsCreateOrEditSong">
             <legend>
@@ -704,7 +706,8 @@ song and will be shown after the blank page of the song."
               </tr>
             </table>
 
-              <button id="btnCreateNewSong" onclick="createEmptySong();">
+              <button id="btnCreateNewSong" 
+                onclick="createNewSong();">
                 Create a New Empty Song <span class="larger">+</span>
               </button>
               <button id="btnRenameSong" 
@@ -972,7 +975,7 @@ Any tag verse always comes last and only once."
         </td>
       </tr>
 
-      <tr>
+      <tr id="trSearch">
         <td class="ac SearchBG">
           <fieldset id="fsSearch">
             <legend>
