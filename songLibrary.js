@@ -145,7 +145,7 @@ var songLibrary =
       ],
       "RepeatCount": 1,
       "Notes": "",
-      "TitleNote": "",
+      "TitleNote": "#37 in the Baptist Hymnal",
       "Author": "Martin Luther 1529",
       "Publisher": "Public Domain",
       "TagPage": "",
