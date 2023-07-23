@@ -37,15 +37,7 @@ function show(elOrId, fShow=true) {
       el.style.display = g.shownDisplayClass[elOrId];
       delete g.shownDisplayClass[elOrId];
     } else {
-      if (el.tagName == 'SELECT') {
-        el.style.display = 'inline-block';
-      } else if (el.tagName == 'SPAN') {
-        el.style.display = 'inline';
-      } else if (el.tagName = 'TR') {
-        el.style.display = 'table-row'
-      } else {
-        el.style.display = 'block';
-      }
+      el.style.display = '';
     }
   } else {
     g.shownDisplayClass[elOrId] = el.display;

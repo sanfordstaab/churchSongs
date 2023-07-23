@@ -132,28 +132,27 @@
         </tr>
   
         <tr id="trSongOrSongSetSelection">
-          <td class="ac SongOrSetSelectionBG">
-            <fieldset id="fsSongOrSetSelection">
-              <legend>
-                <img
-                  src="img/hide.png" 
-                  class="eyeImg" 
-                  title="click to hide or show this section." 
-                  onclick="toggleFieldsetVisibility(event);"
-                  />
-                Song and Song Set Selection
-                <img src="img/print.jpg"
-                  class="editImg"
-                  title="Click to print the selected navigation mode data."
-                  onclick="printNavModeData();"
-                  />
-                <img src="img/help.jpg" 
-                  class="editImg" 
-                  title="Click to see a video on this section."
-                  onclick="showHelp('SongOrSetSelection');"
-                  />              
-              </legend>
-              <div>
+            <td class="ac SongOrSetSelectionBG">
+              <fieldset id="fsSongOrSetSelection">
+                <legend>
+                  <img
+                    src="img/hide.png" 
+                    class="eyeImg" 
+                    title="click to hide or show this section." 
+                    onclick="toggleFieldsetVisibility(event);"
+                    />
+                  Song and Song Set Selection
+                  <img src="img/print.jpg"
+                    class="editImg"
+                    title="Click to print the selected navigation mode data."
+                    onclick="printNavModeData();"
+                    />
+                  <img src="img/help.jpg" 
+                    class="editImg" 
+                    title="Click to see a video on this section."
+                    onclick="showHelp('SongOrSetSelection');"
+                    />              
+                </legend>
                 <table class="horzTable">
                   <tr>
                     <th>
@@ -263,7 +262,7 @@
                       <button id="btnSaveReviewPlace"
                         onclick="saveReviewPlace();"
                         title="Click to remember where you are in the review for later.
-  This will be exported with the song library."
+This will be exported with the song library."
                       >
                         Save Review Place                      
                       </button>
@@ -282,9 +281,8 @@
                 <div id="divPrintSongError" class="redText">
                   <!-- filled in by code -->
                 </div>
-              </div>
-            </fieldset>
-          </td>
+              </fieldset>
+            </td>
         </tr>      
        
         <tr id="trNavSection">
@@ -474,7 +472,7 @@
                   onclick="showHelp('GeneralFormatting');"
                 />   
               </legend>
-              <div class="smaller">
+              <div class="smaller ac">
                 <label for="chkAllCaps">All Caps</label>
                 <input id="chkAllCaps" type="checkbox" 
                   onchange="onAllCapsChanged(event);" />
@@ -694,6 +692,9 @@
                     <input id="txtNewSongName" 
                       type="text" 
                       placeholder="New Song Name" 
+                      title="You may create different versions of a song by copying it 
+and making the new name end with a '(...)' string which will
+be stripped from the song name a navigation/projection time."
                       onkeyup="onNewSongNameChanged();" 
                       onchange="onNewSongNameChanged();" 
                       size="29"
@@ -714,6 +715,10 @@
                   onclick="renameSong();">
                   Rename the selected song <span class="larger">&#8660;</span>
                 </button>
+                <button id="btnCopySong" 
+                  onclick="copySong();">
+                  Copy the selected song and give the copy the new name<span class="larger">&#8225;</span>
+                </button>                
                 <button id="btnDeleteSong" 
                   onclick="deleteSong();">
                   Delete the selected song &#8855;

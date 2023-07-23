@@ -150,7 +150,11 @@ fieldset {
 
 .ac {
   text-align:center;
-  margin: auto;
+}
+
+.ac > div, .ac > table, .ac > td, .ac > th, .ac > tr {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ar {

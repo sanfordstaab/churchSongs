@@ -284,11 +284,15 @@ function getNavStateTextHTML(nav) {
     cSongs = nav.cSongsInReview;
     songPos = `<b>${nav.iSongInReview + 1}</b> of ${nav.cSongsInReview}`;
   } else {
-    html += `Projecting Song:<br><b>${nav.songName}</b>`;
-    if (nav.mode == 'review') {
+    html += `Song:<b>${nav.songName}</b>`;
+    if (nav.mode == 'songSet') {
       cSongs = nav.cSongsInSet;
-      songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet)} of ${nav.cSongsInSet}`;
+      songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet, false)} of ${nav.cSongsInSet}`;
     }
+  }
+  
+  if (nav.mode != 'song') {
+    html += `<br>song ${songPos}`;
   }
 
   html += '<br>';
@@ -301,7 +305,7 @@ function getNavStateTextHTML(nav) {
     }
 
     cPages = nav.cUniquePagesInSong;
-    pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong)}`;
+    pagePos = `${progressBar(nav.iUniquePageInSong + 1, nav.cUniquePagesInSong, false)}`;
     sTotalPages = `<br>unique pages in the song.<br>page ${nav.iPageInReview + 1} of ${nav.cPagesInReview} review pages.`
   } else { // !nav.fInReview
     let pageName = 
@@ -318,16 +322,13 @@ function getNavStateTextHTML(nav) {
 
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
-    pagePos = `${progressBar(
-      (nav.showTitlePage && nav.iPageInSong == 0) ? 
-        0 : 
-        nav.iPageInSong + 1, nav.cPagesInSong)}`;
+    pagePos = progressBar(
+      nav.showTitlePage ? 0 : nav.iPageInSong + 1, 
+      nav.cPagesInSong, 
+      songLibrary.defaults.generateTitle);
   }
 
   html += `<br>page ${pagePos} of ${cPages}${sTotalPages}`;
-  if (nav.mode != 'song') {
-    html += `<br>song ${songPos}`;
-  }
 
   return html;
 }
@@ -466,12 +467,12 @@ function renderSelectControl(
 
 function enableNavButtons() {
   const nav = getNavState();
-  if (nav.fInReview) {
+  if (nav.mode == 'review') {
     enableElement('btnPrevReviewSong', !isReviewingFirstSong());
     enableElement('btnNextReviewSong', !isReviewingLastSong())
     enableElement('btnPrevReviewPage', nav.iPageInReview > 0);
     enableElement('btnNextReviewPage', nav.iPageInReview < nav.cPagesInReview - 1);
-  } else {
+  } else if (nav.mode == 'songSet') {
     const fSongsInSet = nav.cSongsInSet > 0;
     enableElement('btnNavPrevSong', fSongsInSet && nav.iSongInSet > 0);
     enableElement('btnNextSong', fSongsInSet && nav.iSongInSet < nav.cSongsInSet - 1);
@@ -486,6 +487,19 @@ function enableNavButtons() {
         )
       )
     );
+  } else if (nav.mode == 'song') {
+    enableElement('btnNavPrevSong', false);
+    enableElement('btnNextSong', false);
+    enableElement('btnNavPrevSongPage', !nav.fBlankScreen);
+    enableElement('btnNavNextSongPage', (
+        nav.iPageInSong < nav.cPagesInSong - 1 || 
+        nav.iSongInSet < nav.cSongsInSet - 1 ||
+        (nav.iPageInSong == 0 && // special case for one page song
+          nav.cPagesInSong == 1 && 
+          (nav.fBlankScreen || nav.showTitlePage)
+        )
+      )
+    );    
   }
   show('btnPrevReviewSong', nav.fInReview);
   show('btnNavPrevSong', !nav.fInReview);
@@ -845,11 +859,21 @@ function getMessageFromGlobals() {
       content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName],
     }
     if (g.nav.showTitlePage) {
-      oMsg.content = `<span style="color: lightblue;">${nav.songName}</span><br><span class="pageTitle">${nav.songData.TitleNote}</span>`;
+      oMsg.content = `<span style="color: lightblue;">${
+        removeVersion(nav.songName)
+        }</span><br><span class="pageTitle">${
+          nav.songData.TitleNote
+        }</span>`;
     }
       
   }
   return oMsg;
+}
+
+function removeVersion(str) {
+  // str may have a trailing "(...)" which is the song version which
+  // we remove for the title page.
+  return str.replace(/\s*\(.*\)$/, '');
 }
 
 // General formatting
@@ -862,8 +886,8 @@ function onGenerateTitlePagesChanged(event) {
   songLibrary.defaults.generateTitle = !!ge('chkGenerateTitles').checked;
   if (g.nav.showTitlePage) {
     g.nav.showTitlePage = songLibrary.defaults.generateTitle;
-    renderNavSection();
   }
+  renderNavSection();
 }
 
 // Song formatting
@@ -1402,7 +1426,7 @@ function clearSongUI(event) {
   ge('selRepeatCount').value = '';
 }
 
-async function renameSong(event) {
+function renameSong(event) {
   const ses = getSongEditState();
   const oldSongName = ses.selectedSongToEdit;
   const newSongName = ses.newSongEditName;
@@ -1424,6 +1448,22 @@ async function renameSong(event) {
       }
     )
 
+    reRenderAllSongSelectControls(oldSongName, newSongName);
+    fillSongToEdit();
+  }
+}
+
+function copySong(event) {
+  const ses = getSongEditState();
+  const oldSongName = ses.selectedSongToEdit;
+  const newSongName = ses.newSongEditName;
+  console.assert(oldSongName, 'UI should not allow this to fail');
+  if (songLibrary.oSongs[newSongName]) {
+    setNewSongError('The new song name must be unique to copy this song into.');
+    return;
+  }
+  if (newSongName != oldSongName) {
+    songLibrary.oSongs[newSongName] = songLibrary.oSongs[oldSongName];
     reRenderAllSongSelectControls(oldSongName, newSongName);
     fillSongToEdit();
   }
@@ -2661,10 +2701,10 @@ async function delay(timeInMilliseconds) {
   );
 }
 
-function progressBar(nHere, nTotal) {
+function progressBar(nHere, nTotal, fStartAt0=false) {
   console.assert(nHere <= nTotal);
   let str = '';
-  for (let i = 0; i <= nTotal; i++) {
+  for (let i = fStartAt0 ? 0 : 1; i <= nTotal; i++) {
     str += (i == nHere) ? `<b>${nHere}</b>` : '-';
   }
   return str;
