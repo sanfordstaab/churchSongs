@@ -255,10 +255,9 @@ function onModeChanged(event) {
     'btnNextReviewPage',
     'btnNextReviewSong'
     ], nav.fInReview);
-  // mode switching just sets all pages back to 0 for consistency.
   g.nav.iPageInSong = 
-  g.nav.iSongInSet = 
-  g.nav.iPageInReview = 0;
+  g.nav.iSongInSet = 0;
+  // don't reset review page as we may have restored the saved review place.
   g.nav.fBlankScreen = true;
   renderNavSection();
 }
@@ -476,7 +475,7 @@ function enableNavButtons() {
     const fSongsInSet = nav.cSongsInSet > 0;
     enableElement('btnNavPrevSong', fSongsInSet && nav.iSongInSet > 0);
     enableElement('btnNextSong', fSongsInSet && nav.iSongInSet < nav.cSongsInSet - 1);
-    enableElement('btnNavPrevSongPage', fSongsInSet && !nav.fBlankScreen);
+    enableElement('btnNavPrevSongPage', fSongsInSet && !(nav.fBlankScreen && nav.iPageInSong == 0));
     enableElement('btnNavNextSongPage', 
       fSongsInSet && (
         nav.iPageInSong < nav.cPagesInSong - 1 || 
@@ -490,7 +489,7 @@ function enableNavButtons() {
   } else if (nav.mode == 'song') {
     enableElement('btnNavPrevSong', false);
     enableElement('btnNextSong', false);
-    enableElement('btnNavPrevSongPage', !nav.fBlankScreen);
+    enableElement('btnNavPrevSongPage', !(nav.fBlankScreen && nav.iPageInSong == 0));
     enableElement('btnNavNextSongPage', (
         nav.iPageInSong < nav.cPagesInSong - 1 || 
         nav.iSongInSet < nav.cSongsInSet - 1 ||
@@ -782,8 +781,8 @@ function saveReviewPlace(event) {
   }, 2000);
 }
 
-function restoreSavedReviewPlace(event) {
-  if (songLibrary.defaults.lastReviewPage) {
+function recallReviewPlace(event) {
+  if (!Number.isNaN(songLibrary.defaults.lastReviewPage)) {
     g.nav.iPageInReview = songLibrary.defaults.lastReviewPage;
     ge('divReviewStatus').innerText = 'Review spot successfully recalled.';
     ge('rdoReviewMode').checked = 'checked';
