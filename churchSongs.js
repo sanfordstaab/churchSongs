@@ -362,9 +362,6 @@ function processKeyCode(code) {
       break;
 
     case 'Space':
-      // if (document.querySelector(':focus').tagName == 'button') {
-      //   break;  // do nothing if a button has the focus.
-      // }
       toggleBlankScreen();
       break;
     
