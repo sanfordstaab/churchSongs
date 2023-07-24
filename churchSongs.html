@@ -105,7 +105,11 @@
             <fieldset id="fsProjector">
               <legend>
                 <img src="img/hide.png" 
-                  class="eyeImg" 
+                <img src="img/print.jpg"
+                class="editImg"
+                title="Click to print the selected navigation mode data."
+                onclick="printNavModeData();"
+                />                  class="eyeImg" 
                   title="click to hide or show this section."
                   onclick="toggleFieldsetVisibility(event);"
                 />
@@ -151,7 +155,12 @@
                     class="editImg" 
                     title="Click to see a video on this section."
                     onclick="showHelp('SongOrSetSelection');"
-                    />              
+                    />   
+                  <img src="img/print.jpg"
+                    class="editImg"
+                    title="Click to print a songbook of the entire song library."
+                    onclick="printSongLibrary();"
+                    />                               
                 </legend>
                 <table class="horzTable">
                   <tr>

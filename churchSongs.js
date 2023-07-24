@@ -2129,7 +2129,7 @@ function printNavModeData(event) {
     nav.aSongsInSet.forEach(
       function(songName, iSongInSet) {
         const oHtmlPrint = { htmlPrint: htmlPrint };
-        iPrintPage = prepPrint(
+        iPrintPage = getPrintHTMLForASong(
           songName, 
           iSongInSet, 
           iPrintPage, 
@@ -2144,7 +2144,7 @@ function printNavModeData(event) {
   } else { // song mode
     ge('divPrintSongError').innerText = '';
     const oHtmlPrint = { htmlPrint: htmlPrint };
-    iPrintPage = prepPrint(
+    iPrintPage = getPrintHTMLForASong(
       nav.songName, 
       -1, 
       iPrintPage,
@@ -2187,72 +2187,56 @@ function printNavModeData(event) {
 
 }
 
-function prepPrint(
+/**
+ * Each call to this function adds to oPrintState.htmlPrintSoFar
+ * and increments the nSongOfSongSet and printPageNumber appropriately.
+ * When all calls to this function are done, the caller needs to 
+ * replace %totalPrintPages% in the .htmlPrintSoFar string with the 
+ * final value of oPrintState.printPageNumber.
+ * 
+ * @param {object} oPrintState // tracks page numbers, options, etc.
+ *  .printPageNumber - next page to output - starts at 1
+ *  .htmlPrintSoFar - generated print html 
+ *  .nSongOfSongSet - current song output count - starts at 1
+ *  .style - 'songBook' | 'songSet' | 'review'
+ * @param {string} songName // songLibrary song name
+ * @param {string} songSetName // songLibrary songSet name or '' if not in a songset
+ */
+function getPrintHTMLForASong(
+  oPrintState, 
   songName, 
-  iSongInSet, 
-  iPrintPage, 
-  oHtmlPrint, 
-  cSongsInSet,
-  nav) {
+  songSetName = '',
+  ) {
+  console.assert(oPrintState);
+  console.assert(songName);
 
-  // pull our invisible print template out of the body.
-  const htmlTemplate = `
+  // we print the verses in 2 columns of 5 rows each
+  const htmlVerseCellTemplate = `
+<tr class="printVerseRow">
+  <td class="printVerseCell">
+    <h6>%pageName-LEFT%</h6>
+    <div class="divIndent">%pageLines-LEFT%</div>
+  </td>
+  <td class="printVerseCell">
+    <h6>%pageName-RIGHT%</h6>
+    <div class="divIndent">%pageLines-RIGHT%</div>
+  </td>          
+</tr>
+`;
+  const htmlTemplateBase = `
 <div id="divPrintArea">
   <table id="tblPrint" class="pgBrk">
     <tr class="topRow">
       <td colspan="100%" class="ac">
-        <h4 class="m0">%songName%</h4>
+        <h4 class="m0">%songName% %songSetName% %pagesInSong%</h4>
       </td>
     </tr>
-
-    <tr>
-      <td class="verseCell">
-        <h6>%pageName-1%</h6>
-        <div class="divIndent">%pageLines-1%</div>
-      </td>
-      <td class="verseCell">
-        <h6>%pageName-5%</h6>
-        <div class="divIndent">%pageLines-5%</div>
-      </td>          
-    </tr>
-
-    <tr>
-      <td class="verseCell">
-        <h6>%pageName-2%</h6>
-        <div class="divIndent">%pageLines-2%</div>
-      </td>
-      <td class="verseCell">
-        <h6>%pageName-6%</h6>
-        <div class="divIndent">%pageLines-6%</div>
-      </td>          
-    </tr>
-
-    <tr>
-      <td class="verseCell">
-        <h6>%pageName-3%</h6>
-        <div class="divIndent">%pageLines-3%</div>
-      </td>
-      <td class="verseCell">
-        <h6>%pageName-7%</h6>
-        <div class="divIndent">%pageLines-7%</div>
-      </td>          
-    </tr>
-
-    <tr>
-      <td class="verseCell">
-        <h6>%pageName-4%</h6>
-        <div class="divIndent">%pageLines-4%</div>
-      </td>
-      <td class="verseCell">
-        <h6>%pageName-8%</h6>
-        <div class="divIndent">%pageLines-8%</div>
-      </td>          
-    </tr>
-    <tr>
+    %cellRows%
+    <tr class="printBottomRow">
       <td colspan="2" width="100%">
         <table width="100%">
           <br>
-          <tr class="trBottomInfo">
+          <tr class="trBottomInfoRow">
             <td class="al" width="25%">%Author%<br>%Publisher%</td>
             <td class="ac" width="50%">%Notes%</td>
             <td class="ar" width="25%">%License%<br>Page %pageNumber% of %totalPrintPages%</td>
@@ -2263,33 +2247,46 @@ function prepPrint(
   </table>  
 </div>
 `;
-
-  // reference songData with a nice short name
-  const sd = songLibrary.oSongs[songName];
-
-  // build htmlPageTemplate which has all the values common to all print pages
-  let htmlPageTemplate = htmlTemplate.
-    replace(/%Publisher%/, sd.Publisher).
-    replace(/%Author%/, sd.Author).
-    replace(/%Notes%/, sd.Notes).
-    replace(/%License%/, sd.License);
-
-  if (nav.mode == 'song') {
-    htmlPageTemplate = htmlPageTemplate.
-      replace(/%songName%/, songName);
-  } else if (nav.mode == 'songSet') {
-    htmlPageTemplate = htmlPageTemplate.
-      replace(/%songName%/, `${songName} (Song ${iSongInSet + 1} of ${cSongsInSet})`);
-  } else {
-    // review mode TODO
+  // Generate the htmlTemplate to use for this page.  This allows
+  // for easy changes in cRows and reduces template space.
+  const cRows = 5; // row height classes need to adjust to this number
+  const htmlTemplate = htmlTemplateBase;
+  for (let iRow = 1; iRow <= cRows; iRow++) {
+    htmlTemplate = htmlTemplate
+      .replace(/%cellRows%/, 
+        htmlVerseCellTemplate
+          .replace(/-LEFT/g, iRow)
+          .replace(/-RIGHT/g, iRow + cRows)) + '\n%cellRows%';
   }
 
+  // reference songData for this song with a nice short name
+  const sd = songLibrary.oSongs[songName];
+  console.assert(sd);
+    
+  let htmlPageTemplate = htmlTemplate
+    .replace(/%Publisher%/, sd.Publisher)
+    .replace(/%Author%/, sd.Author)
+    .replace(/%Notes%/, sd.Notes)
+    .replace(/%License%/, sd.License);
+
+  if (songSetName) {
+    const aSongSetNames = songLibrary.oSongSets[songSetName];
+    console.assert(aSongSetNames);
+    const cSongsInSet = aSongSetNames.length;
+    htmlPageTemplate = htmlPageTemplate
+      .replace(/%songSetName%/, `(Song ${oPrintState.nSongOfSongSet} of ${cSongsInSet} in ${songSetName})`);
+    oPrintState.nSongOfSongSet++;
+  }
+  oPrintState.cPrintPagesForSong = 1;
+
+  htmlPageTemplate = htmlPageTemplate.replace(/%songName%/, songName);
+
   // start with the first print page
-  let printPageNumber = 1;
+  oPrintState.printPageNumber;
   
   let htmlPage = htmlPageTemplate;
   const aUnwoundPages = getUnwoundPages(sd);
-  const cPagesInSong = nav.fInReview ? nav.cUniquePagesInSong : aUnwoundPages.length;
+  const cPagesInSong = aUnwoundPages.length;
   for (let iPageInSong = 0; iPageInSong < cPagesInSong; iPageInSong++) {
     const nSongThisPage = (iPageInSong % 8) + 1; // 1 based index
     const pageName = aUnwoundPages[iPageInSong];
@@ -2302,24 +2299,30 @@ function prepPrint(
       replace(rxPageNameKey, `Page ${iPageInSong + 1}) ${pageName}:`).
       replace(rxPageLinesKey, pageLines.join('\n<br>\n'));
 
-    if (nSongThisPage == 8 || iPageInSong == cPagesInSong - 1) {
-      // We have completed all 8 (or the last) page of the song pages on this print page.
+    if (nSongThisPage == cRows * 2 || iPageInSong == cPagesInSong - 1) {
+      // We have completed all cRows * 2 (or the last) page of the song pages on this print page.
       // Go on to the next print page.
-      oHtmlPrint.htmlPrint += htmlPage.
-        replace(/%pageNumber%/, printPageNumber + iPrintPage);
+      oPrintState.htmlPrintSoFar += 
+        htmlPage
+          .replace(/%pageNumber%/, oPrintState.printPageNumber);
+      oPrintState.printPageNumber++;
+      oPrintState.cPrintPagesForSong++;
       htmlPage = htmlPageTemplate;
-      printPageNumber++;
     }
   }
 
+  if (oPrintState.cPrintPagesForSong > 1) {
+    oPrintState.htmlPrintSoFar = oPrintState.htmlPrintSoFar
+      .replace(/%%/, ` [${oPrintState.cPrintPagesForSong} pages]`);
+  }
+
   // set last page's page number
-  oHtmlPrint.htmlPrint = oHtmlPrint.htmlPrint.
-    replace(/%pageNumber%/, printPageNumber - 1 + iPrintPage).
+  oPrintState.htmlPrintSoFar = oPrintState.htmlPrintSoFar.
+    replace(/%pageNumber%/, oPrintState.printPageNumber).
     replace(/%pageName-\d+%/g, '').
     replace(/%pageLines-\d+%/g, '');
-
-  return printPageNumber - 1 + iPrintPage;
-} // prepPrint
+  oPrintState.printPageNumber++;
+} // getPrintHTMLForASong
 
 function getPrintReviewHTML() {
   let html = '';
@@ -2398,6 +2401,10 @@ function getPrintReviewHTML() {
   html += '</div>'; // flexContainer
 
   return html;
+}
+
+function printSongLibrary() {
+
 }
 
 // UI utilities

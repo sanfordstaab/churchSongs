@@ -315,7 +315,7 @@ fieldset {
   /* border: solid blue 1px; */
 }
 
-.trBottomInfo {
+.trBottomInfoRow {
   font-size: 9pt;
   margin-top: .2in;
   /* border: solid black 1px; */
@@ -357,7 +357,7 @@ fieldset {
   height: .5in;
 }
 
-.verseCell {
+.printVerseCell {
   width: 50%;
   padding: .1in;
   height: 2.25in;
