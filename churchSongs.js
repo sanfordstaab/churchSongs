@@ -1283,7 +1283,7 @@ function onLicenseChanged(event) {
 
 function onDefaultLicenseChanged(event) {
   const ses = getSongEditState();
-  songLibrary.License = ge('txtDefaultLicense').value.trim();  
+  songLibrary.defaults.License = ge('txtDefaultLicense').value.trim();  
 }
 
 function setNewSongEditError(text) {
@@ -2201,22 +2201,22 @@ function getPrintHTMLForASong(
 
 // cCols cells per Verse Row
   const htmlVerseCellTemplate = `
-<td class="printVerseCell">
-  <h6>%pageName%</h6>
+<td class="tdPrintVerseCell">
+  <h6 class="al">%pageName%</h6>
   <div class="divIndent">%pageLines%</div>
 </td>`
 
   // we print the verses in cCols columns of cRows rows each
   const htmlVerseRowTemplate = `
-<tr class="printVerseRow">
+<tr class="trPrintVerseRow">
   %printVerseCells%
 </tr>`;
 
 // overall template with %placeholders% for parts
   const htmlPageTemplateBase = `
-<div id="divPrintPage">
+<div id="divPrintPage showPrintOnly">
   <table id="tblPrint" class="pgBrk">
-    <tr class="topRow">
+    <tr class="trPrintTopRow">
       <td colspan="100%" class="ac">
         <h4 class="m0">%songName% %songSetName% %pagesInSong%</h4>
       </td>
@@ -2224,11 +2224,10 @@ function getPrintHTMLForASong(
 
     %cellRows%
 
-    <tr class="printBottomRow">
-      <td colspan="2" width="100%">
+    <tr class="trPrintBottomRow">
+      <td colspan="2" width="100%" class="vab">
         <table width="100%">
-          <br>
-          <tr class="trBottomInfoRow">
+          <tr class="trPrintBottomInfoRow">
             <td class="al" width="25%">%Author%<br>%Publisher%</td>
             <td class="ac" width="50%">%Notes%</td>
             <td class="ar" width="25%">%License%<br>Page %pageNumber% of %totalPrintPages%</td>
@@ -2256,9 +2255,9 @@ function getPrintHTMLForASong(
     const aSongSetNames = songLibrary.oSongSets[songSetName];
     console.assert(aSongSetNames);
     const cSongsInSet = aSongSetNames.length;
+    oPrintState.nSongOfSongSet++;
     htmlPageTemplate = htmlPageTemplate
       .replace(/%songSetName%/, `(Song ${oPrintState.nSongOfSongSet} of ${cSongsInSet} in "${songSetName}")`);
-    oPrintState.nSongOfSongSet++;
   } else {
     htmlPageTemplate = htmlPageTemplate
       .replace(/%songSetName%/, '');
@@ -2284,15 +2283,15 @@ function getPrintHTMLForASong(
           const verseName = aUnwoundVerses[iVerseInCol];
           const verses = sd.oPages[verseName].join(`<br>`);
           htmlCells += htmlVerseCellTemplate
-            .replace(/%pageName%/, `${iVerseInCol}) ${verseName}:`)
+            .replace(/%pageName%/, `${iVerseInCol + 1}) ${verseName}:`)
             .replace(/%pageLines%/, verses);
         }
-      }
+      } // end row
       iVerseInSong++; // next row base verse
       htmlRows += htmlVerseRowTemplate
         .replace(/%printVerseCells%/, htmlCells); // add row
-    }
-    
+      } // end page
+      
     // substitute parts for this page
     oPrintState.cPrintPagesForSong++;
     oPrintState.nPrintPageNumber++;
@@ -2301,15 +2300,15 @@ function getPrintHTMLForASong(
       .replace(/%pageNumber%/, oPrintState.nPrintPageNumber);
 
     htmlSong += htmlPageTemplate;
-  }
+  } // end song
 
   // substitue parts for this song we don't know till now
   if (oPrintState.cPrintPagesForSong > 1) {
     htmlSong = htmlSong
-      .replace(/%pagesInSong%/, ` [${oPrintState.cPrintPagesForSong} pages]`);
+      .replace(/%pagesInSong%/g, ` [${oPrintState.cPrintPagesForSong} pages]`);
   } else {
     htmlSong = htmlSong
-      .replace(/%pagesInSong%/, ``);
+      .replace(/%pagesInSong%/g, ``);
   }
 
   oPrintState.htmlPrintSoFar += htmlSong; 

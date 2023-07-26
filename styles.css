@@ -169,6 +169,10 @@ fieldset {
   vertical-align: top;
 }
 
+.vab {
+  vertical-align: bottom;
+}
+
 .m0 {
   margin: 0px;
 }
@@ -274,28 +278,8 @@ fieldset {
   color:aqua;
 }
 
-@media print {
-  .pgBrk {
-    page-break-after: always !important;
-  }
-}
-
-#divPrintPage {
-  background-color: white;
-  position: relative;
-}
-
-#tblPrint {
-  width: 8in;
-  height: 10in;
-  margin: auto;
-  margin-top: 0in;
-}
-.flexContainer {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  gap: 1em;
+.showPrintOnly {
+  display: none;
 }
 
 .m2em {
@@ -304,10 +288,26 @@ fieldset {
   margin-right: 1em;
 }
 
-.flexItem {
+/* Print classes */
+@media print {
+  .pgBrk {
+    page-break-after: auto !important;
+  }
+  .showPrintOnly {
+    display: initial;
+  }
+}
+
+#divPrintPage {
   background-color: white;
-  border: solid black 1px;
-  text-align: left;
+  margin: auto;
+}
+
+#tblPrint {
+  width: 8.5in;
+  height: 11in;
+  margin: 0px;
+  /* border: solid black 1px; */
 }
 
 #tblPrint td {
@@ -315,11 +315,52 @@ fieldset {
   /* border: solid blue 1px; */
 }
 
-.trBottomInfoRow {
-  font-size: 9pt;
-  margin-top: .2in;
-  /* border: solid black 1px; */
+.trPrintTopRow {
+  height: 0.5in;
+  /* margin-bottom: .2in; */
+  /* border: solid green 1px; */
 }
+
+.trPrintBottomRow {
+  height: 0.5in
+}
+
+.trPrintBottomInfoRow {
+  font-size: 10pt;
+  /* border: solid red 1px; */
+}
+
+.trPrintVerseRow {
+  /* cRows = 5 see getPrintHTMLForASong() */
+  height: calc(10.25in / 5); 
+  width: 100%;
+  /* border: solid purple 1px; */
+}
+
+.trPrintVerseCell {
+  width: calc(7in / 2);
+  /* cCols = 2 see getPrintHTMLForASong() */
+  /* border: solid blue 1px; */
+}
+
+.flexContainer {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.flexItem {
+  background-color: white;
+  border: solid black 1px;
+  text-align: left;
+}
+
+.divIndent {
+  padding-left: 2em;
+  text-align: left;
+}
+/* End of print classes */
 
 #tdPagePreview {
   background-color: black;
@@ -351,32 +392,6 @@ fieldset {
 
 .greenBdr {
   border: solid green 2px;
-}
-
-.topRow {
-  height: .5in;
-}
-
-.printVerseCell {
-  width: 50%;
-  padding: .1in;
-  height: 2.25in;
-  font-size: 14pt;
-  /* border: solid black 1px; */
-  text-align: top;
-}
-
-.divIndent {
-  padding-left: 1em;
-}
-
-.bottomRow {
-  height: 2in;
-  font-size: 11pt;
-}
-
-.tblBottomInfo {
-  width: 100%;
 }
 
 .ProjectorBG {
