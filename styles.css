@@ -173,6 +173,10 @@ fieldset {
   vertical-align: bottom;
 }
 
+.fw {
+  width: 100%;
+}
+
 .m0 {
   margin: 0px;
 }
@@ -278,10 +282,6 @@ fieldset {
   color:aqua;
 }
 
-.showPrintOnly {
-  display: none;
-}
-
 .m2em {
   margin-top: 1em;
   margin-left: 1em; 
@@ -289,9 +289,14 @@ fieldset {
 }
 
 /* Print classes */
+
+.showPrintOnly {
+  display: none;
+}
+
 @media print {
   .pgBrk {
-    page-break-after: auto !important;
+    page-break-after: always !important;
   }
   .showPrintOnly {
     display: initial;
@@ -332,7 +337,7 @@ fieldset {
 
 .trPrintVerseRow {
   /* cRows = 5 see getPrintHTMLForASong() */
-  height: calc(10.25in / 5); 
+  height: calc(10in / 5); 
   width: 100%;
   /* border: solid purple 1px; */
 }

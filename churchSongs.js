@@ -2130,8 +2130,7 @@ function printNavModeData(style) {
       }
     );
   } else if (nav.mode == 'review') {
-    // TODO: roll this into using getPrintHTMLForASong()
-    htmlPrint = getPrintReviewHTML();
+    oPrintState.htmlPrintSoFar = getPrintReviewHTML();
   } else { // song mode
     getPrintHTMLForASong(oPrintState, nav.songName, '');
   }
@@ -2139,8 +2138,12 @@ function printNavModeData(style) {
   oPrintState.htmlPrintSoFar = oPrintState.htmlPrintSoFar
     .replace(/%totalPrintPages%/g, oPrintState.nPrintPageNumber);
 
+  printHTML(oPrintState.htmlPrintSoFar, nav);
+}
+
+function printHTML(html, nav) {
   const htmlBodySaved = document.body.innerHTML;
-  document.body.innerHTML = oPrintState.htmlPrintSoFar;
+  document.body.innerHTML = html;
   window.print();
   document.body.innerHTML = htmlBodySaved;
 
@@ -2269,7 +2272,7 @@ function getPrintHTMLForASong(
   let iVerseInSong = 0;
 
   let htmlSong = '';
-  while (iVerseInSong < cVersesInSong) { // for each print page in this song...
+  while (iVerseInSong < Math.ceil(cVersesInSong / cRows)) { // for each print page in this song...
     let htmlRows = '';
     for (let iRow = 0; iRow < cRows; iRow++) { // for each row on this page...
       let htmlCells = '';
@@ -2312,6 +2315,12 @@ function getPrintHTMLForASong(
   }
 
   oPrintState.htmlPrintSoFar += htmlSong; 
+
+  if (!oPrintState.aTOCInfo) {
+    oPrintState.aTOCInfo = [];
+  }
+  oPrintState.aTOCInfo.push([songName, oPrintState.nPrintPageNumber]);
+
 } // getPrintHTMLForASong
 
 function getPrintReviewHTML() {
@@ -2394,7 +2403,60 @@ function getPrintReviewHTML() {
 }
 
 function printSongLibrary() {
+  const oPrintState = {
+    nPrintPageNumber: 0,
+    htmlPrintSoFar: '',
+    nSongOfSongSet: 0,
+    style: 'songBook'
+  }
+  Object.keys(songLibrary.oSongs).sort().forEach(
+    function (songName) {
+      getPrintHTMLForASong(oPrintState, songName);
+    }
+  );
+  oPrintState.htmlPrintSoFar = oPrintState.htmlPrintSoFar
+    .replace(/%totalPrintPages%/g, oPrintState.nPrintPageNumber );
+  printHTML(getTOCHtml(oPrintState) + oPrintState.htmlPrintSoFar, getNavState());
+}
 
+function getTOCHtml(oPrintState) {
+  const maxLinesPerPage = 44;
+  const aTOCPageNumbers = [ 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii' ];
+  let iTOCPage = 0;
+
+  let htmlTOC = `
+<h2>
+  Table of Contents
+</h2>
+<div class="al pbBrk">`;
+  let i = 0;
+  for (; i < oPrintState.aTOCInfo.length; i++) {
+    htmlTOC += `
+Page ${
+      oPrintState.aTOCInfo[i][1]
+}
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="ar">${
+      oPrintState.aTOCInfo[i][0]
+}
+  </span>
+  <br>`;
+
+  if (i > 0 && i % maxLinesPerPage == 0) {
+    htmlTOC += `<div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>`;
+    iTOCPage++;
+  }
+
+    // TODO: add check for multi-page TOC
+  }
+
+  while (i < maxLinesPerPage) {
+    i++;
+    htmlTOC += '<br>';
+  }
+
+  htmlTOC += `<div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>`;
+
+  return htmlTOC;
 }
 
 // UI utilities
