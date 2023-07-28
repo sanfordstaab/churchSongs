@@ -18,7 +18,7 @@ var songLibrary =
       "Notes": "",
       "Author": "Words: Thomas Ken, 1695, Tune: Genevan Psalm, 1551",
       "Publisher": "",
-      "License": "CCLI 20847323",
+      "License": "Default License",
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.167,
@@ -68,7 +68,7 @@ var songLibrary =
       "RepeatCount": 1,
       "Notes": "",
       "Publisher": "",
-      "License": "CCLI 20847323",
+      "License": "Default License",
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.213,
@@ -144,21 +144,21 @@ var songLibrary =
         "Verse 4b"
       ],
       "RepeatCount": 1,
-      "Notes": "",
-      "TitleNote": "#37 in the Baptist Hymnal",
-      "Author": "Martin Luther 1529",
-      "Publisher": "Public Domain",
+      "Notes": "Song notes that appear at the bottom of a song print page",
+      "TitleNote": "Title Note - appears on generated title pages",
+      "Author": "Author",
+      "Publisher": "Publisher",
       "TagPage": "",
       "lineHeight": 0.15527118915745666,
       "fontSize": 0.045,
       "fontBoldness": 4,
       "license": "",
-      "License": ""
+      "License": "License for this song"
     }
   },
   "oSongSets": {
     "Sample Song Set": [
-      "Amazing Grace",
+      "A Mighty Fortress is our God",
       "Doxology"
     ]
   },
@@ -167,10 +167,11 @@ var songLibrary =
     "fontSize": 0.076,
     "lineHeight": 0.13,
     "fontBoldness": 5,
-    "License": "",
+    "License": "Default License",
     "aspectRatio": "0.5245",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
-    "lastReviewPage": 3
+    "lastReviewPage": 3,
+    "songBookTitle": "Church of the Broken Arrow Song Book"
   }
 }

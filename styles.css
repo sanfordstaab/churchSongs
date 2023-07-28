@@ -86,6 +86,10 @@ fieldset {
   border: solid black 2px;
 }
 
+.noBdr {
+  border: none !important;
+}
+
 .vidBdr {
   border: inset gray 10px;
 }
@@ -167,6 +171,14 @@ fieldset {
 
 .vat {
   vertical-align: top;
+}
+
+.vab {
+  vertical-align: bottom;
+}
+
+.fw {
+  width: 100%;
 }
 
 .m0 {
@@ -274,34 +286,77 @@ fieldset {
   color:aqua;
 }
 
+.m2em {
+  margin-top: 1em;
+  margin-left: 1em; 
+  margin-right: 1em;
+}
+
+/* Print classes */
+
+.showPrintOnly {
+  display: none;
+}
+
 @media print {
   .pgBrk {
     page-break-after: always !important;
   }
+  .showPrintOnly {
+    display: initial;
+  }
 }
 
-#divPrintArea {
+#divPrintPage {
   background-color: white;
-  position: relative;
+  margin: auto;
 }
 
 #tblPrint {
-  width: 8in;
-  height: 10in;
-  margin: auto;
-  margin-top: 0in;
+  width: 8.5in;
+  height: 11in;
+  margin: 0px;
+  /* border: solid black 1px; */
 }
+
+#tblPrint td {
+  vertical-align: top;
+  /* border: solid blue 1px; */
+}
+
+.trPrintTopRow {
+  height: 0.5in;
+  /* margin-bottom: .2in; */
+  /* border: solid green 1px; */
+}
+
+.trPrintBottomRow {
+  height: 0.5in
+}
+
+.trPrintBottomInfoRow {
+  font-size: 10pt;
+  /* border: solid red 1px; */
+}
+
+.trPrintVerseRow {
+  /* cRows = 5 see getPrintHTMLForASong() */
+  height: calc(10in / 5); 
+  width: 100%;
+  /* border: solid purple 1px; */
+}
+
+.trPrintVerseCell {
+  width: calc(7in / 2);
+  /* cCols = 2 see getPrintHTMLForASong() */
+  /* border: solid blue 1px; */
+}
+
 .flexContainer {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
   gap: 1em;
-}
-
-.m2em {
-  margin-top: 1em;
-  margin-left: 1em; 
-  margin-right: 1em;
 }
 
 .flexItem {
@@ -310,16 +365,11 @@ fieldset {
   text-align: left;
 }
 
-#tblPrint td {
-  vertical-align: top;
-  /* border: solid blue 1px; */
+.divIndent {
+  padding-left: 2em;
+  text-align: left;
 }
-
-.trBottomInfo {
-  font-size: 9pt;
-  margin-top: .2in;
-  /* border: solid black 1px; */
-}
+/* End of print classes */
 
 #tdPagePreview {
   background-color: black;
@@ -351,32 +401,6 @@ fieldset {
 
 .greenBdr {
   border: solid green 2px;
-}
-
-.topRow {
-  height: .5in;
-}
-
-.verseCell {
-  width: 50%;
-  padding: .1in;
-  height: 2.25in;
-  font-size: 14pt;
-  /* border: solid black 1px; */
-  text-align: top;
-}
-
-.divIndent {
-  padding-left: 1em;
-}
-
-.bottomRow {
-  height: 2in;
-  font-size: 11pt;
-}
-
-.tblBottomInfo {
-  width: 100%;
 }
 
 .ProjectorBG {
