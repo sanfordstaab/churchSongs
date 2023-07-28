@@ -1235,6 +1235,7 @@ function fillSongToEdit(event) {
     ge('txtLicense').value = 
       sd.License ? sd.License : '';
     ge('txtDefaultLicense').value = songLibrary.defaults.License;
+    ge('txtSongBookTitle').value = songLibrary.defaults.songBookTitle;
     ge('selRepeatCount').value = 
       sd.RepeatCount ? sd.RepeatCount : 1;
   } else {
@@ -1244,6 +1245,7 @@ function fillSongToEdit(event) {
     ge('txtPublisher').value = '';
     ge('txtLicense').value = '';
     ge('txtDefaultLicense').value = songLibrary.defaults.License;
+    ge('txtSongBookTitle').value = songLibrary.defaults.songBookTitle;
     ge('selRepeatCount').value = 1;
   }
 
@@ -1282,8 +1284,11 @@ function onLicenseChanged(event) {
 }
 
 function onDefaultLicenseChanged(event) {
-  const ses = getSongEditState();
   songLibrary.defaults.License = ge('txtDefaultLicense').value.trim();  
+}
+
+function onSongBookTitleChanged(event) {
+  songLibrary.defaults.songBookTitle = ge('txtSongBookTitle').value.trim();
 }
 
 function setNewSongEditError(text) {
@@ -2391,6 +2396,7 @@ function getPrintReviewHTML() {
       html += `<li>Publisher: [${sd.Publisher}]</li>`;
       html += `<li>Repeat Count: [${sd.RepeatCount}]</li>`;
       html += `<li>License: [${sd.License ? sd.License : songLibrary.defaults.License}]</li>`;
+      html += `<li>Song Book Title: [${songLibrary.defaults.songBookTitle}]</li>`;
       html += '</ul>';
 
       html += '</div>'; // flexItem
@@ -2402,7 +2408,7 @@ function getPrintReviewHTML() {
   return html;
 }
 
-function printSongLibrary() {
+function printSongBook() {
   const oPrintState = {
     nPrintPageNumber: 0,
     htmlPrintSoFar: '',
@@ -2420,41 +2426,56 @@ function printSongLibrary() {
 }
 
 function getTOCHtml(oPrintState) {
+  const songBookTitle = songLibrary.defaults.songBookTitle;
   const maxLinesPerPage = 44;
+  const maxLinesPerFirstPage = songBookTitle ? 41 : maxLinesPerPage;
   const aTOCPageNumbers = [ 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii' ];
   let iTOCPage = 0;
 
   let htmlTOC = `
+%songBookTitle%
 <h2>
   Table of Contents
 </h2>
 <div class="al pbBrk">`;
-  let i = 0;
-  for (; i < oPrintState.aTOCInfo.length; i++) {
+  let iLine = 0;
+  for (; iLine < oPrintState.aTOCInfo.length; iLine++) {
     htmlTOC += `
 Page ${
-      oPrintState.aTOCInfo[i][1]
+      oPrintState.aTOCInfo[iLine][1]
 }
   &nbsp;&nbsp;&nbsp;&nbsp;<span class="ar">${
-      oPrintState.aTOCInfo[i][0]
+      oPrintState.aTOCInfo[iLine][0]
 }
   </span>
   <br>`;
 
-  if (i > 0 && i % maxLinesPerPage == 0) {
+  if (iLine > 0 && iLine % (iTOCPage == 0 ? maxLinesPerFirstPage : maxLinesPerPage) == 0) {
     htmlTOC += `<div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>`;
     iTOCPage++;
   }
 
     // TODO: add check for multi-page TOC
-  }
+  } // for each toc line
 
-  while (i < maxLinesPerPage) {
-    i++;
+  // fill out the last page of the TOC
+  while (iLine < (iTOCPage == 0 ? maxLinesPerFirstPage : maxLinesPerPage)) {
+    iLine++;
     htmlTOC += '<br>';
   }
 
+  // add the last page of the TOC page number
   htmlTOC += `<div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>`;
+
+  // replace songBookTitle
+  if (songBookTitle) {
+    htmlTOC = htmlTOC
+      .replace(/%songBookTitle%/, 
+        `<h1>${songLibrary.defaults.songBookTitle}</h1>`);
+  } else {
+    htmlTOC = htmlTOC
+    .replace(/%songBookTitle%/, '');
+  }
 
   return htmlTOC;
 }
@@ -2702,6 +2723,8 @@ function healSongLibrary() {
 
   if (!o.defaults.allCaps) o.defaults.allCaps = 0;
   o.defaults.allCaps = o.defaults.allCaps ? 1 : 0;
+
+  if (!o.defaults.songBookTitle) o.defaults.songBookTitle = '';
 
   // fix up the song oSongs
   Object.keys(o.oSongs).forEach(

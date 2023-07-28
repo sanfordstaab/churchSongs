@@ -150,7 +150,7 @@
                   <img src="img/print.jpg"
                     class="editImg"
                     title="Click to print a songbook of the entire song library."
-                    onclick="printSongLibrary();"
+                    onclick="printSongBook();"
                     />                     
                   <img src="img/help.jpg" 
                     class="editImg" 
@@ -813,15 +813,18 @@ be stripped from the song name a navigation/projection time."
                           />
                       </td>                      
                     </tr>
+
+                    <tr class="noBdr">
+                      <td colspan="100%" class="noBdr">
+                        &nbsp;
+                      </td>
+                    </tr>
   
                     <tr>
                       <th>
                         Default License:
                       </th>
-                      <td>
-                        <span class="smaller">
-                          This applies to all songs:
-                        </span>
+                      <td class="al">
                         <input id="txtDefaultLicense"
                           type="text",
                           size="40",
@@ -835,6 +838,20 @@ be stripped from the song name a navigation/projection time."
                       </td>                      
                     </tr>
   
+                    <tr>
+                      <th>
+                        Song Book Title:
+                      </th>
+                      <td>
+                        <input id="txtSongBookTitle"
+                          type="text",
+                          size="80",
+                          title="This is used only when printing a song book of the entire song library."
+                          onkeyup="onSongBookTitleChanged();"
+                          onchange="onSongBookTitleChanged();"
+                          />
+                      </td>                      
+                    </tr>  
                   </table>
                 </fieldset>        
                 <fieldset id="fsEditSongVerses">

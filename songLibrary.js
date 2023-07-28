@@ -18,7 +18,7 @@ var songLibrary =
       "Notes": "",
       "Author": "Words: Thomas Ken, 1695, Tune: Genevan Psalm, 1551",
       "Publisher": "",
-      "License": "",
+      "License": "Default License",
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.167,
@@ -68,7 +68,7 @@ var songLibrary =
       "RepeatCount": 1,
       "Notes": "",
       "Publisher": "",
-      "License": "",
+      "License": "Default License",
       "fontSize": 0.037,
       "fontBoldness": 5,
       "lineHeight": 0.213,
@@ -171,6 +171,7 @@ var songLibrary =
     "aspectRatio": "0.5245",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
-    "lastReviewPage": 3
+    "lastReviewPage": 3,
+    "songBookTitle": "Church of the Broken Arrow Song Book"
   }
 }

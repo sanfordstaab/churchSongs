@@ -86,6 +86,10 @@ fieldset {
   border: solid black 2px;
 }
 
+.noBdr {
+  border: none !important;
+}
+
 .vidBdr {
   border: inset gray 10px;
 }
