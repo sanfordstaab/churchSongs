@@ -1724,13 +1724,15 @@ function moveSelectedVerseDownInOrder(event) {
 
 function addVerseToVerseOrder(event) {
   const ses = getSongEditState();
-  ge('selSongVerseOrder').value;
+  elSelVerseOrder = ge('selSongVerseOrder');
+  elSelVerseOrder.value;
   if (undefined == ses.selectedOrderVerseIdx) {
     ses.songData.aPageOrder.push(ses.pageName);
   } else {
     ses.songData.aPageOrder.splice(ses.selectedOrderVerseIdx + 1, 0, ses.pageName);
   }
   fillSongToEdit();  
+  elSelVerseOrder.value = ses.selectedOrderVerseIdx + 1;
 }
 
 function deleteVerseOrderVerse(event) {
