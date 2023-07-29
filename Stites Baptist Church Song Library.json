@@ -1919,6 +1919,61 @@
       "fontBoldness": 4,
       "license": "",
       "License": "CCLI 20847323"
+    },
+    "When we all get to Heaven": {
+      "oPages": {
+        "Verse 1": [
+          "Sing the wondrous love of Jesus, ",
+          "Sing his mercy and his grace;",
+          "In the mansions bright and blessed,",
+          "He'll prepare for us a place.",
+          ""
+        ],
+        "Chorus": [
+          "When we all get to heaven,",
+          "What a day of rejoicing that will be!",
+          "When we all see Jesus,",
+          "We'll sing and shout the victory."
+        ],
+        "Verse 2": [
+          "While we walk the pilgrim pathway,",
+          "Clouds will overspread the sky;",
+          "But when travling days are over,",
+          "Not a shadow, not a sigh."
+        ],
+        "Verse 3": [
+          "Let us then be true and faithful,",
+          "Trusting, serving every day;",
+          "Just one glimpse of him in glory",
+          "Will the toils of life repay."
+        ],
+        "Verse 4": [
+          "Onward to the prize before us!",
+          "Soon his beauty we'll behold;",
+          "Soon the pearly gates will open,",
+          "We shall tread the streets of gold."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.1811006725848744,
+      "license": "",
+      "TitleNote": "#491 in the Baptist Hymnal",
+      "Notes": "#491 in the Baptist Hymnal",
+      "Author": "Words: Eliza E. Hewitt, 1898, Tune: Emily D. Wilson, 1898",
+      "Publisher": "Public Domain",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2020,6 +2075,16 @@
       "What a friend we have in Jesus",
       "Amazing Grace",
       "Doxology"
+    ],
+    "2023-07-30 songs": [
+      "This is the Day",
+      "His name is wonderful",
+      "There's something about that name",
+      "Amazing Grace",
+      "When we all get to Heaven",
+      "Great is thy faithfulness",
+      "Turn Your Eyes Upon Jesus",
+      "Doxology"
     ]
   },
   "defaults": {
@@ -2031,6 +2096,7 @@
     "aspectRatio": "0.5245",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
-    "lastReviewPage": 3
+    "lastReviewPage": 3,
+    "songBookTitle": "Stites Baptist Church Song Book"
   }
 }
