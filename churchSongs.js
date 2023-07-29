@@ -2206,32 +2206,33 @@ function getPrintHTMLForASong(
 
   const cRows = 5; // row height css classes need to adjust to this number
   const cCols = 2;
+  const cVersesPerPage = cRows * cCols;
 
 // cCols cells per Verse Row
-  const htmlVerseCellTemplate = `
-<td class="tdPrintVerseCell">
+  const htmlVerseCellTemplate = 
+`<td class="tdPrintVerseCell">
   <h6 class="al">%pageName%</h6>
   <div class="divIndent">%pageLines%</div>
-</td>`
+</td>
+`;
 
   // we print the verses in cCols columns of cRows rows each
-  const htmlVerseRowTemplate = `
-<tr class="trPrintVerseRow">
+  const htmlVerseRowTemplate = 
+`<tr class="trPrintVerseRow">
   %printVerseCells%
-</tr>`;
+</tr>
+`;
 
 // overall template with %placeholders% for parts
-  const htmlPageTemplateBase = `
-<div id="divPrintPage showPrintOnly">
+  const htmlPageTemplateBase = 
+`<div id="divPrintPage showPrintOnly">
   <table id="tblPrint" class="pgBrk">
     <tr class="trPrintTopRow">
       <td colspan="100%" class="ac">
         <h4 class="m0">%songName% %songSetName% %pagesInSong%</h4>
       </td>
     </tr>
-
     %cellRows%
-
     <tr class="trPrintBottomRow">
       <td colspan="2" width="100%" class="vab">
         <table width="100%">
@@ -2277,7 +2278,8 @@ function getPrintHTMLForASong(
   let iVerseInSong = 0;
 
   let htmlSong = '';
-  while (iVerseInSong < Math.ceil(cVersesInSong / cRows)) { // for each print page in this song...
+  let cPagesForThisSong = Math.ceil(cVersesInSong / cVersesPerPage);
+  while (cPagesForThisSong--) { // for each print page in this song...
     let htmlRows = '';
     for (let iRow = 0; iRow < cRows; iRow++) { // for each row on this page...
       let htmlCells = '';
@@ -2289,26 +2291,25 @@ function getPrintHTMLForASong(
           .replace(/%pageLines%/, '&nbsp;');
         } else { // fill in proper verse for this row/col.
           const verseName = aUnwoundVerses[iVerseInCol];
-          const verses = sd.oPages[verseName].join(`<br>`);
+          const lines = sd.oPages[verseName].join(`<br>`);
           htmlCells += htmlVerseCellTemplate
             .replace(/%pageName%/, `${iVerseInCol + 1}) ${verseName}:`)
-            .replace(/%pageLines%/, verses);
+            .replace(/%pageLines%/, lines);
         }
-      } // end row
+      } // end col
       iVerseInSong++; // next row base verse
       htmlRows += htmlVerseRowTemplate
         .replace(/%printVerseCells%/, htmlCells); // add row
-      } // end page
+    } // end row
       
     // substitute parts for this page
     oPrintState.cPrintPagesForSong++;
     oPrintState.nPrintPageNumber++;
-    htmlPageTemplate = htmlPageTemplate 
+    iVerseInSong += cRows;
+    htmlSong += htmlPageTemplate 
       .replace(/%cellRows%/, htmlRows)
       .replace(/%pageNumber%/, oPrintState.nPrintPageNumber);
-
-    htmlSong += htmlPageTemplate;
-  } // end song
+  } // end page
 
   // substitue parts for this song we don't know till now
   if (oPrintState.cPrintPagesForSong > 1) {
@@ -2325,7 +2326,6 @@ function getPrintHTMLForASong(
     oPrintState.aTOCInfo = [];
   }
   oPrintState.aTOCInfo.push([songName, oPrintState.nPrintPageNumber]);
-
 } // getPrintHTMLForASong
 
 function getPrintReviewHTML() {
