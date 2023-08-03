@@ -21,7 +21,7 @@
       "License": "CCLI 20847323",
       "fontSize": 0.037,
       "fontBoldness": 5,
-      "lineHeight": 0.167,
+      "lineHeight": 0.13602254375,
       "TitleNote": "#6 in the Baptist Hymnal"
     },
     "Bind us together": {
@@ -578,26 +578,27 @@
           "Glory and honor and pow'r."
         ],
         "Verse 1": [
-          "For Thou hast created, hast all things created,",
+          "For Thou hast created, ",
+          "hast all things created,",
           "Thou has created all things;",
-          "And for Thy pleasure, they are created,",
+          "And for Thy pleasure, ",
+          "they are created,",
           "Thou art worthy, O Lord."
         ]
       },
       "aPageOrder": [
         "Chorus",
-        "Verse 1",
-        "Chorus"
+        "Verse 1"
       ],
       "Notes": "#109 Maranatha Praise Book 1990, Rev. 5:9",
       "Author": "Pauline Michael Mills",
       "RepeatCount": 2,
-      "TagPage": "Chorus",
+      "TagPage": "",
       "Publisher": "",
       "License": "CCLI 20847323",
-      "fontSize": 0.045,
-      "fontBoldness": 5,
-      "lineHeight": 0.15,
+      "fontSize": 0.041,
+      "fontBoldness": 4,
+      "lineHeight": 0.16128682799315547,
       "TitleNote": "#109 in the Maranatha Praise Book"
     },
     "Alive Alive": {
@@ -1008,9 +1009,9 @@
         "Chorus"
       ],
       "Notes": "#216 Baptist Hymnal",
-      "Author": "Words: Thomas O. Chisholm, 1923, Tune: William M. Runyan, 1923",
+      "Author": "Thomas O. Chisholm, William M. Runyan",
       "RepeatCount": 1,
-      "Publisher": "",
+      "Publisher": "Hope Publishing Co.",
       "License": "CCLI 20847323",
       "fontSize": 0.041,
       "fontBoldness": 5,
@@ -1156,7 +1157,7 @@
       ],
       "RepeatCount": 1,
       "Notes": "#510 Baptist Hymnal, 1861",
-      "Author": "Words: Julia Ward Howe",
+      "Author": "Karen Lafferty",
       "Publisher": "",
       "License": "Public Domain",
       "fontSize": 0.037,
@@ -1974,6 +1975,176 @@
       "Author": "Words: Eliza E. Hewitt, 1898, Tune: Emily D. Wilson, 1898",
       "Publisher": "Public Domain",
       "License": "CCLI 20847323"
+    },
+    "Seek Ye First": {
+      "oPages": {
+        "Verse 1": [
+          "Seek Ye first the kingdom of God",
+          "And His righteousness,",
+          "And all these things shall be",
+          "added unto you.",
+          "Allelu, Alleluia."
+        ],
+        "Verse 2": [
+          "Ask and it shall be given unto you,",
+          "Seek and ye shall find;",
+          "Knock and the door shall be",
+          "opened unto you,",
+          "Allelu, Alleluia."
+        ],
+        "Verse 3": [
+          "Man does not live by bread alone,",
+          "But by every word,",
+          "That proceeds from the",
+          "mouth of the Lord,",
+          "Allelu, Alleluia."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.17421243328125005,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "Karen Lafferty",
+      "Publisher": "",
+      "License": "CCLI 20847323"
+    },
+    "I Love You Lord": {
+      "oPages": {
+        "Verse 1": [
+          "I love you Lord,",
+          "And I lift my voice,",
+          "To worship you,",
+          "O my soul rejoice."
+        ],
+        "Verse 2": [
+          "Take joy, my King,",
+          "in what you hear,",
+          "May it be a sweet,",
+          "sweet sound in your ear."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.061,
+      "fontBoldness": 5,
+      "lineHeight": 0.22234411655512085,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "Laurie Klein",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "TagPage": ""
+    },
+    "Thy Loving Kindness": {
+      "oPages": {
+        "Verse 1b": [
+          "My lips shall praise Thee,",
+          "Thus will I bless Thee,",
+          "I will lift up my",
+          "hands unto Thy name."
+        ],
+        "Verse 2b": [
+          "My lips shall praise Thee,",
+          "Thus will I bless Thee,",
+          "I will lift up my ",
+          "hands unto Thy name."
+        ],
+        "Verse 2a": [
+          "I lift my hands up",
+          "unto Thy name,",
+          "I lift my hands up",
+          "unto Thy name;",
+          ""
+        ],
+        "Verse 1a": [
+          "Thy loving kindness",
+          "is better than life,",
+          "Thy loving kindness",
+          "is better than life;"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.061,
+      "fontBoldness": 4,
+      "lineHeight": 0.2106988434505464,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "Hugh Mitchell",
+      "Publisher": "",
+      "License": "CCLI 20847323"
+    },
+    "As The Deer": {
+      "oPages": {
+        "Verse 1": [
+          "As the deer panteth",
+          "for the water,",
+          "so my soul ",
+          "longs after you.",
+          ""
+        ],
+        "Verse 2": [
+          "You're my friend and ",
+          "you are my brother",
+          "even though you are my King.",
+          "I love you more than any other,",
+          "so much more than anything."
+        ],
+        "Verse 3": [
+          "I want you more than gold or silver,",
+          "only you can satisfy.",
+          "You alone are the real joy giver,",
+          "and the apple of my eye."
+        ],
+        "Chorus": [
+          "You alone are my Strength, my Shield,",
+          "To you alone will my spirit yield.",
+          "You alone are my heart's desire,",
+          "And I long to woship you."
+        ],
+        "Verse 1b": [
+          "You alone are my ",
+          "heart's desire",
+          "and I long to worship you."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.19570498864465366,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": "CCLI 20847323"
     }
   },
   "oSongSets": {
@@ -2085,6 +2256,15 @@
       "Great is thy faithfulness",
       "Turn Your Eyes Upon Jesus",
       "Doxology"
+    ],
+    "2023-08-06 songs": [
+      "Seek Ye First",
+      "I Love You Lord",
+      "Thy Loving Kindness",
+      "Thou Art Worthy",
+      "I worship You, Almighty God",
+      "As The Deer",
+      "Doxology"
     ]
   },
   "defaults": {
@@ -2093,7 +2273,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.5245",
+    "aspectRatio": "0.4718",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 3,

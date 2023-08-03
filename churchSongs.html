@@ -65,11 +65,11 @@
                   <tr>
                     <th>
                       <button onclick="importLibrary();">
-                        Import Song Library <span class="larger">&#8592;</span>
+                        Import Song Library <span class="larger">&#8594;</span>
                       </button>
                       <br>
                       <button onclick="exportLibrary();">
-                        Export Song Library <span class="larger">&#8594;</span>
+                        Export Song Library <span class="larger">&#8592;</span>
                       </button>
                     </th>
                     <td>
@@ -881,7 +881,11 @@ be stripped from the song name a navigation/projection time."
                         </label>
                         <input id="chkIsTagVerse" 
                           onchange="onIsTagVerseChanged();" 
-                          type="checkbox" />
+                          type="checkbox" 
+                          title="Check this to mark this verse as a tag verse.
+Tag verses are added at the end of the song
+but can also appear within the song."
+                          />
                         <br>
                         <table class="m4">
                           <tr>
