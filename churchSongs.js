@@ -942,7 +942,7 @@ function initSongSetEditUI() {
     'txtEditSongFilter', 
     '', 
     'spnNoSongsToEdit');
-  ge('txtNewSongName').value = '';
+  ge('txtNewEditSongName').value = '';
 
   enableSongSetEditButtons();
 }
@@ -1209,16 +1209,25 @@ function initSongEditUI() {
   fillSongToEdit();
 }
 
+function onEditSongSelectChanged(fClearSongName=true) {
+  if (fClearSongName) {
+    ge('txtNewEditSongName').value = '';
+  }
+  fillSongToEdit();
+}
+
 function fillSongToEdit(event) {
   const ses = getSongEditState();
   setSongVerseError('');
 
   // fill in all edit fields related to the selected song
-  ge('txtNewSongName').value = '';
+  const newSongName = ge('selSongVersesToEdit').value;
   renderSelectControl(
     'selSongVersesToEdit',
     ses.aPageNames, 
-    ge('selSongVersesToEdit').value);
+    newSongName ? 
+      newSongName :
+      ses.aPageNames[0]);
   onSelectedVerseToEditChanged(null, ses);
 
   // other settings
@@ -1247,6 +1256,13 @@ function fillSongToEdit(event) {
     ge('txtDefaultLicense').value = songLibrary.defaults.License;
     ge('txtSongBookTitle').value = songLibrary.defaults.songBookTitle;
     ge('selRepeatCount').value = 1;
+  }
+
+  const fShowDetails = !ses.newSongEditName;
+  show('fsOtherSongSettings', fShowDetails);
+  show('fsEditSongVerses', fShowDetails);
+  if (fShowDetails) {
+    ge('txtNewEditSongName').value = '';
   }
 
   enableSongEditButtons();
@@ -1296,8 +1312,7 @@ function setNewSongEditError(text) {
 }
 
 function onNewSongNameChanged(event) {
-  clearSongUI();
-  enableSongEditButtons();
+  onEditSongSelectChanged(false);
 }
 
 function onNewSongFilterChanged(event) {
@@ -1324,7 +1339,7 @@ function getSongEditState() {
     ses.selectedOrderVerseIdx = Number(ge('selSongVerseOrder').value);
     ses.selectedOrderVerseName = ses.aPageOrder[ses.selectedOrderVerseIdx];
   }
-  ses.newSongEditName = ge('txtNewSongName').value.trim();
+  ses.newSongEditName = ge('txtNewEditSongName').value.trim();
   ses.pageName = ge('selSongVersesToEdit').value;
   ses.fIsTagVerse = ge('chkIsTagVerse').checked ? 1 : 0;
   ses.newVerseName = ge('txtNewVerseName').value.trim();
@@ -1374,6 +1389,12 @@ function enableSongEditButtons() {
     !fNewSongNameAlreadyExists &&
     ses.newSongEditName != ses.selectedSongToEdit);
 
+  enableElement('btnCopySong',
+    ses.fExistingSong && 
+    ses.newSongEditName &&
+    !fNewSongNameAlreadyExists &&
+    ses.newSongEditName != ses.selectedSongToEdit);    
+
   enableElement('btnDeleteSong', 
     ses.fExistingSong);
 
@@ -1402,7 +1423,7 @@ function createNewSong(event) {
   };
   reRenderAllSongSelectControls();
   ge('txtEditSongFilter').value = '';
-  ge('txtNewSongName').value = '';
+  ge('txtNewEditSongName').value = '';
   onNewSongFilterChanged();
   ge('selAllSongsToEdit').value = ses.newSongEditName;
   initSongValues(ses.newSongEditName);
@@ -1449,6 +1470,7 @@ function renameSong(event) {
       }
     )
 
+    ge('txtNewEditSongName').value = '';
     reRenderAllSongSelectControls(oldSongName, newSongName);
     fillSongToEdit();
   }
@@ -1464,7 +1486,9 @@ function copySong(event) {
     return;
   }
   if (newSongName != oldSongName) {
-    songLibrary.oSongs[newSongName] = songLibrary.oSongs[oldSongName];
+    ge('txtNewEditSongName').value = '';
+    songLibrary.oSongs[newSongName] = 
+      JSON.parse(JSON.stringify(songLibrary.oSongs[oldSongName]));
     reRenderAllSongSelectControls(oldSongName, newSongName);
     fillSongToEdit();
   }
@@ -1585,7 +1609,9 @@ function onSelectedVerseToEditChanged(event=null, ses) {
       ses.songData.aPageOrder, 
       ses.songData.aPageOrder.length 
       ? 
-        ses.selectedOrderVerseIdx 
+        ses.selectedOrderVerseIdx ?
+          ses.selectedOrderVerseIdx :
+          0
       : 
         '', 
       Object.keys(ses.songData.aPageOrder)
