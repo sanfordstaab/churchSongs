@@ -2451,6 +2451,38 @@ function printSongBook() {
   printHTML(getTOCHtml(oPrintState) + oPrintState.htmlPrintSoFar, getNavState());
 }
 
+function printSongSetList() {
+  const tmpl = 
+  `<div id="divPrintPage showPrintOnly">
+    <table id="tblPrint" class="pgBrk">
+      <tr class="trPrintTopRow">
+        <td colspan="100%" class="ac">
+          <h4 class="m0">Song list for set "%songSetName%"</h4>
+        </td>
+      </tr>
+      %cellRows%
+    </table>  
+  </div>
+  `;
+
+  const nav = getNavState();
+  let htmlList = '<tr><td class="al"><ol class="songSetList">';
+  nav.aSongsInSet.forEach(
+    function(songName) {
+      htmlList += `
+<li>
+  ${songName}
+</li>
+`;
+    }
+  );
+  htmlList += '</ol></td></tr>';
+  const htmlPrint = tmpl
+    .replace(/%cellRows%/, htmlList)
+    .replace(/%songSetName%/, nav.songSetName);
+  printHTML(htmlPrint, nav);
+}
+
 function getTOCHtml(oPrintState) {
   const songBookTitle = songLibrary.defaults.songBookTitle;
   const maxLinesPerPage = 44;
