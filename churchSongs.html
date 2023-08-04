@@ -673,7 +673,7 @@ This will be exported with the song library."
                       <!-- filled in by code -->
                     </span>
                     <select id="selAllSongsToEdit" 
-                      onchange="fillSongToEdit();">
+                      onchange="onEditSongSelectChanged();">
                       <!-- filled in by code -->
                     </select>
                   </td>
@@ -694,7 +694,7 @@ This will be exported with the song library."
                     Pick a name for your new song:
                   </th>
                   <th>
-                    <input id="txtNewSongName" 
+                    <input id="txtNewEditSongName" 
                       type="text" 
                       placeholder="New Song Name" 
                       title="You may create different versions of a song by copying it 
