@@ -2145,6 +2145,154 @@
       "Author": "",
       "Publisher": "",
       "License": "CCLI 20847323"
+    },
+    "Turn Your Eyes Upon Jesus (Chorus Only)": {
+      "oPages": {
+        "Verse 1": [
+          "O, soul, are you weary and troubled.",
+          "No light in the darkness you see.",
+          "There's light for a look at the Savior.",
+          "And life more abundant and free."
+        ],
+        "Chorus": [
+          "Turn your eyes upon Jesus.",
+          "Look full in His wonderful face.",
+          "And the things of earth,",
+          "Will grow strangely dim.",
+          "In the light of His glory and grace."
+        ],
+        "Verse 2": [
+          "Through death into life everlasting.",
+          "He passed and we follow Him there.",
+          "Over us sin no more hath dominion.",
+          "For more than conquerors we are."
+        ],
+        "Verse 3": [
+          "His Word shall not fail you He promised.",
+          "Believe Him and all will be well.",
+          "Then go to a world that is dying.",
+          "His perfect salvation to tell."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus"
+      ],
+      "Author": "Helen H. Lemmel",
+      "RepeatCount": 1,
+      "Notes": "#97 Maranatha Praise Book 1990, #198 Baptist Hymnal",
+      "Publisher": "",
+      "License": "CCLI 20847323",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.159,
+      "TitleNote": "#97 in the Maranatha Praise Book"
+    },
+    "There is  Power in the Blood": {
+      "oPages": {
+        "Chorus": [
+          "There is power, power,",
+          "Wonder working power",
+          "In the blood",
+          "of the Lamb;",
+          "There is power, power,",
+          "Wonder working power",
+          "in the precious blood of the Lamb"
+        ],
+        "Verse 1": [
+          "Would you be free from the burden of sin?",
+          "there's power in the blood,",
+          "power in the blood;",
+          "Would you over evil a victory win?",
+          "There's wonderful power in the blood."
+        ],
+        "Verse 2": [
+          "Would you be free from you passion and pride?",
+          "There's power in the blood,",
+          "power in the blood;",
+          "Come for a cleansing to Calvary's tide;",
+          "There's wonderful power in the blood."
+        ],
+        "Verse 3": [
+          "Would you be whiter, much whiter than snow?",
+          "There's power in the blood,",
+          "power in the blood;",
+          "Sing stains are lost in its life-giving flow;",
+          "There's wonderful power in the blood."
+        ],
+        "Verse 4": [
+          "Would you do service for Jesus you King?",
+          "There's power in the blood,",
+          "power in the blood;",
+          "Would you live daily his praises to sing?",
+          "There's wonderful power in the blood."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "#159 in the Baptist Hymnal",
+      "Notes": "#159 Baptist Hymnal",
+      "Author": "Lewis E. Jones, 1899",
+      "Publisher": "Public Domain",
+      "License": ""
+    },
+    "I Surrender All": {
+      "oPages": {
+        "Verse 1": [
+          "All to Jesus I surrender, ",
+          "All to him I freely give;",
+          "I will ever love and trust him,",
+          "In his presence daily live."
+        ],
+        "Chrous": [
+          "I surrender all,",
+          "I surrender all;",
+          "All to thee, my blessed savior,",
+          "I surrender all."
+        ],
+        "Verse 2": [
+          "All to Jesus I surrender, ",
+          "Make me, Savior, wholly thine;",
+          "Let me feel thy Holy Spirit,",
+          "Truly know that thou art mine."
+        ],
+        "Verse 3": [
+          "All to Jesus I surrender,",
+          "Lord, I give myself to thee;",
+          "Fill me with thy love and power,",
+          "Let thy blessing fall on me."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chrous",
+        "Verse 2",
+        "Chrous",
+        "Verse 3",
+        "Chrous"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.19158903467334676,
+      "license": "",
+      "TitleNote": "#347 in the Baptist Hymnal",
+      "Notes": "#347 Baptist Hymnal, 1861",
+      "Author": "Words: Jason W. Van DeVenter, 1896, Tune: Winfield S. Weeden",
+      "Publisher": "Public Domain",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2265,6 +2413,16 @@
       "I worship You, Almighty God",
       "As The Deer",
       "Doxology"
+    ],
+    "2023-08-13 songs": [
+      "Majesty",
+      "Bless His Holy Name",
+      "I worship You, Almighty God",
+      "Turn Your Eyes Upon Jesus (Chorus Only)",
+      "A Mighty Fortress is our God",
+      "There is  Power in the Blood",
+      "Amazing Grace",
+      "I Surrender All"
     ]
   },
   "defaults": {
@@ -2273,7 +2431,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4718",
+    "aspectRatio": "0.4717",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 3,
