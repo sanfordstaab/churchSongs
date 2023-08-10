@@ -2075,10 +2075,29 @@ function areAllTokensInText(aLCTokens, text) {
 
 // import export
 
+function clearExImNoticesAndErrors() {
+  ge('divImportExportError').innerText = '';  
+}
+
+function setExImError(sErr) {
+  const el = ge('divImportExportError');
+  el.classList.remove('greenText');
+  el.classList.add('redText');
+  el.innerText = sErr;
+}
+
+function setExImNotice(sNotice) {
+  const el = ge('divImportExportError');
+  el.classList.remove('redText');
+  el.classList.add('greenText');
+  el.innerText = sNotice;
+}
+
 function exportLibrary(event) {
-  ge('divImportExportError').innerText = '';
+  clearExImNoticesAndErrors();
   const sOut = JSON.stringify(songLibrary, null, 2);
   ge('txtaImportExport').value = sOut;
+  setExImNotice('Successfullly exported the current song library to the text area.');
 }
 
 function importLibrary(event) {
@@ -2087,28 +2106,21 @@ function importLibrary(event) {
 }
 
 function importLibraryFromText(text) {
-  const elError = ge('divImportExportError');
-  elError.innerText = '';
+  clearExImNoticesAndErrors();
   let o = {};
   try {
     o = JSON.parse(text);
   } catch(error) {
-    elError.classList.remove('greenText');
-    elError.classList.add('redText');
-    elError.innerText = error.message;
+    setExImError(`Failed to import song library text: ${error.message}`);
     return;
   }
   if (!o.oSongs || !o.oSongSets || !o.defaults) {
-    elError.classList.remove('greenText');
-    elError.classList.add('redText');
-    elError.innerText = `The imported data does not appear to be a proper song library.`;
+    setExImNotice(`The imported data does not appear to be a proper song library.`);
     return;
   }
   songLibrary = o;
   initSiteUI();
-  elError.classList.add('greenText');
-  elError.classList.remove('redText');
-  elError.innerText = 'Successfully imported song library data.';
+  setExImNotice('Successfully imported song library data.');
 }
 
 function importDrop(event, el) {
@@ -2121,6 +2133,7 @@ function dropFile(file, el) {
   reader.onload = function(e) {
     el.value = e.target.result;
     importLibraryFromText(el.value);
+    setExImNotice(`Successfully dropped file "${file.name}" into the import area.`);
   };
   reader.readAsText(file, "UTF-8");
 }
@@ -2133,11 +2146,47 @@ function importFromFile(el) {
       const sJson = event.target.result;
       ge('txtaImportExport').value = sJson;
       importLibraryFromText(sJson);
+      setExImNotice(`Successfully loaded file "${file.name} into the import text area.`);
     }
   }
   reader.readAsText(file, "UTF-8");
 }
 
+async function exportToFile(event) {
+  clearExImNoticesAndErrors();
+  let suggestedName = 'ChurchSongLibrary.json';
+  const options =  {
+    suggestedName,
+    id: 'lastExportedFile', // remembers where we saved last
+    //startIn: 'desktop',
+    types: [
+      {
+        description: 'JSON Files',
+        accept: { 'text/javascript': [ '.json' ] }       
+      },
+      {
+        description: 'Text Files',
+        accept: { 'text/plain': [ '.txt' ] }
+      },
+    ]
+  };
+
+  try {
+    const file = await window.showSaveFilePicker(options);
+    if (file) {
+      await writeFile(file, ge('txtaImportExport').value);
+      setExImNotice(`Successfully wrote exported song library data to "${file.name}".`);
+    }
+  } catch(e) {
+    setExImError(`Failed to save the exported data to a file. Error: ${e.message}`);
+  }
+}
+
+async function writeFile(fileHandle, contents) {
+  const writable = await fileHandle.createWritable();
+  await writable.write(contents);
+  await writable.close();
+} 
 
 // printing
 

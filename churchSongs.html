@@ -75,11 +75,12 @@
                     <td>
                       <div id="divImportExportError" class="redText smaller"></div>
                       <textarea id="txtaImportExport" 
-                        cols="40" 
+                        cols="70" 
                         rows="6" 
                         ondrop="importDrop(event, this);"
-                        placeholder="Paste data to import here\nor\nCopy Exported JSON from here to save to a file.\nYou can also drop a file here.">
-                      </textarea>
+                        title="Use this area to copy or paste exported or imported data out of or into this tool.
+You can also drop files into this area for import."
+                        ></textarea>
                     </td>
                   </tr>
   
@@ -89,11 +90,22 @@
                       <input
                         type="file"   
                         accept=".json"
-                        title="Select the previously exported .json file to import."
+                        title="Select the previously exported .json or text file to import."
                         onchange="importFromFile(this);"
                         />
                     </td>
                   </tr>
+
+                  <tr>
+                    <th>Export to file:</th>
+                    <td>
+                      <button onclick="exportToFile();"
+                        title="Click here to chose where to save the text exported to the text area above."
+                        >
+                        Choose File To Save
+                      </button>
+                    </td>
+                  </tr>                  
                 </table>
               </center>
             </fieldset>
