@@ -2192,8 +2192,7 @@
         "Chorus": [
           "There is power, power,",
           "Wonder working power",
-          "In the blood",
-          "of the Lamb;",
+          "In the blood of the Lamb;",
           "There is power, power,",
           "Wonder working power",
           "in the precious blood of the Lamb"
@@ -2238,9 +2237,9 @@
         "Chorus"
       ],
       "RepeatCount": 1,
-      "fontSize": 0.076,
+      "fontSize": 0.033,
       "fontBoldness": 5,
-      "lineHeight": 0.13,
+      "lineHeight": 0.15683365423373735,
       "license": "",
       "TitleNote": "#159 in the Baptist Hymnal",
       "Notes": "#159 Baptist Hymnal",
