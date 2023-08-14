@@ -834,7 +834,7 @@ function getMessageFromGlobals() {
       lineHeight: songData.lineHeight,
       content: songData.oPages[nav.pageName],
       allCaps: songLibrary.defaults.allCaps,
-      license: songData.License,
+      license: songData.License ? songData.License : songLibrary.defaults.License,
       pageNumber: nav.iUniquePageInSong + 1,
       cPagesInSong: nav.cUniquePagesInSong,
       songNumber: nav.iSongInReview + 1,
@@ -846,7 +846,7 @@ function getMessageFromGlobals() {
       fontBoldness: nav.songData.fontBoldness,
       lineHeight: nav.songData.lineHeight,
       allCaps: songLibrary.defaults.allCaps,
-      license: nav.songData.License,
+      license: nav.songData.License ? nav.songData.License : songLibrary.defaults.License,
       pageNumber: (nav.iPageInSong == 0 && (nav.fBlankScreen || nav.showTitlePage))
         ? 0 : nav.iPageInSong + 1,
       cPagesInSong: nav.cPagesInSong,
@@ -2115,7 +2115,7 @@ function importLibraryFromText(text) {
     return;
   }
   if (!o.oSongs || !o.oSongSets || !o.defaults) {
-    setExImNotice(`The imported data does not appear to be a proper song library.`);
+    setExImError(`The imported data does not appear to be a proper song library.`);
     return;
   }
   songLibrary = o;
@@ -2133,7 +2133,7 @@ function dropFile(file, el) {
   reader.onload = function(e) {
     el.value = e.target.result;
     importLibraryFromText(el.value);
-    setExImNotice(`Successfully dropped file "${file.name}" into the import area.`);
+    setExImNotice(`Successfully imported dropped file "${file.name}".`);
   };
   reader.readAsText(file, "UTF-8");
 }
@@ -2146,7 +2146,8 @@ function importFromFile(el) {
       const sJson = event.target.result;
       ge('txtaImportExport').value = sJson;
       importLibraryFromText(sJson);
-      setExImNotice(`Successfully loaded file "${file.name} into the import text area.`);
+      setExImNotice(`Successfully importeed file "${file.name}.`);
+      ge('fileImport').value = '';
     }
   }
   reader.readAsText(file, "UTF-8");
@@ -2175,7 +2176,7 @@ async function exportToFile(event) {
     const file = await window.showSaveFilePicker(options);
     if (file) {
       await writeFile(file, ge('txtaImportExport').value);
-      setExImNotice(`Successfully wrote exported song library data to "${file.name}".`);
+      setExImNotice(`Successfully exported song library data to "${file.name}".`);
     }
   } catch(e) {
     setExImError(`Failed to save the exported data to a file. Error: ${e.message}`);
@@ -2332,7 +2333,7 @@ function getPrintHTMLForASong(
     .replace(/%Publisher%/, sd.Publisher)
     .replace(/%Author%/, sd.Author)
     .replace(/%Notes%/, sd.Notes)
-    .replace(/%License%/, sd.License)
+    .replace(/%License%/, sd.License ? sd.License : songLibrary.defaults.License)
     .replace(/%songName%/, songName);
 
   if (songSetName) {
@@ -2852,7 +2853,7 @@ function initSongValues(songName) {
   if (!oSD.Notes) oSD.Notes = '';
   if (!oSD.Author) oSD.Author = '';
   if (!oSD.Publisher) oSD.Publisher = '';
-  if (!oSD.License) oSD.License = songLibrary.defaults.License;
+  if (!oSD.License || oSD.License == songLibrary.defaults.License) oSD.License = '';
   console.assert(o.defaults.fontSize);
   if (!oSD.fontSize) oSD.fontSize = o.defaults.fontSize;
   console.assert(o.defaults.fontBoldness);

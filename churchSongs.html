@@ -87,11 +87,14 @@ You can also drop files into this area for import."
                   <tr>
                     <th>Import from file:</th>
                     <td>
-                      <input
+                      <!-- Need a way to detect if onchange wasn't called because we had previously imported the same file -->
+                      <input id="fileImport"
                         type="file"   
                         accept=".json"
                         title="Select the previously exported .json or text file to import."
                         onchange="importFromFile(this);"
+                        onclick="clearExImNoticesAndErrors();"
+                        onkeyup="clearExImNoticesAndErrors();"
                         />
                     </td>
                   </tr>
@@ -822,7 +825,7 @@ be stripped from the song name a navigation/projection time."
                           size="80",
                           title="Some song services require a visible license code such as CCLI.
   If your license code is per organization, you can leave this 
-  blank and set the default License value which will apply to all 
+  blank and set the default license value which will apply to all 
   songs that don't have this value set to something.
   Use this field for per-song license information"
                           onkeyup="onLicenseChanged();"
@@ -839,7 +842,7 @@ be stripped from the song name a navigation/projection time."
   
                     <tr>
                       <th>
-                        Default License:
+                        CCLI 20847323:
                       </th>
                       <td class="al">
                         <input id="txtDefaultLicense"
