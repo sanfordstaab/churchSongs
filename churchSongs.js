@@ -3,7 +3,8 @@
 async function onPageLoad(event) {
   onstorage = (event) => {
     if (event.key == 'projectorKeyup' && event.newValue != null) {
-      processKeyCode(event.newValue);
+      event.code = event.newValue;
+      processKeyCode(event);
     }
     if (event.key == 'AR-message' && event.newValue != null) {
       processARChanged(event.newValue);
@@ -333,7 +334,7 @@ function getNavStateTextHTML(nav) {
 }
 
 function onPreviewKey(event) {
-  if (processKeyCode(event.code)) {
+  if (processKeyCode(event)) {
     if (event && event.preventDefault) {
       event.preventDefault();
     }
@@ -341,10 +342,10 @@ function onPreviewKey(event) {
 }
 
 // returns fPreventDefault
-function processKeyCode(code) {
+function processKeyCode(event) {
   const nav = getNavState();
-  let fAllowDefault = false;
-  switch (code) {
+  let fPreventDefault = true;
+  switch (event.code) {
     case 'ArrowLeft':
       prevPage();
       break;
@@ -366,11 +367,13 @@ function processKeyCode(code) {
       break;
     
     default:
-      fAllowDefault = true;
+      fPreventDefault = false;
       break;
   }
 
-  return !fAllowDefault;
+  if (fPreventDefault) {
+    event.preventDefault();
+  }
 }
 
 function processARChanged(newAspectRatio) {
