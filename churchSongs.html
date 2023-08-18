@@ -31,7 +31,7 @@
     <h3 class="ac">
       Church Songs Control Panel
     </h3>
-    Version 1.0.6
+    Version 1.0.7
     <img src="img/help.jpg" 
       class="editImg" 
       title="click to see a video overview."
@@ -681,7 +681,7 @@ This will be exported with the song library."
                 />    
               </legend>
               <div>
-              <div id="divNewEditSongNameError" class="redText">
+              <div id="divNewEditSongNameError" class="redText smaller pb5">
               </div>
               <table class="horzTable" width="100%">
                 <tr>
@@ -689,10 +689,6 @@ This will be exported with the song library."
                     Pick a Song to edit:
                   </th>
                   <td>
-                    <span id="spnNoSongsToEdit" 
-                      class="redText smaller">
-                      <!-- filled in by code -->
-                    </span>
                     <select id="selAllSongsToEdit" 
                       onchange="onEditSongSelectChanged();">
                       <!-- filled in by code -->
@@ -702,6 +698,11 @@ This will be exported with the song library."
                       class="editImg imgXlate"
                       title="Click to enter a variant name of this song into the new song name text control."
                       />
+                    <img src="img/copy.jpg"
+                      onclick="copySelectedSongToNewName()"
+                      class="editImg imgXlate"
+                      title="Click to enter the name of this song into the new song name text control."
+                      />                      
                   </td>
                   <th>
                     Song Name Filter:
@@ -732,8 +733,7 @@ be stripped from the song name a navigation/projection time."
                       />                     
                   </th> 
                   <td colspan="2">                    
-                    <div id="divNewEditSongNameError" class="redText">
-                    </div>                   
+                    &nbsp;
                   </td>
                 </tr>
               </table>

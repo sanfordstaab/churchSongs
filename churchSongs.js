@@ -948,7 +948,7 @@ function initSongSetEditUI() {
     'selAllSongsToEdit', 
     'txtEditSongFilter', 
     '', 
-    'spnNoSongsToEdit');
+    'divNewEditSongNameError');
   ge('txtNewEditSongName').value = '';
 
   enableSongSetEditButtons();
@@ -1229,6 +1229,11 @@ function enterSongVariant(idSel) {
   onEditSongSelectChanged(false);
 }
 
+function copySelectedSongToNewName(event) {
+  ge('txtNewEditSongName').value = ge('selAllSongsToEdit').value;
+  onEditSongSelectChanged(false);
+}
+
 function fillSongToEdit(event) {
   const ses = getSongEditState();
   setSongVerseError('');
@@ -1333,7 +1338,7 @@ function onNewSongFilterChanged(event) {
     'selAllSongsToEdit', 
     'txtEditSongFilter', 
     '', 
-    'spnNoSongsToEdit');
+    'divNewEditSongNameError');
   if (cSongs == 1) {
     fillSongToEdit();
   }
@@ -1372,7 +1377,7 @@ function doesProposedEditSongNameExist(newSongEditName) {
 
 function enableSongEditButtons() {
   const ses = getSongEditState();
-  hide('spnNoSongsToEdit'); // clear any previous errors
+  hide('divNewEditSongNameError');
 
   // disable editing fieldsets if the song edit mode is active
   enableElement('fsEditSongVerses', ses.fExistingSong);
@@ -1385,8 +1390,8 @@ function enableSongEditButtons() {
   if (fNewSongNameAlreadyExists) {
     // tell user this song name already exists
     // which means we can't rename it or create a new song.
-    show('spnNoSongsToEdit');
-    ge('spnNoSongsToEdit').innerText = 
+    show('divNewEditSongNameError');
+    ge('divNewEditSongNameError').innerText = 
       `The song "${ses.newSongEditName}" already exists.`;
   }
 
@@ -1542,7 +1547,7 @@ function reRenderAllSongSelectControls(oldSongName, newSongName) {
     'selAllSongsToEdit', 
     'txtEditSongFilter', 
     selectedAllSongsToEdit,
-    'spnNoSongsToEdit');
+    'divNewEditSongNameError');
 }
 
 function deleteSong(event) {
