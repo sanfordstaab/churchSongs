@@ -2292,6 +2292,178 @@
       "Author": "Words: Jason W. Van DeVenter, 1896, Tune: Winfield S. Weeden",
       "Publisher": "Public Domain",
       "License": ""
+    },
+    "It Is Well With My Soul": {
+      "oPages": {
+        "Chorus": [
+          "It is well with my soul,",
+          "It is well,",
+          "It is well with my soul."
+        ],
+        "Verse 1b": [
+          "What ever my lot, ",
+          "thou hast taught me to say,",
+          "It is well, it is well",
+          "with my soul"
+        ],
+        "Verse 1a": [
+          "When peace, like a river, ",
+          "attendeth my way,",
+          "When sorrows like ",
+          "sea billows roll;",
+          ""
+        ],
+        "Verse 2a": [
+          "Though Satan should buffet,",
+          "though trials should come,",
+          "Let this blest",
+          "assurance control,"
+        ],
+        "Verse 2b": [
+          "That Christ has regarded",
+          "my helpless estate,",
+          "And hath shed his own",
+          "blood for my soul."
+        ],
+        "Verse 3a": [
+          "My sin - Oh, the bliss of",
+          "this glorious thought;",
+          "My sin not in part, ",
+          "but the whole,"
+        ],
+        "Verse 3b": [
+          "Is nailed to the cross ",
+          "and I bear it no more,",
+          "Praise the Lord, Praise the Lord,",
+          "Oh my soul!"
+        ],
+        "Verse 4a": [
+          "And, Lord, haste the day ",
+          "when the faith shall be sight,",
+          "The clouds be rolled ",
+          "back as a scroll,"
+        ],
+        "Verse 4b": [
+          "The trump shall resound",
+          "and the Lord shall descend,",
+          "\"Even so,\" It is ",
+          "well with my soul."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.22123378562307372,
+      "license": "",
+      "TitleNote": "Baptist Hymnal # 339",
+      "Notes": "",
+      "Author": "Words: Horatio G. Spafford, Tune: Philip P. Bliss",
+      "Publisher": "",
+      "License": ""
+    },
+    "I'll Fly Away": {
+      "oPages": {
+        "Verse 1b": [
+          "To a home on God's",
+          "celestial shore,",
+          "I'll fly away."
+        ],
+        "Verse 1a": [
+          "Some glad morning",
+          "when life of over,",
+          "I'll fly away,"
+        ],
+        "Chorus": [
+          "I'll fly away, Oh glory;",
+          "I'll fly away.",
+          "When I die, Hallelujah,",
+          "by and by,  I'll fly away."
+        ],
+        "Verse 2a": [
+          "When the shadows of ",
+          "this life have grown,",
+          "I'll fly away."
+        ],
+        "Verse 2b": [
+          "Like a bird from prison ",
+          "bars has flown,",
+          "I'll fly away."
+        ],
+        "Verse 3a": [
+          "Just a few more ",
+          "weary days and then",
+          "I'll fly away,",
+          ""
+        ],
+        "Verse 3b": [
+          "To a land where joys ",
+          "shall never end, ",
+          "I'll fly away."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.25674763015730395,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "Words & Music: Albert E. Brumley",
+      "Publisher": "Hartford Music Company",
+      "License": ""
+    },
+    "Jesus, Name Above All Names": {
+      "oPages": {
+        "Verse 1b": [
+          "Emmanuel, God ",
+          "is with us,",
+          "Blessed Redeemer, ",
+          "Living Word."
+        ],
+        "Verse 1a": [
+          "Jesus, name above",
+          "all names;",
+          "Beautiful Savior, ",
+          "Glorious Lord,"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.297217475360849,
+      "license": "",
+      "TitleNote": "Maranantha Praise Book # 200",
+      "Notes": "Luke 1:32",
+      "Author": "Naida Jearm",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2423,6 +2595,14 @@
       "Amazing Grace",
       "I Surrender All",
       "Doxology"
+    ],
+    "2023-08-18 Don Young Memorial": [
+      "It Is Well With My Soul",
+      "Jesus, Name Above All Names",
+      "Great is thy faithfulness",
+      "Amazing Grace",
+      "Swing Low Sweet Chariot",
+      "I'll Fly Away"
     ]
   },
   "defaults": {
