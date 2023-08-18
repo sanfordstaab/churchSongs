@@ -2256,6 +2256,7 @@ function printNavModeData(style) {
 }
 
 function printHTML(html, nav) {
+  const savedSongNameBeingEdited = ge('selAllSongsToEdit').value
   const htmlBodySaved = document.body.innerHTML;
   document.body.innerHTML = html;
   window.print();
@@ -2280,6 +2281,9 @@ function printHTML(html, nav) {
     // review mode
     ge('rdoReviewMode').checked = 'checked';
   }
+
+  ge('selAllSongsToEdit').value = savedSongNameBeingEdited;
+  fillSongToEdit();
 }
 
 /**
