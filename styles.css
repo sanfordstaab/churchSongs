@@ -20,6 +20,8 @@ body {
   vertical-align: middle;
   text-align: center;
   margin: 0px;
+  /* Give room to scroll up */
+  padding-bottom: 2882px; 
 }
 
 .proj-host {
@@ -137,6 +139,10 @@ fieldset {
 .editImg {
   width: 20px;
   height: 20px;  
+}
+
+.imgXlate {
+  transform: translateY(5px);
 }
 
 .eyeImg {

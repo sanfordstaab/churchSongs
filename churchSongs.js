@@ -28,61 +28,65 @@ async function onPageLoad(event) {
 }
 
 function initSiteUI() {
-    // make sure we have defined at least a minimum set of data
-    if (!songLibrary) {
-      songLibrary = {};
-    }
-    if (!songLibrary.oSongSets) {
-      songLibrary.oSongSets = {};
-    }
-    if (!songLibrary.oSongs) {
-      songLibrary.oSongs = {};
-    }
-  
-    if (!songLibrary.defaults) {
-      songLibrary.defaults = {};
-    }
-  
-    // check for common mistakes when manually editing the data
-    checkSongLibrary();
-  
-    // flesh out any missing fields for clarity and simplicity of code
-    healSongLibrary();
+  // make sure we have defined at least a minimum set of data
+  if (!songLibrary) {
+    songLibrary = {};
+  }
+  if (!songLibrary.oSongSets) {
+    songLibrary.oSongSets = {};
+  }
+  if (!songLibrary.oSongs) {
+    songLibrary.oSongs = {};
+  }
 
-    renderSongSetDropdown(
-      'selNavSongSets', 
-      'txtNavSongSetFilter', 
-      '',
-      'spnNoSongSets');
-  
-    renderSongSetDropdown(
-      'selAllSongSetsToEdit', 
-      'txtSongSetEditFilter',
-      '',
-      'spnNoSongSetsToEdit');     
-    editSelectedSongSet();
-  
-    reRenderAllSongSelectControls('', '');
-  
-    // Nav init
-    ge('chkNavSongSetMode').checked = true;
-  
-    // Nav formatting init
-    ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
-    ge('chkGenerateTitles').checked = songLibrary.defaults.generateTitle ? 'checked' : '';
-    renderNavSection();
-  
-    // song editing init
-    hide('spnVerseUpdatedNotice');
-    initSongSetEditUI();
-    initSongEditUI();
-    fillSongToEdit();
-  
-    // AR UI init
-    renderAspectRatioText();
+  if (!songLibrary.defaults) {
+    songLibrary.defaults = {};
+  }
 
-    checkForEmptySongsOrSongSets();
-    hide('divHelp');
+  // check for common mistakes when manually editing the data
+  checkSongLibrary();
+
+  // flesh out any missing fields for clarity and simplicity of code
+  healSongLibrary();
+
+  renderSongSetDropdown(
+    'selNavSongSets', 
+    'txtNavSongSetFilter', 
+    '',
+    'spnNoSongSets');
+
+  renderSongSetDropdown(
+    'selAllSongSetsToEdit', 
+    'txtSongSetEditFilter',
+    '',
+    'spnNoSongSetsToEdit');     
+  editSelectedSongSet();
+
+  reRenderAllSongSelectControls('', '');
+
+  // Nav init
+  ge('chkNavSongSetMode').checked = true;
+
+  // Nav formatting init
+  ge('chkAllCaps').checked = songLibrary.defaults.allCaps ? 'checked' : '';
+  ge('chkGenerateTitles').checked = songLibrary.defaults.generateTitle ? 'checked' : '';
+  renderNavSection();
+
+  // song editing init
+  hide('spnVerseUpdatedNotice');
+  initSongSetEditUI();
+  initSongEditUI();
+  fillSongToEdit();
+
+  // AR UI init
+  renderAspectRatioText();
+
+  checkForEmptySongsOrSongSets();
+  hide('divHelp');
+
+  setTimeout(() => {
+    window.scrollTo(0, -document.body.clientHeight);
+  }, 1);
 }
 
 function checkForEmptySongsOrSongSets() {
@@ -323,7 +327,7 @@ function getNavStateTextHTML(nav) {
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
     pagePos = progressBar(
-      nav.showTitlePage ? 0 : nav.iPageInSong + 1, 
+      nav.showTitlePage ? 0 : Number(nav.iPageInSong) + 1, 
       nav.cPagesInSong, 
       songLibrary.defaults.generateTitle);
   }
@@ -1219,6 +1223,12 @@ function onEditSongSelectChanged(fClearSongName=true) {
   fillSongToEdit();
 }
 
+function enterSongVariant(idSel) {
+  const elSel = ge(idSel);
+  ge('txtNewEditSongName').value = elSel.value + ' (variant)';
+  onEditSongSelectChanged(false);
+}
+
 function fillSongToEdit(event) {
   const ses = getSongEditState();
   setSongVerseError('');
@@ -1727,6 +1737,20 @@ async function deleteSelectedVerse(event) {
   }
   delete ses.songData.oPages[ses.pageName];
   fillSongToEdit();
+}
+
+function previewVerse(event) {
+  showFieldset('imgNavSection');
+  window.scrollTo(0, 
+    ge('fsNav').getBoundingClientRect().y - 
+    ge('body').getBoundingClientRect().y);
+  ge('selNavSongs').value = ge('selAllSongsToEdit').value;
+  ge('chkNavSongMode').checked = 'checked';
+  onModeChanged();
+  g.nav.iSongInSet = 0;
+  g.nav.iPageInSong = ge('selSongVerseOrder').value;
+  g.nav.fBlankScreen = false;
+  renderNavSection();
 }
 
 function moveSelectedVerseUpInOrder(event) {

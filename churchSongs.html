@@ -315,6 +315,7 @@ This will be exported with the song library."
             <fieldset id="fsNav">
               <legend>
                 <img
+                  id="imgNavSection"
                   src="img/hide.png" 
                   class="eyeImg" 
                   title="click to hide or show this section." 
@@ -696,6 +697,11 @@ This will be exported with the song library."
                       onchange="onEditSongSelectChanged();">
                       <!-- filled in by code -->
                     </select>
+                    <img src="img/copyV.jpg"
+                      onclick="enterSongVariant('selAllSongsToEdit')"
+                      class="editImg imgXlate"
+                      title="Click to enter a variant name of this song into the new song name text control."
+                      />
                   </td>
                   <th>
                     Song Name Filter:
@@ -741,7 +747,9 @@ be stripped from the song name a navigation/projection time."
                   Rename the selected song <span class="larger">&#8660;</span>
                 </button>
                 <button id="btnCopySong" 
-                  onclick="copySong();">
+                  onclick="copySong();"
+                  title="This works well when creating a variant of a song."
+                  >
                   Copy the selected song and give the copy the new name<span class="larger">&#8225;</span>
                 </button>                
                 <button id="btnDeleteSong" 
@@ -976,6 +984,12 @@ but can also appear within the song."
                           </select>
                         </th>
                         <td>
+                          <img 
+                            class="editImg imgXlate" 
+                            src="img/preview.png" 
+                            onclick="previewVerse();"
+                            title="Click here to preview this verse in the navigation section."
+                            />
                           <button id="btnMoveSelectedVerseUp" 
                             onclick="moveSelectedVerseUpInOrder();">
                             Move selected verse up <span class="larger">&#8593;</span>
@@ -1157,7 +1171,7 @@ but can also appear within the song."
             </fieldset>
           </td>
         </tr>
-  
+
       </table>
       </div>
     </center>
