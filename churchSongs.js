@@ -1730,7 +1730,8 @@ async function deleteSelectedVerse(event) {
   const ses = getSongEditState();
   console.assert(ses.pageName, 'UI should prevent this.');
   while (ses.songData.aPageOrder.includes(ses.pageName)) {
-    delete ses.songData.aPageOrder[ses.songData.aPageOrder.indexOf(ses.pageName)];
+    ses.songData.aPageOrder.
+      splice(ses.songData.aPageOrder.indexOf(ses.pageName), 1);
   }
   if (ses.songData.TagPage == ses.pageName) {
     ses.songData.TagPage = '';
