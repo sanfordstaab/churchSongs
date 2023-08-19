@@ -132,6 +132,19 @@ fieldset {
   width: 250px;
 }
 
+/* This class is just for debuging */
+.tblDebugBorder {
+  border: solid red 2px;
+}
+
+.tblDebugBorder th {
+  border: solid green 1px;
+}
+
+.tblDebugBorder td {
+  border: solid blue 1px;
+}
+
 .navBtn {
   text-align: center;
   vertical-align: middle;
@@ -310,7 +323,8 @@ fieldset {
 
 @media print {
   .pgBrk {
-    page-break-after: always !important;
+    /* page-break-after: always !important; */
+    page-break-inside: avoid;
   }
   .showPrintOnly {
     display: initial;
@@ -319,45 +333,42 @@ fieldset {
 
 #divPrintPage {
   background-color: white;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #tblPrint {
   width: 8.5in;
-  height: 11in;
+  height: 10.5in;
   margin: 0px;
-  /* border: solid black 1px; */
 }
 
 #tblPrint td {
   vertical-align: top;
-  /* border: solid blue 1px; */
 }
 
 .trPrintTopRow {
-  height: 0.5in;
+  height: 0.25in;
   /* margin-bottom: .2in; */
-  /* border: solid green 1px; */
 }
 
 .trPrintBottomRow {
-  height: 0.5in
-}
-
-.trPrintBottomInfoRow {
-  font-size: 10pt;
-  /* border: solid red 1px; */
+  height: 0.25in;
 }
 
 .trPrintVerseRow {
   /* cRows = 5 see getPrintHTMLForASong() */
-  height: calc(10in / 5); 
+  height: calc(10in / 5);
   width: 100%;
-  /* border: solid purple 1px; */
 }
 
-.trPrintVerseCell {
-  width: calc(7in / 2);
+.trPrintBottomInfoRow {
+  font-size: 9pt;
+  padding: 0px;
+}
+
+.tdPrintVerseCell {
+  width: calc(8in / 2);
   /* cCols = 2 see getPrintHTMLForASong() */
   /* border: solid blue 1px; */
 }

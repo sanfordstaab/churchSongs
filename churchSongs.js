@@ -326,10 +326,14 @@ function getNavStateTextHTML(nav) {
 
     html += ` (${g.nav.fBlankScreen ? 'hidden' : 'showing'})`;
     cPages = nav.cPagesInSong;
-    pagePos = progressBar(
-      nav.showTitlePage ? 0 : Number(nav.iPageInSong) + 1, 
-      nav.cPagesInSong, 
-      songLibrary.defaults.generateTitle);
+    if (cPages) {
+      pagePos = progressBar(
+        nav.showTitlePage ? 0 : Number(nav.iPageInSong) + 1, 
+        nav.cPagesInSong, 
+        songLibrary.defaults.generateTitle);
+    } else {
+      pagePos = 0;
+    }
   }
 
   html += `<br>page ${pagePos} of ${cPages}${sTotalPages}`;
@@ -2338,11 +2342,11 @@ function getPrintHTMLForASong(
 
 // overall template with %placeholders% for parts
   const htmlPageTemplateBase = 
-`<div id="divPrintPage showPrintOnly">
-  <table id="tblPrint" class="pgBrk">
+`<div id="divPrintPage showPrintOnly" class="pgBrk">
+  <table id="tblPrint" class="tblDebugBorder">
     <tr class="trPrintTopRow">
       <td colspan="100%" class="ac">
-        <h4 class="m0">%songName% %songSetName% %pagesInSong%</h4>
+        <h4 class="m0">%songName%%songSetName%%pagesInSong%</h4>
       </td>
     </tr>
     %cellRows%
@@ -2379,7 +2383,7 @@ function getPrintHTMLForASong(
     const cSongsInSet = aSongSetNames.length;
     oPrintState.nSongOfSongSet++;
     htmlPageTemplate = htmlPageTemplate
-      .replace(/%songSetName%/, `(Song ${oPrintState.nSongOfSongSet} of ${cSongsInSet} in "${songSetName}")`);
+      .replace(/%songSetName%/, ` (Song ${oPrintState.nSongOfSongSet} of ${cSongsInSet} in "${songSetName}")`);
   } else {
     htmlPageTemplate = htmlPageTemplate
       .replace(/%songSetName%/, '');
@@ -2392,6 +2396,9 @@ function getPrintHTMLForASong(
 
   let htmlSong = '';
   let cPagesForThisSong = Math.ceil(cVersesInSong / cVersesPerPage);
+  if (!cVersesInSong) {
+    cPagesForThisSong = 1; // no verses case
+  }
   while (cPagesForThisSong--) { // for each print page in this song...
     let htmlRows = '';
     for (let iRow = 0; iRow < cRows; iRow++) { // for each row on this page...
@@ -2399,9 +2406,15 @@ function getPrintHTMLForASong(
       for (let iCol = 0; iCol < cCols; iCol++) { // for each column in this row...
         const iVerseInCol = iVerseInSong + iCol * cRows;
         if (iVerseInCol >= cVersesInSong) { // blank verse to finish page
-          htmlCells += htmlVerseCellTemplate
-          .replace(/%pageName%/, '&nbsp;')
-          .replace(/%pageLines%/, '&nbsp;');
+          if (!cVersesInSong && iVerseInCol == 0) {  // no verses case
+            htmlCells += htmlVerseCellTemplate
+              .replace(/%pageName%/, ``)
+              .replace(/%pageLines%/, `There are no verses in this song.`);            
+          } else { // empty verse cell      
+            htmlCells += htmlVerseCellTemplate
+              .replace(/%pageName%/, '&nbsp;')
+              .replace(/%pageLines%/, '&nbsp;');
+          }
         } else { // fill in proper verse for this row/col.
           const verseName = aUnwoundVerses[iVerseInCol];
           const lines = sd.oPages[verseName].join(`<br>`);
@@ -2553,20 +2566,25 @@ function printSongSetList() {
   `;
 
   const nav = getNavState();
-  let htmlList = '<tr><td class="al"><ol class="songSetList">';
-  nav.aSongsInSet.forEach(
-    function(songName) {
-      htmlList += `
+  let htmlList = '';
+  if (nav.aSongsInSet && nav.aSongsInSet.length) {
+    htmlList += '<tr><td class="al"><ol class="songSetList">';
+    nav.aSongsInSet.forEach(
+      function(songName) {
+        htmlList += `
 <li>
   ${songName}
 </li>
 `;
-    }
-  );
-  htmlList += '</ol></td></tr>';
+      }
+    );
+    htmlList += '</ol></td></tr>';
+  } else {
+    htmlList = '<tr><td class="ac">There are no songs in this Song Set.</td></tr>';
+  }
   const htmlPrint = tmpl
     .replace(/%cellRows%/, htmlList)
-    .replace(/%songSetName%/, nav.songSetName);
+    .replace(/%songSetName%/, ' ' + nav.songSetName);
   printHTML(htmlPrint, nav);
 }
 
