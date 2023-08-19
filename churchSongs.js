@@ -2343,7 +2343,9 @@ function getPrintHTMLForASong(
 // overall template with %placeholders% for parts
   const htmlPageTemplateBase = 
 `<div id="divPrintPage showPrintOnly" class="pgBrk">
-  <table id="tblPrint" class="tblDebugBorder">
+  <table id="tblPrint" 
+    class="_tblDebugBorder"
+    >
     <tr class="trPrintTopRow">
       <td colspan="100%" class="ac">
         <h4 class="m0">%songName%%songSetName%%pagesInSong%</h4>
