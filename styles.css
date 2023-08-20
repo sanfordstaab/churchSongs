@@ -322,12 +322,20 @@ fieldset {
 }
 
 @media print {
-  .pgBrk {
-    /* page-break-after: always !important; */
-    page-break-inside: avoid;
-  }
   .showPrintOnly {
     display: initial;
+  }
+
+  .pgNoBrkInside {
+    page-break-inside: avoid !important;
+  }
+
+  .pgBrkAfter {
+    page-break-after: always !important;
+  }
+
+  .pgBrkAuto {
+    page-break-inside: auto !important;
   }
 }
 

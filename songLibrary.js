@@ -1,4 +1,4 @@
-{
+let songLibrary = {
   "oSongs": {
     "Doxology": {
       "oPages": {

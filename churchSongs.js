@@ -2379,7 +2379,7 @@ function getPrintHTMLForASong(
 
 // overall template with %placeholders% for parts
   const htmlPageTemplateBase = 
-`<div id="divPrintPage showPrintOnly" class="pgBrk">
+`<div id="divPrintPage showPrintOnly" class="pgNoBrkInside">
   <table id="tblPrint" 
     class="_tblDebugBorder"
     >
@@ -2593,7 +2593,7 @@ function printSongBook() {
 function printSongSetList() {
   const tmpl = 
   `<div id="divPrintPage showPrintOnly">
-    <table id="tblPrint" class="pgBrk">
+    <table id="tblPrint _tblDebugBorder" class="pgBrkAuto">
       <tr class="trPrintTopRow">
         <td colspan="100%" class="ac">
           <h4 class="m0">Song list for set "%songSetName%"</h4>
