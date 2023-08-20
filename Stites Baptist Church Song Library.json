@@ -99,7 +99,7 @@
           "Where the saints have trod;"
         ],
         "Verse 3b": [
-          "We aer not divided;",
+          "We are not divided;",
           "All one body we,",
           "One in hope and doctrine,",
           "One in charity."
@@ -197,8 +197,8 @@
           "Of Calvary"
         ],
         "Verse 4": [
-          "Oh, hte love that drew salvation's plan!",
-          "Oh, the grace that bro't it down to man!",
+          "Oh, the love that drew salvation's plan!",
+          "Oh, the grace that brought it down to man!",
           "Oh, the mighty gulf that God did span",
           "At Calvary"
         ]
@@ -662,7 +662,7 @@
         "Verse 1b": [
           "I love to tell the story",
           "because I know tis true;",
-          "It satisfies my llongings",
+          "It satisfies my longings",
           "As nothing else can do."
         ],
         "Chorus": [
@@ -1099,7 +1099,7 @@
           "where the grapes of wrath are stored;",
           "He hath loosed the fateful lightning ",
           "of his terrible swift sword;",
-          "His truth is marghing on."
+          "His truth is marching on."
         ],
         "Chorus": [
           "Glory! Glory, hallelujah!",
@@ -1419,7 +1419,7 @@
         "Verse 1a": [
           "What a friend we have in Jesus,",
           "All our sins and griefs to bear!",
-          "What a privilage to carry",
+          "What a privilege to carry",
           "Everything to God in prayer!"
         ],
         "Verse 1b": [
@@ -1501,7 +1501,7 @@
           "O to grace how great a debtor",
           "Daily I'm constrained to be!",
           "Let thy grace, Lord, like a fetter,",
-          "Bind my wandring heart to thee;"
+          "Bind my wand'ring heart to thee;"
         ],
         "Verse 3b": [
           "Prone to wander, Lord, I feel it,",
@@ -1556,8 +1556,8 @@
         ],
         "Verse 3a": [
           "Holy, holy, holy!",
-          "Tho the darkness hide thee,",
-          "Tho the eye of sinful man",
+          "Though the darkness hide thee,",
+          "Thouth the eye of sinful man",
           "thy glory may not see;"
         ],
         "Verse 3b": [
@@ -1863,12 +1863,12 @@
         "Verse 2b": [
           "Dost ask who that may be?",
           "Christ Jesus, it is he;",
-          "Lord Sabaoth, his name,",
+          "Lord Sabba'oth, his name,",
           "From age to age the same,",
           "And he must win the battle."
         ],
         "Verse 3a": [
-          "And tho this world, with devils filled,",
+          "And though this world, with devils filled,",
           "Should threaten to undo us,",
           "We will not fear,",
           "for God hath willed",
@@ -2254,12 +2254,6 @@
           "I will ever love and trust him,",
           "In his presence daily live."
         ],
-        "Chrous": [
-          "I surrender all,",
-          "I surrender all;",
-          "All to thee, my blessed savior,",
-          "I surrender all."
-        ],
         "Verse 2": [
           "All to Jesus I surrender, ",
           "Make me, Savior, wholly thine;",
@@ -2271,15 +2265,21 @@
           "Lord, I give myself to thee;",
           "Fill me with thy love and power,",
           "Let thy blessing fall on me."
+        ],
+        "Chorus": [
+          "I surrender all,",
+          "I surrender all;",
+          "All to thee, my blessed savior,",
+          "I surrender all."
         ]
       },
       "aPageOrder": [
         "Verse 1",
-        "Chrous",
+        "Chorus",
         "Verse 2",
-        "Chrous",
+        "Chorus",
         "Verse 3",
-        "Chrous"
+        "Chorus"
       ],
       "RepeatCount": 1,
       "fontSize": 0.05,

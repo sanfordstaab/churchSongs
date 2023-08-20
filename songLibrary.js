@@ -1,4 +1,3 @@
-var songLibrary =
 {
   "oSongs": {
     "Doxology": {
@@ -98,7 +97,7 @@ var songLibrary =
         "Verse 2b": [
           "Dost ask who that may be?",
           "Christ Jesus, it is he;",
-          "Lord Sabaoth, his name,",
+          "Lord Sabbath, his name,",
           "From age to age the same,",
           "And he must win the battle."
         ],

@@ -31,7 +31,7 @@
     <h3 class="ac">
       Church Songs Control Panel
     </h3>
-    Version 1.0.8
+    Version 1.0.9
     <img src="img/help.jpg" 
       class="editImg" 
       title="click to see a video overview."
@@ -1061,6 +1061,16 @@ but can also appear within the song."
                   <tr>
                     <td>
                       Search in:
+                      <br>
+
+                      <input type="checkbox"
+                        id="chkShowSearchEditLinks" 
+                        checked
+                        onchange="onSearchInChanged()"
+                        />
+                      <label for="chkShowSearchEditLinks">
+                        Show Edit Links
+                      </label>
                       <br>
   
                       <button id="btnSearchAll"
