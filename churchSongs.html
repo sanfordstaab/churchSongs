@@ -31,7 +31,7 @@
     <h3 class="ac">
       Church Songs Control Panel
     </h3>
-    Version 1.0.10
+    Version 1.0.11
     <img src="img/help.jpg" 
       class="editImg" 
       title="click to see a video overview."
@@ -1072,6 +1072,15 @@ but can also appear within the song."
                         Show Edit Links
                       </label>
                       <br>
+
+                      <input id="chkShowSongVerseFlow"
+                        type="checkbox"
+                        onchange="onSearchInChanged();"
+                        >
+                      <label for="chkShowSongVerseFlow">
+                        Show Song Verse Flow
+                      </label>   
+                      <br>                         
   
                       <button id="btnSearchAll"
                         onclick="onSearchAll();"
@@ -1104,8 +1113,8 @@ but can also appear within the song."
                       <label for="chkSearchInSongSetSongNames">
                         Song Set Song Names
                       </label>
-                      <br>                    
-  
+                      <br>                       
+
                       <input id="chkSearchInSongNames"
                         type="checkbox"
                         onchange="onSearchInChanged();"
@@ -1113,7 +1122,7 @@ but can also appear within the song."
                       <label for="chkSearchInSongNames">
                         Song Names
                       </label>   
-                      <br>
+                      <br>                   
                       
                       <input id="chkSearchLyrics"
                         type="checkbox"

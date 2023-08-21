@@ -1,4 +1,5 @@
-let songLibrary = {
+let songLibrary = 
+{
   "oSongs": {
     "Doxology": {
       "oPages": {
@@ -147,7 +148,7 @@ let songLibrary = {
       "TitleNote": "Title Note - appears on generated title pages",
       "Author": "Author",
       "Publisher": "Publisher",
-      "TagPage": "",
+      "TagPage": "Tag",
       "lineHeight": 0.15527118915745666,
       "fontSize": 0.045,
       "fontBoldness": 4,

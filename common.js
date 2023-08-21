@@ -9,7 +9,7 @@ const g = {};
  */
 function ge(id) {
   const el = document.getElementById(id);
-  console.assert(el);
+  console.assert(el, `Element with id "${id}" could not be found.`);
   return el;
 }
 

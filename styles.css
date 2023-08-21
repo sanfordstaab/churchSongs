@@ -315,6 +315,10 @@ fieldset {
   margin-right: 1em;
 }
 
+.indent {
+  margin-left: 2em;
+}
+
 /* Print classes */
 
 .showPrintOnly {

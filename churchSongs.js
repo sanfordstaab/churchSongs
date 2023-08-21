@@ -1647,18 +1647,30 @@ function onSelectedVerseToEditChanged(event=null, ses) {
 
 function renderOverallOrderText() {
   const ses = getSongEditState();
-  const html = getOverallOrderTextHTML(ses.songData, ' &#8594; ');
+  const html = getOverallOrderTextHTML(ses.songData, '&#8594;');
   ge('tdOverallVerseOrder').innerHTML = html;
 }
 
 function getOverallOrderTextHTML(sd, separator) {
   const aPageNamesUnwound = getUnwoundPages(sd);
-  return(
-    aPageNamesUnwound.length 
-    ? 
-    aPageNamesUnwound.join(separator) 
-    : 
-    '');
+  cPagesPerLine = sd.aPageOrder.length;
+  let html = '';
+  for(let iVerse = 0; iVerse < aPageNamesUnwound.length; iVerse++) {
+    const fFirstPage = (iVerse == 0);
+    const fAfterLastPage = (iVerse == aPageNamesUnwound.length);
+    const fStartOfRepeat = ((iVerse % cPagesPerLine) == 0);
+    // console.log(`iVerse:${iVerse} FirstPg:${fFirstPage} LastPg:${fAfterLastPage} Repeat:${fStartOfRepeat} Verse Name:${aPageNamesUnwound[iVerse]}`);
+    if (!(fFirstPage || fAfterLastPage || fStartOfRepeat)) {
+      html += separator;
+    }
+    if (!fStartOfRepeat || fFirstPage) {
+      html += aPageNamesUnwound[iVerse];
+    } else {
+      html += `<br>${aPageNamesUnwound[iVerse]}`;
+    }
+  }
+
+  return html;
 }
 
 function onVerseLinesChanged(event) {
@@ -1832,7 +1844,9 @@ function onSearchInChanged(event) {
   const searchTerms = 
     ge('txtSearchFor').value.trim().toLocaleLowerCase();
   const fShowEditLinks = ge('chkShowSearchEditLinks').checked ? 1 : 0;
-  let results = `Results of searching for "${searchTerms}":<br>`;
+  const fShowVerseFlow = ge('chkShowSongVerseFlow').checked ? 1 : 0;
+  let results = '';
+
   if (searchTerms.length == 0) {
     // don't respond to empty or tiny search terms cuz almost
     // everything will hit.
@@ -1841,75 +1855,72 @@ function onSearchInChanged(event) {
     const aSearchTokens = searchTerms.split(/\s+/);
     let resultPart = '';
     if (ge('chkSearchInSongSetNames').checked) {
-      resultPart = 'In Song Set Names:<br>';
+      resultPart = 'In Song Set Names:<div class="indent">';
       fResultFound = false;
       getAllSongSetNames().forEach(
         function(songSetName) {
           if (areAllTokensInText(aSearchTokens, songSetName)) {
-            if (fShowEditLinks) {
-              resultPart += `&nbsp;&nbsp;${getSongSetEditImage(songSetName)}${songSetName}<br>`;
-            } else {
-              resultPart += `&nbsp;&nbsp;${songSetName}<br>`;
-            }
+            resultPart += `${getSongSetEditImage(songSetName, fShowEditLinks)}${songSetName}<br>`;
             fResultFound = true;
           }
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }
     }
 
     if (ge('chkSearchInSongSetSongNames').checked) {
-      resultPart = 'In Song Set Song Names:<br>';
+      resultPart = `In Song Set Song Names for:<div class="indent">`;
       fResultFound = false;
       getAllSongSetNames().forEach(
         function(songSetName) {
-          let thisResultPart = '';
+          let thisResultPart = '<div class="indent">';
           songLibrary.oSongSets[songSetName].forEach(
             function(songName) {
               if (areAllTokensInText(aSearchTokens, songName)) {
-                if (fShowEditLinks) {
-                  thisResultPart += `&nbsp;&nbsp;&nbsp;&nbsp;${getSongEditImage(songName)}${songName}<br>`;
-                } else {
-                  resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;${songName}<br>`;
+                thisResultPart += `${getSongEditImage(songName, fShowEditLinks)}${songName}<br>`;
+                if (fShowVerseFlow) {
+                  thisResultPart += `<div class="indent smaller">${getOverallOrderTextHTML(songLibrary.oSongs[songName], '&#8594;', '<br>')}</div>`;
                 }
                 fResultFound = true;
               }
             }
           );
-          if (thisResultPart) {
-            resultPart += `&nbsp;&nbsp;${getSongSetEditImage(songSetName)}${songSetName}<br>` + thisResultPart;
+          resultPart += '</div>';
+          if (fResultFound) {
+            resultPart += `${getSongSetEditImage(songSetName, fShowEditLinks)}${songSetName}:` + thisResultPart;
           }
         }
       );
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       } 
     }
 
     if (ge('chkSearchInSongNames').checked) {
-      resultPart = 'In Song Names:<br>';
+      resultPart = 'In Song Names:<div class="indent">';
       fResultFound = false;
       getAllSongNames().forEach(
         function(songName) {
           if (areAllTokensInText(aSearchTokens, songName)) {
-            if (fShowEditLinks) {
-              resultPart += `&nbsp;&nbsp;${getSongEditImage(songName)}${songName}<br>`;
+            resultPart += `${getSongEditImage(songName, fShowEditLinks)}${songName}`;
+            if (fShowVerseFlow) {
+              resultPart += `<div class="indent smaller">${getOverallOrderTextHTML(songLibrary.oSongs[songName], '&#8594;', '<br>')}</div>`;
             } else {
-              resultPart += `&nbsp;&nbsp;${songName}<br>`;
+              resultPart += '<br>'
             }
             fResultFound = true;
           }
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }
     }
 
     if (ge('chkSearchLyrics').checked) {
-      resultPart = 'In Song Lyrics:<br>';
+      resultPart = 'In Song Lyrics:<div class="indent">';
       fResultFound = false;
       let prevSongName = '';
       getAllSongEntries().forEach(
@@ -1923,126 +1934,118 @@ function onSearchInChanged(event) {
                     fLineFits = true;
                   }
                 }
-              )              
+              );              
               if (fLineFits) {
+                resultPart += '<div class="indent">';
                 if (prevSongName != oSongKV[0]) {
                   prevSongName = oSongKV[0];
-                  if (fShowEditLinks) {
-                    resultPart += `  Song:${getSongEditVerseImage(oSongKV[0])} "${oSongKV[0]}"<br>`;
-                  } else {
-                    resultPart += `&nbsp;&nbsp;${oSongKV[0]}<br>`;
-                  }
+                  resultPart += `Song:${getSongEditVerseImage(oSongKV[0], oSongKV[1], fShowEditLinks)} "${oSongKV[0]}"<br>`;
                 }
                 if (fShowEditLinks) {
-                  resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;Verse:${getSongEditVerseImage(oSongKV[0], aPageKV[0])} "${aPageKV[0]}"<br>`;
-                } else {
-                  resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;Verse: "${aPageKV[0]}"<br>`;
-                }
-                aPageKV[1].forEach(
-                  function(lyricLine) {
-                    if (areAllTokensInText(aSearchTokens, lyricLine)) {
-                      resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${lyricLine}<br>`;
-                      fResultFound = true;
+                  resultPart += `Verse:${getSongEditVerseImage(oSongKV[0], aPageKV[0], fShowEditLinks)} "${aPageKV[0]}"<br>`;
+                  aPageKV[1].forEach(
+                    function(lyricLine) {
+                      if (areAllTokensInText(aSearchTokens, lyricLine)) {
+                        resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${lyricLine}<br>`;
+                        fResultFound = true;
+                      }
                     }
-                  }
-                )
+                  );
+                }
+                resultPart += '</div>';
               }
             }
-          )
+          );
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }
     }
+
     if (ge('chkSearchNotes').checked) {
-      resultPart = 'In Song Notes:<br>';
+      resultPart = 'In Song Notes:<div class="indent">';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Notes)) {
-            if (fShowEditLinks) {
-              resultPart += `&nbsp;&nbsp;Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Notes}<br>`;
-            } else {
-              resultPart += `&nbsp;&nbsp;Song: "${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Notes}<br>`;
-            }
+            resultPart += `&nbsp;&nbsp;Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Notes}<br>`;
             fResultFound = true;
           }
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }
     }
+
     if (ge('chkSearchAuthor').checked) {
-      resultPart = 'In Song Authors:<br>';
+      resultPart = 'In Song Authors:<div class="indent">';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Author)) {
-            if (fShowEditLinks) {
-              resultPart += `&nbsp;&nbsp;Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Author}<br>`;
-            } else {
-              resultPart += `&nbsp;&nbsp;Song: "${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Author}<br>`;              
-            }
+            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>${oSongKV[1].Author}<br>`;
             fResultFound = true;
           }
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }  
     }
+
     if (ge('chkSearchPublisher').checked) {
-      resultPart = 'In Song Publshers:<br>';
+      resultPart = 'In Song Publshers:<div class="indent">';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Publisher)) {
-            if (fShowEditLinks) {
-              resultPart += `  Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Publisher}<br>`;
-            } else {
-              resultPart += `  Song: "<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Publisher}<br>`;
-            }
+            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>${oSongKV[1].Publisher}<br>`;
             fResultFound = true;
           }
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }   
     }
+
     if (ge('chkSearchLicense').checked) {
-      resultPart = 'In Song Licenses:<br>';
+      resultPart = 'In Song Licenses:<div class="indent">';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].License)) {
-            if (fShowEditLinks) {
-              resultPart += `  Song: ${getSongEditImage(oSongKV[0])}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].License}<br>`;
-            } else {
-              resultPart += `  Song: "${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].License}<br>`;
-            }
+            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].License}<br>`;
             fResultFound = true;
           }
         }
       )
       if (fResultFound) {
-        results += resultPart;
+        results += resultPart + '</div>';
       }   
     }
   }
 
+  if (results) {
+    results = `Results of searching for "${searchTerms}":<div class="indent">${results}</div>`;
+  }
   ge('divSearchResults').innerHTML = results;
 }
 
-function getSongSetEditImage(songSetName) {
-  return `<a onclick="editSongSet('${
-    songSetName
-  }');"><img src="img/edit.jpg" 
-  class="editBtn CreateOrEditSongSetBG" 
-  title="Edit this Song Set">
-  </a>&nbsp;`;
+function getSongSetEditImage(songSetName, fShowEditLinks) {
+  html = '';
+  if (fShowEditLinks) {
+    html = `<a onclick="editSongSet('${
+      songSetName
+    }');"><img src="img/edit.jpg" 
+    class="editBtn CreateOrEditSongSetBG" 
+    title="Edit this Song Set">
+    </a>&nbsp;`;
+  }
+
+  return html;  
 }
 
 function editSelectedNavSongSet(event) {
@@ -2061,25 +2064,34 @@ function editSongSet(songSetName) {
   editSelectedSongSet();
 }
 
-function getSongEditImage(songName) {
-  return `<a onclick="editSong('${
-    songName
-    }');"><img src="img/edit.jpg" 
-    class="editBtn CreateOrEditSongBG" 
-    title="Edit this Song"/>
-    </a>&nbsp;`;
+function getSongEditImage(songName, fShowEditLinks) {
+  html = '';
+  if (fShowEditLinks) {
+    html = `<a onclick="editSong('${
+      songName
+      }');"><img src="img/edit.jpg" 
+      class="editBtn CreateOrEditSongBG" 
+      title="Edit this Song"/>
+      </a>&nbsp;`;
+  }
+  return html;
 }
 
-function getSongEditVerseImage(songName, verseName) {  
-  return `<a onclick="editSong('${
-    songName
-  }', '${
-    verseName
-  }');"><img src="img/edit.jpg" 
-  class="editBtn CreateOrEditSongBG" 
-  title="Edit this Song and Verse"/>
-  </a>&nbsp;`;
+function getSongEditVerseImage(songName, verseName, fShowEditLink) {  
+  let html = '';
+
+  if (fShowEditLink) {
+    html = `<a onclick="editSong('${
+      songName
+    }', '${
+      verseName
+    }');"><img src="img/edit.jpg" 
+    class="editBtn CreateOrEditSongBG" 
+    title="Edit this Song and Verse"/>
+    </a>&nbsp;`;
+  }
   
+  return html;
 }
 
 function editSelectedNavSong(event) {
@@ -2552,7 +2564,7 @@ function getPrintReviewHTML() {
       html += '</ul>';
 
       html += 'Verse Order:<br>&nbsp;&nbsp;';
-      html += getOverallOrderTextHTML(sd, '<br>&nbsp;&nbsp;');
+      html += getOverallOrderTextHTML(sd, '&#8594;');
 
       html += '<br><br>Other Values:<ul>';
       html += `<li>Title Note: [${sd.TitleNote}]</li>`;
@@ -2962,8 +2974,8 @@ function getUnwoundPages(sd) {
   for (let iSongPage = 0; iSongPage < cSongPagesUnwound; iSongPage++) {
     aPageNamesUnwound[iSongPage] = sd.aPageOrder[iSongPage % sd.aPageOrder.length];
     if (sd.TagPage && iSongPage == cSongPagesUnwound - 1) {
-      iSongPage++;
       aPageNamesUnwound[iSongPage] = sd.TagPage;
+      iSongPage++;
     }
   }
   return aPageNamesUnwound;
