@@ -11,6 +11,7 @@ function onProjectorLoad(event) {
     if (event.newValue != null) {
       if (event.key == 'projector-message') {
         const oMsg = JSON.parse(event.newValue);
+        console.log(`Projector got message: ${event.newValue}`)
         processMessage(oMsg);
         sendARBack();
       } else if (event.key == 'set-aspectRatio') {
@@ -23,9 +24,12 @@ function onProjectorLoad(event) {
     }
   }
 
-  onkeyup = (event) => {
-    localStorage.setItem('projectorKeyup', event.code);
-    localStorage.clear();
+  onkeydown = (event) => {
+    console.log('Projector sending key code:' + event.code);
+    localStorage.setItem('projectorKeyDown', event.code);
+    // we must remove this item so that the controller
+    // will recognize if it is hit twice.
+    localStorage.removeItem('projectorKeyDown');
   }
     
   onResize = (event) => {
@@ -38,7 +42,7 @@ g.prevMsg = {};
 
 function sendARBack() {
   localStorage.setItem('AR-message', g.aspectRatio);
-  localStorage.clear();
+  localStorage.removeItem('AR-message');
 }
 
 function processMessage(oMsg) {

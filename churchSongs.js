@@ -2,9 +2,15 @@
 
 async function onPageLoad(event) {
   onstorage = (event) => {
-    if (event.key == 'projectorKeyup' && event.newValue != null) {
-      event.code = event.newValue;
-      processKeyCode(event);
+    if (event.key == 'projectorKeyDown') {
+      let code = event.newValue;  // if localStorage event
+      if (!event.newValue) {
+        code = event.code;
+      }
+      if (code) {
+        console.log(`Controller recieved key code: ${code}`);
+        processKeyCode(code);
+      }
     }
     if (event.key == 'AR-message' && event.newValue != null) {
       processARChanged(event.newValue);
@@ -342,7 +348,7 @@ function getNavStateTextHTML(nav) {
 }
 
 function onPreviewKey(event) {
-  if (processKeyCode(event)) {
+  if (processKeyCode(event.code)) {
     if (event && event.preventDefault) {
       event.preventDefault();
     }
@@ -350,10 +356,11 @@ function onPreviewKey(event) {
 }
 
 // returns fPreventDefault
-function processKeyCode(event) {
+function processKeyCode(code) {
   const nav = getNavState();
-  let fPreventDefault = true;
-  switch (event.code) {
+  let fHandled = true;
+  console.log('Processing Key Code:' + code);
+  switch (code) {
     case 'ArrowLeft':
       prevPage();
       break;
@@ -375,13 +382,11 @@ function processKeyCode(event) {
       break;
     
     default:
-      fPreventDefault = false;
+      fHandled = false;
       break;
   }
 
-  if (fPreventDefault) {
-    event.preventDefault();
-  }
+  return fHandled;
 }
 
 function processARChanged(newAspectRatio) {
@@ -547,7 +552,7 @@ function renderAspectRatioText() {
 
 function restoreProjectorAspectRatio() {
   localStorage.setItem('set-aspectRatio', Number(songLibrary.defaults.savedAspectRatio));
-  localStorage.clear();
+  localStorage.removeItem('set-aspectRatio');
 }
 
 function blankScreen(event) {
@@ -560,7 +565,7 @@ function renderNavSection() {
   if (getNavState().songData) {
     const oMsg = getMessageFromGlobals();
     localStorage.setItem('projector-message', JSON.stringify(oMsg));
-    localStorage.clear();
+    localStorage.removeItem('projector-message');
     renderNavPagePreview();
     renderNavStateText();
     enableNavButtons();
@@ -865,14 +870,15 @@ function getMessageFromGlobals() {
       cSongsInSet: nav.mode == 'song' ? 0 : nav.cSongsInSet,
       content: nav.fBlankScreen ? '' : nav.songData.oPages[nav.pageName],
     }
-    if (g.nav.showTitlePage) {
+    if (g.nav.fBlankScreen) {
+      oMsg.content = '';
+    } else if (g.nav.showTitlePage) {
       oMsg.content = `<span style="color: lightblue;">${
         removeVersion(nav.songName)
         }</span><br><span class="pageTitle">${
           nav.songData.TitleNote
         }</span>`;
     }
-      
   }
   return oMsg;
 }
