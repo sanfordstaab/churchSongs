@@ -326,6 +326,12 @@ fieldset {
 }
 
 @media print {
+  /* Get rid of the border from the body to avoid 
+     whacky page breaks. */
+  body {
+    padding-bottom: 0;
+  }
+
   .showPrintOnly {
     display: initial;
   }
@@ -351,7 +357,7 @@ fieldset {
 
 #tblPrint {
   width: 8.5in;
-  height: 10.5in;
+  height: 11in;
   margin: 0px;
 }
 
@@ -360,12 +366,12 @@ fieldset {
 }
 
 .trPrintTopRow {
-  height: 0.25in;
+  height: 0.5in;
   /* margin-bottom: .2in; */
 }
 
 .trPrintBottomRow {
-  height: 0.25in;
+  height: 0.5in;
 }
 
 .trPrintVerseRow {
@@ -380,7 +386,7 @@ fieldset {
 }
 
 .tdPrintVerseCell {
-  width: calc(8in / 2);
+  width: calc(10in / 2);
   /* cCols = 2 see getPrintHTMLForASong() */
   /* border: solid blue 1px; */
 }

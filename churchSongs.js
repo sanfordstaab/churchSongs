@@ -2642,44 +2642,42 @@ function printSongSetList() {
 function getTOCHtml(oPrintState) {
   const songBookTitle = songLibrary.defaults.songBookTitle;
   const maxLinesPerPage = 44;
-  const maxLinesPerFirstPage = songBookTitle ? 41 : maxLinesPerPage;
+  const maxLinesPerFirstPage = songBookTitle ? 39 : maxLinesPerPage;
   const aTOCPageNumbers = [ 'i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii' ];
   let iTOCPage = 0;
 
   let htmlTOC = `
+<div class="pgBrkAfter">
 %songBookTitle%
 <h2>
   Table of Contents
 </h2>
-<div class="al pbBrk">`;
+<div class="al indent">`;
+
   let iLine = 0;
   for (; iLine < oPrintState.aTOCInfo.length; iLine++) {
     htmlTOC += `
 Page ${
       oPrintState.aTOCInfo[iLine][1]
 }
-  &nbsp;&nbsp;&nbsp;&nbsp;<span class="ar">${
+  <span class="ar">${
       oPrintState.aTOCInfo[iLine][0]
 }
-  </span>
-  <br>`;
+  </span><br>`;
 
-  if (iLine > 0 && iLine % (iTOCPage == 0 ? maxLinesPerFirstPage : maxLinesPerPage) == 0) {
-    htmlTOC += `<div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>`;
-    iTOCPage++;
-  }
-
-    // TODO: add check for multi-page TOC
+    if (iLine == maxLinesPerFirstPage || 
+       (iLine > maxLinesPerFirstPage && 
+         ((iLine - maxLinesPerFirstPage) % maxLinesPerPage) == 0)) {
+      htmlTOC += `<br><div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>
+</div><div class="pgBrkAfter al indent">`;
+      iTOCPage++;
+    }
   } // for each toc line
-
-  // fill out the last page of the TOC
-  while (iLine < (iTOCPage == 0 ? maxLinesPerFirstPage : maxLinesPerPage)) {
-    iLine++;
-    htmlTOC += '<br>';
-  }
 
   // add the last page of the TOC page number
   htmlTOC += `<div class="ar fw">Page ${aTOCPageNumbers[iTOCPage]}</div>`;
+
+  htmlTOC += '</div>'; // close page break div
 
   // replace songBookTitle
   if (songBookTitle) {
@@ -2688,7 +2686,7 @@ Page ${
         `<h1>${songLibrary.defaults.songBookTitle}</h1>`);
   } else {
     htmlTOC = htmlTOC
-    .replace(/%songBookTitle%/, '');
+      .replace(/%songBookTitle%/, '');
   }
 
   return htmlTOC;
