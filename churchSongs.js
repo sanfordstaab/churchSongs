@@ -1827,6 +1827,7 @@ function onSearchAll(event) {
   ge('chkSearchInSongNames').checked = 'checked';
   ge('chkSearchLyrics').checked = 'checked';
   ge('chkSearchNotes').checked = 'checked';
+  ge('chkSearchTitleNotes').checked = 'checked';
   ge('chkSearchAuthor').checked = 'checked';
   ge('chkSearchPublisher').checked = 'checked';
   ge('chkSearchLicense').checked = 'checked';
@@ -1839,6 +1840,7 @@ function onSearchNone(event) {
   ge('chkSearchInSongNames').checked = '';
   ge('chkSearchLyrics').checked = '';
   ge('chkSearchNotes').checked = '';
+  ge('chkSearchTitleNotes').checked = '';
   ge('chkSearchAuthor').checked = '';
   ge('chkSearchPublisher').checked = '';
   ge('chkSearchLicense').checked = '';
@@ -1946,17 +1948,15 @@ function onSearchInChanged(event) {
                   prevSongName = oSongKV[0];
                   resultPart += `Song:${getSongEditVerseImage(oSongKV[0], oSongKV[1], fShowEditLinks)} "${oSongKV[0]}"<br>`;
                 }
-                if (fShowEditLinks) {
-                  resultPart += `Verse:${getSongEditVerseImage(oSongKV[0], aPageKV[0], fShowEditLinks)} "${aPageKV[0]}"<br>`;
-                  aPageKV[1].forEach(
-                    function(lyricLine) {
-                      if (areAllTokensInText(aSearchTokens, lyricLine)) {
-                        resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${lyricLine}<br>`;
-                        fResultFound = true;
-                      }
+                resultPart += `Verse:${getSongEditVerseImage(oSongKV[0], aPageKV[0], fShowEditLinks)} "${aPageKV[0]}"<br>`;
+                aPageKV[1].forEach(
+                  function(lyricLine) {
+                    if (areAllTokensInText(aSearchTokens, lyricLine)) {
+                      resultPart += `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${lyricLine}<br>`;
+                      fResultFound = true;
                     }
-                  );
-                }
+                  }
+                );
                 resultPart += '</div>';
               }
             }
@@ -1974,7 +1974,10 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Notes)) {
-            resultPart += `&nbsp;&nbsp;Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].Notes}<br>`;
+            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"
+            <div class="indent">${
+              oSongKV[1].Notes
+            }</div>`;
             fResultFound = true;
           }
         }
@@ -1984,13 +1987,39 @@ function onSearchInChanged(event) {
       }
     }
 
+
+    if (ge('chkSearchTitleNotes').checked) {
+      resultPart = 'In Song Title Page Notes:<div class="indent">';
+      fResultFound = false;
+      getAllSongEntries().forEach(
+        function(oSongKV) {
+          if (areAllTokensInText(aSearchTokens, oSongKV[1].TitleNote)) {
+            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"
+            <div class="indent">${
+              oSongKV[1].TitleNote
+            }</div>`;
+            fResultFound = true;
+          }
+        }
+      )
+      if (fResultFound) {
+        results += resultPart + '</div>';
+      }
+    }    
+
     if (ge('chkSearchAuthor').checked) {
       resultPart = 'In Song Authors:<div class="indent">';
       fResultFound = false;
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Author)) {
-            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>${oSongKV[1].Author}<br>`;
+            resultPart += `Song: ${
+              getSongEditImage(oSongKV[0], fShowEditLinks)
+            }"${
+              oSongKV[0]
+            }"<div class="indent">${
+              oSongKV[1].Author
+            }</div>`;
             fResultFound = true;
           }
         }
@@ -2006,7 +2035,13 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].Publisher)) {
-            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>${oSongKV[1].Publisher}<br>`;
+            resultPart += `Song: ${
+              getSongEditImage(oSongKV[0], fShowEditLinks)
+            }"${
+              oSongKV[0]
+            }"<div class="indent">${
+              oSongKV[1].Publisher
+            }</div>`;
             fResultFound = true;
           }
         }
@@ -2022,7 +2057,13 @@ function onSearchInChanged(event) {
       getAllSongEntries().forEach(
         function(oSongKV) {
           if (areAllTokensInText(aSearchTokens, oSongKV[1].License)) {
-            resultPart += `Song: ${getSongEditImage(oSongKV[0], fShowEditLinks)}"${oSongKV[0]}"<br>&nbsp;&nbsp;&nbsp;&nbsp;${oSongKV[1].License}<br>`;
+            resultPart += `Song: ${
+              getSongEditImage(oSongKV[0], fShowEditLinks)
+            }"${
+              oSongKV[0]
+            }"<div class="indent">${
+              oSongKV[1].License
+            }</div>`;
             fResultFound = true;
           }
         }
