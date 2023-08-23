@@ -1160,17 +1160,13 @@ function onNewSongSetEditNameChanged(event) {
   enableSongSetEditButtons();
 }
 
-function addSongToNewSongSet(event) {
+function addSongToSongSet(event) {
   const sses = getSongSetEditState();
   console.assert(sses.songNameToAdd, 'UI should not let this happen.');
   if (sses.aSongList.includes(sses.songNameToAdd)) {
     setSongSetError('That song is already in your list.');
   } else {
-    sses.aSongList.push(sses.songNameToAdd);
-    if (sses.aSongList[0] == '') {
-      sses.aSongList.shift();
-    }
-    songLibrary.oSongSets[sses.songSetNameToEdit] = sses.aSongList;
+    sses.aSongList.splice(sses.iSelectedSongInSet + 1, 0, sses.songNameToAdd);
     renderSelectControl(
       'selCurrentSongSet',
       sses.aSongList, 
@@ -1193,6 +1189,7 @@ async function moveSongUpInSongSet(event) {
     'selCurrentSongSet',
     sses.aSongsInSongSet, 
     T);
+  enableSongSetEditButtons();
 }
 
 function moveSongDownInSongSet(event) {
@@ -1207,6 +1204,7 @@ function moveSongDownInSongSet(event) {
     'selCurrentSongSet',
     sses.aSongsInSongSet, 
     T);
+  enableSongSetEditButtons();
 }
 
 function deleteSongFromSongSet(event) {
@@ -1217,6 +1215,7 @@ function deleteSongFromSongSet(event) {
     sses.aSongsInSongSet);
   editSelectedSongSet();
   checkForEmptySongsOrSongSets();
+  enableSongSetEditButtons();
 }
 
 // Edit or Create a Song
