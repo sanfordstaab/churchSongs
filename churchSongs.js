@@ -31,6 +31,10 @@ async function onPageLoad(event) {
 
   await delay(1);
   onShowSongSet();
+
+  setTimeout(() => {
+    hide('spnVersion');
+}, 1000 * 1.5)
 }
 
 function initSiteUI() {
