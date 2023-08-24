@@ -33,7 +33,7 @@ async function onPageLoad(event) {
   onShowSongSet();
 
   setTimeout(() => {
-    hide('spnVersion');
+    hide('h4Version');
 }, 1000 * 1.5)
 }
 
@@ -2211,6 +2211,20 @@ function areAllTokensInText(aLCTokens, text) {
 
 // import export
 
+const fileIOOptions =  {
+  suggestedName: 'Test.txt',
+  types: [
+    {
+      description: 'JSON Files',
+      accept: { 'text/javascript': [ '.json' ] }       
+    },
+    {
+      description: 'Text Files',
+      accept: { 'text/plain': [ '.txt' ] }
+    },
+  ]
+};
+
 function clearExImNoticesAndErrors() {
   ge('divImportExportError').innerText = '';  
 }
@@ -2259,71 +2273,66 @@ function importLibraryFromText(text) {
   setExImNotice('Successfully imported song library data.');
 }
 
-function importDrop(event, el) {
-  event.preventDefault();
-  dropFile(event.dataTransfer.files[0], el);
-}
-
-function dropFile(file, el) {
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    el.value = e.target.result;
-    importLibraryFromText(el.value);
-    setExImNotice(`Successfully imported dropped file "${file.name}".`);
-  };
-  reader.readAsText(file, "UTF-8");
-}
-
-function importFromFile(el) {
-  const file = el.files[0];
-  const reader = new FileReader();
-  reader.onloadend = function(event) {
-    if (event.target.readyState == FileReader.DONE) { 
-      const sJson = event.target.result;
-      ge('txtaImportExport').value = sJson;
-      importLibraryFromText(sJson);
-      setExImNotice(`Successfully importeed file "${file.name}.`);
-      ge('fileImport').value = '';
-    }
+function importToUI(fileHandle, sData) {
+  if (fileHandle) {
+    // Success
+    ge('txtaImportExport').value = sData;
+    importLibraryFromText(sData);
+  } else {
+    // failure
+    setExImError(sData);
   }
-  reader.readAsText(file, "UTF-8");
+}
+
+function importDrop(event) {
+  event.preventDefault();
+  fio.onDropFile(event, importUI);
+}
+
+async function importFromFile() {
+  const fileHandle = await window.showOpenFilePicker(fileIOOptions);
+  fio.importFromFileButton(fileHandle[0], importToUI);
+}
+
+function importFromLS() {
+  const sData = localStorage.getItem('savedSongLibrary');
+  if (sData) {
+    ge('txtaImportExport').value = sData;
+    importLibrary();
+    setExImNotice('Successfully imported song library from local storage.')
+  } else {
+    setExImError('No data was found in local storage to import.')
+  }
+}
+
+function exportToUI(fileName, sError_or_sData) {
+  if (fileName) {
+    // Success
+    ge('txtaImportExport').value = sError_or_sData;
+    setExImNotice(`Successfully exported song library data.`);
+  } else {
+    // failure
+    setExImError('Error: ' + sError_or_sData);
+  }
 }
 
 async function exportToFile(event) {
-  clearExImNoticesAndErrors();
-  let suggestedName = 'ChurchSongLibrary.json';
-  const options =  {
-    suggestedName,
-    id: 'lastExportedFile', // remembers where we saved last
-    //startIn: 'desktop',
-    types: [
-      {
-        description: 'JSON Files',
-        accept: { 'text/javascript': [ '.json' ] }       
-      },
-      {
-        description: 'Text Files',
-        accept: { 'text/plain': [ '.txt' ] }
-      },
-    ]
-  };
-
   try {
-    const file = await window.showSaveFilePicker(options);
-    if (file) {
-      await writeFile(file, ge('txtaImportExport').value);
-      setExImNotice(`Successfully exported song library data to "${file.name}".`);
-    }
+    const fileHandle = await window.showSaveFilePicker(fileIOOptions);
+    clearExImNoticesAndErrors();
+    const sData = ge('txtaImportExport').value = JSON.stringify(songLibrary, null, 2)
+    fio.exportToFile(fileHandle, sData, exportToUI);
   } catch(e) {
-    setExImError(`Failed to save the exported data to a file. Error: ${e.message}`);
+    exportToUI('', e.message);
   }
 }
 
-async function writeFile(fileHandle, contents) {
-  const writable = await fileHandle.createWritable();
-  await writable.write(contents);
-  await writable.close();
-} 
+function exportToLS() {
+  const sData = JSON.stringify(songLibrary, null, 2);
+  ge('txtaImportExport').value = sData;
+  localStorage.setItem('savedSongLibrary', sData);
+  setExImNotice('Successfully exported song library to local storage.');
+}
 
 // printing
 
