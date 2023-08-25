@@ -2291,7 +2291,7 @@ function importDrop(event) {
 
 async function importFromFile() {
   const fileHandle = await window.showOpenFilePicker(fileIOOptions);
-  fio.importFromFileButton(fileHandle[0], importToUI);
+  fio.importFromFileOpenPicker(fileHandle[0], importToUI);
 }
 
 function importFromLS() {

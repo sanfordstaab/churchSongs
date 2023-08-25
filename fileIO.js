@@ -52,28 +52,20 @@ fio.dropFile = async (fileHandle, fnImportToUI) => {
 }
 
 /**
- * Used to import via a simple button.
- * The caller must call window.showOpenFilePicker() and give the
- * returned fileHandle to this API.  
+ * Used to import after a call to window.showOpenFilePicker();
+ * Give the returned fileHandle to this API.  
  * This is because calling this from an async function 
  * (like this one) breaks the "user gesture" security context.
  * @param {*} fileHandle 
- * @param {*} fnImportToUI 
+ * @param {*} fnImportToUI // Takes (fileName, sData) or ('', sError)
  */
-fio.importFromFileButton = async function(fileHandle, fnImportToUI) {
-  if (Array.isArray(fileHandle)) {
-    fileHandle = fileHandle[0];
-  }
-  var blob;
+fio.importFromFileOpenPicker = async function(fileHandle, fnImportToUI) {
+  let file = await fileHandle.getFile();
   const reader = new FileReader();
   reader.addEventListener('loadend', (event) => {
-    // oops we need the blob BEFORE we call reader.read...()!!!
-    blob = new Blob([new Uint8Array(event.target.result)], {type: fileHandle.type })
-    fnImportToUI(fileHandle, event.target.result)
+    fnImportToUI(file, event.target.result)
   });
-  // oops we can't get the blob from the fileHandle till we have the data!!!
-  // Can't call with fileHandle (cuz it's not a blob!).
-  reader.readAsArrayBuffer(blob);
+  reader.readAsText(file);
 }
 
 /**
