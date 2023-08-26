@@ -2273,12 +2273,12 @@ function importLibraryFromText(text) {
   setExImNotice('Successfully imported song library data.');
 }
 
-function importToUI(fileHandle, sData) {
-  if (fileHandle) {
+function importToUI(fileName, sData) {
+  if (fileName) {
     // Success
     ge('txtaImportExport').value = sData;
     importLibraryFromText(sData);
-    setExImNotice(`Successfully imported the Song Library from the file "${fileHandle.name}"`);
+    setExImNotice(`Successfully imported the Song Library from the file "${fileName}"`);
   } else {
     // failure
     setExImError(sData);
@@ -2287,7 +2287,7 @@ function importToUI(fileHandle, sData) {
 
 function importDrop(event) {
   event.preventDefault();
-  fio.onDropFile(event, importUI);
+  fio.onDropFile(event, importToUI);
 }
 
 async function importFromFile() {

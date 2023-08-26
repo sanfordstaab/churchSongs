@@ -63,51 +63,60 @@
                   <table class="innerTable">
                     <tr>
                       <th>
-                        <button onclick="importLibrary();"
-                          title="Click here to read the JSON text in the text area into the current song library."
-                          >
-                          Import Song Library From Text Area<span class="larger"> &#8592;</span>
-                        </button>
-                        <br>
-                        <button id="btnImportFromLocalStorage"
-                          onclick="importFromLS();"
-                          title="Click here to retrieve the last saved song library from your browser's local storage."
-                          >
-                          Import From Local Storage<span> &#8592; &#9851;</span>
-                        </button>
-                        <br>
-                        <button
-                          onclick="importFromFile();"
-                          title="Click here to import the current song library from a file."
-                          >
-                          Import from a File<span class="larger"> &#8659;</span>
-                        </button>                      
-                        <br>
-                        <button onclick="exportLibrary();">
-                          Export Song Library To Text Area<span class="larger"> &#8594;</span>
-                        </button>
-                        <br>
-                        <button
-                          onclick="exportToLS();"
-                          title="Click here to save the song library into your browser's local storage area.  This will persist beyond this session."
-                          >
-                          Export To Local Storage<span> &#8594; &#9851;</span>
-                        </button>
-                        <br>
-                        <button
-                          onclick="exportToFile();"
-                          title="Click here to export the current song library to a file."
-                          >
-                          Export to a File<span class="larger"> &#8657;</span>
-                        </button>
+                        <fieldset>
+                          <legend class="al">
+                            Import
+                          </legend>
+                          <button onclick="importLibrary();"
+                            title="Click here to read the JSON text in the text area into the current song library."
+                            >
+                            Import Song Library From Text Area<span class="larger"> &#8592;</span>
+                          </button>
+                          <br>
+                          <button id="btnImportFromLocalStorage"
+                            onclick="importFromLS();"
+                            title="Click here to retrieve the last saved song library from your browser's local storage."
+                            >
+                            Import From Local Storage<span> &#8592; &#9851;</span>
+                          </button>
+                          <br>
+                          <button
+                            onclick="importFromFile();"
+                            title="Click here to import the current song library from a file."
+                            >
+                            Import from a File<span class="larger"> &#8659;</span>
+                          </button>                      
+                        </fieldset>
+                        <fieldset>
+                          <legend class="al">
+                            Export
+                          </legend>
+                          <button onclick="exportLibrary();">
+                            Export Song Library To Text Area<span class="larger"> &#8594;</span>
+                          </button>
+                          <br>
+                          <button
+                            onclick="exportToLS();"
+                            title="Click here to save the song library into your browser's local storage area.  This will persist beyond this session."
+                            >
+                            Export To Local Storage<span> &#8594; &#9851;</span>
+                          </button>
+                          <br>
+                          <button
+                            onclick="exportToFile();"
+                            title="Click here to export the current song library to a file."
+                            >
+                            Export to a File<span class="larger"> &#8657;</span>
+                          </button>
+                        </fieldset>
                       </th>
                       <td>
                         <div id="divImportExportError" 
                           class="redText smaller">
                         </div>
                         <textarea id="txtaImportExport" 
-                          cols="70" 
-                          rows="12" 
+                          cols="50" 
+                          rows="15" 
                           ondrop="importDrop(event);"
                           title="Use this area to copy or paste exported or imported data out of or into this tool.
   You can also drop files into this area for import."
