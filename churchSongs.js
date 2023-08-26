@@ -2278,6 +2278,7 @@ function importToUI(fileHandle, sData) {
     // Success
     ge('txtaImportExport').value = sData;
     importLibraryFromText(sData);
+    setExImNotice(`Successfully imported the Song Library from the file "${fileHandle.name}"`);
   } else {
     // failure
     setExImError(sData);
@@ -2290,8 +2291,13 @@ function importDrop(event) {
 }
 
 async function importFromFile() {
-  const fileHandle = await window.showOpenFilePicker(fileIOOptions);
-  fio.importFromFileOpenPicker(fileHandle[0], importToUI);
+  var fileHandle;
+  try {
+    fileHandle = await window.showOpenFilePicker(fileIOOptions);
+    fio.importFromFileOpenPicker(fileHandle, importToUI);
+  } catch(e) {
+    importToUI('', 'Error: ' + e.message);
+  }
 }
 
 function importFromLS() {
@@ -2309,7 +2315,7 @@ function exportToUI(fileName, sError_or_sData) {
   if (fileName) {
     // Success
     ge('txtaImportExport').value = sError_or_sData;
-    setExImNotice(`Successfully exported song library data.`);
+    setExImNotice(`Successfully exported song library data to the file "${fileName}".`);
   } else {
     // failure
     setExImError('Error: ' + sError_or_sData);

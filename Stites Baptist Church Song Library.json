@@ -2,26 +2,31 @@
   "oSongs": {
     "Doxology": {
       "oPages": {
-        "Verse 1": [
-          "Praise God, from whom",
-          "all blessings flow;",
-          "Praise Him all creatures here below;",
+        "Verse 1b": [
           "Praise Him above, ye heav'nly host;",
           "Praise Father, Son, and Holy Ghost",
           "Amen"
+        ],
+        "Verse 1a": [
+          "Praise God, from whom",
+          "all blessings flow;",
+          "Praise Him all ",
+          "creatures here below;",
+          ""
         ]
       },
       "aPageOrder": [
-        "Verse 1"
+        "Verse 1a",
+        "Verse 1b"
       ],
       "RepeatCount": 1,
       "Notes": "#6 Baptist Hymnal",
       "Author": "Words: Thomas Ken, 1695, Tune: Genevan Psalm, 1551",
       "Publisher": "",
       "License": "",
-      "fontSize": 0.037,
+      "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.13602254375,
+      "lineHeight": 0.20096724774147348,
       "TitleNote": "#6 in the Baptist Hymnal"
     },
     "Bind us together": {
@@ -162,12 +167,12 @@
       ],
       "RepeatCount": 3,
       "Notes": "#176 Maranatha Song Book",
-      "Author": "",
+      "Author": "Sondra Corbett",
       "Publisher": "",
       "License": "",
-      "fontSize": 0.05,
+      "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.193,
+      "lineHeight": 0.20265000000000002,
       "TitleNote": "#176 in the Maranatha Song Book"
     },
     "At Calvary": {
@@ -573,24 +578,34 @@
     },
     "Thou Art Worthy": {
       "oPages": {
-        "Chorus": [
-          "Thou art worthy, Thou art worthy,",
-          "Thou art worthy, O Lord.",
-          "To receive glory, glory and honor,",
+        "Chorus b": [
+          "To receive glory,",
+          "glory and honor,",
           "Glory and honor and pow'r."
         ],
-        "Verse 1": [
-          "For Thou hast created, ",
-          "hast all things created,",
-          "Thou has created all things;",
+        "Chorus a": [
+          "Thou art worthy, ",
+          "Thou art worthy,",
+          "Thou art worthy, O Lord.",
+          ""
+        ],
+        "Verse 1b": [
           "And for Thy pleasure, ",
           "they are created,",
           "Thou art worthy, O Lord."
+        ],
+        "Verse 1a": [
+          "For Thou hast created, ",
+          "hast all things created,",
+          "Thou has created all things;",
+          ""
         ]
       },
       "aPageOrder": [
-        "Chorus",
-        "Verse 1"
+        "Chorus a",
+        "Chorus b",
+        "Verse 1a",
+        "Verse 1b"
       ],
       "Notes": "#109 Maranatha Praise Book 1990, Rev. 5:9",
       "Author": "Pauline Michael Mills",
@@ -600,7 +615,7 @@
       "License": "",
       "fontSize": 0.041,
       "fontBoldness": 4,
-      "lineHeight": 0.16128682799315547,
+      "lineHeight": 0.20584740484177325,
       "TitleNote": "#109 in the Maranatha Praise Book"
     },
     "Alive Alive": {
@@ -1981,21 +1996,21 @@
           "Seek Ye first the kingdom of God",
           "And His righteousness,",
           "And all these things shall be",
-          "added unto you.",
-          "Allelu, Alleluia."
+          "added unto you,  ",
+          "Allelu, Alleluia. "
         ],
         "Verse 2": [
           "Ask and it shall be given unto you,",
           "Seek and ye shall find;",
           "Knock and the door shall be",
-          "opened unto you,",
+          "opened unto you,  ",
           "Allelu, Alleluia."
         ],
         "Verse 3": [
           "Man does not live by bread alone,",
           "But by every word,",
           "That proceeds from the",
-          "mouth of the Lord,",
+          "mouth of the Lord, ",
           "Allelu, Alleluia."
         ]
       },
@@ -2005,11 +2020,11 @@
         "Verse 3"
       ],
       "RepeatCount": 2,
-      "fontSize": 0.045,
+      "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.17421243328125005,
       "license": "",
-      "TitleNote": "",
+      "TitleNote": "# 1 in the Maranatha Praise Book",
       "Notes": "",
       "Author": "Karen Lafferty",
       "Publisher": "",
@@ -2035,11 +2050,11 @@
         "Verse 2"
       ],
       "RepeatCount": 2,
-      "fontSize": 0.061,
+      "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.22234411655512085,
       "license": "",
-      "TitleNote": "",
+      "TitleNote": "# 84 in the Maranatha Praise Book",
       "Notes": "",
       "Author": "Laurie Klein",
       "Publisher": "",
@@ -2081,11 +2096,11 @@
         "Verse 2b"
       ],
       "RepeatCount": 2,
-      "fontSize": 0.061,
+      "fontSize": 0.05,
       "fontBoldness": 4,
       "lineHeight": 0.2106988434505464,
       "license": "",
-      "TitleNote": "",
+      "TitleNote": "# 24 in the Maranatha Praise Book",
       "Notes": "",
       "Author": "Hugh Mitchell",
       "Publisher": "",
@@ -2093,55 +2108,75 @@
     },
     "As The Deer": {
       "oPages": {
-        "Verse 1": [
-          "As the deer panteth",
-          "for the water,",
-          "so my soul ",
-          "longs after you.",
-          ""
-        ],
-        "Verse 2": [
-          "You're my friend and ",
-          "you are my brother",
-          "even though you are my King.",
-          "I love you more than any other,",
-          "so much more than anything."
-        ],
-        "Verse 3": [
-          "I want you more than gold or silver,",
-          "only you can satisfy.",
-          "You alone are the real joy giver,",
-          "and the apple of my eye."
-        ],
-        "Chorus": [
-          "You alone are my Strength, my Shield,",
-          "To you alone will my spirit yield.",
-          "You alone are my heart's desire,",
-          "And I long to worship you."
-        ],
         "Verse 1b": [
           "You alone are my ",
           "heart's desire",
-          "and I long to worship you."
+          "and I long to worship Thee."
+        ],
+        "Chorus a": [
+          "You alone are my ",
+          "Strength, my Shield,",
+          "To you alone will ",
+          "my spirit yield.",
+          ""
+        ],
+        "Chorus b": [
+          "You alone are my ",
+          "heart's desire,",
+          "And I long to worship Thee."
+        ],
+        "Verse 1a": [
+          "As the deer panteth",
+          "for the water,",
+          "so my soul ",
+          "longs after Thee.",
+          ""
+        ],
+        "Verse 2a": [
+          "You're my friend and ",
+          "you are my brother",
+          "even though you are a King."
+        ],
+        "Verse 2b": [
+          "I love you more ",
+          "than any other,",
+          "so much more ",
+          "than anything."
+        ],
+        "Verse 3a": [
+          "I want you more than ",
+          "gold or silver,",
+          "only you can satisfy.",
+          ""
+        ],
+        "Verse 3b": [
+          "You alone are the ",
+          "real joy giver,",
+          "and the apple of my eye."
         ]
       },
       "aPageOrder": [
-        "Verse 1",
+        "Verse 1a",
         "Verse 1b",
-        "Chorus",
-        "Verse 2",
-        "Chorus",
-        "Verse 3",
-        "Chorus"
+        "Chorus a",
+        "Chorus b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus a",
+        "Chorus b"
       ],
       "RepeatCount": 1,
-      "fontSize": 0.041,
+      "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.19570498864465366,
+      "lineHeight": 0.20549023807688635,
       "license": "",
-      "TitleNote": "",
+      "TitleNote": "# 246 in the Maranatha Praise Book",
       "Notes": "",
-      "Author": "",
+      "Author": "Martin Nystrom",
       "Publisher": "",
       "License": ""
     },
@@ -2614,6 +2649,15 @@
       "Amazing Grace",
       "Great is thy faithfulness",
       "I'll Fly Away"
+    ],
+    "2023-08-27 songs": [
+      "Seek Ye First",
+      "I Love You Lord",
+      "Thy Loving Kindness",
+      "Thou Art Worthy",
+      "I worship You, Almighty God",
+      "As The Deer",
+      "Doxology"
     ]
   },
   "defaults": {

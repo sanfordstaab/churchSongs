@@ -60,7 +60,11 @@ fio.dropFile = async (fileHandle, fnImportToUI) => {
  * @param {*} fnImportToUI // Takes (fileName, sData) or ('', sError)
  */
 fio.importFromFileOpenPicker = async function(fileHandle, fnImportToUI) {
-  let file = await fileHandle.getFile();
+  var file;
+  if (!fileHandle.getFile) {
+    fileHandle = fileHandle[0];
+  }
+  file = await fileHandle.getFile();
   const reader = new FileReader();
   reader.addEventListener('loadend', (event) => {
     fnImportToUI(file, event.target.result)
