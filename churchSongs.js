@@ -1327,7 +1327,7 @@ function onPublisherChanged(event) {
 
 function onLicenseChanged(event) {
   const ses = getSongEditState();
-  ses.songData.License = ge('txtLicense').value.trim();
+  ses.songData.License = ge('txtLicense').value;
 }
 
 function onDefaultLicenseChanged(event) {
