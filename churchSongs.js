@@ -2681,6 +2681,8 @@ function printSongSetList() {
   </div>
   `;
 
+  ge('chkNavSongSetMode').checked = 'checked';
+  onModeChanged();
   const nav = getNavState();
   let htmlList = '';
   if (nav.aSongsInSet && nav.aSongsInSet.length) {
