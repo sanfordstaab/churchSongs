@@ -330,6 +330,8 @@ fieldset {
      whacky page breaks. */
   body {
     padding-bottom: 0;
+    background-color: white;
+    color: black;
   }
 
   .showPrintOnly {

@@ -2507,6 +2507,7 @@ function getPrintHTMLForASong(
 
   oPrintState.cPrintPagesForSong = 0;
   const aUnwoundVerses = getUnwoundPages(sd);
+  const cVersesPerRepeat = sd.aPageOrder.length;
   const cVersesInSong = aUnwoundVerses.length;
   let iVerseInSong = 0;
 
@@ -2534,8 +2535,18 @@ function getPrintHTMLForASong(
         } else { // fill in proper verse for this row/col.
           const verseName = aUnwoundVerses[iVerseInCol];
           const lines = sd.oPages[verseName].join(`<br>`);
+          const aCountExt = [ 'st', 'nd', 'rd', 'th', 'th' ];
+          // iPageRepeat should be 0 for the first repeat and increment
+          // for each repeat of the cVersesPerRepeat pages.
+          let iPageRepeat = Math.floor(iVerseInCol / cVersesPerRepeat);
+          console.assert(iPageRepeat < aCountExt.length);
+          console.log(`iVerseInCol:${iVerseInCol}, iPageRepeat:${iPageRepeat}`);
+          let sRepeatText = ' ' + (iPageRepeat + 1) + aCountExt[iPageRepeat] + ' time';
+          if (iPageRepeat == 0) {
+            sRepeatText = '';
+          }
           htmlCells += htmlVerseCellTemplate
-            .replace(/%pageName%/, `${iVerseInCol + 1}) ${verseName}:`)
+            .replace(/%pageName%/, `${iVerseInCol + 1}) ${verseName}${sRepeatText}:`)
             .replace(/%pageLines%/, lines);
         }
       } // end col
