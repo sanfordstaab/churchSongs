@@ -431,93 +431,87 @@
       "oPages": {
         "Verse 1": [
           "How lovely on the mountains ",
-          "are the feet of Him",
-          "Who brings good new, ",
-          "good news.",
-          "Announcing peace, ",
-          "proclaiming news of happiness."
+          "are the feet of Him Who ",
+          "brings good new, good news.",
+          "Announcing peace, proclaiming ",
+          "news of happiness."
         ],
         "Chorus 1": [
-          "Our God reigns, ",
-          "our God reigns.",
-          "Our God reigns, ",
-          "our God reigns.",
-          "Our God reigns, ",
-          "our God reigns!"
+          "Our God reigns, our God reigns.",
+          "Our God reigns, our God reigns.",
+          "Our God reigns, our God reigns!"
         ],
         "Verse 2": [
           "He had no stately form, ",
           "He had no majesty.",
-          "That we should be drawn ",
-          "to Him.",
-          "He was despised ",
-          "and we took no account of Him."
+          "That we should be drawn to Him.",
+          "He was despised and ",
+          "we took no account of Him."
         ],
         "Chorus 2": [
           "Yet now He reigns ",
           "with the Most High.",
-          "Now He reigns ",
-          "with the Most High;",
+          "Now He reigns, now He reigns;",
           "Now He reigns ",
           "with the Most High."
         ],
-        "Verse 3": [
-          "It was our sin and guilt ",
-          "that bruised and wounded Him.",
-          "It was our sin ",
-          "that brought Him down;",
+        "Chorus 4": [
+          "That we might be born again.",
+          "That we might be, that we might be.",
+          "That we might be born again."
+        ],
+        "Verse 5": [
+          "Out from the tomb He came ",
+          "with grace and majesty,",
+          "He is alive, He is alive.",
+          "God loves us so, see here ",
+          "His hands, His feet, His side."
+        ],
+        "Chorus 5": [
+          "Yes, we know, He is alive.",
+          "He is alive, He is alive;",
+          "He is alive, He is alive."
+        ],
+        "Verse 6": [
+          "How lovely on the mountains ",
+          "are the feet of Him Who ",
+          "brings good news, good news.",
+          "Announcing peace, proclaiming ",
+          "news of happiness."
+        ],
+        "Verse 3b": [
           "When we, like sheep, ",
           "had gone astray, ",
           "our Shepard came."
         ],
-        "Chorus 3": [
-          "And on His shoulders ",
-          "bore our shame.",
-          "On His shoulders, ",
-          "on His shoulders;",
+        "Verse 3a": [
+          "It was our sin and guilt ",
+          "that bruised and wounded Him.",
+          "It was our sin that",
+          "brought Him down;",
+          ""
+        ],
+        "Chorus 3b": [
+          "On His shoulders;",
           "On His shoulders ",
           "He bore our shame."
         ],
-        "Verse 4": [
-          "Meek as a lamb that's ",
-          "led out to the slaughterhouse,",
-          "Dumb as a sheep ",
+        "Chorus 3a": [
+          "And on His shoulders ",
+          "bore our shame.",
+          "On His shoulders, ",
+          ""
+        ],
+        "Verse 4b": [
           "before its shearer,",
           "His life ran down upon ",
           "the ground like pouring rain."
         ],
-        "Chorus 4": [
-          "That we might be ",
-          "born again.",
-          "That we might be, ",
-          "that we might be.",
-          "That we might be ",
-          "born again."
-        ],
-        "Verse 5": [
-          "Out from the tomb ",
-          "He came with grace and majesty,",
-          "He is alive, ",
-          "He is alive.",
-          "God loves us so, ",
-          "see here His hands, ",
-          "His feet, His side."
-        ],
-        "Chorus 5": [
-          "Yes, we know, ",
-          "He is alive.",
-          "He is alive, ",
-          "He is alive;",
-          "He is alive, ",
-          "He is alive."
-        ],
-        "Verse 6": [
-          "How lovely on ",
-          "the mountains are the feet of Him",
-          "Who brings good news, ",
-          "good news.",
-          "Announcing peace, ",
-          "proclaiming news of happiness."
+        "Verse 4a": [
+          "Meek as a lamb that's ",
+          "led out to the slaughterhouse,",
+          "Dumb as a sheep ",
+          ""
         ]
       },
       "aPageOrder": [
@@ -525,9 +519,12 @@
         "Chorus 1",
         "Verse 2",
         "Chorus 2",
-        "Verse 3",
-        "Chorus 3",
-        "Verse 4",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus 3a",
+        "Chorus 3b",
+        "Verse 4a",
+        "Verse 4b",
         "Chorus 4",
         "Verse 5",
         "Chorus 5",
@@ -539,9 +536,9 @@
       "Notes": "#111 Maranatha Praise Book 1990",
       "Publisher": "",
       "License": "",
-      "fontSize": 0.03,
+      "fontSize": 0.039,
       "fontBoldness": 5,
-      "lineHeight": 0.123,
+      "lineHeight": 0.22033810228047018,
       "TitleNote": "#111 in the Maranatha Praise Book"
     },
     "Bless His Holy Name": {
@@ -2500,6 +2497,39 @@
       "Author": "Naida Jearm",
       "Publisher": "",
       "License": ""
+    },
+    "Therefore The Redeemed": {
+      "oPages": {
+        "Verse 1": [
+          "Therefore the redeemed ",
+          "of the Lord shall return,",
+          "And come with singing unto Zion,",
+          "And everlasting joy ",
+          "shall be upon their head."
+        ],
+        "Verse 2": [
+          "They shall obtain ",
+          "gladness and joy,",
+          "And sorrow and mourning ",
+          "shall flee away."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 1",
+        "Verse 2",
+        "Verse 1"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#113 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Ruth Lake",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2657,6 +2687,25 @@
       "Thou Art Worthy",
       "I worship You, Almighty God",
       "As The Deer",
+      "Doxology"
+    ],
+    "2023-09-03 Songs": [
+      "Thy Loving Kindness",
+      "Therefore The Redeemed",
+      "Our God Reigns",
+      "Come let us worship and bow down",
+      "I worship You, Almighty God",
+      "Alive Alive"
+    ],
+    "2023-09-10 songs": [
+      "Majesty",
+      "His name is wonderful",
+      "I worship You, Almighty God",
+      "Bless His Holy Name",
+      "Crown Him with many crowns",
+      "There is  Power in the Blood",
+      "What a friend we have in Jesus",
+      "I Exalt Thee",
       "Doxology"
     ]
   },
