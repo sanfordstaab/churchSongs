@@ -2500,14 +2500,14 @@
     },
     "Therefore The Redeemed": {
       "oPages": {
-        "Verse 1": [
+        "Chorus": [
           "Therefore the redeemed ",
           "of the Lord shall return,",
           "And come with singing unto Zion,",
           "And everlasting joy ",
           "shall be upon their head."
         ],
-        "Verse 2": [
+        "Verse": [
           "They shall obtain ",
           "gladness and joy,",
           "And sorrow and mourning ",
@@ -2515,12 +2515,15 @@
         ]
       },
       "aPageOrder": [
-        "Verse 1",
-        "Verse 1",
-        "Verse 2",
-        "Verse 1"
+        "Chorus",
+        "Chorus",
+        "Verse",
+        "Chorus",
+        "Chorus",
+        "Verse",
+        "Chorus"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": 1,
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.18292305494531255,
