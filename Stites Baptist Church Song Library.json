@@ -658,7 +658,7 @@
       "Author": "Bob Singleton",
       "Publisher": "Singleton Productions Inc.",
       "Notes": "Not in hymnal or song book",
-      "fontSize": 0.074,
+      "fontSize": 0.06,
       "fontBoldness": 5,
       "lineHeight": 0.232,
       "TitleNote": ""
@@ -2530,6 +2530,59 @@
       "Author": "Ruth Lake",
       "Publisher": "",
       "License": ""
+    },
+    "Thank You Lord, For Saving My Soul": {
+      "oPages": {
+        "Verse 1": [
+          "Thank you Lord, for saving my soul",
+          "Thank you Lord, for making me whole.",
+          "Thank you Lord, for giving to me,",
+          "Thy great salvation, so rich and free."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1"
+      ],
+      "RepeatCount": 3,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.22068070115901606,
+      "license": "",
+      "TitleNote": "# 187 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Mr. and Mrs. S. Sykes",
+      "Publisher": "",
+      "License": ""
+    },
+    "In Moments Like These": {
+      "oPages": {
+        "Chorus": [
+          "Singing I love you Lord,",
+          "Singing I love you Lord,",
+          "Singing I love you, Lord,",
+          "I love you."
+        ],
+        "Verse 1": [
+          "In moments like these, I sing out a song",
+          "I sing out a love song to Jesus.",
+          "In moments like these, I lift up my hands ",
+          "I lift up my hand to the Lord"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 3,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 243 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "David Graham",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2707,6 +2760,14 @@
       "What a friend we have in Jesus",
       "I Exalt Thee",
       "Doxology"
+    ],
+    "2023-09-10 songs for guitar": [
+      "Alive Alive",
+      "Therefore The Redeemed",
+      "Thy Loving Kindness",
+      "Thou Art Worthy",
+      "Thank You Lord, For Saving My Soul",
+      "In Moments Like These"
     ]
   },
   "defaults": {
