@@ -159,7 +159,7 @@ function getNavState() {
     nav.songName = ge('selNavSongs').value;
     if (!nav.songName) {
       // no song selected, switch to review mode
-      ge('chkNavReviewMode').checked = 'checked';
+      ge('chkReviewMode').checked = 'checked';
       return getNavState();
     }
     nav = addNavSongState(nav);
