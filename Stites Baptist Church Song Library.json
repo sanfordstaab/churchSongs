@@ -2609,6 +2609,49 @@
       "Author": "",
       "Publisher": "",
       "License": ""
+    },
+    "I've Got a River of Life": {
+      "oPages": {
+        "Verse 1": [
+          "I've got a River of Life ",
+          "flowing out of me,",
+          "Makes the lame to walk ",
+          "and the blind to see;"
+        ],
+        "Verse 2": [
+          "Opens prison doors, ",
+          "sets the captives free,",
+          "I've got a River of Life ",
+          "flowing out of me."
+        ],
+        "Chorus A": [
+          "Spring up O well, ",
+          "within my soul!",
+          "Spring up O well, ",
+          "and make me whole."
+        ],
+        "Chorus B": [
+          "Spring up O well, ",
+          "and give to me,",
+          "that Life abundantly."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Chorus A",
+        "Chorus B"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "#55 Maranatha Praise Book",
+      "Notes": "",
+      "Author": "L. Casebolt",
+      "Publisher": "Maranatha Music",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2809,6 +2852,15 @@
       "Therefore The Redeemed",
       "There is  Power in the Blood",
       "I Surrender All"
+    ],
+    "2023-10-01 Songs": [
+      "Welcome",
+      "This is the Day",
+      "I've Got a River of Life",
+      "Come let us worship and bow down",
+      "Blessed Assurance",
+      "In Moments Like These",
+      "Amazing Grace"
     ]
   },
   "defaults": {

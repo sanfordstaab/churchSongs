@@ -664,26 +664,34 @@ function nextSongPage(event) {
   const nav = getNavState();
   console.assert(!nav.fInReview);
   if (nav.iPageInSong < nav.cPagesInSong - 1 ||
-      nav.iPageInSong == 0) {
+     (nav.iPageInSong == 0 && (g.nav.fBlankScreen || g.nav.showTitlePage))) {
+    // we are not at the last page so advance the page.
     if (nav.iPageInSong == 0) {
+      // we are either blank, showing the title or showing the first verse.
       if (nav.fBlankScreen) {
+        // blank - show title or first verse if not showing titles.
         g.nav.fBlankScreen = false;
         g.nav.showTitlePage = songLibrary.defaults.generateTitle;
         // don't advance - show first page or title
       } else if (g.nav.showTitlePage) {
+        // we are showing the title page
         g.nav.showTitlePage = false;
         // don't advance - show first page
       } else if (nav.iPageInSong < nav.cPagesInSong - 1) {
+        // just advance
         g.nav.iPageInSong++;
       }
     } else {
+      // we are showing the second or next to last verse - advance
       g.nav.iPageInSong++;
     }
   } else if (nav.iSongInSet < nav.cSongsInSet - 1) {
+    // we are at the last page of the song
+    // and we are not at the last song in the set.
     // advance to the next song, first page, blank screen.
-    g.nav.iSongInSet++;
-    g.nav.iPageInSong = 0;
-    g.nav.fBlankScreen = true;
+    g.nav.iSongInSet++; // does nothing if we are not in a set
+    g.nav.iPageInSong = 0; // back to the begining
+    g.nav.fBlankScreen = true; // blank
   }
   renderNavSection();
 }
