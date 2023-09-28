@@ -2586,6 +2586,29 @@
       "Author": "David Graham",
       "Publisher": "",
       "License": ""
+    },
+    "Welcome": {
+      "oPages": {
+        "Welcome": [
+          "Welcome ",
+          "to ",
+          "Stites",
+          "Baptist Church"
+        ]
+      },
+      "aPageOrder": [
+        "Welcome"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "to Stites Baptist Church",
+      "Notes": "Used to welcome audience",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
