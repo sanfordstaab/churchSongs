@@ -2364,9 +2364,15 @@ function printNavModeData(style) {
   }
   
   if (nav.mode == 'songSet') {
+    oPrintState.cSongsInSet = nav.aSongsInSet.length;
     nav.aSongsInSet.forEach(
-      function(songName) {
-        getPrintHTMLForASong(oPrintState, songName, nav.songSetName);
+      function(songName, idx) {
+        if (idx > 0 || songName.toLowerCase() != 'welcome') {
+          // don't print the welcome song if it is first
+          getPrintHTMLForASong(oPrintState, songName, nav.songSetName);
+        } else {
+          oPrintState.cSongsInSet--;
+        }
       }
     );
   } else if (nav.mode == 'review') {
@@ -2502,12 +2508,9 @@ function getPrintHTMLForASong(
     .replace(/%songName%/, songName);
 
   if (songSetName) {
-    const aSongSetNames = songLibrary.oSongSets[songSetName];
-    console.assert(aSongSetNames);
-    const cSongsInSet = aSongSetNames.length;
     oPrintState.nSongOfSongSet++;
     htmlPageTemplate = htmlPageTemplate
-      .replace(/%songSetName%/, ` (Song ${oPrintState.nSongOfSongSet} of ${cSongsInSet} in "${songSetName}")`);
+      .replace(/%songSetName%/, ` (Song ${oPrintState.nSongOfSongSet} of ${oPrintState.cSongsInSet} in "${songSetName}")`);
   } else {
     htmlPageTemplate = htmlPageTemplate
       .replace(/%songSetName%/, '');
@@ -2548,7 +2551,7 @@ function getPrintHTMLForASong(
           // for each repeat of the cVersesPerRepeat pages.
           let iPageRepeat = Math.floor(iVerseInCol / cVersesPerRepeat);
           console.assert(iPageRepeat < aCountExt.length);
-          console.log(`iVerseInCol:${iVerseInCol}, iPageRepeat:${iPageRepeat}`);
+          // console.log(`iVerseInCol:${iVerseInCol}, iPageRepeat:${iPageRepeat}`);
           let sRepeatText = ' ' + (iPageRepeat + 1) + aCountExt[iPageRepeat] + ' time';
           if (iPageRepeat == 0) {
             sRepeatText = '';
