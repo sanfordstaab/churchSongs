@@ -31,10 +31,6 @@ async function onPageLoad(event) {
 
   await delay(1);
   onShowSongSet();
-
-  setTimeout(() => {
-    hide('h4Version');
-}, 1000 * 1.5)
 }
 
 function initSiteUI() {
