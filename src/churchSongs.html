@@ -656,6 +656,11 @@
                           <select id="selCurrentSongSet" size="6" onchange="onSelCurrentSongSetChanged();">
                             <!-- filled in by code -->
                           </select>
+                          <img onclick="onEditSelectedSongInSet();" 
+                            class="vat"
+                            src="img/edit.jpg"
+                            width="20"
+                            title="Jump to edit the selected song of this song set."/>
                         </th>
                         <th class="al m0">
                           <button id="btnMoveSongUpInSongSet" onclick="moveSongUpInSongSet();">
@@ -1217,7 +1222,7 @@
 
         </table>
         <h4 id="h4Version">
-          Version 1.0.17
+          Version 1.0.18
         </h4>         
       </div>
     </center>

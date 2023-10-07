@@ -1051,6 +1051,13 @@ function onSelCurrentSongSetChanged() {
   enableSongSetEditButtons();
 }
 
+function onEditSelectedSongInSet(event) {
+  const songName = ge('selCurrentSongSet').value;
+  if (songName) {
+    editSong(songName);
+  }
+}
+
 function deleteSongSet(event) {
   const songSetToDelete = ge('selAllSongSetsToEdit').value;
   if (getAllSongSetNames().includes(songSetToDelete)) {

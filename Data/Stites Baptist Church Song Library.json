@@ -818,7 +818,7 @@
         "Verse 2"
       ],
       "TagPage": "Ending",
-      "RepeatCount": 1,
+      "RepeatCount": 2,
       "License": "",
       "fontSize": 0.032,
       "fontBoldness": 5,
@@ -2523,7 +2523,7 @@
         "Verse",
         "Chorus"
       ],
-      "RepeatCount": 1,
+      "RepeatCount": 2,
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.18292305494531255,
@@ -2861,6 +2861,15 @@
       "Blessed Assurance",
       "In Moments Like These",
       "Amazing Grace"
+    ],
+    "2023-10-08 songs": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come Now is the time to Worship",
+      "Therefore The Redeemed",
+      "There is  Power in the Blood",
+      "Come let us worship and bow down",
+      "As The Deer"
     ]
   },
   "defaults": {
