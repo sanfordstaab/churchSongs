@@ -2548,7 +2548,9 @@ function getPrintHTMLForASong(
           }
         } else { // fill in proper verse for this row/col.
           const verseName = aUnwoundVerses[iVerseInCol];
-          const lines = sd.oPages[verseName].join(`<br>`);
+          const lines = sd.oPages[verseName].length ? 
+            sd.oPages[verseName].join(`<br>`) : 
+            sd.oPages[verseName];
           const aCountExt = [ 'st', 'nd', 'rd', 'th', 'th' ];
           // iPageRepeat should be 0 for the first repeat and increment
           // for each repeat of the cVersesPerRepeat pages.

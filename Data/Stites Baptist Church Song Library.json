@@ -2652,6 +2652,24 @@
       "Author": "L. Casebolt",
       "Publisher": "Maranatha Music",
       "License": ""
+    },
+    "Break": {
+      "oPages": {
+        "blank": ""
+      },
+      "aPageOrder": [
+        "blank"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -2870,6 +2888,16 @@
       "There is  Power in the Blood",
       "Come let us worship and bow down",
       "As The Deer"
+    ],
+    "2023-10-15 songs": [
+      "Welcome",
+      "Mine Eyes Have Seen the Glory",
+      "There's something about that name",
+      "When we all get to Heaven",
+      "Thou Art Worthy",
+      "I Surrender All",
+      "Break",
+      "Blessed Assurance"
     ]
   },
   "defaults": {
