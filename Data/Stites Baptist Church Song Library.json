@@ -2670,6 +2670,71 @@
       "Author": "",
       "Publisher": "",
       "License": ""
+    },
+    "Mine Eyes Have Seen the Glory (short)": {
+      "oPages": {
+        "Verse 1": [
+          "Mine eyes have seen the glory ",
+          "of the coming of the Lord;",
+          "He is trampling out the vintage ",
+          "where the grapes of wrath are stored;",
+          "He hath loosed the fateful lightning ",
+          "of his terrible swift sword;",
+          "His truth is marching on."
+        ],
+        "Chorus": [
+          "Glory! Glory, hallelujah!",
+          "Glory! Glory, hallelujah! ",
+          "Glory! Glory, hallelujah!",
+          "Our God is marching on."
+        ],
+        "Verse 2": [
+          "I have seen him in the watch-fires ",
+          "of a hundred circling camps;",
+          "they have builded him an altar",
+          "in the evening dews and damps;",
+          "I can read his righteous sentence ",
+          "by the dim and flaring lamps;",
+          "His day is marching on."
+        ],
+        "Verse 3": [
+          "He has sounded forth the trumpet ",
+          "that shall never sound retreat;",
+          "He is sifting out the hearts of men",
+          "before his judgment seat;",
+          "O be swift, my soul, to answer him;",
+          "be jubilant, my feet!",
+          "Our God is marching on."
+        ],
+        "Verse 4": [
+          "In the beauty of the lilies,",
+          "Christ was born across the sea,",
+          "With a glory in his bosom,",
+          "that transfigures you and me;",
+          "As he died to make men holy,",
+          "let us live to make men free,",
+          "While God is marching on."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#510 Baptist Hymnal, 1861",
+      "Author": "Karen Lafferty",
+      "Publisher": "",
+      "License": "Public Domain",
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.128,
+      "TitleNote": "#510 in the Baptist Hymnal"
     }
   },
   "oSongSets": {
@@ -2891,7 +2956,7 @@
     ],
     "2023-10-15 songs": [
       "Welcome",
-      "Mine Eyes Have Seen the Glory",
+      "Mine Eyes Have Seen the Glory (short)",
       "There's something about that name",
       "When we all get to Heaven",
       "Thou Art Worthy",
