@@ -1355,6 +1355,7 @@ function setNewSongEditError(text) {
 
 function onNewSongNameChanged(event) {
   onEditSongSelectChanged(false);
+  enableSongEditButtons();
 }
 
 function onNewSongFilterChanged(event) {

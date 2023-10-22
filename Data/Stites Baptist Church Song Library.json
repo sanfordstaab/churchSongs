@@ -2735,6 +2735,50 @@
       "fontBoldness": 5,
       "lineHeight": 0.128,
       "TitleNote": "#510 in the Baptist Hymnal"
+    },
+    "Fairest Lord Jesus": {
+      "oPages": {
+        "Verse 1": [
+          "Fairest Lord Jesus, Ruler of all nature,",
+          "O thou of God and man the Son;",
+          "Thee will I cherish thee Will I honor,",
+          "thou, my soul's glory, Joy, and crown"
+        ],
+        "Verse 2": [
+          "Fair are the meadows, Fairer still the woodlands,",
+          "Robed in the blooming garb of spring;",
+          "Jesus is fairer, Jesus is purer,",
+          "Than all the angles heaven can boast"
+        ],
+        "Verse 3": [
+          "Fair is the sunshine, Fairer still the moonlight",
+          "And all the twinkiling, starry host;",
+          "Jesus shines brighter, Jesus shines purer",
+          "than all the angles heaven can boast"
+        ],
+        "Verse 4": [
+          "Beautiful Savior, Lord of all nations,",
+          "Son of God and Son of man!",
+          "Glory and honor, Praise, adoration,",
+          "Now and forever more be thine!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.15566034000747536,
+      "license": "",
+      "TitleNote": "#48 in the Baptist Hymnal",
+      "Notes": "#48 Baptist Hymnal",
+      "Author": "Unknown",
+      "Publisher": "Public Domain",
+      "License": " "
     }
   },
   "oSongSets": {
