@@ -2741,20 +2741,20 @@
         "Verse 1": [
           "Fairest Lord Jesus, Ruler of all nature,",
           "O thou of God and man the Son;",
-          "Thee will I cherish thee Will I honor,",
+          "Thee will I cherish, Thee will I honor,",
           "thou, my soul's glory, Joy, and crown"
         ],
         "Verse 2": [
           "Fair are the meadows, Fairer still the woodlands,",
           "Robed in the blooming garb of spring;",
           "Jesus is fairer, Jesus is purer,",
-          "Than all the angles heaven can boast"
+          "Who makes the woeful heart to sing."
         ],
         "Verse 3": [
           "Fair is the sunshine, Fairer still the moonlight",
           "And all the twinkiling, starry host;",
           "Jesus shines brighter, Jesus shines purer",
-          "than all the angles heaven can boast"
+          "than all the angels heaven can boast."
         ],
         "Verse 4": [
           "Beautiful Savior, Lord of all nations,",
@@ -2779,6 +2779,67 @@
       "Author": "Unknown",
       "Publisher": "Public Domain",
       "License": " "
+    },
+    "We bring the sacrifice of praise": {
+      "oPages": {
+        "Verse 1": [
+          "We bring the sacrifice of praise",
+          "into the house of the Lord.",
+          "We bring the sacrifice of praise",
+          "into the house of the Lord.",
+          ""
+        ],
+        "Chorus": [
+          "And we offer up to you",
+          "the sacrifices of thanksgiving;",
+          "And we offer up to you",
+          "the sacrifices of joy!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18200958293967942,
+      "license": "",
+      "TitleNote": "#232 in the Maranatha Praise Book",
+      "Notes": "#232 in the Maranatha Praise Book",
+      "Author": "Kirk Dearman",
+      "Publisher": "",
+      "License": ""
+    },
+    "In Moments Like These (2x)": {
+      "oPages": {
+        "Chorus": [
+          "Singing I love you Lord,",
+          "Singing I love you Lord,",
+          "Singing I love you, Lord,",
+          "I love you."
+        ],
+        "Verse 1": [
+          "In moments like these, I sing out a song",
+          "I sing out a love song to Jesus.",
+          "In moments like these, I lift up my hands ",
+          "I lift up my hand to the Lord"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 243 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "David Graham",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -3007,6 +3068,16 @@
       "I Surrender All",
       "Break",
       "Blessed Assurance"
+    ],
+    "2023-10-22 songs for guitar": [
+      "We bring the sacrifice of praise",
+      "Fairest Lord Jesus",
+      "There's something about that name",
+      "In Moments Like These (2x)",
+      "Come let us worship and bow down",
+      "Turn Your Eyes Upon Jesus",
+      "Break",
+      "Alive Alive"
     ]
   },
   "defaults": {
