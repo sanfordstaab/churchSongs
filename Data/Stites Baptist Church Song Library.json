@@ -1615,28 +1615,6 @@
       "lineHeight": 0.175,
       "TitleNote": "#1 in the Baptist Hymnal"
     },
-    "Emanuel": {
-      "oPages": {
-        "Verse 1": [
-          "Emmanuel, Emmanuel;",
-          "His name is called Emmanuel,",
-          "God is with us, revealed in us;",
-          "His name is called Emmanuel."
-        ]
-      },
-      "aPageOrder": [
-        "Verse 1"
-      ],
-      "RepeatCount": 3,
-      "Notes": "#302 Baptist Hymnal",
-      "TitleNote": "#302 in the Baptist Hymnal",
-      "Author": "Gene Bartlett, 1965",
-      "Publisher": "Albert E. Brumley and Sons.",
-      "License": "",
-      "fontSize": 0.055,
-      "fontBoldness": 5,
-      "lineHeight": 0.224
-    },
     "Set My Soul Afire": {
       "oPages": {
         "Verse 1a": [
@@ -2840,6 +2818,28 @@
       "Author": "David Graham",
       "Publisher": "",
       "License": ""
+    },
+    "Emmanuel": {
+      "oPages": {
+        "Verse 1": [
+          "Emmanuel, Emmanuel;",
+          "His name is called Emmanuel,",
+          "God is with us, revealed in us;",
+          "His name is called Emmanuel."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1"
+      ],
+      "RepeatCount": 3,
+      "Notes": "#302 Baptist Hymnal",
+      "TitleNote": "#302 in the Baptist Hymnal",
+      "Author": "Gene Bartlett, 1965",
+      "Publisher": "Albert E. Brumley and Sons.",
+      "License": "",
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.224
     }
   },
   "oSongSets": {
@@ -2847,7 +2847,7 @@
       "This is the Day",
       "Bless His Holy Name",
       "I worship You, Almighty God",
-      "Emanuel",
+      "Emmanuel",
       "Set My Soul Afire",
       "Leaning on the Everlasting Arms",
       "Turn Your Eyes Upon Jesus",
@@ -3078,6 +3078,16 @@
       "Turn Your Eyes Upon Jesus",
       "Break",
       "Alive Alive"
+    ],
+    "2023-10-29 for guitar": [
+      "Welcome",
+      "This is the Day",
+      "I've Got a River of Life",
+      "Blessed Assurance",
+      "Come let us worship and bow down",
+      "Emmanuel",
+      "In Moments Like These (2x)",
+      "Amazing Grace"
     ]
   },
   "defaults": {
