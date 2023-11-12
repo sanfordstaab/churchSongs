@@ -1235,13 +1235,6 @@
           "unto His own",
           "his anthem raise."
         ],
-        "Verse 5": [
-          "Majesty,",
-          "worship His majesty,",
-          "Jesus, who died, ",
-          "now glorified,",
-          "King of all kings."
-        ],
         "Chorus A": [
           "So exalt,",
           "lift up on high",
@@ -1251,6 +1244,13 @@
           "Magnify,",
           "come glorify ",
           "Christ Jesus, the King"
+        ],
+        "Verse 3": [
+          "Majesty,",
+          "worship His majesty,",
+          "Jesus, who died, ",
+          "now glorified,",
+          "King of all kings."
         ]
       },
       "aPageOrder": [
@@ -1258,7 +1258,7 @@
         "Verse 2",
         "Chorus A",
         "Chorus B",
-        "Verse 5"
+        "Verse 3"
       ],
       "RepeatCount": 2,
       "Notes": "#98 Maranatha Praise Book 1990, Isaiah 24:14",
@@ -3088,6 +3088,27 @@
       "Emmanuel",
       "In Moments Like These (2x)",
       "Amazing Grace"
+    ],
+    "2023-11-12 songs (guitar)": [
+      "Welcome",
+      "Seek Ye First",
+      "Majesty",
+      "We bring the sacrifice of praise",
+      "I worship You, Almighty God",
+      "I Exalt Thee",
+      "In Moments Like These",
+      "Break",
+      "Great is thy faithfulness"
+    ],
+    "2023-11-05 songs (guitar)": [
+      "Welcome",
+      "What a friend we have in Jesus",
+      "Thy Loving Kindness",
+      "Emmanuel",
+      "As The Deer",
+      "I worship You, Almighty God",
+      "Break",
+      "Alive Alive"
     ]
   },
   "defaults": {
