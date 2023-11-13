@@ -611,6 +611,7 @@ function prevPage(event) {
 }
 
 function prevSongPage() {
+  const nav = getNavState();
   console.assert(!g.nav.fInReview);
   if (g.nav.iPageInSong == 0) {
     if (!g.nav.showTitlePage) {
@@ -627,11 +628,11 @@ function prevSongPage() {
     }
   }
   if (g.nav.iPageInSong > 0) {
-    g.nav.iPageInSong--;
-  } else {
-    if (g.nav.iSongInSet > 0) {
-      g.nav.iSongInSet--;
+    if (g.nav.iPageInSong == nav.cPagesInSong - 1 &&
+        g.nav.fBlankScreen) {
+      g.nav.fBlankScreen = false;
     }
+    g.nav.iPageInSong--;
   }
   renderNavSection();
 }
@@ -653,15 +654,18 @@ function nextPage() {
   } else {
     nextSongPage();
   }
-  renderNavSection();
 }
 
 function nextSongPage(event) {
   const nav = getNavState();
+  let fAdvanceToNextSong = false;
   console.assert(!nav.fInReview);
   if (nav.iPageInSong < nav.cPagesInSong - 1 ||
-     (nav.iPageInSong == 0 && (g.nav.fBlankScreen || g.nav.showTitlePage))) {
-    // we are not at the last page so advance the page.
+      // not at the last page in the song
+     (nav.iPageInSong == 0 && (g.nav.fBlankScreen || g.nav.showTitlePage))
+      // at the title page
+     ) {
+    // advance the page.
     if (nav.iPageInSong == 0) {
       // we are either blank, showing the title or showing the first verse.
       if (nav.fBlankScreen) {
@@ -677,17 +681,23 @@ function nextSongPage(event) {
         // just advance
         g.nav.iPageInSong++;
       }
-    } else {
+    } else if (nav.iPageInSong < nav.cPagesInSong - 1) {
       // we are showing the second or next to last verse - advance
       g.nav.iPageInSong++;
+    } else {
+      // last page showing
+      fAdvanceToNextSong = true;
     }
-  } else if (nav.iSongInSet < nav.cSongsInSet - 1) {
-    // we are at the last page of the song
-    // and we are not at the last song in the set.
-    // advance to the next song, first page, blank screen.
-    g.nav.iSongInSet++; // does nothing if we are not in a set
-    g.nav.iPageInSong = 0; // back to the begining
-    g.nav.fBlankScreen = true; // blank
+  } else {
+    fAdvanceToNextSong = true;
+  }
+  
+  if (fAdvanceToNextSong) {
+    if (nav.iSongInSet < nav.cSongsInSet - 1) {
+    nextSongInSet()
+    } else {
+      blankScreen();
+    }
   }
   renderNavSection();
 }
