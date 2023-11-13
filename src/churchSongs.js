@@ -2729,7 +2729,11 @@ function printSongSetList() {
       function(songName) {
         htmlList += `
 <li>
-  ${songName}
+  <b>${songName}</b>
+  <br>
+  ${getOverallOrderTextHTML(songLibrary.oSongs[songName], '&#8594;', '<br>')}
+  <br>
+  <br>
 </li>
 `;
       }
