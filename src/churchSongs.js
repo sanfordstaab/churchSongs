@@ -397,62 +397,6 @@ function processARChanged(newAspectRatio) {
   }
 }
 
-function setNavSongSetByName(songSetName) {
-  const nav = getNavState();
-  console.assert(nav.mode == 'songSet');
-  console.assert(Object.keys(songLibrary.oSongSets).includes(songSetName));
-  ge('selNavSongSets').value = songSetName;
-  setNavSongSetSongIndex(0);
-}
-
-function setNavSongSetSongIndex(iSongInSet) {
-  setNavPage(0);
-  g.nav.iSongInSet = iSongInSet;
-  blankScreen();
-}
-
-function setNavSongUI(songName) {
-  ge('selNavSongs').value = songName; 
-  setNavPage(0);
-  blankScreen();
-}
-
-function calcSongPageCount(songData) {
-  if (!songData) {
-    return 0;
-  }
-  let cPagesInSong = songData.aPageOrder.length * songData.RepeatCount;
-  if (songData.TagPage) {
-    cPagesInSong++;
-  }
-  return cPagesInSong;
-}
-
-function setNavPage(iPage) {
-  const nav = getNavState();
-  if (nav.fInReview) {
-    if (iPage < 0 || iPage >= nav.cPagesInReview) {
-      iPage = 0;
-      g.nav.iPageInSong = iPage;
-      return;
-    }
-  } else {
-    if (iPage < 0 || iPage >= nav.cPagesInSong) {
-      iPage = 0;
-      g.nav.iPageInSong = 0;
-      if (iPage >= nav.cPagesInSong) {
-        if (nav.mode == 'songSet') {
-          setNavSongSetSongIndex(nav.iSongInSet + 1);
-        }
-      }
-    } else {
-      g.nav.fBlankScreen = !nav.fInReview;
-      g.nav.iPageInSong = iPage;
-    }
-    renderNavSection();
-  }
-}
-
 function renderSelectControl(
   idSel, 
   aOptionTexts, 
@@ -558,6 +502,7 @@ function restoreProjectorAspectRatio() {
 function blankScreen(event) {
   const nav = getNavState();
   g.nav.fBlankScreen = !nav.fInReview;
+  console.log('blankScreen()');
   renderNavSection();
 }
 
@@ -598,10 +543,12 @@ function renderNavPagePreview() {
 function toggleBlankScreen(event) {
   console.assert(!g.nav.fInReview);
   g.nav.fBlankScreen = !g.nav.fBlankScreen;
+  console.log('toggleBlankScreen');
   renderNavSection();
 }
 
 function prevPage(event) {
+  console.log('prevPage');
   if (getNavState().fInReview) {
     prevReviewPage();
   } else {
@@ -612,6 +559,7 @@ function prevPage(event) {
 
 function prevSongPage() {
   const nav = getNavState();
+  console.log('prevSongPage()')
   console.assert(!g.nav.fInReview);
   if (g.nav.iPageInSong == 0) {
     if (!g.nav.showTitlePage) {
@@ -639,6 +587,7 @@ function prevSongPage() {
 
 function prevReviewPage() {
   const nav = getNavState();
+  console.log('prevReviewPage()')
   console.assert(nav.fInReview);
   if (nav.iPageInReview > 0) {
     // note that the keyboard method of navigation can get here
@@ -649,6 +598,7 @@ function prevReviewPage() {
 }
 
 function nextPage() {
+  console.log('nextPage()');
   if (getNavState().fInReview) {
     nextReviewPage();
   } else {
@@ -658,6 +608,7 @@ function nextPage() {
 
 function nextSongPage(event) {
   const nav = getNavState();
+  console.log('nextSongPage()');
   let fAdvanceToNextSong = false;
   console.assert(!nav.fInReview);
   if (nav.iPageInSong < nav.cPagesInSong - 1 ||
@@ -702,20 +653,9 @@ function nextSongPage(event) {
   renderNavSection();
 }
 
-function nextReviewPage() {
-  const nav = getNavState();
-  console.assert(nav.fInReview);
-  console.assert(nav.aSongPagePairs.length);
-  if (nav.iPageInReview < nav.aSongPagePairs.length - 1) {
-    // note that the keyboard method can get here despite
-    // the fact that the button is disabled
-    g.nav.iPageInReview++;
-    renderNavSection();
-  }
-}
-
 function prevSong(event) {
   const nav = getNavState();
+  console.log('prevSong()');
   if (nav.fInReview) {
     prevReviewSong();
   } else {
@@ -725,6 +665,7 @@ function prevSong(event) {
 
 function prevSongInSet() {
   const nav = getNavState();
+  console.log('prevSongInSet()');
   if (nav.iSongInSet > 0) {
     // the keyboard
     nav.iSongInSet--;
@@ -734,6 +675,7 @@ function prevSongInSet() {
 
 function prevReviewSong(event) {
   const nav = getNavState();
+  console.log('prevReviewSong()');
   console.assert(nav.fInReview);
   if (!isReviewingFirstSong()) {
     // note that the keyboard method can get here
@@ -760,6 +702,7 @@ function prevReviewSong(event) {
 }
 
 function nextSong() {
+  console.log('nextSong()');
   if (getNavState().fInReview) {
     nextReviewSong();
   } else {
@@ -769,6 +712,7 @@ function nextSong() {
 
 function nextSongInSet(event) {
   const nav = getNavState();
+  console.log('nextSongInSet()');
   console.assert(!nav.fInReview);
   if (nav.iSongInSet < nav.cSongsInSet - 1) {
     // the keyboard method can get us here despite
@@ -778,8 +722,83 @@ function nextSongInSet(event) {
   }
 }
 
+function setNavSongSetByName(songSetName) {
+  const nav = getNavState();
+  console.log(`setNavSongSetByName(${songSetName})`);
+  console.assert(nav.mode == 'songSet');
+  console.assert(Object.keys(songLibrary.oSongSets).includes(songSetName));
+  ge('selNavSongSets').value = songSetName;
+  setNavSongSetSongIndex(0);
+}
+
+function setNavSongSetSongIndex(iSongInSet) {
+  console.log(`setNavSongSetSongIndex(${iSongInSet})`);
+  setNavPage(0);
+  g.nav.iSongInSet = iSongInSet;
+}
+
+function setNavSongUI(songName) {
+  console.log(`setNavSongUI(${songName})`);
+  ge('selNavSongs').value = songName; 
+  setNavPage(0);
+}
+
+function setNavPage(iPage) {
+  const nav = getNavState();
+  console.log(`setNavPage(${iPage})`);
+  if (nav.fInReview) {
+    if (iPage < 0 || iPage >= nav.cPagesInReview) {
+      iPage = 0;
+      g.nav.iPageInSong = iPage;
+      return;
+    }
+  } else {
+    if (iPage < 0 || iPage >= nav.cPagesInSong) {
+      iPage = 0;
+      blankScreen();
+      g.nav.iPageInSong = 0;
+      if (iPage >= nav.cPagesInSong) {
+        if (nav.mode == 'songSet') {
+          setNavSongSetSongIndex(nav.iSongInSet + 1);
+        }
+      }
+    } else {
+      g.nav.fBlankScreen = !nav.fInReview;
+      g.nav.iPageInSong = iPage;
+    }
+    renderNavSection();
+  }
+}
+
+function calcSongPageCount(songData) {
+  if (!songData) {
+    return 0;
+  }
+  let cPagesInSong = songData.aPageOrder.length * songData.RepeatCount;
+  if (songData.TagPage) {
+    cPagesInSong++;
+  }
+  return cPagesInSong;
+}
+
+// review navigation utilities
+
+function nextReviewPage() {
+  const nav = getNavState();
+  console.log('nextReviewPage()');
+  console.assert(nav.fInReview);
+  console.assert(nav.aSongPagePairs.length);
+  if (nav.iPageInReview < nav.aSongPagePairs.length - 1) {
+    // note that the keyboard method can get here despite
+    // the fact that the button is disabled
+    g.nav.iPageInReview++;
+    renderNavSection();
+  }
+}
+
 function nextReviewSong(event) {
   const nav = getNavState();
+  console.log('nextReviewSong()');
   console.assert(nav.fInReview);
   if (nav.iSongInReview < nav.cSongsInReview - 1) {
     // the keyboard method can get here despite
@@ -794,6 +813,7 @@ function nextReviewSong(event) {
 }
 
 function resetReview(event) {
+  console.log('resetReview()');
   ge('rdoReviewMode').checked = 'checked';
   g.nav.iPageInReview = 0;
   g.nav.iSongInReview = 0;
@@ -825,8 +845,6 @@ function recallReviewPlace(event) {
     ge('divReviewStatus').innerText = '';
   }, 2000);
 }
-
-// navigation utilities
 
 function getSongPagePairs() {
   const aSongPagePairs = [];
@@ -901,13 +919,8 @@ function getMessageFromGlobals() {
   return oMsg;
 }
 
-function removeVersion(str) {
-  // str may have a trailing "(...)" which is the song version which
-  // we remove for the title page.
-  return str.replace(/\s*\(.*\)$/, '');
-}
-
 // General formatting
+
 function onAllCapsChanged(event) {
   songLibrary.defaults.allCaps = event.srcElement.checked ? 1 : 0;
   renderNavSection();
@@ -919,6 +932,12 @@ function onGenerateTitlePagesChanged(event) {
     g.nav.showTitlePage = songLibrary.defaults.generateTitle;
   }
   renderNavSection();
+}
+
+function removeVersion(str) {
+  // str may have a trailing "(...)" which is the song version which
+  // we remove for the title page.
+  return str.replace(/\s*\(.*\)$/, '');
 }
 
 // Song formatting
