@@ -2582,7 +2582,7 @@
       "fontBoldness": 5,
       "lineHeight": 0.2016726680772071,
       "license": "",
-      "TitleNote": "to Stites Baptist Church",
+      "TitleNote": "",
       "Notes": "Used to welcome audience",
       "Author": "",
       "Publisher": "",
@@ -2840,6 +2840,251 @@
       "fontSize": 0.055,
       "fontBoldness": 5,
       "lineHeight": 0.224
+    },
+    "It Came Upon The Midnight Clear": {
+      "oPages": {
+        "Verse 1a": [
+          "It came upon the midnight clear,",
+          "That glorious song of old,",
+          "From angles bending near the earth,",
+          "To touch their harps of gold:"
+        ],
+        "Verse 1b": [
+          "Peace on the earth, good will to men,",
+          "From heaven's all gracious King.",
+          "The world in solemn stillness lay,",
+          "To hear the angels sing."
+        ],
+        "Verse 2a": [
+          "Yet with the woes of sin and strife",
+          "The world has suffered long;",
+          "Beneath the angel strain have rolled",
+          "Two thousand years of wrong;"
+        ],
+        "Verse 2b": [
+          "And man, at war with man, hears not",
+          "The love song which they bring;",
+          "O hush the noise, ye men of strife,",
+          "And hear the angels sing."
+        ],
+        "Verse 3a": [
+          "And ye, beneath life's crushing load,",
+          "Whose forms are bending low,",
+          "Who toil along the climbing way",
+          "With painful steps and slow,"
+        ],
+        "Verse 3b": [
+          "Look now for glad and golden hours",
+          "Come swiftly on the wing.",
+          "O rest beside the weary road,",
+          "And hear the angels sing."
+        ],
+        "Verse 4a": [
+          "For lo the days are hastening on,",
+          "By prophet bards fore told,",
+          "When with the ever circling years,",
+          "Comes round the age of gold."
+        ],
+        "Verse 4b": [
+          "When peace shall over all the earth",
+          "Its ancient splendors fling,",
+          "And the whole world gives back the song",
+          "Which now the angels sing."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.04,
+      "fontBoldness": 5,
+      "lineHeight": 0.19966349152482402,
+      "license": "",
+      "TitleNote": "#86 in the Baptist Hymnal",
+      "Notes": "#86  Baptist Hymnal",
+      "Author": "Edmund H. Sears - Words, Richard S. Willis - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Joy To The World": {
+      "oPages": {
+        "Verse 1a": [
+          "Joy to the world, the Lord is come!",
+          "Let earth receive her King;",
+          "Let every heart prepare Him room,"
+        ],
+        "Verse 1b": [
+          "And Heaven and nature sing,",
+          "And Heaven and nature sing,",
+          "And Heaven, and Heaven, and nature sing."
+        ],
+        "Verse 2a": [
+          "Joy to the earth, the Savior reigns!",
+          "Let men their songs employ;",
+          "While fields and floods, ",
+          "rocks, hill and plains"
+        ],
+        "Verse 2b": [
+          "Repeat the sounding joy,",
+          "Repeat the sounding joy,",
+          "Repeat, repeat, the sounding joy."
+        ],
+        "Verse 3a": [
+          "No more let sins and sorrows grow,",
+          "Nor thorns infest the ground",
+          "He comes to make His blessings flow"
+        ],
+        "Verse 3b": [
+          "Far as the curse is found,",
+          "Far as the curse is found,",
+          "Far as, far as the curse is found."
+        ],
+        "Verse 4a": [
+          "He rules the world with truth and grace,",
+          "And makes the nations prove",
+          "The glories of His righteousness,"
+        ],
+        "Verse 4b": [
+          "And wonders of His love,",
+          "And wonders of His love,",
+          "And wonders, wonders, of His love."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.22234411655512085,
+      "license": "",
+      "TitleNote": "#88 in the Baptist Hymnal",
+      "Notes": "#86  Baptist Hymnal",
+      "Author": "Isaac Watts - Words, Tune arrange from George F. Handel by Lowell Mason",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Come, O Come, Emmanuel": {
+      "oPages": {
+        "Verse 1": [
+          "O come, O come, Emmanuel",
+          "And ransom captive Israel.",
+          "That morns in lonely exile here",
+          "Until the Son of God appear."
+        ],
+        "Chorus": [
+          "Rejoice! Rejoice! Emmanuel",
+          "Shall come to thee, O Israel."
+        ],
+        "Verse 2": [
+          "O come, Thou Rod of Jesse, free",
+          "Thine own from Satan's tyranny.",
+          "From depths of hell thy people save, ",
+          "And give them victory over the grave."
+        ],
+        "Verse 3": [
+          "O come, thou day-spring, come and cheer,",
+          "Our spirits by thine advent here.",
+          "Disperse the gloomy clouds of night,",
+          "And death's dark shadows put to flight."
+        ],
+        "Verse 4": [
+          "O come, thou key of David, come,",
+          "And open wide our heavenly home;",
+          "Make safe the way that leads on high,",
+          "And close the path to misery."
+        ],
+        "Verse 5": [
+          "O come, O come, thou Lord of might,",
+          "Who to thy tribes, on Sinai's height,",
+          "In ancient times did'st give the law,",
+          "In cloud, and majesty and awe."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus",
+        "Verse 5",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "John Mason Neale, Henry Sloane Coffin",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Come, All Ye Faithful": {
+      "oPages": {
+        "Chorus": [
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "Christ the Lord."
+        ],
+        "Verse 2": [
+          "Sing, choirs of angels,",
+          "Sing in exultation,",
+          "Sing all ye citizens of Heaven above.",
+          "Glory to God, all glory in the Highest."
+        ],
+        "Verse 1": [
+          "O Come, All Faithful",
+          "Joyful and triumphant,",
+          "O come ye, O come ye to Bethlehem.",
+          "Come and behold Him,",
+          "Born the King of Angels;"
+        ],
+        "Verse 3": [
+          "Yes, Lord we greet Thee,",
+          "Born this happy morning,",
+          "Jesus, to thee be all Glory given.",
+          "Word of the Father,",
+          "now in flesh appearing;"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#81 in the Baptist Hymnal",
+      "Notes": "O Come, All Ye Faithful",
+      "Author": "John Francis Wade",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -3140,6 +3385,24 @@
       "There is a Fountain",
       "Break",
       "When we all get to Heaven"
+    ],
+    "2023-12-10 songs (guitar)": [
+      "Emmanuel",
+      "O Come, O Come, Emmanuel",
+      "It Came Upon The Midnight Clear",
+      "I worship You, Almighty God",
+      "Come Now is the time to Worship",
+      "Joy To The World"
+    ],
+    "2023-12-17 songs (guitar)": [
+      "Welcome",
+      "Majesty",
+      "There's something about that name",
+      "Thou Art Worthy",
+      "O Come, All Ye Faithful",
+      "O Come, O Come, Emmanuel",
+      "Come let us worship and bow down",
+      "Joy To The World"
     ]
   },
   "defaults": {
