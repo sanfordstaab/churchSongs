@@ -2578,9 +2578,9 @@
         "Welcome"
       ],
       "RepeatCount": 1,
-      "fontSize": 0.076,
+      "fontSize": 0.06,
       "fontBoldness": 5,
-      "lineHeight": 0.2016726680772071,
+      "lineHeight": 0.21122691072736477,
       "license": "",
       "TitleNote": "",
       "Notes": "Used to welcome audience",
@@ -3085,6 +3085,473 @@
       "Author": "John Francis Wade",
       "Publisher": "",
       "License": ""
+    },
+    "O Little Town of Bethlehem": {
+      "oPages": {
+        "Verse 1a": [
+          "O little town of Bethlehem,",
+          "How still we see thee lie!",
+          "Above thy deep and dreamless sleep",
+          "The silent stars go by"
+        ],
+        "Verse 1b": [
+          "Yet in thy dark streets shineth",
+          "The everlasting Light;",
+          "The hopes and fears of all the years",
+          "Are met in thee tonight."
+        ],
+        "Verse 2a": [
+          "For Christ is born of Mary,",
+          "And gathered all above,",
+          "While mortals sleep, the angels keep",
+          "Their watch of wondering love."
+        ],
+        "Verse 2b": [
+          "O morning stars, together",
+          "Proclaim the holy birth,",
+          "And praises sing to God the King,",
+          "And peace to men on earth."
+        ],
+        "Verse 3a": [
+          "How silently, how silently",
+          "The wonderous gift is given!",
+          "So God imparts to human hearts",
+          "the blessings of his heaven."
+        ],
+        "Verse 3b": [
+          "No ear may hear his coming,",
+          "But in this world of sin,",
+          "Where meek souls will receive",
+          "him still, The dear Christ enters in."
+        ],
+        "Verse 4a": [
+          "O holy Child of Bethlehem!",
+          "Descend to us, we pray;",
+          "Cast out our sin, and enter in,",
+          "Be born in us today!",
+          ""
+        ],
+        "Verse 4b": [
+          "We hear the Christmas angels",
+          "The great glad tidings tell;",
+          "O come to us, abide with us,",
+          "Our Lord Immanuel!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#85 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Phillips Brooks - Words, Lewis Redner - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Hark! The Herald Angels Sing": {
+      "oPages": {
+        "Verse 1a": [
+          "Hark! the herald angels sing,",
+          "\"Glory to the newborn King;",
+          "Peace on earth, and mercy mild;",
+          "God and sinners reconciled,\""
+        ],
+        "Verse1b": [
+          "Joyful, all ye nations, rise,",
+          "Join the triumph of the skies;",
+          "With angelic hosts proclaim,",
+          "\"Christ is born in Bethlehem!\""
+        ],
+        "Verse 2a": [
+          "Christ, by highest heaven adored,",
+          "Christ, the everlasting Lord;",
+          "Late in time behold Him come,",
+          "Off-spring of a virgin's womb."
+        ],
+        "Verse 2b": [
+          "Veiled in flesh the God-head see,",
+          "Hail the incarnate Deity!",
+          "Pleased as man with men to dwell,",
+          "Jesus our Immanuel.",
+          ""
+        ],
+        "Verse 2c": [
+          "Hark! The herald angels sing,",
+          "\"Glory to newborn King.\""
+        ],
+        "Verse 1c": [
+          "Hark! The herald angels sing,",
+          "\"Glory to newborn King.\""
+        ],
+        "Verse 3c": [
+          "Hark! The herald angels sing,",
+          "\"Glory to newborn King.\""
+        ],
+        "Verse 3a": [
+          "Hail! the heav'n-born Prince of Peace!",
+          "Hail the Sun of Righteousness!",
+          "Light and life to all He brings,",
+          "risen with healing in His wings.",
+          ""
+        ],
+        "Verse 3b": [
+          "Mild he lays his glory by,",
+          "Born that man no more may die,",
+          "Born to raise the sons of earth,",
+          "Born to give them second birth."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse1b",
+        "Verse 1c",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 2c",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 3c"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.19866642196402196,
+      "license": "",
+      "TitleNote": "#83 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Charles Wesley - Words, Felix Mendelssohn - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Silent Night": {
+      "oPages": {
+        "Verse 1a": [
+          "Silent night, Holy night,",
+          "All is calm, all is bright",
+          "Round yon virgin mother and child!"
+        ],
+        "Verse 1b": [
+          "Holy infant so tender and mild,",
+          "Sleep in heavenly peace,",
+          "Sleep in heavenly peace."
+        ],
+        "Verse 2a": [
+          "Silent night, Holy night, ",
+          "Shepherds quake at the sight,",
+          "Glories stream from Heaven afar,",
+          ""
+        ],
+        "Verse 2b": [
+          "Heavenly hosts sing Hallelujah!",
+          "Christ the Saviour is born,",
+          "Christ the Saviour is born."
+        ],
+        "Verse 3a": [
+          "Silent night, Holy night,",
+          "Son of God love's pure light,",
+          "Radiant beams from thy Holy face,"
+        ],
+        "Verse 3b": [
+          "With the dawn of redeeming grace,",
+          "Jesus Lord at thy birth,",
+          "Jesus Lord at thy birth."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "#89 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Words - German Hymn, Joseph Mohr translated, Tune - Granz Gruber",
+      "Publisher": "",
+      "License": ""
+    },
+    "Worship": {
+      "oPages": {
+        "Worship": [
+          "Worship"
+        ]
+      },
+      "aPageOrder": [
+        "Worship"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Holiness": {
+      "oPages": {
+        "Holiness": [
+          "Holiness"
+        ]
+      },
+      "aPageOrder": [
+        "Holiness"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Humility": {
+      "oPages": {
+        "Humility": [
+          "Humility"
+        ]
+      },
+      "aPageOrder": [
+        "Humility"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Magnificat": {
+      "oPages": {
+        "Magnificat": [
+          "Magnificat"
+        ]
+      },
+      "aPageOrder": [
+        "Magnificat"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Messiah": {
+      "oPages": {
+        "Messiah": [
+          "Messiah"
+        ]
+      },
+      "aPageOrder": [
+        "Messiah"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Spiritus Sanctus": {
+      "oPages": {
+        "Spiritus Sanctus": [
+          "Spiritus Sanctus"
+        ]
+      },
+      "aPageOrder": [
+        "Spiritus Sanctus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Angels Shout": {
+      "oPages": {
+        "Angels Shout": [
+          "Angels Shout"
+        ]
+      },
+      "aPageOrder": [
+        "Angels Shout"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Worship and Adore Him": {
+      "oPages": {
+        "Worship And Adore Him": [
+          "Worship And Adore Him"
+        ]
+      },
+      "aPageOrder": [
+        "Worship And Adore Him"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.068,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Come, All Ye Faithful (Holiness)": {
+      "oPages": {
+        "Chorus": [
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "Christ the Lord."
+        ],
+        "Verse 2": [
+          "Sing, choirs of angels,",
+          "Sing in exultation,",
+          "Sing all ye citizens of Heaven above.",
+          "Glory to God, all glory in the Highest."
+        ],
+        "Verse 1": [
+          "O Come, All Faithful",
+          "Joyful and triumphant,",
+          "O come ye, O come ye to Bethlehem.",
+          "Come and behold Him,",
+          "Born the King of Angels;"
+        ],
+        "Verse 3": [
+          "Yes, Lord we greet Thee,",
+          "Born this happy morning,",
+          "Jesus, to thee be all Glory given.",
+          "Word of the Father,",
+          "now in flesh appearing;"
+        ],
+        "Holiness": [
+          "Holiness"
+        ]
+      },
+      "aPageOrder": [
+        "Holiness",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#81 in the Baptist Hymnal",
+      "Notes": "O Come, All Ye Faithful",
+      "Author": "John Francis Wade",
+      "Publisher": "",
+      "License": ""
+    },
+    "Majesty (Worhsip)": {
+      "oPages": {
+        "Verse 1": [
+          "Majesty,",
+          "worship His majesty!",
+          "Unto Jesus be all ",
+          "glory, power and praise!"
+        ],
+        "Verse 2": [
+          "Majesty,",
+          "kingdom authority.",
+          "Flows from His throne",
+          "unto His own",
+          "his anthem raise."
+        ],
+        "Chorus A": [
+          "So exalt,",
+          "lift up on high",
+          "the name of Jesus"
+        ],
+        "Chorus B": [
+          "Magnify,",
+          "come glorify ",
+          "Christ Jesus, the King"
+        ],
+        "Verse 3": [
+          "Majesty,",
+          "worship His majesty,",
+          "Jesus, who died, ",
+          "now glorified,",
+          "King of all kings."
+        ],
+        "Worship": [
+          "Worship"
+        ]
+      },
+      "aPageOrder": [
+        "Worship",
+        "Verse 1",
+        "Verse 2",
+        "Chorus A",
+        "Chorus B",
+        "Verse 3"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#98 Maranatha Praise Book 1990, Isaiah 24:14",
+      "Author": "Jack Hayford",
+      "Publisher": "Rocksmith Music (C) 1981",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.183,
+      "TitleNote": "#98 in the Maranatha Praise Book"
     }
   },
   "oSongSets": {
@@ -3403,6 +3870,25 @@
       "O Come, O Come, Emmanuel",
       "Come let us worship and bow down",
       "Joy To The World"
+    ],
+    "2023-12-24 (Christmas Eve)": [
+      "Welcome",
+      "Worship",
+      "Majesty",
+      "Holiness",
+      "O Come, All Ye Faithful",
+      "Humility",
+      "O Little Town of Bethlehem",
+      "Magnificat",
+      "Joy To The World",
+      "Messiah",
+      "O Come, O Come, Emmanuel",
+      "Spiritus Sanctus",
+      "Holy, Holy, Holy",
+      "Angels Shout",
+      "Hark! The Herald Angels Sing",
+      "Worship and Adore Him",
+      "Silent Night"
     ]
   },
   "defaults": {
