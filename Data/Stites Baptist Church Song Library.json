@@ -805,20 +805,21 @@
           "Willingly our knees will bow",
           "With all our heart soul mind and strength",
           "We gladly choose You now"
-        ],
-        "Ending": [
-          "Come come just as you are",
-          "Come",
-          "Come"
         ]
       },
       "aPageOrder": [
         "Chorus",
         "Verse 1",
-        "Verse 2"
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus"
       ],
-      "TagPage": "Ending",
-      "RepeatCount": 2,
+      "TagPage": "",
+      "RepeatCount": 1,
       "License": "",
       "fontSize": 0.032,
       "fontBoldness": 5,
@@ -1215,7 +1216,7 @@
       "Author": "Les Garrett",
       "Publisher": "Scripture In Song (C) 1980",
       "License": "",
-      "fontSize": 0.061,
+      "fontSize": 0.055,
       "fontBoldness": 5,
       "lineHeight": 0.203,
       "TitleNote": "#85 in the Maranatha Praise Book"
@@ -2968,7 +2969,7 @@
         "Verse 4b"
       ],
       "RepeatCount": 1,
-      "fontSize": 0.037,
+      "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.22234411655512085,
       "license": "",
@@ -3552,6 +3553,246 @@
       "fontBoldness": 5,
       "lineHeight": 0.183,
       "TitleNote": "#98 in the Maranatha Praise Book"
+    },
+    "Joyful Joyful We Adore Thee": {
+      "oPages": {
+        "Verse 1a": [
+          "Joyful, joyful, we adore Thee, ",
+          "God of glory, Lord of love.",
+          "Hearts unfold like flow'rs before ",
+          "Thee, opening to the sun above."
+        ],
+        "Verse 1b": [
+          "Melt the clouds of sin and sadness,",
+          "drive the dark of doubt away.",
+          "Giver of immortal gladness,",
+          "fill us with the light of day!"
+        ],
+        "Verse 2a": [
+          "All Thy works with joy surround Thee,",
+          "earth and heav'n reflect Thy rays.",
+          "Stars and angels sing around Thee,",
+          "center of unbroken praise."
+        ],
+        "Verse 2b": [
+          "Field and forest, vale and mountain, ",
+          "flowery meadow, flashing sea.",
+          "Singing bird and flowing fountain ",
+          "call us to rejoice in Thee."
+        ],
+        "Verse 3a": [
+          "Thou art giving and forgiving,",
+          "ever blessing, ever blest.",
+          "Well-spring of the joy of living,",
+          "ocean-depth of happy rest!"
+        ],
+        "Verse 3b": [
+          "Thou our Father, Christ our Brother, ",
+          "all who live in love are Thine.",
+          "Teach us how to love each other,",
+          "lift us to the joy divine."
+        ],
+        "Verse 4a": [
+          "Mortals join the mighty chorus",
+          "which the morning stars began.",
+          "Father love is reigning o'er us, ",
+          "Brother love binds man to man."
+        ],
+        "Verse 4b": [
+          "Ever singing, march we onward, ",
+          "victors in the midst of strife.",
+          "Joyful music leads us sun-ward ",
+          "in the triumph song of life."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 3,
+      "lineHeight": 0.1906322869314467,
+      "license": "",
+      "TitleNote": "#31 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Henry van Dyke - Words, Ludwig van Beethoven - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Go, Tell It On The Mountain": {
+      "oPages": {
+        "Chorus": [
+          "Go tell it on the mountain,",
+          "over the hills and everywhere;",
+          "Go tell it on the mountain ",
+          "that Jesus Christ is born."
+        ],
+        "Verse 1": [
+          "While shepherds kept their watching ",
+          "o'er silent flocks by night,",
+          "Behold throughout the heavens",
+          "there shone a Holy Light."
+        ],
+        "Verse 2": [
+          "The shepherds feared and trembled ",
+          "when lo! Above the earth,",
+          "Rang out the angel chorus ",
+          "that hailed our Savior’s birth."
+        ],
+        "Verse 3": [
+          "Down in a lowly manger ",
+          "the humble Christ was born",
+          "And brought us God's salvation ",
+          "that blessed Christmas morn!"
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "#82 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "John W. Work, Jr. - Words, Negro Spiritual - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "To God Be The Glory": {
+      "oPages": {
+        "Verse 1a": [
+          "To God be the glory, ",
+          "great things He hath done,",
+          "So loved He the world that",
+          "He gave us His Son,",
+          ""
+        ],
+        "Verse 1b": [
+          "Who yielded His life ",
+          "an atonement for sin,",
+          "And opened the life gate",
+          "that all may go in."
+        ],
+        "Chorus 1": [
+          "Praise the Lord, praise the Lord, ",
+          "let the earth hear His voice!",
+          "Praise the Lord, praise the Lord, ",
+          "let the people rejoice!"
+        ],
+        "Chorus 2": [
+          "Oh, come to the Father,",
+          "through Jesus the Son,",
+          "And give Him the glory, ",
+          "great things He hath done."
+        ],
+        "Verse 2a": [
+          "Oh, perfect redemption, ",
+          "the purchase of blood,",
+          "To every believer ",
+          "the promise of God;"
+        ],
+        "Verse 2b": [
+          "The vilest offender",
+          "who truly believes,",
+          "That moment from Jesus ",
+          "a pardon receives."
+        ],
+        "Verse 3a": [
+          "Great things He hath taught us,",
+          "great things He hath done,",
+          "And great our rejoicing ",
+          "through Jesus the Son;"
+        ],
+        "Verse 3b": [
+          "But purer, and higher,",
+          "and greater will be",
+          "Our wonder, our transport,",
+          "when Jesus we see."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus 1",
+        "Chorus 2"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 33 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Fanny J. Crosby - Words, William H. Doane - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Breath on me, Breath of God": {
+      "oPages": {
+        "Verse 1": [
+          "Breathe on me, breath of God,",
+          "Fill me with life anew,",
+          "That I may love what Thou dost love,",
+          "And do what Thou wouldst do."
+        ],
+        "Verse 2": [
+          "Breathe on me, breath of God,",
+          "Until my heart is pure,",
+          "Until with Thee I will Thy will,",
+          "To do and to endure."
+        ],
+        "Verse 3": [
+          "Breathe on me, breath of God,",
+          "Till I am wholly thine.",
+          "Till this earthly part of me",
+          "Glows with Thy fire divine."
+        ],
+        "Verse 4": [
+          "Breathe on me, breath of God,",
+          "So shall I never die,",
+          "But live with Thee in perfect life",
+          "Of Thine eternity"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.1824657473079493,
+      "license": "",
+      "TitleNote": "#317 in the Baptist Hymnal",
+      "Notes": "317 in the Baptist Hymnal",
+      "Author": "Edwin Hatch - words, Robert Jackson - tune",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -3889,6 +4130,50 @@
       "Hark! The Herald Angels Sing",
       "Worship and Adore Him",
       "Silent Night"
+    ],
+    "2023-12-31 songs (guitar)": [
+      "Welcome",
+      "O Come, All Ye Faithful",
+      "Go, Tell It On The Mountain",
+      "I've Got a River of Life",
+      "This is the Day",
+      "Joy To The World",
+      "Joyful Joyful We Adore Thee",
+      "Break",
+      "Thy Loving Kindness"
+    ],
+    "2024-01-07 songs": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "As The Deer",
+      "Blessed Assurance",
+      "Great is thy faithfulness",
+      "Holy, Holy, Holy",
+      "Break",
+      "Amazing Grace"
+    ],
+    "2024-01-14 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Joyful Joyful We Adore Thee",
+      "In Moments Like These",
+      "Blessed Assurance",
+      "Therefore The Redeemed",
+      null,
+      "Break",
+      "How great thou art"
+    ],
+    "2024-01-21 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Joyful Joyful We Adore Thee",
+      "In Moments Like These",
+      "Blessed Assurance",
+      "Therefore The Redeemed",
+      null,
+      "Break",
+      "To God Be The Glory",
+      "How great thou art"
     ]
   },
   "defaults": {
@@ -3897,7 +4182,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4717",
+    "aspectRatio": "0.4831",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 3,
