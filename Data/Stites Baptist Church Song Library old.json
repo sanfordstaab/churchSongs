@@ -254,7 +254,7 @@
       "License": "",
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.18378454500000002,
+      "lineHeight": 0.144,
       "TitleNote": "#133 in the Maranatha Praise Book"
     },
     "Turn Your Eyes Upon Jesus": {
@@ -610,9 +610,9 @@
       "TagPage": "",
       "Publisher": "",
       "License": "",
-      "fontSize": 0.05,
+      "fontSize": 0.041,
       "fontBoldness": 4,
-      "lineHeight": 0.21613977508386192,
+      "lineHeight": 0.20584740484177325,
       "TitleNote": "#109 in the Maranatha Praise Book"
     },
     "Alive Alive": {
@@ -4174,17 +4174,6 @@
       "Break",
       "To God Be The Glory",
       "How great thou art"
-    ],
-    "2024-01-28 songs (guitar)": [
-      "Welcome",
-      "We bring the sacrifice of praise",
-      "Thou Art Worthy",
-      "There's something about that name",
-      "Breath on me, Breath of God",
-      "I Surrender All",
-      "I worship You, Almighty God",
-      "Break",
-      "To God Be The Glory"
     ]
   },
   "defaults": {
