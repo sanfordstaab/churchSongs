@@ -3793,6 +3793,104 @@
       "Author": "Edwin Hatch - words, Robert Jackson - tune",
       "Publisher": "",
       "License": ""
+    },
+    "Freely, Freely": {
+      "oPages": {
+        "Verse 1": [
+          "God forgave my sin in Jesus name.",
+          "I’ve been born again in Jesus name.",
+          "And in Jesus name I come to you,",
+          "To share His love as He told me to."
+        ],
+        "Chorus": [
+          "He said freely, freely",
+          "you have received",
+          "Freely, freely give.",
+          "Go in My name and because you believe",
+          "Others will know that I live."
+        ],
+        "Verse 2": [
+          "All power is given in Jesus’ name,",
+          "In earth and heaven in Jesus name.",
+          "And in Jesus name I come to you,",
+          "To share His power as He told me to.",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 4,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "#263 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Carol Owens",
+      "Publisher": "",
+      "License": ""
+    },
+    "The Greatest Thing (in all my life)": {
+      "oPages": {
+        "Verse 1a": [
+          "The greatest thing in all my life ",
+          "is knowing you,",
+          "The greatest thing in all my life",
+          "is knowing you."
+        ],
+        "Verse 1b": [
+          "I want to know you more, ",
+          "I want to know you more,",
+          "The greatest thing in all my life ",
+          "is knowing you."
+        ],
+        "Verse 2a": [
+          "The greatest thing in all my life",
+          "is loving you,",
+          "The greatest thing in all my life",
+          "is loving you."
+        ],
+        "Verse 2b": [
+          "I want to love you more, ",
+          "I want to love you more.",
+          "The greatest thing in all my life",
+          "is loving you."
+        ],
+        "Verse 3a": [
+          "The greatest thing in all my life",
+          "is serving you,",
+          "The greatest thing in all my life ",
+          "is serving you."
+        ],
+        "Verse 3b": [
+          "I want to serve you more,",
+          "I want to serve you more.",
+          "The greatest thing in all my life ",
+          "is serving you."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "# 240 in the Maranantha Music Book",
+      "Notes": "",
+      "Author": "Mark Pendergrass",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4185,6 +4283,17 @@
       "I worship You, Almighty God",
       "Break",
       "To God Be The Glory"
+    ],
+    "2024-02-04 songs (guitar)": [
+      "Welcome",
+      "Freely, Freely",
+      "Breath on me, Breath of God",
+      "Come let us worship and bow down",
+      "The Greatest Thing (in all my life)",
+      "Thou Art Worthy",
+      "Holy, Holy, Holy",
+      "Break",
+      "I Exalt Thee"
     ]
   },
   "defaults": {
