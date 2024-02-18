@@ -821,9 +821,9 @@
       "TagPage": "",
       "RepeatCount": 1,
       "License": "",
-      "fontSize": 0.032,
+      "fontSize": 0.035,
       "fontBoldness": 5,
-      "lineHeight": 0.156,
+      "lineHeight": 0.17199,
       "Notes": "",
       "Author": "",
       "Publisher": "",
@@ -3891,6 +3891,66 @@
       "Author": "Mark Pendergrass",
       "Publisher": "",
       "License": ""
+    },
+    "Micah 6:8 - He Hath Shown Thee": {
+      "oPages": {
+        "Verse 1": [
+          "He hath shown thee, (echo) ",
+          "Oh man (echo) ",
+          "What is good. And what the",
+          "Lord requires of thee?"
+        ],
+        "Verse 2": [
+          "But to do justly,  (echo) ",
+          "and to love mercy  (echo) ",
+          "And to walk humbly with thy God. "
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 3,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 207 In the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Bob Sklar",
+      "Publisher": "",
+      "License": ""
+    },
+    "Psalm 5 - Give Ear To My Words, Oh Lord": {
+      "oPages": {
+        "Verse 2": [
+          "For unto Thee will I pray, ",
+          "my voice shalt thou hear in the morning",
+          "Oh, Lord, in the  morning ",
+          "will I direct my prayer",
+          "Unto Thee and will look up."
+        ],
+        "Verse 1": [
+          "Give ear to my words, oh Lord,",
+          "consider my meditation",
+          "Hearken unto the voice of my cry,",
+          "my King and my God."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 3,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.17421243328125005,
+      "license": "",
+      "TitleNote": "# 242 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Bill Sprouse, Jr.",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4305,6 +4365,17 @@
       "Freely, Freely",
       "Break",
       "I Surrender All"
+    ],
+    "2024-02-18 songs for guitar": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come Now is the time to Worship",
+      "Thy Loving Kindness",
+      "Micah 6:8 - He Hath Shown Thee",
+      "Seek Ye First",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "Break",
+      "Breath on me, Breath of God"
     ]
   },
   "defaults": {
