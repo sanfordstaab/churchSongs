@@ -3910,7 +3910,7 @@
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 3,
+      "RepeatCount": 2,
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.2016726680772071,
@@ -3941,7 +3941,7 @@
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 3,
+      "RepeatCount": 2,
       "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.17421243328125005,
@@ -3949,6 +3949,80 @@
       "TitleNote": "# 242 in the Maranatha Song Book",
       "Notes": "",
       "Author": "Bill Sprouse, Jr.",
+      "Publisher": "",
+      "License": ""
+    },
+    "Shine, Jesus, Shine": {
+      "oPages": {
+        "Verse 1a": [
+          "Lord the light of Your love is shining,",
+          "In the midst of Your darkness shining;",
+          "Jesus light of the world shine upon us;"
+        ],
+        "Verse 1b": [
+          "set us free by the truth ",
+          "You now bring us,",
+          "Shine on me, Shine on me."
+        ],
+        "Chorus 1": [
+          "Shine, Jesus, shine, ",
+          "fill this land with the Father's glory;",
+          "Blaze, spirit, blaze, ",
+          "set our hearts on fire.",
+          ""
+        ],
+        "Chorus 2": [
+          "Flow, river, flow, ",
+          "flood the nations with grace and mercy;",
+          "Send forth Your word,",
+          "Lord and let there be light! ",
+          ""
+        ],
+        "Verse 2a": [
+          "Lord, I come to Your awesome presence,",
+          "From the shadows into Your radiance;",
+          "By the blood I may enter Your brightness,"
+        ],
+        "Verse 2b": [
+          "Search me, try me,",
+          "consume all my darkness,",
+          "Shine on me, Shine on me"
+        ],
+        "Verse 3a": [
+          "As we gaze on Your kingly brightness,",
+          "So our faces display Your likeness;",
+          "Ever changing from glory to glory,",
+          ""
+        ],
+        "Verse 3b": [
+          "Mirrored here may our ",
+          "lives tell Your story,",
+          "Shine on me, Shine on me.",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus 1",
+        "Chorus 2"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21069884345054637,
+      "license": "",
+      "TitleNote": "# 259 in the Maranantha Chorus Book",
+      "Notes": "1 John 1:7",
+      "Author": "Graham Kendrick",
       "Publisher": "",
       "License": ""
     }
@@ -4376,6 +4450,17 @@
       "Psalm 5 - Give Ear To My Words, Oh Lord",
       "Break",
       "Breath on me, Breath of God"
+    ],
+    "2024-02-25 songs (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "Micah 6:8 - He Hath Shown Thee",
+      "In Moments Like These",
+      "Joyful Joyful We Adore Thee",
+      "Shine, Jesus, Shine",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "Break",
+      "Blessed Assurance"
     ]
   },
   "defaults": {
