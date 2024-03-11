@@ -1,0 +1,4489 @@
+{
+  "oSongs": {
+    "Doxology": {
+      "oPages": {
+        "Verse 1b": [
+          "Praise Him above, ye heav'nly host;",
+          "Praise Father, Son, and Holy Ghost",
+          "Amen"
+        ],
+        "Verse 1a": [
+          "Praise God, from whom",
+          "all blessings flow;",
+          "Praise Him all ",
+          "creatures here below;",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#6 Baptist Hymnal",
+      "Author": "Words: Thomas Ken, 1695, Tune: Genevan Psalm, 1551",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.20096724774147348,
+      "TitleNote": "#6 in the Baptist Hymnal"
+    },
+    "Bind us together": {
+      "oPages": {
+        "Chorus A": [
+          "Bind us together, Lord,",
+          "Bind us together with chords",
+          "that cannot be broken,"
+        ],
+        "Chorus B": [
+          "Bind us together, Lord,",
+          "Bind us together,",
+          "Bind us together in love."
+        ],
+        "Verse 1": [
+          "There is only one God,",
+          "There is only one King;",
+          "There is only one body,",
+          "That is why I sing."
+        ]
+      },
+      "Notes": "#73 Maranatha Praise Book 1990, John 17:20-21a",
+      "Author": "Bob Gilman",
+      "aPageOrder": [
+        "Chorus A",
+        "Chorus B",
+        "Verse 1",
+        "Chorus A",
+        "Chorus B"
+      ],
+      "RepeatCount": 2,
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.203,
+      "TitleNote": "#73 in the Maranatha Praise Book"
+    },
+    "Onward Christian Soldiers": {
+      "oPages": {
+        "Verse 1a": [
+          "Onward, Christian soldiers,",
+          "Marching as to war,",
+          "With the cross of Jesus",
+          "Going on before!"
+        ],
+        "Verse 1b": [
+          "Christ, the royal Master,",
+          "Leads against the foe;",
+          "Forward into battle,",
+          "See his banner go!"
+        ],
+        "Chorus": [
+          "Onward, Christian soldiers,",
+          "Marching as to war,",
+          "With the cross of Jesus",
+          "Going on before!"
+        ],
+        "Verse 2a": [
+          "At the sign of triumph",
+          "Satan's host doth flee;",
+          "On, then, Christian soldiers,",
+          "On to victory!"
+        ],
+        "Verse 2b": [
+          "Hell's foundations quiver",
+          "At the shout of priase;",
+          "Brothers, lift your voices,",
+          "Loud your anthems raise!"
+        ],
+        "Verse 3a": [
+          "Like a mighty army",
+          "Moves the church of God;",
+          "Brothers, we are treading",
+          "Where the saints have trod;"
+        ],
+        "Verse 3b": [
+          "We are not divided;",
+          "All one body we,",
+          "One in hope and doctrine,",
+          "One in charity."
+        ],
+        "Verse 4a": [
+          "Onward then, ye people,",
+          "Join our happy throng,",
+          "Blend with ours your voices",
+          "In the triumph song;"
+        ],
+        "Verse 4b": [
+          "GLory, laud, and honor,",
+          "Unto Christ the King;",
+          "This thro' countless ages",
+          "Men and angels sing"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#393 Baptist Hymnal, 1864",
+      "Author": "Words: Sabine Baring-Gould, Tune: Arthur S. Sullivan",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.203,
+      "TitleNote": "#393 in the Baptist Hymnal"
+    },
+    "I worship You, Almighty God": {
+      "oPages": {
+        "Verse 1": [
+          "I worship You, Almighty God,",
+          "There is none like You.",
+          "I worship You, O Prince of Peace,",
+          "that is what I want to do."
+        ],
+        "Verse 2": [
+          "I give You praise",
+          "For You are my righteousness.",
+          "I worship You, Almighty God,",
+          "There is none like You."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 3,
+      "Notes": "#176 Maranatha Song Book",
+      "Author": "Sondra Corbett",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.20265000000000002,
+      "TitleNote": "#176 in the Maranatha Song Book"
+    },
+    "At Calvary": {
+      "oPages": {
+        "Verse 1": [
+          "Years I spent in vanity and pride,",
+          "Caring not my Lord was curcified,",
+          "Knowing now it was for me he died",
+          "On Calvary"
+        ],
+        "Chorus": [
+          "Mercy there was great, and grace was free",
+          "Pardon there was multiplied to me;",
+          "There my burdened soul found liberty",
+          "At Calvary"
+        ],
+        "Verse 2": [
+          "By God's word at last my sin I learned;",
+          "then I trembled at the law I'd spurned,",
+          "Till my guilty soul imploring turned",
+          "To Calvary"
+        ],
+        "Verse 3": [
+          "Now I've given to Jesus everything,",
+          "Now I gladly own him as my King,",
+          "Now my raptured soul can only sing",
+          "Of Calvary"
+        ],
+        "Verse 4": [
+          "Oh, the love that drew salvation's plan!",
+          "Oh, the grace that brought it down to man!",
+          "Oh, the mighty gulf that God did span",
+          "At Calvary"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#166 Baptist Hymnal, 1895",
+      "Author": "Words: William R. Newel, Tune: Daniel B. Towner",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.167,
+      "TitleNote": "#166 in the Baptist Hymnal"
+    },
+    "There's something about that name": {
+      "oPages": {
+        "Verse 1": [
+          "Jesus, Jesus, Jesus",
+          "There's just something about that name",
+          "Master, Savior, Jesus",
+          "Like a fragrance after the rain."
+        ],
+        "Verse 2": [
+          "Jesus, Jesus, Jesus",
+          "Let all heaven and earth proclaim,",
+          "Kings and kingdoms will all pass away,",
+          "But there's something about that name."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#133 Maranatha Praise Book 1990",
+      "Author": "William J. & Gloria Gather",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.18378454500000002,
+      "TitleNote": "#133 in the Maranatha Praise Book"
+    },
+    "Turn Your Eyes Upon Jesus": {
+      "oPages": {
+        "Verse 1": [
+          "O, soul, are you weary and troubled.",
+          "No light in the darkness you see.",
+          "There's light for a look at the Savior.",
+          "And life more abundant and free."
+        ],
+        "Chorus": [
+          "Turn your eyes upon Jesus.",
+          "Look full in His wonderful face.",
+          "And the things of earth,",
+          "Will grow strangely dim.",
+          "In the light of His glory and grace."
+        ],
+        "Verse 2": [
+          "Through death into life everlasting.",
+          "He passed and we follow Him there.",
+          "Over us sin no more hath dominion.",
+          "For more than conquerors we are."
+        ],
+        "Verse 3": [
+          "His Word shall not fail you He promised.",
+          "Believe Him and all will be well.",
+          "Then go to a world that is dying.",
+          "His perfect salvation to tell."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "Author": "Helen H. Lemmel",
+      "RepeatCount": 1,
+      "Notes": "#97 Maranatha Praise Book 1990, #198 Baptist Hymnal",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.159,
+      "TitleNote": "#97 in the Maranatha Praise Book"
+    },
+    "Blessed Assurance": {
+      "oPages": {
+        "Verse 1": [
+          "Blessed Assurance, Jesus is mine.",
+          "O what a foretaste of glory divine.",
+          "Heir of salvation, purchase of God",
+          "Born of His Spirit, washed in His blood."
+        ],
+        "Chorus": [
+          "This is my story, this is my song",
+          "Praising my Savior all the day long.",
+          "This is my story, this is my song",
+          "Praising my Savior all the day long."
+        ],
+        "Verse 2": [
+          "Perfect submission, perfect delight.",
+          "Visions of rapture, now burst on my sight.",
+          "Angels descending, bring from above.",
+          "Echoes of mercy, whispers of love."
+        ],
+        "Verse 3": [
+          "Perfect submission, all is at rest.",
+          "I in my Savior, am happy and blest.",
+          "Watching and waiting, looking above.",
+          "Filled with His goodness, lost in His love."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "Author": "Fanny Jane Crosby/Phoebe Palmer Knapp",
+      "RepeatCount": 1,
+      "Notes": "#334 Baptist Hymnal",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.189,
+      "TitleNote": "#334 in the Baptist Hymnal"
+    },
+    "Come let us worship and bow down": {
+      "oPages": {
+        "Chorus": [
+          "Come let us worship and bow down,",
+          "Let us kneel before the Lord,",
+          "our God, our Maker;"
+        ],
+        "Verse 1": [
+          "For He is our God,",
+          "And we are the people of His pasture,",
+          "And the sheep of His hand,",
+          "Just the sheep of His hand."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse 1"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#211 Maranatha Praise Book 1990, Psalm 95:6,7",
+      "Author": "Dave Doherty",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.192,
+      "TitleNote": "#211 in the Maranatha Praise Book"
+    },
+    "Amazing Grace": {
+      "oPages": {
+        "Verse 1": [
+          "Amazing Grace how sweet the sound,",
+          "That saved a wretch like me.",
+          "I once was lost but now am found,",
+          "Was blind but now I see."
+        ],
+        "Verse 2": [
+          "T'was grace that taught my heart to fear",
+          "And grace my fears relieved;",
+          "How precious did that grace appear",
+          "The hour I first believed."
+        ],
+        "Verse 3": [
+          "Through many dangers, toils and snares,",
+          "I have already come.",
+          "'Tis grace hath brought me safe thus far,",
+          "And grace will lead me home."
+        ],
+        "Verse 4": [
+          "The Lord has promised good to me,",
+          "His Word my hope secures;",
+          "He will my shield and portion be",
+          "As long as life endures."
+        ],
+        "Verse 5": [
+          "When we've been there ten thousand years,",
+          "Bright shining as the sun,",
+          "We've no less days to sing God's praise",
+          "Than when we first begun."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4",
+        "Verse 5"
+      ],
+      "Author": "John Newton",
+      "RepeatCount": 1,
+      "Notes": "#165 Baptist Hymnal",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.213,
+      "TitleNote": "#165 in the Baptist Hymnal"
+    },
+    "Our God Reigns": {
+      "oPages": {
+        "Verse 1": [
+          "How lovely on the mountains ",
+          "are the feet of Him Who ",
+          "brings good new, good news.",
+          "Announcing peace, proclaiming ",
+          "news of happiness."
+        ],
+        "Chorus 1": [
+          "Our God reigns, our God reigns.",
+          "Our God reigns, our God reigns.",
+          "Our God reigns, our God reigns!"
+        ],
+        "Verse 2": [
+          "He had no stately form, ",
+          "He had no majesty.",
+          "That we should be drawn to Him.",
+          "He was despised and ",
+          "we took no account of Him."
+        ],
+        "Chorus 2": [
+          "Yet now He reigns ",
+          "with the Most High.",
+          "Now He reigns, now He reigns;",
+          "Now He reigns ",
+          "with the Most High."
+        ],
+        "Chorus 4": [
+          "That we might be born again.",
+          "That we might be, that we might be.",
+          "That we might be born again."
+        ],
+        "Verse 5": [
+          "Out from the tomb He came ",
+          "with grace and majesty,",
+          "He is alive, He is alive.",
+          "God loves us so, see here ",
+          "His hands, His feet, His side."
+        ],
+        "Chorus 5": [
+          "Yes, we know, He is alive.",
+          "He is alive, He is alive;",
+          "He is alive, He is alive."
+        ],
+        "Verse 6": [
+          "How lovely on the mountains ",
+          "are the feet of Him Who ",
+          "brings good news, good news.",
+          "Announcing peace, proclaiming ",
+          "news of happiness."
+        ],
+        "Verse 3b": [
+          "When we, like sheep, ",
+          "had gone astray, ",
+          "our Shepard came."
+        ],
+        "Verse 3a": [
+          "It was our sin and guilt ",
+          "that bruised and wounded Him.",
+          "It was our sin that",
+          "brought Him down;",
+          ""
+        ],
+        "Chorus 3b": [
+          "On His shoulders;",
+          "On His shoulders ",
+          "He bore our shame."
+        ],
+        "Chorus 3a": [
+          "And on His shoulders ",
+          "bore our shame.",
+          "On His shoulders, ",
+          ""
+        ],
+        "Verse 4b": [
+          "before its shearer,",
+          "His life ran down upon ",
+          "the ground like pouring rain."
+        ],
+        "Verse 4a": [
+          "Meek as a lamb that's ",
+          "led out to the slaughterhouse,",
+          "Dumb as a sheep ",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus 1",
+        "Verse 2",
+        "Chorus 2",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus 3a",
+        "Chorus 3b",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus 4",
+        "Verse 5",
+        "Chorus 5",
+        "Verse 6",
+        "Chorus 1"
+      ],
+      "Author": "Leonard E. Smith, Jr.",
+      "RepeatCount": 1,
+      "Notes": "#111 Maranatha Praise Book 1990",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.039,
+      "fontBoldness": 5,
+      "lineHeight": 0.22033810228047018,
+      "TitleNote": "#111 in the Maranatha Praise Book"
+    },
+    "Bless His Holy Name": {
+      "oPages": {
+        "Chorus": [
+          "Bless the Lord, O my soul,",
+          "And all that is within me,",
+          "Bless His holy name."
+        ],
+        "Verse 1": [
+          "He has done great things,",
+          "He has done great things,",
+          "He has done great things,",
+          "Bless His holy name."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 1",
+        "Chorus"
+      ],
+      "Author": "Andre Crouch",
+      "Notes": "#114 Maranatha Praise Book 1990, Psalm 103:1",
+      "RepeatCount": 1,
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.058,
+      "fontBoldness": 5,
+      "lineHeight": 0.224,
+      "TitleNote": "#114 in the Maranatha Praise Book"
+    },
+    "Thou Art Worthy": {
+      "oPages": {
+        "Chorus b": [
+          "To receive glory,",
+          "glory and honor,",
+          "Glory and honor and pow'r."
+        ],
+        "Chorus a": [
+          "Thou art worthy, ",
+          "Thou art worthy,",
+          "Thou art worthy, O Lord.",
+          ""
+        ],
+        "Verse 1b": [
+          "And for Thy pleasure, ",
+          "they are created,",
+          "Thou art worthy, O Lord."
+        ],
+        "Verse 1a": [
+          "For Thou hast created, ",
+          "hast all things created,",
+          "Thou has created all things;",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Chorus a",
+        "Chorus b",
+        "Verse 1a",
+        "Verse 1b"
+      ],
+      "Notes": "#109 Maranatha Praise Book 1990, Rev. 5:9",
+      "Author": "Pauline Michael Mills",
+      "RepeatCount": 2,
+      "TagPage": "",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 4,
+      "lineHeight": 0.21613977508386192,
+      "TitleNote": "#109 in the Maranatha Praise Book"
+    },
+    "Alive Alive": {
+      "oPages": {
+        "Verse 1a": [
+          "Sing hallelujah!",
+          "Sing hallelujah!",
+          "My Jesus is alive,",
+          "forever more."
+        ],
+        "Verse 1b": [
+          "Sing hallelujah!",
+          "Sing hallelujah!",
+          "My Jesus is alive."
+        ],
+        "Tag": [
+          "My Jesus is alive."
+        ],
+        "Chorus b": [
+          "Alive alive, ",
+          "alive forever more.",
+          "My Jesus is alive."
+        ],
+        "Chorus a": [
+          "Alive alive, ",
+          "alive forever more.",
+          "My Jesus is alive,",
+          "Alive forever more",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Chorus a",
+        "Chorus b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 1a",
+        "Verse 1b"
+      ],
+      "TagPage": "",
+      "RepeatCount": 2,
+      "License": 7004770,
+      "Author": "Bob Singleton",
+      "Publisher": "Singleton Productions Inc.",
+      "Notes": "Not in hymnal or song book",
+      "fontSize": 0.06,
+      "fontBoldness": 5,
+      "lineHeight": 0.232,
+      "TitleNote": ""
+    },
+    "I love to tell the story": {
+      "oPages": {
+        "Verse 1a": [
+          "I love to tell the story",
+          "of unseen things above,",
+          "Of Jesus, and his glory,",
+          "Of Jesus, and his love"
+        ],
+        "Verse 1b": [
+          "I love to tell the story",
+          "because I know tis true;",
+          "It satisfies my longings",
+          "As nothing else can do."
+        ],
+        "Chorus": [
+          "I love to tell the story,",
+          "`Twill be my theme in glory",
+          "To tell the old, old story",
+          "Of Jesus and his love."
+        ],
+        "Verse 2a": [
+          "I love to tell the story,",
+          "`Tis pleasant to repeat",
+          "What seems each time I tell it,",
+          "More wonderfully sweet:"
+        ],
+        "Verse 2b": [
+          "I love to tell the story",
+          "for some have never heard",
+          "The message of salvation",
+          "From God's own holy Word."
+        ],
+        "Verse 3a": [
+          "I love to tell the story,",
+          "For those who know it best",
+          "Seem hungering and thirsting",
+          "To hear it like the rest:"
+        ],
+        "Verse 3b": [
+          "And wyhen, in scenes of glory,",
+          "I sing the new, new song.",
+          "`Twill be the old, old story",
+          "That I have loved so long."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#461 Baptist Hymnal, 1866",
+      "Author": "Words: Katherine Hankey, Tune: William G. Fisher",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.193,
+      "TitleNote": "#461 in the Baptist Hymnal"
+    },
+    "Swing Low Sweet Chariot": {
+      "oPages": {
+        "Chorus": [
+          "Swing low, sweet chariot",
+          "(coming for to carry me home)",
+          "Swing low, sweet chariot",
+          "(coming for to carry me home)"
+        ],
+        "Verse 1": [
+          "I looked over Jordan and what did I see?",
+          "(coming for to carry me home)",
+          "A band of angels coming after me",
+          "(coming for to carry me home)"
+        ],
+        "Verse 2": [
+          "If you get there before I do",
+          "(coming for to carry me home)",
+          "Tell all my friends I'm coming too!",
+          "(coming for to carry me home)"
+        ],
+        "Verse 3": [
+          "I'm sometimes up and sometimes down",
+          "(coming for to carry me home)",
+          "But still my soul feels heavenly bound",
+          "(coming for to carry me home)"
+        ],
+        "Verse 4": [
+          "The brightest day that I can say",
+          "(coming for to carry me home)",
+          "When Jesus washed my sins away",
+          "(coming for to carry me home)"
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "TagPage": "",
+      "RepeatCount": 1,
+      "License": "Public Domain",
+      "Notes": "Not in hymnal or songbook.",
+      "Author": "",
+      "Publisher": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.167,
+      "TitleNote": ""
+    },
+    "Come Now is the time to Worship": {
+      "oPages": {
+        "Chorus": [
+          "Come now is the time to worship",
+          "Come now is the time to give your heart",
+          "Come just as you are to worship",
+          "Come just as you are before your God",
+          "Come"
+        ],
+        "Verse 1": [
+          "One day every tongue",
+          "Will confess You are God",
+          "One day every knee will bow",
+          "Still the greatest treasure remains",
+          "For those who gladly choose You now"
+        ],
+        "Verse 2": [
+          "Willingly we choose to surrender our lives",
+          "Willingly our knees will bow",
+          "With all our heart soul mind and strength",
+          "We gladly choose You now"
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus"
+      ],
+      "TagPage": "",
+      "RepeatCount": 1,
+      "License": "",
+      "fontSize": 0.035,
+      "fontBoldness": 5,
+      "lineHeight": 0.17199,
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "TitleNote": ""
+    },
+    "His name is wonderful": {
+      "oPages": {
+        "Chorus 1": [
+          "His name is Wonderful,",
+          "His name is Wonderful,",
+          "His name is Wonderful,",
+          "Jesus my Lord."
+        ],
+        "Chorus 2": [
+          "He is the Mighty King,",
+          "Master of everything,",
+          "His name is Wonderful,",
+          "Jesus, my Lord."
+        ],
+        "Verse 1": [
+          "He's the great shepherd,",
+          "The rock of all ages,",
+          "Almighty God is He."
+        ],
+        "Verse 2": [
+          "Bow down before Him,",
+          "Love and adore Him,",
+          "His name is Wonderful,",
+          "Jesus, my Lord."
+        ],
+        "Tag": [
+          "Jesus, my Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 1",
+        "Verse 2"
+      ],
+      "Notes": "#52 Maranatha Praise Book 1990",
+      "RepeatCount": 1,
+      "Author": "Audrey Mieir",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.061,
+      "fontBoldness": 5,
+      "lineHeight": 0.203,
+      "TitleNote": "#52 in the Maranatha Praise Book"
+    },
+    "Count your blessings": {
+      "oPages": {
+        "Verse 1a": [
+          "When upon life's billows",
+          "you are tempest tossed,",
+          "when yoiu are discouraged,",
+          "thinking all is lost,"
+        ],
+        "Verse 1b": [
+          "Count your many blessings,",
+          "name them one by one,",
+          "and it will surprise you",
+          "what the ,Lord hath done."
+        ],
+        "Chorus a": [
+          "Count your blessings,",
+          "name them one by one;",
+          "Count your blessings",
+          "see what God hath done."
+        ],
+        "Chorus b": [
+          "Count your blessings,",
+          "name them one by one;",
+          "Count your many blessings",
+          "see what God hath done."
+        ],
+        "Verse 2a": [
+          "Are you ever burdened with",
+          "a load of care?",
+          "Does the Cross seem heavy",
+          "you are called to bear?"
+        ],
+        "Verse 2b": [
+          "Count your many blessings,",
+          "every doubt will fly,",
+          "and you will be singing",
+          "as the days go by."
+        ],
+        "Verse 3a": [
+          "When you look at others",
+          "with their land and gold,",
+          "Think that Christ has promised you",
+          "his wealth untold;"
+        ],
+        "Verse 3b": [
+          "Count your many blessings,",
+          "money can not buy,",
+          "your reward in heaven,",
+          "nor your home on high."
+        ],
+        "Verse 4a": [
+          "So, amid the conflict,",
+          "whether great or small,",
+          "Do not be discouraged,",
+          "God is over all;"
+        ],
+        "Verse 4b": [
+          "Count your many blessings,",
+          "angels will attend",
+          "Help and comfort give you",
+          "to your journey's end."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus a",
+        "Chorus b"
+      ],
+      "RepeatCount": 1,
+      "Author": "Words: Johnson Oatman, Jr. 1897, Tune: Edwin O. Excell, 1897",
+      "Notes": "#231 Baptist Hymnal",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.055,
+      "fontBoldness": 1,
+      "lineHeight": 0.182,
+      "TitleNote": "#231 in the Baptist Hymnal"
+    },
+    "Great is thy faithfulness": {
+      "oPages": {
+        "Verse 1a": [
+          "Great is thy faithfulness,",
+          "Oh God my Father,",
+          "There is no shadow",
+          "of turning with thee;"
+        ],
+        "Verse 1b": [
+          "Thou changest not,",
+          "thy compassions, they fail not;",
+          "As thou hast been",
+          "thou forever wilt be."
+        ],
+        "Chorus": [
+          "Great is thy faithfulness!",
+          "Great is thy faithfulness!",
+          "Morning by morning new mercies I see;",
+          "All I have needed thy hand has provided;",
+          "Great is thy faithfulness, Lord, unto me!"
+        ],
+        "Verse 2a": [
+          "Summer and winter,",
+          "and springtime and harvest,",
+          "sun, moon, and stars",
+          "in their courses above"
+        ],
+        "Verse 2b": [
+          "Join with all nature",
+          "in manifold witness",
+          "to thy great faithfulness,",
+          "mercy, and love."
+        ],
+        "Verse 3a": [
+          "Pardon for sin and",
+          "a peace that endureth,",
+          "Thine own dear presence",
+          "to cheer and to guide;"
+        ],
+        "Verse 3b": [
+          "Strength for today and",
+          "bright hope for tomorrow,",
+          "Blessings all mine,",
+          "with ten thousand beside!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus"
+      ],
+      "Notes": "#216 Baptist Hymnal",
+      "Author": "Thomas O. Chisholm, William M. Runyan",
+      "RepeatCount": 1,
+      "Publisher": "Hope Publishing Co.",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.159,
+      "TitleNote": "#216 in the Baptist Hymnal"
+    },
+    "The Star-Spangled Banner": {
+      "oPages": {
+        "Verse 1a": [
+          "O say, can you see,",
+          "by the dawn's early light,",
+          "What so proudly we hailed",
+          "at the twilight's last gleaming,"
+        ],
+        "Verse 1b": [
+          "Whose broad stripes and bright stars,",
+          "thro' the perilous fight,",
+          "O'er the ramparts we watched,",
+          "were so gallantly streaming?"
+        ],
+        "Verse 2a": [
+          "O thus be it ever when ",
+          "free men shall stand",
+          "Between their loved homes ",
+          "and the war's desolation;"
+        ],
+        "Verse 2b": [
+          "Blest with vict'ry and peace,",
+          "may the heav'n rescued land",
+          "Praise the Power that had made",
+          "and preserved us a nation!"
+        ],
+        "Chorus 2b": [
+          "And the Star-spangled Banner",
+          "in triumph shall wave",
+          "O'er the land of the free",
+          "and the home of the brave?"
+        ],
+        "Chorus 2a": [
+          "Then conquer we must,",
+          "when our cause it is just;",
+          "And this be our motto;",
+          "\"In God is our trust!\""
+        ],
+        "Chorus 1a": [
+          "And the rockets' red glare,",
+          "the bombs bursting in air",
+          "Gave proof thro' the night",
+          "that our flag was still there."
+        ],
+        "Chorus 1b": [
+          "O say, does that Star-spangled",
+          "Banner yet wave",
+          "O'er the land of the free",
+          "and the home of the brave."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1a",
+        "Chorus 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 2a",
+        "Chorus 2b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#512 Baptist Hymnal",
+      "Author": "Words: Francis Scott Key, Tune: National Anthem, origin unknown 18th centyry",
+      "Publisher": "",
+      "License": "Public Domain",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.213,
+      "TitleNote": "#512 in the Baptist Hymnal"
+    },
+    "Mine Eyes Have Seen the Glory": {
+      "oPages": {
+        "Verse 1": [
+          "Mine eyes have seen the glory ",
+          "of the coming of the Lord;",
+          "He is trampling out the vintage ",
+          "where the grapes of wrath are stored;",
+          "He hath loosed the fateful lightning ",
+          "of his terrible swift sword;",
+          "His truth is marching on."
+        ],
+        "Chorus": [
+          "Glory! Glory, hallelujah!",
+          "Glory! Glory, hallelujah! ",
+          "Glory! Glory, hallelujah!",
+          "Our God is marching on."
+        ],
+        "Verse 2": [
+          "I have seen him in the watch-fires ",
+          "of a hundred circling camps;",
+          "they have builded him an altar",
+          "in the evening dews and damps;",
+          "I can read his righteous sentence ",
+          "by the dim and flaring lamps;",
+          "His day is marching on."
+        ],
+        "Verse 3": [
+          "He has sounded forth the trumpet ",
+          "that shall never sound retreat;",
+          "He is sifting out the hearts of men",
+          "before his judgment seat;",
+          "O be swift, my soul, to answer him;",
+          "be jubilant, my feet!",
+          "Our God is marching on."
+        ],
+        "Verse 4": [
+          "In the beauty of the lilies,",
+          "Christ was born across the sea,",
+          "With a glory in his bosom,",
+          "that transfigures you and me;",
+          "As he died to make men holy,",
+          "let us live to make men free,",
+          "While God is marching on."
+        ],
+        "Verse 5": [
+          "He is coming like the glory",
+          "of the morning on the wave;",
+          "He is wisdom to the mighty,",
+          "He is honor to the brave;",
+          "So the world shall be his footstool, ",
+          "and the soul of wrong his slave.",
+          "Our God is marching on."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus",
+        "Verse 5",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#510 Baptist Hymnal, 1861",
+      "Author": "Karen Lafferty",
+      "Publisher": "",
+      "License": "Public Domain",
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.128,
+      "TitleNote": "#510 in the Baptist Hymnal"
+    },
+    "This is the Day": {
+      "oPages": {
+        "Verse 1": [
+          "This is the day!",
+          "This is the day,",
+          "that the Lord hath made,",
+          "that the Lord hath made;"
+        ],
+        "Verse 2": [
+          "We will rejoice,",
+          "We will rejoice,",
+          "and be glad in it,",
+          "and be glad in it."
+        ],
+        "Verse 3": [
+          "This is the day ",
+          "that the Lord hath made,",
+          "We will rejoice ",
+          "and be glad in it"
+        ],
+        "Verse 4": [
+          "This is the day!",
+          "This is the day,",
+          "that the Lord hath made."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#85 Maranatha Praise Book 1990, Psalm 118:24",
+      "Author": "Les Garrett",
+      "Publisher": "Scripture In Song (C) 1980",
+      "License": "",
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.203,
+      "TitleNote": "#85 in the Maranatha Praise Book"
+    },
+    "Majesty": {
+      "oPages": {
+        "Verse 1": [
+          "Majesty,",
+          "worship His majesty!",
+          "Unto Jesus be all ",
+          "glory, power and praise!"
+        ],
+        "Verse 2": [
+          "Majesty,",
+          "kingdom authority.",
+          "Flows from His throne",
+          "unto His own",
+          "his anthem raise."
+        ],
+        "Chorus A": [
+          "So exalt,",
+          "lift up on high",
+          "the name of Jesus"
+        ],
+        "Chorus B": [
+          "Magnify,",
+          "come glorify ",
+          "Christ Jesus, the King"
+        ],
+        "Verse 3": [
+          "Majesty,",
+          "worship His majesty,",
+          "Jesus, who died, ",
+          "now glorified,",
+          "King of all kings."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Chorus A",
+        "Chorus B",
+        "Verse 3"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#98 Maranatha Praise Book 1990, Isaiah 24:14",
+      "Author": "Jack Hayford",
+      "Publisher": "Rocksmith Music (C) 1981",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.183,
+      "TitleNote": "#98 in the Maranatha Praise Book"
+    },
+    "How great thou art": {
+      "oPages": {
+        "Chorus": [
+          "Then sings my soul,",
+          "my Savior God to thee;",
+          "How great thou art,",
+          "how great thou art!"
+        ],
+        "Verse 1a": [
+          "O, Lord my God!",
+          "I in awesome wonder",
+          "consider all the worlds ",
+          "thy hands have made,"
+        ],
+        "Verse 1b": [
+          "I see the stars,",
+          "I hear the rolling thunder,",
+          "Thy power thro'-out ",
+          "the universe displayed."
+        ],
+        "Verse 2a": [
+          "When thro' the woods",
+          "and forest glades I wander,",
+          "And hear the birds",
+          "sing sweetly in the trees;"
+        ],
+        "Verse 2b": [
+          "When I look down ",
+          "from lofty mountain grandeur,",
+          "And hear the brook",
+          "and feel the gentle breeze;"
+        ],
+        "Verse 3a": [
+          "And when I think that God,",
+          "His Son not sparing, ",
+          "Sent him to die, ",
+          "I scarce can take it in;"
+        ],
+        "Verse 3b": [
+          "That on the cross,",
+          "my burden gladly bearing,",
+          "He bled and died",
+          "to take away my sin;"
+        ],
+        "Verse 4a": [
+          "When Christ shall come",
+          "with shout of acclamation,",
+          "And take me home,",
+          "what joy shall fill my heart!"
+        ],
+        "Verse 4b": [
+          "Then I shall bow",
+          "in humble adoration,",
+          "And there proclaim, ",
+          "my God, How great thou art!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#35 Baptist Hymnal",
+      "Author": "Words: Carl Boberg, 1886, Tune: Stuart K. Hine",
+      "Publisher": "Menna Music, Inc. (C) 1955",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.213,
+      "TitleNote": "#35 in the Baptist Hymnal"
+    },
+    "Crown Him with many crowns": {
+      "oPages": {
+        "Verse 1b": [
+          "Awake, my soul, and sing",
+          "Of Him who died for thee,",
+          "And hail him as thy matchless King",
+          "Thro' all eternity"
+        ],
+        "Verse 1a": [
+          "Crown Him with many crowns,",
+          "The Lamb upon His throne;",
+          "Hark! how the heavenly anthem drowns",
+          "All music but its own;"
+        ],
+        "Verse 2a": [
+          "Crown Him the Lord of life,",
+          "Who triumphed o'er the grave,",
+          "And rose victorious in the strife",
+          "for those he came to save;"
+        ],
+        "Verse 2b": [
+          "His glories now we sing",
+          "Who died, and rose on high,",
+          "Who died eternal life to bring,",
+          "and lives that death may die."
+        ],
+        "Verse 3a": [
+          "Crown Him the Lord of peace,",
+          "Whose power a scepter sways",
+          "from pole to pole, that wars may cease,",
+          "And all be prayer and praise."
+        ],
+        "Verse 3b": [
+          "His reign shall know no end,",
+          "And round his pierced feet,",
+          "fair flowers of paradise extend",
+          "Their fragrance ever sweet."
+        ],
+        "Verse 4a": [
+          "Crown Him the Lord of love;",
+          "Behold his hands and side,",
+          "Those wounds, yet visible above,",
+          "In beauty glorified;"
+        ],
+        "Verse 4b": [
+          "All hail, Redeemer, hail!",
+          "For thou has died for me;",
+          "Thy praise and glory shall not fail",
+          "through out eternity."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#52 Baptist Hymnal",
+      "Author": "Words: Matthew Bridges, 1851, Tune: George J. Elvey, 1968",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 4,
+      "lineHeight": 0.184,
+      "TitleNote": "#52 in the Baptist Hymnal"
+    },
+    "What a friend we have in Jesus": {
+      "oPages": {
+        "Verse 1a": [
+          "What a friend we have in Jesus,",
+          "All our sins and griefs to bear!",
+          "What a privilege to carry",
+          "Everything to God in prayer!"
+        ],
+        "Verse 1b": [
+          "Oh, what peace we often forfeit, ",
+          "Oh, what needless pain we bear,",
+          "All because we do not carry",
+          "Everything to God in prayer!"
+        ],
+        "Verse 2a": [
+          "Have we trials and temptations?",
+          "Is there trouble anywhere?",
+          "We should never be discouraged, ",
+          "Take it to the Lord in prayer;"
+        ],
+        "Verse 2b": [
+          "Can we find a friend so faithful",
+          "Who will all our sorrows share?",
+          "Jesus knows our every weakness, ",
+          "Take it to the Lord in prayer."
+        ],
+        "Verse 3a": [
+          "Are we weak and heavy laden,",
+          "Cumbered with a load of care?",
+          "Precious Savior, still our refuge;",
+          "Take it to the Lord in prayer;"
+        ],
+        "Verse 3b": [
+          "Do thy friends despise, forsake thee?",
+          "Take it to the Lord in prayer;",
+          "In his arms he'll take and shield thee;",
+          "Thou wilt find a solace there."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#403 Baptist Hymnal",
+      "Author": "Words: Joseph Scriven, 1855, Tune Charles C. Converse, 1868",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21,
+      "TitleNote": "#403 in the Baptist Hymnal"
+    },
+    "Come thou Fount of many blessings": {
+      "oPages": {
+        "Verse 1a": [
+          "Come, thou Fount of every blessing,",
+          "Tune my heart to sing thy grace;",
+          "Streams of mercy, never ceasing,",
+          "Call for songs of loudest praise;"
+        ],
+        "Verse 1b": [
+          "Teach me some melodious sonnet,",
+          "Sung by flaming tongues above;",
+          "Praise the mount! I'm fixed upon it,",
+          "Mount of thy redeeming love."
+        ],
+        "Verse 2a": [
+          "Here I raise mine ebenezer,",
+          "Hither by thy help I'm come;",
+          "And I hope, by thy good pleasure, ",
+          "Safely to arrive at home;"
+        ],
+        "Verse 2b": [
+          "Jesus sought me when a stranger,",
+          "Wandering from the fold of God;",
+          "He, to rescue me from danger,",
+          "Interposed his precious blood."
+        ],
+        "Verse 3a": [
+          "O to grace how great a debtor",
+          "Daily I'm constrained to be!",
+          "Let thy grace, Lord, like a fetter,",
+          "Bind my wand'ring heart to thee;"
+        ],
+        "Verse 3b": [
+          "Prone to wander, Lord, I feel it,",
+          "Prone to leave the God I love;",
+          "Here's my heart, Lord, take and seal it,",
+          "Seal it for thy courts above."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "Author": "Words: Author Robinson, 1758; Tune: Warenton, 1844",
+      "Publisher": "Boardman Press 1957",
+      "Notes": "#12 Baptist Hymnal",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.202,
+      "TitleNote": "#12 in the Baptist Hymnal"
+    },
+    "Holy, Holy, Holy": {
+      "oPages": {
+        "Verse 1a": [
+          "Holy, holy, holy!",
+          "Lord God Almighty!",
+          "Early in the morning",
+          "our song shall rise to thee;"
+        ],
+        "Verse 1b": [
+          "Holy, holy, holy,",
+          "merciful and mighty!",
+          "God in three Persons,",
+          "blessed Trinity!"
+        ],
+        "Verse 2a": [
+          "Holy, holy, holy!",
+          "All the saints adore thee,",
+          "casting down their golden crowns",
+          "around the glassy sea;"
+        ],
+        "Verse 2b": [
+          "Cherubim and Seraphim",
+          "falling down before thee,",
+          "who wert, and art, ",
+          "and evermore shalt be. "
+        ],
+        "Verse 3a": [
+          "Holy, holy, holy!",
+          "Though the darkness hide thee,",
+          "Thouth the eye of sinful man",
+          "thy glory may not see;"
+        ],
+        "Verse 3b": [
+          "Only thou art holy;",
+          "there is none beside thee,",
+          "Perfect in power,",
+          "in love, and purity. "
+        ],
+        "Verse 4a": [
+          "Holy, holy, holy!",
+          "Lord God Almighty!",
+          "All thy works shall praise thy name,",
+          "in earth, and sky, and sea;"
+        ],
+        "Verse 4b": [
+          "Holy, holy, holy;",
+          "merciful and mighty!",
+          "God in three Persons",
+          "blessed Trinity!"
+        ],
+        "tag": [
+          "Amen"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "TagPage": "",
+      "Notes": "#1 Baptist Hymnal, Rev. 4:8-11",
+      "Author": "Words: Reginald Heber, 1836, Tune: John B. Dykes, 1861",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.175,
+      "TitleNote": "#1 in the Baptist Hymnal"
+    },
+    "Set My Soul Afire": {
+      "oPages": {
+        "Verse 1a": [
+          "Set my soul afire, Lord,",
+          "for thy holy Word,",
+          "burn it deep within me,",
+          "let thy voice be heard;"
+        ],
+        "Verse 1b": [
+          "Millions grope in darkness",
+          "in this day and hour,",
+          "I will be a witness, ",
+          "fill me with thy power."
+        ],
+        "Chorus b": [
+          "Millions grope in darkness, ",
+          "waiting for thy Word,",
+          "Set my soul afire, Lord,",
+          "Set my soul afire."
+        ],
+        "Chorus a": [
+          "Set my soul afire, Lord,",
+          "set my soul afire,",
+          "Make my life a witness",
+          "of thy saving power."
+        ],
+        "Verse 2a": [
+          "Set my soul afire, Lord,",
+          "for the lost in sin,",
+          "Give to me a passion",
+          "as I seek to win;"
+        ],
+        "Verse 2b": [
+          "Help me not to falter,",
+          "never let me fail,",
+          "Fill me with thy Spirit, ",
+          "let thy will prevail."
+        ],
+        "Verse 3a": [
+          "Set my soul afire, Lord,",
+          "in my daily life,",
+          "Far too long I've wandered",
+          "in this day of strife;"
+        ],
+        "Verse 3b": [
+          "Nothing else will matter",
+          "but to live for thee,",
+          "I will be a witness,",
+          "for Christ lives in me."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus a",
+        "Chorus b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#302 Baptist Hymnal, 1965",
+      "TitleNote": "#302 in the Baptist Hymnal",
+      "Author": "Gene Bartlett",
+      "Publisher": "Albert E. Brumley and Songs",
+      "License": "",
+      "fontSize": 0.054,
+      "fontBoldness": 5,
+      "lineHeight": 0.203
+    },
+    "Leaning on the Everlasting Arms": {
+      "oPages": {
+        "Verse 1": [
+          "What a fellowship, ",
+          "what a joy divine,",
+          "Leaning on the everlasting arms; ",
+          "What a blessedness, ",
+          "what a peace is mine,",
+          "Leaning on the everlasting arms."
+        ],
+        "Verse 2": [
+          "Oh, how sweet to walk, ",
+          "in this pilgrim way, ",
+          "Leaning on the everlasting arms; ",
+          "Oh, how bright the path ",
+          "grows from day to day, ",
+          "Leaning on the everlasting arms."
+        ],
+        "Verse 3": [
+          "What have I to dread, ",
+          "What have I to fear, ",
+          "Leaning on the everlasting arms? ",
+          "I have blessed peace ",
+          "with my Lord so near, ",
+          "Leaning on the everlasting arms."
+        ],
+        "Chorus": [
+          "Leaning, leaning, ",
+          "Safe and secure from all alarms;",
+          "Leaning, leaning,",
+          "Leaning on the everlasting arms."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "# 254 Baptist Hymnal",
+      "TitleNote": "# 254 in Baptist Hymnal",
+      "Author": "Elisha A. Hoffman, Anthony J. Showalter 1887",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.156
+    },
+    "There is a Fountain": {
+      "oPages": {
+        "Verse 1": [
+          "There is a fountain filled with blood,",
+          "Drawn from Immanuel's veins;",
+          "And sinners, plunged beneath that flood, ",
+          "Lose all their guilty stains:",
+          "Lose all their guilty stains,",
+          "Lose all their guilty stains;",
+          "And sinners, plunged beneath that flood,",
+          "Lose all their guilty stains."
+        ],
+        "Verse 2": [
+          "The dying thief rejoiced to see ",
+          "That fountain in his day;",
+          "And there may I, though vile as he, ",
+          "Wash all my sins away:",
+          "Wash all my sins away, ",
+          "Wash all my sins away; ",
+          "And there may I, though vile as he, ",
+          "Wash all my sins away."
+        ],
+        "Verse 3": [
+          "Dear dying Lamb, thy precious blood",
+          "Shall never lose its pow'r",
+          "Till all the ransomed church of God",
+          "Be saved, to sin no more:",
+          "Be saved, to sin no more,",
+          "Be saved, to sin no more;",
+          "Till all the ransomed church of God",
+          "Be saved, to sin no more.",
+          ""
+        ],
+        "Verse 4": [
+          "E'er since by faith I saw the stream",
+          "Thy flowing wounds supply,",
+          "Redeeming love has been my theme,",
+          "And shall be till I die:",
+          "And shall be till I die, ",
+          "And shall be till I die;",
+          "Redeeming love has been my theme,",
+          "And shall be till I die."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "TitleNote": "#107 in the Baptist Hymnal",
+      "Notes": "#107 Baptist Hymnal",
+      "Author": "Words: William Cowper, 1771",
+      "Publisher": "Publc Domain",
+      "License": "",
+      "fontSize": 0.036,
+      "fontBoldness": 2,
+      "lineHeight": 0.111
+    },
+    "I Exalt Thee": {
+      "oPages": {
+        "Verse 1": [
+          "For Thou, O Lord,",
+          "art high above all the earth;",
+          "Thou art exalted far above all gods."
+        ],
+        "Verse 2": [
+          "I exalt Thee,",
+          "I exalt Thee,",
+          "I exalt Thee,",
+          "O Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#69 Maranatha Praise Book 1990",
+      "Author": "Pete Sanchez. Jr.",
+      "Publisher": "Pete Sanchez, Jr.",
+      "License": "",
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18,
+      "TitleNote": "#69 in the Maranatha Praise Book"
+    },
+    "A Mighty Fortress is our God": {
+      "oPages": {
+        "Verse 1a": [
+          "A mighty fortress is our God,",
+          "A bulwark never failing;",
+          "Our helper He, amid the flood",
+          "Of mortal ills prevailing;"
+        ],
+        "Verse 1b": [
+          "For still our ancient foe",
+          "Doth seek to work us woe;",
+          "His craft and power are great,",
+          "And armed with cruel hate,",
+          "On earth is not his equal."
+        ],
+        "Verse 2a": [
+          "Did we in our own strength confide,",
+          "Our striving would be losing;",
+          "Were not the right Man on our side,",
+          "The Man of God's own choosing;"
+        ],
+        "Verse 2b": [
+          "Dost ask who that may be?",
+          "Christ Jesus, it is he;",
+          "Lord Sabba'oth, his name,",
+          "From age to age the same,",
+          "And he must win the battle."
+        ],
+        "Verse 3a": [
+          "And though this world, with devils filled,",
+          "Should threaten to undo us,",
+          "We will not fear,",
+          "for God hath willed",
+          "His truth to triumph through us:"
+        ],
+        "Verse 3b": [
+          "The prince of darkness grim,",
+          "We tremble not for him;",
+          "His rage we can endure,",
+          "For lo, his doom is sure,",
+          "One little word shall fell him."
+        ],
+        "Verse 4a": [
+          "That word above all earthly powers,",
+          "No thanks to them, abideth;",
+          "The spirit and the gifts are ours",
+          "Through Him who with us sideth:"
+        ],
+        "Verse 4b": [
+          "Let goods and kindred go,",
+          "This mortal life also;",
+          "The body they may kill:",
+          "God's truth abideth still,",
+          "His kingdom is forever."
+        ],
+        "Tag": [
+          "Amen"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#37 Baptist Hymnal, Psalm 46",
+      "TitleNote": "#37 in the Baptist Hymnal",
+      "Author": "Martin Luther 1529",
+      "Publisher": "Public Domain",
+      "TagPage": "",
+      "lineHeight": 0.15527118915745666,
+      "fontSize": 0.045,
+      "fontBoldness": 4,
+      "license": "",
+      "License": ""
+    },
+    "When we all get to Heaven": {
+      "oPages": {
+        "Verse 1": [
+          "Sing the wondrous love of Jesus, ",
+          "Sing his mercy and his grace;",
+          "In the mansions bright and blessed,",
+          "He'll prepare for us a place.",
+          ""
+        ],
+        "Chorus": [
+          "When we all get to heaven,",
+          "What a day of rejoicing that will be!",
+          "When we all see Jesus,",
+          "We'll sing and shout the victory."
+        ],
+        "Verse 2": [
+          "While we walk the pilgrim pathway,",
+          "Clouds will overspread the sky;",
+          "But when traveling days are over,",
+          "Not a shadow, not a sigh."
+        ],
+        "Verse 3": [
+          "Let us then be true and faithful,",
+          "Trusting, serving every day;",
+          "Just one glimpse of him in glory",
+          "Will the toils of life repay."
+        ],
+        "Verse 4": [
+          "Onward to the prize before us!",
+          "Soon his beauty we'll behold;",
+          "Soon the pearly gates will open,",
+          "We shall tread the streets of gold."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.1811006725848744,
+      "license": "",
+      "TitleNote": "#491 in the Baptist Hymnal",
+      "Notes": "#491 in the Baptist Hymnal",
+      "Author": "Words: Eliza E. Hewitt, 1898, Tune: Emily D. Wilson, 1898",
+      "Publisher": "Public Domain",
+      "License": ""
+    },
+    "Seek Ye First": {
+      "oPages": {
+        "Verse 1": [
+          "Seek Ye first the kingdom of God",
+          "And His righteousness,",
+          "And all these things shall be",
+          "added unto you,  ",
+          "Allelu, Alleluia. "
+        ],
+        "Verse 2": [
+          "Ask and it shall be given unto you,",
+          "Seek and ye shall find;",
+          "Knock and the door shall be",
+          "opened unto you,  ",
+          "Allelu, Alleluia."
+        ],
+        "Verse 3": [
+          "Man does not live by bread alone,",
+          "But by every word,",
+          "That proceeds from the",
+          "mouth of the Lord, ",
+          "Allelu, Alleluia."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.17421243328125005,
+      "license": "",
+      "TitleNote": "# 1 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Karen Lafferty",
+      "Publisher": "",
+      "License": ""
+    },
+    "I Love You Lord": {
+      "oPages": {
+        "Verse 1": [
+          "I love you Lord,",
+          "And I lift my voice,",
+          "To worship you,",
+          "O my soul rejoice."
+        ],
+        "Verse 2": [
+          "Take joy, my King,",
+          "in what you hear,",
+          "May it be a sweet,",
+          "sweet sound in your ear."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.22234411655512085,
+      "license": "",
+      "TitleNote": "# 84 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Laurie Klein",
+      "Publisher": "",
+      "License": "",
+      "TagPage": ""
+    },
+    "Thy Loving Kindness": {
+      "oPages": {
+        "Verse 1b": [
+          "My lips shall praise Thee,",
+          "Thus will I bless Thee,",
+          "I will lift up my",
+          "hands unto Thy name."
+        ],
+        "Verse 2b": [
+          "My lips shall praise Thee,",
+          "Thus will I bless Thee,",
+          "I will lift up my ",
+          "hands unto Thy name."
+        ],
+        "Verse 2a": [
+          "I lift my hands up",
+          "unto Thy name,",
+          "I lift my hands up",
+          "unto Thy name;",
+          ""
+        ],
+        "Verse 1a": [
+          "Thy loving kindness",
+          "is better than life,",
+          "Thy loving kindness",
+          "is better than life;"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.05,
+      "fontBoldness": 4,
+      "lineHeight": 0.2106988434505464,
+      "license": "",
+      "TitleNote": "# 24 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Hugh Mitchell",
+      "Publisher": "",
+      "License": ""
+    },
+    "As The Deer": {
+      "oPages": {
+        "Verse 1b": [
+          "You alone are my ",
+          "heart's desire",
+          "and I long to worship Thee."
+        ],
+        "Chorus a": [
+          "You alone are my ",
+          "Strength, my Shield,",
+          "To you alone will ",
+          "my spirit yield.",
+          ""
+        ],
+        "Chorus b": [
+          "You alone are my ",
+          "heart's desire,",
+          "And I long to worship Thee."
+        ],
+        "Verse 1a": [
+          "As the deer panteth",
+          "for the water,",
+          "so my soul ",
+          "longs after Thee.",
+          ""
+        ],
+        "Verse 2a": [
+          "You're my friend and ",
+          "you are my brother",
+          "even though you are a King."
+        ],
+        "Verse 2b": [
+          "I love you more ",
+          "than any other,",
+          "so much more ",
+          "than anything."
+        ],
+        "Verse 3a": [
+          "I want you more than ",
+          "gold or silver,",
+          "only you can satisfy.",
+          ""
+        ],
+        "Verse 3b": [
+          "You alone are the ",
+          "real joy giver,",
+          "and the apple of my eye."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus a",
+        "Chorus b",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus a",
+        "Chorus b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.20549023807688635,
+      "license": "",
+      "TitleNote": "# 246 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Martin Nystrom",
+      "Publisher": "",
+      "License": ""
+    },
+    "Turn Your Eyes Upon Jesus (Chorus Only)": {
+      "oPages": {
+        "Verse 1": [
+          "O, soul, are you weary and troubled.",
+          "No light in the darkness you see.",
+          "There's light for a look at the Savior.",
+          "And life more abundant and free."
+        ],
+        "Chorus": [
+          "Turn your eyes upon Jesus.",
+          "Look full in His wonderful face.",
+          "And the things of earth,",
+          "Will grow strangely dim.",
+          "In the light of His glory and grace."
+        ],
+        "Verse 2": [
+          "Through death into life everlasting.",
+          "He passed and we follow Him there.",
+          "Over us sin no more hath dominion.",
+          "For more than conquerors we are."
+        ],
+        "Verse 3": [
+          "His Word shall not fail you He promised.",
+          "Believe Him and all will be well.",
+          "Then go to a world that is dying.",
+          "His perfect salvation to tell."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus"
+      ],
+      "Author": "Helen H. Lemmel",
+      "RepeatCount": 1,
+      "Notes": "#97 Maranatha Praise Book 1990, #198 Baptist Hymnal",
+      "Publisher": "",
+      "License": "",
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.159,
+      "TitleNote": "#97 in the Maranatha Praise Book"
+    },
+    "There is  Power in the Blood": {
+      "oPages": {
+        "Chorus": [
+          "There is power, power,",
+          "Wonder working power",
+          "In the blood of the Lamb;",
+          "There is power, power,",
+          "Wonder working power",
+          "in the precious blood of the Lamb"
+        ],
+        "Verse 1": [
+          "Would you be free from the burden of sin?",
+          "there's power in the blood,",
+          "power in the blood;",
+          "Would you over evil a victory win?",
+          "There's wonderful power in the blood."
+        ],
+        "Verse 2": [
+          "Would you be free from your passion and pride?",
+          "There's power in the blood,",
+          "power in the blood;",
+          "Come for a cleansing to Calvary's tide;",
+          "There's wonderful power in the blood."
+        ],
+        "Verse 3": [
+          "Would you be whiter, much whiter than snow?",
+          "There's power in the blood,",
+          "power in the blood;",
+          "Sin stains are lost in its life-giving flow;",
+          "There's wonderful power in the blood."
+        ],
+        "Verse 4": [
+          "Would you do service for Jesus your King?",
+          "There's power in the blood,",
+          "power in the blood;",
+          "Would you live daily his praises to sing?",
+          "There's wonderful power in the blood."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.033,
+      "fontBoldness": 5,
+      "lineHeight": 0.15683365423373735,
+      "license": "",
+      "TitleNote": "#159 in the Baptist Hymnal",
+      "Notes": "#159 Baptist Hymnal",
+      "Author": "Lewis E. Jones, 1899",
+      "Publisher": "Public Domain",
+      "License": ""
+    },
+    "I Surrender All": {
+      "oPages": {
+        "Verse 1": [
+          "All to Jesus I surrender, ",
+          "All to him I freely give;",
+          "I will ever love and trust him,",
+          "In his presence daily live."
+        ],
+        "Verse 2": [
+          "All to Jesus I surrender, ",
+          "Make me, Savior, wholly thine;",
+          "Let me feel thy Holy Spirit,",
+          "Truly know that thou art mine."
+        ],
+        "Verse 3": [
+          "All to Jesus I surrender,",
+          "Lord, I give myself to thee;",
+          "Fill me with thy love and power,",
+          "Let thy blessing fall on me."
+        ],
+        "Chorus": [
+          "I surrender all,",
+          "I surrender all;",
+          "All to thee, my blessed savior,",
+          "I surrender all."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.19158903467334676,
+      "license": "",
+      "TitleNote": "#347 in the Baptist Hymnal",
+      "Notes": "#347 Baptist Hymnal, 1861",
+      "Author": "Words: Jason W. Van DeVenter, 1896, Tune: Winfield S. Weeden",
+      "Publisher": "Public Domain",
+      "License": ""
+    },
+    "It Is Well With My Soul": {
+      "oPages": {
+        "Chorus": [
+          "It is well with my soul,",
+          "It is well,",
+          "It is well with my soul."
+        ],
+        "Verse 1b": [
+          "What ever my lot, ",
+          "thou hast taught me to say,",
+          "It is well, it is well",
+          "with my soul"
+        ],
+        "Verse 1a": [
+          "When peace, like a river, ",
+          "attendeth my way,",
+          "When sorrows like ",
+          "sea billows roll;",
+          ""
+        ],
+        "Verse 2a": [
+          "Though Satan should buffet,",
+          "though trials should come,",
+          "Let this blest",
+          "assurance control,"
+        ],
+        "Verse 2b": [
+          "That Christ has regarded",
+          "my helpless estate,",
+          "And hath shed his own",
+          "blood for my soul."
+        ],
+        "Verse 3a": [
+          "My sin - Oh, the bliss of",
+          "this glorious thought;",
+          "My sin not in part, ",
+          "but the whole,"
+        ],
+        "Verse 3b": [
+          "Is nailed to the cross ",
+          "and I bear it no more,",
+          "Praise the Lord, Praise the Lord,",
+          "Oh my soul!"
+        ],
+        "Verse 4a": [
+          "And, Lord, haste the day ",
+          "when the faith shall be sight,",
+          "The clouds be rolled ",
+          "back as a scroll,"
+        ],
+        "Verse 4b": [
+          "The trump shall resound",
+          "and the Lord shall descend,",
+          "\"Even so,\" It is ",
+          "well with my soul."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.22123378562307372,
+      "license": "",
+      "TitleNote": "Baptist Hymnal # 339",
+      "Notes": "",
+      "Author": "Words: Horatio G. Spafford, Tune: Philip P. Bliss",
+      "Publisher": "",
+      "License": ""
+    },
+    "I'll Fly Away": {
+      "oPages": {
+        "Verse 1b": [
+          "To a home on God's",
+          "celestial shore,",
+          "I'll fly away."
+        ],
+        "Verse 1a": [
+          "Some glad morning",
+          "when life of over,",
+          "I'll fly away,"
+        ],
+        "Chorus": [
+          "I'll fly away, Oh glory;",
+          "I'll fly away.",
+          "When I die, Hallelujah,",
+          "by and by,  I'll fly away."
+        ],
+        "Verse 2a": [
+          "When the shadows of ",
+          "this life have grown,",
+          "I'll fly away."
+        ],
+        "Verse 2b": [
+          "Like a bird from prison ",
+          "bars has flown,",
+          "I'll fly away."
+        ],
+        "Verse 3a": [
+          "Just a few more ",
+          "weary days and then",
+          "I'll fly away,",
+          ""
+        ],
+        "Verse 3b": [
+          "To a land where joys ",
+          "shall never end, ",
+          "I'll fly away."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2317147362169668,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "Words & Music: Albert E. Brumley",
+      "Publisher": "Hartford Music Company",
+      "License": ""
+    },
+    "Jesus, Name Above All Names": {
+      "oPages": {
+        "Verse 1b": [
+          "Emmanuel, God ",
+          "is with us,",
+          "Blessed Redeemer, ",
+          "Living Word."
+        ],
+        "Verse 1a": [
+          "Jesus, name above",
+          "all names;",
+          "Beautiful Savior, ",
+          "Glorious Lord,"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.2420854912906325,
+      "license": "",
+      "TitleNote": "Maranantha Praise Book # 200",
+      "Notes": "Luke 1:32",
+      "Author": "Naida Jearm",
+      "Publisher": "",
+      "License": ""
+    },
+    "Therefore The Redeemed": {
+      "oPages": {
+        "Chorus": [
+          "Therefore the redeemed ",
+          "of the Lord shall return,",
+          "And come with singing unto Zion,",
+          "And everlasting joy ",
+          "shall be upon their head."
+        ],
+        "Verse": [
+          "They shall obtain ",
+          "gladness and joy,",
+          "And sorrow and mourning ",
+          "shall flee away."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse",
+        "Chorus",
+        "Chorus",
+        "Verse",
+        "Chorus"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#113 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Ruth Lake",
+      "Publisher": "",
+      "License": ""
+    },
+    "Thank You Lord, For Saving My Soul": {
+      "oPages": {
+        "Verse 1": [
+          "Thank you Lord, for saving my soul",
+          "Thank you Lord, for making me whole.",
+          "Thank you Lord, for giving to me,",
+          "Thy great salvation, so rich and free."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1"
+      ],
+      "RepeatCount": 3,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.22068070115901606,
+      "license": "",
+      "TitleNote": "# 187 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Mr. and Mrs. S. Sykes",
+      "Publisher": "",
+      "License": ""
+    },
+    "In Moments Like These": {
+      "oPages": {
+        "Chorus": [
+          "Singing I love you Lord,",
+          "Singing I love you Lord,",
+          "Singing I love you, Lord,",
+          "I love you."
+        ],
+        "Verse 1": [
+          "In moments like these, I sing out a song",
+          "I sing out a love song to Jesus.",
+          "In moments like these, I lift up my hands ",
+          "I lift up my hand to the Lord"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 3,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 243 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "David Graham",
+      "Publisher": "",
+      "License": ""
+    },
+    "Welcome": {
+      "oPages": {
+        "Welcome": [
+          "Welcome ",
+          "to ",
+          "Stites",
+          "Baptist Church"
+        ]
+      },
+      "aPageOrder": [
+        "Welcome"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.06,
+      "fontBoldness": 5,
+      "lineHeight": 0.21122691072736477,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "Used to welcome audience",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "I've Got a River of Life": {
+      "oPages": {
+        "Verse 1": [
+          "I've got a River of Life ",
+          "flowing out of me,",
+          "Makes the lame to walk ",
+          "and the blind to see;"
+        ],
+        "Verse 2": [
+          "Opens prison doors, ",
+          "sets the captives free,",
+          "I've got a River of Life ",
+          "flowing out of me."
+        ],
+        "Chorus A": [
+          "Spring up O well, ",
+          "within my soul!",
+          "Spring up O well, ",
+          "and make me whole."
+        ],
+        "Chorus B": [
+          "Spring up O well, ",
+          "and give to me,",
+          "that Life abundantly."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Chorus A",
+        "Chorus B"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "#55 Maranatha Praise Book",
+      "Notes": "",
+      "Author": "L. Casebolt",
+      "Publisher": "Maranatha Music",
+      "License": ""
+    },
+    "Break": {
+      "oPages": {
+        "blank": ""
+      },
+      "aPageOrder": [
+        "blank"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Mine Eyes Have Seen the Glory (short)": {
+      "oPages": {
+        "Verse 1": [
+          "Mine eyes have seen the glory ",
+          "of the coming of the Lord;",
+          "He is trampling out the vintage ",
+          "where the grapes of wrath are stored;",
+          "He hath loosed the fateful lightning ",
+          "of his terrible swift sword;",
+          "His truth is marching on."
+        ],
+        "Chorus": [
+          "Glory! Glory, hallelujah!",
+          "Glory! Glory, hallelujah! ",
+          "Glory! Glory, hallelujah!",
+          "Our God is marching on."
+        ],
+        "Verse 2": [
+          "I have seen him in the watch-fires ",
+          "of a hundred circling camps;",
+          "they have builded him an altar",
+          "in the evening dews and damps;",
+          "I can read his righteous sentence ",
+          "by the dim and flaring lamps;",
+          "His day is marching on."
+        ],
+        "Verse 3": [
+          "He has sounded forth the trumpet ",
+          "that shall never sound retreat;",
+          "He is sifting out the hearts of men",
+          "before his judgment seat;",
+          "O be swift, my soul, to answer him;",
+          "be jubilant, my feet!",
+          "Our God is marching on."
+        ],
+        "Verse 4": [
+          "In the beauty of the lilies,",
+          "Christ was born across the sea,",
+          "With a glory in his bosom,",
+          "that transfigures you and me;",
+          "As he died to make men holy,",
+          "let us live to make men free,",
+          "While God is marching on."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "Notes": "#510 Baptist Hymnal, 1861",
+      "Author": "Karen Lafferty",
+      "Publisher": "",
+      "License": "Public Domain",
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.128,
+      "TitleNote": "#510 in the Baptist Hymnal"
+    },
+    "Fairest Lord Jesus": {
+      "oPages": {
+        "Verse 1": [
+          "Fairest Lord Jesus, Ruler of all nature,",
+          "O thou of God and man the Son;",
+          "Thee will I cherish, Thee will I honor,",
+          "thou, my soul's glory, Joy, and crown"
+        ],
+        "Verse 2": [
+          "Fair are the meadows, Fairer still the woodlands,",
+          "Robed in the blooming garb of spring;",
+          "Jesus is fairer, Jesus is purer,",
+          "Who makes the woeful heart to sing."
+        ],
+        "Verse 3": [
+          "Fair is the sunshine, Fairer still the moonlight",
+          "And all the twinkiling, starry host;",
+          "Jesus shines brighter, Jesus shines purer",
+          "than all the angels heaven can boast."
+        ],
+        "Verse 4": [
+          "Beautiful Savior, Lord of all nations,",
+          "Son of God and Son of man!",
+          "Glory and honor, Praise, adoration,",
+          "Now and forever more be thine!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.15566034000747536,
+      "license": "",
+      "TitleNote": "#48 in the Baptist Hymnal",
+      "Notes": "#48 Baptist Hymnal",
+      "Author": "Unknown",
+      "Publisher": "Public Domain",
+      "License": " "
+    },
+    "We bring the sacrifice of praise": {
+      "oPages": {
+        "Verse 1": [
+          "We bring the sacrifice of praise",
+          "into the house of the Lord.",
+          "We bring the sacrifice of praise",
+          "into the house of the Lord.",
+          ""
+        ],
+        "Chorus": [
+          "And we offer up to you",
+          "the sacrifices of thanksgiving;",
+          "And we offer up to you",
+          "the sacrifices of joy!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18200958293967942,
+      "license": "",
+      "TitleNote": "#232 in the Maranatha Praise Book",
+      "Notes": "#232 in the Maranatha Praise Book",
+      "Author": "Kirk Dearman",
+      "Publisher": "",
+      "License": ""
+    },
+    "In Moments Like These (2x)": {
+      "oPages": {
+        "Chorus": [
+          "Singing I love you Lord,",
+          "Singing I love you Lord,",
+          "Singing I love you, Lord,",
+          "I love you."
+        ],
+        "Verse 1": [
+          "In moments like these, I sing out a song",
+          "I sing out a love song to Jesus.",
+          "In moments like these, I lift up my hands ",
+          "I lift up my hand to the Lord"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 243 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "David Graham",
+      "Publisher": "",
+      "License": ""
+    },
+    "Emmanuel": {
+      "oPages": {
+        "Verse 1": [
+          "Emmanuel, Emmanuel;",
+          "His name is called Emmanuel,",
+          "God is with us, revealed in us;",
+          "His name is called Emmanuel."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1"
+      ],
+      "RepeatCount": 3,
+      "Notes": "#302 Baptist Hymnal",
+      "TitleNote": "#302 in the Baptist Hymnal",
+      "Author": "Gene Bartlett, 1965",
+      "Publisher": "Albert E. Brumley and Sons.",
+      "License": "",
+      "fontSize": 0.055,
+      "fontBoldness": 5,
+      "lineHeight": 0.224
+    },
+    "It Came Upon The Midnight Clear": {
+      "oPages": {
+        "Verse 1a": [
+          "It came upon the midnight clear,",
+          "That glorious song of old,",
+          "From angles bending near the earth,",
+          "To touch their harps of gold:"
+        ],
+        "Verse 1b": [
+          "Peace on the earth, good will to men,",
+          "From heaven's all gracious King.",
+          "The world in solemn stillness lay,",
+          "To hear the angels sing."
+        ],
+        "Verse 2a": [
+          "Yet with the woes of sin and strife",
+          "The world has suffered long;",
+          "Beneath the angel strain have rolled",
+          "Two thousand years of wrong;"
+        ],
+        "Verse 2b": [
+          "And man, at war with man, hears not",
+          "The love song which they bring;",
+          "O hush the noise, ye men of strife,",
+          "And hear the angels sing."
+        ],
+        "Verse 3a": [
+          "And ye, beneath life's crushing load,",
+          "Whose forms are bending low,",
+          "Who toil along the climbing way",
+          "With painful steps and slow,"
+        ],
+        "Verse 3b": [
+          "Look now for glad and golden hours",
+          "Come swiftly on the wing.",
+          "O rest beside the weary road,",
+          "And hear the angels sing."
+        ],
+        "Verse 4a": [
+          "For lo the days are hastening on,",
+          "By prophet bards fore told,",
+          "When with the ever circling years,",
+          "Comes round the age of gold."
+        ],
+        "Verse 4b": [
+          "When peace shall over all the earth",
+          "Its ancient splendors fling,",
+          "And the whole world gives back the song",
+          "Which now the angels sing."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.04,
+      "fontBoldness": 5,
+      "lineHeight": 0.19966349152482402,
+      "license": "",
+      "TitleNote": "#86 in the Baptist Hymnal",
+      "Notes": "#86  Baptist Hymnal",
+      "Author": "Edmund H. Sears - Words, Richard S. Willis - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Joy To The World": {
+      "oPages": {
+        "Verse 1a": [
+          "Joy to the world, the Lord is come!",
+          "Let earth receive her King;",
+          "Let every heart prepare Him room,"
+        ],
+        "Verse 1b": [
+          "And Heaven and nature sing,",
+          "And Heaven and nature sing,",
+          "And Heaven, and Heaven, and nature sing."
+        ],
+        "Verse 2a": [
+          "Joy to the earth, the Savior reigns!",
+          "Let men their songs employ;",
+          "While fields and floods, ",
+          "rocks, hill and plains"
+        ],
+        "Verse 2b": [
+          "Repeat the sounding joy,",
+          "Repeat the sounding joy,",
+          "Repeat, repeat, the sounding joy."
+        ],
+        "Verse 3a": [
+          "No more let sins and sorrows grow,",
+          "Nor thorns infest the ground",
+          "He comes to make His blessings flow"
+        ],
+        "Verse 3b": [
+          "Far as the curse is found,",
+          "Far as the curse is found,",
+          "Far as, far as the curse is found."
+        ],
+        "Verse 4a": [
+          "He rules the world with truth and grace,",
+          "And makes the nations prove",
+          "The glories of His righteousness,"
+        ],
+        "Verse 4b": [
+          "And wonders of His love,",
+          "And wonders of His love,",
+          "And wonders, wonders, of His love."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.22234411655512085,
+      "license": "",
+      "TitleNote": "#88 in the Baptist Hymnal",
+      "Notes": "#86  Baptist Hymnal",
+      "Author": "Isaac Watts - Words, Tune arrange from George F. Handel by Lowell Mason",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Come, O Come, Emmanuel": {
+      "oPages": {
+        "Verse 1": [
+          "O come, O come, Emmanuel",
+          "And ransom captive Israel.",
+          "That morns in lonely exile here",
+          "Until the Son of God appear."
+        ],
+        "Chorus": [
+          "Rejoice! Rejoice! Emmanuel",
+          "Shall come to thee, O Israel."
+        ],
+        "Verse 2": [
+          "O come, Thou Rod of Jesse, free",
+          "Thine own from Satan's tyranny.",
+          "From depths of hell thy people save, ",
+          "And give them victory over the grave."
+        ],
+        "Verse 3": [
+          "O come, thou day-spring, come and cheer,",
+          "Our spirits by thine advent here.",
+          "Disperse the gloomy clouds of night,",
+          "And death's dark shadows put to flight."
+        ],
+        "Verse 4": [
+          "O come, thou key of David, come,",
+          "And open wide our heavenly home;",
+          "Make safe the way that leads on high,",
+          "And close the path to misery."
+        ],
+        "Verse 5": [
+          "O come, O come, thou Lord of might,",
+          "Who to thy tribes, on Sinai's height,",
+          "In ancient times did'st give the law,",
+          "In cloud, and majesty and awe."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus",
+        "Verse 5",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "John Mason Neale, Henry Sloane Coffin",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Come, All Ye Faithful": {
+      "oPages": {
+        "Chorus": [
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "Christ the Lord."
+        ],
+        "Verse 2": [
+          "Sing, choirs of angels,",
+          "Sing in exultation,",
+          "Sing all ye citizens of Heaven above.",
+          "Glory to God, all glory in the Highest."
+        ],
+        "Verse 1": [
+          "O Come, All Faithful",
+          "Joyful and triumphant,",
+          "O come ye, O come ye to Bethlehem.",
+          "Come and behold Him,",
+          "Born the King of Angels;"
+        ],
+        "Verse 3": [
+          "Yes, Lord we greet Thee,",
+          "Born this happy morning,",
+          "Jesus, to thee be all Glory given.",
+          "Word of the Father,",
+          "now in flesh appearing;"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#81 in the Baptist Hymnal",
+      "Notes": "O Come, All Ye Faithful",
+      "Author": "John Francis Wade",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Little Town of Bethlehem": {
+      "oPages": {
+        "Verse 1a": [
+          "O little town of Bethlehem,",
+          "How still we see thee lie!",
+          "Above thy deep and dreamless sleep",
+          "The silent stars go by"
+        ],
+        "Verse 1b": [
+          "Yet in thy dark streets shineth",
+          "The everlasting Light;",
+          "The hopes and fears of all the years",
+          "Are met in thee tonight."
+        ],
+        "Verse 2a": [
+          "For Christ is born of Mary,",
+          "And gathered all above,",
+          "While mortals sleep, the angels keep",
+          "Their watch of wondering love."
+        ],
+        "Verse 2b": [
+          "O morning stars, together",
+          "Proclaim the holy birth,",
+          "And praises sing to God the King,",
+          "And peace to men on earth."
+        ],
+        "Verse 3a": [
+          "How silently, how silently",
+          "The wonderous gift is given!",
+          "So God imparts to human hearts",
+          "the blessings of his heaven."
+        ],
+        "Verse 3b": [
+          "No ear may hear his coming,",
+          "But in this world of sin,",
+          "Where meek souls will receive",
+          "him still, The dear Christ enters in."
+        ],
+        "Verse 4a": [
+          "O holy Child of Bethlehem!",
+          "Descend to us, we pray;",
+          "Cast out our sin, and enter in,",
+          "Be born in us today!",
+          ""
+        ],
+        "Verse 4b": [
+          "We hear the Christmas angels",
+          "The great glad tidings tell;",
+          "O come to us, abide with us,",
+          "Our Lord Immanuel!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#85 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Phillips Brooks - Words, Lewis Redner - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Hark! The Herald Angels Sing": {
+      "oPages": {
+        "Verse 1a": [
+          "Hark! the herald angels sing,",
+          "\"Glory to the newborn King;",
+          "Peace on earth, and mercy mild;",
+          "God and sinners reconciled,\""
+        ],
+        "Verse1b": [
+          "Joyful, all ye nations, rise,",
+          "Join the triumph of the skies;",
+          "With angelic hosts proclaim,",
+          "\"Christ is born in Bethlehem!\""
+        ],
+        "Verse 2a": [
+          "Christ, by highest heaven adored,",
+          "Christ, the everlasting Lord;",
+          "Late in time behold Him come,",
+          "Off-spring of a virgin's womb."
+        ],
+        "Verse 2b": [
+          "Veiled in flesh the God-head see,",
+          "Hail the incarnate Deity!",
+          "Pleased as man with men to dwell,",
+          "Jesus our Immanuel.",
+          ""
+        ],
+        "Verse 2c": [
+          "Hark! The herald angels sing,",
+          "\"Glory to newborn King.\""
+        ],
+        "Verse 1c": [
+          "Hark! The herald angels sing,",
+          "\"Glory to newborn King.\""
+        ],
+        "Verse 3c": [
+          "Hark! The herald angels sing,",
+          "\"Glory to newborn King.\""
+        ],
+        "Verse 3a": [
+          "Hail! the heav'n-born Prince of Peace!",
+          "Hail the Sun of Righteousness!",
+          "Light and life to all He brings,",
+          "risen with healing in His wings.",
+          ""
+        ],
+        "Verse 3b": [
+          "Mild he lays his glory by,",
+          "Born that man no more may die,",
+          "Born to raise the sons of earth,",
+          "Born to give them second birth."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse1b",
+        "Verse 1c",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 2c",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 3c"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.19866642196402196,
+      "license": "",
+      "TitleNote": "#83 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Charles Wesley - Words, Felix Mendelssohn - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Silent Night": {
+      "oPages": {
+        "Verse 1a": [
+          "Silent night, Holy night,",
+          "All is calm, all is bright",
+          "Round yon virgin mother and child!"
+        ],
+        "Verse 1b": [
+          "Holy infant so tender and mild,",
+          "Sleep in heavenly peace,",
+          "Sleep in heavenly peace."
+        ],
+        "Verse 2a": [
+          "Silent night, Holy night, ",
+          "Shepherds quake at the sight,",
+          "Glories stream from Heaven afar,",
+          ""
+        ],
+        "Verse 2b": [
+          "Heavenly hosts sing Hallelujah!",
+          "Christ the Saviour is born,",
+          "Christ the Saviour is born."
+        ],
+        "Verse 3a": [
+          "Silent night, Holy night,",
+          "Son of God love's pure light,",
+          "Radiant beams from thy Holy face,"
+        ],
+        "Verse 3b": [
+          "With the dawn of redeeming grace,",
+          "Jesus Lord at thy birth,",
+          "Jesus Lord at thy birth."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "#89 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Words - German Hymn, Joseph Mohr translated, Tune - Granz Gruber",
+      "Publisher": "",
+      "License": ""
+    },
+    "Worship": {
+      "oPages": {
+        "Worship": [
+          "Worship"
+        ]
+      },
+      "aPageOrder": [
+        "Worship"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Holiness": {
+      "oPages": {
+        "Holiness": [
+          "Holiness"
+        ]
+      },
+      "aPageOrder": [
+        "Holiness"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Humility": {
+      "oPages": {
+        "Humility": [
+          "Humility"
+        ]
+      },
+      "aPageOrder": [
+        "Humility"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Magnificat": {
+      "oPages": {
+        "Magnificat": [
+          "Magnificat"
+        ]
+      },
+      "aPageOrder": [
+        "Magnificat"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Messiah": {
+      "oPages": {
+        "Messiah": [
+          "Messiah"
+        ]
+      },
+      "aPageOrder": [
+        "Messiah"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Spiritus Sanctus": {
+      "oPages": {
+        "Spiritus Sanctus": [
+          "Spiritus Sanctus"
+        ]
+      },
+      "aPageOrder": [
+        "Spiritus Sanctus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Angels Shout": {
+      "oPages": {
+        "Angels Shout": [
+          "Angels Shout"
+        ]
+      },
+      "aPageOrder": [
+        "Angels Shout"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.076,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "Worship and Adore Him": {
+      "oPages": {
+        "Worship And Adore Him": [
+          "Worship And Adore Him"
+        ]
+      },
+      "aPageOrder": [
+        "Worship And Adore Him"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.068,
+      "fontBoldness": 5,
+      "lineHeight": 0.13,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "",
+      "Publisher": "",
+      "License": ""
+    },
+    "O Come, All Ye Faithful (Holiness)": {
+      "oPages": {
+        "Chorus": [
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "O come, let us adore Him,",
+          "Christ the Lord."
+        ],
+        "Verse 2": [
+          "Sing, choirs of angels,",
+          "Sing in exultation,",
+          "Sing all ye citizens of Heaven above.",
+          "Glory to God, all glory in the Highest."
+        ],
+        "Verse 1": [
+          "O Come, All Faithful",
+          "Joyful and triumphant,",
+          "O come ye, O come ye to Bethlehem.",
+          "Come and behold Him,",
+          "Born the King of Angels;"
+        ],
+        "Verse 3": [
+          "Yes, Lord we greet Thee,",
+          "Born this happy morning,",
+          "Jesus, to thee be all Glory given.",
+          "Word of the Father,",
+          "now in flesh appearing;"
+        ],
+        "Holiness": [
+          "Holiness"
+        ]
+      },
+      "aPageOrder": [
+        "Holiness",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#81 in the Baptist Hymnal",
+      "Notes": "O Come, All Ye Faithful",
+      "Author": "John Francis Wade",
+      "Publisher": "",
+      "License": ""
+    },
+    "Majesty (Worhsip)": {
+      "oPages": {
+        "Verse 1": [
+          "Majesty,",
+          "worship His majesty!",
+          "Unto Jesus be all ",
+          "glory, power and praise!"
+        ],
+        "Verse 2": [
+          "Majesty,",
+          "kingdom authority.",
+          "Flows from His throne",
+          "unto His own",
+          "his anthem raise."
+        ],
+        "Chorus A": [
+          "So exalt,",
+          "lift up on high",
+          "the name of Jesus"
+        ],
+        "Chorus B": [
+          "Magnify,",
+          "come glorify ",
+          "Christ Jesus, the King"
+        ],
+        "Verse 3": [
+          "Majesty,",
+          "worship His majesty,",
+          "Jesus, who died, ",
+          "now glorified,",
+          "King of all kings."
+        ],
+        "Worship": [
+          "Worship"
+        ]
+      },
+      "aPageOrder": [
+        "Worship",
+        "Verse 1",
+        "Verse 2",
+        "Chorus A",
+        "Chorus B",
+        "Verse 3"
+      ],
+      "RepeatCount": 2,
+      "Notes": "#98 Maranatha Praise Book 1990, Isaiah 24:14",
+      "Author": "Jack Hayford",
+      "Publisher": "Rocksmith Music (C) 1981",
+      "License": "",
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.183,
+      "TitleNote": "#98 in the Maranatha Praise Book"
+    },
+    "Joyful Joyful We Adore Thee": {
+      "oPages": {
+        "Verse 1a": [
+          "Joyful, joyful, we adore Thee, ",
+          "God of glory, Lord of love.",
+          "Hearts unfold like flow'rs before ",
+          "Thee, opening to the sun above."
+        ],
+        "Verse 1b": [
+          "Melt the clouds of sin and sadness,",
+          "drive the dark of doubt away.",
+          "Giver of immortal gladness,",
+          "fill us with the light of day!"
+        ],
+        "Verse 2a": [
+          "All Thy works with joy surround Thee,",
+          "earth and heav'n reflect Thy rays.",
+          "Stars and angels sing around Thee,",
+          "center of unbroken praise."
+        ],
+        "Verse 2b": [
+          "Field and forest, vale and mountain, ",
+          "flowery meadow, flashing sea.",
+          "Singing bird and flowing fountain ",
+          "call us to rejoice in Thee."
+        ],
+        "Verse 3a": [
+          "Thou art giving and forgiving,",
+          "ever blessing, ever blest.",
+          "Well-spring of the joy of living,",
+          "ocean-depth of happy rest!"
+        ],
+        "Verse 3b": [
+          "Thou our Father, Christ our Brother, ",
+          "all who live in love are Thine.",
+          "Teach us how to love each other,",
+          "lift us to the joy divine."
+        ],
+        "Verse 4a": [
+          "Mortals join the mighty chorus",
+          "which the morning stars began.",
+          "Father love is reigning o'er us, ",
+          "Brother love binds man to man."
+        ],
+        "Verse 4b": [
+          "Ever singing, march we onward, ",
+          "victors in the midst of strife.",
+          "Joyful music leads us sun-ward ",
+          "in the triumph song of life."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 3,
+      "lineHeight": 0.1906322869314467,
+      "license": "",
+      "TitleNote": "#31 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Henry van Dyke - Words, Ludwig van Beethoven - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Go, Tell It On The Mountain": {
+      "oPages": {
+        "Chorus": [
+          "Go tell it on the mountain,",
+          "over the hills and everywhere;",
+          "Go tell it on the mountain ",
+          "that Jesus Christ is born."
+        ],
+        "Verse 1": [
+          "While shepherds kept their watching ",
+          "o'er silent flocks by night,",
+          "Behold throughout the heavens",
+          "there shone a Holy Light."
+        ],
+        "Verse 2": [
+          "The shepherds feared and trembled ",
+          "when lo! Above the earth,",
+          "Rang out the angel chorus ",
+          "that hailed our Savior’s birth."
+        ],
+        "Verse 3": [
+          "Down in a lowly manger ",
+          "the humble Christ was born",
+          "And brought us God's salvation ",
+          "that blessed Christmas morn!"
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "#82 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "John W. Work, Jr. - Words, Negro Spiritual - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "To God Be The Glory": {
+      "oPages": {
+        "Verse 1a": [
+          "To God be the glory, ",
+          "great things He hath done,",
+          "So loved He the world that",
+          "He gave us His Son,",
+          ""
+        ],
+        "Verse 1b": [
+          "Who yielded His life ",
+          "an atonement for sin,",
+          "And opened the life gate",
+          "that all may go in."
+        ],
+        "Chorus 1": [
+          "Praise the Lord, praise the Lord, ",
+          "let the earth hear His voice!",
+          "Praise the Lord, praise the Lord, ",
+          "let the people rejoice!"
+        ],
+        "Chorus 2": [
+          "Oh, come to the Father,",
+          "through Jesus the Son,",
+          "And give Him the glory, ",
+          "great things He hath done."
+        ],
+        "Verse 2a": [
+          "Oh, perfect redemption, ",
+          "the purchase of blood,",
+          "To every believer ",
+          "the promise of God;"
+        ],
+        "Verse 2b": [
+          "The vilest offender",
+          "who truly believes,",
+          "That moment from Jesus ",
+          "a pardon receives."
+        ],
+        "Verse 3a": [
+          "Great things He hath taught us,",
+          "great things He hath done,",
+          "And great our rejoicing ",
+          "through Jesus the Son;"
+        ],
+        "Verse 3b": [
+          "But purer, and higher,",
+          "and greater will be",
+          "Our wonder, our transport,",
+          "when Jesus we see."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus 1",
+        "Chorus 2"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 33 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Fanny J. Crosby - Words, William H. Doane - Tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Breath on me, Breath of God": {
+      "oPages": {
+        "Verse 1": [
+          "Breathe on me, breath of God,",
+          "Fill me with life anew,",
+          "That I may love what Thou dost love,",
+          "And do what Thou wouldst do."
+        ],
+        "Verse 2": [
+          "Breathe on me, breath of God,",
+          "Until my heart is pure,",
+          "Until with Thee I will Thy will,",
+          "To do and to endure."
+        ],
+        "Verse 3": [
+          "Breathe on me, breath of God,",
+          "Till I am wholly thine.",
+          "Till this earthly part of me",
+          "Glows with Thy fire divine."
+        ],
+        "Verse 4": [
+          "Breathe on me, breath of God,",
+          "So shall I never die,",
+          "But live with Thee in perfect life",
+          "Of Thine eternity"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.1824657473079493,
+      "license": "",
+      "TitleNote": "#317 in the Baptist Hymnal",
+      "Notes": "317 in the Baptist Hymnal",
+      "Author": "Edwin Hatch - words, Robert Jackson - tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Freely, Freely": {
+      "oPages": {
+        "Verse 1": [
+          "God forgave my sin in Jesus name.",
+          "I’ve been born again in Jesus name.",
+          "And in Jesus name I come to you,",
+          "To share His love as He told me to."
+        ],
+        "Chorus": [
+          "He said freely, freely",
+          "you have received",
+          "Freely, freely give.",
+          "Go in My name and because you believe",
+          "Others will know that I live."
+        ],
+        "Verse 2": [
+          "All power is given in Jesus’ name,",
+          "In earth and heaven in Jesus name.",
+          "And in Jesus name I come to you,",
+          "To share His power as He told me to.",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 4,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "#263 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Carol Owens",
+      "Publisher": "",
+      "License": ""
+    },
+    "The Greatest Thing (in all my life)": {
+      "oPages": {
+        "Verse 1a": [
+          "The greatest thing in all my life ",
+          "is knowing you,",
+          "The greatest thing in all my life",
+          "is knowing you."
+        ],
+        "Verse 1b": [
+          "I want to know you more, ",
+          "I want to know you more,",
+          "The greatest thing in all my life ",
+          "is knowing you."
+        ],
+        "Verse 2a": [
+          "The greatest thing in all my life",
+          "is loving you,",
+          "The greatest thing in all my life",
+          "is loving you."
+        ],
+        "Verse 2b": [
+          "I want to love you more, ",
+          "I want to love you more.",
+          "The greatest thing in all my life",
+          "is loving you."
+        ],
+        "Verse 3a": [
+          "The greatest thing in all my life",
+          "is serving you,",
+          "The greatest thing in all my life ",
+          "is serving you."
+        ],
+        "Verse 3b": [
+          "I want to serve you more,",
+          "I want to serve you more.",
+          "The greatest thing in all my life ",
+          "is serving you."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "# 240 in the Maranantha Music Book",
+      "Notes": "",
+      "Author": "Mark Pendergrass",
+      "Publisher": "",
+      "License": ""
+    },
+    "Micah 6:8 - He Hath Shown Thee": {
+      "oPages": {
+        "Verse 1": [
+          "He hath shown thee, (echo) ",
+          "Oh man (echo) ",
+          "What is good. And what the",
+          "Lord requires of thee?"
+        ],
+        "Verse 2": [
+          "But to do justly,  (echo) ",
+          "and to love mercy  (echo) ",
+          "And to walk humbly with thy God. "
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 207 In the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Bob Sklar",
+      "Publisher": "",
+      "License": ""
+    },
+    "Psalm 5 - Give Ear To My Words, Oh Lord": {
+      "oPages": {
+        "Verse 2": [
+          "For unto Thee will I pray, ",
+          "my voice shalt thou hear in the morning",
+          "Oh, Lord, in the  morning ",
+          "will I direct my prayer",
+          "Unto Thee and will look up."
+        ],
+        "Verse 1": [
+          "Give ear to my words, oh Lord,",
+          "consider my meditation",
+          "Hearken unto the voice of my cry,",
+          "my King and my God."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.17421243328125005,
+      "license": "",
+      "TitleNote": "# 242 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Bill Sprouse, Jr.",
+      "Publisher": "",
+      "License": ""
+    },
+    "Shine, Jesus, Shine": {
+      "oPages": {
+        "Verse 1a": [
+          "Lord the light of Your love is shining,",
+          "In the midst of Your darkness shining;",
+          "Jesus light of the world shine upon us;"
+        ],
+        "Verse 1b": [
+          "set us free by the truth ",
+          "You now bring us,",
+          "Shine on me, Shine on me."
+        ],
+        "Chorus 1": [
+          "Shine, Jesus, shine, ",
+          "fill this land with the Father's glory;",
+          "Blaze, spirit, blaze, ",
+          "set our hearts on fire.",
+          ""
+        ],
+        "Chorus 2": [
+          "Flow, river, flow, ",
+          "flood the nations with grace and mercy;",
+          "Send forth Your word,",
+          "Lord and let there be light! ",
+          ""
+        ],
+        "Verse 2a": [
+          "Lord, I come to Your awesome presence,",
+          "From the shadows into Your radiance;",
+          "By the blood I may enter Your brightness,"
+        ],
+        "Verse 2b": [
+          "Search me, try me,",
+          "consume all my darkness,",
+          "Shine on me, Shine on me"
+        ],
+        "Verse 3a": [
+          "As we gaze on Your kingly brightness,",
+          "So our faces display Your likeness;",
+          "Ever changing from glory to glory,",
+          ""
+        ],
+        "Verse 3b": [
+          "Mirrored here may our ",
+          "lives tell Your story,",
+          "Shine on me, Shine on me.",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus 1",
+        "Chorus 2"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21069884345054637,
+      "license": "",
+      "TitleNote": "# 259 in the Maranantha Chorus Book",
+      "Notes": "1 John 1:7",
+      "Author": "Graham Kendrick",
+      "Publisher": "",
+      "License": ""
+    }
+  },
+  "oSongSets": {
+    "2023-06-25 songs": [
+      "This is the Day",
+      "Bless His Holy Name",
+      "I worship You, Almighty God",
+      "Emmanuel",
+      "Set My Soul Afire",
+      "Leaning on the Everlasting Arms",
+      "Turn Your Eyes Upon Jesus",
+      "Amazing Grace"
+    ],
+    "2023-05-21 songs": [
+      "Come Now is the time to Worship",
+      "Bind us together",
+      "His name is wonderful",
+      "I worship You, Almighty God",
+      "Count your blessings",
+      "Great is thy faithfulness",
+      "Amazing Grace"
+    ],
+    "2023-05-28 songs": [
+      "The Star-Spangled Banner",
+      "Mine Eyes Have Seen the Glory",
+      "Bind us together",
+      "His name is wonderful",
+      "I worship You, Almighty God",
+      "Count your blessings",
+      "Great is thy faithfulness",
+      "Amazing Grace"
+    ],
+    "2023-06-18 songs": [
+      "Alive Alive",
+      "Majesty",
+      "I worship You, Almighty God",
+      "I Exalt Thee",
+      "Crown Him with many crowns",
+      "Holy, Holy, Holy",
+      "What a friend we have in Jesus",
+      "Amazing Grace"
+    ],
+    "2023-06-04 songs": [
+      "This is the Day",
+      "Majesty",
+      "Bless His Holy Name",
+      "I Exalt Thee",
+      "How great thou art",
+      "Crown Him with many crowns",
+      "What a friend we have in Jesus",
+      "Amazing Grace"
+    ],
+    "2023-06-11 songs": [
+      "This is the Day",
+      "Majesty",
+      "Bless His Holy Name",
+      "I Exalt Thee",
+      "How great thou art",
+      "Crown Him with many crowns",
+      "Come thou Fount of many blessings",
+      "Amazing Grace"
+    ],
+    "2023-07-02 songs": [
+      "This is the Day",
+      "There's something about that name",
+      "I worship You, Almighty God",
+      "I Exalt Thee",
+      "The Star-Spangled Banner",
+      "Mine Eyes Have Seen the Glory",
+      "There is a Fountain",
+      "Amazing Grace"
+    ],
+    "2023-07-09 songs": [
+      "Alive Alive",
+      "Majesty",
+      "Bless His Holy Name",
+      "I worship You, Almighty God",
+      "Come let us worship and bow down",
+      "A Mighty Fortress is our God",
+      "Blessed Assurance",
+      "Amazing Grace"
+    ],
+    "2023-07-16 songs": [
+      "This is the Day",
+      "There's something about that name",
+      "I worship You, Almighty God",
+      "How great thou art",
+      "Turn Your Eyes Upon Jesus",
+      "Amazing Grace",
+      "Doxology"
+    ],
+    "2023-07-23 songs": [
+      "This is the Day",
+      "Majesty",
+      "Bless His Holy Name",
+      "I Exalt Thee",
+      "Blessed Assurance",
+      "Leaning on the Everlasting Arms",
+      "What a friend we have in Jesus",
+      "Amazing Grace",
+      "Doxology"
+    ],
+    "2023-07-30 songs": [
+      "This is the Day",
+      "His name is wonderful",
+      "There's something about that name",
+      "Amazing Grace",
+      "When we all get to Heaven",
+      "Great is thy faithfulness",
+      "Turn Your Eyes Upon Jesus",
+      "Doxology"
+    ],
+    "2023-08-06 songs": [
+      "Seek Ye First",
+      "I Love You Lord",
+      "Thy Loving Kindness",
+      "Thou Art Worthy",
+      "I worship You, Almighty God",
+      "As The Deer",
+      "Doxology"
+    ],
+    "2023-08-13 songs": [
+      "Majesty",
+      "Bless His Holy Name",
+      "I worship You, Almighty God",
+      "Turn Your Eyes Upon Jesus (Chorus Only)",
+      "A Mighty Fortress is our God",
+      "There is  Power in the Blood",
+      "Amazing Grace",
+      "I Surrender All",
+      "Doxology"
+    ],
+    "2023-08-18 Don Young Memorial": [
+      "It Is Well With My Soul",
+      "Jesus, Name Above All Names",
+      "Great is thy faithfulness",
+      "Amazing Grace",
+      "Swing Low Sweet Chariot",
+      "I'll Fly Away"
+    ],
+    "2023-08-20 songs": [
+      "Thou Art Worthy",
+      "There's something about that name",
+      "Bless His Holy Name",
+      "I Exalt Thee",
+      "When we all get to Heaven",
+      "Amazing Grace",
+      "Great is thy faithfulness",
+      "I'll Fly Away"
+    ],
+    "2023-08-27 songs": [
+      "Seek Ye First",
+      "I Love You Lord",
+      "Thy Loving Kindness",
+      "Thou Art Worthy",
+      "I worship You, Almighty God",
+      "As The Deer",
+      "Doxology"
+    ],
+    "2023-09-03 Songs": [
+      "Thy Loving Kindness",
+      "Therefore The Redeemed",
+      "Our God Reigns",
+      "Come let us worship and bow down",
+      "I worship You, Almighty God",
+      "Alive Alive"
+    ],
+    "2023-09-10 songs": [
+      "Majesty",
+      "His name is wonderful",
+      "I worship You, Almighty God",
+      "Bless His Holy Name",
+      "Crown Him with many crowns",
+      "There is  Power in the Blood",
+      "What a friend we have in Jesus",
+      "I Exalt Thee",
+      "Doxology"
+    ],
+    "2023-09-10 songs for guitar": [
+      "Alive Alive",
+      "Therefore The Redeemed",
+      "Thy Loving Kindness",
+      "Thou Art Worthy",
+      "Thank You Lord, For Saving My Soul",
+      "In Moments Like These"
+    ],
+    "2023-09-17 songs": [
+      "When we all get to Heaven",
+      "I worship You, Almighty God",
+      "At Calvary",
+      "There is a Fountain",
+      "Blessed Assurance"
+    ],
+    "2023-09-24 songs": [
+      "Turn Your Eyes Upon Jesus",
+      "What a friend we have in Jesus",
+      "There's something about that name",
+      "Therefore The Redeemed",
+      "There is  Power in the Blood",
+      "I Surrender All"
+    ],
+    "2023-10-01 Songs": [
+      "Welcome",
+      "This is the Day",
+      "I've Got a River of Life",
+      "Come let us worship and bow down",
+      "Blessed Assurance",
+      "In Moments Like These",
+      "Amazing Grace"
+    ],
+    "2023-10-08 songs": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come Now is the time to Worship",
+      "Therefore The Redeemed",
+      "There is  Power in the Blood",
+      "Come let us worship and bow down",
+      "As The Deer"
+    ],
+    "2023-10-15 songs": [
+      "Welcome",
+      "Mine Eyes Have Seen the Glory (short)",
+      "There's something about that name",
+      "When we all get to Heaven",
+      "Thou Art Worthy",
+      "I Surrender All",
+      "Break",
+      "Blessed Assurance"
+    ],
+    "2023-10-22 songs for guitar": [
+      "We bring the sacrifice of praise",
+      "Fairest Lord Jesus",
+      "There's something about that name",
+      "In Moments Like These (2x)",
+      "Come let us worship and bow down",
+      "Turn Your Eyes Upon Jesus",
+      "Break",
+      "Alive Alive"
+    ],
+    "2023-10-29 for guitar": [
+      "Welcome",
+      "This is the Day",
+      "I've Got a River of Life",
+      "Blessed Assurance",
+      "Come let us worship and bow down",
+      "Emmanuel",
+      "In Moments Like These (2x)",
+      "Amazing Grace"
+    ],
+    "2023-11-12 songs (guitar)": [
+      "Welcome",
+      "Seek Ye First",
+      "Majesty",
+      "We bring the sacrifice of praise",
+      "I worship You, Almighty God",
+      "I Exalt Thee",
+      "In Moments Like These",
+      "Break",
+      "Great is thy faithfulness"
+    ],
+    "2023-11-05 songs (guitar)": [
+      "Welcome",
+      "What a friend we have in Jesus",
+      "Thy Loving Kindness",
+      "Emmanuel",
+      "As The Deer",
+      "I worship You, Almighty God",
+      "Break",
+      "Alive Alive"
+    ],
+    "2023-11-19 songs (guitar)": [
+      "Welcome",
+      "I've Got a River of Life",
+      "This is the Day",
+      "Thy Loving Kindness",
+      "Therefore The Redeemed",
+      "Emmanuel",
+      "Holy, Holy, Holy",
+      "Break",
+      "Great is thy faithfulness"
+    ],
+    "2023-11-26 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "We bring the sacrifice of praise",
+      "Jesus, Name Above All Names",
+      "Majesty",
+      "Holy, Holy, Holy",
+      "Break",
+      "There is  Power in the Blood"
+    ],
+    "2023-12-03 songs": [
+      "Welcome",
+      "Mine Eyes Have Seen the Glory",
+      "What a friend we have in Jesus",
+      "Thou Art Worthy",
+      "There's something about that name",
+      "There is a Fountain",
+      "Break",
+      "When we all get to Heaven"
+    ],
+    "2023-12-10 songs (guitar)": [
+      "Emmanuel",
+      "O Come, O Come, Emmanuel",
+      "It Came Upon The Midnight Clear",
+      "I worship You, Almighty God",
+      "Come Now is the time to Worship",
+      "Joy To The World"
+    ],
+    "2023-12-17 songs (guitar)": [
+      "Welcome",
+      "Majesty",
+      "There's something about that name",
+      "Thou Art Worthy",
+      "O Come, All Ye Faithful",
+      "O Come, O Come, Emmanuel",
+      "Come let us worship and bow down",
+      "Joy To The World"
+    ],
+    "2023-12-24 (Christmas Eve)": [
+      "Welcome",
+      "Worship",
+      "Majesty",
+      "Holiness",
+      "O Come, All Ye Faithful",
+      "Humility",
+      "O Little Town of Bethlehem",
+      "Magnificat",
+      "Joy To The World",
+      "Messiah",
+      "O Come, O Come, Emmanuel",
+      "Spiritus Sanctus",
+      "Holy, Holy, Holy",
+      "Angels Shout",
+      "Hark! The Herald Angels Sing",
+      "Worship and Adore Him",
+      "Silent Night"
+    ],
+    "2023-12-31 songs (guitar)": [
+      "Welcome",
+      "O Come, All Ye Faithful",
+      "Go, Tell It On The Mountain",
+      "I've Got a River of Life",
+      "This is the Day",
+      "Joy To The World",
+      "Joyful Joyful We Adore Thee",
+      "Break",
+      "Thy Loving Kindness"
+    ],
+    "2024-01-07 songs": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "As The Deer",
+      "Blessed Assurance",
+      "Great is thy faithfulness",
+      "Holy, Holy, Holy",
+      "Break",
+      "Amazing Grace"
+    ],
+    "2024-01-14 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Joyful Joyful We Adore Thee",
+      "In Moments Like These",
+      "Blessed Assurance",
+      "Therefore The Redeemed",
+      null,
+      "Break",
+      "How great thou art"
+    ],
+    "2024-01-21 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Joyful Joyful We Adore Thee",
+      "In Moments Like These",
+      "Blessed Assurance",
+      "Therefore The Redeemed",
+      null,
+      "Break",
+      "To God Be The Glory",
+      "How great thou art"
+    ],
+    "2024-01-28 songs (guitar)": [
+      "Welcome",
+      "We bring the sacrifice of praise",
+      "Thou Art Worthy",
+      "There's something about that name",
+      "Breath on me, Breath of God",
+      "I Surrender All",
+      "I worship You, Almighty God",
+      "Break",
+      "To God Be The Glory"
+    ],
+    "2024-02-04 songs (guitar)": [
+      "Welcome",
+      "Freely, Freely",
+      "Breath on me, Breath of God",
+      "Come let us worship and bow down",
+      "The Greatest Thing (in all my life)",
+      "Thou Art Worthy",
+      "Holy, Holy, Holy",
+      "Break",
+      "I Exalt Thee"
+    ],
+    "2024-02-11 songs (guitar)": [
+      "Welcome",
+      "We bring the sacrifice of praise",
+      "Majesty",
+      "Come Now is the time to Worship",
+      "In Moments Like These",
+      "Seek Ye First",
+      "Freely, Freely",
+      "Break",
+      "I Surrender All"
+    ],
+    "2024-02-18 songs for guitar": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come Now is the time to Worship",
+      "Thy Loving Kindness",
+      "Micah 6:8 - He Hath Shown Thee",
+      "Seek Ye First",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "Break",
+      "Breath on me, Breath of God"
+    ],
+    "2024-02-25 songs (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "Micah 6:8 - He Hath Shown Thee",
+      "In Moments Like These",
+      "Joyful Joyful We Adore Thee",
+      "Shine, Jesus, Shine",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "Break",
+      "Blessed Assurance"
+    ],
+    "2024-03-10 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Come Now is the time to Worship",
+      "As The Deer",
+      "Blessed Assurance",
+      "Great is thy faithfulness",
+      "Holy, Holy, Holy",
+      "Break",
+      "Amazing Grace"
+    ]
+  },
+  "defaults": {
+    "allCaps": 1,
+    "fontSize": 0.076,
+    "lineHeight": 0.13,
+    "fontBoldness": 5,
+    "License": "CCLI 20847323",
+    "aspectRatio": "0.4984",
+    "savedAspectRatio": "0.4715",
+    "generateTitle": true,
+    "lastReviewPage": 3,
+    "songBookTitle": "Stites Baptist Church Song Book"
+  }
+}
