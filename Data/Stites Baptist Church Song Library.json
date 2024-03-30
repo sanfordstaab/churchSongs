@@ -4025,6 +4025,127 @@
       "Author": "Graham Kendrick",
       "Publisher": "",
       "License": ""
+    },
+    "Just As I Am": {
+      "oPages": {
+        "Verse 2": [
+          "Just as I am, and waiting not,",
+          "To rid  my soul of one dark blot,",
+          "To Thee whose blood can cleanse each spot,",
+          "O Lamb of God, I come! I come!"
+        ],
+        "Verse 1": [
+          "Just as I am, without one plea, ",
+          "But that Thy blood was shed for  me,",
+          "And that Thou bidd'st me come to Thee,",
+          "O Lamb of God, I come! I come!"
+        ],
+        "Verse 3": [
+          "Just as I am, though tossed about,",
+          "With many a conflict, many a doubt,",
+          "Fightings and fears within, without,",
+          "O Lamb of God, I come! I come!",
+          ""
+        ],
+        "Verse 4": [
+          "Just as I am, Thou wilt receive,",
+          "Wilt welcome, pardon, cleanse, relieve,",
+          "Because Thy promise I believe,",
+          "O Lamb of God, I come! I come!",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.22123378562307372,
+      "license": "",
+      "TitleNote": "# 187 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Charlotte Elliot - words, William B. Bradbury - tune",
+      "Publisher": "",
+      "License": ""
+    },
+    "Christ The Lord Is Risen Today": {
+      "oPages": {
+        "Verse 1a": [
+          "Christ, the Lord, is risen today,",
+          "Alleluia!",
+          "Sons of men and angels say, ",
+          "Alleluia!"
+        ],
+        "Verse 1b": [
+          "Raise your joys and triumphs high,",
+          "Alleluia!",
+          "Sing, ye heavens, and earth, reply,",
+          "Alleluia!"
+        ],
+        "Verse 2a": [
+          "Lives again our glorious King,",
+          "Alleluia!",
+          "Where, O death, is now thy sting? ",
+          "Alleluia!",
+          ""
+        ],
+        "Verse 2b": [
+          "Dying once He all doth save,",
+          "Alleluia!",
+          "Where thy victory, O grave? ",
+          "Alleluia!"
+        ],
+        "Verse 3a": [
+          "Love’s redeeming work is done, ",
+          "Alleluia!",
+          "Fought the fight, the battle won,",
+          "Alleluia!",
+          ""
+        ],
+        "Verse 3b": [
+          "Death in vain forbids Him rise,",
+          "Alleluia!",
+          "Christ hath opened Paradise,",
+          "Alleluia!"
+        ],
+        "Verse 4a": [
+          "Soar we now where Christ has led,",
+          "Alleluia!",
+          "Following our exalted Head, ",
+          "Alleluia!",
+          ""
+        ],
+        "Verse 4b": [
+          "Made like Him, like Him we rise,",
+          "Alleluia!",
+          "Ours the cross, the grave, the skies, ",
+          "Alleluia!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.15801581250000002,
+      "license": "",
+      "TitleNote": "# 114 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Words - Charles Wesley, Easter Hymn - Tune",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4470,6 +4591,27 @@
       "Blessed Assurance",
       "Great is thy faithfulness",
       "Holy, Holy, Holy",
+      "Break",
+      "Amazing Grace"
+    ],
+    "2024-03-17 songs (guitar)": [
+      "Welcome",
+      "Shine, Jesus, Shine",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "Breath on me, Breath of God",
+      "Just As I Am",
+      "There's something about that name",
+      "Thou Art Worthy",
+      "To God Be The Glory"
+    ],
+    "2024-03-24 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "I worship You, Almighty God",
+      "In Moments Like These (2x)",
+      "The Greatest Thing (in all my life)",
+      "Just As I Am",
+      "How great thou art",
       "Break",
       "Amazing Grace"
     ]
