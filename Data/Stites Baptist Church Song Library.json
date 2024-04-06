@@ -1570,7 +1570,7 @@
         "Verse 3a": [
           "Holy, holy, holy!",
           "Though the darkness hide thee,",
-          "Thouth the eye of sinful man",
+          "Though the eye of sinful man",
           "thy glory may not see;"
         ],
         "Verse 3b": [
@@ -4614,6 +4614,16 @@
       "How great thou art",
       "Break",
       "Amazing Grace"
+    ],
+    "2024-03-31 songs": [
+      "Welcome",
+      "Christ The Lord Is Risen Today",
+      "Alive Alive",
+      "At Calvary",
+      "Holy, Holy, Holy",
+      "The Greatest Thing (in all my life)",
+      "Blessed Assurance",
+      "I Surrender All"
     ]
   },
   "defaults": {
@@ -4622,7 +4632,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4984",
+    "aspectRatio": "0.4831",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 3,
