@@ -165,7 +165,7 @@
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 3,
+      "RepeatCount": 2,
       "Notes": "#176 Maranatha Song Book",
       "Author": "Sondra Corbett",
       "Publisher": "",
@@ -4146,6 +4146,61 @@
       "Author": "Words - Charles Wesley, Easter Hymn - Tune",
       "Publisher": "",
       "License": ""
+    },
+    "In The Lord Alone": {
+      "oPages": {
+        "Verse 1a": [
+          "In the Lord the Lord alone",
+          "are righteousness and strength,",
+          "The height and breadth and length",
+          "of love is found Him."
+        ],
+        "Verse 1b": [
+          "In the Lord the Lord alone ",
+          "are righteousness and strength,",
+          "In the Lord in the Lord alone."
+        ],
+        "Verse 2a": [
+          "In the Lord the Lord alone ",
+          "are life and health and peace,",
+          "His mercies and His loving",
+          "kindness never cease."
+        ],
+        "Verse 2b": [
+          "In the Lord the Lord alone",
+          "are life and health and peace,",
+          "In the Lord in the Lord alone."
+        ],
+        "Verse 3a": [
+          "In the Lord the Lord alone",
+          "is everything I need,",
+          "The Son of Man now reigning",
+          "high will intercede."
+        ],
+        "Verse 3b": [
+          "In the Lord the Lord alone ",
+          "is everything I need,",
+          "In the Lord in the Lord alone."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 257 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Walt Harrah",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4624,6 +4679,36 @@
       "The Greatest Thing (in all my life)",
       "Blessed Assurance",
       "I Surrender All"
+    ],
+    "2024-04-07 songs (guitar)": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Majesty",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "We bring the sacrifice of praise",
+      "Just As I Am",
+      "Breath on me, Breath of God",
+      "I Love You Lord"
+    ],
+    "2024-04-14 songs (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "I Exalt Thee",
+      "What a friend we have in Jesus",
+      "Freely, Freely",
+      "Great is thy faithfulness",
+      "In The Lord Alone",
+      "As The Deer"
+    ],
+    "2024-04-21 songs (guitar)": [
+      "Welcome",
+      "Seek Ye First",
+      "Majesty",
+      "We bring the sacrifice of praise",
+      "I worship You, Almighty God",
+      "I Exalt Thee",
+      "In Moments Like These",
+      "Breath on me, Breath of God"
     ]
   },
   "defaults": {
