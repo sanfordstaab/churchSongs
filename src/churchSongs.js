@@ -2891,8 +2891,8 @@ function renderSongSetDropdown(
     aSongSetNames = 
       applyFilterToTextArray(ge(filterId).value, aSongSetNames);
   }
-  if (!selectedSongSetName) {
-    selectedSongSetName = aSongSetNames[0];
+  if (!selectedSongSetName && aSongSetNames.length) {
+    selectedSongSetName = aSongSetNames.at(-1);
   }
   renderSelectControl(idSel, aSongSetNames, selectedSongSetName);
   if (noSongsId) {
