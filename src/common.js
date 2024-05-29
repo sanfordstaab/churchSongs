@@ -119,8 +119,8 @@ function renderPageToHost(elHost, oMsg, width, height) {
     replace('%pageNumber%', ' p' + oMsg.pageNumber).
     replace('%songNumber%', oMsg.cSongsInSet == 0 ? '' : ' s' + oMsg.songNumber).
     replace('%license%', oMsg.license).
-    replace('%pageNumbClass%', 'smaller italic lc' + (oMsg.pageNumber == oMsg.cPagesInSong ? ' redText' : ' grayText')).
-    replace('%songNumbClass%', 'smaller italic lc' + (oMsg.songNumber == oMsg.cSongsInSet ? ' redText' : ' grayText'));
+    replace('%pageNumbClass%', 'italic lc' + (oMsg.pageNumber == oMsg.cPagesInSong ? ' redText' : ' grayText')).
+    replace('%songNumbClass%', 'italic lc' + (oMsg.songNumber == oMsg.cSongsInSet ? ' redText' : ' grayText'));
 
   } else { // blank page
 

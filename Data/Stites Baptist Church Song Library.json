@@ -286,6 +286,7 @@
         ]
       },
       "aPageOrder": [
+        "Chorus",
         "Verse 1",
         "Chorus",
         "Verse 2",
@@ -2502,7 +2503,7 @@
         "Verse",
         "Chorus"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": 1,
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.18292305494531255,
@@ -4201,6 +4202,157 @@
       "Author": "Walt Harrah",
       "Publisher": "",
       "License": ""
+    },
+    "I Belong To A Mighty God": {
+      "oPages": {
+        "Verse 1": [
+          "I belong to a mighty God,",
+          "I belong to Jesus;",
+          "I'm guided by His staff and rod,",
+          "I belong to a mighty God."
+        ],
+        "Chorus 1": [
+          "I am justified by the good gift of",
+          "the Lord; And I will testify",
+          "That I belong to a mighty God,",
+          "I belong to a mighty God."
+        ],
+        "Verse 2": [
+          "I belong to the Holy One,",
+          "I belong to Jesus;",
+          "His work in me has just begun,",
+          "I belong to the Holy One."
+        ],
+        "Chorus 2": [
+          "I am justified by the good gift of ",
+          "the Lord; And I will testify",
+          "That I belong to the Holy One,",
+          "I belong to the Holy One."
+        ],
+        "Verse 3": [
+          "I belong to the Lord of all,",
+          "I belong to Jesus;",
+          "I'll stand in Him and will not fall,",
+          "I belong to the Lord of all."
+        ],
+        "Chorus 3": [
+          "I am justified by the good gift of ",
+          "the Lord; And I will testify",
+          "That I belong to the Lord of all,",
+          "I belong to the Lord of all."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus 1",
+        "Verse 2",
+        "Chorus 2",
+        "Verse 3",
+        "Chorus 3"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "I Belong To A Mighty God",
+      "Notes": "",
+      "Author": "Randy Rothwell , Lynn DeShazo",
+      "Publisher": "",
+      "License": ""
+    },
+    "In The Garden": {
+      "oPages": {
+        "Verse 1": [
+          "I come to the garden alone,",
+          "While the dew is still on the roses;",
+          "And the voice I hear falling on",
+          "my ear, The Son of God discloses."
+        ],
+        "Chorus B": [
+          "And the joy we share",
+          "as we tarry there,",
+          "None other has ever known."
+        ],
+        "Chorus A": [
+          "And He walks with me,",
+          "And He talks with me,",
+          "And He tells me I am His own,",
+          ""
+        ],
+        "Verse 2": [
+          "He speaks, and the sound of His voice",
+          "Is so sweet the birds hush their singing;",
+          "And the melody that He gave to me",
+          "Within my heart is ringing.",
+          ""
+        ],
+        "Verse 3": [
+          "I'd stay in the garden with Him",
+          "Tho' the night around me be falling;",
+          "But He bids me go; thro' the voice ",
+          "of woe, His voice to me is calling.",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus A",
+        "Chorus B",
+        "Verse 2",
+        "Chorus A",
+        "Chorus B",
+        "Verse 3",
+        "Chorus A",
+        "Chorus B"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.17421243328125005,
+      "license": "",
+      "TitleNote": "#428 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "C. Austin Miles",
+      "Publisher": "",
+      "License": ""
+    },
+    "I Have Decided To Follow Jesus": {
+      "oPages": {
+        "Verse 1": [
+          "I have decided to follow Jesus,",
+          "I have decided to follow Jesus,",
+          "I have decided to follow Jesus,",
+          "No turning back, no turning back."
+        ],
+        "Verse 2": [
+          "Tho none go with me, I still will follow,",
+          "Tho none go with me, I still will follow,",
+          "Tho none go with me, I still will follow,",
+          "No turning back, no turning back."
+        ],
+        "Verse 3": [
+          "My cross I'll carry till I see Jesus,",
+          "My cross I'll carry till I see Jesus,",
+          "My cross I'll carry till I see Jesus,",
+          "No turning back, no turning back."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.041,
+      "fontBoldness": 4,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "# 191 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "John Clark, William J. Reynolds",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4719,6 +4871,36 @@
       "I'll Fly Away",
       "When we all get to Heaven",
       "I worship You, Almighty God"
+    ],
+    "2024-05-05 Songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "We bring the sacrifice of praise",
+      "I Belong To A Mighty God",
+      "Thy Loving Kindness",
+      "In The Garden",
+      "The Greatest Thing (in all my life)",
+      "Psalm 5 - Give Ear To My Words, Oh Lord"
+    ],
+    "2024-05-12 Songs (guitar)": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come let us worship and bow down",
+      "I Have Decided To Follow Jesus",
+      "I Belong To A Mighty God",
+      "To God Be The Glory",
+      "In The Garden",
+      "There's something about that name"
+    ],
+    "2024-05-26 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "Alive Alive",
+      "Turn Your Eyes Upon Jesus",
+      "Great is thy faithfulness",
+      "Therefore The Redeemed",
+      "Thou Art Worthy",
+      "Blessed Assurance"
     ]
   },
   "defaults": {
@@ -4727,7 +4909,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4831",
+    "aspectRatio": "0.5161",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 3,

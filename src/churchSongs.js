@@ -2259,10 +2259,6 @@ const fileIOOptions =  {
       description: 'JSON Files',
       accept: { 'text/javascript': [ '.json' ] }       
     },
-    {
-      description: 'Text Files',
-      accept: { 'text/plain': [ '.txt' ] }
-    },
   ]
 };
 
