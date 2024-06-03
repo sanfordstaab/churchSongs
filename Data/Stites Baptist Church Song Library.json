@@ -1305,8 +1305,8 @@
           "and feel the gentle breeze;"
         ],
         "Verse 3a": [
-          "And when I think that God,",
-          "His Son not sparing, ",
+          "And when I think ",
+          "that God, His Son not sparing, ",
           "Sent him to die, ",
           "I scarce can take it in;"
         ],
@@ -1593,7 +1593,8 @@
           "blessed Trinity!"
         ],
         "tag": [
-          "Amen"
+          "God in three persons,",
+          "Blessed Trinity!"
         ]
       },
       "aPageOrder": [
@@ -1604,7 +1605,8 @@
         "Verse 3a",
         "Verse 3b",
         "Verse 4a",
-        "Verse 4b"
+        "Verse 4b",
+        "tag"
       ],
       "RepeatCount": 1,
       "TagPage": "",
@@ -1614,7 +1616,7 @@
       "License": "",
       "fontSize": 0.045,
       "fontBoldness": 5,
-      "lineHeight": 0.175,
+      "lineHeight": 0.18375,
       "TitleNote": "#1 in the Baptist Hymnal"
     },
     "Set My Soul Afire": {
@@ -4901,6 +4903,16 @@
       "Therefore The Redeemed",
       "Thou Art Worthy",
       "Blessed Assurance"
+    ],
+    "2024-06-02 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "We bring the sacrifice of praise",
+      "In Moments Like These (2x)",
+      "Thy Loving Kindness",
+      "Holy, Holy, Holy",
+      "How great thou art",
+      "When we all get to Heaven"
     ]
   },
   "defaults": {
@@ -4909,7 +4921,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.5161",
+    "aspectRatio": "0.4831",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 3,

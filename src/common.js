@@ -81,8 +81,8 @@ function renderPageToHost(elHost, oMsg, width, height) {
 <div class="smallest vat proj-footer">
   <table width="100%" class="at" style="border: none;">
     <tr>
-      <td class="al" style="border: none;">
-        <span class="%pageNumbClass%">%pageNumber%</span><span class="%songNumbClass%">%songNumber%</span>
+      <td class="al" style="border: none; font-size: 5pt;">
+        %songIDHTML%&nbsp;&nbsp;%pageIDHTML%
       </td>
       <td class="ar" style="border: none;">
         %license%
@@ -119,8 +119,8 @@ function renderPageToHost(elHost, oMsg, width, height) {
     replace('%pageNumber%', ' p' + oMsg.pageNumber).
     replace('%songNumber%', oMsg.cSongsInSet == 0 ? '' : ' s' + oMsg.songNumber).
     replace('%license%', oMsg.license).
-    replace('%pageNumbClass%', 'italic lc' + (oMsg.pageNumber == oMsg.cPagesInSong ? ' redText' : ' grayText')).
-    replace('%songNumbClass%', 'italic lc' + (oMsg.songNumber == oMsg.cSongsInSet ? ' redText' : ' grayText'));
+    replace('%pageIDHTML%', getPlaceText(oMsg.pageNumber, oMsg.cPagesInSong, 'redText')).
+    replace('%songIDHTML%', getPlaceText(oMsg.songNumber, oMsg.cSongsInSet, 'redText'));
 
   } else { // blank page
 
@@ -129,9 +129,23 @@ function renderPageToHost(elHost, oMsg, width, height) {
       replace('%pageNumber%', '').
       replace('%songNumber%', '').
       replace('%license%', '').
-      replace('%pageNumbClass%', '').
-      replace('%songNumbClass%', '');
+      replace('%pageIDHTML%', '').
+      replace('%songIDHTML%', '');
   }
 
   elHost.innerHTML = html;
+}
+
+function getPlaceText(nStepNow, cSteps, emphasisClass) {
+  if (nStepNow == 0) {
+    return '';
+  }
+  const normalChar = 'O'
+  const selectChar = nStepNow.toString();
+  let sOut = (normalChar).repeat(cSteps);
+  sOut = sOut.substring(0, nStepNow - 1) + 
+    `<span class="${emphasisClass}">${selectChar}</span>` +
+    sOut.substring(nStepNow);
+
+  return sOut;
 }
