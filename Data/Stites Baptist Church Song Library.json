@@ -539,7 +539,7 @@
       "License": "",
       "fontSize": 0.039,
       "fontBoldness": 5,
-      "lineHeight": 0.22033810228047018,
+      "lineHeight": 0.19885513730812435,
       "TitleNote": "#111 in the Maranatha Praise Book"
     },
     "Bless His Holy Name": {
@@ -2252,7 +2252,7 @@
       "RepeatCount": 1,
       "fontSize": 0.033,
       "fontBoldness": 5,
-      "lineHeight": 0.15683365423373735,
+      "lineHeight": 0.16467533694542422,
       "license": "",
       "TitleNote": "#159 in the Baptist Hymnal",
       "Notes": "#159 Baptist Hymnal",
@@ -4355,6 +4355,67 @@
       "Author": "John Clark, William J. Reynolds",
       "Publisher": "",
       "License": ""
+    },
+    "The Battle Belongs To The Lord": {
+      "oPages": {
+        "Verse 1b": [
+          "No weapon that’s fashioned",
+          "against us will stand,",
+          "The battle belongs to the Lord."
+        ],
+        "Verse 1a": [
+          "In heavenly armor",
+          "we’ll enter the land,",
+          "The battle belongs to the Lord."
+        ],
+        "Chorus": [
+          "And we sing glory, honor,",
+          "Power and strength to the Lord.",
+          "We sing glory, honor,",
+          "Power and strength to the Lord."
+        ],
+        "Verse 2a": [
+          "When the power of darkness",
+          "comes in like a flood,",
+          "The battle belongs to the Lord."
+        ],
+        "Verse 2b": [
+          "He’s raised up a standard",
+          "the power of His blood,",
+          "The battle belongs to the Lord."
+        ],
+        "Verse 3a": [
+          "When your enemy presses ",
+          "in hard do not fear,",
+          "The battle belongs to the Lord."
+        ],
+        "Verse 3b": [
+          "Take courage my friend ",
+          "your redemption is near,",
+          "The battle belongs to the Lord."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 165 in the Maranantha Chorus Book",
+      "Notes": "",
+      "Author": "Jamie Owens-Collins",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4913,6 +4974,16 @@
       "Holy, Holy, Holy",
       "How great thou art",
       "When we all get to Heaven"
+    ],
+    "2024-06-09 songs (guitar)": [
+      "Welcome",
+      "I Have Decided To Follow Jesus",
+      "Majesty",
+      "Our God Reigns",
+      "There is  Power in the Blood",
+      "To God Be The Glory",
+      "Freely, Freely",
+      "The Battle Belongs To The Lord"
     ]
   },
   "defaults": {
