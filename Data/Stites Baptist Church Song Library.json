@@ -787,44 +787,51 @@
     },
     "Come Now is the time to Worship": {
       "oPages": {
-        "Chorus": [
-          "Come now is the time to worship",
-          "Come now is the time to give your heart",
-          "Come just as you are to worship",
-          "Come just as you are before your God",
-          "Come"
+        "Chorus 2": [
+          "Come just as you are to worship,",
+          "Come just as you are ",
+          "before your God.     Come!"
         ],
-        "Verse 1": [
+        "Chorus 1": [
+          "Come now is the time to worship,",
+          "Come now is the time",
+          "to give your heart,"
+        ],
+        "Verse 1a": [
           "One day every tongue",
-          "Will confess You are God",
-          "One day every knee will bow",
-          "Still the greatest treasure remains",
-          "For those who gladly choose You now"
+          "Will confess You are God.",
+          "One day every knee will bow."
         ],
-        "Verse 2": [
-          "Willingly we choose to surrender our lives",
-          "Willingly our knees will bow",
-          "With all our heart soul mind and strength",
-          "We gladly choose You now"
+        "Verse 2b": [
+          "With all our heart soul mind and strength,",
+          "We gladly choose You now."
+        ],
+        "Verse 1b": [
+          "Still the greatest treasure remains",
+          "For those who gladly choose You now."
+        ],
+        "Verse 2a": [
+          "Willingly we choose to ",
+          "surrender our lives,",
+          "Willingly our knees will bow."
         ]
       },
       "aPageOrder": [
-        "Chorus",
-        "Verse 1",
-        "Chorus",
-        "Verse 2",
-        "Chorus",
-        "Verse 1",
-        "Chorus",
-        "Verse 2",
-        "Chorus"
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1",
+        "Chorus 2",
+        "Verse 2a",
+        "Verse 2b"
       ],
       "TagPage": "",
-      "RepeatCount": 1,
+      "RepeatCount": 2,
       "License": "",
-      "fontSize": 0.035,
+      "fontSize": 0.042,
       "fontBoldness": 5,
-      "lineHeight": 0.17199,
+      "lineHeight": 0.21950766593437507,
       "Notes": "",
       "Author": "",
       "Publisher": "",
@@ -1282,7 +1289,7 @@
         ],
         "Verse 1a": [
           "O, Lord my God!",
-          "I in awesome wonder",
+          "When I in awesome wonder",
           "consider all the worlds ",
           "thy hands have made,"
         ],
@@ -4416,6 +4423,75 @@
       "Author": "Jamie Owens-Collins",
       "Publisher": "",
       "License": ""
+    },
+    "My Country, 'Tis Of Thee": {
+      "oPages": {
+        "Verse 1a": [
+          "My country, 'tis of thee,",
+          "Sweet land of liberty,",
+          "Of thee I sing:"
+        ],
+        "Verse 1b": [
+          "Land where my fathers died,",
+          "Land of the pilgrims' pride,",
+          "From every mountain side",
+          "Let freedom ring!",
+          ""
+        ],
+        "Verse 2a": [
+          "My native country thee,",
+          "Land of the noble free,",
+          "Thy name I love:"
+        ],
+        "Verse 2b": [
+          "I love thy rocks and rills,",
+          "Thy woods and templed hills;",
+          "My heart with rapture thrills",
+          "Like that above."
+        ],
+        "Verse 3a": [
+          "Let music swell the breeze",
+          "And ring from all the trees,",
+          "Sweet freedom's song:"
+        ],
+        "Verse 3b": [
+          "Let mortal tongues awake;",
+          "Let all that breathe partake;",
+          "Let rocks their silence break,",
+          "The sound prolong"
+        ],
+        "Verse 4a": [
+          "Our fathers' God, to Thee,",
+          "Author of liberty,",
+          "To Thee we sing:"
+        ],
+        "Verse 4b": [
+          "Long may our land be bright",
+          "With freedom's holy light;",
+          "Protect us by Thy might,",
+          "Great God our King!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 511 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Samuel F. Smith - Words, Anonymous - Tune",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -4984,6 +5060,26 @@
       "To God Be The Glory",
       "Freely, Freely",
       "The Battle Belongs To The Lord"
+    ],
+    "2024-06-30 songs (guitar)": [
+      "Welcome",
+      "My Country, 'Tis Of Thee",
+      "Mine Eyes Have Seen the Glory (short)",
+      "The Star-Spangled Banner",
+      "Turn Your Eyes Upon Jesus",
+      "Thou Art Worthy",
+      "In Moments Like These (2x)",
+      "The Greatest Thing (in all my life)"
+    ],
+    "2024-07-07 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "I Belong To A Mighty God",
+      "Seek Ye First",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "How great thou art",
+      "To God Be The Glory",
+      "I worship You, Almighty God"
     ]
   },
   "defaults": {
