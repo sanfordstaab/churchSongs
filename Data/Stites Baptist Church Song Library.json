@@ -373,7 +373,7 @@
       "Author": "Dave Doherty",
       "Publisher": "",
       "License": "",
-      "fontSize": 0.041,
+      "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.192,
       "TitleNote": "#211 in the Maranatha Praise Book"
@@ -627,9 +627,6 @@
         "Verse 1b": [
           "Sing hallelujah!",
           "Sing hallelujah!",
-          "My Jesus is alive."
-        ],
-        "Tag": [
           "My Jesus is alive."
         ],
         "Chorus b": [
@@ -987,13 +984,6 @@
           "As thou hast been",
           "thou forever wilt be."
         ],
-        "Chorus": [
-          "Great is thy faithfulness!",
-          "Great is thy faithfulness!",
-          "Morning by morning new mercies I see;",
-          "All I have needed thy hand has provided;",
-          "Great is thy faithfulness, Lord, unto me!"
-        ],
         "Verse 2a": [
           "Summer and winter,",
           "and springtime and harvest,",
@@ -1017,27 +1007,40 @@
           "bright hope for tomorrow,",
           "Blessings all mine,",
           "with ten thousand beside!"
+        ],
+        "Chorus 2": [
+          "All I have needed thy ",
+          "hand has provided;",
+          "Great is thy faithfulness, ",
+          "Lord, unto me!"
+        ],
+        "Chorus 1": [
+          "Great is thy faithfulness!",
+          "Great is thy faithfulness!",
+          "Morning by morning",
+          "new mercies I see;",
+          ""
         ]
       },
       "aPageOrder": [
         "Verse 1a",
         "Verse 1b",
-        "Chorus",
+        "Chorus 1",
         "Verse 2a",
         "Verse 2b",
-        "Chorus",
+        "Chorus 1",
         "Verse 3a",
         "Verse 3b",
-        "Chorus"
+        "Chorus 1"
       ],
       "Notes": "#216 Baptist Hymnal",
       "Author": "Thomas O. Chisholm, William M. Runyan",
       "RepeatCount": 1,
       "Publisher": "Hope Publishing Co.",
       "License": "",
-      "fontSize": 0.041,
+      "fontSize": 0.05,
       "fontBoldness": 5,
-      "lineHeight": 0.159,
+      "lineHeight": 0.19326549375000004,
       "TitleNote": "#216 in the Baptist Hymnal"
     },
     "The Star-Spangled Banner": {
@@ -4492,6 +4495,83 @@
       "Author": "Samuel F. Smith - Words, Anonymous - Tune",
       "Publisher": "",
       "License": ""
+    },
+    "Nothing But the Blood": {
+      "oPages": {
+        "Verse 1": [
+          "What can wash away my sins?",
+          "Nothing but the Blood of Jesus.",
+          "What can make me whole again?",
+          "Nothing but the Blood of Jesus."
+        ],
+        "Chorus": [
+          "Oh! precious is the flow,",
+          "That makes me white as snow.",
+          "No other fount I know.",
+          "nothing but the blood of Jesus."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "#158 In Baptist Hymnal",
+      "Notes": "",
+      "Author": "Robert Lowry",
+      "Publisher": "",
+      "License": ""
+    },
+    "Just A Closer Walk With Thee": {
+      "oPages": {
+        "Verse 1": [
+          "I am weak but Thou art strong;",
+          "Jesus keep me from all wrong;",
+          "I'll be satisfied as long\t",
+          "as I walk Dear Lord, close to Thee."
+        ],
+        "Chorus": [
+          "Just a closer walk with Thee,",
+          "Grant it Jesus, is my plea,",
+          "Daily walkin' close to Thee,",
+          "Let it be, dear Lord, let it be."
+        ],
+        "Verse 2": [
+          "Through this world of toils and snares,",
+          "If I falter Lord, who cares?",
+          "Who with me my burden shares?",
+          "None but Thee, dear Lord, none but Thee."
+        ],
+        "Verse 3": [
+          "When my feeble life is o'er,",
+          "And time for me will be no more;",
+          "Guide me gently, safely o'er",
+          "To Thy kingdom dear Lord, to Thy shore."
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.17421243328125005,
+      "license": "",
+      "TitleNote": "# 481 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Anonymous",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -5080,6 +5160,56 @@
       "How great thou art",
       "To God Be The Glory",
       "I worship You, Almighty God"
+    ],
+    "2024-07-14 songs (guitar)": [
+      "Welcome",
+      "Majesty",
+      "Great is thy faithfulness",
+      "There's something about that name",
+      "In The Lord Alone",
+      "Freely, Freely",
+      "I Have Decided To Follow Jesus",
+      "Breath on me, Breath of God"
+    ],
+    "2024-07-21 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Come let us worship and bow down",
+      "Just As I Am",
+      "What a friend we have in Jesus",
+      "Our God Reigns",
+      "Therefore The Redeemed",
+      "Amazing Grace"
+    ],
+    "2024-08-04 song (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Alive Alive",
+      "We bring the sacrifice of praise",
+      "Thy Loving Kindness",
+      "Holy, Holy, Holy",
+      "As The Deer",
+      "Amazing Grace"
+    ],
+    "2024-08-11 Songs (guitars)": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come Now is the time to Worship",
+      "I Have Decided To Follow Jesus",
+      "I Belong To A Mighty God",
+      "To God Be The Glory",
+      "In The Garden",
+      "There's something about that name"
+    ],
+    "2024-09-01 Songs (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "Majesty",
+      "Therefore The Redeemed",
+      "I Surrender All",
+      "Just A Closer Walk With Thee",
+      "Breath on me, Breath of God",
+      "How great thou art"
     ]
   },
   "defaults": {
