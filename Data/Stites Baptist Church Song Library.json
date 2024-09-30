@@ -697,10 +697,10 @@
           "I love to tell the story,",
           "For those who know it best",
           "Seem hungering and thirsting",
-          "To hear it like the rest:"
+          "To hear it, like the rest:"
         ],
         "Verse 3b": [
-          "And wyhen, in scenes of glory,",
+          "And when, in scenes of glory,",
           "I sing the new, new song.",
           "`Twill be the old, old story",
           "That I have loved so long."
@@ -1292,7 +1292,7 @@
         ],
         "Verse 1a": [
           "O, Lord my God!",
-          "When I in awesome wonder",
+          "I in awesome wonder",
           "consider all the worlds ",
           "thy hands have made,"
         ],
@@ -4496,36 +4496,6 @@
       "Publisher": "",
       "License": ""
     },
-    "Nothing But the Blood": {
-      "oPages": {
-        "Verse 1": [
-          "What can wash away my sins?",
-          "Nothing but the Blood of Jesus.",
-          "What can make me whole again?",
-          "Nothing but the Blood of Jesus."
-        ],
-        "Chorus": [
-          "Oh! precious is the flow,",
-          "That makes me white as snow.",
-          "No other fount I know.",
-          "nothing but the blood of Jesus."
-        ]
-      },
-      "aPageOrder": [
-        "Verse 1",
-        "Chorus"
-      ],
-      "RepeatCount": 1,
-      "fontSize": 0.05,
-      "fontBoldness": 5,
-      "lineHeight": 0.21175630148106747,
-      "license": "",
-      "TitleNote": "#158 In Baptist Hymnal",
-      "Notes": "",
-      "Author": "Robert Lowry",
-      "Publisher": "",
-      "License": ""
-    },
     "Just A Closer Walk With Thee": {
       "oPages": {
         "Verse 1": [
@@ -4554,7 +4524,6 @@
         ]
       },
       "aPageOrder": [
-        "Chorus",
         "Verse 1",
         "Chorus",
         "Verse 2",
@@ -4570,6 +4539,60 @@
       "TitleNote": "# 481 in the Baptist Hymnal",
       "Notes": "",
       "Author": "Anonymous",
+      "Publisher": "",
+      "License": ""
+    },
+    "Nothing But The Blood Of Jesus": {
+      "oPages": {
+        "Verse 1": [
+          "What can wash away my sins?",
+          "Nothing but the Blood of Jesus;",
+          "What can make me whole again?",
+          "Nothing but the Blood of Jesus."
+        ],
+        "Chorus": [
+          "Oh! precious is the flow,",
+          "That makes me white as snow.",
+          "No other fount I know.",
+          "nothing but the blood of Jesus."
+        ],
+        "Verse 2": [
+          "For my pardon, this I see,",
+          "Nothing but the blood of Jesus;",
+          "For my cleansing, this my plea,",
+          "Nothing but the blood of Jesus."
+        ],
+        "Verse 3": [
+          "Nothing can for sin atone,",
+          "Nothing but the blood of Jesus;",
+          "Naught of good that I have done,",
+          "Nothing but the blood of Jesus."
+        ],
+        "Verse 4": [
+          "This is all my hope and peace,",
+          "Nothing but the blood of Jesus;",
+          "This is all my righteousness,",
+          "Nothing but the blood of Jesus."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "#158 In the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Robert Lowry",
       "Publisher": "",
       "License": ""
     }
@@ -5210,6 +5233,46 @@
       "Just A Closer Walk With Thee",
       "Breath on me, Breath of God",
       "How great thou art"
+    ],
+    "2024-09-08 Songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "Just As I Am",
+      "I love to tell the story",
+      "Alive Alive",
+      "In Moments Like These (2x)",
+      "Freely, Freely",
+      "Amazing Grace"
+    ],
+    "2024-09-15 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Turn Your Eyes Upon Jesus",
+      "I Exalt Thee",
+      "Fairest Lord Jesus",
+      "The Greatest Thing (in all my life)",
+      "Nothing But The Blood Of Jesus",
+      "Holy, Holy, Holy"
+    ],
+    "2024-09-22 Songs (guitar)": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Come Now is the time to Worship",
+      "I Have Decided To Follow Jesus",
+      "I Belong To A Mighty God",
+      "To God Be The Glory",
+      "In The Garden",
+      "There's something about that name"
+    ],
+    "2024-09-29 songs (guitar)": [
+      "Welcome",
+      "I've Got a River of Life",
+      "Majesty",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "We bring the sacrifice of praise",
+      "Just As I Am",
+      "Breath on me, Breath of God",
+      "I Love You Lord"
     ]
   },
   "defaults": {
@@ -5221,7 +5284,7 @@
     "aspectRatio": "0.4831",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
-    "lastReviewPage": 3,
+    "lastReviewPage": 0,
     "songBookTitle": "Stites Baptist Church Song Book"
   }
 }
