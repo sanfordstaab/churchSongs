@@ -4595,6 +4595,51 @@
       "Author": "Robert Lowry",
       "Publisher": "",
       "License": ""
+    },
+    "Be Thou My Vision": {
+      "oPages": {
+        "Verse 1": [
+          "Be Thou my vision, O Lord of my heart;",
+          "Naught be all else to me, save that Thou art;",
+          "Thou my best thought, by day or by night,",
+          "Waking or sleeping, Thy presence my light."
+        ],
+        "Verse 2": [
+          "Be Thou my wisdom, be Thou my true word;",
+          "I ever with Thee and Thou with me, Lord;",
+          "Thou my great Father, and I Thy true son,",
+          "Thou in me dwelling, and I with Thee one."
+        ],
+        "Verse 3": [
+          "Riches I heed not, nor man's empty praise,",
+          "Thou mine inheritance, now and always;",
+          "Thou and Thou only, the first in my heart,",
+          "High King of heaven, my treasure Thou art."
+        ],
+        "Verse 4": [
+          "High King of heaven, my victory won,",
+          "May I reach heaven's joy's,",
+          "O bright heaven's Sun!",
+          "Heart of my own heart, whatever befall,",
+          "Still be my vision, O Ruler of all."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Verse 3",
+        "Verse 4"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.037,
+      "fontBoldness": 5,
+      "lineHeight": 0.19063228693144674,
+      "license": "",
+      "TitleNote": "# 212 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Mary Bryne, Eleanor Hull",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -5273,6 +5318,17 @@
       "Just As I Am",
       "Breath on me, Breath of God",
       "I Love You Lord"
+    ],
+    "2024-10-06 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "Alive Alive",
+      "I Surrender All",
+      "Be Thou My Vision",
+      "Thy Loving Kindness",
+      "Nothing But The Blood Of Jesus",
+      "Amazing Grace",
+      "Seek Ye First"
     ]
   },
   "defaults": {
