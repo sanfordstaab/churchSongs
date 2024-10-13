@@ -670,6 +670,7 @@ function prevSongInSet() {
     // the keyboard
     nav.iSongInSet--;
     setNavSongSetSongIndex(nav.iSongInSet);
+    renderNavSection();
   }
 }
 
