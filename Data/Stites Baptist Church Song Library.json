@@ -1475,6 +1475,18 @@
           "Take it to the Lord in prayer;",
           "In his arms he'll take and shield thee;",
           "Thou wilt find a solace there."
+        ],
+        "Verse 4a": [
+          "Blessed Savior, Thou hast promised",
+          "Thou wilt all our burdens bear;",
+          "May we ever, Lord, be bringing,",
+          "All to Thee in earnest prayer."
+        ],
+        "Verse 4b": [
+          "Soon in glory bright, unclouded,",
+          "There will be no need for prayer -",
+          "Rapture, praise, and endless worship",
+          "Will be our sweet portion there."
         ]
       },
       "aPageOrder": [
@@ -1483,7 +1495,9 @@
         "Verse 2a",
         "Verse 2b",
         "Verse 3a",
-        "Verse 3b"
+        "Verse 3b",
+        "Verse 4a",
+        "Verse 4b"
       ],
       "RepeatCount": 1,
       "Notes": "#403 Baptist Hymnal",
@@ -4534,7 +4548,7 @@
       "RepeatCount": 1,
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.17421243328125005,
+      "lineHeight": 0.19206920769257818,
       "license": "",
       "TitleNote": "# 481 in the Baptist Hymnal",
       "Notes": "",
@@ -4602,7 +4616,7 @@
           "Be Thou my vision, O Lord of my heart;",
           "Naught be all else to me, save that Thou art;",
           "Thou my best thought, by day or by night,",
-          "Waking or sleeping, Thy presence my light."
+          "Walking or sleeping, Thy presence my light."
         ],
         "Verse 2": [
           "Be Thou my wisdom, be Thou my true word;",
@@ -4638,6 +4652,56 @@
       "TitleNote": "# 212 in the Baptist Hymnal",
       "Notes": "",
       "Author": "Mary Bryne, Eleanor Hull",
+      "Publisher": "",
+      "License": ""
+    },
+    "He Is Everything To Me": {
+      "oPages": {
+        "Verse 1": [
+          "In The Stars His Handiwork I See,",
+          "On The Wind He Speaks With Majesty,",
+          "‘Though He Ruleth Over Land And Sea,",
+          "What Is That To Me?"
+        ],
+        "Verse 2": [
+          "I Will Celebrate Nativity,",
+          "For It Has A Place In History,",
+          "Sure, He Came To Set His People Free,",
+          "What Is That To Me?"
+        ],
+        "Chorus 1b": [
+          "Then I Knew That He Was More Than Just",
+          "A God Who Didn’t Care,",
+          "That Lived A Way Out There, And"
+        ],
+        "Chorus 1c": [
+          "Now He Walks Beside Me Day By Day,",
+          "Ever Watching O’er Me Lest I Stray,",
+          "Helping Me To Find That Narrow Way,",
+          "He’s Everything To Me."
+        ],
+        "Chorus 1a": [
+          "Till By Faith I Met Him",
+          "Face To Face, Ah-Ah-Ahhh!",
+          "And I Felt The Wonder Of His Grace,",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Chorus 1a",
+        "Chorus 1b",
+        "Chorus 1c"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 463 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Ralph Carmichael",
       "Publisher": "",
       "License": ""
     }
@@ -5329,6 +5393,16 @@
       "Nothing But The Blood Of Jesus",
       "Amazing Grace",
       "Seek Ye First"
+    ],
+    "2024-10-13 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Just A Closer Walk With Thee",
+      "What a friend we have in Jesus",
+      "Blessed Assurance",
+      "Great is thy faithfulness",
+      "Nothing But The Blood Of Jesus",
+      "When we all get to Heaven"
     ]
   },
   "defaults": {
