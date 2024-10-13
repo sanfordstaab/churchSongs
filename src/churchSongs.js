@@ -281,7 +281,7 @@ function renderNavStateText() {
 function getNavStateTextHTML(nav) {
   let html = '';
   if (nav.mode == 'songSet') {
-    html += `Song Set: "<i>${nav.songSetName}</i>"<br>`;
+    html += (`Song Set: "<i>${nav.songSetName}</i>"<br>`).replace(/ /g, '&nbsp;');
   }
 
   let songPos = '';
@@ -290,11 +290,11 @@ function getNavStateTextHTML(nav) {
   let cPages = 0;
   let sTotalPages = '';
   if (nav.fInReview) {
-    html += `Reviewing: Song:<br><b>${getSongPagePairs()[nav.iPageInReview][0]}</b>`;
+    html += (`Reviewing: Song:<br><b>${getSongPagePairs()[nav.iPageInReview][0]}</b>`).replace(/ /g, '&nbsp;');
     cSongs = nav.cSongsInReview;
     songPos = `<b>${nav.iSongInReview + 1}</b> of ${nav.cSongsInReview}`;
   } else {
-    html += `Song:<b>${nav.songName}</b>`;
+    html += (`Song:<b>${nav.songName}</b>`).replace(/ /g, '&nbsp;');
     if (nav.mode == 'songSet') {
       cSongs = nav.cSongsInSet;
       songPos = `${progressBar(nav.iSongInSet + 1, nav.cSongsInSet, false)} of ${nav.cSongsInSet}`;
