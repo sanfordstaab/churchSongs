@@ -433,52 +433,66 @@
         "Verse 1": [
           "How lovely on the mountains ",
           "are the feet of Him Who ",
-          "brings good new, good news.",
-          "Announcing peace, proclaiming ",
-          "news of happiness."
+          "brings good news, ",
+          "good news.",
+          "Announcing peace, ",
+          "proclaiming news of happiness."
         ],
         "Chorus 1": [
-          "Our God reigns, our God reigns.",
-          "Our God reigns, our God reigns.",
-          "Our God reigns, our God reigns!"
+          "Our God reigns, ",
+          "Our God reigns.",
+          "Our God reigns, ",
+          "Our God reigns,",
+          "Our God reigns, ",
+          "Our God reigns!"
         ],
         "Verse 2": [
           "He had no stately form, ",
           "He had no majesty.",
-          "That we should be drawn to Him.",
-          "He was despised and ",
-          "we took no account of Him."
+          "That we should be ",
+          "drawn to Him.",
+          "He was despised ",
+          "and we took no account of Him."
         ],
         "Chorus 2": [
           "Yet now He reigns ",
           "with the Most High.",
-          "Now He reigns, now He reigns;",
+          "Now He reigns, ",
+          "Now He reigns;",
           "Now He reigns ",
           "with the Most High."
         ],
         "Chorus 4": [
-          "That we might be born again.",
-          "That we might be, that we might be.",
-          "That we might be born again."
+          "That we might be ",
+          "born again.",
+          "That we might be, ",
+          "That we might be.",
+          "That we might be ",
+          "born again."
         ],
         "Verse 5": [
           "Out from the tomb He came ",
           "with grace and majesty,",
-          "He is alive, He is alive.",
-          "God loves us so, see here ",
-          "His hands, His feet, His side."
+          "He is alive, ",
+          "He is alive.",
+          "God loves us so, ",
+          "see here His hands, ",
+          "His feet, His side."
         ],
         "Chorus 5": [
-          "Yes, we know, He is alive.",
-          "He is alive, He is alive;",
-          "He is alive, He is alive."
+          "Yes, we know, ",
+          "He is alive.",
+          "He is alive, ",
+          "He is alive;",
+          "He is alive, ",
+          "He is alive."
         ],
         "Verse 6": [
           "How lovely on the mountains ",
           "are the feet of Him Who ",
           "brings good news, good news.",
-          "Announcing peace, proclaiming ",
-          "news of happiness."
+          "Announcing peace, ",
+          "proclaiming news of happiness."
         ],
         "Verse 3b": [
           "When we, like sheep, ",
@@ -493,14 +507,6 @@
           ""
         ],
         "Chorus 3b": [
-          "On His shoulders;",
-          "On His shoulders ",
-          "He bore our shame."
-        ],
-        "Chorus 3a": [
-          "And on His shoulders ",
-          "bore our shame.",
-          "On His shoulders, ",
           ""
         ],
         "Verse 4b": [
@@ -513,6 +519,15 @@
           "led out to the slaughterhouse,",
           "Dumb as a sheep ",
           ""
+        ],
+        "Chorus 3": [
+          "And on His shoulders ",
+          "Bore our shame.",
+          "On His shoulders,",
+          "On His shoulders,",
+          "On His shoulders,",
+          "He bore our shame.",
+          ""
         ]
       },
       "aPageOrder": [
@@ -520,10 +535,7 @@
         "Chorus 1",
         "Verse 2",
         "Chorus 2",
-        "Verse 3a",
-        "Verse 3b",
-        "Chorus 3a",
-        "Chorus 3b",
+        "Chorus 3",
         "Verse 4a",
         "Verse 4b",
         "Chorus 4",
@@ -539,7 +551,7 @@
       "License": "",
       "fontSize": 0.039,
       "fontBoldness": 5,
-      "lineHeight": 0.19885513730812435,
+      "lineHeight": 0.13192456095700156,
       "TitleNote": "#111 in the Maranatha Praise Book"
     },
     "Bless His Holy Name": {
@@ -787,7 +799,8 @@
         "Chorus 2": [
           "Come just as you are to worship,",
           "Come just as you are ",
-          "before your God.     Come!"
+          "before your God.",
+          "Come!"
         ],
         "Chorus 1": [
           "Come now is the time to worship,",
@@ -1845,6 +1858,8 @@
       },
       "aPageOrder": [
         "Verse 1",
+        "Verse 1",
+        "Verse 2",
         "Verse 2"
       ],
       "RepeatCount": 2,
@@ -5428,6 +5443,26 @@
       "Blessed Assurance",
       "Just A Closer Walk With Thee",
       "Just As I Am"
+    ],
+    "2024-11-03 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Thy Loving Kindness",
+      "Shine, Jesus, Shine",
+      "To God Be The Glory",
+      "I love to tell the story",
+      "Be Thou My Vision",
+      "When we all get to Heaven"
+    ],
+    "2024-11-10 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "This is the Day",
+      "The Greatest Thing (in all my life)",
+      "Our God Reigns",
+      "As The Deer",
+      "Holy, Holy, Holy",
+      "I Exalt Thee"
     ]
   },
   "defaults": {
@@ -5436,7 +5471,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4831",
+    "aspectRatio": "0.4763",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 0,
