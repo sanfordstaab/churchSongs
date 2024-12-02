@@ -2867,7 +2867,7 @@
         "Verse 1": [
           "Emmanuel, Emmanuel;",
           "His name is called Emmanuel,",
-          "God is with us, revealed in us;",
+          "God with us, revealed in us;",
           "His name is called Emmanuel."
         ]
       },
@@ -4719,6 +4719,123 @@
       "Author": "Ralph Carmichael",
       "Publisher": "",
       "License": ""
+    },
+    "Give Thanks With A Grateful Heart": {
+      "oPages": {
+        "Verse 1": [
+          "Give thanks with a grateful heart, ",
+          "Give thanks to the Holy One,",
+          "Give thanks because He's given ",
+          "Jesus Christ, His Son. "
+        ],
+        "Chorus 1": [
+          "And now let the weak say, ",
+          "\"I am strong\" ",
+          "Let the poor say, \"I am rich\" ",
+          "Because of what the Lord",
+          "has done for us."
+        ],
+        "Tag": [
+          "Give thanks!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 1",
+        "Chorus 1",
+        "Verse 1",
+        "Verse 1",
+        "Chorus 1",
+        "Verse 1"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "#181 in the Maranatha Song Book",
+      "Notes": "",
+      "Author": "Henry Smith",
+      "Publisher": "",
+      "License": "",
+      "TagPage": "Tag"
+    },
+    "Our Father": {
+      "oPages": {
+        "Verse 1a": [
+          "Hear our prayer, we are Your children,",
+          "And we’ve gathered here today;",
+          "We’ve gathered here to pray;"
+        ],
+        "Verse 1b": [
+          "Hear our cry, ",
+          "Lord we need Your mercy, ",
+          "And we need Your grace today,",
+          "Hear us as we pray."
+        ],
+        "Chorus 1a": [
+          "Our Father, Who art in Heaven,",
+          "Hallowed be Thy name;",
+          "Our Father, hear us from Heaven;",
+          "Forgive our sins, we pray.",
+          ""
+        ],
+        "Verse 2a": [
+          "Hear our song as it rises to Heaven;",
+          "May Your glory fill the earth ",
+          "As the waters cover the sea;"
+        ],
+        "Verse 2b": [
+          "See our hearts and remove anything ",
+          "That is standing in the way ",
+          "Of coming to You today."
+        ],
+        "Bridge 1": [
+          "Though we are few ",
+          "we’re surrounded by many ",
+          "Who have crossed that river be -fore,",
+          "And this is the song we’ll be singing forever,"
+        ],
+        "Bridge 2": [
+          "Holy is the Lord, ",
+          "holy is the Lord;",
+          "Holy is the Lord, ",
+          "holy is the Lord;"
+        ],
+        "Chorus 2a": [
+          "Forgive our sins, we pray,",
+          "Our Father, Who art in Heaven,",
+          "Hallowed be Thy name;",
+          "Our Father, hear us from Heaven;",
+          "Forgive our sins, we pray."
+        ],
+        "Ending": [
+          "Forgive our sins, we pray. ",
+          "Forgive our sins, we pray.",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus 1a",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus 1a",
+        "Bridge 1",
+        "Bridge 2",
+        "Ending"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "",
+      "Notes": "",
+      "Author": "Don Moen",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -5463,6 +5580,36 @@
       "As The Deer",
       "Holy, Holy, Holy",
       "I Exalt Thee"
+    ],
+    "2024-11-17 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "Majesty",
+      "I Have Decided To Follow Jesus",
+      "Therefore The Redeemed",
+      "Turn Your Eyes Upon Jesus",
+      "Amazing Grace",
+      "Give Thanks With A Grateful Heart"
+    ],
+    "2024-11-24 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "Our Father",
+      "Breath on me, Breath of God",
+      "Thou Art Worthy",
+      "I worship You, Almighty God",
+      "In The Lord Alone",
+      "How great thou art",
+      "Give Thanks With A Grateful Heart"
+    ],
+    "2024-12-01 songs (guitar)": [
+      "Welcome",
+      "We bring the sacrifice of praise",
+      "There's something about that name",
+      "Emmanuel",
+      "O Come, O Come, Emmanuel",
+      "Turn Your Eyes Upon Jesus",
+      "Joy To The World"
     ]
   },
   "defaults": {
