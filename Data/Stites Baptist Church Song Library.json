@@ -4873,9 +4873,9 @@
         "Chorus"
       ],
       "RepeatCount": 1,
-      "fontSize": 0.076,
+      "fontSize": 0.061,
       "fontBoldness": 5,
-      "lineHeight": 0.13,
+      "lineHeight": 0.1235,
       "license": "",
       "TitleNote": "",
       "Notes": "",
@@ -5341,6 +5341,60 @@
       "Author": "Brian Doerksen",
       "Publisher": "",
       "License": ""
+    },
+    "He Leadeth Me! O Blessed Thought": {
+      "oPages": {
+        "Chorus": [
+          "He leadeth me, He leadeth me,",
+          "By His own hand He leadeth me;",
+          "His faithful follower I would be,",
+          "For by His hand He leadeth me."
+        ],
+        "Verse 1": [
+          "He leadeth me! O blessed thought!",
+          "O words with heavenly comfort fraught!",
+          "Whate'er I do, where'er I be,",
+          "Still 'tis God's hand that leadeth me!"
+        ],
+        "Verse 2": [
+          "Sometimes 'mid scenes of deepest gloom,",
+          "Sometimes where Eden's bowers bloom,",
+          "By water's calm, o'er troubled sea,",
+          "Still 'tis God's hand that leadeth me!"
+        ],
+        "Verse 3": [
+          "Lord, I would clasp Thy hand in mine,",
+          "Nor ever murmur nor repine,",
+          "Content whatever lot I see,",
+          "Since 'tis my God that leadeth me!"
+        ],
+        "Verse 4": [
+          "And when my task on earth is done,",
+          "When, by Thy grace the victory's won,",
+          "E'vn death's cold waves I would not flee,",
+          "Since Thou through Jordan leadeth me!"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.1733424599425518,
+      "license": "",
+      "TitleNote": "# 218 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Words - Joseph H. Gilmore, Tune - William B. Bradbury",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -5707,7 +5761,6 @@
       "In Moments Like These",
       "Blessed Assurance",
       "Therefore The Redeemed",
-      null,
       "Break",
       "How great thou art"
     ],
@@ -6121,6 +6174,26 @@
       "Breath on me, Breath of God",
       "Be Thou My Vision",
       "Emmanuel"
+    ],
+    "2024-12-28 songs (guitar)": [
+      "Welcome",
+      "O Come, All Ye Faithful",
+      "It Came Upon The Midnight Clear",
+      "O Come, O Come, Emmanuel",
+      "He Leadeth Me! O Blessed Thought",
+      "Go, Tell It On The Mountain",
+      "There's something about that name",
+      "Joyful Joyful We Adore Thee"
+    ],
+    "2024-12-29 songs (guitar)": [
+      "Welcome",
+      "O Come, All Ye Faithful",
+      "It Came Upon The Midnight Clear",
+      "O Come, O Come, Emmanuel",
+      "He Leadeth Me! O Blessed Thought",
+      "Go, Tell It On The Mountain",
+      "There's something about that name",
+      "Joyful Joyful We Adore Thee"
     ]
   },
   "defaults": {
