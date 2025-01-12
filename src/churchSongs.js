@@ -2919,8 +2919,10 @@ function renderSongDropDown(
       ge(filterId).value,
       aSongNames);
   }
-  if (!selectedSongName) {
+  if (!selectedSongName && aSongNames.length) {
     selectedSongName = aSongNames[0];
+  } else {
+    selectedSongName = '';
   }
   renderSelectControl(idSel, aSongNames, selectedSongName);
   if (noSongsId) {

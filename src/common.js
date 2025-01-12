@@ -81,7 +81,7 @@ function renderPageToHost(elHost, oMsg, width, height) {
 <div class="smallest vat proj-footer">
   <table width="100%" class="at" style="border: none;">
     <tr>
-      <td class="al" style="border: none; font-size: 5pt;">
+      <td class="al" style="border: none; font-size: 9pt;">
         %songIDHTML%&nbsp;&nbsp;%pageIDHTML%
       </td>
       <td class="ar" style="border: none;">
@@ -140,12 +140,13 @@ function getPlaceText(nStepNow, cSteps, emphasisClass) {
   if (nStepNow == 0) {
     return '';
   }
-  const normalChar = 'O'
-  const selectChar = nStepNow.toString();
-  let sOut = (normalChar).repeat(cSteps);
-  sOut = sOut.substring(0, nStepNow - 1) + 
-    `<span class="${emphasisClass}">${selectChar}</span>` +
-    sOut.substring(nStepNow);
+  // const normalChar = 'O'
+  // const selectChar = nStepNow.toString();
+  // let sOut = (normalChar).repeat(cSteps);
+  // sOut = sOut.substring(0, nStepNow - 1) + 
+  //   `<span class="${emphasisClass}">${selectChar}</span>` +
+  //   sOut.substring(nStepNow);
+  sOut = `${nStepNow.toString()}/${cSteps}`;
 
   return sOut;
 }
