@@ -5395,6 +5395,134 @@
       "Author": "Words - Joseph H. Gilmore, Tune - William B. Bradbury",
       "Publisher": "",
       "License": ""
+    },
+    "Praise To The Lord, The Almighty": {
+      "oPages": {
+        "Verse 1a": [
+          "Praise to the Lord, ",
+          "the Almighty,",
+          "The King of creation!"
+        ],
+        "Verse 1b": [
+          "O my soul, praise Him,",
+          "For He is thy health ",
+          "and salvation! "
+        ],
+        "Verse 2a": [
+          "Praise to the Lord, ",
+          "Who over all things",
+          "So wondrously reigneth,"
+        ],
+        "Verse 2b": [
+          "Shelters thee under ",
+          "His wings, Yea, ",
+          "so gently sustaineth!"
+        ],
+        "Verse 3a": [
+          "Praise to the Lord, ",
+          "who doth prosper Thy work ",
+          "and defend thee.",
+          ""
+        ],
+        "Verse 3b": [
+          "Surely His goodness ",
+          "and mercy",
+          "here daily attend thee."
+        ],
+        "Verse 4a": [
+          "Praise to the Lord, Who",
+          "When tempests their",
+          "warfare are waging. ",
+          ""
+        ],
+        "Verse 4b": [
+          "Who when the elements",
+          "madly around ",
+          "thee are raging.",
+          ""
+        ],
+        "Verse 4c": [
+          "Biddeth them cease, ",
+          "turneth their fury to peace; ",
+          "Whirlwinds and waters assuaging."
+        ],
+        "Verse 5a": [
+          "Praise to the Lord, ",
+          "Who when darkness of sin ",
+          "is abounding."
+        ],
+        "Verse 5b": [
+          "Who when the godless ",
+          "do triumph",
+          "all virtue confounding."
+        ],
+        "Verse 5c": [
+          "Sheddeth His light, ",
+          "chaseth the horrors of night; ",
+          "Saints with His mercy surrounding."
+        ],
+        "Verse 6a": [
+          "Praise to the Lord,",
+          "O let all that is in me",
+          "adore Him!",
+          ""
+        ],
+        "Verse 6b": [
+          "All that hath life and breath,",
+          "Come now with praises ",
+          "before Him."
+        ],
+        "Verse 6c": [
+          "Let the Amen ",
+          "sound from His people again.",
+          "Gladly for all we adore Him."
+        ],
+        "Verse 1c": [
+          "All ye who hear, ",
+          "now to His temple draw near;",
+          "Praise Him in glad adoration."
+        ],
+        "Verse 2c": [
+          "Hast thou not seen ",
+          "how thy desires e’er have been?",
+          "Granted in what He ordaineth."
+        ],
+        "Verse 3c": [
+          "Ponder anew ",
+          "what the Almighty can do, ",
+          "if with His love He befriend thee."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 1c",
+        "Verse 2a",
+        "Verse 2b",
+        "Verse 2c",
+        "Verse 3a",
+        "Verse 3b",
+        "Verse 3c",
+        "Verse 4a",
+        "Verse 4b",
+        "Verse 4c",
+        "Verse 5a",
+        "Verse 5b",
+        "Verse 5c",
+        "Verse 6a",
+        "Verse 6b",
+        "Verse 6c"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "# 10 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Words - Joachim Neander, Tune - Lobe Den Herren by Stralsund Gesangbuch",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -6194,6 +6322,26 @@
       "Go, Tell It On The Mountain",
       "There's something about that name",
       "Joyful Joyful We Adore Thee"
+    ],
+    "2025-01-05 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "I've Got a River of Life",
+      "Alive Alive",
+      "Turn Your Eyes Upon Jesus",
+      "Breath on me, Breath of God",
+      "I worship You, Almighty God",
+      "In The Garden"
+    ],
+    "2025-01-12 song (guitar)": [
+      "Welcome",
+      "Shine, Jesus, Shine",
+      "I love to tell the story",
+      "Give Thanks With A Grateful Heart",
+      "Praise To The Lord, The Almighty",
+      "He Leadeth Me! O Blessed Thought",
+      "Amazing Grace",
+      "How great thou art"
     ]
   },
   "defaults": {
@@ -6202,7 +6350,7 @@
     "lineHeight": 0.13,
     "fontBoldness": 5,
     "License": "CCLI 20847323",
-    "aspectRatio": "0.4763",
+    "aspectRatio": "0.4831",
     "savedAspectRatio": "0.4715",
     "generateTitle": true,
     "lastReviewPage": 0,
