@@ -2986,13 +2986,15 @@ function getIndexOfPageInCurrentSongInReview(songData, pageName) {
 }
 
 function applyFilterToTextArray(filterText, aText) {
-  if (!filterText.trim()) {
+  filterText = filterText.toLocaleLowerCase().trim();
+  if (!filterText) {
     return aText;
   }
+
   return aText.filter(
     function (text) {
       aTokens = text.toLocaleLowerCase().split(/\s+/);
-      aFilterTokens = filterText.toLocaleLowerCase().split(/\s+/);
+      aFilterTokens = filterText.split(/\s+/);
       // applly an OR to any filter token that is contined 
       // within a text token
       let fMatched = false;
