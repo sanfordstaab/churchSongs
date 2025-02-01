@@ -373,7 +373,7 @@
       "Author": "Dave Doherty",
       "Publisher": "",
       "License": "",
-      "fontSize": 0.045,
+      "fontSize": 0.041,
       "fontBoldness": 5,
       "lineHeight": 0.192,
       "TitleNote": "#211 in the Maranatha Praise Book"
@@ -4675,56 +4675,6 @@
       "Publisher": "",
       "License": ""
     },
-    "He Is Everything To Me": {
-      "oPages": {
-        "Verse 1": [
-          "In The Stars His Handiwork I See,",
-          "On The Wind He Speaks With Majesty,",
-          "‘Though He Ruleth Over Land And Sea,",
-          "What Is That To Me?"
-        ],
-        "Verse 2": [
-          "I Will Celebrate Nativity,",
-          "For It Has A Place In History,",
-          "Sure, He Came To Set His People Free,",
-          "What Is That To Me?"
-        ],
-        "Chorus 1b": [
-          "Then I Knew That He Was More Than Just",
-          "A God Who Didn’t Care,",
-          "That Lived A Way Out There, And"
-        ],
-        "Chorus 1c": [
-          "Now He Walks Beside Me Day By Day,",
-          "Ever Watching O’er Me Lest I Stray,",
-          "Helping Me To Find That Narrow Way,",
-          "He’s Everything To Me."
-        ],
-        "Chorus 1a": [
-          "Till By Faith I Met Him",
-          "Face To Face, Ah-Ah-Ahhh!",
-          "And I Felt The Wonder Of His Grace,",
-          ""
-        ]
-      },
-      "aPageOrder": [
-        "Verse 1",
-        "Verse 2",
-        "Chorus 1a",
-        "Chorus 1b",
-        "Chorus 1c"
-      ],
-      "RepeatCount": 1,
-      "fontSize": 0.041,
-      "fontBoldness": 5,
-      "lineHeight": 0.21175630148106747,
-      "license": "",
-      "TitleNote": "# 463 in the Baptist Hymnal",
-      "Notes": "",
-      "Author": "Ralph Carmichael",
-      "Publisher": "",
-      "License": ""
-    },
     "Give Thanks With A Grateful Heart": {
       "oPages": {
         "Verse 1": [
@@ -5664,834 +5614,181 @@
       "Author": "Words: Edward Mote, Tune: William Bradbury",
       "Publisher": "",
       "License": ""
+    },
+    "The Old Rugged Cross": {
+      "oPages": {
+        "Verse 1b": [
+          "And I love that old Cross",
+          "where the dearest and best",
+          "For a world of lost ",
+          "sinners was slain."
+        ],
+        "Verse 1a": [
+          "On a hill far away, ",
+          "stood an old rugged Cross,",
+          "The emblem of suffering and shame;"
+        ],
+        "Chorus": [
+          "So I’ll cherish the old rugged Cross,",
+          "Till my trophies at last I lay down;",
+          "I will cling to the old rugged Cross,",
+          "And exchange it some day for a crown."
+        ],
+        "Verse 2a": [
+          "Oh, that old rugged Cross",
+          "so despised by the world,",
+          "Has a wondrous attraction for me;",
+          ""
+        ],
+        "Verse 2b": [
+          "For the dear Lamb of God",
+          "left His Glory above,",
+          "To bear it to dark Calvary."
+        ],
+        "Verse 3a": [
+          "In the old rugged Cross,",
+          "stained with blood so divine,",
+          "A wondrous beauty I see;"
+        ],
+        "Verse 3b": [
+          "For ’twas on that old cross",
+          "Jesus suffered and died,",
+          "To pardon and sanctify me."
+        ],
+        "Verse 4a": [
+          "To the old rugged Cross",
+          "I will ever be true,",
+          "Its shame and reproach gladly bear;",
+          ""
+        ],
+        "Verse 4b": [
+          "Then He’ll call me some day",
+          "to my home far away,",
+          "Where His glory forever I’ll share."
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1a",
+        "Verse 1b",
+        "Chorus",
+        "Verse 2a",
+        "Verse 2b",
+        "Chorus",
+        "Verse 3a",
+        "Verse 3b",
+        "Chorus",
+        "Verse 4a",
+        "Verse 4b",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.04,
+      "fontBoldness": 5,
+      "lineHeight": 0.18292305494531255,
+      "license": "",
+      "TitleNote": "# 430 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Words & Tune: George Bennard",
+      "Publisher": "",
+      "License": ""
+    },
+    "Lord, I Lift Your Name on High": {
+      "oPages": {
+        "Verse": [
+          "Lord, I lift Your name on high.",
+          "Lord, I love to sing Your praises.",
+          "I'm so glad You're in my life.",
+          "I'm so glad You came to save us."
+        ],
+        "Chorus 1a": [
+          "You came from heaven to earth,",
+          "To show the way.",
+          "From the earth to the cross",
+          "My debt to pay."
+        ],
+        "Chorus 1b": [
+          "From the cross to the grave,",
+          "From the grave to the sky,",
+          "Lord, I lift Your name on high."
+        ]
+      },
+      "aPageOrder": [
+        "Verse",
+        "Chorus 1a",
+        "Chorus 1b"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.045,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "# 274 in the Maranatha Praise Book",
+      "Notes": "",
+      "Author": "Rick Founds",
+      "Publisher": "",
+      "License": ""
+    },
+    "He's Everything To Me": {
+      "oPages": {
+        "Verse 1": [
+          "In The Stars His Handiwork I See,",
+          "On The Wind He Speaks With Majesty,",
+          "‘Though He Ruleth Over Land And Sea,",
+          "What Is That To Me?"
+        ],
+        "Verse 2": [
+          "I Will Celebrate Nativity,",
+          "For It Has A Place In History,",
+          "Sure, He Came To Set His People Free,",
+          "What Is That To Me?"
+        ],
+        "Chorus 1b": [
+          "Then I Knew That He Was More Than Just",
+          "A God Who Didn’t Care,",
+          "That Lived A Way Out There, And"
+        ],
+        "Chorus 1c": [
+          "Now He Walks Beside Me Day By Day,",
+          "Ever Watching O’er Me Lest I Stray,",
+          "Helping Me To Find That Narrow Way,",
+          "He’s Everything To Me."
+        ],
+        "Chorus 1a": [
+          "Till By Faith I Met Him",
+          "Face To Face, Ah-Ah-Ahhh!",
+          "And I Felt The Wonder Of His Grace,",
+          ""
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2",
+        "Chorus 1a",
+        "Chorus 1b",
+        "Chorus 1c"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.041,
+      "fontBoldness": 5,
+      "lineHeight": 0.21175630148106747,
+      "license": "",
+      "TitleNote": "# 463 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Ralph Carmichael",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
-    "2023-06-25 songs": [
-      "This is the Day",
-      "Bless His Holy Name",
-      "I worship You, Almighty God",
-      "Emmanuel",
-      "Set My Soul Afire",
-      "Leaning on the Everlasting Arms",
-      "Turn Your Eyes Upon Jesus",
-      "Amazing Grace"
-    ],
-    "2023-05-21 songs": [
-      "Come Now is the time to Worship",
-      "Bind us together",
-      "His name is wonderful",
-      "I worship You, Almighty God",
-      "Count your blessings",
-      "Great is thy faithfulness",
-      "Amazing Grace"
-    ],
-    "2023-05-28 songs": [
-      "The Star-Spangled Banner",
-      "Mine Eyes Have Seen the Glory",
-      "Bind us together",
-      "His name is wonderful",
-      "I worship You, Almighty God",
-      "Count your blessings",
-      "Great is thy faithfulness",
-      "Amazing Grace"
-    ],
-    "2023-06-18 songs": [
-      "Alive Alive",
-      "Majesty",
-      "I worship You, Almighty God",
-      "I Exalt Thee",
-      "Crown Him with many crowns",
-      "Holy, Holy, Holy",
-      "What a friend we have in Jesus",
-      "Amazing Grace"
-    ],
-    "2023-06-04 songs": [
-      "This is the Day",
-      "Majesty",
-      "Bless His Holy Name",
-      "I Exalt Thee",
-      "How great thou art",
-      "Crown Him with many crowns",
-      "What a friend we have in Jesus",
-      "Amazing Grace"
-    ],
-    "2023-06-11 songs": [
-      "This is the Day",
-      "Majesty",
-      "Bless His Holy Name",
-      "I Exalt Thee",
-      "How great thou art",
-      "Crown Him with many crowns",
-      "Come thou Fount of many blessings",
-      "Amazing Grace"
-    ],
-    "2023-07-02 songs": [
-      "This is the Day",
-      "There's something about that name",
-      "I worship You, Almighty God",
-      "I Exalt Thee",
-      "The Star-Spangled Banner",
-      "Mine Eyes Have Seen the Glory",
-      "There is a Fountain",
-      "Amazing Grace"
-    ],
-    "2023-07-09 songs": [
-      "Alive Alive",
-      "Majesty",
-      "Bless His Holy Name",
-      "I worship You, Almighty God",
-      "Come let us worship and bow down",
-      "A Mighty Fortress is our God",
-      "Blessed Assurance",
-      "Amazing Grace"
-    ],
-    "2023-07-16 songs": [
-      "This is the Day",
-      "There's something about that name",
-      "I worship You, Almighty God",
-      "How great thou art",
-      "Turn Your Eyes Upon Jesus",
-      "Amazing Grace",
-      "Doxology"
-    ],
-    "2023-07-23 songs": [
-      "This is the Day",
-      "Majesty",
-      "Bless His Holy Name",
-      "I Exalt Thee",
-      "Blessed Assurance",
-      "Leaning on the Everlasting Arms",
-      "What a friend we have in Jesus",
-      "Amazing Grace",
-      "Doxology"
-    ],
-    "2023-07-30 songs": [
-      "This is the Day",
-      "His name is wonderful",
-      "There's something about that name",
-      "Amazing Grace",
-      "When we all get to Heaven",
-      "Great is thy faithfulness",
-      "Turn Your Eyes Upon Jesus",
-      "Doxology"
-    ],
-    "2023-08-06 songs": [
-      "Seek Ye First",
-      "I Love You Lord",
-      "Thy Loving Kindness",
-      "Thou Art Worthy",
-      "I worship You, Almighty God",
-      "As The Deer",
-      "Doxology"
-    ],
-    "2023-08-13 songs": [
-      "Majesty",
-      "Bless His Holy Name",
-      "I worship You, Almighty God",
-      "Turn Your Eyes Upon Jesus (Chorus Only)",
-      "A Mighty Fortress is our God",
-      "There is  Power in the Blood",
-      "Amazing Grace",
-      "I Surrender All",
-      "Doxology"
-    ],
-    "2023-08-18 Don Young Memorial": [
-      "It Is Well With My Soul",
-      "Jesus, Name Above All Names",
-      "Great is thy faithfulness",
-      "Amazing Grace",
-      "Swing Low Sweet Chariot",
-      "I'll Fly Away"
-    ],
-    "2023-08-20 songs": [
-      "Thou Art Worthy",
-      "There's something about that name",
-      "Bless His Holy Name",
-      "I Exalt Thee",
-      "When we all get to Heaven",
-      "Amazing Grace",
-      "Great is thy faithfulness",
-      "I'll Fly Away"
-    ],
-    "2023-08-27 songs": [
-      "Seek Ye First",
-      "I Love You Lord",
-      "Thy Loving Kindness",
-      "Thou Art Worthy",
-      "I worship You, Almighty God",
-      "As The Deer",
-      "Doxology"
-    ],
-    "2023-09-03 Songs": [
-      "Thy Loving Kindness",
-      "Therefore The Redeemed",
-      "Our God Reigns",
-      "Come let us worship and bow down",
-      "I worship You, Almighty God",
-      "Alive Alive"
-    ],
-    "2023-09-10 songs": [
-      "Majesty",
-      "His name is wonderful",
-      "I worship You, Almighty God",
-      "Bless His Holy Name",
-      "Crown Him with many crowns",
-      "There is  Power in the Blood",
-      "What a friend we have in Jesus",
-      "I Exalt Thee",
-      "Doxology"
-    ],
-    "2023-09-10 songs for guitar": [
-      "Alive Alive",
-      "Therefore The Redeemed",
-      "Thy Loving Kindness",
-      "Thou Art Worthy",
-      "Thank You Lord, For Saving My Soul",
-      "In Moments Like These"
-    ],
-    "2023-09-17 songs": [
-      "When we all get to Heaven",
-      "I worship You, Almighty God",
-      "At Calvary",
-      "There is a Fountain",
-      "Blessed Assurance"
-    ],
-    "2023-09-24 songs": [
-      "Turn Your Eyes Upon Jesus",
-      "What a friend we have in Jesus",
-      "There's something about that name",
-      "Therefore The Redeemed",
-      "There is  Power in the Blood",
-      "I Surrender All"
-    ],
-    "2023-10-01 Songs": [
-      "Welcome",
-      "This is the Day",
-      "I've Got a River of Life",
-      "Come let us worship and bow down",
-      "Blessed Assurance",
-      "In Moments Like These",
-      "Amazing Grace"
-    ],
-    "2023-10-08 songs": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Come Now is the time to Worship",
-      "Therefore The Redeemed",
-      "There is  Power in the Blood",
-      "Come let us worship and bow down",
-      "As The Deer"
-    ],
-    "2023-10-15 songs": [
-      "Welcome",
-      "Mine Eyes Have Seen the Glory (short)",
-      "There's something about that name",
-      "When we all get to Heaven",
-      "Thou Art Worthy",
-      "I Surrender All",
-      "Break",
-      "Blessed Assurance"
-    ],
-    "2023-10-22 songs for guitar": [
-      "We bring the sacrifice of praise",
-      "Fairest Lord Jesus",
-      "There's something about that name",
-      "In Moments Like These (2x)",
-      "Come let us worship and bow down",
-      "Turn Your Eyes Upon Jesus",
-      "Break",
-      "Alive Alive"
-    ],
-    "2023-10-29 for guitar": [
-      "Welcome",
-      "This is the Day",
-      "I've Got a River of Life",
-      "Blessed Assurance",
-      "Come let us worship and bow down",
-      "Emmanuel",
-      "In Moments Like These (2x)",
-      "Amazing Grace"
-    ],
-    "2023-11-12 songs (guitar)": [
-      "Welcome",
-      "Seek Ye First",
-      "Majesty",
-      "We bring the sacrifice of praise",
-      "I worship You, Almighty God",
-      "I Exalt Thee",
-      "In Moments Like These",
-      "Break",
-      "Great is thy faithfulness"
-    ],
-    "2023-11-05 songs (guitar)": [
-      "Welcome",
-      "What a friend we have in Jesus",
-      "Thy Loving Kindness",
-      "Emmanuel",
-      "As The Deer",
-      "I worship You, Almighty God",
-      "Break",
-      "Alive Alive"
-    ],
-    "2023-11-19 songs (guitar)": [
-      "Welcome",
-      "I've Got a River of Life",
-      "This is the Day",
-      "Thy Loving Kindness",
-      "Therefore The Redeemed",
-      "Emmanuel",
-      "Holy, Holy, Holy",
-      "Break",
-      "Great is thy faithfulness"
-    ],
-    "2023-11-26 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "We bring the sacrifice of praise",
-      "Jesus, Name Above All Names",
-      "Majesty",
-      "Holy, Holy, Holy",
-      "Break",
-      "There is  Power in the Blood"
-    ],
-    "2023-12-03 songs": [
-      "Welcome",
-      "Mine Eyes Have Seen the Glory",
-      "What a friend we have in Jesus",
-      "Thou Art Worthy",
-      "There's something about that name",
-      "There is a Fountain",
-      "Break",
-      "When we all get to Heaven"
-    ],
-    "2023-12-10 songs (guitar)": [
-      "Emmanuel",
-      "O Come, O Come, Emmanuel",
-      "It Came Upon The Midnight Clear",
-      "I worship You, Almighty God",
-      "Come Now is the time to Worship",
-      "Joy To The World"
-    ],
-    "2023-12-17 songs (guitar)": [
-      "Welcome",
-      "Majesty",
-      "There's something about that name",
-      "Thou Art Worthy",
-      "O Come, All Ye Faithful",
-      "O Come, O Come, Emmanuel",
-      "Come let us worship and bow down",
-      "Joy To The World"
-    ],
-    "2023-12-24 (Christmas Eve)": [
-      "Welcome",
-      "Worship",
-      "Majesty",
-      "Holiness",
-      "O Come, All Ye Faithful",
-      "Humility",
-      "O Little Town of Bethlehem",
-      "Magnificat",
-      "Joy To The World",
-      "Messiah",
-      "O Come, O Come, Emmanuel",
-      "Spiritus Sanctus",
-      "Holy, Holy, Holy",
-      "Angels Shout",
-      "Hark! The Herald Angels Sing",
-      "Worship and Adore Him",
-      "Silent Night"
-    ],
-    "2023-12-31 songs (guitar)": [
-      "Welcome",
-      "O Come, All Ye Faithful",
-      "Go, Tell It On The Mountain",
-      "I've Got a River of Life",
-      "This is the Day",
-      "Joy To The World",
-      "Joyful Joyful We Adore Thee",
-      "Break",
-      "Thy Loving Kindness"
-    ],
-    "2024-01-07 songs": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "As The Deer",
-      "Blessed Assurance",
-      "Great is thy faithfulness",
-      "Holy, Holy, Holy",
-      "Break",
-      "Amazing Grace"
-    ],
-    "2024-01-14 songs (guitar)": [
-      "Welcome",
-      "Alive Alive",
-      "Joyful Joyful We Adore Thee",
-      "In Moments Like These",
-      "Blessed Assurance",
-      "Therefore The Redeemed",
-      "Break",
-      "How great thou art"
-    ],
-    "2024-01-21 songs (guitar)": [
-      "Welcome",
-      "Alive Alive",
-      "Joyful Joyful We Adore Thee",
-      "In Moments Like These",
-      "Blessed Assurance",
-      "Therefore The Redeemed",
-      null,
-      "Break",
-      "To God Be The Glory",
-      "How great thou art"
-    ],
-    "2024-01-28 songs (guitar)": [
-      "Welcome",
-      "We bring the sacrifice of praise",
-      "Thou Art Worthy",
-      "There's something about that name",
-      "Breath on me, Breath of God",
-      "I Surrender All",
-      "I worship You, Almighty God",
-      "Break",
-      "To God Be The Glory"
-    ],
-    "2024-02-04 songs (guitar)": [
-      "Welcome",
-      "Freely, Freely",
-      "Breath on me, Breath of God",
-      "Come let us worship and bow down",
-      "The Greatest Thing (in all my life)",
-      "Thou Art Worthy",
-      "Holy, Holy, Holy",
-      "Break",
-      "I Exalt Thee"
-    ],
-    "2024-02-11 songs (guitar)": [
-      "Welcome",
-      "We bring the sacrifice of praise",
-      "Majesty",
-      "Come Now is the time to Worship",
-      "In Moments Like These",
-      "Seek Ye First",
-      "Freely, Freely",
-      "Break",
-      "I Surrender All"
-    ],
-    "2024-02-18 songs for guitar": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Come Now is the time to Worship",
-      "Thy Loving Kindness",
-      "Micah 6:8 - He Hath Shown Thee",
-      "Seek Ye First",
-      "Psalm 5 - Give Ear To My Words, Oh Lord",
-      "Break",
-      "Breath on me, Breath of God"
-    ],
-    "2024-02-25 songs (guitar)": [
-      "Welcome",
-      "This is the Day",
-      "Micah 6:8 - He Hath Shown Thee",
-      "In Moments Like These",
-      "Joyful Joyful We Adore Thee",
-      "Shine, Jesus, Shine",
-      "Psalm 5 - Give Ear To My Words, Oh Lord",
-      "Break",
-      "Blessed Assurance"
-    ],
-    "2024-03-10 songs (guitar)": [
-      "Welcome",
-      "Alive Alive",
-      "Come Now is the time to Worship",
-      "As The Deer",
-      "Blessed Assurance",
-      "Great is thy faithfulness",
-      "Holy, Holy, Holy",
-      "Break",
-      "Amazing Grace"
-    ],
-    "2024-03-17 songs (guitar)": [
-      "Welcome",
-      "Shine, Jesus, Shine",
-      "Psalm 5 - Give Ear To My Words, Oh Lord",
-      "Breath on me, Breath of God",
-      "Just As I Am",
-      "There's something about that name",
-      "Thou Art Worthy",
-      "To God Be The Glory"
-    ],
-    "2024-03-24 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "I worship You, Almighty God",
-      "In Moments Like These (2x)",
-      "The Greatest Thing (in all my life)",
-      "Just As I Am",
-      "How great thou art",
-      "Break",
-      "Amazing Grace"
-    ],
-    "2024-03-31 songs": [
-      "Welcome",
-      "Christ The Lord Is Risen Today",
-      "Alive Alive",
-      "At Calvary",
-      "Holy, Holy, Holy",
-      "The Greatest Thing (in all my life)",
-      "Blessed Assurance",
-      "I Surrender All"
-    ],
-    "2024-04-07 songs (guitar)": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Majesty",
-      "Psalm 5 - Give Ear To My Words, Oh Lord",
-      "We bring the sacrifice of praise",
-      "Just As I Am",
-      "Breath on me, Breath of God",
-      "I Love You Lord"
-    ],
-    "2024-04-14 songs (guitar)": [
-      "Welcome",
-      "This is the Day",
-      "I Exalt Thee",
-      "What a friend we have in Jesus",
-      "Freely, Freely",
-      "Great is thy faithfulness",
-      "In The Lord Alone",
-      "As The Deer"
-    ],
-    "2024-04-21 songs (guitar)": [
-      "Welcome",
-      "Seek Ye First",
-      "Majesty",
-      "We bring the sacrifice of praise",
-      "I worship You, Almighty God",
-      "I Exalt Thee",
-      "In Moments Like These",
-      "Breath on me, Breath of God"
-    ],
-    "2024-04-28 songs (guitar)": [
-      "Welcome",
-      "We bring the sacrifice of praise",
-      "Majesty",
-      "Blessed Assurance",
-      "Count your blessings",
-      "I'll Fly Away",
-      "When we all get to Heaven",
-      "I worship You, Almighty God"
-    ],
-    "2024-05-05 Songs (guitar)": [
-      "Welcome",
-      "Alive Alive",
-      "We bring the sacrifice of praise",
-      "I Belong To A Mighty God",
-      "Thy Loving Kindness",
-      "In The Garden",
-      "The Greatest Thing (in all my life)",
-      "Psalm 5 - Give Ear To My Words, Oh Lord"
-    ],
-    "2024-05-12 Songs (guitar)": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Come let us worship and bow down",
-      "I Have Decided To Follow Jesus",
-      "I Belong To A Mighty God",
-      "To God Be The Glory",
-      "In The Garden",
-      "There's something about that name"
-    ],
-    "2024-05-26 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "Alive Alive",
-      "Turn Your Eyes Upon Jesus",
-      "Great is thy faithfulness",
-      "Therefore The Redeemed",
-      "Thou Art Worthy",
-      "Blessed Assurance"
-    ],
-    "2024-06-02 songs (guitar)": [
+    "2025-01-26 songs (guitar)": [
       "Welcome",
       "Come let us worship and bow down",
-      "We bring the sacrifice of praise",
-      "In Moments Like These (2x)",
-      "Thy Loving Kindness",
-      "Holy, Holy, Holy",
-      "How great thou art",
-      "When we all get to Heaven"
-    ],
-    "2024-06-09 songs (guitar)": [
-      "Welcome",
-      "I Have Decided To Follow Jesus",
-      "Majesty",
-      "Our God Reigns",
-      "There is  Power in the Blood",
-      "To God Be The Glory",
-      "Freely, Freely",
-      "The Battle Belongs To The Lord"
-    ],
-    "2024-06-30 songs (guitar)": [
-      "Welcome",
-      "My Country, 'Tis Of Thee",
-      "Mine Eyes Have Seen the Glory (short)",
-      "The Star-Spangled Banner",
-      "Turn Your Eyes Upon Jesus",
-      "Thou Art Worthy",
-      "In Moments Like These (2x)",
-      "The Greatest Thing (in all my life)"
-    ],
-    "2024-07-07 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "I Belong To A Mighty God",
-      "Seek Ye First",
-      "Psalm 5 - Give Ear To My Words, Oh Lord",
-      "How great thou art",
-      "To God Be The Glory",
-      "I worship You, Almighty God"
-    ],
-    "2024-07-14 songs (guitar)": [
-      "Welcome",
-      "Majesty",
-      "Great is thy faithfulness",
-      "There's something about that name",
-      "In The Lord Alone",
-      "Freely, Freely",
-      "I Have Decided To Follow Jesus",
-      "Breath on me, Breath of God"
-    ],
-    "2024-07-21 songs (guitar)": [
-      "Welcome",
-      "Alive Alive",
-      "Come let us worship and bow down",
-      "Just As I Am",
-      "What a friend we have in Jesus",
-      "Our God Reigns",
-      "Therefore The Redeemed",
-      "Amazing Grace"
-    ],
-    "2024-08-04 song (guitar)": [
-      "Welcome",
-      "Come let us worship and bow down",
-      "Alive Alive",
-      "We bring the sacrifice of praise",
-      "Thy Loving Kindness",
-      "Holy, Holy, Holy",
-      "As The Deer",
-      "Amazing Grace"
-    ],
-    "2024-08-11 Songs (guitars)": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Come Now is the time to Worship",
-      "I Have Decided To Follow Jesus",
-      "I Belong To A Mighty God",
-      "To God Be The Glory",
-      "In The Garden",
-      "There's something about that name"
-    ],
-    "2024-09-01 Songs (guitar)": [
-      "Welcome",
-      "This is the Day",
-      "Majesty",
-      "Therefore The Redeemed",
-      "I Surrender All",
+      "Lord, I Lift Your Name on High",
+      "Come, Thou Almighty King",
       "Just A Closer Walk With Thee",
-      "Breath on me, Breath of God",
-      "How great thou art"
-    ],
-    "2024-09-08 Songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "Just As I Am",
-      "I love to tell the story",
-      "Alive Alive",
-      "In Moments Like These (2x)",
-      "Freely, Freely",
-      "Amazing Grace"
-    ],
-    "2024-09-15 songs (guitar)": [
-      "Welcome",
-      "Come let us worship and bow down",
-      "Turn Your Eyes Upon Jesus",
-      "I Exalt Thee",
-      "Fairest Lord Jesus",
-      "The Greatest Thing (in all my life)",
-      "Nothing But The Blood Of Jesus",
-      "Holy, Holy, Holy"
-    ],
-    "2024-09-22 Songs (guitar)": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Come Now is the time to Worship",
-      "I Have Decided To Follow Jesus",
-      "I Belong To A Mighty God",
-      "To God Be The Glory",
-      "In The Garden",
-      "There's something about that name"
-    ],
-    "2024-09-29 songs (guitar)": [
-      "Welcome",
-      "I've Got a River of Life",
-      "Majesty",
-      "Psalm 5 - Give Ear To My Words, Oh Lord",
-      "We bring the sacrifice of praise",
-      "Just As I Am",
-      "Breath on me, Breath of God",
-      "I Love You Lord"
-    ],
-    "2024-10-06 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "Alive Alive",
-      "I Surrender All",
-      "Be Thou My Vision",
-      "Thy Loving Kindness",
-      "Nothing But The Blood Of Jesus",
-      "Amazing Grace",
-      "Seek Ye First"
-    ],
-    "2024-10-13 songs (guitar)": [
-      "Welcome",
-      "Come let us worship and bow down",
-      "Just A Closer Walk With Thee",
-      "What a friend we have in Jesus",
-      "Blessed Assurance",
-      "Great is thy faithfulness",
-      "Nothing But The Blood Of Jesus",
-      "When we all get to Heaven"
-    ],
-    "2024-10-20 songs (hymnal)": [
-      "Welcome",
-      "Holy, Holy, Holy",
-      "Breath on me, Breath of God",
-      "Blessed Assurance",
-      "At Calvary",
-      "I Surrender All"
-    ],
-    "2024-10-27 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "I've Got a River of Life",
-      "Alive Alive",
-      "Turn Your Eyes Upon Jesus",
-      "Thou Art Worthy",
-      "I worship You, Almighty God",
-      "In The Garden"
-    ],
-    "2024-10-27 Hymns (Whispering Pines Mtg)": [
-      "Welcome",
-      "Breath on me, Breath of God",
-      "Blessed Assurance",
-      "Just A Closer Walk With Thee",
-      "Just As I Am"
-    ],
-    "2024-11-03 songs (guitar)": [
-      "Welcome",
-      "Come let us worship and bow down",
-      "Thy Loving Kindness",
-      "Shine, Jesus, Shine",
-      "To God Be The Glory",
-      "I love to tell the story",
-      "Be Thou My Vision",
-      "When we all get to Heaven"
-    ],
-    "2024-11-10 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "This is the Day",
-      "The Greatest Thing (in all my life)",
-      "Our God Reigns",
       "As The Deer",
-      "Holy, Holy, Holy",
-      "I Exalt Thee"
-    ],
-    "2024-11-17 songs (guitar)": [
-      "Welcome",
-      "Alive Alive",
-      "Majesty",
-      "I Have Decided To Follow Jesus",
-      "Therefore The Redeemed",
-      "Turn Your Eyes Upon Jesus",
-      "Amazing Grace",
-      "Give Thanks With A Grateful Heart"
-    ],
-    "2024-11-24 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "Our Father",
-      "Breath on me, Breath of God",
-      "Thou Art Worthy",
-      "I worship You, Almighty God",
-      "In The Lord Alone",
-      "How great thou art",
-      "Give Thanks With A Grateful Heart"
-    ],
-    "2024-12-01 songs (guitar)": [
-      "Welcome",
-      "We bring the sacrifice of praise",
-      "There's something about that name",
-      "Emmanuel",
-      "O Come, O Come, Emmanuel",
-      "Turn Your Eyes Upon Jesus",
-      "Joy To The World"
-    ],
-    "2024-12-08 songs": [
-      "I Belong To A Mighty God",
-      "Breath on me, Breath of God",
-      "Be Thou My Vision",
-      "Emmanuel"
-    ],
-    "2024-12-28 songs (guitar)": [
-      "Welcome",
-      "O Come, All Ye Faithful",
-      "It Came Upon The Midnight Clear",
-      "O Come, O Come, Emmanuel",
-      "He Leadeth Me! O Blessed Thought",
-      "Go, Tell It On The Mountain",
-      "There's something about that name",
-      "Joyful Joyful We Adore Thee"
-    ],
-    "2024-12-29 songs (guitar)": [
-      "Welcome",
-      "O Come, All Ye Faithful",
-      "It Came Upon The Midnight Clear",
-      "O Come, O Come, Emmanuel",
-      "He Leadeth Me! O Blessed Thought",
-      "Go, Tell It On The Mountain",
-      "There's something about that name",
-      "Joyful Joyful We Adore Thee"
-    ],
-    "2025-01-05 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "I've Got a River of Life",
-      "Alive Alive",
-      "Turn Your Eyes Upon Jesus",
-      "Breath on me, Breath of God",
-      "I worship You, Almighty God",
-      "In The Garden"
-    ],
-    "2025-01-12 song (guitar)": [
-      "Welcome",
-      "Shine, Jesus, Shine",
-      "I love to tell the story",
-      "Give Thanks With A Grateful Heart",
-      "Praise To The Lord, The Almighty",
-      "He Leadeth Me! O Blessed Thought",
-      "Amazing Grace",
-      "How great thou art"
-    ],
-    "2025-01-19 songs (guitar)": [
-      "Welcome",
-      "Come Now is the time to Worship",
-      "The Solid Rock",
-      "Praise To The Lord, The Almighty",
-      "I Belong To A Mighty God",
-      "In Moments Like These",
-      "Blessed Assurance"
+      "Freely, Freely",
+      "The Old Rugged Cross"
     ]
   },
   "defaults": {
