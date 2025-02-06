@@ -4778,8 +4778,7 @@
         "Verse 2b",
         "Chorus 1a",
         "Bridge 1",
-        "Bridge 2",
-        "Ending"
+        "Bridge 2"
       ],
       "RepeatCount": 1,
       "fontSize": 0.041,
@@ -5733,7 +5732,7 @@
         "Verse 1": [
           "In The Stars His Handiwork I See,",
           "On The Wind He Speaks With Majesty,",
-          "‘Though He Ruleth Over Land And Sea,",
+          "Tho He ruleth Over Land And Sea,",
           "What Is That To Me?"
         ],
         "Verse 2": [
@@ -5745,12 +5744,13 @@
         "Chorus 1b": [
           "Then I Knew That He Was More Than Just",
           "A God Who Didn’t Care,",
-          "That Lived A Way Out There, And"
+          "Who Lived A Way up There,",
+          "And,"
         ],
         "Chorus 1c": [
           "Now He Walks Beside Me Day By Day,",
           "Ever Watching O’er Me Lest I Stray,",
-          "Helping Me To Find That Narrow Way,",
+          "Helping Me To Find The Narrow Way,",
           "He’s Everything To Me."
         ],
         "Chorus 1a": [
@@ -5767,10 +5767,10 @@
         "Chorus 1b",
         "Chorus 1c"
       ],
-      "RepeatCount": 1,
+      "RepeatCount": 2,
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.21175630148106747,
+      "lineHeight": 0.22234411655512085,
       "license": "",
       "TitleNote": "# 463 in the Baptist Hymnal",
       "Notes": "",
@@ -5789,6 +5789,16 @@
       "As The Deer",
       "Freely, Freely",
       "The Old Rugged Cross"
+    ],
+    "2025-02-02 songs (guitar)": [
+      "Welcome",
+      "Seek Ye First",
+      "Lord, I Lift Your Name on High",
+      "He Leadeth Me! O Blessed Thought",
+      "He's Everything To Me",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "Be Thou My Vision",
+      "Our Father"
     ]
   },
   "defaults": {
