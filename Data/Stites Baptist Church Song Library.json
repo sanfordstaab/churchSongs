@@ -1289,35 +1289,35 @@
     },
     "This is the Day": {
       "oPages": {
-        "Verse 1": [
+        "Verse 1a": [
           "This is the day!",
           "This is the day,",
           "that the Lord hath made,",
           "that the Lord hath made;"
         ],
-        "Verse 2": [
+        "Verse 1b": [
           "We will rejoice,",
           "We will rejoice,",
           "and be glad in it,",
           "and be glad in it."
         ],
-        "Verse 3": [
+        "Verse 2a": [
           "This is the day ",
           "that the Lord hath made,",
           "We will rejoice ",
           "and be glad in it"
         ],
-        "Verse 4": [
+        "Verse 2b": [
           "This is the day!",
           "This is the day,",
           "that the Lord hath made."
         ]
       },
       "aPageOrder": [
-        "Verse 1",
-        "Verse 2",
-        "Verse 3",
-        "Verse 4"
+        "Verse 1a",
+        "Verse 1b",
+        "Verse 2a",
+        "Verse 2b"
       ],
       "RepeatCount": 2,
       "Notes": "#85 Maranatha Praise Book 1990, Psalm 118:24",
@@ -4857,8 +4857,7 @@
         "Verse 2b",
         "Chorus 1a",
         "Bridge 1",
-        "Bridge 2",
-        "Ending"
+        "Bridge 2"
       ],
       "RepeatCount": 1,
       "fontSize": 0.041,
@@ -5889,6 +5888,26 @@
       "Just A Closer Walk With Thee",
       "The Greatest Thing (in all my life)",
       "Give Thanks With A Grateful Heart"
+    ],
+    "2025-02-16 songs (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "Turn Your Eyes Upon Jesus",
+      "We bring the sacrifice of praise",
+      "Just As I Am",
+      "Breath on me, Breath of God",
+      "To God Be The Glory",
+      "Amazing Grace"
+    ],
+    "2025-02-23 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Praise To The Lord, The Almighty",
+      "Shine, Jesus, Shine",
+      "Our Father",
+      "There's something about that name",
+      "In Moments Like These (2x)",
+      "As The Deer"
     ]
   },
   "defaults": {
