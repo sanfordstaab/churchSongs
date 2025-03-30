@@ -4337,21 +4337,14 @@
           "I belong to a mighty God."
         ],
         "Chorus 1": [
-          "I am justified by the good gift of",
-          "the Lord; And I will testify",
-          "That I belong to a mighty God,",
-          "I belong to a mighty God."
+          "I am justified ",
+          "by the good gift of",
+          "the Lord;"
         ],
         "Verse 2": [
           "I belong to the Holy One,",
           "I belong to Jesus;",
           "His work in me has just begun,",
-          "I belong to the Holy One."
-        ],
-        "Chorus 2": [
-          "I am justified by the good gift of ",
-          "the Lord; And I will testify",
-          "That I belong to the Holy One,",
           "I belong to the Holy One."
         ],
         "Verse 3": [
@@ -4360,22 +4353,39 @@
           "I'll stand in Him and will not fall,",
           "I belong to the Lord of all."
         ],
-        "Chorus 3": [
-          "I am justified by the good gift of ",
-          "the Lord; And I will testify",
+        "Chorus 1b": [
+          "And I will testify",
+          "That I belong to a mighty God,",
+          "I belong to a mighty God."
+        ],
+        "Chorus 2b": [
+          "And I will testify",
+          "That I belong to the Holy One,",
+          "I belong to the Holy One."
+        ],
+        "Chorus 3b": [
+          "And I will testify",
           "That I belong to the Lord of all,",
           "I belong to the Lord of all."
+        ],
+        "Tag": [
+          "I belong ",
+          "to the Lord ",
+          "of all."
         ]
       },
       "aPageOrder": [
         "Verse 1",
         "Chorus 1",
+        "Chorus 1b",
         "Verse 2",
-        "Chorus 2",
+        "Chorus 1",
+        "Chorus 2b",
         "Verse 3",
-        "Chorus 3"
+        "Chorus 1",
+        "Chorus 3b"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": 1,
       "fontSize": 0.045,
       "fontBoldness": 5,
       "lineHeight": 0.21175630148106747,
@@ -4384,7 +4394,8 @@
       "Notes": "",
       "Author": "Randy Rothwell , Lynn DeShazo",
       "Publisher": "",
-      "License": ""
+      "License": "",
+      "TagPage": "Tag"
     },
     "In The Garden": {
       "oPages": {
