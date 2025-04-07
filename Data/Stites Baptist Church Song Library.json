@@ -454,7 +454,7 @@
       "License": "",
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.192,
+      "lineHeight": 0.201096,
       "TitleNote": "#211 in the Maranatha Praise Book"
     },
     "Amazing Grace": {
@@ -2151,7 +2151,7 @@
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 2,
+      "RepeatCount": 3,
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.22234411655512085,
@@ -5939,6 +5939,16 @@
       "He Leadeth Me! O Blessed Thought",
       "There's something about that name",
       "Our Father"
+    ],
+    "2025-04-06 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Alive Alive",
+      "Just As I Am",
+      "To God Be The Glory",
+      "Just A Closer Walk With Thee",
+      "I Love You Lord",
+      "Amazing Grace"
     ]
   },
   "defaults": {
