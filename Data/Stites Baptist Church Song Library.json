@@ -380,7 +380,7 @@
       "License": "",
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.159,
+      "lineHeight": 0.16695000000000002,
       "TitleNote": "#97 in the Maranatha Praise Book"
     },
     "Blessed Assurance": {
@@ -2151,7 +2151,7 @@
         "Verse 1",
         "Verse 2"
       ],
-      "RepeatCount": 3,
+      "RepeatCount": 2,
       "fontSize": 0.05,
       "fontBoldness": 5,
       "lineHeight": 0.22234411655512085,
@@ -2877,7 +2877,7 @@
       "RepeatCount": 1,
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.15566034000747536,
+      "lineHeight": 0.16344335700784915,
       "license": "",
       "TitleNote": "#48 in the Baptist Hymnal",
       "Notes": "#48 Baptist Hymnal",
@@ -5867,6 +5867,90 @@
       "Author": "Ralph Carmichael",
       "Publisher": "",
       "License": ""
+    },
+    "Isn't He": {
+      "oPages": {
+        "Verse 1": [
+          "Isn't He, beautiful?   ",
+          "Beautiful, Isn't He?",
+          "Prince of Peace, Son of God. ",
+          "Isn't He?"
+        ],
+        "Verse 2": [
+          "Isn't He, wonderful?",
+          "Wonderful, Isn't He?",
+          "Counsellor, Almighty God.      ",
+          "Isn't He? Isn't He? Isn't He?"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Verse 2"
+      ],
+      "RepeatCount": 2,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "Isn't He?",
+      "Notes": "",
+      "Author": "John Wimber",
+      "Publisher": "",
+      "License": ""
+    },
+    "Rejoice, The Lord Is King": {
+      "oPages": {
+        "Chorus": [
+          "Lift up your heart,",
+          "Lift up your voice!",
+          "Rejoice, again I say,",
+          "Rejoice!"
+        ],
+        "Verse 3": [
+          "His kingdom cannot fail,",
+          "He rules o'er earth and heav'n;",
+          "The keys of death and hell",
+          "Are to our Jesus giv'n:"
+        ],
+        "Verse 1": [
+          "Rejoice, the Lord is King:",
+          "Your Lord and King adore!",
+          "Rejoice, give thanks and sing,",
+          "And triumph evermore."
+        ],
+        "Verse 2": [
+          "Jesus, the Savior, reigns,",
+          "The God of truth and love;",
+          "When He has purged our stains,",
+          "He took his seat above;"
+        ],
+        "Verse 4": [
+          "Rejoice in glorious hope!",
+          "Our Lord and judge shall come",
+          "And take His servants up",
+          "To their eternal home:"
+        ]
+      },
+      "aPageOrder": [
+        "Verse 1",
+        "Chorus",
+        "Verse 2",
+        "Chorus",
+        "Verse 3",
+        "Chorus",
+        "Verse 4",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.05,
+      "fontBoldness": 5,
+      "lineHeight": 0.19206920769257818,
+      "license": "",
+      "TitleNote": "# 120 in the Baptist Hymnal",
+      "Notes": "",
+      "Author": "Charles Wesley - Words, John Darwall - tune",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -5949,6 +6033,46 @@
       "Just A Closer Walk With Thee",
       "I Love You Lord",
       "Amazing Grace"
+    ],
+    "2025-04-13 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "The Solid Rock",
+      "Isn't He",
+      "Breath on me, Breath of God",
+      "The Old Rugged Cross",
+      "Nothing But The Blood Of Jesus",
+      "Holy, Holy, Holy"
+    ],
+    "2025-04-20 Easter (guitar)": [
+      "Welcome",
+      "Christ The Lord Is Risen Today",
+      "Turn Your Eyes Upon Jesus",
+      "Rejoice, The Lord Is King",
+      "How great thou art",
+      "Lord, I Lift Your Name on High",
+      "Be Thou My Vision",
+      "Alive Alive"
+    ],
+    "2025-04-27 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "Our Father",
+      "Come, Thou Almighty King",
+      "I love to tell the story",
+      "Fairest Lord Jesus",
+      "Thy Loving Kindness",
+      "I Love You Lord"
+    ],
+    "2025-05-04 songs (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "Shine, Jesus, Shine",
+      "What a friend we have in Jesus",
+      "We bring the sacrifice of praise",
+      "Give Thanks With A Grateful Heart",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "As The Deer"
     ]
   },
   "defaults": {
