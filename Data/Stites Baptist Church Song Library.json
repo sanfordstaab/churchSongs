@@ -231,7 +231,7 @@
           "I worship You, Almighty God,",
           "There is none like You.",
           "I worship You, O Prince of Peace,",
-          "that is what I want to do."
+          "that is what I long to do."
         ],
         "Verse 2": [
           "I give You praise",
@@ -1123,12 +1123,15 @@
         "Verse 1a",
         "Verse 1b",
         "Chorus 1",
+        "Chorus 2",
         "Verse 2a",
         "Verse 2b",
         "Chorus 1",
+        "Chorus 2",
         "Verse 3a",
         "Verse 3b",
-        "Chorus 1"
+        "Chorus 1",
+        "Chorus 2"
       ],
       "Notes": "#216 Baptist Hymnal",
       "Author": "Thomas O. Chisholm, William M. Runyan",
@@ -6073,6 +6076,26 @@
       "Give Thanks With A Grateful Heart",
       "Psalm 5 - Give Ear To My Words, Oh Lord",
       "As The Deer"
+    ],
+    "2025-05-11 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "I've Got a River of Life",
+      "Seek Ye First",
+      "He Leadeth Me! O Blessed Thought",
+      "Thou Art Worthy",
+      "Great is thy faithfulness",
+      "The Greatest Thing (in all my life)"
+    ],
+    "2025-05-18 songs (guitar)": [
+      "Welcome",
+      "Come let us worship and bow down",
+      "Therefore The Redeemed",
+      "Majesty",
+      "I worship You, Almighty God",
+      "Blessed Assurance",
+      "Breath on me, Breath of God",
+      "When we all get to Heaven"
     ]
   },
   "defaults": {
