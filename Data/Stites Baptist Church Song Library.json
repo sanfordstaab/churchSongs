@@ -821,34 +821,34 @@
     "Swing Low Sweet Chariot": {
       "oPages": {
         "Chorus": [
-          "Swing low, sweet chariot",
-          "(coming for to carry me home)",
-          "Swing low, sweet chariot",
-          "(coming for to carry me home)"
+          "Swing low, sweet chariot,",
+          "Coming for to carry me home.",
+          "Swing low, sweet chariot,",
+          "Coming for to carry me home."
         ],
         "Verse 1": [
           "I looked over Jordan and what did I see?",
-          "(coming for to carry me home)",
-          "A band of angels coming after me",
-          "(coming for to carry me home)"
+          "Coming for to carry me home.",
+          "A band of angels coming after me,",
+          "Coming for to carry me home."
         ],
         "Verse 2": [
-          "If you get there before I do",
-          "(coming for to carry me home)",
+          "If you get there before I do,",
+          "Coming for to carry me home.",
           "Tell all my friends I'm coming too!",
-          "(coming for to carry me home)"
+          "Coming for to carry me home."
         ],
         "Verse 3": [
-          "I'm sometimes up and sometimes down",
-          "(coming for to carry me home)",
-          "But still my soul feels heavenly bound",
-          "(coming for to carry me home)"
+          "I'm sometimes up and sometimes down,",
+          "Coming for to carry me home.",
+          "But still my soul feels heavenly bound,",
+          "Coming for to carry me home."
         ],
         "Verse 4": [
-          "The brightest day that I can say",
-          "(coming for to carry me home)",
-          "When Jesus washed my sins away",
-          "(coming for to carry me home)"
+          "The brightest day that I can say,",
+          "Coming for to carry me home.",
+          "When Jesus washed my sins away,",
+          "Coming for to carry me home."
         ]
       },
       "aPageOrder": [
@@ -864,14 +864,14 @@
       ],
       "TagPage": "",
       "RepeatCount": 1,
-      "License": "Public Domain",
-      "Notes": "Not in hymnal or songbook.",
+      "License": "",
+      "Notes": "",
       "Author": "",
       "Publisher": "",
       "fontSize": 0.041,
       "fontBoldness": 5,
-      "lineHeight": 0.167,
-      "TitleNote": ""
+      "lineHeight": 0.19332337500000002,
+      "TitleNote": "Swing Low, Sweet Chariot."
     },
     "Come Now is the time to Worship": {
       "oPages": {
@@ -2523,8 +2523,8 @@
         ],
         "Verse 1a": [
           "Some glad morning",
-          "when life of over,",
-          "I'll fly away,"
+          "when life is over,",
+          "I'll fly away."
         ],
         "Chorus": [
           "I'll fly away, Oh glory;",
@@ -2538,14 +2538,14 @@
           "I'll fly away."
         ],
         "Verse 2b": [
-          "Like a bird from prison ",
-          "bars has flown,",
+          "Like a bird from ",
+          "prison bars has flown,",
           "I'll fly away."
         ],
         "Verse 3a": [
           "Just a few more ",
           "weary days and then",
-          "I'll fly away,",
+          "I'll fly away.",
           ""
         ],
         "Verse 3b": [
@@ -5954,6 +5954,41 @@
       "Author": "Charles Wesley - Words, John Darwall - tune",
       "Publisher": "",
       "License": ""
+    },
+    "Change My Heart, Oh God": {
+      "oPages": {
+        "Chorus": [
+          "Change my heart, Oh God,",
+          "Make it ever true. ",
+          "Change my heart, Oh God,",
+          "May I be like You."
+        ],
+        "Verse 1": [
+          "You are the potter,",
+          "I am the clay.",
+          "Mold me and make me, ",
+          "This is what I pray. "
+        ]
+      },
+      "aPageOrder": [
+        "Chorus",
+        "Chorus",
+        "Verse 1",
+        "Chorus",
+        "Chorus",
+        "Verse 1",
+        "Chorus"
+      ],
+      "RepeatCount": 1,
+      "fontSize": 0.061,
+      "fontBoldness": 5,
+      "lineHeight": 0.2016726680772071,
+      "license": "",
+      "TitleNote": "Change My Heart, Oh God",
+      "Notes": "",
+      "Author": "Words and Music - Eddie Espinosa",
+      "Publisher": "",
+      "License": ""
     }
   },
   "oSongSets": {
@@ -6098,6 +6133,52 @@
       "When we all get to Heaven"
     ],
     "2025-05-25 spmgs (guitar)": [
+      "Freely, Freely",
+      "Holy, Holy, Holy",
+      "Great is thy faithfulness",
+      "In The Garden",
+      "Just A Closer Walk With Thee",
+      "Isn't He",
+      "I Love You Lord"
+    ],
+    "2025-06-01 songs (guitar)": [
+      "Welcome",
+      "Alive Alive",
+      "I Belong To A Mighty God",
+      "In The Lord Alone",
+      "There's something about that name",
+      "I Exalt Thee",
+      "To God Be The Glory",
+      "Our Father"
+    ],
+    "2025-06-08 songs (guitar)": [
+      "Welcome",
+      "Come Now is the time to Worship",
+      "Turn Your Eyes Upon Jesus",
+      "I Have Decided To Follow Jesus",
+      "Change My Heart, Oh God",
+      "Give Thanks With A Grateful Heart",
+      "I Love You Lord",
+      "In Moments Like These (2x)"
+    ],
+    "2025-06-14 Memorial for Katie Ryan": [
+      "Welcome",
+      "Swing Low Sweet Chariot",
+      "I'll Fly Away",
+      "When we all get to Heaven"
+    ],
+    "2025-06-15 song (guitar)": [
+      "Welcome",
+      "This is the Day",
+      "Shine, Jesus, Shine",
+      "What a friend we have in Jesus",
+      "We bring the sacrifice of praise",
+      "I've Got a River of Life",
+      "Psalm 5 - Give Ear To My Words, Oh Lord",
+      "As The Deer"
+    ],
+    "2025-06-22 songs (guitar)": [
+      "Welcome",
       "Freely, Freely",
       "Holy, Holy, Holy",
       "Great is thy faithfulness",
